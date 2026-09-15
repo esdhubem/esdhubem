@@ -189,53 +189,50 @@
     <!-- End Navbar -->
 
     <!-- Start Header / Hero Section -->
-    <header class="bg-[#DEF6FD] mt-0 md:mt-2 rounded-md text-center md:text-left">
-        <div class="container mx-auto py-10 md:py-40 md:bg-hero bg-contain bg-no-repeat bg-[right_0px_top_10px]">
-            <h2 class="text-4xl mb-1 pb-3 md:pb-0">
-                Encontre o perfeito
-            </h2>
-            <h2 class="font-semibold text-4xl pb-3 md:pb-0">
-                Curso Online
-            </h2>
-            <p class="text-gray-500 my-3">
-                Aqui temos o curso que você precisa para aprender Desenvolvimento Pessoal, Humano e Relacional.
-            </p>
+    <header class="bg-[#DEF6FD] mt-0 md:mt-2 rounded-md text-center md:text-left overflow-hidden">
+        <div class="container mx-auto py-10 md:py-20 flex flex-col md:flex-row items-center">
+            
+            <div class="w-full md:w-1/2 pr-0 md:pr-10 z-10">
+                <h2 class="text-4xl mb-1 pb-3 md:pb-0">
+                    Encontre o perfeito
+                </h2>
+                <h2 class="font-semibold text-4xl pb-3 md:pb-0">
+                    Curso Online
+                </h2>
+                <p class="text-gray-500 my-3">
+                    Aqui temos o curso que você precisa para aprender Desenvolvimento Pessoal, Humano e Relacional.
+                </p>
 
-            <form action="" method="get" class="mt-4">
-                <div class="flex bg-white items-center p-4">
-                    <div class="basis-1/3 md:basis-3/6 relative">
-                        <span class="absolute top-0.5 left-4">
-                            <i class="fa-solid fa-search text-slate-300"></i>
-                        </span>
-                        <input type="search" class="pl-12 md:pl-16 pr-2 w-full outline-none focus:outline-none font-thin"
-                            placeholder="Buscar cursos online">
-                    </div>
-                    <div class="basis-1/3 md:basis-2/6 flex">
+                <form action="" method="get" class="mt-6">
+                    <div class="flex bg-white items-center p-2 rounded-full shadow-md w-full md:w-11/12">
+                        <div class="flex-1 relative">
+                            <span class="absolute top-1.5 md:top-2 left-4">
+                                <i class="fa-solid fa-search text-slate-300"></i>
+                            </span>
+                            <input type="search" class="pl-12 pr-4 py-2 w-full outline-none focus:outline-none font-thin bg-transparent"
+                                placeholder="Buscar cursos online">
+                        </div>
                         <div>
-                            <i class="fa-solid fa-cube text-gray-400 mr-2"></i>
-                        </div>
-                        <div class="flex-1">
-                            <select name="category" id="category_id" class="bg-white text-gray-400 font-thin w-full">
-                                <option value="">Categoria</option>
-                                <option value="">Bootstrap</option>
-                            </select>
+                            <button type="submit"
+                                class="transition bg-red-500 text-white px-6 md:px-8 py-2 md:py-3 hover:opacity-75 rounded-full">
+                                Buscar
+                            </button>
                         </div>
                     </div>
-                    <div class="basis-1/3 md:basis-1/6">
-                        <button
-                            class="transition bg-red-500 text-white px-8 hover:opacity-75 rounded-full p-3 w-full ml-3">
-                            Buscar
-                        </button>
-                    </div>
-                </div>
-            </form>
+                </form>
 
-            <p class="mt-6 text-gray-600">
-                <strong>Popular Buscar: </strong>
-                <span class="text-gray-400">
-                    Coach, Práticas Integrativas, Desenvolvimento Pessoal
-                </span>
-            </p>
+                <p class="mt-6 text-gray-600">
+                    <strong>Popular Buscar: </strong>
+                    <span class="text-gray-400">
+                        Coach, Práticas Integrativas, Desenvolvimento Pessoal
+                    </span>
+                </p>
+            </div>
+
+            <div class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
+                <img src="./images/banner.png" alt="Banner de Cursos" class="max-w-full h-auto object-contain">
+            </div>
+
         </div>
     </header>
     <!-- End Header / Hero Section -->
