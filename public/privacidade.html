@@ -17,29 +17,44 @@
             <div class="flex justify-between">
                 <div class="flex justify-center items-center">
                     <div>
+    <link rel="stylesheet" href="./vendors/slick/slick.css">
+    <link rel="stylesheet" href="./vendors/slick/slick-theme.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-poppins text-gray-800 overflow-x-hidden" id="top">
+    <!-- Start Navbar -->
+    <nav class="bg-white shadow p-2.5 sticky top-0 z-50">
+        <div class="container mx-auto">
+            <div class="flex justify-between">
+                <div class="flex justify-center items-center">
+                    <div>
                         <a href="index.html">
                             <img src="./images/logo.png" alt="Imagem ilustrativa" class="w-36">
                         </a>
                     </div>
                     <div class="hidden md:block ml-8 group relative">
                         <img src="./images/icons/category-icon.svg" alt="Imagem ilustrativa" class="w-8 h-8 cursor-pointer">
-                        <div class="bg-white hidden absolute group-hover:block min-w-[200px]">
-                            <ul class="list-none">
-                                <li>
-                                    <a href="#" class="block bg-white hover:bg-slate-50 py-4 px-8 hover:text-red-500">
-                                        HTML
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block bg-white hover:bg-slate-50 py-4 px-8 hover:text-red-500">
-                                        CSS
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block bg-white hover:bg-slate-50 py-4 px-8 hover:text-red-500">
-                                        Bootstrap
-                                    </a>
-                                </li>
+                            <div class="bg-white hidden absolute group-hover:block min-w-[250px] shadow-lg rounded-b-md border border-gray-100 p-2">
+                            <ul class="list-none text-sm text-gray-700">
+                                <li><a href="sobre.html" class="block hover:bg-slate-50 py-3 px-4 hover:text-red-500 rounded"><i class="fa-solid fa-building mr-2 text-gray-400"></i> Sobre nós / A Escola</a></li>
+                                <li><a href="certificados.html" class="block hover:bg-slate-50 py-3 px-4 hover:text-red-500 rounded"><i class="fa-solid fa-certificate mr-2 text-gray-400"></i> Validar Certificado</a></li>
+                                <li><a href="category.html" class="block hover:bg-slate-50 py-3 px-4 hover:text-red-500 rounded"><i class="fa-solid fa-graduation-cap mr-2 text-gray-400"></i> Cursos Livres</a></li>
+                                <li><a href="contato.html" class="block hover:bg-slate-50 py-3 px-4 hover:text-red-500 rounded"><i class="fa-solid fa-headset mr-2 text-gray-400"></i> Contato e Suporte</a></li>
+                                <hr class="my-1 border-gray-100">
+                                <li class="px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Políticas</li>
+                                <li><a href="privacidade.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Privacidade (LGPD)</a></li>
+                                <li><a href="termos.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Termos de Uso</a></li>
+                                <li><a href="pagamentos.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Pagamentos</a></li>
+                                <li><a href="trocas.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Trocas e Reembolsos</a></li>
+                                <li><a href="envio.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Envio e Entrega</a></li>
                             </ul>
                         </div>
                     </div>
@@ -144,31 +159,25 @@
                         class="transition w-full text-xs rounded-md p-3 pl-12 bg-slate-100 outline-none outline-1 focus:outline-red-300"
                         placeholder="Buscar tutoriais, vídeos, tutores etc..">
                 </div>
-                <ul class="mt-3 list-none">
-                    <li class="py-3">
-                        <i class="fa-solid fa-cube text-gray-400 mr-2"></i>
-                        Categorias
+                <ul class="mt-3 list-none pb-20">
+                    <li class="py-3 font-bold text-[#00103F]">
+                        <i class="fa-solid fa-bars text-gray-400 mr-2"></i>
+                        Menu Principal
                     </li>
-                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                        <a href="#">
-                            <i class="fa-solid fa-chevron-right text-xs mr-4"></i> HTML
-                        </a>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="sobre.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Sobre nós / A Escola</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="certificados.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Validar Certificado</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="category.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Cursos Livres</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="contato.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Contato e Suporte</a></li>
+                    
+                    <li class="py-3 mt-4 font-bold text-[#00103F]">
+                        <i class="fa-solid fa-scale-balanced text-gray-400 mr-2"></i>
+                        Políticas
                     </li>
-                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                        <a href="#">
-                            <i class="fa-solid fa-chevron-right text-xs mr-4"></i> CSS
-                        </a>
-                    </li>
-                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                        <a href="#">
-                            <i class="fa-solid fa-chevron-right text-xs mr-4"></i> Tailwind CSS
-                        </a>
-                    </li>
-                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                        <a href="#">
-                            <i class="fa-solid fa-chevron-right text-xs mr-4"></i> Bootstrap CSS
-                        </a>
-                    </li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="privacidade.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Política de Privacidade</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="termos.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Termos de Uso</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="pagamentos.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Formas de Pagamento</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="trocas.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Trocas e Reembolsos</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="envio.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Política de Envio</a></li>
                 </ul>
             </div>
         </div>
