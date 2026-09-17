@@ -44,3 +44,26 @@
     font-weight: 900;
   }
 }
+
+/* Slick Carousel FOUC Fix */
+#popular-course:not(.slick-initialized),
+#complementary-course:not(.slick-initialized),
+#new-course:not(.slick-initialized) {
+  display: flex;
+  overflow: hidden;
+  gap: 12px;
+}
+
+#popular-course:not(.slick-initialized) .course-item,
+#complementary-course:not(.slick-initialized) .course-item,
+#new-course:not(.slick-initialized) .course-item {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+  #popular-course:not(.slick-initialized) .course-item,
+  #complementary-course:not(.slick-initialized) .course-item,
+  #new-course:not(.slick-initialized) .course-item {
+    flex: 0 0 calc(25% - 12px);
+  }
+}
