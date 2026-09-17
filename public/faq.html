@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ESDHUBEM - Plataforma de aprendizado online com cursos de Desenvolvimento Pessoal, Humano, Profissional, Ético e Relacional.">
+    <meta name="keywords" content="cursos online, desenvolvimento pessoal, coaching educacional, práticas integrativas, desenvolvimento humano, ESDHUBEM">
+    <title>ESDHUBEM | Cursos Livres</title>
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="./css/font-awesome/css/all.min.css">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="./vendors/slick/slick.css">
+    <link rel="stylesheet" href="./vendors/slick/slick-theme.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-poppins text-gray-800 overflow-x-hidden" id="top">
+    <!-- Start Navbar -->
+    <nav class="bg-white shadow p-2.5 sticky top-0 z-50">
+        <div class="container mx-auto">
+            <div class="flex justify-between">
+                <div class="flex justify-center items-center">
+                    <div>
+                        <a href="index.html">
+                            <img src="./images/logo.png" alt="Imagem ilustrativa" class="w-36">
+                        </a>
+                    </div>
+                    <div class="hidden md:block ml-8 group relative">
+                        <img src="./images/icons/category-icon.svg" alt="Imagem ilustrativa" class="w-8 h-8 cursor-pointer">
+                        <div class="bg-white hidden absolute group-hover:block min-w-[250px] shadow-lg rounded-b-md border border-gray-100 p-2">
+                            <ul class="list-none text-sm text-gray-700">
+                                <li><a href="sobre.html" class="block hover:bg-slate-50 py-3 px-4 hover:text-red-500 rounded"><i class="fa-solid fa-building mr-2 text-gray-400"></i> Sobre nós / A Escola</a></li>
+                                <li><a href="certificados.html" class="block hover:bg-slate-50 py-3 px-4 hover:text-red-500 rounded"><i class="fa-solid fa-certificate mr-2 text-gray-400"></i> Validar Certificado</a></li>
+                                <li><a href="category.html" class="block hover:bg-slate-50 py-3 px-4 hover:text-red-500 rounded"><i class="fa-solid fa-graduation-cap mr-2 text-gray-400"></i> Cursos Livres</a></li>
+                                <li><a href="contato.html" class="block hover:bg-slate-50 py-3 px-4 hover:text-red-500 rounded"><i class="fa-solid fa-headset mr-2 text-gray-400"></i> Contato e Suporte</a></li>
+                                <hr class="my-1 border-gray-100">
+                                <li class="px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Políticas</li>
+                                <li><a href="privacidade.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Privacidade (LGPD)</a></li>
+                                <li><a href="termos.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Termos de Uso</a></li>
+                                <li><a href="pagamentos.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Pagamentos</a></li>
+                                <li><a href="trocas.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Trocas e Reembolsos</a></li>
+                                <li><a href="envio.html" class="block hover:bg-slate-50 py-2 px-4 hover:text-red-500 rounded">Envio e Entrega</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hidden md:block ml-16 relative">
+                        <span class="absolute top-2.5 left-4">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="search"
+                            class="transition w-full text-xs rounded-md p-3 pl-12 bg-slate-100 outline-none outline-1 focus:outline-red-300"
+                            placeholder="Buscar tutoriais, vídeos, tutores etc..">
+                    </div>
+                    
+                    <div class="hidden lg:flex items-center ml-8 space-x-6 text-sm font-medium text-[#00103F]">
+                        <a href="index.html" class="hover:text-red-500 transition">Início</a>
+                        <a href="category.html" class="hover:text-red-500 transition">Cursos Gratuitos</a>
+                        <a href="category.html" class="hover:text-red-500 transition">Horas Complementares</a>
+                        <a href="category.html" class="hover:text-red-500 transition">Formações Profissionais</a>
+                        <a href="sobre.html" class="hover:text-red-500 transition">Sobre Nós</a>
+                        <a href="certificados.html" class="hover:text-red-500 transition bg-slate-100 px-3 py-1.5 rounded-md hover:bg-slate-200">Validar Certificado</a>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center pr-4 md:pr-0">
+                    <ul class="list-none">
+                        <li class="inline-block mx-3 sm:mx-4 md:mx-6 relative group">
+                            <a href="#" class="text-xl text-gray-500 group-hover:opacity-75">
+                                <span
+                                    class="absolute -top-2 bg-red-500 -right-3.5 text-white pl-1.5 text-sm rounded-full h-5 w-5">
+                                    2
+                                </span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                            </a>
+                        </li>
+                        <li class="inline-block mx-3 sm:mx-4 md:mx-6 relative group">
+                            <a href="#" class="text-xl text-gray-500 group-hover:opacity-75">
+                                <span
+                                    class="absolute -top-2 bg-red-500 -right-3.5 text-white pl-1.5 text-sm rounded-full h-5 w-5">
+                                    2
+                                </span>
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <div class="hidden group-hover:block absolute shadow w-64 p-4 bg-white">
+                                <div class="flex p-2 border-b border-slate-200">
+                                    <div class="mr-2">
+                                        <i class="fa-solid fa-user-circle text-lg p-2"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-gray-500 font-normal">Maniruzzaman Akash</h3>
+                                        <p class="text-gray-400 text-xs font-thin">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                        </p>
+                                        <p class="text-gray-400 font-thin text-[10px] mt-2">
+                                            2 min atrás
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex p-2">
+                                    <div class="mr-2">
+                                        <i class="fa-solid fa-user-circle text-lg p-2"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-gray-500 font-normal">Maniruzzaman Akash</h3>
+                                        <p class="text-gray-400 text-xs font-thin">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                        </p>
+                                        <p class="text-gray-400 font-thin text-[10px] mt-2">
+                                            2 min atrás
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="inline-block mx-3 sm:mx-4 md:mx-6 relative group">
+                            <a href="#" class="text-xl text-gray-500 group-hover:opacity-75">
+                                <span
+                                    class="absolute -top-2 bg-red-500 -right-3.5 text-white pl-1.5 text-sm rounded-full h-5 w-5">
+                                    2
+                                </span>
+                                <i class="fa-solid fa-bell"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="hidden md:block -mt-3 mx-3 group">
+                        <a href="#"
+                            class="text-xl text-gray-500 group-hover:opacity-75 rounded-full h-5 w-5 shadow py-1.5 px-2.5">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute top-1 right-4 cursor-pointer mt-5">
+                <span class="md:hidden navbar-toggle text-slate-900">
+                    <i class="fa-solid fa-bars-staggered" id="toggle-icon"></i>
+                </span>
+            </div>
+        </div>
+        <div class="mobile-navbar hidden h-[102vh] bg-white absolute top-0 left-0 text-left shadow overflow-y">
+            <div class="text-center pt-2 flex items-center mt-3">
+                <a href="index.html" class="m-0 mx-auto">
+                    <img src="./images/logo.png" alt="Imagem ilustrativa" class="w-36">
+                </a>
+            </div>
+            <div class="p-3">
+                <div class="relative">
+                    <span class="absolute top-2.5 left-4">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="search"
+                        class="transition w-full text-xs rounded-md p-3 pl-12 bg-slate-100 outline-none outline-1 focus:outline-red-300"
+                        placeholder="Buscar tutoriais, vídeos, tutores etc..">
+                </div>
+                <ul class="mt-3 list-none pb-20">
+                    <li class="py-3 font-bold text-[#00103F]">
+                        <i class="fa-solid fa-bars text-gray-400 mr-2"></i>
+                        Menu Principal
+                    </li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="index.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Início</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="category.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Cursos Gratuitos</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="category.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Horas Complementares</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="category.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Formações Profissionais</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="sobre.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Sobre Nós</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="certificados.html" class="block w-full"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Validar Certificado</a></li>
+                    
+                    <li class="py-3 mt-4 font-bold text-[#00103F]">
+                        <i class="fa-solid fa-scale-balanced text-gray-400 mr-2"></i>
+                        Políticas
+                    </li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="privacidade.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Política de Privacidade</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="termos.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Termos de Uso</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="pagamentos.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Formas de Pagamento</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="trocas.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Trocas e Reembolsos</a></li>
+                    <li class="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 border-b border-slate-100"><a href="envio.html" class="block w-full text-sm"><i class="fa-solid fa-chevron-right text-xs mr-3 text-gray-300"></i> Política de Envio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    
+    <section class="container mx-auto px-5 py-16">
+        <h1 class="text-4xl font-bold mb-6 text-[#00103F]">Perguntas Frequentes (FAQ)</h1>
+        <div class="prose max-w-none text-gray-700">
+            <h3 class="font-bold mt-6 text-lg">1. Como acesso meu curso?</h3>
+            <p>Após a confirmação do pagamento (imediata no Pix e Cartão, 1 a 3 dias úteis no boleto), você receberá um e-mail com o link de acesso, login e senha para entrar no ambiente virtual de aprendizagem.</p>
+            
+            <h3 class="font-bold mt-6 text-lg">2. O certificado é reconhecido pelo MEC?</h3>
+            <p>Nossos cursos são classificados como Cursos Livres de capacitação profissional e não dependem de autorização do MEC. Eles são totalmente válidos e amparados pela Lei nº 9.394/96 para Horas Complementares nas faculdades, processos seletivos e evolução de carreira.</p>
+
+            <h3 class="font-bold mt-6 text-lg">3. Quanto tempo tenho para concluir o curso?</h3>
+            <p>O tempo de acesso varia conforme o plano escolhido no ato da matrícula (ex: 1 ano de acesso ou acesso vitalício). Consulte a descrição específica do seu curso.</p>
+
+            <h3 class="font-bold mt-6 text-lg">4. Posso acessar os cursos pelo celular?</h3>
+            <p>Sim! Nossa plataforma é 100% responsiva, permitindo que você assista às aulas pelo computador, tablet ou celular, de onde estiver e quando quiser.</p>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Start Footer Section -->
+    <footer class="bg-[#00103F] text-white mt-20">
+        <div class="container mx-auto px-5 py-16">
+            <div class="flex flex-col md:flex-row">
+                <div class="basis-2/6">
+                    <div class="p-5">
+                        <img src="./images/logo-footer.png" alt="Imagem ilustrativa" class="w-48">
+                        <div>
+                            <h3 class="font-medium mt-4 mb-3">
+                                Fale Conosco
+                            </h3>
+                            <div class="text-sm">
+                                <h4 class="mb-2">(11) 960319637</h4>
+                                <h4 class="mb-2">silverioss@protonmail.com</h4>
+                                <h4 class="mb-2">9h - 17h, Segunda - Sexta</h4>
+                                <h4 class="mb-2">PO Box 567, Hostain st. 433 Los Angeles, California, US</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-1/6">
+                    <div class="p-4">
+                        <h3 class="font-medium mt-4 mb-3">
+                            Links úteis
+                        </h3>
+                        <ul class="list-none mt-4">
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Comece aqui
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Blogs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Sobre nós
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Contato
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Carreiras
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Cursos
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="basis-1/6">
+                    <div class="p-4">
+                        <h3 class="font-medium mt-4 mb-3">
+                            Informações
+                        </h3>
+                        <ul class="list-none mt-4">
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Comece aqui
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Blogs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Sobre nós
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Contato
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Carreiras
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm">
+                                    <i class="fa-solid fa-chevron-right text-xs mr-3"></i>
+                                    Cursos
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="basis-2/6">
+                    <div class="p-4">
+                        <h3 class="font-medium mt-4 mb-3">
+                            Assine nossa newsletter
+                        </h3>
+                        <p class="text-sm">
+                            Receba nossos conteúdos exclusivos, novidades sobre lançamentos de cursos e dicas valiosas para acelerar o seu desenvolvimento e alavancar a sua carreira! Assine agora e faça parte da comunidade ESDHUBEM.
+                        </p>
+                        <p class="mt-4 relative">
+                            <input type="email" placeholder="Seu e-mail"
+                                class="w-full p-3 pl-5 bg-white rounded-full text-gray-700 placeholder:text-gray-700">
+                            <span class="absolute top-1 right-2 bg-red-600 px-5 p-2 rounded-full uppercase">
+                                Inscrever-se
+                            </span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                &copy; 2022 Todos os direitos reservados.
+            </div>
+
+            <div>
+                <a id="scroll-to-top" href="#top" class="transition hidden shadow bottom-1 right-1 w-14 h-14 rounded-[50%] bg-red-600 hover:opacity-80 z-50 border group">
+                    <i class="fa-solid fa-arrow-up transition pt-5 pl-5 text-white group-hover:-translate-y-2"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Scripts -->
+    <!-- Jquery JS -->
+    <script src="./vendors/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel JS -->
+    <script src="./vendors/slick/slick.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
