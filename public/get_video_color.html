@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<video id="vid" src="images/video_banner_esdhubem.mp4" autoplay muted></video>
+<canvas id="canvas"></canvas>
+<script>
+    const vid = document.getElementById('vid');
+    vid.addEventListener('loadeddata', () => {
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = vid.videoWidth;
+        canvas.height = vid.videoHeight;
+        ctx.drawImage(vid, 0, 0, canvas.width, canvas.height);
+        const data = ctx.getImageData(0, 0, 1, 1).data;
+        console.log("COLOR: rgb(" + data[0] + ", " + data[1] + ", " + data[2] + ")");
+        document.body.innerHTML += "<h1>COLOR: rgb(" + data[0] + ", " + data[1] + ", " + data[2] + ")</h1>";
+    });
+</script>
+</body>
+</html>
