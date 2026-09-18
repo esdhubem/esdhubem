@@ -1,8 +1,8 @@
 $(document).ready(function() {
     $("#popular-course, #complementary-course, #new-course").slick({
       dots: false,
-      loop: true,
-      infinite: true,
+      loop: false,
+      infinite: false,
       speed: 300,
       slidesToShow: 4,
       slidesToScroll: 4,
