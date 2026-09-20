@@ -4,6 +4,8 @@ import { Hero } from './components/Hero';
 import { CategoryGrid } from './components/CategoryGrid';
 import { MethodologySection } from './components/MethodologySection';
 import { CorporateBanner } from './components/CorporateBanner';
+import { BookstoreBanner } from './components/BookstoreBanner';
+import { LivrariaPage } from './components/LivrariaPage';
 import { CourseCatalog } from './components/CourseCatalog';
 import { CourseModal } from './components/CourseModal';
 import { CertificateValidatorModal } from './components/CertificateValidatorModal';
@@ -34,7 +36,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-assertiva' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe'
+    'home' | 'sala-de-aula' | 'curso-assertiva' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -97,6 +99,12 @@ export default function App() {
 
     if (sectionId === 'politicas') {
       setCurrentPage('politicas');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'livraria') {
+      setCurrentPage('livraria');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -188,7 +196,13 @@ export default function App() {
           <CategoryGrid
             categories={CATEGORIES_DATA}
             selectedCategory={selectedCategory}
-            onSelectCategory={(cat) => setSelectedCategory(cat)}
+            onSelectCategory={(cat) => {
+              if (cat?.toLowerCase() === 'livros & materiais') {
+                handleNavigate('livraria');
+              } else {
+                setSelectedCategory(cat);
+              }
+            }}
             onNavigateToCategoriesPage={() => handleNavigate('categorias')}
             onNavigateToCategoryDetail={(slug) => {
               setActiveCategorySlug(slug);
@@ -204,7 +218,14 @@ export default function App() {
             }}
           />
 
-          <CorporateBanner onNavigate={() => handleNavigate('categoria:desenvolvimento-nas-empresas')} />
+          <section className="py-8 bg-[#F8FAFC]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <CorporateBanner onNavigate={() => handleNavigate('categoria:desenvolvimento-nas-empresas')} />
+                <BookstoreBanner onNavigate={() => handleNavigate('livraria')} />
+              </div>
+            </div>
+          </section>
 
           {/* 4. Cursos Freepremium, Horas Complementares e Formações Profissionais */}
           <CourseCatalog
@@ -324,6 +345,17 @@ export default function App() {
             }}
             onBackToPolicies={() => {
               setCurrentPage('politicas');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'livraria' && (
+        <main className="flex-1">
+          <LivrariaPage
+            onBackToHome={() => {
+              setCurrentPage('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           />
