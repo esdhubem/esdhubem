@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* Content over image */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center mb-20 sm:mb-32">
           <div className="max-w-3xl space-y-6 flex flex-col items-center">
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-bold tracking-wide shadow-lg">
@@ -34,9 +34,9 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
-              Encontre o seu <br />
-              <span className="text-[#FFC72C]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] flex flex-col items-center">
+              <span>Encontre o seu</span>
+              <span className="text-[#FFC72C] text-3xl sm:text-4xl lg:text-5xl whitespace-nowrap mt-2">
                 treinamento e desenvolvimento.
               </span>
             </h1>
