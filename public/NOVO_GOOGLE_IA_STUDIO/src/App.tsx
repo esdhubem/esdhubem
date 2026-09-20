@@ -211,23 +211,7 @@ export default function App() {
             }}
           />
 
-          {/* 3. A Jornada Perfeita para o Seu Sucesso (The 3 Methodology Pillars) */}
-          <MethodologySection
-            onSelectPillar={(pillarType) => {
-              setActivePillar(pillarType);
-            }}
-          />
-
-          <section className="py-8 bg-[#F8FAFC]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <CorporateBanner onNavigate={() => handleNavigate('categoria:desenvolvimento-nas-empresas')} />
-                <BookstoreBanner onNavigate={() => handleNavigate('livraria')} />
-              </div>
-            </div>
-          </section>
-
-          {/* 4. Cursos Freepremium, Horas Complementares e Formações Profissionais */}
+          {/* 3. Cursos Freepremium, Horas Complementares e Formações Profissionais (Movido para perto das categorias) */}
           <CourseCatalog
             courses={COURSES_DATA}
             activePillar={activePillar}
@@ -245,6 +229,24 @@ export default function App() {
             searchTerm={searchTerm}
             selectedCategory={selectedCategory}
           />
+
+          {/* 4. A Jornada Perfeita para o Seu Sucesso (The 3 Methodology Pillars) */}
+          <MethodologySection
+            onSelectPillar={(pillarType) => {
+              setActivePillar(pillarType);
+              const el = document.getElementById('catalogo-cursos');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+          />
+
+          <section className="py-8 bg-[#F8FAFC]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <CorporateBanner onNavigate={() => handleNavigate('categoria:desenvolvimento-nas-empresas')} />
+                <BookstoreBanner onNavigate={() => handleNavigate('livraria')} />
+              </div>
+            </div>
+          </section>
         </main>
       )}
 
