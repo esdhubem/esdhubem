@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { CategoryGrid } from './components/CategoryGrid';
 import { MethodologySection } from './components/MethodologySection';
+import { CorporateBanner } from './components/CorporateBanner';
 import { CourseCatalog } from './components/CourseCatalog';
 import { CourseModal } from './components/CourseModal';
 import { CertificateValidatorModal } from './components/CertificateValidatorModal';
@@ -202,6 +203,8 @@ export default function App() {
               setActivePillar(pillarType);
             }}
           />
+
+          <CorporateBanner onNavigate={() => handleNavigate('categoria:desenvolvimento-nas-empresas')} />
 
           {/* 4. Cursos Freepremium, Horas Complementares e Formações Profissionais */}
           <CourseCatalog
