@@ -229,10 +229,10 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
                     <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 space-y-1">
                       <div className="font-bold text-[#182333] flex items-center gap-1.5">
                         <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                        <span>Horas Complementares (MEC)</span>
+                        <span>Horas Complementares Universitárias</span>
                       </div>
                       <p className="text-slate-500">
-                        Averbação de Atividades Acadêmicas Complementares (AAC / AACC) em cursos superiores de faculdades e centros universitários de todo o Brasil.
+                        Nossos certificados são aceitos de forma indireta pelo MEC através das Faculdades e Universidades como comprovante de Atividades Acadêmicas Complementares (AAC / AACC).
                       </p>
                     </div>
 

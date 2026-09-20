@@ -355,7 +355,7 @@ export const COURSES_DATA: Course[] = [
     image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80',
     tag: 'Certificado Válido no Brasil',
     badge: 'Horas Rápidas • 40h',
-    description: 'Perfeito para preencher horas de atividades complementares com temas contemporâneos cobrados pelas comissões do MEC.',
+    description: 'Perfeito para preencher horas de atividades complementares com temas contemporâneos cobrados pelas Faculdades e Universidades.',
     modulesCount: 6,
     syllabus: [
       'Conceitos Centrais de Sustentabilidade e Ecologia',
