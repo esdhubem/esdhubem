@@ -1,36 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Search, Sparkles, BookOpen, ShieldCheck, Heart, Award, ArrowRight } from 'lucide-react';
 
 interface HeroProps {
-  onSearch: (query: string) => void;
   onSelectCategory: (category: string) => void;
-  searchTerm: string;
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  onSearch,
   onSelectCategory,
-  searchTerm,
 }) => {
-  const [localQuery, setLocalQuery] = useState(searchTerm);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSearch(localQuery);
-    const catalogEl = document.getElementById('catalogo-cursos');
-    if (catalogEl) {
-      catalogEl.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleQuickTagClick = (tag: string) => {
-    setLocalQuery(tag);
-    onSearch(tag);
-    const catalogEl = document.getElementById('catalogo-cursos');
-    if (catalogEl) {
-      catalogEl.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="relative overflow-hidden pt-8 pb-14 lg:pt-12 lg:pb-18 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200/80" id="inicio">
@@ -61,74 +38,6 @@ export const Hero: React.FC<HeroProps> = ({
             <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl">
               Cursos que você precisa para aprender Desenvolvimento Pessoal, Humano, Profissional, Ético e Relacional.
             </p>
-
-            {/* Search Box - "Buscar cursos online" with "Buscar" button */}
-            <div className="pt-2">
-              <form
-                onSubmit={handleSubmit}
-                className="bg-white p-2 rounded-2xl sm:rounded-full border border-slate-300 shadow-md shadow-slate-900/5 flex flex-col sm:flex-row items-stretch sm:items-center gap-2"
-                id="hero-search-form"
-              >
-                <div className="relative flex-1 flex items-center pl-3">
-                  <Search className="w-5 h-5 text-slate-400 shrink-0" />
-                  <input
-                    type="text"
-                    value={localQuery}
-                    onChange={(e) => setLocalQuery(e.target.value)}
-                    placeholder="Buscar cursos online..."
-                    className="w-full pl-3 pr-3 py-2.5 text-slate-800 placeholder-slate-400 text-sm sm:text-base bg-transparent focus:outline-none"
-                    id="hero-search-input"
-                  />
-                  {localQuery && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setLocalQuery('');
-                        onSearch('');
-                      }}
-                      className="text-xs text-slate-400 hover:text-slate-700 px-2 py-1"
-                    >
-                      Limpar
-                    </button>
-                  )}
-                </div>
-
-                <button
-                  type="submit"
-                  className="bg-[#243042] hover:bg-[#182333] active:scale-[0.98] text-white font-bold text-sm sm:text-base px-7 py-3 rounded-xl sm:rounded-full transition-all shadow-sm flex items-center justify-center gap-2 shrink-0 cursor-pointer"
-                  id="hero-search-submit-btn"
-                >
-                  <span>Buscar</span>
-                  <ArrowRight className="w-4 h-4 text-[#FFC72C]" />
-                </button>
-              </form>
-
-              {/* Popular Searches: Coach, Práticas Integrativas, Desenvolvimento Pessoal */}
-              <div className="mt-3.5 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-slate-600">
-                <span className="font-semibold text-slate-700">Popular Buscar:</span>
-                <button
-                  type="button"
-                  onClick={() => handleQuickTagClick('Coach')}
-                  className="px-3 py-1 rounded-full bg-white hover:bg-slate-100 text-slate-700 hover:text-[#243042] border border-slate-200 transition-colors cursor-pointer text-xs font-medium"
-                >
-                  Coach
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleQuickTagClick('Práticas Integrativas')}
-                  className="px-3 py-1 rounded-full bg-white hover:bg-slate-100 text-slate-700 hover:text-[#243042] border border-slate-200 transition-colors cursor-pointer text-xs font-medium"
-                >
-                  Práticas Integrativas
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleQuickTagClick('Desenvolvimento Pessoal')}
-                  className="px-3 py-1 rounded-full bg-white hover:bg-slate-100 text-slate-700 hover:text-[#243042] border border-slate-200 transition-colors cursor-pointer text-xs font-medium"
-                >
-                  Desenvolvimento Pessoal
-                </button>
-              </div>
-            </div>
 
             {/* Trust highlights */}
             <div className="pt-4 grid grid-cols-3 gap-3 border-t border-slate-200">

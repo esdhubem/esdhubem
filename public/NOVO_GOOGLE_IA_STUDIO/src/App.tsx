@@ -176,13 +176,11 @@ export default function App() {
         <main className="flex-1">
           {/* 1. Hero Section */}
           <Hero
-            onSearch={(query) => setSearchTerm(query)}
             onSelectCategory={(cat) => {
               setSelectedCategory(cat);
               const el = document.getElementById('catalogo-cursos');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            searchTerm={searchTerm}
           />
 
           {/* 2. Explorar Categorias (The 17 exact categories) */}
