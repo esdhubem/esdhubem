@@ -183,6 +183,16 @@ export const Header: React.FC<HeaderProps> = ({
               <span className="bg-white/10 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">17</span>
             </button>
             <button
+              onClick={() => onNavigate('categoria:desenvolvimento-nas-empresas')}
+              className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 ${
+                currentPage === 'categoria-detalhe'
+                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
+                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
+              }`}
+            >
+              Nas Empresas
+            </button>
+            <button
               onClick={() => onNavigate('sala-de-aula')}
               className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 ${
                 currentPage === 'sala-de-aula'
@@ -258,6 +268,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span>Categorias</span>
             <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">17</span>
           </button>
+          <button onClick={() => { onNavigate('categoria:desenvolvimento-nas-empresas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Nas Empresas</button>
           <button onClick={() => { onNavigate('sala-de-aula'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 flex justify-between text-[#FFC72C]">
             <span>Sala de Aula</span>
             <span className="text-[10px] bg-[#FFC72C] text-slate-950 font-black px-2 py-0.5 rounded-full">ALUNO</span>
