@@ -44,11 +44,11 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     accentColor: 'from-amber-600 to-yellow-600',
   },
   {
-    id: 'praticas-integrativas',
-    title: 'Práticas\nIntegrativas',
-    coursesCount: 21,
-    iconName: 'SunMedium',
-    accentColor: 'from-teal-500 to-emerald-600',
+    id: 'desenvolvimento-tecnologico-ia',
+    title: 'Desenvolvimento\nTecnológico e IA',
+    coursesCount: 17,
+    iconName: 'Cpu',
+    accentColor: 'from-violet-600 to-indigo-600',
   },
   {
     id: 'desenvolvimento-da-consciencia',
@@ -86,11 +86,11 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     accentColor: 'from-stone-600 to-zinc-800',
   },
   {
-    id: 'desenvolvimento-tecnologico-ia',
-    title: 'Desenvolvimento\nTecnológico e IA',
-    coursesCount: 17,
-    iconName: 'Cpu',
-    accentColor: 'from-violet-600 to-indigo-600',
+    id: 'praticas-integrativas',
+    title: 'Práticas\nIntegrativas',
+    coursesCount: 21,
+    iconName: 'SunMedium',
+    accentColor: 'from-teal-500 to-emerald-600',
   },
   {
     id: 'coach-integrativo',
@@ -120,6 +120,13 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     iconName: 'Award',
     accentColor: 'from-yellow-600 to-amber-800',
   },
+  {
+    id: 'livros',
+    title: 'Livros\n& Materiais',
+    coursesCount: 8,
+    iconName: 'Library',
+    accentColor: 'from-red-500 to-rose-700',
+  }
 ];
 
 export const METHODOLOGY_PILLARS: MethodologyPillar[] = [

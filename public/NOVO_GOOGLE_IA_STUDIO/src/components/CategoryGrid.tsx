@@ -18,7 +18,8 @@ import {
   Building2,
   Award,
   ArrowRight,
-  Filter
+  Filter,
+  Library
 } from 'lucide-react';
 import { CategoryItem } from '../types';
 
@@ -65,6 +66,8 @@ const renderCategoryIcon = (iconName: string, className: string = 'w-6 h-6') => 
       return <BookOpenCheck className={className} />;
     case 'Building2':
       return <Building2 className={className} />;
+    case 'Library':
+      return <Library className={className} />;
     case 'Award':
     default:
       return <Award className={className} />;
