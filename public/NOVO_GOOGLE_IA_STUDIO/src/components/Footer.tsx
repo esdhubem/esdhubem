@@ -209,10 +209,10 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('curso-assertiva')}
+                  onClick={() => onNavigate('livraria')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-semibold"
                 >
-                  Comunicação Assertiva (40h)
+                  Livraria (Livros & Materiais)
                 </button>
               </li>
               <li>
@@ -318,7 +318,8 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs">
               {[
-                'Desenvolvimento nas Empresas',
+                'Treinamento nas Empresas B2B',
+                'Formação Empresarial',
                 'Cursos Freepremium',
                 'Horas Complementares',
                 'Formações Profissionais',
@@ -336,8 +337,12 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   key={category}
                   onClick={() => {
-                    if (category === 'Desenvolvimento nas Empresas') {
+                    if (category === 'Treinamento nas Empresas B2B') {
                       onNavigate('categoria:desenvolvimento-nas-empresas');
+                    } else if (category === 'Formação Empresarial') {
+                      onSelectCategory('Formação Empresarial');
+                      const catalogEl = document.getElementById('catalogo-cursos');
+                      if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
                     } else {
                       onSelectCategory(category);
                       const catalogEl = document.getElementById('catalogo-cursos');
@@ -347,7 +352,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left py-0.5 truncate text-slate-300 flex items-center gap-1"
                 >
                   <span>• {category}</span>
-                  {category === 'Desenvolvimento nas Empresas' && (
+                  {category === 'Treinamento nas Empresas B2B' && (
                     <span className="text-[9px] bg-[#FFC72C] text-slate-950 font-black px-1 rounded uppercase ml-1">
                       B2B
                     </span>
