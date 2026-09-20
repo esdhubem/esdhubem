@@ -716,7 +716,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-center gap-8">
           <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-[#243042] overflow-hidden shrink-0 border-4 border-slate-100 shadow-md flex items-center justify-center text-white">
-            <UserCheck className="w-16 h-16 text-[#FFC72C]" />
+            <img src="./images/prof-silviane.png" alt="Profa. Dra. Silviane Silvério" className="w-full h-full object-cover" />
           </div>
 
           <div className="space-y-3 flex-1">

@@ -108,7 +108,7 @@ export const CATEGORIES_DATA: CategoryItem[] = [
   },
   {
     id: 'desenvolvimento-nas-empresas',
-    title: 'Desenvolvimento\nnas empresas',
+    title: 'Treinamento Corporativo\nPara Empresas & Equipes',
     coursesCount: 16,
     iconName: 'Building2',
     accentColor: 'from-slate-600 to-slate-800',
