@@ -1,0 +1,6 @@
+{
+  "name": "ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar",
+  "description": "Plataforma de cursos online focada em desenvolvimento pessoal, inteligência emocional, humano, profissional, ético e relacional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
