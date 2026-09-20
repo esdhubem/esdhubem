@@ -92,7 +92,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
               <span>Navegue por Áreas de Conhecimento</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Explorar Categorias
+              Conheça as Categorias de Cursos
             </h2>
             <p className="mt-1 text-sm text-slate-600 max-w-xl">
               Selecione uma área para filtrar treinamentos certificados, videoaulas e materiais didáticos.
@@ -100,27 +100,6 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            {onNavigateToCategoryDetail && (
-              <button
-                onClick={() => onNavigateToCategoryDetail('desenvolvimento-nas-empresas')}
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-[#243042] hover:bg-[#182333] px-3.5 py-2 rounded-xl transition-all cursor-pointer shadow-xs border border-slate-700"
-                title="Abrir página exclusiva da categoria Desenvolvimento nas Empresas"
-              >
-                <span>🏢 Cursos nas Empresas</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#FFC72C]" />
-              </button>
-            )}
-
-            {onNavigateToCategoriesPage && (
-              <button
-                onClick={onNavigateToCategoriesPage}
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#243042] bg-[#FFC72C] hover:bg-[#F5B014] px-4 py-2 rounded-xl transition-all cursor-pointer shadow-sm"
-              >
-                <span>Ver Guia das 17 Categorias</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
-            )}
-
             {selectedCategory && (
               <button
                 onClick={() => onSelectCategory(null)}
