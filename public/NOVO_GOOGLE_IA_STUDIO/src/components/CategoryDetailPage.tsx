@@ -156,8 +156,8 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
           'Ao concluir os módulos e a avaliação final, o certificado é emitido instantaneamente em formato digital de alta resolução com código alfanumérico e QR Code único.'
       },
       {
-        question: 'Os cursos desta área são aceitos para Horas Complementares nas Faculdades?',
-        answer: 'Sim, a certificação da ESDHUBEM é válida nacionalmente e aceita de forma indireta pelo MEC através da aprovação das próprias Faculdades e Universidades como comprovante de Atividades Acadêmicas Complementares (AAC).'
+        question: 'Os cursos desta área são aceitos para Horas Complementares?',
+        answer: 'Sim, os certificados têm valor como formação complementar. A aceitação para cômputo acadêmico nas faculdades fica sujeita às normas internas de cada instituição de ensino.'
       },
     ]
   };
@@ -292,7 +292,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 shrink-0">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                <span className="text-[11px] text-slate-300">Aceito em Faculdades</span>
+                <span className="text-[11px] text-slate-300">Horas Complementares*</span>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
                 <span className="block text-xl font-bold text-emerald-400">In-Company</span>
@@ -592,10 +592,12 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                   {/* Price & Action Buttons */}
                   <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
                     <div className="flex items-center justify-between text-xs">
-                      <span className="text-[11px] font-medium text-slate-500 hidden sm:inline">
-                        {course.category === 'Horas Complementares'
-                          ? 'Aceito pelas Faculdades'
-                          : 'Certificado Válido'}
+                      <span className="text-[11px]">
+                        <span className="hidden sm:inline">
+                          {course.category === 'Horas Complementares'
+                            ? 'Horas Complementares*'
+                            : 'Certificado Livre'}
+                        </span>
                       </span>
                       <span className="font-bold text-[#243042]">
                         {course.pillar === 'freepremium'

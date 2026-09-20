@@ -124,7 +124,7 @@ const CATEGORY_DETAILS: Record<string, { summary: string; skills: string[] }> = 
   },
   'horas-complementares': {
     summary: 'Cursos desenhados especificamente para averbação de horas acadêmicas em universidades do Brasil.',
-    skills: ['Aceito em Faculdades', 'Emissão com Carga Horária', 'QR Code Antifraude', 'Acesso Imediato']
+    skills: ['Horas Complementares*', 'Emissão com Carga Horária', 'QR Code Antifraude', 'Acesso Imediato']
   },
   'formacao-livre': {
     summary: 'Programas densos e práticos para nova carreira profissional, transição e geração de renda.',
@@ -303,7 +303,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
 
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
               <div className="text-3xl font-black text-emerald-400">100%</div>
-              <div className="text-xs text-slate-300 font-medium mt-1">Aceito em Faculdades</div>
+              <div className="text-xs text-slate-300 font-medium mt-1">Horas Complementares*</div>
             </div>
 
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">

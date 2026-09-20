@@ -69,8 +69,8 @@ export const Hero: React.FC<HeroProps> = ({
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-base font-extrabold text-[#182333]">Certificado Válido</h4>
-                <p className="text-sm text-slate-500">Aceito em faculdades</p>
+                <h4 className="text-base font-extrabold text-[#182333]">Certificado Livre</h4>
+                <p className="text-xs text-slate-500 leading-tight">Válido p/ horas complementares*</p>
               </div>
             </div>
 
@@ -79,8 +79,8 @@ export const Hero: React.FC<HeroProps> = ({
                 <Award className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-base font-extrabold text-[#182333]">Freepremium</h4>
-                <p className="text-sm text-slate-500">Aulas grátis sem taxa</p>
+                <h4 className="text-base font-extrabold text-[#182333]">Aulas Gratuitas</h4>
+                <p className="text-xs text-slate-500 leading-tight">Taxa opcional p/ certificado</p>
               </div>
             </div>
 

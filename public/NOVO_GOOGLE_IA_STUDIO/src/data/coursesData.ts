@@ -703,11 +703,11 @@ export const CERTIFICATE_MOCKS: Record<string, CertificateVerification> = {
 export const FAQ_DATA = [
   {
     question: 'O que são os Cursos Freepremium?',
-    answer: 'Nosso modelo Freepremium permite que qualquer pessoa assista a todas as videoaulas e consulte materiais didáticos de forma 100% gratuita. Se você necessitar do certificado oficial para comprovar estudos, basta solicitar a emissão pagando apenas a pequena taxa administrativa de validação e registro.',
+    answer: 'No modelo Freepremium, oferecemos acesso gratuito a todas as videoaulas. A taxa administrativa é opcional e cobrada apenas se você desejar a emissão, validação e registro do certificado. Nenhum valor é exigido para acessar o conteúdo de estudo.',
   },
   {
-    question: 'Os certificados são aceitos nas faculdades para Horas Complementares?',
-    answer: 'Sim! Nossos certificados atendem rigorosamente às diretrizes da Lei nº 9.394/96 (Diretrizes e Bases da Educação Nacional) e ao Decreto nº 5.154/04 para cursos livres de capacitação. Eles contêm carga horária expressa, conteúdo programático detalhado, CNPJ da instituição e código verificador único com QR Code para aceitação imediata em secretarias acadêmicas de todo o território nacional.',
+    question: 'Os certificados são aceitos para Horas Complementares?',
+    answer: 'Os certificados têm valor como formação complementar e são amparados pela Lei nº 9.394/96. A aceitação para cômputo acadêmico de horas complementares depende das normas internas e regulamentações de cada instituição de ensino ou faculdade, portanto recomenda-se consulta prévia.',
   },
   {
     question: 'Como funciona a validação pública de certificados?',

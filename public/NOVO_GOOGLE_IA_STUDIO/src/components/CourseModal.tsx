@@ -206,7 +206,7 @@ export const CourseModal: React.FC<CourseModalProps> = ({
                   Validade Oficial e Legislação
                 </h4>
                 <p className="text-xs text-slate-700">
-                  Certificado emitido pela <strong>ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar (CNPJ 61928778000150)</strong> em total conformidade com a Lei de Diretrizes e Bases da Educação Nacional (Lei 9.394/96).
+                  Certificado de Curso Livre emitido pela <strong>ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar (CNPJ 61.928.778/0001-50)</strong> em total conformidade com a Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/96). Não é diploma de graduação, pós-graduação ou ensino técnico.
                 </p>
                 <p className="text-xs text-slate-700">
                   Inclui autenticidade via QR Code e código alfanumérico com consulta pública instantânea para faculdades, empresas e conselhos de classe.

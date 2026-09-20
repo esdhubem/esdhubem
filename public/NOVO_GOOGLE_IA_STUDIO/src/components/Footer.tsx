@@ -364,18 +364,26 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Bottom Copyright & Back to Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p className="text-center sm:text-left">
-            © 2026 ESDHUBEM São Paulo SP Brasil CNPJ 61928778000150
-          </p>
+        <div className="pt-8 mt-8 border-t border-slate-800/50 flex flex-col items-center justify-center gap-6 text-center text-slate-400">
+          <div className="text-[10px] leading-relaxed max-w-4xl text-slate-500">
+            <p className="mb-2">
+              <strong>ESDHUBEM</strong> — CNPJ 61.928.778/0001-50. Certificados de Cursos Livres emitidos pela instituição.
+            </p>
+            <p>
+              Amparado pela Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/96) e Decreto nº 5.154/04. Não é diploma de graduação, pós-graduação ou ensino técnico. A aceitação como atividade complementar fica sujeita às normas internas de cada instituição de ensino.
+            </p>
+          </div>
 
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700"
-          >
-            <span>Voltar ao topo</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
+          <div className="flex flex-col sm:flex-row items-center justify-between w-full text-xs">
+            <p>© 2026 ESDHUBEM São Paulo SP Brasil. Todos os direitos reservados.</p>
+            <button
+              onClick={scrollToTop}
+              className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 mt-4 sm:mt-0"
+            >
+              <span>Voltar ao topo</span>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </div>
       </div>
 

@@ -73,7 +73,7 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Consulte a fundamentação jurídica de nossos cursos livres, as regras oficiais para averbação de Horas Complementares em faculdades, Termos de Uso e nossa estrita conformidade com a LGPD.
+              Cursos livres amparados pela Lei nº 9.394/1996 (LDB) e Decreto nº 5.154/2004. Não constituem ensino fundamental, médio, técnico ou superior. Cada certificado é emitido pela ESDHUBEM, com validade nacional como formação complementar.
             </p>
           </div>
 
@@ -232,7 +232,7 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
                         <span>Horas Complementares Universitárias</span>
                       </div>
                       <p className="text-slate-500">
-                        Nossos certificados são aceitos de forma indireta pelo MEC através das Faculdades e Universidades como comprovante de Atividades Acadêmicas Complementares (AAC / AACC).
+                        Válido para horas complementares. A aceitação como atividade complementar fica sujeita às normas internas de cada instituição de ensino. Recomenda-se consulta prévia.
                       </p>
                     </div>
 
@@ -330,7 +330,7 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
                   <section className="space-y-2">
                     <h3 className="text-base font-bold text-[#182333]">2. Modalidade dos Cursos & Freepremium</h3>
                     <p>
-                      A ESDHUBEM oferece treinamentos na modalidade Cursos Livres via Ensino a Distância (EAD). Nos cursos com modalidade <strong>Freepremium</strong>, o acesso a 100% das videoaulas e materiais em tela é garantido de forma gratuita, ficando a emissão e validação formal do certificado sujeita à taxa administrativa correspondente.
+                      A ESDHUBEM oferece treinamentos na modalidade Cursos Livres via Ensino a Distância (EAD). Nos cursos com modalidade <strong>Freepremium</strong>, há o <strong>Acesso Gratuito + Certificado Opcional</strong>. Você assiste às aulas sem custo. Caso deseje o certificado, é disponibilizada taxa de emissão referente à confecção, registro e validação do documento. Nenhum valor é exigido para acesso ao conteúdo de aprendizagem.
                     </p>
                   </section>
 
