@@ -47,3 +47,18 @@ export interface CertificateVerification {
   institution: string;
   authenticityHash: string;
 }
+
+export interface PolicySection {
+  title: string;
+  content: string[];
+}
+
+export interface PolicyDetail {
+  id: string;
+  title: string;
+  lastUpdated: string;
+  iconName: string;
+  color: string;
+  introduction: string;
+  sections: PolicySection[];
+}

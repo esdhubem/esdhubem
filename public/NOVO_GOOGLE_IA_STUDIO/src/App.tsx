@@ -14,6 +14,7 @@ import { CategoriesPage } from './components/CategoriesPage';
 import { CategoryDetailPage } from './components/CategoryDetailPage';
 import { LegalInfoPage } from './components/LegalInfoPage';
 import { PoliticasPage } from './components/PoliticasPage';
+import { PolicyDetailPage } from './components/PolicyDetailPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { Course } from './types';
 import {
@@ -32,9 +33,10 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-assertiva' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas'
+    'home' | 'sala-de-aula' | 'curso-assertiva' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
+  const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
   const [activePortalCourseId, setActivePortalCourseId] = useState<string>('hc-1');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -303,7 +305,25 @@ export default function App() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onNavigateToPolicy={(policyId) => {
-              showNotification(`Página da política "${policyId}" será construída em breve.`);
+              setActivePolicyId(policyId);
+              setCurrentPage('politica-detalhe');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'politica-detalhe' && (
+        <main className="flex-1">
+          <PolicyDetailPage
+            policyId={activePolicyId}
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onBackToPolicies={() => {
+              setCurrentPage('politicas');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           />
         </main>
