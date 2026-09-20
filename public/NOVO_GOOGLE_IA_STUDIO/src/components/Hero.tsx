@@ -25,8 +25,8 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* Content over image */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-2xl space-y-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center">
+          <div className="max-w-3xl space-y-6 flex flex-col items-center">
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-bold tracking-wide shadow-lg">
               <Sparkles className="w-4 h-4 text-[#FFC72C]" />
@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-slate-200 font-medium leading-relaxed max-w-xl">
+            <p className="text-lg sm:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl">
               Cursos que você precisa para aprender Desenvolvimento Pessoal, Humano, Profissional, Ético e Relacional.
             </p>
           </div>
