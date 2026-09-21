@@ -25,9 +25,16 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-  Copy
+  Copy,
+  Mail,
+  Map,
+  PieChart,
+  Presentation,
+  Video,
+  MonitorPlay,
+  ClipboardList
 } from 'lucide-react';
-import { Play, FileText, Video } from 'lucide-react';
+import { Play, FileText, Video as VideoIcon } from 'lucide-react';
 import profSilvianeImg from '../assets/prof-silviane.png';
 import { CategoryItem, Course } from '../types';
 import { CATEGORIES_DATA, COURSES_DATA } from '../data/coursesData';
@@ -319,27 +326,44 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
               </div>
             </div>
 
-            {/* Key stats row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
-                <span className="block text-xl font-bold text-[#FFC72C]">
-                  {relatedCourses.length}
-                </span>
-                <span className="text-[11px] text-slate-300">Cursos Disponíveis</span>
+            {/* B2B Authority Indicators - Only for Corporativas */}
+            {currentCategory.id === 'treinamentos-palestras-corporativas' ? (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 w-full max-w-2xl">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center flex flex-col items-center justify-center">
+                  <span className="block text-xl sm:text-2xl font-black text-[#FFC72C]">Ativa</span>
+                  <span className="text-xs text-slate-300 font-medium">Metodologia Andragógica</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center flex flex-col items-center justify-center">
+                  <span className="block text-xl sm:text-2xl font-black text-white">In-Company</span>
+                  <span className="text-xs text-slate-300 font-medium">Sob Medida</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center flex flex-col items-center justify-center">
+                  <span className="block text-xl sm:text-2xl font-black text-emerald-400">Mensurável</span>
+                  <span className="text-xs text-slate-300 font-medium">Foco em Resultado</span>
+                </div>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
-                <span className="block text-xl font-bold text-white">4.9/5</span>
-                <span className="text-[11px] text-slate-300">Avaliação Média</span>
+            ) : (
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 w-full justify-center">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
+                  <span className="block text-xl font-bold text-[#FFC72C]">
+                    {relatedCourses.length}
+                  </span>
+                  <span className="text-[11px] text-slate-300">Cursos Disponíveis</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
+                  <span className="block text-xl font-bold text-white">4.9/5</span>
+                  <span className="text-[11px] text-slate-300">Avaliação Média</span>
+                </div>
+                <div className="flex flex-col items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 shrink-0">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span className="text-[11px] text-slate-300">Horas Complementares*</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center flex flex-col items-center justify-center">
+                  <span className="block text-xl font-bold text-emerald-400">In-Company</span>
+                  <span className="text-[11px] text-slate-300">Atendimento B2B</span>
+                </div>
               </div>
-              <div className="flex flex-col items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 shrink-0">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span className="text-[11px] text-slate-300">Horas Complementares*</span>
-              </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center flex flex-col items-center justify-center">
-                <span className="block text-xl font-bold text-emerald-400">In-Company</span>
-                <span className="text-[11px] text-slate-300">Atendimento B2B</span>
-              </div>
-            </div>
+            )}
           </div>
 
           {/* Right Card: In-Company & WhatsApp Hotline */}
@@ -392,6 +416,69 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
 
         </div>
       </header>
+
+      {/* B2B Metodologia e Formatos (Apenas na categoria Corporativa) */}
+      {currentCategory.id === 'treinamentos-palestras-corporativas' && (
+        <div className="bg-slate-50 border-b border-slate-200">
+          
+          {/* Metodologia - Como Funciona */}
+          <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="text-[#FFC72C] font-black uppercase tracking-widest text-xs mb-3 block">Metodologia</span>
+              <h2 className="text-3xl font-black text-[#182333]">Como <span className="text-slate-500 font-light">Funciona</span></h2>
+              <p className="text-slate-500 mt-4 font-medium">4 etapas do diagnóstico ao impacto mensurável na sua equipe.</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {[
+                { step: '1', title: 'Diagnóstico', desc: 'Mapeamento das necessidades, público-alvo e objetivos de aprendizagem do seu negócio.', icon: Search },
+                { step: '2', title: 'Curadoria', desc: 'Desenvolvimento da estratégia pedagógica e definição de formatos, roteiros e trilhas.', icon: Map },
+                { step: '3', title: 'Execução', desc: 'Entrega da solução in-company ou online, com facilitação especializada e andragogia.', icon: Sparkles },
+                { step: '4', title: 'Avaliação', desc: 'Métricas de engajamento e certificação oficial. Análise de impacto e relatórios para gestão.', icon: PieChart }
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col items-center text-center relative hover:-translate-y-1 transition-transform">
+                  <div className="w-8 h-8 rounded-full bg-[#182333] text-white flex items-center justify-center font-bold text-sm absolute -top-4 shadow-md">
+                    {item.step}
+                  </div>
+                  <div className="w-14 h-14 rounded-full bg-slate-50 text-[#FFC72C] flex items-center justify-center mb-4 mt-2">
+                    <item.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#182333] mb-2">{item.title}</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Formatos de Conteudo */}
+          <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/60">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="text-[#FFC72C] font-black uppercase tracking-widest text-xs mb-3 block">Conteúdo</span>
+              <h2 className="text-3xl font-black text-[#182333]">Formatos de <span className="text-slate-500 font-light">Entrega</span></h2>
+              <p className="text-slate-500 mt-4 font-medium">Diferentes formatos para engajar, ensinar e desenvolver seu time.</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <article className="bg-[#182333] text-white p-6 rounded-2xl shadow-md flex flex-col gap-3 group hover:bg-[#243042] transition-colors">
+                <Presentation className="w-8 h-8 text-[#FFC72C] mb-2" />
+                <h3 className="text-lg font-bold">Palestras In-Company</h3>
+                <p className="text-sm text-slate-300 leading-relaxed">Momentos de alto impacto (1 a 2h) para conscientização, lançamento de campanhas, SIPAT e motivação direta da equipe presencial ou ao vivo.</p>
+              </article>
+              <article className="bg-white text-[#182333] border border-slate-200 p-6 rounded-2xl shadow-sm flex flex-col gap-3 group hover:border-[#FFC72C] transition-colors">
+                <Users className="w-8 h-8 text-[#243042] mb-2" />
+                <h3 className="text-lg font-bold">Workshops Práticos</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">Sessões imersivas e dinâmicas (4 a 8h) focadas em desenvolver competências específicas, como liderança e feedback, através de ferramentas práticas.</p>
+              </article>
+              <article className="bg-white text-[#182333] border border-slate-200 p-6 rounded-2xl shadow-sm flex flex-col gap-3 group hover:border-[#FFC72C] transition-colors">
+                <MonitorPlay className="w-8 h-8 text-[#243042] mb-2" />
+                <h3 className="text-lg font-bold">Cursos Online Assíncronos</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">Acesso flexível a trilhas de vídeo instrucionais, permitindo que cada colaborador estude no próprio ritmo com certificação ao final.</p>
+              </article>
+            </div>
+          </section>
+
+        </div>
+      )}
 
       {/* 3. Filter Bar & Search Container */}
       <section className="bg-white border-b border-slate-200 sticky top-18 z-30 shadow-xs">
@@ -688,31 +775,32 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
       </section>
       {/* 6. Corporate In-Company & B2B Solutions Section */}
       {currentCategory.id === 'treinamentos-palestras-corporativas' && (
-        <section className="bg-white border-y border-slate-200 py-12">
+        <section className="bg-white border-y border-slate-200 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-[#182333] text-white rounded-3xl p-8 sm:p-10 border border-slate-700 shadow-xl overflow-hidden relative">
-              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div className="bg-[#182333] text-white rounded-3xl p-8 sm:p-10 lg:p-12 border border-slate-700 shadow-xl overflow-hidden relative">
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                 
-                <div className="lg:col-span-2 space-y-4">
+                {/* Left Side: Info & Form */}
+                <div className="space-y-6">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFC72C]/10 text-[#FFC72C] text-xs font-bold uppercase">
                     <Building2 className="w-3.5 h-3.5" />
                     <span>Soluções B2B para Recursos Humanos e Lideranças</span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                  <h3 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
                     Quer levar os cursos de {categoryCleanName} para a sua empresa?
                   </h3>
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
                     Oferecemos programas in-company adaptados à realidade do seu negócio. Seja para desenvolver novos líderes, implementar uma cultura de feedback contínuo ou cumprir exigências de saúde mental (NR-1) e DHO, estruturamos turmas exclusivas com relatórios para a gestão.
                   </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 text-xs">
                     <div className="flex items-center gap-2 bg-white/5 p-2.5 rounded-xl border border-white/5">
                       <CheckCircle2 className="w-4 h-4 text-[#FFC72C] shrink-0" />
                       <span>Emissão de Nota Fiscal de Serviços (PJ)</span>
                     </div>
                     <div className="flex items-center gap-2 bg-white/5 p-2.5 rounded-xl border border-white/5">
                       <CheckCircle2 className="w-4 h-4 text-[#FFC72C] shrink-0" />
-                      <span>Dashboard de Acompanhamento de Colaboradores</span>
+                      <span>Dashboard de Acompanhamento (RH)</span>
                     </div>
                     <div className="flex items-center gap-2 bg-white/5 p-2.5 rounded-xl border border-white/5">
                       <CheckCircle2 className="w-4 h-4 text-[#FFC72C] shrink-0" />
@@ -720,38 +808,80 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                     </div>
                     <div className="flex items-center gap-2 bg-white/5 p-2.5 rounded-xl border border-white/5">
                       <CheckCircle2 className="w-4 h-4 text-[#FFC72C] shrink-0" />
-                      <span>Mentoria e Workshops ao Vivo opcionais</span>
+                      <span>Mentoria e Workshops ao Vivo</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Action Column */}
-                <div className="bg-[#243042] border border-slate-700 rounded-2xl p-6 text-center space-y-4">
-                  <div className="w-12 h-12 bg-[#FFC72C] text-[#243042] rounded-full flex items-center justify-center mx-auto font-black text-xl">
-                    B2B
-                  </div>
-                  <div>
-                    <h4 className="text-base font-bold text-white">Fale com um Especialista</h4>
-                    <p className="text-xs text-slate-300 mt-1">
-                      Atendimento corporativo prioritário pelo WhatsApp
-                    </p>
+                {/* Right Side: Action Cards */}
+                <div className="flex flex-col gap-6">
+                  
+                  {/* WhatsApp Priority Card */}
+                  <div className="bg-[#243042] border border-slate-700 rounded-2xl p-6 text-center shadow-lg relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFC72C]/5 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                    <div className="relative z-10 flex flex-col items-center gap-4">
+                      <div className="w-12 h-12 bg-[#FFC72C] text-[#243042] rounded-full flex items-center justify-center font-black text-xl shadow-sm">
+                        B2B
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-white">Atendimento Rápido</h4>
+                        <p className="text-xs text-slate-300 mt-1">
+                          Fale com um especialista prioritário pelo WhatsApp
+                        </p>
+                      </div>
+
+                      <a
+                        href="https://wa.me/5511960319637?text=Olá!%20Represento%20uma%20empresa%20e%20gostaria%20de%20um%20orçamento%20para%20cursos%20de%20Treinamentos%20e%20Palestras."
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-full bg-[#FFC72C] hover:bg-[#F5B014] text-[#243042] font-bold text-sm py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
+                      >
+                        <Phone className="w-4 h-4" />
+                        <span>Conversar no WhatsApp (11) 960319637</span>
+                      </a>
+                    </div>
                   </div>
 
-                  <a
-                    href="https://wa.me/5511960319637?text=Olá!%20Represento%20uma%20empresa%20e%20gostaria%20de%20um%20orçamento%20para%20cursos%20de%20Treinamentos%20e%20Palestras."
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-full bg-[#FFC72C] hover:bg-[#F5B014] text-[#243042] font-bold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
-                  >
-                    <Phone className="w-4 h-4" />
-                    <span>Conversar no WhatsApp (11) 960319637</span>
-                  </a>
+                  {/* Formal Contact Form */}
+                  <div className="bg-white text-[#182333] border border-slate-200 rounded-2xl p-6 shadow-lg relative">
+                    <div className="flex items-center gap-3 mb-5">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+                        <Mail className="w-4 h-4" />
+                      </div>
+                      <h4 className="font-bold text-base">Solicitar Proposta Oficial</h4>
+                    </div>
+                    
+                    <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert('Formulário enviado com sucesso! Entraremos em contato em breve.'); }}>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-1">
+                          <label className="text-[11px] font-bold text-slate-500 uppercase">Nome</label>
+                          <input required type="text" placeholder="Seu nome" className="w-full bg-slate-50 border border-slate-200 text-sm px-3 py-2 rounded-lg focus:outline-hidden focus:border-[#243042] focus:bg-white transition-colors" />
+                        </div>
+                        <div className="space-y-1">
+                          <label className="text-[11px] font-bold text-slate-500 uppercase">Empresa</label>
+                          <input required type="text" placeholder="Nome da empresa" className="w-full bg-slate-50 border border-slate-200 text-sm px-3 py-2 rounded-lg focus:outline-hidden focus:border-[#243042] focus:bg-white transition-colors" />
+                        </div>
+                      </div>
+                      <div className="space-y-1">
+                        <label className="text-[11px] font-bold text-slate-500 uppercase">E-mail Corporativo</label>
+                        <input required type="email" placeholder="email@empresa.com" className="w-full bg-slate-50 border border-slate-200 text-sm px-3 py-2 rounded-lg focus:outline-hidden focus:border-[#243042] focus:bg-white transition-colors" />
+                      </div>
+                      <div className="space-y-1">
+                        <label className="text-[11px] font-bold text-slate-500 uppercase">Qual a necessidade?</label>
+                        <select className="w-full bg-slate-50 border border-slate-200 text-sm px-3 py-2 rounded-lg focus:outline-hidden focus:border-[#243042] focus:bg-white transition-colors text-slate-700">
+                          <option>Treinamento In-Company</option>
+                          <option>Palestras e SIPAT</option>
+                          <option>Assinatura de Cursos Online</option>
+                          <option>Outros</option>
+                        </select>
+                      </div>
+                      <button type="submit" className="w-full bg-[#243042] hover:bg-[#182333] text-white font-bold text-sm py-3 px-4 rounded-xl transition-all shadow-md mt-2">
+                        Enviar Solicitação
+                      </button>
+                    </form>
+                  </div>
 
-                  <p className="text-[10px] text-slate-400">
-                    Horário de atendimento: Seg a Sex, das 9h às 17h
-                  </p>
                 </div>
-
               </div>
             </div>
           </div>
