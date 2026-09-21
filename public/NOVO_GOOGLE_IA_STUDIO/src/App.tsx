@@ -434,7 +434,7 @@ export default function App() {
 
       {/* Floating WhatsApp / Direct Contact Support Button */}
       <a
-        href="https://wa.me/5511960319637"
+        href="https://wa.me/5511960319637?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20cursos%20da%20ESDHUBEM"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#1EBE5D] text-white p-3.5 rounded-full shadow-lg shadow-black/15 flex items-center gap-2 transition-transform hover:scale-110 group cursor-pointer"
