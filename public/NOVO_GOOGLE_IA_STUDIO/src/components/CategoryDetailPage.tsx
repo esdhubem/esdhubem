@@ -165,7 +165,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
       {
         question: 'Como funciona a emissão do certificado deste curso?',
         answer:
-          'Ao concluir os módulos e a avaliação final, o certificado é emitido instantaneamente em formato digital de alta resolução com código alfanumérico e QR Code único.'
+          'Ao concluir os módulos e a avaliação final, o certificado é emitido instantaneamente em formato digital de alta resolução com código alfanumérico e QR Code único. Importante: A emissão do certificado é opcional e mediante taxa nos cursos livres gratuitos (Freepremium), mas já está totalmente incluída no pacote de benefícios dos cursos pagos de Formação e Horas Complementares.'
       },
       {
         question: 'Os cursos desta área são aceitos para Horas Complementares?',
