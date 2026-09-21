@@ -347,6 +347,8 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => {
                     if (category === 'Treinamento nas Empresas B2B') {
                       onNavigate('categoria:treinamentos-palestras-corporativas');
+                    } else if (category === 'Livros & Materiais') {
+                      onNavigate('livraria');
                     } else if (category === 'Formação Empresarial') {
                       onSelectCategory('Formação Empresarial');
                       const catalogEl = document.getElementById('catalogo-cursos');

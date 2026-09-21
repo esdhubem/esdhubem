@@ -185,9 +185,13 @@ export default function App() {
           {/* 1. Hero Section */}
           <Hero
             onSelectCategory={(cat) => {
-              setSelectedCategory(cat);
-              const el = document.getElementById('catalogo-cursos');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
+              if (cat === 'treinamentos-palestras-corporativas') {
+                handleNavigate('categoria:treinamentos-palestras-corporativas');
+              } else {
+                setSelectedCategory(cat);
+                const el = document.getElementById('catalogo-cursos');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }
             }}
           />
 
@@ -198,6 +202,8 @@ export default function App() {
             onSelectCategory={(cat) => {
               if (cat?.toLowerCase() === 'livros & materiais') {
                 handleNavigate('livraria');
+              } else if (cat?.toLowerCase() === 'treinamentos e palestras corporativas') {
+                handleNavigate('categoria:treinamentos-palestras-corporativas');
               } else {
                 setSelectedCategory(cat);
               }
@@ -238,7 +244,7 @@ export default function App() {
           <section className="py-8 bg-[#F8FAFC]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <CorporateBanner onNavigate={() => handleNavigate('categoria:desenvolvimento-nas-empresas')} />
+                <CorporateBanner onNavigate={() => handleNavigate('categoria:treinamentos-palestras-corporativas')} />
                 <BookstoreBanner onNavigate={() => handleNavigate('livraria')} />
               </div>
             </div>

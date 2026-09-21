@@ -128,9 +128,11 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     onSelectCategory(null);
                   } else {
                     onSelectCategory(flatTitle);
-                    const catalogEl = document.getElementById('catalogo-cursos');
-                    if (catalogEl) {
-                      catalogEl.scrollIntoView({ behavior: 'smooth' });
+                    if (cat.id !== 'livros' && cat.id !== 'treinamentos-palestras-corporativas') {
+                      const catalogEl = document.getElementById('catalogo-cursos');
+                      if (catalogEl) {
+                        catalogEl.scrollIntoView({ behavior: 'smooth' });
+                      }
                     }
                   }
                 }}
