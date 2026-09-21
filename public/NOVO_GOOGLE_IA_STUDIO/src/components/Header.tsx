@@ -249,7 +249,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span>Categorias</span>
             <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">18</span>
           </button>
-          <button onClick={() => { onNavigate('categoria:desenvolvimento-nas-empresas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Presencial nas Empresas</button>
+          <button onClick={() => { onNavigate('categoria:treinamentos-palestras-corporativas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Presencial nas Empresas</button>
           <button onClick={() => { onNavigate('sala-de-aula'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 flex justify-between text-[#FFC72C]">
             <span>Sala de Aula</span>
             <span className="text-[10px] bg-[#FFC72C] text-slate-950 font-black px-2 py-0.5 rounded-full">ALUNO</span>

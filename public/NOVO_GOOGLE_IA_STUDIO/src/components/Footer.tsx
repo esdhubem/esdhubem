@@ -317,7 +317,7 @@ export const Footer: React.FC<FooterProps> = ({
                 onClick={() => onNavigate('categorias')}
                 className="text-xs text-[#FFC72C] hover:underline font-bold cursor-pointer"
               >
-                Ver Todas as 17 →
+                Ver Todas as 18 →
               </button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs">
@@ -342,7 +342,7 @@ export const Footer: React.FC<FooterProps> = ({
                   key={category}
                   onClick={() => {
                     if (category === 'Treinamento nas Empresas B2B') {
-                      onNavigate('categoria:desenvolvimento-nas-empresas');
+                      onNavigate('categoria:treinamentos-palestras-corporativas');
                     } else if (category === 'Formação Empresarial') {
                       onSelectCategory('Formação Empresarial');
                       const catalogEl = document.getElementById('catalogo-cursos');

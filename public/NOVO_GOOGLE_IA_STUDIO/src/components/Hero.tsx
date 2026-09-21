@@ -85,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             <div 
-              onClick={() => onSelectCategory('desenvolvimento-nas-empresas')}
+              onClick={() => onSelectCategory('treinamentos-palestras-corporativas')}
               className="flex items-center justify-center lg:justify-center gap-4 sm:border-l border-slate-200 sm:pl-6 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0 cursor-pointer group"
             >
               <div className="w-14 h-14 rounded-2xl bg-[#243042] flex items-center justify-center text-[#FFC72C] shrink-0 shadow-sm group-hover:scale-105 transition-transform">
