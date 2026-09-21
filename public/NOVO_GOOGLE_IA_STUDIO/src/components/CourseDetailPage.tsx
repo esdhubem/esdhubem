@@ -103,33 +103,6 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
               </span>
             </div>
             
-            {/* Share Buttons Mini */}
-            <div className="flex items-center gap-3 self-end sm:self-auto">
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider hidden sm:block">Compartilhar:</span>
-              <div className="flex items-center gap-2">
-                <button className="w-7 h-7 rounded-full bg-white/5 hover:bg-blue-600 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
-                  <Facebook className="w-3.5 h-3.5" />
-                </button>
-                <button className="w-7 h-7 rounded-full bg-white/5 hover:bg-sky-500 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
-                  <Twitter className="w-3.5 h-3.5" />
-                </button>
-                <button className="w-7 h-7 rounded-full bg-white/5 hover:bg-blue-700 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
-                  <Linkedin className="w-3.5 h-3.5" />
-                </button>
-                <button 
-                  onClick={handleCopyLink}
-                  className="w-7 h-7 rounded-full bg-white/5 hover:bg-[#FFC72C] flex items-center justify-center text-slate-300 hover:text-[#182333] transition-colors relative"
-                  title="Copiar Link"
-                >
-                  <Copy className="w-3.5 h-3.5" />
-                  {copied && (
-                    <span className="absolute right-0 top-8 bg-[#182333] border border-slate-700 text-white text-[10px] px-2 py-0.5 rounded whitespace-nowrap shadow-xl z-50">
-                      Copiado!
-                    </span>
-                  )}
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -179,7 +152,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
           </div>
 
           {/* Hero Right Visual Banner */}
-          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+          <div className="w-full md:w-1/3 flex flex-col items-center md:items-end gap-4">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 max-w-sm w-full group">
               <img
                 src={image}
@@ -192,6 +165,34 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                 <span className="bg-[#182333]/90 backdrop-blur-xs px-2.5 py-1 rounded-md font-semibold text-[#FFC72C]">
                   ESDHUBEM Oficial
                 </span>
+              </div>
+            </div>
+            
+            {/* Share Buttons (Hero) */}
+            <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2.5 rounded-xl shadow-sm backdrop-blur-xs max-w-sm w-full justify-center">
+              <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Compartilhar:</span>
+              <div className="flex items-center gap-2">
+                <button className="w-8 h-8 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center text-slate-200 hover:text-white transition-colors">
+                  <Facebook className="w-4 h-4" />
+                </button>
+                <button className="w-8 h-8 rounded-full bg-white/10 hover:bg-sky-500 flex items-center justify-center text-slate-200 hover:text-white transition-colors">
+                  <Twitter className="w-4 h-4" />
+                </button>
+                <button className="w-8 h-8 rounded-full bg-white/10 hover:bg-blue-700 flex items-center justify-center text-slate-200 hover:text-white transition-colors">
+                  <Linkedin className="w-4 h-4" />
+                </button>
+                <button 
+                  onClick={handleCopyLink}
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FFC72C] flex items-center justify-center text-slate-200 hover:text-[#182333] transition-colors relative"
+                  title="Copiar Link"
+                >
+                  <Copy className="w-4 h-4" />
+                  {copied && (
+                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white text-[#182333] text-[10px] px-2 py-1 rounded font-bold whitespace-nowrap shadow-xl z-50">
+                      Link Copiado!
+                    </span>
+                  )}
+                </button>
               </div>
             </div>
           </div>
@@ -584,6 +585,34 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                     <span className="font-bold text-[#182333]">Oficial com QR Code</span>
                   </li>
                 </ul>
+                
+                {/* Share Buttons (Sidebar) */}
+                <div className="pt-4 border-t border-slate-100 flex flex-col items-center gap-3">
+                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar este curso</span>
+                  <div className="flex items-center gap-2.5">
+                    <button className="w-9 h-9 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-slate-500 transition-colors">
+                      <Facebook className="w-4 h-4" />
+                    </button>
+                    <button className="w-9 h-9 rounded-full bg-slate-100 hover:bg-sky-500 hover:text-white flex items-center justify-center text-slate-500 transition-colors">
+                      <Twitter className="w-4 h-4" />
+                    </button>
+                    <button className="w-9 h-9 rounded-full bg-slate-100 hover:bg-blue-700 hover:text-white flex items-center justify-center text-slate-500 transition-colors">
+                      <Linkedin className="w-4 h-4" />
+                    </button>
+                    <button 
+                      onClick={handleCopyLink}
+                      className="w-9 h-9 rounded-full bg-slate-100 hover:bg-[#FFC72C] flex items-center justify-center text-slate-500 hover:text-[#182333] transition-colors relative"
+                      title="Copiar Link"
+                    >
+                      <Copy className="w-4 h-4" />
+                      {copied && (
+                        <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#182333] text-white text-[10px] px-2 py-1 rounded font-bold whitespace-nowrap shadow-xl z-50">
+                          Copiado!
+                        </span>
+                      )}
+                    </button>
+                  </div>
+                </div>
 
               </div>
             </div>
