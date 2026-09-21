@@ -173,6 +173,16 @@ export const Header: React.FC<HeaderProps> = ({
               Início
             </button>
             <button
+              onClick={() => onNavigate('blog')}
+              className={`transition-all py-1 cursor-pointer ${
+                currentPage === 'blog' || currentPage === 'blog-post'
+                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
+                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
+              }`}
+            >
+              Blog
+            </button>
+            <button
               onClick={() => onNavigate('categorias')}
               className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 ${
                 currentPage === 'categorias'
@@ -245,6 +255,7 @@ export const Header: React.FC<HeaderProps> = ({
       {mobileMenuOpen && (
         <div className="xl:hidden bg-[#1E293B] border-t border-slate-700 px-4 py-4 space-y-3 shadow-2xl text-white">
           <button onClick={() => { onNavigate('inicio'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Início</button>
+          <button onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Blog</button>
           <button onClick={() => { onNavigate('categorias'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 flex justify-between">
             <span>Categorias</span>
             <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">18</span>

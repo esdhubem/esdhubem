@@ -17,7 +17,10 @@ import { CategoryDetailPage } from './components/CategoryDetailPage';
 import { LegalInfoPage } from './components/LegalInfoPage';
 import { PoliticasPage } from './components/PoliticasPage';
 import { PolicyDetailPage } from './components/PolicyDetailPage';
+import { BlogPage } from './components/BlogPage';
+import { BlogPostPage } from './components/BlogPostPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
+import { BLOG_POSTS } from './data/blogData';
 import { Course } from './types';
 import {
   CheckCircle2,
@@ -35,7 +38,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -44,6 +47,7 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [activePillar, setActivePillar] = useState<'all' | 'freepremium' | 'horas-complementares' | 'formacao-livre'>('all');
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const [activePostId, setActivePostId] = useState<string | null>(null);
   const [isValidatorOpen, setIsValidatorOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [savedCourseIds, setSavedCourseIds] = useState<string[]>(['fp-1', 'hc-1']); // Initial saved items matching the "2" indicator
@@ -53,6 +57,7 @@ export default function App() {
     const params = new URLSearchParams(window.location.search);
     const cursoId = params.get('curso');
     const categoriaId = params.get('categoria');
+    const postId = params.get('post');
 
     if (cursoId) {
       const course = COURSES_DATA.find(c => c.id === cursoId);
@@ -69,6 +74,16 @@ export default function App() {
       setCurrentPage('categoria-detalhe');
       window.history.replaceState({}, '', window.location.pathname);
       return;
+    }
+
+    if (postId) {
+      const post = BLOG_POSTS.find(p => p.id === postId);
+      if (post) {
+        setActivePostId(post.id);
+        setCurrentPage('blog-post');
+        window.history.replaceState({}, '', window.location.pathname);
+        return;
+      }
     }
   }, []);
 
@@ -127,6 +142,12 @@ export default function App() {
 
     if (sectionId === 'livraria') {
       setCurrentPage('livraria');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'blog') {
+      setCurrentPage('blog');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -378,6 +399,38 @@ export default function App() {
       {currentPage === 'livraria' && (
         <main className="flex-1">
           <LivrariaPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'blog' && (
+        <main className="flex-1">
+          <BlogPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigateToPost={(postId) => {
+              setActivePostId(postId);
+              setCurrentPage('blog-post');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'blog-post' && activePostId && (
+        <main className="flex-1">
+          <BlogPostPage
+            post={BLOG_POSTS.find(p => p.id === activePostId)!}
+            onBackToBlog={() => {
+              setCurrentPage('blog');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             onBackToHome={() => {
               setCurrentPage('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
