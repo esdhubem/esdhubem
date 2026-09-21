@@ -294,8 +294,8 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
 
       {/* 2. Hero Section for the Selected Category */}
       <header className="bg-[#243042] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60">
-        <div className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-          <div className="max-w-3xl space-y-4">
+        <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center gap-8">
+          <div className="max-w-3xl flex flex-col items-center text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider">
               <Building2 className="w-3.5 h-3.5" />
               <span>{meta.heroTag}</span>
@@ -310,8 +310,8 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </p>
 
             {/* Target Audience Pill */}
-            <div className="bg-[#182333]/80 border border-slate-700 rounded-xl p-3.5 text-xs text-slate-300 flex items-start gap-2.5">
-              <Users className="w-4 h-4 text-[#FFC72C] shrink-0 mt-0.5" />
+            <div className="bg-[#182333]/80 border border-slate-700 rounded-xl p-3.5 text-xs text-slate-300 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-2.5 max-w-2xl mx-auto">
+              <Users className="w-4 h-4 text-[#FFC72C] shrink-0" />
               <div>
                 <strong className="text-white block sm:inline mr-1">Público-alvo principal:</strong>
                 <span>{meta.targetPublic}</span>
@@ -330,11 +330,11 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                 <span className="block text-xl font-bold text-white">4.9/5</span>
                 <span className="text-[11px] text-slate-300">Avaliação Média</span>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 shrink-0">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+              <div className="flex flex-col items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 shrink-0">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                 <span className="text-[11px] text-slate-300">Horas Complementares*</span>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center flex flex-col items-center justify-center">
                 <span className="block text-xl font-bold text-emerald-400">In-Company</span>
                 <span className="text-[11px] text-slate-300">Atendimento B2B</span>
               </div>
