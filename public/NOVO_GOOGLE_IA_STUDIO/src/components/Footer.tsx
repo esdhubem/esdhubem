@@ -15,6 +15,7 @@ import {
   Heart
 } from 'lucide-react';
 import newsletterImg from '../assets/newsletter.jpg';
+import esdhubemLogo from '../assets/esdhubem-logo.png';
 
 interface FooterProps {
   onSelectCategory: (categoryName: string) => void;
@@ -120,6 +121,9 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-800 text-xs sm:text-sm">
           {/* Column 1: Fale Conosco */}
           <div className="space-y-4 lg:col-span-1">
+            <div className="mb-8 w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden bg-white/5 flex items-center justify-center p-1 border border-white/10 shadow-lg">
+               <img src={esdhubemLogo} alt="ESDHUBEM Logo" className="w-full h-full object-cover rounded-full" />
+            </div>
             <h4 className="text-white font-bold text-base uppercase tracking-wider">
               Fale Conosco
             </h4>

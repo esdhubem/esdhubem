@@ -18,6 +18,7 @@ import {
   Mail,
   AlertCircle
 } from 'lucide-react';
+import esdhubemLogo from '../assets/esdhubem-logo.png';
 
 interface LegalInfoPageProps {
   onBackToHome: () => void;
@@ -429,8 +430,8 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
                 {/* School Presentation Card */}
                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-[#243042] text-[#FFC72C] font-black text-xl flex items-center justify-center shadow-md">
-                      ESD
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center shadow-md border border-slate-200 p-0.5 shrink-0">
+                      <img src={esdhubemLogo} alt="ESDHUBEM Logo" className="w-full h-full object-cover rounded-full" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#182333]">

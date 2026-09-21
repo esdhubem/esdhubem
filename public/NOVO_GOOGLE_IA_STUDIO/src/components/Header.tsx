@@ -13,6 +13,7 @@ import {
   User,
   Info
 } from 'lucide-react';
+import esdhubemLogo from '../assets/esdhubem-logo.png';
 
 interface HeaderProps {
   onSearch: (term: string) => void;
@@ -60,12 +61,10 @@ export const Header: React.FC<HeaderProps> = ({
                 id="logo-brand-btn"
                 title="ESDHUBEM - Início"
               >
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-500 via-rose-500 to-indigo-600 flex items-center justify-center p-1 shadow-sm group-hover:scale-105 transition-transform">
-                  <div className="w-full h-full bg-white/20 backdrop-blur-xs rounded flex items-center justify-center text-white font-extrabold text-xs">
-                    <Sparkles className="w-4 h-4 text-white fill-white" />
-                  </div>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white flex items-center justify-center shadow-md border border-white/20 p-0.5 shrink-0 group-hover:scale-105 transition-transform">
+                  <img src={esdhubemLogo} alt="ESDHUBEM Logo" className="w-full h-full object-cover rounded-full" />
                 </div>
-                <span className="text-xl font-black tracking-wider text-white uppercase font-sans">
+                <span className="text-xl sm:text-2xl font-black tracking-wider text-white uppercase font-sans hidden sm:block">
                   ESDHUBEM
                 </span>
               </div>
