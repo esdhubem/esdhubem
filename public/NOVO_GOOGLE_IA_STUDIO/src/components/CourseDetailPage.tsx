@@ -159,11 +159,11 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
 
       {/* Tabs Navigation */}
       <div className="bg-white border-b border-slate-200 sticky top-0 z-20 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-6 overflow-x-auto no-scrollbar scroll-smooth">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-6 gap-y-2">
             <button
               onClick={() => setActiveTab('sobre')}
-              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
                 activeTab === 'sobre'
                   ? 'border-[#182333] text-[#182333]'
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
@@ -173,7 +173,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('conteudo')}
-              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
                 activeTab === 'conteudo'
                   ? 'border-[#182333] text-[#182333]'
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
@@ -183,7 +183,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('publico')}
-              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
                 activeTab === 'publico'
                   ? 'border-[#182333] text-[#182333]'
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
@@ -193,7 +193,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('competencias')}
-              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
                 activeTab === 'competencias'
                   ? 'border-[#182333] text-[#182333]'
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
@@ -203,7 +203,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('legislacao')}
-              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
                 activeTab === 'legislacao'
                   ? 'border-[#182333] text-[#182333]'
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
@@ -213,7 +213,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('autenticidade')}
-              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
                 activeTab === 'autenticidade'
                   ? 'border-[#182333] text-[#182333]'
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
@@ -223,7 +223,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('formato')}
-              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
                 activeTab === 'formato'
                   ? 'border-[#182333] text-[#182333]'
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
