@@ -21,6 +21,7 @@ import {
   Download,
   Info
 } from 'lucide-react';
+import profSilvianeImg from '../assets/prof-silviane.png';
 
 interface CourseDetailPageProps {
   onBackToHome: () => void;
@@ -391,12 +392,11 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                 
                 {/* Profile Photo with verified badge */}
                 <div className="relative mb-4">
-                  <div className="w-24 h-24 rounded-full overflow-hidden border-3 border-[#243042] shadow-md bg-slate-100 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full overflow-hidden bg-slate-200 shrink-0 border-2 border-white shadow-md">
                     <img
-                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
+                      src={profSilvianeImg}
                       alt="Professora Silviane Silvério"
                       className="w-full h-full object-cover"
-                      referrerPolicy="no-referrer"
                     />
                   </div>
                   <div className="absolute bottom-0 right-0 bg-[#FFC72C] text-slate-950 p-1 rounded-full shadow-xs" title="Docente Certificada ESDHUBEM">
