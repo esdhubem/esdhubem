@@ -30,6 +30,7 @@ import {
 } from 'lucide-react';
 import { CategoryItem, Course } from '../types';
 import { CATEGORIES_DATA, COURSES_DATA } from '../data/coursesData';
+import profSilvianeImg from '../assets/prof-silviane.png';
 
 interface CategoriesPageProps {
   onBackToHome: () => void;
