@@ -183,28 +183,6 @@ export const COURSES_DATA: Course[] = [
     ],
     targetAudience: 'Estudantes, líderes e profissionais que desejam expressar suas ideias com firmeza, clareza e respeito.',
     priceNote: 'Gratuito para assistir • Certificado oficial incluso',
-  },
-  {
-    id: 'emp-assertiva',
-    title: 'Comunicação Assertiva com a Liderança',
-    subtitle: 'Aprenda a expressar suas ideias com firmeza, clareza e respeito no ambiente corporativo, desenvolvendo uma liderança forte e inspiradora.',
-    category: 'Treinamento Corporativo\nPara Empresas & Equipes',
-    pillar: 'freepremium',
-    hours: 40,
-    rating: 4.9,
-    studentsCount: 3800,
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80',
-    tag: 'Presencial',
-    badge: 'In Company',
-    description: 'Ministrado pela Professora Silviane Silvério (Biomédica e Pós-graduada em Práticas Integrativas). Conteúdo completo sobre fundamentos da comunicação assertiva, postura, comportamento e aplicação corporativa.',
-    modulesCount: 3,
-    syllabus: [
-      'Módulo 1: Fundamentos da Comunicação Assertiva',
-      'Módulo 2: Postura e Comportamento',
-      'Módulo 3: Aplicando no Ambiente Corporativo'
-    ],
-    targetAudience: 'Estudantes, líderes e profissionais que desejam expressar suas ideias com firmeza, clareza e respeito.',
-    priceNote: 'Treinamento presencial corporativo sob demanda',
   }
 ];
 
