@@ -344,14 +344,14 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
                   <section className="space-y-2">
                     <h3 className="text-base font-bold text-[#182333]">4. Direito de Arrependimento e Reembolso</h3>
                     <p>
-                      Em respeito ao Artigo 49 do Código de Defesa do Consumidor (CDC), para aquisições de certificados ou cursos com taxas pagas online, o estudante possui o prazo incondicional de <strong>7 (sete) dias corridos</strong> a contar da data de confirmação do pagamento para solicitar o estorno integral de qualquer quantia desembolsada, mediante contato com nossos canais de suporte.
+                      Em respeito ao Artigo 49 do Código de Defesa do Consumidor (CDC), para aquisições de certificados ou cursos com taxas pagas online, o estudante possui o prazo incondicional de 7 (sete) dias corridos a contar da data de confirmação do pagamento para solicitar o estorno integral de qualquer quantia desembolsada, mediante contato com nossos canais de suporte. No caso dos cursos freepremium como são da modalidade gratuitos, eles não tem direito a pedido de reembolso.
                     </p>
                   </section>
 
                   <section className="space-y-2">
                     <h3 className="text-base font-bold text-[#182333]">5. Emissão e Requisitos de Conclusão</h3>
                     <p>
-                      Para a obtenção do certificado com carga horária averbada, o estudante deverá cumprir o percentual mínimo de aulas assistidas e, quando exigido pelo módulo do treinamento, atingir a nota mínima de aproveitamento na avaliação de verificação de aprendizagem.
+                      Para a obtenção do certificado com carga horária averbada, o estudante deverá cumprir o percentual 100% de aulas assistidas e, quando exigido pelo módulo do treinamento, atingir a nota mínima de 7,0 aproveitamento na avaliação de verificação de aprendizagem.
                     </p>
                   </section>
                 </div>
