@@ -183,16 +183,7 @@ export const Header: React.FC<HeaderProps> = ({
               <span>Categorias</span>
               <span className="bg-white/10 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">17</span>
             </button>
-            <button
-              onClick={() => onNavigate('categoria:desenvolvimento-nas-empresas')}
-              className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 ${
-                currentPage === 'categoria-detalhe'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              Presencial nas Empresas
-            </button>
+
             <button
               onClick={() => onNavigate('informacoes-legais')}
               className={`transition-all py-1 cursor-pointer ${

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, BookOpen, ShieldCheck, Award } from 'lucide-react';
+import { Sparkles, BookOpen, ShieldCheck, Award, Building2 } from 'lucide-react';
 
 interface HeroProps {
   onSelectCategory: (category: string) => void;
@@ -52,9 +52,9 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Trust highlights Strip below the banner */}
       <div className="bg-white border-b border-slate-200 shadow-sm relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-y-8 lg:gap-4">
             
-            <div className="flex items-center justify-center md:justify-start lg:justify-center gap-4 pt-4 md:pt-0">
+            <div className="flex items-center justify-center lg:justify-start gap-4">
               <div className="w-14 h-14 rounded-2xl bg-[#F8FAFC] border border-slate-200 flex items-center justify-center text-[#243042] shrink-0 shadow-sm">
                 <BookOpen className="w-6 h-6" />
               </div>
@@ -64,7 +64,7 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
             </div>
 
-            <div className="flex items-center justify-center md:justify-center gap-4 pt-6 md:pt-0 pl-0 md:pl-4">
+            <div className="flex items-center justify-center lg:justify-center gap-4 sm:border-l border-slate-200 sm:pl-6 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0">
               <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-amber-700 shrink-0 shadow-sm">
                 <ShieldCheck className="w-6 h-6" />
               </div>
@@ -74,13 +74,26 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
             </div>
 
-            <div className="flex items-center justify-center md:justify-end lg:justify-center gap-4 pt-6 md:pt-0 pr-0 md:pr-4">
+            <div className="flex items-center justify-center lg:justify-center gap-4 lg:border-l border-slate-200 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0">
               <div className="w-14 h-14 rounded-2xl bg-[#F8FAFC] border border-slate-200 flex items-center justify-center text-amber-500 shrink-0 shadow-sm">
                 <Award className="w-6 h-6" />
               </div>
               <div>
                 <h4 className="text-base font-extrabold text-[#182333]">Aulas Gratuitas</h4>
                 <p className="text-xs text-slate-500 leading-tight">Taxa opcional p/ certificado</p>
+              </div>
+            </div>
+
+            <div 
+              onClick={() => onSelectCategory('desenvolvimento-nas-empresas')}
+              className="flex items-center justify-center lg:justify-center gap-4 sm:border-l border-slate-200 sm:pl-6 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0 cursor-pointer group"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-[#243042] flex items-center justify-center text-[#FFC72C] shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                <Building2 className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-base font-extrabold text-[#182333] group-hover:text-amber-600 transition-colors">Nas Empresas</h4>
+                <p className="text-xs text-slate-500 leading-tight">Treinamento Presencial</p>
               </div>
             </div>
 
