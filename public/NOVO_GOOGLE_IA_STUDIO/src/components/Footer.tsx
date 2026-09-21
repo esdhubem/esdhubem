@@ -142,14 +142,14 @@ export const Footer: React.FC<FooterProps> = ({
               </a>
 
               <a
-                href="mailto:silverioss@protonmail.com"
+                href="mailto:esdhubem@proton.me"
                 className="flex items-center gap-2.5 hover:text-[#FFC72C] transition-colors group"
                 id="footer-contact-email"
               >
                 <div className="w-7 h-7 rounded-lg bg-slate-800 group-hover:bg-[#243042] flex items-center justify-center text-[#FFC72C] shrink-0 transition-colors">
                   <Mail className="w-3.5 h-3.5" />
                 </div>
-                <span className="break-all">silverioss@protonmail.com</span>
+                <span className="break-all">esdhubem@proton.me</span>
               </a>
 
               <div className="flex items-center gap-2.5">
@@ -417,7 +417,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <strong>Reembolsos & Garantia:</strong> Para cursos pagos e emissão de certificados, garantimos reembolso integral em até 7 dias corridos caso o conteúdo não atenda às suas expectativas, conforme o Código de Defesa do Consumidor.
               </p>
               <p>
-                <strong>Atendimento Oficial:</strong> Dúvidas podem ser encaminhadas diretamente ao e-mail <code>silverioss@protonmail.com</code> ou telefone <code>(11) 960319637</code> de segunda a sexta, das 9h às 17h.
+                <strong>Atendimento Oficial:</strong> Dúvidas podem ser encaminhadas diretamente ao e-mail <code>esdhubem@proton.me</code> ou telefone <code>(11) 960319637</code> de segunda a sexta, das 9h às 17h.
               </p>
             </div>
             <div className="pt-2 text-right">

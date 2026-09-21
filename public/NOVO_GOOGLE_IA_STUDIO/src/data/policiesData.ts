@@ -34,7 +34,7 @@ export const POLICIES_DETAIL_DATA: PolicyDetail[] = [
         title: '4. Seus Direitos (LGPD)',
         content: [
           'Você tem o direito de solicitar o acesso, a correção, a anonimização ou a exclusão dos seus dados pessoais a qualquer momento.',
-          'Para exercer esses direitos, basta entrar em contato conosco através do e-mail silverioss@protonmail.com. Salientamos que a exclusão total de dados pode impossibilitar a validação futura dos seus certificados já emitidos.'
+          'Para exercer esses direitos, basta entrar em contato conosco através do e-mail esdhubem@proton.me. Salientamos que a exclusão total de dados pode impossibilitar a validação futura dos seus certificados já emitidos.'
         ]
       }
     ]
@@ -73,6 +73,13 @@ export const POLICIES_DETAIL_DATA: PolicyDetail[] = [
           'Os cursos marcados como "Freepremium" possuem acesso gratuito ao conteúdo em vídeo. A emissão do certificado oficial comprobatório é opcional e condicionada ao pagamento de uma taxa administrativa.',
           'A validação do certificado depende da confirmação do pagamento e, em alguns casos, da realização de uma avaliação final com nota mínima de corte.'
         ]
+      },
+      {
+        title: '5. Produtos Parceiros e Afiliação',
+        content: [
+          'Nas páginas de alguns cursos, podem existir sugestões de modelos de produtos de tecnologia de plataformas parceiras, com as quais a ESDHUBEM estipulou uma parceria de divulgação.',
+          'A responsabilidade pelo pagamento, entrega, troca e devolução destes itens é inteiramente da plataforma parceira onde a transação final foi realizada (como no caso do Mercado Livre).'
+        ]
       }
     ]
   },
@@ -106,7 +113,14 @@ export const POLICIES_DETAIL_DATA: PolicyDetail[] = [
         ]
       },
       {
-        title: '4. Segurança Financeira',
+        title: '4. Moeda Digital',
+        content: [
+          'Aceitamos também pagamentos utilizando a moeda digital SOL.',
+          'A conversão e os detalhes da transferência devem ser alinhados diretamente com nosso atendimento oficial antes de efetuar o pagamento.'
+        ]
+      },
+      {
+        title: '5. Segurança Financeira',
         content: [
           'A ESDHUBEM não armazena os dados do seu cartão de crédito. Todas as transações são tokenizadas e processadas em ambientes seguros (SSL/TLS) pelas operadoras financeiras.'
         ]
@@ -124,8 +138,9 @@ export const POLICIES_DETAIL_DATA: PolicyDetail[] = [
       {
         title: '1. Prazo de Arrependimento (Garantia de 7 Dias)',
         content: [
-          'Conforme o Art. 49 do CDC, o aluno tem o direito de solicitar o cancelamento e reembolso integral do valor pago no prazo de até 7 (sete) dias corridos após a compra.',
-          'Para acionar a garantia incondicional, basta enviar um e-mail para silverioss@protonmail.com informando o desejo de cancelamento. Não é necessário justificar o motivo.'
+          'Conforme o Art. 49 do CDC, o consumidor tem o direito de solicitar o cancelamento e reembolso integral do valor pago no prazo de até 7 (sete) dias corridos após a compra.',
+          'Para acionar a garantia incondicional, basta enviar um e-mail para esdhubem@proton.me informando o desejo de cancelamento. Não é necessário justificar o motivo.',
+          'Para a compra de livros, o prazo de arrependimento de 7 dias também se aplica, devendo o produto ser devolvido sem indícios de uso.'
         ]
       },
       {
@@ -161,10 +176,11 @@ export const POLICIES_DETAIL_DATA: PolicyDetail[] = [
         ]
       },
       {
-        title: '2. Certificado Físico (Impresso)',
+        title: '2. Certificado Físico e Livros',
         content: [
-          'Caso o aluno solicite uma via física impressa em papel especial, será cobrada uma taxa de impressão e custos de envio (frete via Correios).',
-          'O prazo para postagem do certificado físico é de até 5 (cinco) dias úteis após a confirmação do pagamento do frete.'
+          'Caso o aluno solicite uma via física impressa do certificado ou compre livros, será cobrada uma taxa e custos de envio (frete via Correios).',
+          'O prazo estimado de envio é de 7 a 10 dias úteis, o qual ocorre conforme a demanda da gráfica parceira.',
+          'A coordenação do curso entrará em contato logo após a compra para confirmação exata dos prazos de produção e entrega.'
         ]
       },
       {

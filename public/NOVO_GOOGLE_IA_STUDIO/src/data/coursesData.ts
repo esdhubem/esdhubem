@@ -719,6 +719,6 @@ export const FAQ_DATA = [
   },
   {
     question: 'Como falar com o suporte pedagógico ou administrativo da ESDHUBEM?',
-    answer: 'Você pode entrar em contato direto pelo telefone/WhatsApp (11) 960319637, ou pelo e-mail silverioss@protonmail.com. Nosso horário de atendimento é de segunda a sexta-feira, das 9h às 17h.',
+    answer: 'Você pode entrar em contato direto pelo telefone/WhatsApp (11) 960319637, ou pelo e-mail esdhubem@proton.me. Nosso horário de atendimento é de segunda a sexta-feira, das 9h às 17h.',
   },
 ];

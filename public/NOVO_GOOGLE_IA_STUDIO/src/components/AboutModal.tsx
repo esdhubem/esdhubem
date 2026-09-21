@@ -93,7 +93,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({
               <p><strong>Razão Social:</strong> ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar</p>
               <p><strong>CNPJ:</strong> 61928778000150</p>
               <p><strong>Sede:</strong> São Paulo - SP - Brasil</p>
-              <p><strong>E-mail de Contato:</strong> silverioss@protonmail.com</p>
+              <p><strong>E-mail de Contato:</strong> esdhubem@proton.me</p>
               <p><strong>Telefone / WhatsApp:</strong> (11) 960319637</p>
             </div>
           </div>
