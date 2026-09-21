@@ -326,17 +326,21 @@ export const Footer: React.FC<FooterProps> = ({
                 'Formação Empresarial',
                 'Cursos Freepremium',
                 'Horas Complementares',
-                'Formações Profissionais',
+                'Formação Livre',
                 'Desenvolvimento Pessoal',
                 'Desenvolvimento Humano',
                 'Desenvolvimento Profissional',
                 'Desenvolvimento Ético',
                 'Desenvolvimento Relacional',
                 'Desenvolvimento Financeiro',
+                'Desenvolvimento Ambiental',
+                'Desenvolvimento da Consciência',
+                'Desenvolvimento Tecnológico e IA',
+                'Desenvolvimento nas Empresas',
                 'Práticas Integrativas',
                 'Coach Integrativo',
                 'Pedagogia Integrativa',
-                'Desenvolvimento Tecnológico e IA',
+                'Livros & Materiais',
               ].map((category) => (
                 <button
                   key={category}
