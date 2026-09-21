@@ -82,11 +82,6 @@ const CATEGORY_META: Record<
           'Sim. Nossos certificados cumprem a Lei nº 9.394/96 (LDB - Artigos 39 a 42) e o Decreto Presidencial nº 5.154/04 como Cursos Livres de Capacitação e Atualização Profissional, sendo amplamente aceitos para planos de progressão funcional e comprovação de horas de treinamento contínuo.'
       },
       {
-        question: 'Como funciona o curso "Comunicação Assertiva com a Liderança" nesta categoria?',
-        answer:
-          'O curso possui 40 horas e aborda desde a postura verbal e não-verbal até técnicas de reunião executiva e feedbacks desafiadores. Você pode assistir a todas as videoaulas de forma gratuita ou solicitar o certificado oficial com QR Code e autenticidade.'
-      },
-      {
         question: 'Posso solicitar apoio para elaborar um treinamento sob medida para o meu departamento?',
         answer:
           'Com certeza! Entre em contato direto pelo nosso WhatsApp corporativo (11) 960319637 para agendar uma conversa com nossa coordenação pedagógica chefiada pela Profa. Dra. Silviane Silvério.'
