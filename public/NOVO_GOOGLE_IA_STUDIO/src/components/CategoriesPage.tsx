@@ -553,16 +553,25 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
 
             {/* Special Callout: Comunicação Assertiva */}
             <div className="bg-gradient-to-r from-[#182333] to-[#243042] rounded-2xl p-6 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md border border-slate-700">
-              <div className="space-y-2 text-center sm:text-left">
-                <span className="bg-[#FFC72C] text-slate-950 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full">
-                  Curso em Destaque 40h
-                </span>
-                <h4 className="text-xl font-bold text-white">
-                  Comunicação Assertiva com a Liderança
-                </h4>
-                <p className="text-xs text-slate-300 max-w-xl">
-                  Ministrado pela Professora Silviane Silvério. Aprenda postura corporativa, CNV e feedback 360° com certificado de 40h válido para horas complementares.
-                </p>
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-md">
+                  <img
+                    src={profSilvianeImg}
+                    alt="Professora Silviane Silvério"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="space-y-2 text-center sm:text-left">
+                  <span className="bg-[#FFC72C] text-slate-950 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full">
+                    Curso em Destaque 40h
+                  </span>
+                  <h4 className="text-xl font-bold text-white">
+                    Comunicação Assertiva com a Liderança
+                  </h4>
+                  <p className="text-xs text-slate-300 max-w-xl">
+                    Ministrado pela Professora Silviane Silvério. Aprenda postura corporativa, CNV e feedback 360° com certificado de 40h válido para horas complementares.
+                  </p>
+                </div>
               </div>
 
               <button
