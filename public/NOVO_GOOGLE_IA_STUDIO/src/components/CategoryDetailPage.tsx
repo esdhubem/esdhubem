@@ -302,7 +302,8 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Cursos de <span className="text-[#FFC72C]">{categoryCleanName}</span>
+              <span className="block mb-2">Cursos de</span>
+              <span className="text-[#FFC72C] block">{categoryCleanName}</span>
             </h1>
 
             <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
