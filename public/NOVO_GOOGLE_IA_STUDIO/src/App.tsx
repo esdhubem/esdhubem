@@ -7,7 +7,6 @@ import { CorporateBanner } from './components/CorporateBanner';
 import { BookstoreBanner } from './components/BookstoreBanner';
 import { LivrariaPage } from './components/LivrariaPage';
 import { CourseCatalog } from './components/CourseCatalog';
-import { CourseModal } from './components/CourseModal';
 import { CertificateValidatorModal } from './components/CertificateValidatorModal';
 import { AboutModal } from './components/AboutModal';
 import { Footer } from './components/Footer';
@@ -36,7 +35,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-assertiva' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -109,8 +108,8 @@ export default function App() {
       return;
     }
 
-    if (sectionId === 'curso-assertiva') {
-      setCurrentPage('curso-assertiva');
+    if (sectionId === 'curso-detalhe') {
+      setCurrentPage('curso-detalhe');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -217,12 +216,9 @@ export default function App() {
             activePillar={activePillar}
             onPillarChange={(pillar) => setActivePillar(pillar)}
             onSelectCourse={(course) => {
-              if (course.id === 'fp-assertiva') {
-                setCurrentPage('curso-assertiva');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              } else {
-                setSelectedCourse(course);
-              }
+              setSelectedCourse(course);
+              setCurrentPage('curso-detalhe');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onToggleSaveCourse={handleToggleSaveCourse}
             savedCourseIds={savedCourseIds}
@@ -259,7 +255,7 @@ export default function App() {
             }}
             onSelectCourse={(course) => setSelectedCourse(course)}
             onNavigateToCourseDetail={() => {
-              setCurrentPage('curso-assertiva');
+              setCurrentPage('curso-detalhe');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onNavigateToCategoryDetail={(slug) => {
@@ -284,15 +280,12 @@ export default function App() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onSelectCourse={(course) => {
-              if (course.id === 'fp-assertiva') {
-                setCurrentPage('curso-assertiva');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              } else {
-                setSelectedCourse(course);
-              }
+              setSelectedCourse(course);
+              setCurrentPage('curso-detalhe');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onNavigateToCourseDetail={() => {
-              setCurrentPage('curso-assertiva');
+              setCurrentPage('curso-detalhe');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onNavigateToPortal={(courseId) => {
@@ -364,18 +357,19 @@ export default function App() {
         </main>
       )}
 
-      {currentPage === 'curso-assertiva' && (
+      {currentPage === 'curso-detalhe' && selectedCourse && (
         <main className="flex-1">
           <CourseDetailPage
+            course={selectedCourse}
             onBackToHome={() => {
               setCurrentPage('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onEnroll={() => {
-              setActivePortalCourseId('fp-assertiva');
+              setActivePortalCourseId(selectedCourse.id);
               setCurrentPage('sala-de-aula');
               window.scrollTo({ top: 0, behavior: 'smooth' });
-              showNotification('Inscrição confirmada! Bem-vindo(a) à Sala de Aula de Comunicação Assertiva.');
+              showNotification(`Inscrição confirmada! Bem-vindo(a) à Sala de Aula de ${selectedCourse.title}.`);
             }}
             onOpenValidator={() => setIsValidatorOpen(true)}
           />
@@ -412,11 +406,6 @@ export default function App() {
 
 
       {/* Modals */}
-      <CourseModal
-        course={selectedCourse}
-        onClose={() => setSelectedCourse(null)}
-        onEnroll={handleEnrollCourse}
-      />
 
       <CertificateValidatorModal
         isOpen={isValidatorOpen}
