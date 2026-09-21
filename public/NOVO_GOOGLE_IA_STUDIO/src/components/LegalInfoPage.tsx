@@ -351,7 +351,7 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
                   <section className="space-y-2">
                     <h3 className="text-base font-bold text-[#182333]">5. Emissão e Requisitos de Conclusão</h3>
                     <p>
-                      Para a obtenção do certificado com carga horária averbada, o estudante deverá cumprir o percentual 100% de aulas assistidas e, quando exigido pelo módulo do treinamento, atingir a nota mínima de 7,0 aproveitamento na avaliação de verificação de aprendizagem.
+                      Para a obtenção do certificado com carga horária averbada, o estudante deverá cumprir o percentual 100% de aulas assistidas e, quando exigido pelo módulo do treinamento, atingir a nota mínima de 7,0 aproveitamento na avaliação de verificação de aprendizagem. Já os certificados e requisitos para treinamentos presenciais nas empresas ficam a critério de negociação com as mesmas; portanto, a carga horária, emissão de certificados e conclusão dependerão dos acordos estabelecidos.
                     </p>
                   </section>
                 </div>
