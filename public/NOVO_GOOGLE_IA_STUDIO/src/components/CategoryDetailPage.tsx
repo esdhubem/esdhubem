@@ -786,7 +786,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
         <div className="flex items-center justify-between mb-6">
           <div>
             <h4 className="text-lg font-bold text-[#243042]">
-              Explorar Outras Áreas do Saber
+              Aprofunde em Outras Áreas do Saber
             </h4>
             <p className="text-xs text-slate-500">
               Conheça as demais categorias do catálogo acadêmico da ESDHUBEM

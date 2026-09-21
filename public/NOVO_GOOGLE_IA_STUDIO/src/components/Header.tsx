@@ -72,7 +72,7 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 onClick={() => onNavigate('explorar-categorias')}
                 className="p-1.5 rounded-md hover:bg-white/10 text-slate-300 hover:text-white transition-colors cursor-pointer"
-                title="Explorar Todas as Categorias"
+                title="Aprofundar nas Categorias"
                 id="grid-launcher-btn"
               >
                 <LayoutGrid className="w-5 h-5" />

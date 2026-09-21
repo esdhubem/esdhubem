@@ -208,7 +208,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => onNavigate('categorias')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-white font-medium"
                 >
-                  Explorar Categorias (17 Áreas)
+                  Aprofunde: Categorias (18 Áreas)
                 </button>
               </li>
               <li>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { CategoryGrid } from './components/CategoryGrid';
@@ -48,6 +48,29 @@ export default function App() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [savedCourseIds, setSavedCourseIds] = useState<string[]>(['fp-1', 'hc-1']); // Initial saved items matching the "2" indicator
   const [notification, setNotification] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const cursoId = params.get('curso');
+    const categoriaId = params.get('categoria');
+
+    if (cursoId) {
+      const course = COURSES_DATA.find(c => c.id === cursoId);
+      if (course) {
+        setSelectedCourse(course);
+        setCurrentPage('curso-detalhe');
+        window.history.replaceState({}, '', window.location.pathname);
+        return;
+      }
+    }
+
+    if (categoriaId) {
+      setActiveCategorySlug(categoriaId);
+      setCurrentPage('categoria-detalhe');
+      window.history.replaceState({}, '', window.location.pathname);
+      return;
+    }
+  }, []);
 
   const showNotification = (message: string) => {
     setNotification(message);

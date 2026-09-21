@@ -237,7 +237,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </button>
             <span>/</span>
             <span className="text-[#FFC72C] font-semibold">
-              Explorar Categorias & Áreas do Saber
+              Aprofunde nas Categorias & Áreas do Saber
             </span>
           </div>
 
