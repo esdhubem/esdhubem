@@ -21,7 +21,12 @@ import {
   Target,
   BrainCircuit,
   QrCode,
-  LayoutTemplate
+  LayoutTemplate,
+  Share2,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Copy
 } from 'lucide-react';
 import { Course } from '../types';
 import profSilvianeImg from '../assets/prof-silviane.png';
@@ -43,6 +48,16 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
     'sobre' | 'conteudo' | 'publico' | 'competencias' | 'legislacao' | 'autenticidade' | 'formato'
   >('sobre');
   const [expandedModules, setExpandedModules] = useState<number[]>([0]);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyLink = () => {
+    const courseId = course?.id || 'fp-assertiva';
+    const baseUrl = window.location.href.split('?')[0];
+    const url = `${baseUrl}?curso=${courseId}`;
+    navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const toggleModule = (index: number) => {
     if (expandedModules.includes(index)) {
@@ -73,18 +88,48 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
       {/* Breadcrumb Bar */}
       <div className="bg-[#182333] border-b border-slate-700/60 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 text-sm text-slate-400">
-            <button
-              onClick={onBackToHome}
-              className="hover:text-[#FFC72C] transition-colors flex items-center gap-1 cursor-pointer"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Início</span>
-            </button>
-            <span>/</span>
-            <span className="text-[#FFC72C] font-semibold truncate">
-              {title}
-            </span>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-2 text-sm text-slate-400">
+              <button
+                onClick={onBackToHome}
+                className="hover:text-[#FFC72C] transition-colors flex items-center gap-1 cursor-pointer"
+              >
+                <ArrowLeft className="w-3.5 h-3.5" />
+                <span>Início</span>
+              </button>
+              <span>/</span>
+              <span className="text-[#FFC72C] font-semibold truncate">
+                {title}
+              </span>
+            </div>
+            
+            {/* Share Buttons Mini */}
+            <div className="flex items-center gap-3 self-end sm:self-auto">
+              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider hidden sm:block">Compartilhar:</span>
+              <div className="flex items-center gap-2">
+                <button className="w-7 h-7 rounded-full bg-white/5 hover:bg-blue-600 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+                  <Facebook className="w-3.5 h-3.5" />
+                </button>
+                <button className="w-7 h-7 rounded-full bg-white/5 hover:bg-sky-500 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+                  <Twitter className="w-3.5 h-3.5" />
+                </button>
+                <button className="w-7 h-7 rounded-full bg-white/5 hover:bg-blue-700 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+                  <Linkedin className="w-3.5 h-3.5" />
+                </button>
+                <button 
+                  onClick={handleCopyLink}
+                  className="w-7 h-7 rounded-full bg-white/5 hover:bg-[#FFC72C] flex items-center justify-center text-slate-300 hover:text-[#182333] transition-colors relative"
+                  title="Copiar Link"
+                >
+                  <Copy className="w-3.5 h-3.5" />
+                  {copied && (
+                    <span className="absolute right-0 top-8 bg-[#182333] border border-slate-700 text-white text-[10px] px-2 py-0.5 rounded whitespace-nowrap shadow-xl z-50">
+                      Copiado!
+                    </span>
+                  )}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

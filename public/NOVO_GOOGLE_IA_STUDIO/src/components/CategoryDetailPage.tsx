@@ -20,7 +20,12 @@ import {
   HelpCircle,
   FileCheck,
   Target,
-  UserCheck
+  UserCheck,
+  Share2,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Copy
 } from 'lucide-react';
 import { Play, FileText, Video } from 'lucide-react';
 import profSilvianeImg from '../assets/prof-silviane.png';
@@ -125,10 +130,20 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
   onSelectAnotherCategory
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedPillar, setSelectedPillar] = useState<'todos' | 'freepremium' | 'horas-complementares' | 'formacao-livre'>('todos');
-  const [selectedHoursRange, setSelectedHoursRange] = useState<'todas' | 'curta' | 'media' | 'longa'>('todas');
+  const [selectedPillar, setSelectedPillar] = useState<'all' | 'freepremium' | 'horas-complementares' | 'formacao-livre'>('all');
+  const [selectedHoursRange, setSelectedHoursRange] = useState<'all' | '0-20' | '21-60' | '61+'>('all');
+  const [copied, setCopied] = useState(false);
 
-  // Active Category Object
+  const handleCopyLink = () => {
+    const catId = currentCategory?.id || 'desenvolvimento-nas-empresas';
+    const baseUrl = window.location.href.split('?')[0];
+    const url = `${baseUrl}?categoria=${catId}`;
+    navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  // Derive active category from slug (or fallback to generic B2B)
   const currentCategory: CategoryItem = useMemo(() => {
     return (
       CATEGORIES_DATA.find((cat) => cat.id === categorySlug) ||
@@ -231,20 +246,48 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </span>
           </div>
 
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-4">
+            {/* Share Buttons Mini */}
+            <div className="flex items-center gap-2 border-r border-slate-700 pr-4">
+              <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Compartilhar:</span>
+              <button className="w-6 h-6 rounded-full bg-white/5 hover:bg-blue-600 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+                <Facebook className="w-3 h-3" />
+              </button>
+              <button className="w-6 h-6 rounded-full bg-white/5 hover:bg-sky-500 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+                <Twitter className="w-3 h-3" />
+              </button>
+              <button className="w-6 h-6 rounded-full bg-white/5 hover:bg-blue-700 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+                <Linkedin className="w-3 h-3" />
+              </button>
+              <button 
+                onClick={handleCopyLink}
+                className="w-6 h-6 rounded-full bg-white/5 hover:bg-[#FFC72C] flex items-center justify-center text-slate-300 hover:text-[#182333] transition-colors relative"
+                title="Copiar Link"
+              >
+                <Copy className="w-3 h-3" />
+                {copied && (
+                  <span className="absolute right-0 top-8 bg-[#182333] border border-slate-700 text-white text-[10px] px-2 py-0.5 rounded whitespace-nowrap shadow-xl z-50">
+                    Copiado!
+                  </span>
+                )}
+              </button>
+            </div>
+
             {/* Quick Switch to other popular categories */}
-            <span className="text-[11px] text-slate-400">Trocar Categoria:</span>
-            <select
-              value={currentCategory.id}
-              onChange={(e) => onSelectAnotherCategory(e.target.value)}
-              className="bg-[#243042] text-xs text-white border border-slate-600 rounded-lg px-2.5 py-1 focus:outline-hidden focus:border-[#FFC72C] cursor-pointer"
-            >
-              {CATEGORIES_DATA.map((cat) => (
-                <option key={cat.id} value={cat.id}>
-                  {cat.title.replace('\n', ' ')} ({cat.coursesCount} cursos)
-                </option>
-              ))}
-            </select>
+            <div className="flex items-center gap-2">
+              <span className="text-[11px] text-slate-400">Trocar Categoria:</span>
+              <select
+                value={currentCategory.id}
+                onChange={(e) => onSelectAnotherCategory(e.target.value)}
+                className="bg-[#243042] text-xs text-white border border-slate-600 rounded-lg px-2.5 py-1 focus:outline-hidden focus:border-[#FFC72C] cursor-pointer"
+              >
+                {CATEGORIES_DATA.map((cat) => (
+                  <option key={cat.id} value={cat.id}>
+                    {cat.title.replace('\n', ' ')} ({cat.coursesCount} cursos)
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       </div>

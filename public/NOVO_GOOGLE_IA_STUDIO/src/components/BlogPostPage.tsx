@@ -12,7 +12,8 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBackToBlog, 
   const [copied, setCopied] = React.useState(false);
 
   const handleCopyLink = () => {
-    const url = `${window.location.origin}/?post=${post.id}`;
+    const baseUrl = window.location.href.split('?')[0];
+    const url = `${baseUrl}?post=${post.id}`;
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
