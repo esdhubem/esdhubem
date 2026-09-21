@@ -330,7 +330,7 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
                   <section className="space-y-2">
                     <h3 className="text-base font-bold text-[#182333]">2. Modalidade dos Cursos & Freepremium</h3>
                     <p>
-                      A ESDHUBEM oferece treinamentos na modalidade Cursos Livres via Ensino a Distância (EAD). Nos cursos com modalidade <strong>Freepremium</strong>, há o <strong>Acesso Gratuito + Certificado Opcional</strong>. Você assiste às aulas sem custo. Caso deseje o certificado, é disponibilizada taxa de emissão referente à confecção, registro e validação do documento. Nenhum valor é exigido para acesso ao conteúdo de aprendizagem.
+                      A ESDHUBEM oferece treinamentos na modalidade Cursos Livres via Ensino a Distância (EAD) e presencial. Nos cursos com modalidade <strong>Freepremium</strong>, há o <strong>Acesso Gratuito + Certificado Opcional digital ou físico</strong>. Você assiste às aulas sem custo. Caso deseje o certificado, é disponibilizada taxa de emissão referente à confecção, registro e validação do documento, conforme o tipo de certificado. Nenhum valor é exigido para acesso ao conteúdo de aprendizagem, mas caso queira existe a possibilidade de oferecer uma contribuição para a plataforma ESDHUBEM em forma de doação no formato de pix para o esdhubem@proton.me
                     </p>
                   </section>
 
