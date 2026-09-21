@@ -368,48 +368,54 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
 
           {/* Right Card: In-Company & WhatsApp Hotline */}
           {currentCategory.id === 'treinamentos-palestras-corporativas' && (
-            <div className="bg-[#182333] border border-slate-700/80 rounded-2xl p-6 lg:max-w-sm w-full shadow-xl space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-[#FFC72C] text-[#243042] flex items-center justify-center font-bold">
-                    <Building2 className="w-4 h-4" />
+            <div className="bg-[#182333] border border-slate-700/80 rounded-2xl p-6 lg:max-w-3xl w-full shadow-xl">
+              <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
+                {/* Left Side: Title & Highlights */}
+                <div className="flex-1 space-y-4 w-full">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-[#FFC72C] text-[#243042] flex items-center justify-center font-bold shadow-md">
+                        <Building2 className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h4 className="text-base font-extrabold text-white">Treinamentos e Palestras</h4>
+                        <p className="text-xs text-slate-400">Para Empresas & Equipes</p>
+                      </div>
+                    </div>
+                    <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2.5 py-1 rounded-full font-bold ml-2">
+                      Ativo
+                    </span>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-white">Treinamentos e Palestras</h4>
-                    <p className="text-[11px] text-slate-400">Para Empresas & Equipes</p>
-                  </div>
+
+                  <ul className="space-y-2 text-sm text-slate-300">
+                    {meta.b2bHighlights.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-[#FFC72C] shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold">
-                  Ativo
-                </span>
-              </div>
 
-              <ul className="space-y-2 text-xs text-slate-300">
-                {meta.b2bHighlights.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#FFC72C] shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="pt-2 border-t border-slate-700/60 flex flex-col gap-2">
-                <a
-                  href="https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20informações%20sobre%20Treinamentos%20e%20Palestras%20para%20minha%20equipe."
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full bg-[#FFC72C] hover:bg-[#F5B014] text-[#243042] font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  <span>Solicitar Proposta In-Company (WhatsApp)</span>
-                </a>
-                <button
-                  onClick={onOpenValidator}
-                  className="w-full bg-white/10 hover:bg-white/15 text-white text-xs py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all cursor-pointer"
-                >
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Validar Certificados Corporativos</span>
-                </button>
+                {/* Right Side: Actions */}
+                <div className="flex-1 w-full md:border-l md:border-slate-700/60 md:pl-6 flex flex-col gap-3">
+                  <a
+                    href="https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20informações%20sobre%20Treinamentos%20e%20Palestras%20para%20minha%20equipe."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full bg-[#FFC72C] hover:bg-[#F5B014] text-[#243042] font-bold text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Solicitar Proposta (WhatsApp)</span>
+                  </a>
+                  <button
+                    onClick={onOpenValidator}
+                    className="w-full bg-white/10 hover:bg-white/15 text-white text-sm font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer border border-white/5"
+                  >
+                    <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                    <span>Validar Certificados</span>
+                  </button>
+                </div>
               </div>
             </div>
           )}
