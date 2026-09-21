@@ -135,14 +135,16 @@ export const Header: React.FC<HeaderProps> = ({
 
               <button
                 onClick={() => onNavigate('sala-de-aula')}
-                className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all cursor-pointer ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 rounded-full border transition-all cursor-pointer ${
                   currentPage === 'sala-de-aula'
-                    ? 'bg-[#FFC72C] text-slate-950 border-[#FFC72C] ring-2 ring-[#FFC72C]/40'
-                    : 'bg-slate-700/80 hover:bg-slate-600 border-slate-500/60 text-slate-200 hover:text-white'
+                    ? 'bg-[#F5B014] text-slate-950 border-[#F5B014] shadow-md ring-2 ring-[#FFC72C]/40'
+                    : 'bg-[#FFC72C] hover:bg-[#F5B014] border-[#FFC72C] text-slate-950 shadow-sm'
                 }`}
                 title="Área do Aluno"
               >
                 <User className="w-4 h-4" />
+                <span className="font-bold text-xs sm:text-sm hidden lg:inline-block">Sala de Aula</span>
+                <span className="bg-slate-950 text-[#FFC72C] text-[9px] sm:text-[10px] font-black px-1.5 py-0.5 rounded hidden sm:inline-block">ALUNO</span>
               </button>
 
               {/* Mobile Hamburger Button */}
@@ -191,17 +193,6 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               Presencial nas Empresas
-            </button>
-            <button
-              onClick={() => onNavigate('sala-de-aula')}
-              className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 ${
-                currentPage === 'sala-de-aula'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              <span>Sala de Aula</span>
-              <span className="bg-[#FFC72C] text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded">ALUNO</span>
             </button>
             <button
               onClick={() => onNavigate('informacoes-legais')}
