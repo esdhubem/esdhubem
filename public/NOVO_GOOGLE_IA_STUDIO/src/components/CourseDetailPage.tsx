@@ -17,7 +17,11 @@ import {
   Sparkles,
   Info,
   Award,
-  FileCheck
+  FileCheck,
+  Target,
+  BrainCircuit,
+  QrCode,
+  LayoutTemplate
 } from 'lucide-react';
 import { Course } from '../types';
 import profSilvianeImg from '../assets/prof-silviane.png';
@@ -35,7 +39,9 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
   onEnroll,
   onOpenValidator
 }) => {
-  const [activeTab, setActiveTab] = useState<'sobre' | 'conteudo' | 'certificacao'>('sobre');
+  const [activeTab, setActiveTab] = useState<
+    'sobre' | 'conteudo' | 'publico' | 'competencias' | 'legislacao' | 'autenticidade' | 'formato'
+  >('sobre');
   const [expandedModules, setExpandedModules] = useState<number[]>([0]);
 
   const toggleModule = (index: number) => {
@@ -154,7 +160,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
       {/* Tabs Navigation */}
       <div className="bg-white border-b border-slate-200 sticky top-0 z-20 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-8 overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-6 overflow-x-auto no-scrollbar scroll-smooth">
             <button
               onClick={() => setActiveTab('sobre')}
               className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
@@ -163,7 +169,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
               }`}
             >
-              Sobre o Curso
+              Descrição
             </button>
             <button
               onClick={() => setActiveTab('conteudo')}
@@ -173,17 +179,57 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
               }`}
             >
-              O que você vai aprender
+              Conteúdo
             </button>
             <button
-              onClick={() => setActiveTab('certificacao')}
+              onClick={() => setActiveTab('publico')}
               className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
-                activeTab === 'certificacao'
+                activeTab === 'publico'
                   ? 'border-[#182333] text-[#182333]'
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
               }`}
             >
-              Certificação e Legislação
+              Público-Alvo
+            </button>
+            <button
+              onClick={() => setActiveTab('competencias')}
+              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+                activeTab === 'competencias'
+                  ? 'border-[#182333] text-[#182333]'
+                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+              }`}
+            >
+              Competências Desenvolvidas
+            </button>
+            <button
+              onClick={() => setActiveTab('legislacao')}
+              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+                activeTab === 'legislacao'
+                  ? 'border-[#182333] text-[#182333]'
+                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+              }`}
+            >
+              Legislação Oficial
+            </button>
+            <button
+              onClick={() => setActiveTab('autenticidade')}
+              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+                activeTab === 'autenticidade'
+                  ? 'border-[#182333] text-[#182333]'
+                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+              }`}
+            >
+              Autenticidade
+            </button>
+            <button
+              onClick={() => setActiveTab('formato')}
+              className={`whitespace-nowrap py-4 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+                activeTab === 'formato'
+                  ? 'border-[#182333] text-[#182333]'
+                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+              }`}
+            >
+              Formato & Carga Horária
             </button>
           </div>
         </div>
@@ -197,61 +243,22 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
           <div className="w-full lg:w-2/3">
             <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 sm:p-10 min-h-[500px]">
               
-              {/* TAB 1: Sobre o Curso */}
+              {/* TAB 1: Descrição */}
               {activeTab === 'sobre' && (
-                <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-300">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#182333] mb-4 flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
-                        <Info className="w-4 h-4" />
-                      </div>
-                      <span>Descrição do Curso</span>
-                    </h3>
-                    <p className="text-slate-600 mb-4 leading-relaxed text-sm sm:text-base">
+                <div className="space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
+                      <Info className="w-4 h-4" />
+                    </div>
+                    <span>Sobre o Curso</span>
+                  </h3>
+                  <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed text-sm sm:text-base">
+                    <p>
                       Este curso oferece uma visão completa e aprofundada sobre como planejar, estruturar e aplicar técnicas práticas e contemporâneas. Através de metodologias fundamentadas, você compreenderá o que o mercado moderno espera de um profissional capacitado para dialogar com clareza e autoridade.
                     </p>
-                    <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+                    <p>
                       {course?.description || 'Você aprenderá desde o gerenciamento de demandas corporativas até a condução estratégica de resultados no seu ambiente de trabalho.'}
                     </p>
-                  </div>
-
-                  <div className="pt-6 border-t border-slate-100">
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#182333] mb-3 flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
-                        <Users className="w-4 h-4" />
-                      </div>
-                      <span>Público-Alvo</span>
-                    </h3>
-                    <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                      Estudantes universitários em busca de horas complementares averbadas, recém-formados, analistas, supervisores, gestores de equipe e profissionais de todas as áreas (Saúde, Negócios, Educação, Audiovisual e Tecnologia) que desejam desenvolver uma postura técnica e assertiva.
-                    </p>
-                  </div>
-
-                  <div className="pt-6 border-t border-slate-100">
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#182333] mb-5 flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
-                        <Award className="w-4 h-4" />
-                      </div>
-                      <span>Competências Desenvolvidas</span>
-                    </h3>
-                    <ul className="space-y-3.5 text-sm sm:text-base text-slate-700">
-                      <li className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>Capacidade de autorregulação e maturidade socioemocional.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>Comunicação empática em momentos de tensão interpessoal.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>Ferramentas práticas de aplicação imediata no ambiente profissional e pessoal.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>Pensamento crítico, humanista e ético embasado cientificamente.</span>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               )}
@@ -264,7 +271,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                       <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
                         <BookOpen className="w-4 h-4" />
                       </div>
-                      <span>Conteúdo Programático</span>
+                      <span>O que você vai aprender</span>
                     </h3>
                     <span className="text-xs text-slate-500 font-semibold bg-slate-100 px-3 py-1 rounded-full">
                       {syllabus.length} Módulos
@@ -310,8 +317,55 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                 </div>
               )}
 
-              {/* TAB 3: Certificação */}
-              {activeTab === 'certificacao' && (
+              {/* TAB 3: Público-Alvo */}
+              {activeTab === 'publico' && (
+                <div className="space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
+                      <Users className="w-4 h-4" />
+                    </div>
+                    <span>Público-Alvo</span>
+                  </h3>
+                  <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
+                    <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+                      Estudantes universitários em busca de horas complementares averbadas, recém-formados, analistas, supervisores, gestores de equipe e profissionais de todas as áreas (Saúde, Negócios, Educação, Audiovisual e Tecnologia) que desejam desenvolver uma postura técnica e assertiva.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* TAB 4: Competências */}
+              {activeTab === 'competencias' && (
+                <div className="space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
+                      <BrainCircuit className="w-4 h-4" />
+                    </div>
+                    <span>Competências Desenvolvidas</span>
+                  </h3>
+                  <ul className="space-y-4 text-sm sm:text-base text-slate-700 bg-white border border-slate-200 p-6 rounded-xl shadow-sm">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Capacidade de autorregulação e maturidade socioemocional.</strong></span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Comunicação empática em momentos de tensão interpessoal.</strong></span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Ferramentas práticas de aplicação imediata no ambiente profissional e pessoal.</strong></span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Pensamento crítico, humanista e ético embasado cientificamente.</strong></span>
+                    </li>
+                  </ul>
+                </div>
+              )}
+
+              {/* TAB 5: Legislação */}
+              {activeTab === 'legislacao' && (
                 <div className="space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300">
                   <h3 className="text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
@@ -319,27 +373,56 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                     </div>
                     <span>Validade Oficial e Legislação</span>
                   </h3>
-                  
-                  <div className="bg-amber-50 border border-amber-200 p-5 rounded-xl">
-                    <p className="text-sm sm:text-base text-amber-900 leading-relaxed mb-4">
+                  <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl">
+                    <p className="text-sm sm:text-base text-amber-900 leading-relaxed text-justify">
                       Certificado de Curso Livre emitido pela <strong>ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar (CNPJ 61.928.778/0001-50)</strong> em total conformidade com a <strong>Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/96)</strong>. Não é diploma de graduação, pós-graduação ou ensino técnico.
                     </p>
-                    <p className="text-sm sm:text-base text-amber-900 leading-relaxed flex items-start gap-2">
-                      <ShieldCheck className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                      <span>Inclui autenticidade via QR Code e código alfanumérico com consulta pública instantânea para faculdades, empresas e conselhos de classe.</span>
-                    </p>
                   </div>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                    <div className="border border-slate-200 p-4 rounded-xl text-center">
-                      <GraduationCap className="w-8 h-8 text-[#FFC72C] mx-auto mb-2" />
-                      <h4 className="font-bold text-[#182333] mb-1">Horas Complementares</h4>
-                      <p className="text-xs text-slate-500">Aceito nas principais universidades do país para atividades extracurriculares.</p>
+                </div>
+              )}
+
+              {/* TAB 6: Autenticidade */}
+              {activeTab === 'autenticidade' && (
+                <div className="space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
+                      <QrCode className="w-4 h-4" />
                     </div>
-                    <div className="border border-slate-200 p-4 rounded-xl text-center">
-                      <Building2 className="w-8 h-8 text-[#FFC72C] mx-auto mb-2" />
-                      <h4 className="font-bold text-[#182333] mb-1">Qualificação Profissional</h4>
-                      <p className="text-xs text-slate-500">Valorize seu currículo e comprove suas competências no mercado de trabalho.</p>
+                    <span>Autenticidade e Consulta Pública</span>
+                  </h3>
+                  <div className="border border-slate-200 p-6 rounded-xl bg-slate-50 flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 shrink-0">
+                      <QrCode className="w-20 h-20 text-[#182333]" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-bold text-[#182333] mb-2">Verificação Instantânea</h4>
+                      <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                        Inclui autenticidade via QR Code e código alfanumérico com consulta pública instantânea para faculdades, empresas e conselhos de classe.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* TAB 7: Formato */}
+              {activeTab === 'formato' && (
+                <div className="space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
+                      <LayoutTemplate className="w-4 h-4" />
+                    </div>
+                    <span>Formato e Carga Horária</span>
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="border border-slate-200 bg-white p-6 rounded-xl text-center shadow-sm">
+                      <Clock className="w-10 h-10 text-[#FFC72C] mx-auto mb-3" />
+                      <h4 className="font-bold text-[#182333] text-lg mb-1">Carga Horária</h4>
+                      <p className="text-base text-slate-600 font-semibold">40 horas expressas</p>
+                    </div>
+                    <div className="border border-slate-200 bg-white p-6 rounded-xl text-center shadow-sm">
+                      <Tv className="w-10 h-10 text-[#FFC72C] mx-auto mb-3" />
+                      <h4 className="font-bold text-[#182333] text-lg mb-1">Formato</h4>
+                      <p className="text-base text-slate-600 font-semibold">100% Online Assíncrono</p>
                     </div>
                   </div>
                 </div>
