@@ -207,10 +207,10 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800" id="pagina-categoria-detalhe">
-      {/* 1. Breadcrumb Bar */}
+      {/* Breadcrumb Navigation */}
       <div className="bg-[#182333] border-b border-slate-700/60 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs text-slate-300">
+          <div className="flex items-center gap-2 text-sm text-slate-400">
             <button
               onClick={onBackToHome}
               className="hover:text-[#FFC72C] transition-colors flex items-center gap-1 cursor-pointer"

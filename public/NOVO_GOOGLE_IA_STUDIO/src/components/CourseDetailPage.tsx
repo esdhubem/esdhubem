@@ -73,7 +73,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
       {/* Breadcrumb Bar */}
       <div className="bg-[#182333] border-b border-slate-700/60 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 text-xs text-slate-400">
+          <div className="flex items-center gap-2 text-sm text-slate-400">
             <button
               onClick={onBackToHome}
               className="hover:text-[#FFC72C] transition-colors flex items-center gap-1 cursor-pointer"
