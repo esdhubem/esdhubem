@@ -165,7 +165,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
 
   // Filter groups
   const groups = [
-    { id: 'todos', label: 'Todas as Áreas (17)' },
+    { id: 'todos', label: 'Todas as Áreas (18)' },
     { id: 'humano', label: 'Desenvolvimento Humano & Emocional' },
     { id: 'carreira', label: 'Profissional & Liderança' },
     { id: 'praticas', label: 'Práticas Integrativas & Saúde' },
@@ -243,7 +243,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
 
           <div className="hidden sm:flex items-center gap-2 text-xs text-slate-300">
             <ShieldCheck className="w-4 h-4 text-[#FFC72C]" />
-            <span>17 Categorias Oficiais da ESDHUBEM</span>
+            <span>18 Categorias Oficiais da ESDHUBEM</span>
           </div>
         </div>
       </div>
@@ -263,7 +263,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Explore nossas 17 áreas temáticas integradas. Da psicologia das relações e inteligência emocional até liderança corporativa, práticas integrativas e horas complementares universitárias.
+              Explore nossas 18 áreas temáticas integradas. Da psicologia das relações e inteligência emocional até liderança corporativa, práticas integrativas e horas complementares universitárias.
             </p>
 
             {/* Live Search Bar */}
@@ -293,7 +293,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
           {/* Platform Metric Badges */}
           <div className="grid grid-cols-2 gap-3.5 w-full md:w-auto shrink-0">
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
-              <div className="text-3xl font-black text-[#FFC72C]">17</div>
+              <div className="text-3xl font-black text-[#FFC72C]">18</div>
               <div className="text-xs text-slate-300 font-medium mt-1">Áreas do Saber</div>
             </div>
 
@@ -340,7 +340,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
           ))}
         </div>
 
-        {/* Categories Grid (All 17 Categories) */}
+        {/* Categories Grid (All 18 Categories) */}
         <div>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-2">
@@ -348,7 +348,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
               <span>Explore as Áreas de Conhecimento</span>
             </h2>
             <span className="text-xs font-semibold text-slate-500">
-              Exibindo {filteredCategories.length} de 17 categorias
+              Exibindo {filteredCategories.length} de 18 categorias
             </span>
           </div>
 

@@ -298,6 +298,53 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </div>
           </div>
 
+          {/* Right Card: In-Company & WhatsApp Hotline */}
+          {currentCategory.id === 'treinamentos-palestras-corporativas' && (
+            <div className="bg-[#182333] border border-slate-700/80 rounded-2xl p-6 lg:max-w-sm w-full shadow-xl space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-[#FFC72C] text-[#243042] flex items-center justify-center font-bold">
+                    <Building2 className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-white">Treinamentos e Palestras</h4>
+                    <p className="text-[11px] text-slate-400">Para Empresas & Equipes</p>
+                  </div>
+                </div>
+                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold">
+                  Ativo
+                </span>
+              </div>
+
+              <ul className="space-y-2 text-xs text-slate-300">
+                {meta.b2bHighlights.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#FFC72C] shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="pt-2 border-t border-slate-700/60 flex flex-col gap-2">
+                <a
+                  href="https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20informações%20sobre%20Treinamentos%20e%20Palestras%20para%20minha%20equipe."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full bg-[#FFC72C] hover:bg-[#F5B014] text-[#243042] font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>Solicitar Proposta In-Company (WhatsApp)</span>
+                </a>
+                <button
+                  onClick={onOpenValidator}
+                  className="w-full bg-white/10 hover:bg-white/15 text-white text-xs py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+                >
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Validar Certificados Corporativos</span>
+                </button>
+              </div>
+            </div>
+          )}
 
         </div>
       </header>
@@ -595,8 +642,77 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
           </div>
         )}
       </section>
+      {/* 6. Corporate In-Company & B2B Solutions Section */}
+      {currentCategory.id === 'treinamentos-palestras-corporativas' && (
+        <section className="bg-white border-y border-slate-200 py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-[#182333] text-white rounded-3xl p-8 sm:p-10 border border-slate-700 shadow-xl overflow-hidden relative">
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                
+                <div className="lg:col-span-2 space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFC72C]/10 text-[#FFC72C] text-xs font-bold uppercase">
+                    <Building2 className="w-3.5 h-3.5" />
+                    <span>Soluções B2B para Recursos Humanos e Lideranças</span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                    Quer levar os cursos de {categoryCleanName} para a sua empresa?
+                  </h3>
+                  <p className="text-sm text-slate-300 leading-relaxed">
+                    Oferecemos programas in-company adaptados à realidade do seu negócio. Seja para desenvolver novos líderes, implementar uma cultura de feedback contínuo ou cumprir exigências de saúde mental (NR-1) e DHO, estruturamos turmas exclusivas com relatórios para a gestão.
+                  </p>
 
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
+                    <div className="flex items-center gap-2 bg-white/5 p-2.5 rounded-xl border border-white/5">
+                      <CheckCircle2 className="w-4 h-4 text-[#FFC72C] shrink-0" />
+                      <span>Emissão de Nota Fiscal de Serviços (PJ)</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-white/5 p-2.5 rounded-xl border border-white/5">
+                      <CheckCircle2 className="w-4 h-4 text-[#FFC72C] shrink-0" />
+                      <span>Dashboard de Acompanhamento de Colaboradores</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-white/5 p-2.5 rounded-xl border border-white/5">
+                      <CheckCircle2 className="w-4 h-4 text-[#FFC72C] shrink-0" />
+                      <span>Certificados com Logo da sua Empresa</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-white/5 p-2.5 rounded-xl border border-white/5">
+                      <CheckCircle2 className="w-4 h-4 text-[#FFC72C] shrink-0" />
+                      <span>Mentoria e Workshops ao Vivo opcionais</span>
+                    </div>
+                  </div>
+                </div>
 
+                {/* Action Column */}
+                <div className="bg-[#243042] border border-slate-700 rounded-2xl p-6 text-center space-y-4">
+                  <div className="w-12 h-12 bg-[#FFC72C] text-[#243042] rounded-full flex items-center justify-center mx-auto font-black text-xl">
+                    B2B
+                  </div>
+                  <div>
+                    <h4 className="text-base font-bold text-white">Fale com um Especialista</h4>
+                    <p className="text-xs text-slate-300 mt-1">
+                      Atendimento corporativo prioritário pelo WhatsApp
+                    </p>
+                  </div>
+
+                  <a
+                    href="https://wa.me/5511960319637?text=Olá!%20Represento%20uma%20empresa%20e%20gostaria%20de%20um%20orçamento%20para%20cursos%20de%20Treinamentos%20e%20Palestras."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full bg-[#FFC72C] hover:bg-[#F5B014] text-[#243042] font-bold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Conversar no WhatsApp (11) 960319637</span>
+                  </a>
+
+                  <p className="text-[10px] text-slate-400">
+                    Horário de atendimento: Seg a Sex, das 9h às 17h
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 7. Coordination & Pedagogical Responsibility */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -680,7 +796,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             onClick={onBackToCategories}
             className="text-xs font-bold text-[#243042] hover:underline cursor-pointer flex items-center gap-1"
           >
-            <span>Ver Todas as 17</span>
+            <span>Ver Todas as 18</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>

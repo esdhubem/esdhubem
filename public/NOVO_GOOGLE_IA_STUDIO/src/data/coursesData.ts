@@ -114,6 +114,13 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     accentColor: 'from-slate-600 to-slate-800',
   },
   {
+    id: 'treinamentos-palestras-corporativas',
+    title: 'Treinamentos e\nPalestras Corporativas',
+    coursesCount: 5,
+    iconName: 'Briefcase',
+    accentColor: 'from-blue-700 to-indigo-900',
+  },
+  {
     id: 'formacao-empresarial',
     title: 'Formação\nEmpresarial',
     coursesCount: 14,
