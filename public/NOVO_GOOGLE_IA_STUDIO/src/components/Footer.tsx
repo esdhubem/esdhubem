@@ -14,6 +14,7 @@ import {
   ArrowUp,
   Heart
 } from 'lucide-react';
+import newsletterImg from '../assets/newsletter.jpg';
 
 interface FooterProps {
   onSelectCategory: (categoryName: string) => void;
@@ -54,10 +55,9 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Visual with "Imagem ilustrativa" tag */}
           <div className="w-full md:w-5/12 relative rounded-2xl overflow-hidden shadow-lg h-56 sm:h-64 shrink-0 bg-slate-900">
             <img
-              src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80"
+              src={newsletterImg}
               alt="Atendimento humanizado e mentoria ESDHUBEM"
               className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] font-medium px-2.5 py-1 rounded-md border border-white/20">
