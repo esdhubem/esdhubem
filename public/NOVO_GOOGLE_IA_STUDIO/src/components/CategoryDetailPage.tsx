@@ -32,7 +32,8 @@ import {
   Presentation,
   Video,
   MonitorPlay,
-  ClipboardList
+  ClipboardList,
+  LayoutTemplate
 } from 'lucide-react';
 import { Play, FileText, Video as VideoIcon } from 'lucide-react';
 import profSilvianeImg from '../assets/prof-silviane.png';
@@ -309,7 +310,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              <span className="block mb-2">Cursos de</span>
+              <span className="block mb-2">{currentCategory.id === 'landing-pages-biolinks' ? 'Venda de' : 'Cursos de'}</span>
               <span className="text-[#FFC72C] block">{categoryCleanName}</span>
             </h1>
 
@@ -420,6 +421,44 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </div>
           )}
 
+          {/* Right Card: Digital Products Promo */}
+          {currentCategory.id === 'landing-pages-biolinks' && (
+            <div className="bg-[#182333] border border-emerald-500/30 rounded-2xl p-6 lg:max-w-3xl w-full shadow-xl">
+              <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
+                <div className="flex-1 space-y-4 w-full text-left">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold shadow-md">
+                      <LayoutTemplate className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="text-base font-extrabold text-white">Domínio & Hospedagem Grátis</h4>
+                      <p className="text-xs text-emerald-400">Por 1 Ano Completo</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-slate-300">
+                    Seu próximo cliente precisa encontrar você. Escolha um dos modelos abaixo, e nós cuidamos de toda a parte técnica, design e publicação para você focar no seu negócio.
+                  </p>
+                </div>
+                <div className="flex-1 w-full md:border-l md:border-slate-700/60 md:pl-6 flex flex-col gap-3">
+                  <ul className="space-y-2 text-sm text-slate-300">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>Design de alta conversão (Focado em Vendas)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>Integração Direta com WhatsApp</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>Pronto em 48 horas (Após briefing)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
         </div>
       </header>
 
@@ -511,45 +550,50 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
               )}
             </div>
 
-            {/* Filter Pills: Pillars */}
-            <div className="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto scrollbar-none pb-1 md:pb-0">
-              <span className="text-xs font-semibold text-slate-500 whitespace-nowrap mr-1">
-                Modalidade:
-              </span>
-              {[
-                { id: 'todos', label: 'Todos' },
-                { id: 'freepremium', label: 'Freepremium (Grátis)' },
-                { id: 'horas-complementares', label: 'Horas Complementares' },
-                { id: 'formacao-livre', label: 'Formações Livres & DHO' }
-              ].map((p) => (
-                <button
-                  key={p.id}
-                  onClick={() => setSelectedPillar(p.id as any)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap cursor-pointer ${
-                    selectedPillar === p.id
-                      ? 'bg-[#243042] text-white shadow-xs'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                  }`}
-                >
-                  {p.label}
-                </button>
-              ))}
-            </div>
+            {/* Filter Pills & Hours Range: Hide for digital products */}
+            {currentCategory.id !== 'landing-pages-biolinks' && (
+              <>
+                {/* Filter Pills: Pillars */}
+                <div className="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto scrollbar-none pb-1 md:pb-0">
+                  <span className="text-xs font-semibold text-slate-500 whitespace-nowrap mr-1">
+                    Modalidade:
+                  </span>
+                  {[
+                    { id: 'todos', label: 'Todos' },
+                    { id: 'freepremium', label: 'Freepremium (Grátis)' },
+                    { id: 'horas-complementares', label: 'Horas Complementares' },
+                    { id: 'formacao-livre', label: 'Formações Livres & DHO' }
+                  ].map((p) => (
+                    <button
+                      key={p.id}
+                      onClick={() => setSelectedPillar(p.id as any)}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap cursor-pointer ${
+                        selectedPillar === p.id
+                          ? 'bg-[#243042] text-white shadow-xs'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      }`}
+                    >
+                      {p.label}
+                    </button>
+                  ))}
+                </div>
 
-            {/* Hours range filter */}
-            <div className="hidden lg:flex items-center gap-1 text-xs text-slate-500">
-              <Clock className="w-3.5 h-3.5 text-slate-400 mr-1" />
-              <select
-                value={selectedHoursRange}
-                onChange={(e) => setSelectedHoursRange(e.target.value as any)}
-                className="bg-slate-100 border border-slate-200 rounded-lg px-2 py-1 text-xs text-slate-700 focus:outline-hidden cursor-pointer"
-              >
-                <option value="todas">Todas as Cargas</option>
-                <option value="curta">Até 40 horas</option>
-                <option value="media">41h a 80 horas</option>
-                <option value="longa">Mais de 80 horas</option>
-              </select>
-            </div>
+                {/* Hours range filter */}
+                <div className="hidden lg:flex items-center gap-1 text-xs text-slate-500">
+                  <Clock className="w-3.5 h-3.5 text-slate-400 mr-1" />
+                  <select
+                    value={selectedHoursRange}
+                    onChange={(e) => setSelectedHoursRange(e.target.value as any)}
+                    className="bg-slate-100 border border-slate-200 rounded-lg px-2 py-1 text-xs text-slate-700 focus:outline-hidden cursor-pointer"
+                  >
+                    <option value="todas">Todas as Cargas</option>
+                    <option value="curta">Até 40 horas</option>
+                    <option value="media">41h a 80 horas</option>
+                    <option value="longa">Mais de 80 horas</option>
+                  </select>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>

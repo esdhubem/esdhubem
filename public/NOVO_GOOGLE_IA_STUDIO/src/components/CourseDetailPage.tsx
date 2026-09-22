@@ -132,22 +132,41 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
             </p>
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-slate-200">
-              <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
-                <Clock className="w-4 h-4 text-[#FFC72C]" />
-                <span>Carga Horária: <strong>{hours} horas</strong></span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
-                <GraduationCap className="w-4 h-4 text-[#FFC72C]" />
-                <span>Com Certificado Oficial</span>
-              </div>
-              <div className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg text-amber-300">
-                <Star className="w-4 h-4 fill-amber-300 text-amber-300" />
-                <span className="font-bold text-white">{rating}</span>
-              </div>
-              <div className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg text-slate-300">
-                <Users className="w-4 h-4 text-emerald-400" />
-                <span>+{studentsCount} alunos</span>
-              </div>
+              {category === 'Landing Pages & Biolinks' ? (
+                <>
+                  <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
+                    <Clock className="w-4 h-4 text-[#FFC72C]" />
+                    <span>Prazo de Entrega: <strong>{hours} horas</strong></span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
+                    <LayoutTemplate className="w-4 h-4 text-[#FFC72C]" />
+                    <span>Domínio & Hospedagem 1 Ano Grátis</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg text-amber-300">
+                    <Star className="w-4 h-4 fill-amber-300 text-amber-300" />
+                    <span className="font-bold text-white">{rating}</span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
+                    <Clock className="w-4 h-4 text-[#FFC72C]" />
+                    <span>Carga Horária: <strong>{hours} horas</strong></span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
+                    <GraduationCap className="w-4 h-4 text-[#FFC72C]" />
+                    <span>Com Certificado Oficial</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg text-amber-300">
+                    <Star className="w-4 h-4 fill-amber-300 text-amber-300" />
+                    <span className="font-bold text-white">{rating}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg text-slate-300">
+                    <Users className="w-4 h-4 text-emerald-400" />
+                    <span>+{studentsCount} alunos</span>
+                  </div>
+                </>
+              )}
             </div>
           </div>
 
@@ -225,58 +244,62 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                   : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
               }`}
             >
-              Conteúdo
+              {category === 'Landing Pages & Biolinks' ? 'O que está incluso' : 'Conteúdo'}
             </button>
-            <button
-              onClick={() => setActiveTab('publico')}
-              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
-                activeTab === 'publico'
-                  ? 'border-[#182333] text-[#182333]'
-                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
-              }`}
-            >
-              Público-Alvo
-            </button>
-            <button
-              onClick={() => setActiveTab('competencias')}
-              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
-                activeTab === 'competencias'
-                  ? 'border-[#182333] text-[#182333]'
-                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
-              }`}
-            >
-              Competências Desenvolvidas
-            </button>
-            <button
-              onClick={() => setActiveTab('legislacao')}
-              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
-                activeTab === 'legislacao'
-                  ? 'border-[#182333] text-[#182333]'
-                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
-              }`}
-            >
-              Legislação Oficial
-            </button>
-            <button
-              onClick={() => setActiveTab('autenticidade')}
-              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
-                activeTab === 'autenticidade'
-                  ? 'border-[#182333] text-[#182333]'
-                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
-              }`}
-            >
-              Autenticidade
-            </button>
-            <button
-              onClick={() => setActiveTab('formato')}
-              className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
-                activeTab === 'formato'
-                  ? 'border-[#182333] text-[#182333]'
-                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
-              }`}
-            >
-              Formato & Carga Horária
-            </button>
+            {category !== 'Landing Pages & Biolinks' && (
+              <>
+                <button
+                  onClick={() => setActiveTab('publico')}
+                  className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+                    activeTab === 'publico'
+                      ? 'border-[#182333] text-[#182333]'
+                      : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                  }`}
+                >
+                  Público-Alvo
+                </button>
+                <button
+                  onClick={() => setActiveTab('competencias')}
+                  className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+                    activeTab === 'competencias'
+                      ? 'border-[#182333] text-[#182333]'
+                      : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                  }`}
+                >
+                  Competências Desenvolvidas
+                </button>
+                <button
+                  onClick={() => setActiveTab('legislacao')}
+                  className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+                    activeTab === 'legislacao'
+                      ? 'border-[#182333] text-[#182333]'
+                      : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                  }`}
+                >
+                  Legislação
+                </button>
+                <button
+                  onClick={() => setActiveTab('autenticidade')}
+                  className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+                    activeTab === 'autenticidade'
+                      ? 'border-[#182333] text-[#182333]'
+                      : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                  }`}
+                >
+                  Autenticidade
+                </button>
+                <button
+                  onClick={() => setActiveTab('formato')}
+                  className={`whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${
+                    activeTab === 'formato'
+                      ? 'border-[#182333] text-[#182333]'
+                      : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                  }`}
+                >
+                  Formato
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -317,7 +340,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                       <div className="w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs">
                         <BookOpen className="w-4 h-4" />
                       </div>
-                      <span>O que você vai aprender</span>
+                      <span>{category === 'Landing Pages & Biolinks' ? 'Itens do Pacote' : 'O que você vai aprender'}</span>
                     </h3>
                     <span className="text-xs text-slate-500 font-semibold bg-slate-100 px-3 py-1 rounded-full">
                       {syllabus.length} Módulos
@@ -348,11 +371,15 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
 
                         {expandedModules.includes(index) && (
                           <div className="p-5 bg-white border-t border-slate-200 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            <p className="mb-2 text-slate-500">Videoaula explicativa + Material complementar em PDF</p>
+                            {category === 'Landing Pages & Biolinks' ? (
+                              <p className="mb-2 text-slate-500">Incluso no serviço padrão contratado</p>
+                            ) : (
+                              <p className="mb-2 text-slate-500">Videoaula explicativa + Material complementar em PDF</p>
+                            )}
                             <ul className="space-y-2">
                               <li className="flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                                <span>Acesso Imediato</span>
+                                <span>{category === 'Landing Pages & Biolinks' ? 'Garantia de Qualidade' : 'Acesso Imediato'}</span>
                               </li>
                             </ul>
                           </div>
@@ -537,53 +564,95 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
               <div className="p-6 space-y-6">
                 <div className="flex items-baseline justify-between border-b border-slate-100 pb-4">
                   <div>
-                    <span className="text-3xl font-black text-[#182333]">Acesso Livre</span>
+                    <span className="text-3xl font-black text-[#182333]">
+                      {category === 'Landing Pages & Biolinks' ? course?.priceNote || 'A partir de R$ 397' : 'Acesso Livre'}
+                    </span>
                     <span className="block text-[11px] text-emerald-700 font-semibold">
-                      Início Imediato
+                      {category === 'Landing Pages & Biolinks' ? 'Pagamento Único' : 'Início Imediato'}
                     </span>
                   </div>
                 </div>
 
-                <button
-                  onClick={onEnroll}
-                  className="w-full bg-[#243042] hover:bg-[#182333] active:scale-95 transition-all text-[#FFC72C] font-extrabold text-sm py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 cursor-pointer group"
-                >
-                  <span>Acessar Curso Agora</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                {category === 'Landing Pages & Biolinks' ? (
+                  <a
+                    href="https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20solicitar%20a%20criação%20da%20minha%20página."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full bg-[#FFC72C] hover:bg-[#F5B014] active:scale-95 transition-all text-[#243042] font-extrabold text-sm py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 cursor-pointer group"
+                  >
+                    <span>Adquira Já (WhatsApp)</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                ) : (
+                  <button
+                    onClick={onEnroll}
+                    className="w-full bg-[#243042] hover:bg-[#182333] active:scale-95 transition-all text-[#FFC72C] font-extrabold text-sm py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 cursor-pointer group"
+                  >
+                    <span>Acessar Curso Agora</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                )}
 
                 <ul className="text-xs text-slate-600 space-y-3.5">
-                  <li className="flex justify-between items-center border-b border-slate-100 pb-2.5">
-                    <span className="flex items-center gap-2 text-slate-500">
-                      <Signal className="w-4 h-4 text-slate-400" />
-                      <span>Nível</span>
-                    </span>
-                    <span className="font-bold text-[#182333]">Iniciante ao Intermediário</span>
-                  </li>
+                  {category === 'Landing Pages & Biolinks' ? (
+                    <>
+                      <li className="flex justify-between items-center border-b border-slate-100 pb-2.5">
+                        <span className="flex items-center gap-2 text-slate-500">
+                          <Clock className="w-4 h-4 text-slate-400" />
+                          <span>Prazo de Entrega</span>
+                        </span>
+                        <span className="font-bold text-[#182333]">Até {hours} horas</span>
+                      </li>
+                      <li className="flex justify-between items-center border-b border-slate-100 pb-2.5">
+                        <span className="flex items-center gap-2 text-slate-500">
+                          <ShieldCheck className="w-4 h-4 text-slate-400" />
+                          <span>Suporte e Atualizações</span>
+                        </span>
+                        <span className="font-bold text-[#182333]">3 meses grátis</span>
+                      </li>
+                      <li className="flex justify-between items-center pb-1">
+                        <span className="flex items-center gap-2 text-slate-500">
+                          <LayoutTemplate className="w-4 h-4 text-slate-400" />
+                          <span>Domínio & Hospedagem</span>
+                        </span>
+                        <span className="font-bold text-[#182333]">1 Ano Incluso</span>
+                      </li>
+                    </>
+                  ) : (
+                    <>
+                      <li className="flex justify-between items-center border-b border-slate-100 pb-2.5">
+                        <span className="flex items-center gap-2 text-slate-500">
+                          <Signal className="w-4 h-4 text-slate-400" />
+                          <span>Nível</span>
+                        </span>
+                        <span className="font-bold text-[#182333]">Iniciante ao Intermediário</span>
+                      </li>
 
-                  <li className="flex justify-between items-center border-b border-slate-100 pb-2.5">
-                    <span className="flex items-center gap-2 text-slate-500">
-                      <Clock className="w-4 h-4 text-slate-400" />
-                      <span>Carga Horária</span>
-                    </span>
-                    <span className="font-bold text-[#182333]">{hours} horas expressas</span>
-                  </li>
+                      <li className="flex justify-between items-center border-b border-slate-100 pb-2.5">
+                        <span className="flex items-center gap-2 text-slate-500">
+                          <Clock className="w-4 h-4 text-slate-400" />
+                          <span>Carga Horária</span>
+                        </span>
+                        <span className="font-bold text-[#182333]">{hours} horas expressas</span>
+                      </li>
 
-                  <li className="flex justify-between items-center border-b border-slate-100 pb-2.5">
-                    <span className="flex items-center gap-2 text-slate-500">
-                      <Tv className="w-4 h-4 text-slate-400" />
-                      <span>Formato</span>
-                    </span>
-                    <span className="font-bold text-[#182333]">100% Online Assíncrono</span>
-                  </li>
-                  
-                  <li className="flex justify-between items-center pb-1">
-                    <span className="flex items-center gap-2 text-slate-500">
-                      <Award className="w-4 h-4 text-slate-400" />
-                      <span>Certificado</span>
-                    </span>
-                    <span className="font-bold text-[#182333]">Oficial com QR Code</span>
-                  </li>
+                      <li className="flex justify-between items-center border-b border-slate-100 pb-2.5">
+                        <span className="flex items-center gap-2 text-slate-500">
+                          <Tv className="w-4 h-4 text-slate-400" />
+                          <span>Formato</span>
+                        </span>
+                        <span className="font-bold text-[#182333]">100% Online Assíncrono</span>
+                      </li>
+                      
+                      <li className="flex justify-between items-center pb-1">
+                        <span className="flex items-center gap-2 text-slate-500">
+                          <Award className="w-4 h-4 text-slate-400" />
+                          <span>Certificado</span>
+                        </span>
+                        <span className="font-bold text-[#182333]">Oficial com QR Code</span>
+                      </li>
+                    </>
+                  )}
                 </ul>
                 
                 {/* Share Buttons (Sidebar) */}

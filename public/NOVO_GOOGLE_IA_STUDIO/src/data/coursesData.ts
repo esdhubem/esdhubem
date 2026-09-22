@@ -133,6 +133,13 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     coursesCount: 8,
     iconName: 'Library',
     accentColor: 'from-red-500 to-rose-700',
+  },
+  {
+    id: 'landing-pages-biolinks',
+    title: 'Landing Pages\n& Biolinks',
+    coursesCount: 4,
+    iconName: 'LayoutTemplate',
+    accentColor: 'from-emerald-500 to-teal-700',
   }
 ];
 
@@ -190,6 +197,97 @@ export const COURSES_DATA: Course[] = [
     ],
     targetAudience: 'Estudantes, líderes e profissionais que desejam expressar suas ideias com firmeza, clareza e respeito.',
     priceNote: 'Gratuito para assistir • Certificado oficial incluso',
+  },
+  // 2. LANDING PAGES & BIOLINKS (Produtos Digitais)
+  {
+    id: 'lp-advogados',
+    title: 'Landing Page para Advogados e Escritórios',
+    subtitle: 'Modelo de página de alta conversão para captar clientes jurídicos através do Google e WhatsApp.',
+    category: 'Landing Pages & Biolinks',
+    pillar: 'freepremium', // We'll hide this on the UI for this category
+    hours: 48,
+    rating: 5.0,
+    studentsCount: 125,
+    image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80',
+    tag: 'Domínio + Hospedagem Grátis',
+    badge: '1 Ano Grátis',
+    description: 'Tenha sua advocacia online, pronta para ser encontrada. Landing page profissional com estrutura voltada para conversão de leads (WhatsApp). Nós cuidamos do design, domínio, hospedagem e suporte. Serviço entregue em até 48 horas após a reunião de briefing.',
+    modulesCount: 4,
+    syllabus: [
+      'Domínio Profissional (Ex: seunome.com.br) - 1 Ano Incluso',
+      'Hospedagem Rápida e Segura (Certificado SSL) - 1 Ano Incluso',
+      'Design Responsivo de Alta Conversão com Botão de WhatsApp',
+      'Suporte Técnico por 3 meses e Configuração SEO'
+    ],
+    targetAudience: 'Advogados autônomos e escritórios que desejam aumentar a captação de clientes.',
+    priceNote: 'A partir de R$ 397',
+  },
+  {
+    id: 'biolink-psicologos',
+    title: 'Biolink Profissional para Psicólogos e Terapeutas',
+    subtitle: 'Otimize o link da sua bio do Instagram e centralize seus agendamentos, redes e contatos.',
+    category: 'Landing Pages & Biolinks',
+    pillar: 'freepremium',
+    hours: 24,
+    rating: 5.0,
+    studentsCount: 280,
+    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80',
+    tag: 'Centralizador de Links',
+    badge: 'Pronto em 24h',
+    description: 'Transforme seguidores em pacientes. Um Biolink estruturado substitui a limitação de 1 link do Instagram, permitindo que você conecte o seu WhatsApp de agendamento, site principal, LinkedIn e outros canais em uma página rápida e bonita.',
+    modulesCount: 3,
+    syllabus: [
+      'Design Customizado com sua Paleta de Cores',
+      'Botões Ilimitados (WhatsApp, Site, LinkedIn, etc.)',
+      'Hospedagem Inclusa (Sem mensalidade)'
+    ],
+    targetAudience: 'Profissionais da saúde, psicólogos, terapeutas e coaches.',
+    priceNote: 'A partir de R$ 197',
+  },
+  {
+    id: 'lp-corretores',
+    title: 'Landing Page para Corretores de Imóveis',
+    subtitle: 'Apresente seus principais imóveis e capte leads qualificados para venda e locação.',
+    category: 'Landing Pages & Biolinks',
+    pillar: 'freepremium',
+    hours: 48,
+    rating: 4.9,
+    studentsCount: 95,
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
+    tag: 'Domínio + Hospedagem Grátis',
+    badge: '1 Ano Grátis',
+    description: 'Página profissional ideal para corretores e imobiliárias que desejam divulgar empreendimentos ou captar leads. Inclui integração rápida com WhatsApp e formulários de contato.',
+    modulesCount: 4,
+    syllabus: [
+      'Domínio Profissional - 1 Ano Incluso',
+      'Hospedagem Rápida e Segura - 1 Ano Incluso',
+      'Vitrine para até 6 imóveis em destaque',
+      'Suporte Técnico por 3 meses e Configuração SEO'
+    ],
+    targetAudience: 'Corretores de imóveis, imobiliárias e consultores imobiliários.',
+    priceNote: 'A partir de R$ 397',
+  },
+  {
+    id: 'biolink-padrao',
+    title: 'Biolink Premium (Qualquer Profissional)',
+    subtitle: 'Tenha um cartão de visitas digital interativo e link perfeito para suas redes sociais.',
+    category: 'Landing Pages & Biolinks',
+    pillar: 'freepremium',
+    hours: 24,
+    rating: 4.8,
+    studentsCount: 512,
+    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=800&q=80',
+    tag: 'Cartão de Visitas Digital',
+    badge: 'Pronto em 24h',
+    description: 'O Biolink definitivo para você. Não importa sua profissão, crie uma presença digital elegante para colocar na sua bio e facilitar o contato dos seus clientes.',
+    modulesCount: 3,
+    syllabus: [
+      'Design Customizado com sua Logo e Cores',
+      'Botões Ilimitados (WhatsApp, Site, Catálogo)',
+      'Hospedagem Inclusa (Sem mensalidade)'
+    ],
+    targetAudience: 'Profissionais liberais, autônomos, influenciadores e empresas.',
+    priceNote: 'A partir de R$ 197',
   }
 ];
 
