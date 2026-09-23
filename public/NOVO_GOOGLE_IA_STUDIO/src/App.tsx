@@ -284,6 +284,7 @@ export default function App() {
             courses={COURSES_DATA}
             activePillar={activePillar}
             onPillarChange={(pillar) => setActivePillar(pillar)}
+            onNavigate={handleNavigate}
             onSelectCourse={(course) => {
               setSelectedCourse(course);
               setCurrentPage('curso-detalhe');

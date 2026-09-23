@@ -18,6 +18,7 @@ interface CourseCatalogProps {
   courses: Course[];
   activePillar: 'all' | 'freepremium' | 'horas-complementares' | 'formacao-livre';
   onPillarChange: (pillar: 'all' | 'freepremium' | 'horas-complementares' | 'formacao-livre') => void;
+  onNavigate?: (sectionId: string) => void;
   onSelectCourse: (course: Course) => void;
   onToggleSaveCourse: (courseId: string) => void;
   savedCourseIds: string[];
@@ -29,6 +30,7 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
   courses,
   activePillar,
   onPillarChange,
+  onNavigate,
   onSelectCourse,
   onToggleSaveCourse,
   savedCourseIds,
@@ -111,6 +113,24 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
               }`}
             >
               Formações Profissionais
+            </button>
+            <button
+              onClick={() => onNavigate && onNavigate('categoria:landing-pages-biolinks')}
+              className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-emerald-800 bg-emerald-100/90 hover:bg-emerald-200 border border-emerald-300"
+            >
+              Sites & Biolinks
+            </button>
+            <button
+              onClick={() => onNavigate && onNavigate('aplicativos')}
+              className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-amber-950 bg-amber-200/90 hover:bg-amber-300 border border-amber-400"
+            >
+              Apps & Dashboards
+            </button>
+            <button
+              onClick={() => onNavigate && onNavigate('livraria')}
+              className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-rose-900 bg-rose-100/90 hover:bg-rose-200 border border-rose-300"
+            >
+              Livros & Materiais
             </button>
           </div>
         </div>
