@@ -230,6 +230,26 @@ export const Header: React.FC<HeaderProps> = ({
             >
               Sites & Biolinks
             </button>
+            <button
+              onClick={() => onNavigate('artigos')}
+              className={`transition-all py-1 cursor-pointer ${
+                currentPage === 'artigos' || currentPage === 'artigo-detalhe'
+                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
+                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
+              }`}
+            >
+              Artigos Científicos
+            </button>
+            <button
+              onClick={() => onNavigate('aplicativos')}
+              className={`transition-all py-1 cursor-pointer ${
+                currentPage === 'aplicativos'
+                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
+                  : 'text-[#FFC72C]/90 hover:text-[#FFC72C] hover:border-b-2 hover:border-[#FFC72C]/50'
+              }`}
+            >
+              Apps & Dashboards
+            </button>
             
             <div className="w-px h-6 bg-white/10 mx-2"></div>
 
@@ -279,6 +299,8 @@ export const Header: React.FC<HeaderProps> = ({
           <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
           <button onClick={() => { onOpenAbout(); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Sobre Nós</button>
           <button onClick={() => { onNavigate('categoria:landing-pages-biolinks'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-400">Sites & Biolinks</button>
+          <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Artigos Científicos (Zenodo / DOI)</button>
+          <button onClick={() => { onNavigate('aplicativos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-[#FFC72C]">Apps & Dashboards (MEI e ME)</button>
           
           <button onClick={() => { onOpenValidator(); setMobileMenuOpen(false); }} className="w-full text-center px-4 py-2.5 rounded-lg text-sm font-bold bg-white/10 hover:bg-white/20 text-white flex items-center justify-center gap-2 mt-4">
             <CheckCircle2 className="w-4 h-4 text-emerald-400" />

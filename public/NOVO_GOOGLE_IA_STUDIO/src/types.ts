@@ -62,3 +62,26 @@ export interface PolicyDetail {
   introduction: string;
   sections: PolicySection[];
 }
+
+export interface AcademicArticle {
+  id: string;
+  title: string;
+  subtitle?: string;
+  authors: string[];
+  institution: string;
+  publicationYear: string;
+  publicationDate: string;
+  doi: string;
+  doiUrl: string;
+  zenodoUrl: string;
+  pdfUrl?: string;
+  category: string;
+  keywords: string[];
+  abstractPt: string;
+  abstractEn?: string;
+  citationAbnt: string;
+  citationApa: string;
+  viewsCount?: number;
+  downloadsCount?: number;
+  isFeatured?: boolean;
+}

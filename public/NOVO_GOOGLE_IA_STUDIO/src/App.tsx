@@ -19,9 +19,13 @@ import { PoliticasPage } from './components/PoliticasPage';
 import { PolicyDetailPage } from './components/PolicyDetailPage';
 import { BlogPage } from './components/BlogPage';
 import { BlogPostPage } from './components/BlogPostPage';
+import { AplicativosPage } from './components/AplicativosPage';
+import { ArtigosPage } from './components/ArtigosPage';
+import { ArtigoDetailPage } from './components/ArtigoDetailPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
-import { Course } from './types';
+import { ACADEMIC_ARTICLES } from './data/artigosData';
+import { Course, AcademicArticle } from './types';
 import {
   CheckCircle2,
   HeartHandshake,
@@ -38,7 +42,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -47,6 +51,7 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [activePillar, setActivePillar] = useState<'all' | 'freepremium' | 'horas-complementares' | 'formacao-livre'>('all');
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<AcademicArticle | null>(ACADEMIC_ARTICLES[0]);
   const [activePostId, setActivePostId] = useState<string | null>(null);
   const [isValidatorOpen, setIsValidatorOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
@@ -142,6 +147,18 @@ export default function App() {
 
     if (sectionId === 'livraria') {
       setCurrentPage('livraria');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'aplicativos') {
+      setCurrentPage('aplicativos');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'artigos') {
+      setCurrentPage('artigos');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -246,6 +263,8 @@ export default function App() {
             onSelectCategory={(cat) => {
               if (cat?.toLowerCase() === 'livros & materiais') {
                 handleNavigate('livraria');
+              } else if (cat?.toLowerCase() === 'aplicativos & dashboards') {
+                handleNavigate('aplicativos');
               } else if (cat?.toLowerCase() === 'treinamentos e palestras corporativas') {
                 handleNavigate('categoria:treinamentos-palestras-corporativas');
               } else {
@@ -399,6 +418,49 @@ export default function App() {
       {currentPage === 'livraria' && (
         <main className="flex-1">
           <LivrariaPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'aplicativos' && (
+        <main className="flex-1">
+          <AplicativosPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'artigos' && (
+        <main className="flex-1">
+          <ArtigosPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onSelectArticle={(art) => {
+              setSelectedArticle(art);
+              setCurrentPage('artigo-detalhe');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'artigo-detalhe' && selectedArticle && (
+        <main className="flex-1">
+          <ArtigoDetailPage
+            article={selectedArticle}
+            onBackToArticles={() => {
+              setCurrentPage('artigos');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             onBackToHome={() => {
               setCurrentPage('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });

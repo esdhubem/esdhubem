@@ -229,6 +229,22 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('aplicativos')}
+                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-cyan-400 font-semibold"
+                >
+                  Aplicativos & Dashboards (MEI e ME)
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('artigos')}
+                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold"
+                >
+                  Artigos Científicos & Anais (Zenodo / DOI)
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('sala-de-aula')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-white font-semibold flex items-center gap-1.5"
                 >
@@ -349,6 +365,7 @@ export const Footer: React.FC<FooterProps> = ({
                 'Coach Integrativo',
                 'Pedagogia Integrativa',
                 'Livros & Materiais',
+                'Aplicativos & Dashboards',
               ].map((category) => (
                 <button
                   key={category}
@@ -357,6 +374,8 @@ export const Footer: React.FC<FooterProps> = ({
                       onNavigate('categoria:treinamentos-palestras-corporativas');
                     } else if (category === 'Livros & Materiais') {
                       onNavigate('livraria');
+                    } else if (category === 'Aplicativos & Dashboards') {
+                      onNavigate('aplicativos');
                     } else if (category === 'Formação Empresarial') {
                       onSelectCategory('Formação Empresarial');
                       const catalogEl = document.getElementById('catalogo-cursos');

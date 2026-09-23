@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tailwindcss -i ./src/tailwind.css -o ./public/css/style.css --watch",
-    "build": "tailwindcss -i ./src/tailwind.css -o ./public/css/style.css --minify"
+    "start": "cd public/NOVO_GOOGLE_IA_STUDIO && npm run dev",
+    "build": "cd public/NOVO_GOOGLE_IA_STUDIO && npm run build && xcopy /Y /E dist\\assets\\* ..\\..\\assets\\ && copy /Y dist\\index.html ..\\..\\index.html"
   },
   "author": "",
   "license": "ISC",

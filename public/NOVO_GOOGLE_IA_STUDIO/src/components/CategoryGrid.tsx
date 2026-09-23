@@ -19,7 +19,8 @@ import {
   Award,
   ArrowRight,
   Filter,
-  Library
+  Library,
+  LayoutDashboard
 } from 'lucide-react';
 import { CategoryItem } from '../types';
 
@@ -68,6 +69,8 @@ const renderCategoryIcon = (iconName: string, className: string = 'w-6 h-6') => 
       return <Building2 className={className} />;
     case 'Library':
       return <Library className={className} />;
+    case 'LayoutDashboard':
+      return <LayoutDashboard className={className} />;
     case 'Award':
     default:
       return <Award className={className} />;

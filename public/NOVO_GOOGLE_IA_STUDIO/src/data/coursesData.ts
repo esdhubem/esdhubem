@@ -140,6 +140,13 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     coursesCount: 4,
     iconName: 'LayoutTemplate',
     accentColor: 'from-emerald-500 to-teal-700',
+  },
+  {
+    id: 'aplicativos-dashboards',
+    title: 'Aplicativos &\nDashboards',
+    coursesCount: 2,
+    iconName: 'LayoutDashboard',
+    accentColor: 'from-blue-600 to-cyan-600',
   }
 ];
 
@@ -288,6 +295,53 @@ export const COURSES_DATA: Course[] = [
     ],
     targetAudience: 'Profissionais liberais, autônomos, influenciadores e empresas.',
     priceNote: 'A partir de R$ 197',
+  },
+  // 3. APLICATIVOS & DASHBOARDS
+  {
+    id: 'app-mei',
+    title: 'Aplicativo & Dashboard de Gestão MEI',
+    subtitle: 'Controle de faturamento, receitas, despesas, DAS e relatórios simplificados para MEI.',
+    category: 'Aplicativos & Dashboards',
+    pillar: 'freepremium',
+    hours: 24,
+    rating: 5.0,
+    studentsCount: 340,
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+    tag: 'Solução Tecnológica MEI',
+    badge: 'App & Dashboard',
+    description: 'Gerencie seu Microempreendimento Individual com praticidade. Acompanhe o teto de faturamento MEI, registre entradas e saídas e emita relatórios com um clique no celular ou computador.',
+    modulesCount: 5,
+    syllabus: [
+      'Alerta automático de limite de faturamento anual MEI',
+      'Controle de Entradas, Saídas e Lucro Líquido Real',
+      'Lembrete e emissão rápida do DAS MEI',
+      'Relatórios mensais e anuais para DASN-SIMEI'
+    ],
+    targetAudience: 'Microempreendedores Individuais (MEI) que buscam organização financeira simples.',
+    priceNote: 'A partir de R$ 29,90/mês',
+  },
+  {
+    id: 'app-me',
+    title: 'Aplicativo & Dashboard Executivo para ME',
+    subtitle: 'Sistema completo de Gestão Empresarial, DRE Gerencial, Fluxo de Caixa Futuro e Estoque para Microempresas.',
+    category: 'Aplicativos & Dashboards',
+    pillar: 'freepremium',
+    hours: 48,
+    rating: 5.0,
+    studentsCount: 190,
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+    tag: 'Gestão Empresarial ME',
+    badge: 'DRE & Fluxo de Caixa',
+    description: 'Potencialize a gestão da sua Microempresa. Dashboard com DRE Gerencial automático, previsão de fluxo de caixa, margem de contribuição por produto e controle avançado de estoque.',
+    modulesCount: 6,
+    syllabus: [
+      'DRE Gerencial Automático em tempo real',
+      'Fluxo de Caixa Previsto vs Realizado',
+      'Margem de Lucro e Ponto de Equilíbrio por serviço/produto',
+      'Exportação de dados em PDF/Excel para a contabilidade'
+    ],
+    targetAudience: 'Microempresas (ME), gestores e empresários que precisam de controle financeiro profissional.',
+    priceNote: 'A partir de R$ 79,90/mês',
   }
 ];
 
