@@ -19,6 +19,7 @@ import {
   Calculator,
   PieChart
 } from 'lucide-react';
+import henriqueVivianImg from '../assets/henrique-vivian.jpg';
 
 interface AplicativosPageProps {
   onBackToHome: () => void;
@@ -294,6 +295,35 @@ export const AplicativosPage: React.FC<AplicativosPageProps> = ({ onBackToHome }
             <div className="flex items-center gap-3">
               <FileSpreadsheet className="w-6 h-6 text-cyan-400" />
               <span className="text-xs font-semibold text-slate-200">Exportação fácil de dados</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Responsible Technical Architect Profile Card */}
+        <div className="mt-12 bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-center gap-8">
+          <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-[#243042] overflow-hidden shrink-0 border-4 border-slate-100 shadow-md flex items-center justify-center text-white">
+            <img src={henriqueVivianImg} alt="Henrique Vivian" className="w-full h-full object-cover" />
+          </div>
+
+          <div className="space-y-3 flex-1">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11px] font-bold">
+              <span>Engenharia de Software & Arquitetura Tecnológica</span>
+            </div>
+            <h3 className="text-2xl font-bold text-[#243042]">
+              Henrique Vivian
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Graduado em Análise de Sistemas e Pós-Graduado em Arquitetura e Desenvolvimento de Sistemas com ênfase em Padrões de Projetos. Responsável pelo desenvolvimento backend, análise de dados, criação de arquitetura de software, dashboards e soluções tecnológicas da ESDHUBEM.
+            </p>
+            <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-1">
+              <span className="font-semibold text-slate-700">
+                Especialidades:
+              </span>
+              <span className="text-[#243042] font-bold">
+                Backend, Análise de Dados & Padrões de Projetos
+              </span>
+              <span className="text-slate-300">•</span>
+              <span>Instituição: ESDHUBEM (CNPJ 61.928.778/0001-50)</span>
             </div>
           </div>
         </div>

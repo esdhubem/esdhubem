@@ -37,6 +37,7 @@ import {
 } from 'lucide-react';
 import { Play, FileText, Video as VideoIcon } from 'lucide-react';
 import profSilvianeImg from '../assets/prof-silviane.png';
+import henriqueVivianImg from '../assets/henrique-vivian.jpg';
 import { CategoryItem, Course } from '../types';
 import { CATEGORIES_DATA, COURSES_DATA } from '../data/coursesData';
 
@@ -122,6 +123,30 @@ const CATEGORY_META: Record<
         question: 'Estes cursos valem para horas complementares na faculdade?',
         answer:
           'Sim, todos os cursos emitem certificado com carga horária expressa e código de verificação aceito por secretarias acadêmicas de todo o Brasil.'
+      }
+    ]
+  },
+  'landing-pages-biolinks': {
+    heroTag: 'Desenvolvimento Web & Soluções Digitais',
+    description:
+      'Soluções de alta conversão para profissionais, advogados, psicólogos, médicos e empresas. Criação de Landing Pages personalizadas, Biolinks interativos, hospedagem e estrutura técnica completa.',
+    targetPublic:
+      'Advogados, psicólogos, médicos, corretores de imóveis, consultores e profissionais liberais que buscam presença digital forte e atração de clientes.',
+    skillsSummary: [
+      'Design Responsivo & Alta Conversão',
+      'Integração com WhatsApp & Formulários',
+      'Configuração de Domínio & SSL',
+      'Arquitetura de Sistemas & SEO'
+    ],
+    b2bHighlights: [
+      'Entregue e configurado em até 48 horas',
+      'Suporte técnico e manutenção inclusa'
+    ],
+    faq: [
+      {
+        question: 'Como funciona a entrega da Landing Page ou Biolink?',
+        answer:
+          'Após o fechamento, nossa equipe entra em contato via WhatsApp para alinhar o briefing. O desenvolvimento técnico e publicação no ar ocorrem em até 48 horas.'
       }
     ]
   }
@@ -938,40 +963,70 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
         </section>
       )}
 
-      {/* 7. Coordination & Pedagogical Responsibility */}
+      {/* 7. Coordination & Technical Responsibility */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-center gap-8">
-          <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-[#243042] overflow-hidden shrink-0 border-4 border-slate-100 shadow-md flex items-center justify-center text-white">
-            <img src={profSilvianeImg} alt="Profa. Dra. Silviane Silvério" className="w-full h-full object-cover" />
-          </div>
+        {categorySlug === 'landing-pages-biolinks' ? (
+          <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-center gap-8">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-[#243042] overflow-hidden shrink-0 border-4 border-slate-100 shadow-md flex items-center justify-center text-white">
+              <img src={henriqueVivianImg} alt="Henrique Vivian" className="w-full h-full object-cover" />
+            </div>
 
-          <div className="space-y-3 flex-1">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11px] font-bold">
-              <span>Coordenação Pedagógica & Docência</span>
-            </div>
-            <h3 className="text-2xl font-bold text-[#243042]">
-              Profa. Dra. Silviane Silvério
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Biomédica, Pesquisadora e Pós-graduada em Práticas Integrativas, Saúde e Desenvolvimento Humano. Responsável técnica pela elaboração das matrizes curriculares, ementas formativas e rigor metodológico dos cursos da ESDHUBEM.
-            </p>
-            <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-1">
-              <span className="font-semibold text-slate-700">
-                Currículo Lattes CNPq:
-              </span>
-              <a
-                href="http://lattes.cnpq.br/7481458793724724"
-                target="_blank"
-                rel="noreferrer"
-                className="text-[#243042] underline font-bold hover:text-[#FFC72C]"
-              >
-                7481458793724724
-              </a>
-              <span className="text-slate-300">•</span>
-              <span>Instituição: ESDHUBEM (CNPJ 61.928.778/0001-50)</span>
+            <div className="space-y-3 flex-1">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11px] font-bold">
+                <span>Engenharia de Software & Arquitetura Tecnológica</span>
+              </div>
+              <h3 className="text-2xl font-bold text-[#243042]">
+                Henrique Vivian
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Graduado em Análise de Sistemas e Pós-Graduado em Arquitetura e Desenvolvimento de Sistemas com ênfase em Padrões de Projetos. Responsável pelo desenvolvimento backend, análise de dados, criação de arquitetura de software, dashboards e soluções tecnológicas da ESDHUBEM.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-1">
+                <span className="font-semibold text-slate-700">
+                  Especialidades:
+                </span>
+                <span className="text-[#243042] font-bold">
+                  Backend, Análise de Dados & Padrões de Projetos
+                </span>
+                <span className="text-slate-300">•</span>
+                <span>Instituição: ESDHUBEM (CNPJ 61.928.778/0001-50)</span>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-center gap-8">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-[#243042] overflow-hidden shrink-0 border-4 border-slate-100 shadow-md flex items-center justify-center text-white">
+              <img src={profSilvianeImg} alt="Profa. Dra. Silviane Silvério" className="w-full h-full object-cover" />
+            </div>
+
+            <div className="space-y-3 flex-1">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11px] font-bold">
+                <span>Coordenação Pedagógica & Docência</span>
+              </div>
+              <h3 className="text-2xl font-bold text-[#243042]">
+                Profa. Dra. Silviane Silvério
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Biomédica, Pesquisadora e Pós-graduada em Práticas Integrativas, Saúde e Desenvolvimento Humano. Responsável técnica pela elaboração das matrizes curriculares, ementas formativas e rigor metodológico dos cursos da ESDHUBEM.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-1">
+                <span className="font-semibold text-slate-700">
+                  Currículo Lattes CNPq:
+                </span>
+                <a
+                  href="http://lattes.cnpq.br/7481458793724724"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[#243042] underline font-bold hover:text-[#FFC72C]"
+                >
+                  7481458793724724
+                </a>
+                <span className="text-slate-300">•</span>
+                <span>Instituição: ESDHUBEM (CNPJ 61.928.778/0001-50)</span>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* 8. Frequently Asked Questions for this Category */}
