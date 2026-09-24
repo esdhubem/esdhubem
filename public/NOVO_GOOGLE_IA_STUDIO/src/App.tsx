@@ -22,6 +22,9 @@ import { BlogPostPage } from './components/BlogPostPage';
 import { AplicativosPage } from './components/AplicativosPage';
 import { ArtigosPage } from './components/ArtigosPage';
 import { ArtigoDetailPage } from './components/ArtigoDetailPage';
+import { CorpoDocentePage } from './components/CorpoDocentePage';
+import { DireitosAlunoPage } from './components/DireitosAlunoPage';
+import { PoliticaPagamentoPage } from './components/PoliticaPagamentoPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -42,7 +45,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -129,6 +132,24 @@ export default function App() {
 
     if (sectionId === 'categorias') {
       setCurrentPage('categorias');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'corpo-docente') {
+      setCurrentPage('corpo-docente');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'direitos-aluno') {
+      setCurrentPage('direitos-aluno');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'politica-pagamento') {
+      setCurrentPage('politica-pagamento');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -530,6 +551,40 @@ export default function App() {
             }}
             onOpenValidator={() => setIsValidatorOpen(true)}
             initialCourseId={activePortalCourseId}
+          />
+        </main>
+      )}
+
+      {currentPage === 'corpo-docente' && (
+        <main className="flex-1">
+          <CorpoDocentePage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'direitos-aluno' && (
+        <main className="flex-1">
+          <DireitosAlunoPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onOpenValidator={() => setIsValidatorOpen(true)}
+          />
+        </main>
+      )}
+
+      {currentPage === 'politica-pagamento' && (
+        <main className="flex-1">
+          <PoliticaPagamentoPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           />
         </main>
       )}

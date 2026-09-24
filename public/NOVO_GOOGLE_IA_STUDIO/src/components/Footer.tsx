@@ -298,6 +298,30 @@ export const Footer: React.FC<FooterProps> = ({
             <ul className="space-y-2.5 text-xs">
               <li>
                 <button
+                  onClick={() => onNavigate('corpo-docente')}
+                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-amber-400 font-semibold"
+                >
+                  Corpo Docente & Especialistas (E-E-A-T)
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('direitos-aluno')}
+                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold"
+                >
+                  Horas Complementares & Amparo Legal
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('politica-pagamento')}
+                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-cyan-400 font-semibold"
+                >
+                  Política de Pagamento & Reembolso (CDC)
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('informacoes-legais')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-white font-semibold"
                 >
@@ -306,10 +330,10 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('informacoes-legais')}
+                  onClick={() => onNavigate('politicas')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left"
                 >
-                  Termos de Uso
+                  Política de Privacidade & LGPD
                 </button>
               </li>
               <li>
@@ -317,7 +341,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => onNavigate('informacoes-legais')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left"
                 >
-                  Política de Privacidade & LGPD
+                  Termos de Uso & Responsabilidades
                 </button>
               </li>
               <li>
