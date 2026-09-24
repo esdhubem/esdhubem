@@ -149,6 +149,38 @@ export const CorpoDocentePage: React.FC<CorpoDocentePageProps> = ({
                   </div>
                 </div>
 
+                {/* Academic Profile Badges: Lattes iD & ORCID iD */}
+                <div className="p-4 rounded-2xl bg-[#F8FAFC] border border-amber-200/80 space-y-2">
+                  <span className="text-xs font-extrabold text-slate-900 uppercase tracking-wider block flex items-center gap-1.5">
+                    <GraduationCap className="w-4 h-4 text-amber-600" />
+                    Perfis Acadêmicos & Científicos Verificados
+                  </span>
+
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    <a
+                      href="http://lattes.cnpq.br/7481458793724724"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50 border border-blue-200 hover:bg-blue-100 text-blue-900 text-xs font-bold transition-all shadow-xs group"
+                    >
+                      <span className="w-2 h-2 rounded-full bg-blue-600 inline-block group-hover:scale-125 transition-transform" />
+                      <span>Currículo Lattes iD</span>
+                      <ExternalLink className="w-3 h-3 text-blue-600" />
+                    </a>
+
+                    <a
+                      href="https://orcid.org/0000-0001-6311-1195"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 text-emerald-900 text-xs font-bold transition-all shadow-xs group"
+                    >
+                      <span className="w-2 h-2 rounded-full bg-emerald-600 inline-block group-hover:scale-125 transition-transform" />
+                      <span>ORCID iD: 0000-0001-6311-1195</span>
+                      <ExternalLink className="w-3 h-3 text-emerald-600" />
+                    </a>
+                  </div>
+                </div>
+
                 {/* Courses Taught Tag */}
                 <div className="pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
                   <div className="flex flex-wrap items-center gap-2 text-xs">
