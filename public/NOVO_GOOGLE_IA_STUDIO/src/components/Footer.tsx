@@ -229,6 +229,14 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('categoria:landing-pages-biolinks')}
+                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold"
+                >
+                  Sites & Biolinks (Landing Pages)
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('aplicativos')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-cyan-400 font-semibold"
                 >
@@ -366,6 +374,7 @@ export const Footer: React.FC<FooterProps> = ({
                 'Pedagogia Integrativa',
                 'Livros & Materiais',
                 'Aplicativos & Dashboards',
+                'Landing Pages & Biolinks',
               ].map((category) => (
                 <button
                   key={category}
@@ -376,6 +385,8 @@ export const Footer: React.FC<FooterProps> = ({
                       onNavigate('livraria');
                     } else if (category === 'Aplicativos & Dashboards') {
                       onNavigate('aplicativos');
+                    } else if (category === 'Landing Pages & Biolinks') {
+                      onNavigate('categoria:landing-pages-biolinks');
                     } else if (category === 'Formação Empresarial') {
                       onSelectCategory('Formação Empresarial');
                       const catalogEl = document.getElementById('catalogo-cursos');
