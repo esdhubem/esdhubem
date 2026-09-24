@@ -72,65 +72,93 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
             </p>
           </div>
 
-          {/* Pillar Tabs Matching the User's Requirements */}
-          <div className="flex flex-wrap items-center gap-2 bg-slate-200/80 p-1.5 rounded-2xl self-start">
+          {/* Pillar Tabs Matching the User's Requirements with Custom Colors */}
+          <div className="flex flex-wrap items-center gap-2 bg-slate-200/70 p-2 rounded-2xl self-start border border-slate-300/60 shadow-xs">
+            {/* Todos os Cursos */}
             <button
               onClick={() => onPillarChange('all')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-1.5 ${
                 activePillar === 'all'
-                  ? 'bg-[#243042] text-white shadow-sm'
-                  : 'text-slate-700 hover:text-slate-900 hover:bg-white/60'
+                  ? 'bg-slate-900 text-white shadow-md ring-2 ring-slate-900/20'
+                  : 'bg-white/80 hover:bg-white text-slate-700 border border-slate-300/80'
               }`}
             >
-              Todos os Cursos
+              <span>Todos os Cursos</span>
             </button>
+
+            {/* Cursos Freepremium */}
             <button
               onClick={() => onPillarChange('freepremium')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-1.5 ${
                 activePillar === 'freepremium'
-                  ? 'bg-[#243042] text-white shadow-sm'
-                  : 'text-slate-700 hover:text-slate-900 hover:bg-white/60'
+                  ? 'bg-cyan-600 text-white shadow-md ring-2 ring-cyan-600/20'
+                  : 'bg-cyan-50 hover:bg-cyan-100 text-cyan-900 border border-cyan-200'
               }`}
             >
-              Cursos Freepremium
+              <Sparkles className="w-3.5 h-3.5 text-cyan-500 fill-cyan-500" />
+              <span>Cursos Freepremium</span>
             </button>
+
+            {/* Horas Complementares */}
             <button
               onClick={() => onPillarChange('horas-complementares')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-1.5 ${
                 activePillar === 'horas-complementares'
-                  ? 'bg-[#243042] text-white shadow-sm'
-                  : 'text-slate-700 hover:text-slate-900 hover:bg-white/60'
+                  ? 'bg-amber-500 text-slate-950 shadow-md ring-2 ring-amber-500/20'
+                  : 'bg-amber-100/90 hover:bg-amber-200 text-amber-950 border border-amber-300'
               }`}
             >
-              Horas Complementares
+              <Clock className="w-3.5 h-3.5 text-amber-700" />
+              <span>Horas Complementares</span>
             </button>
+
+            {/* Formações Profissionais */}
             <button
               onClick={() => onPillarChange('formacao-livre')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-1.5 ${
                 activePillar === 'formacao-livre'
-                  ? 'bg-[#243042] text-white shadow-sm'
-                  : 'text-slate-700 hover:text-slate-900 hover:bg-white/60'
+                  ? 'bg-purple-700 text-white shadow-md ring-2 ring-purple-700/20'
+                  : 'bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200'
               }`}
             >
-              Formações Profissionais
+              <Award className="w-3.5 h-3.5 text-purple-600" />
+              <span>Formações Profissionais</span>
             </button>
+
+            {/* Sites & Biolinks */}
             <button
               onClick={() => onNavigate && onNavigate('categoria:landing-pages-biolinks')}
-              className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-emerald-800 bg-emerald-100/90 hover:bg-emerald-200 border border-emerald-300"
+              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-emerald-900 bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 shadow-2xs flex items-center gap-1.5"
             >
-              Sites & Biolinks
+              <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
+              <span>Sites & Biolinks</span>
             </button>
+
+            {/* Apps & Dashboards */}
             <button
               onClick={() => onNavigate && onNavigate('aplicativos')}
-              className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-amber-950 bg-amber-200/90 hover:bg-amber-300 border border-amber-400"
+              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-slate-950 bg-[#FFC72C] hover:bg-amber-400 border border-amber-400 shadow-2xs flex items-center gap-1.5"
             >
-              Apps & Dashboards
+              <span className="w-2 h-2 rounded-full bg-slate-950 inline-block" />
+              <span>Apps & Dashboards</span>
             </button>
+
+            {/* Livros & Materiais */}
             <button
               onClick={() => onNavigate && onNavigate('livraria')}
-              className="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-rose-900 bg-rose-100/90 hover:bg-rose-200 border border-rose-300"
+              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-rose-900 bg-rose-100 hover:bg-rose-200 border border-rose-300 shadow-2xs flex items-center gap-1.5"
             >
-              Livros & Materiais
+              <span className="w-2 h-2 rounded-full bg-rose-500 inline-block" />
+              <span>Livros & Materiais</span>
+            </button>
+
+            {/* Artigos Científicos */}
+            <button
+              onClick={() => onNavigate && onNavigate('artigos')}
+              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-indigo-900 bg-indigo-100 hover:bg-indigo-200 border border-indigo-300 shadow-2xs flex items-center gap-1.5"
+            >
+              <span className="w-2 h-2 rounded-full bg-indigo-500 inline-block" />
+              <span>Artigos Científicos</span>
             </button>
           </div>
         </div>
