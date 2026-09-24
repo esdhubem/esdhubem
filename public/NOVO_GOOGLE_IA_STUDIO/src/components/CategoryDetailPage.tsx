@@ -965,28 +965,28 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
 
       {/* 7. Coordination & Technical Responsibility */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {categorySlug === 'landing-pages-biolinks' ? (
+        {categorySlug === 'landing-pages-biolinks' || categorySlug === 'desenvolvimento-tecnologico-ia' || categorySlug === 'aplicativos' || categorySlug.includes('tecnolog') || categorySlug.includes('ia') ? (
           <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-center gap-8">
-            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-[#243042] overflow-hidden shrink-0 border-4 border-slate-100 shadow-md flex items-center justify-center text-white">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-[#243042] overflow-hidden shrink-0 border-4 border-[#FFC72C] shadow-md flex items-center justify-center text-white">
               <img src={henriqueVivianImg} alt="Henrique Vivian" className="w-full h-full object-cover" />
             </div>
 
             <div className="space-y-3 flex-1">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11px] font-bold">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-100 text-cyan-900 text-[11px] font-bold">
                 <span>Engenharia de Software & Arquitetura Tecnológica</span>
               </div>
               <h3 className="text-2xl font-bold text-[#243042]">
                 Henrique Vivian
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Graduado em Análise de Sistemas e Pós-Graduado em Arquitetura e Desenvolvimento de Sistemas com ênfase em Padrões de Projetos. Responsável pelo desenvolvimento backend, análise de dados, criação de arquitetura de software, dashboards e soluções tecnológicas da ESDHUBEM.
+                Graduado em Análise de Sistemas e Pós-Graduado em Arquitetura e Desenvolvimento de Sistemas com ênfase em Padrões de Projetos (Design Patterns). Responsável pelo desenvolvimento backend, análise de dados de aprendizagem, criação de arquitetura de software, dashboards e soluções tecnológicas da ESDHUBEM.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-1">
                 <span className="font-semibold text-slate-700">
-                  Especialidades:
+                  Especialidades & Função:
                 </span>
                 <span className="text-[#243042] font-bold">
-                  Backend, Análise de Dados & Padrões de Projetos
+                  Backend, Análise de Dados, Padrões de Projetos & IA Aplicada
                 </span>
                 <span className="text-slate-300">•</span>
                 <span>Instituição: ESDHUBEM (CNPJ 61.928.778/0001-50)</span>
@@ -995,19 +995,19 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
           </div>
         ) : (
           <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-center gap-8">
-            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-[#243042] overflow-hidden shrink-0 border-4 border-slate-100 shadow-md flex items-center justify-center text-white">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-[#243042] overflow-hidden shrink-0 border-4 border-[#FFC72C] shadow-md flex items-center justify-center text-white">
               <img src={profSilvianeImg} alt="Profa. Dra. Silviane Silvério" className="w-full h-full object-cover" />
             </div>
 
             <div className="space-y-3 flex-1">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11px] font-bold">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold">
                 <span>Coordenação Pedagógica & Docência</span>
               </div>
               <h3 className="text-2xl font-bold text-[#243042]">
                 Profa. Dra. Silviane Silvério
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Biomédica, Pesquisadora e Pós-graduada em Práticas Integrativas, Saúde e Desenvolvimento Humano. Responsável técnica pela elaboração das matrizes curriculares, ementas formativas e rigor metodológico dos cursos da ESDHUBEM.
+                Especialista e Pesquisadora em Desenvolvimento Humano, Práticas Integrativas e Gestão da Saúde. Responsável técnica pela elaboração das matrizes curriculares, ementas formativas e rigor metodológico dos cursos da ESDHUBEM.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-1">
                 <span className="font-semibold text-slate-700">
