@@ -378,53 +378,37 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs">
               {[
-                'Treinamento nas Empresas B2B',
-                'Formação Empresarial',
-                'Cursos Freepremium',
-                'Horas Complementares',
-                'Formação Livre',
-                'Desenvolvimento Pessoal',
-                'Desenvolvimento Humano',
-                'Desenvolvimento Profissional',
-                'Desenvolvimento Ético',
-                'Desenvolvimento Relacional',
-                'Desenvolvimento Financeiro',
-                'Desenvolvimento Ambiental',
-                'Desenvolvimento da Consciência',
-                'Desenvolvimento Tecnológico e IA',
-                'Desenvolvimento nas Empresas',
-                'Práticas Integrativas',
-                'Coach Integrativo',
-                'Pedagogia Integrativa',
-                'Livros & Materiais',
-                'Aplicativos & Dashboards',
-                'Landing Pages & Biolinks',
-              ].map((category) => (
+                { name: 'Treinamento nas Empresas B2B', slug: 'categoria:treinamentos-palestras-corporativas', isB2b: true },
+                { name: 'Formação Empresarial', slug: 'categoria:formacao-empresarial' },
+                { name: 'Cursos Freepremium', slug: 'categoria:cursos-freepremium' },
+                { name: 'Horas Complementares', slug: 'categoria:horas-complementares' },
+                { name: 'Formação Livre', slug: 'categoria:formacao-livre' },
+                { name: 'Desenvolvimento Pessoal', slug: 'categoria:desenvolvimento-pessoal' },
+                { name: 'Desenvolvimento Humano', slug: 'categoria:desenvolvimento-humano' },
+                { name: 'Desenvolvimento Profissional', slug: 'categoria:desenvolvimento-profissional' },
+                { name: 'Desenvolvimento Ético', slug: 'categoria:desenvolvimento-etico' },
+                { name: 'Desenvolvimento Relacional', slug: 'categoria:desenvolvimento-relacional' },
+                { name: 'Desenvolvimento Financeiro', slug: 'categoria:desenvolvimento-financeiro' },
+                { name: 'Desenvolvimento Ambiental', slug: 'categoria:desenvolvimento-ambiental' },
+                { name: 'Desenvolvimento da Consciência', slug: 'categoria:desenvolvimento-da-consciencia' },
+                { name: 'Desenvolvimento Tecnológico e IA', slug: 'categoria:desenvolvimento-tecnologico-ia' },
+                { name: 'Desenvolvimento nas Empresas', slug: 'categoria:desenvolvimento-nas-empresas' },
+                { name: 'Práticas Integrativas', slug: 'categoria:praticas-integrativas' },
+                { name: 'Coach Integrativo', slug: 'categoria:coach-integrativo' },
+                { name: 'Pedagogia Integrativa', slug: 'categoria:pedagogia-integrativa' },
+                { name: 'Livros & Materiais', slug: 'livraria' },
+                { name: 'Aplicativos & Dashboards', slug: 'aplicativos' },
+                { name: 'Landing Pages & Biolinks', slug: 'categoria:landing-pages-biolinks' },
+              ].map((item) => (
                 <button
-                  key={category}
+                  key={item.name}
                   onClick={() => {
-                    if (category === 'Treinamento nas Empresas B2B') {
-                      onNavigate('categoria:treinamentos-palestras-corporativas');
-                    } else if (category === 'Livros & Materiais') {
-                      onNavigate('livraria');
-                    } else if (category === 'Aplicativos & Dashboards') {
-                      onNavigate('aplicativos');
-                    } else if (category === 'Landing Pages & Biolinks') {
-                      onNavigate('categoria:landing-pages-biolinks');
-                    } else if (category === 'Formação Empresarial') {
-                      onSelectCategory('Formação Empresarial');
-                      const catalogEl = document.getElementById('catalogo-cursos');
-                      if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      onSelectCategory(category);
-                      const catalogEl = document.getElementById('catalogo-cursos');
-                      if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    onNavigate(item.slug);
                   }}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left py-0.5 truncate text-slate-300 flex items-center gap-1"
                 >
-                  <span>• {category}</span>
-                  {category === 'Treinamento nas Empresas B2B' && (
+                  <span>• {item.name}</span>
+                  {item.isB2b && (
                     <span className="text-[9px] bg-[#FFC72C] text-slate-950 font-black px-1 rounded uppercase ml-1">
                       B2B
                     </span>
