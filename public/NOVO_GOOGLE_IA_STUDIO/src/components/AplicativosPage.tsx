@@ -17,7 +17,9 @@ import {
   Clock,
   ChevronRight,
   Calculator,
-  PieChart
+  PieChart,
+  Phone,
+  Mail
 } from 'lucide-react';
 import henriqueVivianImg from '../assets/henrique-vivian.jpg';
 
@@ -324,6 +326,27 @@ export const AplicativosPage: React.FC<AplicativosPageProps> = ({ onBackToHome }
               </span>
               <span className="text-slate-300">•</span>
               <span>Instituição: ESDHUBEM (CNPJ 61.928.778/0001-50)</span>
+            </div>
+
+            {/* Direct Contact Buttons */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <a
+                href="https://wa.me/5511960319637?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20Henrique%20Vivian%20sobre%20desenvolvimento%20tecnol%C3%B3gico,%20apps,%20dashboards%20ou%20biolinks"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs shadow-sm transition-all cursor-pointer"
+              >
+                <Phone className="w-3.5 h-3.5" />
+                <span>Falar com Henrique via WhatsApp (11) 960319637</span>
+              </a>
+
+              <a
+                href="mailto:esdhubem@proton.me?subject=Contato%20T%C3%A9cnico%20-%20Henrique%20Vivian"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#182333] hover:bg-[#243042] text-white font-bold text-xs shadow-sm transition-all cursor-pointer"
+              >
+                <Mail className="w-3.5 h-3.5 text-[#FFC72C]" />
+                <span>Contato Técnico por E-mail</span>
+              </a>
             </div>
           </div>
         </div>
