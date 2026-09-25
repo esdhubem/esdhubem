@@ -22,12 +22,14 @@ interface CertificateValidatorModalProps {
   isOpen: boolean;
   onClose: () => void;
   onOpenCertificatePreview?: () => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 export const CertificateValidatorModal: React.FC<CertificateValidatorModalProps> = ({
   isOpen,
   onClose,
   onOpenCertificatePreview,
+  onNavigate
 }) => {
   const [inputCode, setInputCode] = useState('');
   const [searched, setSearched] = useState(false);
@@ -109,20 +111,22 @@ export const CertificateValidatorModal: React.FC<CertificateValidatorModalProps>
                 <Award className="w-5 h-5 text-[#FFC72C]" />
               </div>
               <div>
-                <h4 className="text-xs sm:text-sm font-bold text-white">Modelo do Certificado & Guia PDF</h4>
-                <p className="text-[11px] text-slate-300">Conheça o padrão de autenticidade e o amparo legal (Lei nº 9.394/96).</p>
+                <h4 className="text-xs sm:text-sm font-bold text-white">Regras de Certificação por Mérito</h4>
+                <p className="text-[11px] text-slate-300">Conheça os selos Bronze, Prata, Ouro e Diamante (Lei nº 9.394/96).</p>
               </div>
             </div>
             <button
               type="button"
               onClick={() => {
                 onClose();
-                if (onOpenCertificatePreview) onOpenCertificatePreview();
+                if (onNavigate) onNavigate('regras-certificacao-merito');
+                else if (onOpenCertificatePreview) onOpenCertificatePreview();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="w-full sm:w-auto px-4 py-2 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer shrink-0 shadow-sm"
             >
-              <Eye className="w-4 h-4" />
-              <span>Ver Modelo & PDF</span>
+              <Award className="w-4 h-4" />
+              <span>Regras de Certificação</span>
             </button>
           </div>
 

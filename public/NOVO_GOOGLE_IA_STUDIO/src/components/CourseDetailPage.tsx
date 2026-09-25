@@ -39,6 +39,7 @@ interface CourseDetailPageProps {
   onEnroll: () => void;
   onOpenValidator: () => void;
   onOpenCertificatePreview?: () => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
@@ -46,7 +47,8 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
   onBackToHome,
   onEnroll,
   onOpenValidator,
-  onOpenCertificatePreview
+  onOpenCertificatePreview,
+  onNavigate
 }) => {
   const [activeTab, setActiveTab] = useState<
     'sobre' | 'conteudo' | 'publico' | 'competencias' | 'legislacao' | 'autenticidade' | 'formato'
@@ -602,18 +604,22 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                   <div className="p-4 rounded-xl bg-slate-900 text-white border border-slate-700/80 space-y-2">
                     <div className="flex items-center gap-2 text-[#FFC72C] font-bold text-xs">
                       <Award className="w-4 h-4 shrink-0" />
-                      <span>Certificado Oficial com Validade Nacional</span>
+                      <span>Certificado Oficial por Mérito Acadêmico</span>
                     </div>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                      Conheça o modelo de formação livre amparado pela Lei nº 9.394/96 e baixador do manual em PDF.
+                      Conheça os 4 níveis de certificação (Bronze, Prata, Ouro e Diamante) amparados pela Lei nº 9.394/96.
                     </p>
                     <button
                       type="button"
-                      onClick={() => onOpenCertificatePreview?.()}
+                      onClick={() => {
+                        if (onNavigate) onNavigate('regras-certificacao-merito');
+                        else if (onOpenCertificatePreview) onOpenCertificatePreview();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
                       className="w-full py-2 px-3 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 font-extrabold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
                     >
-                      <Eye className="w-3.5 h-3.5" />
-                      <span>Ver Modelo do Certificado & PDF</span>
+                      <Award className="w-3.5 h-3.5" />
+                      <span>Regras de Certificação</span>
                     </button>
                   </div>
                 )}

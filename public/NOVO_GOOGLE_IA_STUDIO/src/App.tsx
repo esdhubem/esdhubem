@@ -345,6 +345,7 @@ export default function App() {
               handleNavigate(`categoria:${targetSlug}`);
             }}
             onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
+            onNavigate={handleNavigate}
           />
 
           <section className="py-8 bg-[#F8FAFC]">
@@ -411,6 +412,7 @@ export default function App() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
+            onNavigate={handleNavigate}
           />
         </main>
       )}
@@ -424,6 +426,7 @@ export default function App() {
             }}
             onOpenValidator={() => setIsValidatorOpen(true)}
             onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
+            onNavigate={handleNavigate}
           />
         </main>
       )}
@@ -562,6 +565,7 @@ export default function App() {
             }}
             onOpenValidator={() => setIsValidatorOpen(true)}
             onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
+            onNavigate={handleNavigate}
           />
         </main>
       )}
@@ -599,6 +603,7 @@ export default function App() {
             }}
             onOpenValidator={() => setIsValidatorOpen(true)}
             onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
+            onNavigate={handleNavigate}
           />
         </main>
       )}
@@ -627,6 +632,7 @@ export default function App() {
               setCurrentPage('sala-de-aula');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onNavigate={handleNavigate}
           />
         </main>
       )}
@@ -671,6 +677,7 @@ export default function App() {
         isOpen={isValidatorOpen}
         onClose={() => setIsValidatorOpen(false)}
         onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
+        onNavigate={handleNavigate}
       />
 
       <CertificatePreviewModal

@@ -27,6 +27,7 @@ interface LegalInfoPageProps {
   onBackToHome: () => void;
   onOpenValidator: () => void;
   onOpenCertificatePreview?: () => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 type TabType = 'certificados' | 'termos' | 'privacidade' | 'institucional';
@@ -34,7 +35,8 @@ type TabType = 'certificados' | 'termos' | 'privacidade' | 'institucional';
 export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
   onBackToHome,
   onOpenValidator,
-  onOpenCertificatePreview
+  onOpenCertificatePreview,
+  onNavigate
 }) => {
   const [activeTab, setActiveTab] = useState<TabType>('certificados');
 
@@ -301,23 +303,15 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
                     <div className="flex flex-wrap items-center gap-2.5 shrink-0 w-full md:w-auto">
                       <button
                         type="button"
-                        onClick={() => onOpenCertificatePreview?.()}
-                        className="px-4 py-2.5 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md"
+                        onClick={() => {
+                          if (onNavigate) onNavigate('regras-certificacao-merito');
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="px-5 py-3 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 text-xs sm:text-sm font-black rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md hover:scale-105"
                       >
-                        <Eye className="w-4 h-4" />
-                        <span>Ver Modelo em Detalhes</span>
+                        <Award className="w-4 h-4" />
+                        <span>Regras de Certificação</span>
                       </button>
-
-                      <a
-                        href="padrao-certificado-esdhubem.pdf"
-                        download="Apresentacao-Novo-Padrao-Certificado-ESDHUBEM.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer border border-slate-600"
-                      >
-                        <Download className="w-4 h-4 text-amber-400" />
-                        <span>Baixar Guia PDF</span>
-                      </a>
                     </div>
                   </div>
                 </div>

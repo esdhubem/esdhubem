@@ -52,6 +52,7 @@ interface CategoryDetailPageProps {
   onOpenValidator: () => void;
   onSelectAnotherCategory: (slug: string) => void;
   onOpenCertificatePreview?: () => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 // Category custom themes and rich metadata
@@ -163,7 +164,8 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
   onNavigateToPortal,
   onOpenValidator,
   onSelectAnotherCategory,
-  onOpenCertificatePreview
+  onOpenCertificatePreview,
+  onNavigate
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPillar, setSelectedPillar] = useState<'all' | 'freepremium' | 'horas-complementares' | 'formacao-livre'>('all');
@@ -359,11 +361,15 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             <div className="pt-2">
               <button
                 type="button"
-                onClick={() => onOpenCertificatePreview?.()}
-                className="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs rounded-xl transition-all inline-flex items-center gap-2 shadow-md cursor-pointer hover:scale-105"
+                onClick={() => {
+                  if (onNavigate) onNavigate('regras-certificacao-merito');
+                  else if (onOpenCertificatePreview) onOpenCertificatePreview();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="px-4 py-2 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 font-black text-xs rounded-xl transition-all inline-flex items-center gap-2 shadow-md cursor-pointer hover:scale-105"
               >
                 <Award className="w-4 h-4" />
-                <span>Ver Modelo do Certificado & Guia PDF</span>
+                <span>Regras de Certificação</span>
               </button>
             </div>
 

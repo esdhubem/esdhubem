@@ -6,9 +6,10 @@ import { Sparkles, Users, Award, GraduationCap, CheckCircle2, ArrowRight, Eye, F
 interface MethodologySectionProps {
   onSelectPillar: (pillarType: 'freepremium' | 'horas-complementares' | 'formacao-livre') => void;
   onOpenCertificatePreview?: () => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
-export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelectPillar, onOpenCertificatePreview }) => {
+export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelectPillar, onOpenCertificatePreview, onNavigate }) => {
   return (
     <section className="bg-white" id="metodologia-jornada">
       {/* Vibrant Golden Yellow Header Banner (Directly matching screenshot) */}
@@ -115,7 +116,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
             })}
           </div>
 
-          {/* Strategic Banner: Modelo do Certificado & Guia PDF */}
+          {/* Strategic Banner: Regras de Certificação */}
           <div className="mt-10 p-6 rounded-3xl bg-[#182333] text-white border border-slate-700 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0">
@@ -124,13 +125,13 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
               <div className="space-y-1">
                 <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-amber-400/20 text-[#FFC72C] text-[11px] font-bold uppercase tracking-wider">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  <span>Novo Padrão de Qualificação Digital ESDHUBEM</span>
+                  <span>Escala de Mérito Acadêmico ESDHUBEM</span>
                 </div>
                 <h4 className="text-lg sm:text-xl font-bold text-white">
-                  Conheça o Modelo do Certificado & O Guia Explicativo em PDF
+                  Regras de Certificação & Selos de Mérito
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
-                  Certificados com plena validade acadêmica em todo o Brasil (LDB Lei nº 9.394/96), dupla autenticação digital no portal ITI Gov.br e módulo de segurança antifraude com duplo QR Code.
+                  Conheça os critérios dos certificados Bronze, Prata, Ouro e Diamante, amparados pela Lei nº 9.394/96 e pela transparência acadêmica.
                 </p>
               </div>
             </div>
@@ -138,11 +139,14 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
             <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
               <button
                 type="button"
-                onClick={() => onOpenCertificatePreview?.()}
+                onClick={() => {
+                  if (onNavigate) onNavigate('regras-certificacao-merito');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
                 className="w-full sm:w-auto px-6 py-3 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 text-xs sm:text-sm font-black rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:scale-105"
               >
-                <Eye className="w-4 h-4" />
-                <span>Ver Modelo & Guia PDF</span>
+                <Award className="w-4 h-4" />
+                <span>Regras de Certificação</span>
               </button>
             </div>
           </div>

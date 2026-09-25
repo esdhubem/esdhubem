@@ -33,13 +33,15 @@ interface SecretariaDocumentacaoPageProps {
   onOpenValidator?: () => void;
   onOpenCertificatePreview?: () => void;
   onNavigateToPortal?: () => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 export const SecretariaDocumentacaoPage: React.FC<SecretariaDocumentacaoPageProps> = ({
   onBackToHome,
   onOpenValidator,
   onOpenCertificatePreview,
-  onNavigateToPortal
+  onNavigateToPortal,
+  onNavigate
 }) => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
@@ -439,13 +441,24 @@ export const SecretariaDocumentacaoPage: React.FC<SecretariaDocumentacaoPageProp
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
-            {onOpenCertificatePreview && (
+            {onNavigate ? (
+              <button
+                onClick={() => {
+                  onNavigate('regras-certificacao-merito');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="px-5 py-3 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105"
+              >
+                <Award className="w-4 h-4" />
+                <span>Regras de Certificação</span>
+              </button>
+            ) : onOpenCertificatePreview && (
               <button
                 onClick={onOpenCertificatePreview}
-                className="px-5 py-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105"
+                className="px-5 py-3 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105"
               >
-                <Eye className="w-4 h-4" />
-                <span>Ver Modelo do Certificado & PDF</span>
+                <Award className="w-4 h-4" />
+                <span>Regras de Certificação</span>
               </button>
             )}
 
