@@ -55,7 +55,7 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
             </button>
             <span>/</span>
             <span className="text-[#FFC72C] font-semibold">
-              Informações Legais, Validade dos Certificados & Termos
+              Valor Legal dos Certificados & Informações Legais
             </span>
           </div>
 
@@ -76,8 +76,8 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Informações Legais & <br className="hidden sm:inline" />
-              <span className="text-[#FFC72C]">Validade dos Certificados</span>
+              Valor Legal dos Certificados <br className="hidden sm:inline" />
+              <span className="text-[#FFC72C]">& Informações Legais</span>
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
