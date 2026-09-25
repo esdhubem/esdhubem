@@ -150,7 +150,7 @@ export const Header: React.FC<HeaderProps> = ({
               {/* Mobile Hamburger Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="xl:hidden p-2 rounded-lg text-slate-200 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                className="lg:hidden p-2 rounded-lg text-slate-200 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
@@ -159,10 +159,10 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Bottom Bar: Navigation Links (Desktop) */}
-      <div className="hidden xl:block bg-[#182333]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center justify-center gap-8 h-12 text-sm font-medium">
+      {/* Bottom Bar: Navigation Links (Desktop/Laptop) */}
+      <div className="hidden lg:block bg-[#182333]">
+        <div className="max-w-[1600px] mx-auto px-3 sm:px-4 lg:px-6 overflow-x-auto scrollbar-none">
+          <nav className="flex items-center justify-center gap-3 lg:gap-4 xl:gap-5 h-12 text-xs xl:text-sm font-medium whitespace-nowrap">
             <button
               onClick={() => onNavigate('inicio')}
               className={`transition-all py-1 cursor-pointer ${
@@ -196,27 +196,6 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             <button
-              onClick={() => onNavigate('informacoes-legais')}
-              className={`transition-all py-1 cursor-pointer ${
-                currentPage === 'informacoes-legais'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              Informações Legais
-            </button>
-            <button
-              onClick={() => onNavigate('regras-certificacao-merito')}
-              className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 font-extrabold ${
-                currentPage === 'regras-certificacao-merito'
-                  ? 'text-[#FFC72C] border-b-2 border-[#FFC72C]'
-                  : 'text-[#FFC72C] hover:text-amber-300 hover:border-b-2 hover:border-[#FFC72C]/50'
-              }`}
-            >
-              <Award className="w-4 h-4 text-[#FFC72C]" />
-              <span>Regras de Certificação</span>
-            </button>
-            <button
               onClick={() => onNavigate('politicas')}
               className={`transition-all py-1 cursor-pointer ${
                 currentPage === 'politicas'
@@ -225,12 +204,6 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               Políticas
-            </button>
-            <button
-              onClick={onOpenAbout}
-              className="text-white/80 hover:text-white hover:border-b-2 hover:border-white/30 transition-all py-1 cursor-pointer"
-            >
-              Sobre Nós
             </button>
             <button
               onClick={() => onNavigate('categoria:landing-pages-biolinks')}
@@ -263,14 +236,22 @@ export const Header: React.FC<HeaderProps> = ({
               Apps & Dashboards
             </button>
             
-            <div className="w-px h-6 bg-white/10 mx-2"></div>
+            <div className="w-px h-6 bg-white/10 mx-1.5 shrink-0"></div>
 
             <button
               onClick={onOpenValidator}
-              className="bg-white/10 hover:bg-white/20 text-white font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer"
+              className="bg-white/10 hover:bg-white/20 text-white font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0"
             >
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
               Validar Certificado
+            </button>
+
+            <button
+              onClick={() => onNavigate('regras-certificacao-merito')}
+              className="bg-[#FFC72C]/15 hover:bg-[#FFC72C]/25 text-[#FFC72C] border border-[#FFC72C]/40 font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs hover:border-[#FFC72C]"
+            >
+              <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
+              <span>Certificação & Escala de Mérito</span>
             </button>
           </nav>
         </div>
@@ -295,7 +276,7 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-[#1E293B] border-t border-slate-700 px-4 py-4 space-y-3 shadow-2xl text-white">
+        <div className="lg:hidden bg-[#1E293B] border-t border-slate-700 px-4 py-4 space-y-3 shadow-2xl text-white">
           <button onClick={() => { onNavigate('inicio'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Início</button>
           <button onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Blog</button>
           <button onClick={() => { onNavigate('categorias'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 flex justify-between">
@@ -307,13 +288,11 @@ export const Header: React.FC<HeaderProps> = ({
             <span>Sala de Aula</span>
             <span className="text-[10px] bg-[#FFC72C] text-slate-950 font-black px-2 py-0.5 rounded-full">ALUNO</span>
           </button>
-          <button onClick={() => { onNavigate('informacoes-legais'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Informações Legais</button>
           <button onClick={() => { onNavigate('regras-certificacao-merito'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold hover:bg-white/10 text-[#FFC72C] flex items-center gap-2">
             <Award className="w-4 h-4 text-[#FFC72C]" />
-            <span>Regras de Certificação</span>
+            <span>Certificação & Escala de Mérito</span>
           </button>
           <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
-          <button onClick={() => { onOpenAbout(); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Sobre Nós</button>
           <button onClick={() => { onNavigate('categoria:landing-pages-biolinks'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-400">Sites & Biolinks</button>
           <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Artigos Científicos (Zenodo / DOI)</button>
           <button onClick={() => { onNavigate('aplicativos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-[#FFC72C]">Apps & Dashboards (MEI e ME)</button>
