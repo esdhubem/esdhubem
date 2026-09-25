@@ -93,26 +93,23 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
                     </div>
                   </div>
 
-                  {/* Action CTA */}
-                  <div className="pt-2">
-                    <button
-                      onClick={() => {
-                        onSelectPillar(pillar.type);
-                        const catalogEl = document.getElementById('catalogo-cursos');
-                        if (catalogEl) {
-                          catalogEl.scrollIntoView({ behavior: 'smooth' });
-                        }
-                      }}
-                      className={`w-full py-3 px-4 rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
-                        isPopular
-                          ? 'bg-[#243042] hover:bg-[#182333] text-white shadow-sm'
-                          : 'bg-slate-100 hover:bg-[#243042] text-slate-800 hover:text-white'
-                      }`}
-                    >
-                      <span>Ver {pillar.title}</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
+                    {/* Action CTA */}
+                    <div className="pt-2">
+                      <button
+                        onClick={() => {
+                          onSelectPillar(pillar.type);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className={`w-full py-3 px-4 rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                          isPopular
+                            ? 'bg-[#243042] hover:bg-[#182333] text-white shadow-sm'
+                            : 'bg-slate-100 hover:bg-[#243042] text-slate-800 hover:text-white'
+                        }`}
+                      >
+                        <span>Ver {pillar.title}</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </div>
                 </div>
               );
             })}

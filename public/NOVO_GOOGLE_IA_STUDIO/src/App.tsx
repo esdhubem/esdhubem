@@ -329,9 +329,13 @@ export default function App() {
           {/* 4. A Jornada Perfeita para o Seu Sucesso (The 3 Methodology Pillars) */}
           <MethodologySection
             onSelectPillar={(pillarType) => {
-              setActivePillar(pillarType);
-              const el = document.getElementById('catalogo-cursos');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
+              const slugMap: Record<string, string> = {
+                'freepremium': 'cursos-freepremium',
+                'horas-complementares': 'horas-complementares',
+                'formacao-livre': 'formacao-livre'
+              };
+              const targetSlug = slugMap[pillarType] || 'cursos-freepremium';
+              handleNavigate(`categoria:${targetSlug}`);
             }}
             onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
           />
