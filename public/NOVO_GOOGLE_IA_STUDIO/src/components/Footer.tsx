@@ -335,6 +335,15 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('secretaria-documentacao')}
+                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-extrabold flex items-center gap-1"
+                >
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#FFC72C]" />
+                  <span>Secretaria & Tabela de Serviços</span>
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('informacoes-legais')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-white font-semibold"
                 >
