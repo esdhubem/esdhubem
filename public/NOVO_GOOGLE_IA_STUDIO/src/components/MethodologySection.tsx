@@ -1,13 +1,14 @@
 import React from 'react';
 import { METHODOLOGY_PILLARS } from '../data/coursesData';
 import { MethodologyPillar } from '../types';
-import { Sparkles, Users, Award, GraduationCap, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Sparkles, Users, Award, GraduationCap, CheckCircle2, ArrowRight, Eye, FileText, ShieldCheck } from 'lucide-react';
 
 interface MethodologySectionProps {
   onSelectPillar: (pillarType: 'freepremium' | 'horas-complementares' | 'formacao-livre') => void;
+  onOpenCertificatePreview?: () => void;
 }
 
-export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelectPillar }) => {
+export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelectPillar, onOpenCertificatePreview }) => {
   return (
     <section className="bg-white" id="metodologia-jornada">
       {/* Vibrant Golden Yellow Header Banner (Directly matching screenshot) */}
@@ -115,6 +116,38 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
                 </div>
               );
             })}
+          </div>
+
+          {/* Strategic Banner: Modelo do Certificado & Guia PDF */}
+          <div className="mt-10 p-6 rounded-3xl bg-[#182333] text-white border border-slate-700 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0">
+                <Award className="w-7 h-7 text-[#FFC72C]" />
+              </div>
+              <div className="space-y-1">
+                <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-amber-400/20 text-[#FFC72C] text-[11px] font-bold uppercase tracking-wider">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  <span>Novo Padrão de Qualificação Digital ESDHUBEM</span>
+                </div>
+                <h4 className="text-lg sm:text-xl font-bold text-white">
+                  Conheça o Modelo do Certificado & O Guia Explicativo em PDF
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+                  Certificados com plena validade acadêmica em todo o Brasil (LDB Lei nº 9.394/96), dupla autenticação digital no portal ITI Gov.br e módulo de segurança antifraude com duplo QR Code.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
+              <button
+                type="button"
+                onClick={() => onOpenCertificatePreview?.()}
+                className="w-full sm:w-auto px-6 py-3 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 text-xs sm:text-sm font-black rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:scale-105"
+              >
+                <Eye className="w-4 h-4" />
+                <span>Ver Modelo & Guia PDF</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

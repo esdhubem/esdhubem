@@ -13,17 +13,21 @@ import {
   User,
   Building2,
   Copy,
-  Printer
+  Printer,
+  Eye,
+  FileText
 } from 'lucide-react';
 
 interface CertificateValidatorModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onOpenCertificatePreview?: () => void;
 }
 
 export const CertificateValidatorModal: React.FC<CertificateValidatorModalProps> = ({
   isOpen,
   onClose,
+  onOpenCertificatePreview,
 }) => {
   const [inputCode, setInputCode] = useState('');
   const [searched, setSearched] = useState(false);
@@ -98,6 +102,30 @@ export const CertificateValidatorModal: React.FC<CertificateValidatorModalProps>
 
         {/* Body */}
         <div className="p-6 overflow-y-auto space-y-6">
+          {/* Strategic Banner: Visualizar Modelo Oficial & PDF */}
+          <div className="p-4 rounded-2xl bg-[#182333] text-white border border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0">
+                <Award className="w-5 h-5 text-[#FFC72C]" />
+              </div>
+              <div>
+                <h4 className="text-xs sm:text-sm font-bold text-white">Modelo do Certificado & Guia PDF</h4>
+                <p className="text-[11px] text-slate-300">Conheça o padrão de autenticidade e o amparo legal (Lei nº 9.394/96).</p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                onClose();
+                if (onOpenCertificatePreview) onOpenCertificatePreview();
+              }}
+              className="w-full sm:w-auto px-4 py-2 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 text-xs font-black rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer shrink-0 shadow-sm"
+            >
+              <Eye className="w-4 h-4" />
+              <span>Ver Modelo & PDF</span>
+            </button>
+          </div>
+
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
             Faculdades, secretarias acadêmicas e recrutadores podem verificar a autenticidade e a carga horária de certificados emitidos pela ESDHUBEM inserindo o código alfanumérico impresso no documento.
           </p>

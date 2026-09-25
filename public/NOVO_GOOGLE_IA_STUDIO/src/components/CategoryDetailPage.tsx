@@ -33,7 +33,8 @@ import {
   Video,
   MonitorPlay,
   ClipboardList,
-  LayoutTemplate
+  LayoutTemplate,
+  Eye
 } from 'lucide-react';
 import { Play, FileText, Video as VideoIcon } from 'lucide-react';
 import profSilvianeImg from '../assets/prof-silviane.png';
@@ -50,6 +51,7 @@ interface CategoryDetailPageProps {
   onNavigateToPortal: (courseId?: string) => void;
   onOpenValidator: () => void;
   onSelectAnotherCategory: (slug: string) => void;
+  onOpenCertificatePreview?: () => void;
 }
 
 // Category custom themes and rich metadata
@@ -160,7 +162,8 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
   onNavigateToCourseDetail,
   onNavigateToPortal,
   onOpenValidator,
-  onSelectAnotherCategory
+  onSelectAnotherCategory,
+  onOpenCertificatePreview
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPillar, setSelectedPillar] = useState<'all' | 'freepremium' | 'horas-complementares' | 'formacao-livre'>('all');
@@ -350,6 +353,18 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                 <strong className="text-white block sm:inline mr-1">Público-alvo principal:</strong>
                 <span>{meta.targetPublic}</span>
               </div>
+            </div>
+
+            {/* Strategic Certificate Button */}
+            <div className="pt-2">
+              <button
+                type="button"
+                onClick={() => onOpenCertificatePreview?.()}
+                className="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs rounded-xl transition-all inline-flex items-center gap-2 shadow-md cursor-pointer hover:scale-105"
+              >
+                <Award className="w-4 h-4" />
+                <span>Ver Modelo do Certificado & Guia PDF</span>
+              </button>
             </div>
 
             {/* B2B Authority Indicators - Only for Corporativas */}

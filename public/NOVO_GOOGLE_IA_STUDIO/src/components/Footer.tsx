@@ -12,7 +12,9 @@ import {
   Send,
   CheckCircle2,
   ArrowUp,
-  Heart
+  Heart,
+  Award,
+  Eye
 } from 'lucide-react';
 import newsletterImg from '../assets/newsletter.jpg';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
@@ -22,6 +24,7 @@ interface FooterProps {
   onOpenValidator: () => void;
   onOpenAbout: () => void;
   onNavigate: (sectionId: string) => void;
+  onOpenCertificatePreview?: () => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({
@@ -29,6 +32,7 @@ export const Footer: React.FC<FooterProps> = ({
   onOpenValidator,
   onOpenAbout,
   onNavigate,
+  onOpenCertificatePreview
 }) => {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
@@ -275,6 +279,15 @@ export const Footer: React.FC<FooterProps> = ({
                 >
                   <CheckCircle2 className="w-3 h-3 text-[#FFC72C]" />
                   <span>Validar Certificado</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenCertificatePreview?.()}
+                  className="hover:text-amber-300 transition-colors cursor-pointer text-left text-amber-400 font-bold flex items-center gap-1"
+                >
+                  <Award className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Modelo do Certificado & Guia PDF</span>
                 </button>
               </li>
               <li>

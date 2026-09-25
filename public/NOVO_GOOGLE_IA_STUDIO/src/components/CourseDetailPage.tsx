@@ -26,7 +26,9 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-  Copy
+  Copy,
+  Eye,
+  FileText
 } from 'lucide-react';
 import { Course } from '../types';
 import profSilvianeImg from '../assets/prof-silviane.png';
@@ -36,13 +38,15 @@ interface CourseDetailPageProps {
   onBackToHome: () => void;
   onEnroll: () => void;
   onOpenValidator: () => void;
+  onOpenCertificatePreview?: () => void;
 }
 
 export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
   course,
   onBackToHome,
   onEnroll,
-  onOpenValidator
+  onOpenValidator,
+  onOpenCertificatePreview
 }) => {
   const [activeTab, setActiveTab] = useState<
     'sobre' | 'conteudo' | 'publico' | 'competencias' | 'legislacao' | 'autenticidade' | 'formato'
@@ -591,6 +595,27 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                     <span>Acessar Curso Agora</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
+                )}
+
+                {/* Strategic Certificate Preview Card */}
+                {category !== 'Landing Pages & Biolinks' && (
+                  <div className="p-4 rounded-xl bg-slate-900 text-white border border-slate-700/80 space-y-2">
+                    <div className="flex items-center gap-2 text-[#FFC72C] font-bold text-xs">
+                      <Award className="w-4 h-4 shrink-0" />
+                      <span>Certificado Oficial com Validade Nacional</span>
+                    </div>
+                    <p className="text-[11px] text-slate-300 leading-relaxed">
+                      Conheça o modelo de formação livre amparado pela Lei nº 9.394/96 e baixador do manual em PDF.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => onOpenCertificatePreview?.()}
+                      className="w-full py-2 px-3 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 font-extrabold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+                    >
+                      <Eye className="w-3.5 h-3.5" />
+                      <span>Ver Modelo do Certificado & PDF</span>
+                    </button>
+                  </div>
                 )}
 
                 <ul className="text-xs text-slate-600 space-y-3.5">

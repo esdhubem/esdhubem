@@ -8,6 +8,7 @@ import { BookstoreBanner } from './components/BookstoreBanner';
 import { LivrariaPage } from './components/LivrariaPage';
 import { CourseCatalog } from './components/CourseCatalog';
 import { CertificateValidatorModal } from './components/CertificateValidatorModal';
+import { CertificatePreviewModal } from './components/CertificatePreviewModal';
 import { AboutModal } from './components/AboutModal';
 import { Footer } from './components/Footer';
 import { StudentPortalPage } from './components/StudentPortalPage';
@@ -57,6 +58,7 @@ export default function App() {
   const [selectedArticle, setSelectedArticle] = useState<AcademicArticle | null>(ACADEMIC_ARTICLES[0]);
   const [activePostId, setActivePostId] = useState<string | null>(null);
   const [isValidatorOpen, setIsValidatorOpen] = useState(false);
+  const [isCertificatePreviewOpen, setIsCertificatePreviewOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [savedCourseIds, setSavedCourseIds] = useState<string[]>(['fp-1', 'hc-1']); // Initial saved items matching the "2" indicator
   const [notification, setNotification] = useState<string | null>(null);
@@ -324,6 +326,7 @@ export default function App() {
               const el = document.getElementById('catalogo-cursos');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
+            onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
           />
 
           <section className="py-8 bg-[#F8FAFC]">
@@ -389,6 +392,7 @@ export default function App() {
               setActiveCategorySlug(slug);
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
           />
         </main>
       )}
@@ -401,6 +405,7 @@ export default function App() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onOpenValidator={() => setIsValidatorOpen(true)}
+            onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
           />
         </main>
       )}
@@ -538,6 +543,7 @@ export default function App() {
               showNotification(`Inscrição confirmada! Bem-vindo(a) à Sala de Aula de ${selectedCourse.title}.`);
             }}
             onOpenValidator={() => setIsValidatorOpen(true)}
+            onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
           />
         </main>
       )}
@@ -574,6 +580,7 @@ export default function App() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onOpenValidator={() => setIsValidatorOpen(true)}
+            onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
           />
         </main>
       )}
@@ -602,6 +609,7 @@ export default function App() {
         onOpenValidator={() => setIsValidatorOpen(true)}
         onOpenAbout={() => setIsAboutOpen(true)}
         onNavigate={handleNavigate}
+        onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
       />
 
 
@@ -610,6 +618,12 @@ export default function App() {
       <CertificateValidatorModal
         isOpen={isValidatorOpen}
         onClose={() => setIsValidatorOpen(false)}
+        onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
+      />
+
+      <CertificatePreviewModal
+        isOpen={isCertificatePreviewOpen}
+        onClose={() => setIsCertificatePreviewOpen(false)}
       />
 
       <AboutModal
