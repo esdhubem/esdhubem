@@ -215,7 +215,7 @@ export const SecretariaDocumentacaoPage: React.FC<SecretariaDocumentacaoPageProp
                     <span className="text-xs text-slate-500">Comprovação imediata de matrícula ativa para faculdade ou empresa.</span>
                   </div>
                   <span className="font-extrabold text-slate-800 whitespace-nowrap bg-white px-2.5 py-1 rounded-lg border border-slate-200">
-                    R$ 14,90
+                    R$ 24,90
                   </span>
                 </div>
 
