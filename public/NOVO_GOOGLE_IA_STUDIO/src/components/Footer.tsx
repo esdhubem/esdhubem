@@ -291,6 +291,15 @@ export const Footer: React.FC<FooterProps> = ({
                 </button>
               </li>
               <li>
+                <button
+                  onClick={() => onNavigate('regras-certificacao-merito')}
+                  className="hover:text-amber-300 transition-colors cursor-pointer text-left text-[#FFC72C] font-extrabold flex items-center gap-1"
+                >
+                  <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
+                  <span>Regras de Certificação</span>
+                </button>
+              </li>
+              <li>
                 <a
                   href="https://wa.me/5511960319637"
                   target="_blank"
@@ -345,10 +354,10 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('regras-certificacao-merito')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-amber-300 font-extrabold flex items-center gap-1"
+                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-extrabold flex items-center gap-1"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                  <span>Escala de Mérito (Bronze, Prata, Ouro, Diamante)</span>
+                  <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
+                  <span>Regras de Certificação (Mérito Acadêmico)</span>
                 </button>
               </li>
               <li>

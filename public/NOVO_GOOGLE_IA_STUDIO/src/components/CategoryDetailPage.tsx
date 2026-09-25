@@ -168,8 +168,8 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
   onNavigate
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedPillar, setSelectedPillar] = useState<'all' | 'freepremium' | 'horas-complementares' | 'formacao-livre'>('all');
-  const [selectedHoursRange, setSelectedHoursRange] = useState<'all' | '0-20' | '21-60' | '61+'>('all');
+  const [selectedPillar, setSelectedPillar] = useState<string>('all');
+  const [selectedHoursRange, setSelectedHoursRange] = useState<string>('all');
   const [copied, setCopied] = useState(false);
 
   const handleCopyLink = () => {
@@ -238,14 +238,14 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
       }
 
       // Filter by pillar
-      if (selectedPillar !== 'todos' && c.pillar !== selectedPillar) {
+      if (selectedPillar !== 'all' && selectedPillar !== 'todos' && c.pillar !== selectedPillar) {
         return false;
       }
 
       // Filter by hours
-      if (selectedHoursRange === 'curta' && c.hours > 40) return false;
-      if (selectedHoursRange === 'media' && (c.hours < 41 || c.hours > 80)) return false;
-      if (selectedHoursRange === 'longa' && c.hours <= 80) return false;
+      if ((selectedHoursRange === 'curta' || selectedHoursRange === '0-20') && c.hours > 40) return false;
+      if ((selectedHoursRange === 'media' || selectedHoursRange === '21-60') && (c.hours < 41 || c.hours > 80)) return false;
+      if ((selectedHoursRange === 'longa' || selectedHoursRange === '61+') && c.hours <= 80) return false;
 
       return true;
     });
@@ -707,12 +707,12 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </p>
           </div>
 
-          {(searchTerm || selectedPillar !== 'todos' || selectedHoursRange !== 'todas') && (
+          {(searchTerm || (selectedPillar !== 'all' && selectedPillar !== 'todos') || (selectedHoursRange !== 'all' && selectedHoursRange !== 'todas')) && (
             <button
               onClick={() => {
                 setSearchTerm('');
-                setSelectedPillar('todos');
-                setSelectedHoursRange('todas');
+                setSelectedPillar('all');
+                setSelectedHoursRange('all');
               }}
               className="text-xs text-[#243042] hover:underline font-bold cursor-pointer"
             >
@@ -733,8 +733,8 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             <button
               onClick={() => {
                 setSearchTerm('');
-                setSelectedPillar('todos');
-                setSelectedHoursRange('todas');
+                setSelectedPillar('all');
+                setSelectedHoursRange('all');
               }}
               className="bg-[#243042] text-white text-xs font-bold py-2 px-4 rounded-lg cursor-pointer hover:bg-[#182333]"
             >

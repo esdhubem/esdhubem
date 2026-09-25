@@ -11,7 +11,8 @@ import {
   ShoppingCart,
   Bell,
   User,
-  Info
+  Info,
+  Award
 } from 'lucide-react';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
 
@@ -22,7 +23,7 @@ interface HeaderProps {
   onOpenValidator: () => void;
   onOpenAbout: () => void;
   savedCount: number;
-  currentPage?: 'home' | 'sala-de-aula' | 'curso-assertiva' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas';
+  currentPage?: string;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -205,6 +206,17 @@ export const Header: React.FC<HeaderProps> = ({
               Informações Legais
             </button>
             <button
+              onClick={() => onNavigate('regras-certificacao-merito')}
+              className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 font-extrabold ${
+                currentPage === 'regras-certificacao-merito'
+                  ? 'text-[#FFC72C] border-b-2 border-[#FFC72C]'
+                  : 'text-[#FFC72C] hover:text-amber-300 hover:border-b-2 hover:border-[#FFC72C]/50'
+              }`}
+            >
+              <Award className="w-4 h-4 text-[#FFC72C]" />
+              <span>Regras de Certificação</span>
+            </button>
+            <button
               onClick={() => onNavigate('politicas')}
               className={`transition-all py-1 cursor-pointer ${
                 currentPage === 'politicas'
@@ -296,6 +308,10 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="text-[10px] bg-[#FFC72C] text-slate-950 font-black px-2 py-0.5 rounded-full">ALUNO</span>
           </button>
           <button onClick={() => { onNavigate('informacoes-legais'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Informações Legais</button>
+          <button onClick={() => { onNavigate('regras-certificacao-merito'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold hover:bg-white/10 text-[#FFC72C] flex items-center gap-2">
+            <Award className="w-4 h-4 text-[#FFC72C]" />
+            <span>Regras de Certificação</span>
+          </button>
           <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
           <button onClick={() => { onOpenAbout(); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Sobre Nós</button>
           <button onClick={() => { onNavigate('categoria:landing-pages-biolinks'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-400">Sites & Biolinks</button>
