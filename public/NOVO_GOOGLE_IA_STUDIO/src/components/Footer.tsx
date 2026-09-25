@@ -344,6 +344,15 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('regras-certificacao-merito')}
+                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-amber-300 font-extrabold flex items-center gap-1"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                  <span>Escala de Mérito (Bronze, Prata, Ouro, Diamante)</span>
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('informacoes-legais')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-white font-semibold"
                 >

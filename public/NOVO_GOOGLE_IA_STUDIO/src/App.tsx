@@ -27,6 +27,7 @@ import { CorpoDocentePage } from './components/CorpoDocentePage';
 import { DireitosAlunoPage } from './components/DireitosAlunoPage';
 import { PoliticaPagamentoPage } from './components/PoliticaPagamentoPage';
 import { SecretariaDocumentacaoPage } from './components/SecretariaDocumentacaoPage';
+import { RegrasCertificacaoMeritoPage } from './components/RegrasCertificacaoMeritoPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -47,7 +48,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -159,6 +160,12 @@ export default function App() {
 
     if (sectionId === 'secretaria-documentacao' || sectionId === 'secretaria' || sectionId === 'tabela-servicos') {
       setCurrentPage('secretaria-documentacao');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'regras-certificacao-merito' || sectionId === 'merito-academico' || sectionId === 'selos-merito') {
+      setCurrentPage('regras-certificacao-merito');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -618,6 +625,23 @@ export default function App() {
             onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
             onNavigateToPortal={() => {
               setCurrentPage('sala-de-aula');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'regras-certificacao-merito' && (
+        <main className="flex-1">
+          <RegrasCertificacaoMeritoPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onOpenValidator={() => setIsValidatorOpen(true)}
+            onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
+            onNavigateToArticles={() => {
+              setCurrentPage('artigos');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           />
