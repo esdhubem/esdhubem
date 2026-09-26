@@ -25596,7 +25596,7 @@ var PodcastsPage = ({ onBackToHome, onNavigateToCourses }) => {
 											className: "text-[#FFC72C] font-semibold",
 											children: "tradição, símbolo, sensibilidade e tecnologia"
 										}),
-										". Navegue pela filosofia, hermetismo, astrologia simbólica, escrita criativa, saúde coletiva e inteligência artificial direto no seu fone de ouvido."
+										". Navegue pelas nossas playlists!"
 									]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

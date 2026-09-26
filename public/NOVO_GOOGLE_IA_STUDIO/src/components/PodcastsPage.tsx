@@ -216,7 +216,7 @@ export const PodcastsPage: React.FC<PodcastsPageProps> = ({
                 <strong className="text-[#FFC72C] font-semibold">
                   tradição, símbolo, sensibilidade e tecnologia
                 </strong>
-                . Navegue pela filosofia, hermetismo, astrologia simbólica, escrita criativa, saúde coletiva e inteligência artificial direto no seu fone de ouvido.
+                . Navegue pelas nossas playlists!
               </p>
 
               {/* Streaming Platforms Badges */}
