@@ -13968,42 +13968,22 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "hidden lg:block bg-[#182333]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-6 overflow-x-auto scrollbar-none",
+					className: "max-w-[1600px] mx-auto px-4 lg:px-6 overflow-x-auto scrollbar-none",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-						className: "flex items-center justify-center gap-2 lg:gap-3 xl:gap-4 h-11 text-xs font-medium whitespace-nowrap",
+						className: "flex items-center justify-center gap-5 lg:gap-7 xl:gap-8 h-11 text-xs xl:text-sm font-medium whitespace-nowrap",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => onNavigate("inicio"),
-								className: `transition-all py-1 px-1.5 cursor-pointer ${currentPage === "home" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30"}`,
+								className: `transition-all py-1 cursor-pointer ${currentPage === "home" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30"}`,
 								children: "Início"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => onNavigate("categorias"),
-								className: `transition-all py-1 px-1.5 cursor-pointer flex items-center gap-1.5 ${currentPage === "categorias" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30"}`,
+								className: `transition-all py-1 cursor-pointer flex items-center gap-1.5 ${currentPage === "categorias" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30"}`,
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Categorias" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 									className: "bg-white/10 text-white text-[10px] font-bold px-1.5 py-0.5 rounded",
 									children: "18"
 								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-								onClick: () => onNavigate("politicas"),
-								className: `px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border text-xs font-bold shadow-xs ${currentPage === "politicas" ? "bg-slate-200 text-slate-900 border-white" : "bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-600/70"}`,
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Políticas" })
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-								onClick: () => onNavigate("diretrizes-pedagogicas"),
-								className: `px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border text-xs font-bold shadow-xs ${currentPage === "diretrizes-pedagogicas" ? "bg-[#FFC72C] text-slate-950 border-[#FFC72C]" : "bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border-amber-500/50"}`,
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Diretrizes e Esclarecimento Pedagógico" })
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-								onClick: () => onNavigate("artigos"),
-								className: `px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border text-xs font-bold shadow-xs ${currentPage === "artigos" || currentPage === "artigo-detalhe" ? "bg-cyan-500 text-slate-950 border-cyan-400" : "bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border-cyan-500/50"}`,
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Artigos Científicos" })
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-								onClick: () => onNavigate("blog"),
-								className: `px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border text-xs font-bold shadow-xs ${currentPage === "blog" || currentPage === "blog-post" ? "bg-[#FFC72C] text-slate-950 border-[#FFC72C]" : "bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border-purple-500/50"}`,
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Blog" })
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => onNavigate("categoria:landing-pages-biolinks"),
@@ -14012,7 +13992,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => onNavigate("aplicativos"),
-								className: `transition-all py-1 cursor-pointer ${currentPage === "aplicativos" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-[#FFC72C]/90 hover:text-[#FFC72C] hover:border-b-2 hover:border-[#FFC72C]/50"}`,
+								className: `transition-all py-1 cursor-pointer ${currentPage === "aplicativos" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-[#FFC72C] hover:text-[#FFC72C]/80 hover:border-b-2 hover:border-[#FFC72C]/50"}`,
 								children: "Apps & Dashboards"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
@@ -14024,35 +14004,52 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 								onClick: onOpenAbout,
 								className: "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30 transition-all py-1 cursor-pointer",
 								children: "Sobre Nós"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								onClick: () => onNavigate("politicas"),
+								className: `transition-all py-1 cursor-pointer ${currentPage === "politicas" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30"}`,
+								children: "Nossas Políticas"
 							})
 						]
 					})
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "hidden lg:block bg-[#111927] border-t border-b border-slate-700/60 py-2 shadow-inner",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "max-w-[1600px] mx-auto px-4 flex items-center justify-center gap-3 overflow-x-auto scrollbar-none text-xs font-medium",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2.5 shrink-0",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-								onClick: onOpenValidator,
-								className: "bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-400 border border-emerald-500/40 font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-3.5 h-3.5 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Validar Certificado" })]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-								onClick: () => onNavigate("informacoes-legais"),
-								className: "bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/40 font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, { className: "w-3.5 h-3.5 text-cyan-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Valor Legal dos Certificados" })]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-								onClick: () => onNavigate("regras-certificacao-merito"),
-								className: "bg-[#FFC72C]/15 hover:bg-[#FFC72C]/25 text-[#FFC72C] border border-[#FFC72C]/40 font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs hover:border-[#FFC72C]",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Certificação & Escala de Mérito" })]
-							})
-						]
-					})
+				className: "hidden lg:block bg-[#111927] border-t border-b border-slate-700/60 py-2.5 shadow-inner",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "max-w-[1600px] mx-auto px-4 flex items-center justify-center gap-2.5 sm:gap-3 overflow-x-auto scrollbar-none text-xs font-medium",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							onClick: () => onNavigate("diretrizes-pedagogicas"),
+							className: `px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${currentPage === "diretrizes-pedagogicas" ? "bg-[#FFC72C] text-slate-950 border-[#FFC72C]" : "bg-amber-500/10 hover:bg-amber-500/20 text-[#FFC72C] border-amber-500/70 hover:border-amber-400"}`,
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Diretrizes e Esclarecimento Pedagógico" })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							onClick: () => onNavigate("artigos"),
+							className: `px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${currentPage === "artigos" || currentPage === "artigo-detalhe" ? "bg-cyan-500 text-slate-950 border-cyan-400" : "bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/70 hover:border-cyan-400"}`,
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Artigos Científicos" })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							onClick: () => onNavigate("blog"),
+							className: `px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${currentPage === "blog" || currentPage === "blog-post" ? "bg-purple-600 text-white border-purple-400" : "bg-[#581c87]/60 hover:bg-[#581c87]/80 text-purple-200 border-purple-500/70 hover:border-purple-400"}`,
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Blog" })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							onClick: onOpenValidator,
+							className: "bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/60 hover:border-emerald-400 font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-3.5 h-3.5 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Validar Certificado" })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							onClick: () => onNavigate("informacoes-legais"),
+							className: "bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/60 hover:border-cyan-400 font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scale, { className: "w-3.5 h-3.5 text-cyan-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Valor Legal dos Certificados" })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							onClick: () => onNavigate("regras-certificacao-merito"),
+							className: "bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 text-[#FFC72C] border border-[#FFC72C]/60 hover:border-[#FFC72C] font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Certificação & Escala de Mérito" })]
+						})
+					]
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
