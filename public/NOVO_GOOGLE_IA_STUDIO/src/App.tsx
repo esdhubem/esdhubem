@@ -29,6 +29,7 @@ import { PoliticaPagamentoPage } from './components/PoliticaPagamentoPage';
 import { SecretariaDocumentacaoPage } from './components/SecretariaDocumentacaoPage';
 import { RegrasCertificacaoMeritoPage } from './components/RegrasCertificacaoMeritoPage';
 import { DiretrizesPedagogicasPage } from './components/DiretrizesPedagogicasPage';
+import { PodcastsPage } from './components/PodcastsPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -49,7 +50,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'podcasts'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -71,6 +72,13 @@ export default function App() {
     const cursoId = params.get('curso');
     const categoriaId = params.get('categoria');
     const postId = params.get('post');
+    const pagina = params.get('pagina');
+
+    if (pagina === 'podcasts' || pagina === 'podcast') {
+      setCurrentPage('podcasts');
+      window.history.replaceState({}, '', window.location.pathname);
+      return;
+    }
 
     if (cursoId) {
       const course = COURSES_DATA.find(c => c.id === cursoId);
@@ -209,6 +217,12 @@ export default function App() {
 
     if (sectionId === 'blog') {
       setCurrentPage('blog');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'podcasts' || sectionId === 'podcast') {
+      setCurrentPage('podcasts');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -535,6 +549,24 @@ export default function App() {
               setActivePostId(postId);
               setCurrentPage('blog-post');
               window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'podcasts' && (
+        <main className="flex-1">
+          <PodcastsPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigateToCourses={() => {
+              setCurrentPage('home');
+              setTimeout(() => {
+                const el = document.getElementById('catalogo-cursos');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
             }}
           />
         </main>

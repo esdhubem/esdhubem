@@ -85,3 +85,24 @@ export interface AcademicArticle {
   downloadsCount?: number;
   isFeatured?: boolean;
 }
+
+export interface PodcastEpisode {
+  id: string;
+  episodeNumber: number;
+  title: string;
+  subtitle: string;
+  description: string;
+  duration: string;
+  category: string;
+  coverImage: string;
+  releaseDate: string;
+  host: string;
+  guests?: string[];
+  audioUrl?: string;
+  spotifyUrl?: string;
+  spotifyEmbedId?: string;
+  youtubeUrl?: string;
+  tags: string[];
+  transcriptSummary?: string;
+  keyTakeaways?: string[];
+}

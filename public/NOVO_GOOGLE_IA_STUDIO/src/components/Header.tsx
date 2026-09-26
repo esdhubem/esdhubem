@@ -13,7 +13,8 @@ import {
   User,
   Info,
   Award,
-  Scale
+  Scale,
+  Headphones
 } from 'lucide-react';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
 
@@ -231,6 +232,17 @@ export const Header: React.FC<HeaderProps> = ({
             >
               Nossas Políticas
             </button>
+            <button
+              onClick={() => onNavigate('podcasts')}
+              className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 ${
+                currentPage === 'podcasts'
+                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
+                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
+              }`}
+            >
+              <Headphones className="w-3.5 h-3.5 text-[#FFC72C]" />
+              <span>Podcasts</span>
+            </button>
           </nav>
         </div>
       </div>
@@ -332,6 +344,10 @@ export const Header: React.FC<HeaderProps> = ({
             <button onClick={() => { onNavigate('diretrizes-pedagogicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10">Diretrizes e Esclarecimento Pedagógico</button>
             <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
             <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Artigos de Estudo e Pesquisa (Zenodo / DOI)</button>
+            <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
+              <Headphones className="w-4 h-4 text-[#FFC72C]" />
+              <span>Podcasts & Ensaios Sonoros</span>
+            </button>
             <button onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Blog</button>
           </div>
 

@@ -90,8 +90,10 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             <p className="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed">
               Na nossa escola livre, acreditamos que a sabedoria humana se expande quando unimos{' '}
               <strong className="text-[#FFC72C] font-semibold">tradição, símbolo, sensibilidade e tecnologia</strong>.
-              Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras da filosofia, história, sociologia, astrologia simbólica, hermetismo, alquimia, saúde coletiva e inteligência artificial, sempre sob a ótica da{' '}
-              <strong className="text-white font-semibold">pesquisa qualitativa, subjetiva e integrativa</strong>.
+              Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras da filosofia, história, sociologia, astrologia simbólica, hermetismo, alquimia, saúde coletiva e inteligência artificial. Fazemos isso sob a ótica da{' '}
+              <strong className="text-white font-semibold">pesquisa qualitativa, subjetiva e integrativa</strong>,
+              incentivando nossos alunos a transformarem suas reflexões em escrita criativa, artigos e ciência aberta para o mundo com reconhecimento de{' '}
+              <strong className="text-[#FFC72C] font-semibold">Estudo, Evolução e Prática</strong>.
             </p>
           </div>
         </div>

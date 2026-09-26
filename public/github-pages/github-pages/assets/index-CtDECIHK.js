@@ -12659,6 +12659,16 @@ var GraduationCap = createLucideIcon("graduation-cap", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Headphones = createLucideIcon("headphones", [["path", {
+	d: "M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3",
+	key: "1xhozi"
+}]]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var HeartHandshake = createLucideIcon("heart-handshake", [["path", {
 	d: "M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762",
 	key: "17lmqv"
@@ -13077,6 +13087,30 @@ var MonitorPlay = createLucideIcon("monitor-play", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Music = createLucideIcon("music", [
+	["path", {
+		d: "M9 18V5l12-2v13",
+		key: "1jmyc2"
+	}],
+	["circle", {
+		cx: "6",
+		cy: "18",
+		r: "3",
+		key: "fqmcym"
+	}],
+	["circle", {
+		cx: "18",
+		cy: "16",
+		r: "3",
+		key: "1hluhg"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Pause = createLucideIcon("pause", [["rect", {
 	x: "14",
 	y: "3",
@@ -13250,6 +13284,36 @@ var QrCode = createLucideIcon("qr-code", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Radio = createLucideIcon("radio", [
+	["path", {
+		d: "M16.247 7.761a6 6 0 0 1 0 8.478",
+		key: "1fwjs5"
+	}],
+	["path", {
+		d: "M19.075 4.933a10 10 0 0 1 0 14.134",
+		key: "ehdyv1"
+	}],
+	["path", {
+		d: "M4.925 19.067a10 10 0 0 1 0-14.134",
+		key: "1q22gi"
+	}],
+	["path", {
+		d: "M7.753 16.239a6 6 0 0 1 0-8.478",
+		key: "r2q7qm"
+	}],
+	["circle", {
+		cx: "12",
+		cy: "12",
+		r: "2",
+		key: "1c9p78"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var RefreshCcw = createLucideIcon("refresh-ccw", [
 	["path", {
 		d: "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8",
@@ -13292,6 +13356,32 @@ var RefreshCw = createLucideIcon("refresh-cw", [
 		key: "1cv678"
 	}]
 ]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var RotateCcw = createLucideIcon("rotate-ccw", [["path", {
+	d: "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8",
+	key: "1357e3"
+}], ["path", {
+	d: "M3 3v5h5",
+	key: "1xhq8a"
+}]]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var RotateCw = createLucideIcon("rotate-cw", [["path", {
+	d: "M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8",
+	key: "1p45f6"
+}], ["path", {
+	d: "M21 3v5h-5",
+	key: "1q7to0"
+}]]);
 /**
 * @license lucide-react v0.546.0 - ISC
 *
@@ -13368,6 +13458,46 @@ var Send = createLucideIcon("send", [["path", {
 	d: "m21.854 2.147-10.94 10.939",
 	key: "12cjpa"
 }]]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var Share2 = createLucideIcon("share-2", [
+	["circle", {
+		cx: "18",
+		cy: "5",
+		r: "3",
+		key: "gq8acd"
+	}],
+	["circle", {
+		cx: "6",
+		cy: "12",
+		r: "3",
+		key: "w7nqdw"
+	}],
+	["circle", {
+		cx: "18",
+		cy: "19",
+		r: "3",
+		key: "1xt0gg"
+	}],
+	["line", {
+		x1: "8.59",
+		x2: "15.42",
+		y1: "13.51",
+		y2: "17.49",
+		key: "47mynk"
+	}],
+	["line", {
+		x1: "15.41",
+		x2: "8.59",
+		y1: "6.51",
+		y2: "10.49",
+		key: "1n3mei"
+	}]
+]);
 /**
 * @license lucide-react v0.546.0 - ISC
 *
@@ -13782,6 +13912,32 @@ var Volume2 = createLucideIcon("volume-2", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var VolumeX = createLucideIcon("volume-x", [
+	["path", {
+		d: "M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",
+		key: "uqj9uw"
+	}],
+	["line", {
+		x1: "22",
+		x2: "16",
+		y1: "9",
+		y2: "15",
+		key: "1ewh16"
+	}],
+	["line", {
+		x1: "16",
+		x2: "22",
+		y1: "9",
+		y2: "15",
+		key: "5ykzw1"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var X = createLucideIcon("x", [["path", {
 	d: "M18 6 6 18",
 	key: "1bl5f8"
@@ -14009,6 +14165,11 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 								onClick: () => onNavigate("politicas"),
 								className: `transition-all py-1 cursor-pointer ${currentPage === "politicas" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30"}`,
 								children: "Nossas Políticas"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								onClick: () => onNavigate("podcasts"),
+								className: `transition-all py-1 cursor-pointer flex items-center gap-1.5 ${currentPage === "podcasts" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30"}`,
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Headphones, { className: "w-3.5 h-3.5 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Podcasts" })]
 							})
 						]
 					})
@@ -14153,6 +14314,14 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 								},
 								className: "w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400",
 								children: "Artigos de Estudo e Pesquisa (Zenodo / DOI)"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								onClick: () => {
+									onNavigate("podcasts");
+									setMobileMenuOpen(false);
+								},
+								className: "w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Headphones, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Podcasts & Ensaios Sonoros" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => {
@@ -16275,6 +16444,11 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 										onClick: () => onNavigate("artigos"),
 										className: "hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold",
 										children: "Artigos de Estudo e Pesquisa (Zenodo / DOI)"
+									}) }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+										onClick: () => onNavigate("podcasts"),
+										className: "hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-semibold flex items-center gap-1.5",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Podcasts & Ensaios Sonoros" })
 									}) }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 										onClick: () => onNavigate("sala-de-aula"),
@@ -24222,11 +24396,17 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 										className: "text-[#FFC72C] font-semibold",
 										children: "tradição, símbolo, sensibilidade e tecnologia"
 									}),
-									". Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras da filosofia, história, sociologia, astrologia simbólica, hermetismo, alquimia, saúde coletiva e inteligência artificial, sempre sob a ótica da",
+									". Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras da filosofia, história, sociologia, astrologia simbólica, hermetismo, alquimia, saúde coletiva e inteligência artificial. Fazemos isso sob a ótica da",
 									" ",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 										className: "text-white font-semibold",
 										children: "pesquisa qualitativa, subjetiva e integrativa"
+									}),
+									", incentivando nossos alunos a transformarem suas reflexões em escrita criativa, artigos e ciência aberta para o mundo com reconhecimento de",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-[#FFC72C] font-semibold",
+										children: "Estudo, Evolução e Prática"
 									}),
 									"."
 								]
@@ -25095,6 +25275,786 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 	});
 };
 //#endregion
+//#region src/data/podcastsData.ts
+var PODCAST_CHANNELS = {
+	spotifyShowUrl: "https://open.spotify.com",
+	applePodcastsUrl: "https://podcasts.apple.com",
+	youtubePlaylistUrl: "https://www.youtube.com",
+	rssFeedUrl: "https://praticasdebemestarsocial.github.io/esdhubem/podcast.xml"
+};
+var PODCAST_EPISODES = [
+	{
+		id: "ep-01",
+		episodeNumber: 1,
+		title: "Saberes Integrativos e o Resgate da Sabedoria Simbólica",
+		subtitle: "Por que unir tradição, símbolo, sensibilidade e tecnologia na educação contemporânea?",
+		description: "No episódio de estreia da ESDHUBEM, exploramos as premissas do nosso manifesto pedagógico: por que a sabedoria humana se expande quando conciliamos a profundidade dos símbolos tradicionais com o pensamento crítico e as ferramentas digitais modernas.",
+		duration: "34 min",
+		category: "Filosofia & Saberes Integrativos",
+		coverImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+		releaseDate: "15 de Setembro de 2026",
+		host: "Profª Silviane Silvério",
+		guests: ["Conselho Pedagógico ESDHUBEM"],
+		audioUrl: "https://archive.org/download/testmp3testfile/mpthreetest.mp3",
+		spotifyUrl: "https://open.spotify.com",
+		youtubeUrl: "https://www.youtube.com",
+		tags: [
+			"Manifesto",
+			"Filosofia",
+			"Saberes Integrativos",
+			"Educação"
+		],
+		transcriptSummary: "Neste episódio introdutório, a Profª Silviane discute a fragmentação do conhecimento na modernidade e como a proposta da ESDHUBEM resgata uma visão holística e humanista de aprendizado, articulando pesquisa qualitativa e sentido existencial.",
+		keyTakeaways: [
+			"A separação rígida entre razão e sensibilidade enfraquece a formação humana integral.",
+			"Símbolos e arquétipos operam como pontes de significado entre a teoria e a vida cotidiana.",
+			"A tecnologia deve servir à expansão da consciência e à democratização do conhecimento aberto."
+		]
+	},
+	{
+		id: "ep-02",
+		episodeNumber: 2,
+		title: "Hermetismo e Alquimia: As 7 Leis Universais no Dia a Dia",
+		subtitle: "A aplicação prática do Caibalion e das transmutações mentais no autodesenvolvimento.",
+		description: "Uma imersão profunda nos sete princípios herméticos — Mentalismo, Correspondência, Vibração, Polaridade, Ritmo, Causa e Efeito, e Gênero — demonstrando como essas antigas chaves filosóficas auxiliam no equilíbrio emocional e no desenvolvimento de maturidade interior.",
+		duration: "42 min",
+		category: "Hermetismo & Alquimia",
+		coverImage: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80",
+		releaseDate: "18 de Setembro de 2026",
+		host: "Profª Silviane Silvério",
+		audioUrl: "https://archive.org/download/testmp3testfile/mpthreetest.mp3",
+		spotifyUrl: "https://open.spotify.com",
+		tags: [
+			"Hermetismo",
+			"Alquimia",
+			"Caibalion",
+			"Filosofia Tradicional"
+		],
+		transcriptSummary: "Análise detalhada de cada uma das sete leis herméticas sob a perspectiva psicológica e pedagógica, desmistificando o ocultismo e trazendo ferramentas concretas de auto-observação.",
+		keyTakeaways: [
+			"Princípio do Mentalismo: o universo é mental e a clareza dos pensamentos molda as ações.",
+			"Transmutação mental: capacidade de alterar estados emocionais reativos em respostas conscientes.",
+			"A alquimia interior como metodologia de evolução pessoal e refinamento ético."
+		]
+	},
+	{
+		id: "ep-03",
+		episodeNumber: 3,
+		title: "Astrologia Arquetípica e Psique Humana",
+		subtitle: "Para além do horóscopo comercial: a linguagem simbólica como mapa de autoconhecimento.",
+		description: "Desmistificamos o determinismo superficial para apresentar a Astrologia Simbólica como uma sofisticada gramática arquetípica, dialogando com Carl G. Jung, mitologia comparada e psicologia profunda.",
+		duration: "38 min",
+		category: "Astrologia Simbólica",
+		coverImage: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80",
+		releaseDate: "20 de Setembro de 2026",
+		host: "Profª Silviane Silvério",
+		audioUrl: "https://archive.org/download/testmp3testfile/mpthreetest.mp3",
+		spotifyUrl: "https://open.spotify.com",
+		tags: [
+			"Astrologia",
+			"Jung",
+			"Arquétipos",
+			"Psicologia Simbólica"
+		],
+		transcriptSummary: "Discussão sobre o papel dos mapas astrais como bússolas arquetípicas da psique, enfatizando a ética na interpretação e o respeito à soberania da vontade do indivíduo.",
+		keyTakeaways: [
+			"Astrologia na ESDHUBEM é tratada como estudo qualitativo e simbólico, não como crença dogmática.",
+			"Planetas e signos como personificações de forças psíquicas presentes na história humana.",
+			"O mapa natal como espelho reflexivo para vocação, desafios e potenciais."
+		]
+	},
+	{
+		id: "ep-04",
+		episodeNumber: 4,
+		title: "Escrita Criativa, Redação para ENEM e Produção de Artigos",
+		subtitle: "Como destravar o hábito da escrita e desenvolver a expressão clara do pensamento.",
+		description: "A capacidade de ler e escrever é a base da cidadania, do sucesso profissional e da produção intelectual. Discutimos estratégias práticas para vencer o medo da página em branco, estruturar argumentos sólidos e transformar estudos livres em artigos publicados no Zenodo/DOI.",
+		duration: "31 min",
+		category: "Escrita Criativa & Pesquisa",
+		coverImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
+		releaseDate: "22 de Setembro de 2026",
+		host: "Profª Silviane Silvério",
+		audioUrl: "https://archive.org/download/testmp3testfile/mpthreetest.mp3",
+		spotifyUrl: "https://open.spotify.com",
+		tags: [
+			"Escrita Criativa",
+			"ENEM",
+			"Artigos Científicos",
+			"Comunicação"
+		],
+		transcriptSummary: "Passo a passo para organizar ideias em introdução, desenvolvimento e conclusão, tanto para redações de vestibulares e concursos quanto para artigos de conclusão de curso acadêmico.",
+		keyTakeaways: [
+			"Escrever com clareza é consequência direta de aprender a ler atenta e criticamente.",
+			"A escrita criativa conecta emoção e rigor técnico em narrativas envolventes.",
+			"A importância de publicar trabalhos nos Anais da ESDHUBEM e obter DOI pelo Zenodo."
+		]
+	},
+	{
+		id: "ep-05",
+		episodeNumber: 5,
+		title: "Saúde Coletiva e Práticas Integrativas no Século XXI",
+		subtitle: "Cuidado holístico, bem-estar preventivo e a complementaridade dos saberes.",
+		description: "Debatemos os desafios contemporâneos da saúde mental e física, a sobrecarga de estímulos, o valor das práticas integrativas de autocuidado e o impacto de políticas comunitárias de bem-estar social.",
+		duration: "45 min",
+		category: "Saúde Coletiva & Bem-Estar",
+		coverImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
+		releaseDate: "24 de Setembro de 2026",
+		host: "Profª Silviane Silvério",
+		audioUrl: "https://archive.org/download/testmp3testfile/mpthreetest.mp3",
+		spotifyUrl: "https://open.spotify.com",
+		tags: [
+			"Saúde Coletiva",
+			"Bem-Estar",
+			"Práticas Integrativas",
+			"Qualidade de Vida"
+		],
+		transcriptSummary: "Reflexões sobre o modelo biopsicossocial de saúde e o papel da educação permanente na construção de estilos de vida equilibrados.",
+		keyTakeaways: [
+			"Saúde integrativa como complemento preventivo que valoriza a escuta e a subjetividade.",
+			"O papel das comunidades de aprendizado na mitigação do isolamento e da ansiedade.",
+			"Responsabilidade social e práticas acessíveis de bem-estar para famílias e trabalhadores."
+		]
+	},
+	{
+		id: "ep-06",
+		episodeNumber: 6,
+		title: "Inteligência Artificial, Ética e Educação Humanista",
+		subtitle: "Como usar a IA como copiloto criativo sem perder a autenticidade e a essência humana.",
+		description: "Neste episódio provocativo, analisamos o avanço acelerado dos modelos generativos de IA, o impacto no mercado de trabalho e como os profissionais podem aliar inteligência artificial a valores éticos, pensamento crítico e sensibilidade humana.",
+		duration: "39 min",
+		category: "IA & Sociedade",
+		coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+		releaseDate: "26 de Setembro de 2026",
+		host: "Profª Silviane Silvério",
+		audioUrl: "https://archive.org/download/testmp3testfile/mpthreetest.mp3",
+		spotifyUrl: "https://open.spotify.com",
+		tags: [
+			"Inteligência Artificial",
+			"Ética",
+			"Futuro do Trabalho",
+			"Humanismo"
+		],
+		transcriptSummary: "A Profª Silviane apresenta como a ESDHUBEM adota ferramentas de ponta de IA sem abrir mão do rigor pedagógico, da reflexão filosófica e do calor humano.",
+		keyTakeaways: [
+			"A IA acelera a execução técnica, mas a intenção, a ética e o discernimento são exclusivamente humanos.",
+			"Prompt design e curadoria como novas habilidades essenciais de literacia digital.",
+			"A educação humanista como alicerce para não nos tornarmos meros reprodutores de algoritmos."
+		]
+	}
+];
+var PODCAST_CATEGORIES = [
+	"Todos",
+	"Filosofia & Saberes Integrativos",
+	"Hermetismo & Alquimia",
+	"Astrologia Simbólica",
+	"Escrita Criativa & Pesquisa",
+	"Saúde Coletiva & Bem-Estar",
+	"IA & Sociedade"
+];
+//#endregion
+//#region src/components/PodcastsPage.tsx
+var PodcastsPage = ({ onBackToHome, onNavigateToCourses }) => {
+	const [selectedCategory, setSelectedCategory] = (0, import_react.useState)("Todos");
+	const [searchQuery, setSearchQuery] = (0, import_react.useState)("");
+	const [currentEpisode, setCurrentEpisode] = (0, import_react.useState)(PODCAST_EPISODES[0]);
+	const [isPlaying, setIsPlaying] = (0, import_react.useState)(false);
+	const [currentTime, setCurrentTime] = (0, import_react.useState)(0);
+	const [duration, setDuration] = (0, import_react.useState)(0);
+	const [volume, setVolume] = (0, import_react.useState)(.9);
+	const [isMuted, setIsMuted] = (0, import_react.useState)(false);
+	const [playbackRate, setPlaybackRate] = (0, import_react.useState)(1);
+	const [expandedEpisodeId, setExpandedEpisodeId] = (0, import_react.useState)(null);
+	const [copiedLink, setCopiedLink] = (0, import_react.useState)(false);
+	const [playerMode, setPlayerMode] = (0, import_react.useState)("native");
+	const audioRef = (0, import_react.useRef)(null);
+	const filteredEpisodes = PODCAST_EPISODES.filter((ep) => {
+		const matchesCategory = selectedCategory === "Todos" || ep.category === selectedCategory;
+		const matchesSearch = ep.title.toLowerCase().includes(searchQuery.toLowerCase()) || ep.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) || ep.description.toLowerCase().includes(searchQuery.toLowerCase()) || ep.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+		return matchesCategory && matchesSearch;
+	});
+	const togglePlay = (episode) => {
+		if (episode && episode.id !== currentEpisode.id) {
+			setCurrentEpisode(episode);
+			setIsPlaying(true);
+			setCurrentTime(0);
+			if (audioRef.current) {
+				audioRef.current.currentTime = 0;
+				audioRef.current.play().catch(() => {});
+			}
+			return;
+		}
+		if (audioRef.current) {
+			if (isPlaying) {
+				audioRef.current.pause();
+				setIsPlaying(false);
+			} else {
+				audioRef.current.play().catch(() => {});
+				setIsPlaying(true);
+			}
+		}
+	};
+	const formatTime = (seconds) => {
+		if (isNaN(seconds) || seconds < 0) return "00:00";
+		const mins = Math.floor(seconds / 60);
+		const secs = Math.floor(seconds % 60);
+		return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+	};
+	const handleTimeUpdate = () => {
+		if (audioRef.current) setCurrentTime(audioRef.current.currentTime);
+	};
+	const handleLoadedMetadata = () => {
+		if (audioRef.current) setDuration(audioRef.current.duration);
+	};
+	const handleSeek = (e) => {
+		const time = parseFloat(e.target.value);
+		setCurrentTime(time);
+		if (audioRef.current) audioRef.current.currentTime = time;
+	};
+	const handleSkip = (seconds) => {
+		if (audioRef.current) audioRef.current.currentTime = Math.min(Math.max(audioRef.current.currentTime + seconds, 0), duration || 9999);
+	};
+	const handleVolumeChange = (e) => {
+		const val = parseFloat(e.target.value);
+		setVolume(val);
+		if (audioRef.current) audioRef.current.volume = val;
+		setIsMuted(val === 0);
+	};
+	const toggleMute = () => {
+		if (audioRef.current) {
+			audioRef.current.muted = !isMuted;
+			setIsMuted(!isMuted);
+		}
+	};
+	const cyclePlaybackRate = () => {
+		const rates = [
+			1,
+			1.25,
+			1.5,
+			2
+		];
+		const nextRate = rates[(rates.indexOf(playbackRate) + 1) % rates.length];
+		setPlaybackRate(nextRate);
+		if (audioRef.current) audioRef.current.playbackRate = nextRate;
+	};
+	const handleShare = () => {
+		navigator.clipboard?.writeText(window.location.href);
+		setCopiedLink(true);
+		setTimeout(() => setCopiedLink(false), 3e3);
+	};
+	(0, import_react.useEffect)(() => {
+		if (audioRef.current) {
+			audioRef.current.volume = volume;
+			audioRef.current.playbackRate = playbackRate;
+		}
+	}, [currentEpisode]);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "bg-[#F8FAFC] min-h-screen text-slate-800 flex flex-col",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("audio", {
+				ref: audioRef,
+				src: currentEpisode.audioUrl,
+				onTimeUpdate: handleTimeUpdate,
+				onLoadedMetadata: handleLoadedMetadata,
+				onEnded: () => setIsPlaying(false)
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "bg-[#182333] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-slate-700/60 shadow-lg",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "absolute inset-0 opacity-10 pointer-events-none",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "absolute inset-0",
+						style: {
+							backgroundImage: "radial-gradient(circle at 25px 25px, white 2%, transparent 0%), radial-gradient(circle at 75px 75px, #FFC72C 2%, transparent 0%)",
+							backgroundSize: "100px 100px"
+						}
+					})
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "max-w-7xl mx-auto relative z-10",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						onClick: onBackToHome,
+						className: "inline-flex items-center gap-2 text-slate-300 hover:text-white mb-6 transition-colors text-sm font-semibold cursor-pointer group",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-4 h-4 transition-transform group-hover:-translate-x-1" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Voltar para o Início" })]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "max-w-3xl space-y-4",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFC72C]/15 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold tracking-wide uppercase shadow-sm",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Radio, { className: "w-4 h-4 animate-pulse text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "PODCAST ESDHUBEM • VOZES DA SABEDORIA & CIÊNCIA ABERTA" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+									className: "text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight",
+									children: "Podcasts & Ensaios Sonoros da ESDHUBEM"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-300 text-base sm:text-lg font-light leading-relaxed",
+									children: [
+										"Diálogos, reflexões e aulas em áudio que unem",
+										" ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "text-[#FFC72C] font-semibold",
+											children: "tradição, símbolo, sensibilidade e tecnologia"
+										}),
+										". Navegue pela filosofia, hermetismo, astrologia simbólica, escrita criativa, saúde coletiva e inteligência artificial direto no seu fone de ouvido."
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "pt-2 flex flex-wrap items-center gap-3",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-xs font-bold text-slate-400 uppercase tracking-wider",
+											children: "Disponível em:"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											href: PODCAST_CHANNELS.spotifyShowUrl,
+											target: "_blank",
+											rel: "noreferrer",
+											className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1DB954]/20 hover:bg-[#1DB954]/30 border border-[#1DB954]/50 text-[#1DB954] text-xs font-bold transition-all hover:scale-105",
+											title: "Ouvir no Spotify",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Music, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Spotify" })]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											href: PODCAST_CHANNELS.applePodcastsUrl,
+											target: "_blank",
+											rel: "noreferrer",
+											className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/50 text-purple-300 text-xs font-bold transition-all hover:scale-105",
+											title: "Ouvir no Apple Podcasts",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Headphones, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Apple Podcasts" })]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											href: PODCAST_CHANNELS.youtubePlaylistUrl,
+											target: "_blank",
+											rel: "noreferrer",
+											className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/20 hover:bg-red-500/30 border border-red-500/50 text-red-300 text-xs font-bold transition-all hover:scale-105",
+											title: "Assistir no YouTube",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "YouTube" })]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+											onClick: handleShare,
+											className: "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-medium transition-all",
+											title: "Compartilhar link da página",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Share2, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: copiedLink ? "Link Copiado!" : "Compartilhar" })]
+										})
+									]
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "w-full lg:w-96 bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-3xl shadow-2xl flex flex-col gap-4",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center justify-between text-xs text-slate-300",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "flex items-center gap-1.5 font-semibold text-[#FFC72C]",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Headphones, { className: "w-4 h-4" }), "Em Destaque Agora"]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "bg-white/20 px-2 py-0.5 rounded-full text-[11px] font-mono",
+										children: currentEpisode.duration
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex gap-4 items-center",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+										src: currentEpisode.coverImage,
+										alt: currentEpisode.title,
+										className: "w-20 h-20 rounded-2xl object-cover border border-white/20 shadow-md shrink-0"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "min-w-0",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "text-[11px] uppercase tracking-wider font-bold text-[#FFC72C] block truncate",
+												children: ["Episódio ", currentEpisode.episodeNumber.toString().padStart(2, "0")]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-bold text-sm text-white line-clamp-2 leading-snug",
+												children: currentEpisode.title
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-xs text-slate-300 truncate mt-1",
+												children: currentEpisode.host
+											})
+										]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "flex items-center justify-between pt-2 border-t border-white/10",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+										onClick: () => togglePlay(),
+										className: "flex-1 mr-2 bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-md active:scale-95 cursor-pointer",
+										children: isPlaying ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Pause, { className: "w-4 h-4 fill-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Pausar Episódio" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-4 h-4 fill-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Ouvir Episódio ", currentEpisode.episodeNumber] })] })
+									})
+								})
+							]
+						})]
+					})]
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10 flex-1 w-full",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/90 shadow-xl space-y-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col md:flex-row items-center justify-between gap-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-4 w-full md:w-auto",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: currentEpisode.coverImage,
+									alt: currentEpisode.title,
+									className: "w-16 h-16 rounded-2xl object-cover border border-slate-200 shadow-sm shrink-0"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "min-w-0 flex-1",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "text-[11px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full uppercase",
+												children: ["Episódio ", currentEpisode.episodeNumber]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-xs text-slate-400 font-medium",
+												children: currentEpisode.category
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+											className: "font-bold text-slate-900 text-sm sm:text-base truncate mt-0.5",
+											children: currentEpisode.title
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+											className: "text-xs text-slate-500 truncate",
+											children: [
+												currentEpisode.host,
+												" • ",
+												currentEpisode.releaseDate
+											]
+										})
+									]
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-3 w-full md:w-auto justify-center",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+										onClick: () => handleSkip(-15),
+										className: "p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors cursor-pointer",
+										title: "Voltar 15 segundos",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCcw, { className: "w-5 h-5" })
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+										onClick: () => togglePlay(),
+										className: "w-12 h-12 rounded-full bg-[#182333] hover:bg-[#243042] text-[#FFC72C] flex items-center justify-center shadow-lg transition-transform active:scale-95 cursor-pointer",
+										title: isPlaying ? "Pausar" : "Reproduzir",
+										children: isPlaying ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Pause, { className: "w-6 h-6 fill-[#FFC72C]" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-6 h-6 fill-[#FFC72C] translate-x-0.5" })
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+										onClick: () => handleSkip(15),
+										className: "p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors cursor-pointer",
+										title: "Avançar 15 segundos",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCw, { className: "w-5 h-5" })
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										onClick: cyclePlaybackRate,
+										className: "px-2.5 py-1 text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition-colors cursor-pointer",
+										title: "Velocidade de reprodução",
+										children: [playbackRate, "x"]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "hidden sm:flex items-center gap-1.5 ml-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+											onClick: toggleMute,
+											className: "text-slate-500 hover:text-slate-800 cursor-pointer",
+											children: isMuted || volume === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(VolumeX, { className: "w-4 h-4 text-red-500" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Volume2, { className: "w-4 h-4" })
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "range",
+											min: "0",
+											max: "1",
+											step: "0.05",
+											value: isMuted ? 0 : volume,
+											onChange: handleVolumeChange,
+											className: "w-20 accent-[#182333] cursor-pointer"
+										})]
+									}),
+									currentEpisode.audioUrl && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+										href: currentEpisode.audioUrl,
+										download: true,
+										target: "_blank",
+										rel: "noreferrer",
+										className: "p-2 text-slate-500 hover:text-[#182333] hover:bg-slate-100 rounded-full transition-colors",
+										title: "Baixar arquivo MP3 para ouvir offline",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { className: "w-4 h-4" })
+									})
+								]
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "space-y-1.5",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-3",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-xs font-mono text-slate-500 w-10 text-right",
+										children: formatTime(currentTime)
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "range",
+										min: "0",
+										max: duration || 100,
+										value: currentTime,
+										onChange: handleSeek,
+										className: "flex-1 h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#FFC72C]"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-xs font-mono text-slate-500 w-10",
+										children: duration ? formatTime(duration) : currentEpisode.duration
+									})
+								]
+							})
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "bg-gradient-to-r from-slate-900 to-[#1e293b] rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-slate-700/80",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col md:flex-row gap-6 items-start",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-12 h-12 rounded-2xl bg-[#FFC72C]/20 border border-[#FFC72C]/40 flex items-center justify-center text-[#FFC72C] shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, { className: "w-6 h-6" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4 flex-1",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-xs font-bold text-[#FFC72C] uppercase tracking-wider",
+										children: "Guia Técnico & Estratégico ESDHUBEM"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										className: "text-lg sm:text-xl font-bold text-white mt-0.5",
+										children: "É possível subir arquivos MP3 no site? Ou é melhor usar Spotify / plataformas externas?"
+									})] }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300 leading-relaxed",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-white/5 border border-white/10 rounded-2xl p-4 space-y-2",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex items-center gap-2 text-[#FFC72C] font-bold",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Hospedagem Direta em MP3" })]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Sim, é 100% possível!" }),
+													" Você pode subir arquivos ",
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", {
+														className: "text-amber-300",
+														children: ".mp3"
+													}),
+													" diretamente no projeto ou em serviços como Archive.org, Google Drive público ou Cloudflare R2. Nosso player nativo (acima) já reproduz qualquer arquivo MP3 com controle de velocidade, avanço e download."
+												] }),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+													className: "text-[11px] text-slate-400",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Atenção:" }), " O GitHub possui limites de tamanho por arquivo (100MB) e repositório (1GB-2GB). Vários episódios longos em MP3 podem deixar o repositório pesado."]
+												})
+											]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-white/5 border border-emerald-500/30 rounded-2xl p-4 space-y-2",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex items-center gap-2 text-emerald-400 font-bold",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Publicar no Spotify (Recomendação de Ouro)" })]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+													"A melhor prática do mercado é criar uma conta gratuita no",
+													" ",
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+														className: "text-white",
+														children: "Spotify for Podcasters (antigo Anchor)"
+													}),
+													". É totalmente grátis, sem limites de áudio, e distribui automaticamente para Spotify, Apple Podcasts, Amazon Music e gera seu feed RSS."
+												] }),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													className: "text-[11px] text-emerald-300",
+													children: "✓ Alcance ilimitado de ouvintes nos celulares • Estatísticas de reprodução • Player oficial do Spotify que podemos incorporar em 1 clique aqui no site!"
+												})
+											]
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex flex-wrap items-center gap-3 pt-1",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											href: "https://podcasters.spotify.com/",
+											target: "_blank",
+											rel: "noreferrer",
+											className: "inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1DB954] hover:bg-[#1ed760] text-slate-950 font-bold text-xs transition-transform active:scale-95 cursor-pointer shadow-md",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Spotify for Podcasters (Grátis)" })]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-xs text-slate-400",
+											children: "Podemos integrar diretamente o feed RSS ou os embeds de qualquer plataforma aqui no portal."
+										})]
+									})
+								]
+							})]
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-col md:flex-row items-center justify-between gap-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none",
+							children: PODCAST_CATEGORIES.map((cat) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								onClick: () => setSelectedCategory(cat),
+								className: `px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${selectedCategory === cat ? "bg-[#182333] text-[#FFC72C] shadow-sm font-bold" : "bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50"}`,
+								children: cat
+							}, cat))
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "relative w-full md:w-72",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								type: "text",
+								value: searchQuery,
+								onChange: (e) => setSearchQuery(e.target.value),
+								placeholder: "Buscar episódio ou tema...",
+								className: "w-full bg-white border border-slate-200 text-slate-800 placeholder-slate-400 pl-9 pr-4 py-2 rounded-full text-xs focus:outline-none focus:ring-2 focus:ring-[#FFC72C] shadow-xs"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" })]
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-5",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center justify-between",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+								className: "text-xl font-bold text-slate-900 flex items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Headphones, { className: "w-5 h-5 text-[#182333]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
+									"Episódios Disponíveis (",
+									filteredEpisodes.length,
+									")"
+								] })]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-xs text-slate-500",
+								children: "Clique em um episódio para ouvir no player nativo"
+							})]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+							children: filteredEpisodes.map((episode) => {
+								const isCurrent = currentEpisode.id === episode.id;
+								const isExpanded = expandedEpisodeId === episode.id;
+								return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: `bg-white rounded-3xl border transition-all duration-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl ${isCurrent ? "border-[#FFC72C] ring-2 ring-[#FFC72C]/40" : "border-slate-200 hover:border-slate-300"}`,
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "relative h-48 w-full overflow-hidden bg-slate-900 group",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+												src: episode.coverImage,
+												alt: episode.title,
+												className: "w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-90"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "absolute top-3 left-3 bg-[#182333]/90 backdrop-blur-md text-[#FFC72C] border border-[#FFC72C]/40 px-3 py-1 rounded-full text-[11px] font-bold",
+												children: ["Episódio ", episode.episodeNumber.toString().padStart(2, "0")]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[11px] font-mono flex items-center gap-1",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-3 h-3 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: episode.duration })]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												onClick: () => togglePlay(episode),
+												className: "absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 flex items-center justify-center shadow-xl transition-all transform hover:scale-110 active:scale-95 cursor-pointer",
+												title: isCurrent && isPlaying ? "Pausar" : "Reproduzir",
+												children: isCurrent && isPlaying ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Pause, { className: "w-6 h-6 fill-slate-950" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-6 h-6 fill-slate-950 translate-x-0.5" })
+											})
+										]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "p-5 space-y-3",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center justify-between text-xs text-slate-500",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "font-semibold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full",
+													children: episode.category
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "flex items-center gap-1",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calendar, { className: "w-3 h-3 text-slate-400" }), episode.releaseDate]
+												})]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-bold text-slate-900 text-base leading-snug line-clamp-2 hover:text-[#182333] transition-colors",
+												children: episode.title
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-slate-600 text-xs sm:text-sm line-clamp-3 leading-relaxed",
+												children: episode.description
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "flex items-center gap-1 font-medium text-slate-700 truncate",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(User, { className: "w-3.5 h-3.5 text-slate-400" }), episode.host]
+												})
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "flex flex-wrap gap-1.5 pt-1",
+												children: episode.tags.map((t) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded-md",
+													children: ["#", t]
+												}, t))
+											}),
+											isExpanded && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "mt-3 pt-3 border-t border-slate-100 text-xs text-slate-700 space-y-3 bg-slate-50 p-3 rounded-2xl",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "font-bold text-slate-900 block mb-1",
+													children: "Resumo & Tópicos Centrais:"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													className: "text-slate-600 leading-relaxed",
+													children: episode.transcriptSummary
+												})] }), episode.keyTakeaways && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "font-bold text-slate-900 block mb-1",
+													children: "Principais Aprendizados:"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+													className: "list-disc pl-4 space-y-1 text-slate-600",
+													children: episode.keyTakeaways.map((point, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: point }, idx))
+												})] })]
+											})
+										]
+									})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "px-5 pb-5 pt-2 flex items-center justify-between gap-2 border-t border-slate-100",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+											onClick: () => togglePlay(episode),
+											className: `flex-1 py-2 px-3 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer ${isCurrent && isPlaying ? "bg-amber-100 text-amber-900 hover:bg-amber-200" : "bg-[#182333] text-white hover:bg-[#243042]"}`,
+											children: isCurrent && isPlaying ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Pause, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Pausar" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: isCurrent ? "Continuar" : "Ouvir Agora" })] })
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+											onClick: () => setExpandedEpisodeId(isExpanded ? null : episode.id),
+											className: "px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors flex items-center gap-1 cursor-pointer",
+											title: "Ver notas e resumo do episódio",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Notas" }), isExpanded ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronUp, { className: "w-3.5 h-3.5" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: "w-3.5 h-3.5" })]
+										})]
+									})]
+								}, episode.id);
+							})
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md flex flex-col md:flex-row items-center justify-between gap-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-2 text-center md:text-left",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-xs font-bold text-amber-600 uppercase tracking-wider",
+									children: "Comunidade & Ciência Aberta"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-xl sm:text-2xl font-bold text-slate-900",
+									children: "Quer submeter um ensaio sonoro ou podcast para os Anais da ESDHUBEM?"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed",
+									children: "Incentivamos nossos alunos e pesquisadores a produzirem relatos orais, entrevistas acadêmicas e podcasts temáticos como atividade complementar ou extensão livre."
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+							href: "https://wa.me/5511960319637?text=Ol%C3%A1!%20Gostaria%20de%20saber%20como%20gravar%20ou%20submeter%20um%20ensaio%20sonoro%2Fpodcast%20para%20a%20ESDHUBEM",
+							target: "_blank",
+							rel: "noreferrer",
+							className: "shrink-0 bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black px-6 py-3.5 rounded-2xl text-xs sm:text-sm transition-transform active:scale-95 shadow-md flex items-center gap-2 cursor-pointer",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Radio, { className: "w-4 h-4 text-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Submeter Proposta de Áudio" })]
+						})]
+					})
+				]
+			})
+		]
+	});
+};
+//#endregion
 //#region src/App.tsx
 function App() {
 	const [currentPage, setCurrentPage] = (0, import_react.useState)("home");
@@ -25117,6 +26077,12 @@ function App() {
 		const cursoId = params.get("curso");
 		const categoriaId = params.get("categoria");
 		const postId = params.get("post");
+		const pagina = params.get("pagina");
+		if (pagina === "podcasts" || pagina === "podcast") {
+			setCurrentPage("podcasts");
+			window.history.replaceState({}, "", window.location.pathname);
+			return;
+		}
 		if (cursoId) {
 			const course = COURSES_DATA.find((c) => c.id === cursoId);
 			if (course) {
@@ -25266,6 +26232,14 @@ function App() {
 		}
 		if (sectionId === "blog") {
 			setCurrentPage("blog");
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+			return;
+		}
+		if (sectionId === "podcasts" || sectionId === "podcast") {
+			setCurrentPage("podcasts");
 			window.scrollTo({
 				top: 0,
 				behavior: "smooth"
@@ -25628,6 +26602,25 @@ function App() {
 							top: 0,
 							behavior: "smooth"
 						});
+					}
+				})
+			}),
+			currentPage === "podcasts" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+				className: "flex-1",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PodcastsPage, {
+					onBackToHome: () => {
+						setCurrentPage("home");
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth"
+						});
+					},
+					onNavigateToCourses: () => {
+						setCurrentPage("home");
+						setTimeout(() => {
+							const el = document.getElementById("catalogo-cursos");
+							if (el) el.scrollIntoView({ behavior: "smooth" });
+						}, 100);
 					}
 				})
 			}),
