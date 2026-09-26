@@ -25808,85 +25808,18 @@ var PodcastsPage = ({ onBackToHome, onNavigateToCourses }) => {
 							})
 						})]
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "bg-gradient-to-r from-slate-900 to-[#1e293b] rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-slate-700/80",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex flex-col md:flex-row gap-6 items-start",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "w-12 h-12 rounded-2xl bg-[#FFC72C]/20 border border-[#FFC72C]/40 flex items-center justify-center text-[#FFC72C] shrink-0",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, { className: "w-6 h-6" })
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "space-y-4 flex-1",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "text-xs font-bold text-[#FFC72C] uppercase tracking-wider",
-										children: "Guia Técnico & Estratégico ESDHUBEM"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										className: "text-lg sm:text-xl font-bold text-white mt-0.5",
-										children: "É possível subir arquivos MP3 no site? Ou é melhor usar Spotify / plataformas externas?"
-									})] }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300 leading-relaxed",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-white/5 border border-white/10 rounded-2xl p-4 space-y-2",
-											children: [
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-													className: "flex items-center gap-2 text-[#FFC72C] font-bold",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Hospedagem Direta em MP3" })]
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Sim, é 100% possível!" }),
-													" Você pode subir arquivos ",
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", {
-														className: "text-amber-300",
-														children: ".mp3"
-													}),
-													" diretamente no projeto ou em serviços como Archive.org, Google Drive público ou Cloudflare R2. Nosso player nativo (acima) já reproduz qualquer arquivo MP3 com controle de velocidade, avanço e download."
-												] }),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-													className: "text-[11px] text-slate-400",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Atenção:" }), " O GitHub possui limites de tamanho por arquivo (100MB) e repositório (1GB-2GB). Vários episódios longos em MP3 podem deixar o repositório pesado."]
-												})
-											]
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-white/5 border border-emerald-500/30 rounded-2xl p-4 space-y-2",
-											children: [
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-													className: "flex items-center gap-2 text-emerald-400 font-bold",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Publicar no Spotify (Recomendação de Ouro)" })]
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
-													"A melhor prática do mercado é criar uma conta gratuita no",
-													" ",
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-														className: "text-white",
-														children: "Spotify for Podcasters (antigo Anchor)"
-													}),
-													". É totalmente grátis, sem limites de áudio, e distribui automaticamente para Spotify, Apple Podcasts, Amazon Music e gera seu feed RSS."
-												] }),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-													className: "text-[11px] text-emerald-300",
-													children: "✓ Alcance ilimitado de ouvintes nos celulares • Estatísticas de reprodução • Player oficial do Spotify que podemos incorporar em 1 clique aqui no site!"
-												})
-											]
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex flex-wrap items-center gap-3 pt-1",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-											href: "https://podcasters.spotify.com/",
-											target: "_blank",
-											rel: "noreferrer",
-											className: "inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1DB954] hover:bg-[#1ed760] text-slate-950 font-bold text-xs transition-transform active:scale-95 cursor-pointer shadow-md",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Spotify for Podcasters (Grátis)" })]
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "text-xs text-slate-400",
-											children: "Podemos integrar diretamente o feed RSS ou os embeds de qualquer plataforma aqui no portal."
-										})]
-									})
-								]
-							})]
-						})
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "bg-gradient-to-r from-slate-900 to-[#1e293b] rounded-2xl px-5 py-3.5 text-white shadow-md border border-slate-700/80 flex flex-wrap items-center gap-3.5",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+							href: "https://podcasters.spotify.com/",
+							target: "_blank",
+							rel: "noreferrer",
+							className: "inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1DB954] hover:bg-[#1ed760] text-slate-950 font-bold text-xs transition-transform active:scale-95 cursor-pointer shadow-md shrink-0",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Spotify for Podcasters (Grátis)" })]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-xs sm:text-sm text-slate-300",
+							children: "Podemos integrar diretamente o feed RSS ou os embeds de qualquer plataforma aqui no portal."
+						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex flex-col md:flex-row items-center justify-between gap-4",

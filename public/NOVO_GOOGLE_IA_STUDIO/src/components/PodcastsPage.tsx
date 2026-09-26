@@ -451,69 +451,21 @@ export const PodcastsPage: React.FC<PodcastsPageProps> = ({
           </div>
         </div>
 
-        {/* Guidance Card: Onde hospedar e como publicar MP3 / Spotify */}
-        <div className="bg-gradient-to-r from-slate-900 to-[#1e293b] rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-slate-700/80">
-          <div className="flex flex-col md:flex-row gap-6 items-start">
-            <div className="w-12 h-12 rounded-2xl bg-[#FFC72C]/20 border border-[#FFC72C]/40 flex items-center justify-center text-[#FFC72C] shrink-0">
-              <Info className="w-6 h-6" />
-            </div>
+        {/* Banner: Spotify for Podcasters & Integração */}
+        <div className="bg-gradient-to-r from-slate-900 to-[#1e293b] rounded-2xl px-5 py-3.5 text-white shadow-md border border-slate-700/80 flex flex-wrap items-center gap-3.5">
+          <a
+            href="https://podcasters.spotify.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1DB954] hover:bg-[#1ed760] text-slate-950 font-bold text-xs transition-transform active:scale-95 cursor-pointer shadow-md shrink-0"
+          >
+            <ExternalLink className="w-3.5 h-3.5" />
+            <span>Conhecer Spotify for Podcasters (Grátis)</span>
+          </a>
 
-            <div className="space-y-4 flex-1">
-              <div>
-                <span className="text-xs font-bold text-[#FFC72C] uppercase tracking-wider">
-                  Guia Técnico & Estratégico ESDHUBEM
-                </span>
-                <h3 className="text-lg sm:text-xl font-bold text-white mt-0.5">
-                  É possível subir arquivos MP3 no site? Ou é melhor usar Spotify / plataformas externas?
-                </h3>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-4 space-y-2">
-                  <div className="flex items-center gap-2 text-[#FFC72C] font-bold">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>Hospedagem Direta em MP3</span>
-                  </div>
-                  <p>
-                    <strong>Sim, é 100% possível!</strong> Você pode subir arquivos <code className="text-amber-300">.mp3</code> diretamente no projeto ou em serviços como Archive.org, Google Drive público ou Cloudflare R2. Nosso player nativo (acima) já reproduz qualquer arquivo MP3 com controle de velocidade, avanço e download.
-                  </p>
-                  <p className="text-[11px] text-slate-400">
-                    <em>Atenção:</em> O GitHub possui limites de tamanho por arquivo (100MB) e repositório (1GB-2GB). Vários episódios longos em MP3 podem deixar o repositório pesado.
-                  </p>
-                </div>
-
-                <div className="bg-white/5 border border-emerald-500/30 rounded-2xl p-4 space-y-2">
-                  <div className="flex items-center gap-2 text-emerald-400 font-bold">
-                    <Sparkles className="w-4 h-4" />
-                    <span>Publicar no Spotify (Recomendação de Ouro)</span>
-                  </div>
-                  <p>
-                    A melhor prática do mercado é criar uma conta gratuita no{' '}
-                    <strong className="text-white">Spotify for Podcasters (antigo Anchor)</strong>. É totalmente grátis, sem limites de áudio, e distribui automaticamente para Spotify, Apple Podcasts, Amazon Music e gera seu feed RSS.
-                  </p>
-                  <p className="text-[11px] text-emerald-300">
-                    ✓ Alcance ilimitado de ouvintes nos celulares • Estatísticas de reprodução • Player oficial do Spotify que podemos incorporar em 1 clique aqui no site!
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-3 pt-1">
-                <a
-                  href="https://podcasters.spotify.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1DB954] hover:bg-[#1ed760] text-slate-950 font-bold text-xs transition-transform active:scale-95 cursor-pointer shadow-md"
-                >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                  <span>Conhecer Spotify for Podcasters (Grátis)</span>
-                </a>
-
-                <span className="text-xs text-slate-400">
-                  Podemos integrar diretamente o feed RSS ou os embeds de qualquer plataforma aqui no portal.
-                </span>
-              </div>
-            </div>
-          </div>
+          <span className="text-xs sm:text-sm text-slate-300">
+            Podemos integrar diretamente o feed RSS ou os embeds de qualquer plataforma aqui no portal.
+          </span>
         </div>
 
         {/* Filters and Search Bar */}
