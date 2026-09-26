@@ -162,11 +162,11 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Bottom Bar: Navigation Links (Desktop/Laptop) */}
       <div className="hidden lg:block bg-[#182333]">
-        <div className="max-w-[1600px] mx-auto px-3 sm:px-4 lg:px-6 overflow-x-auto scrollbar-none">
-          <nav className="flex items-center justify-center gap-4 lg:gap-6 xl:gap-8 h-11 text-xs xl:text-sm font-medium whitespace-nowrap">
+        <div className="max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-6 overflow-x-auto scrollbar-none">
+          <nav className="flex items-center justify-center gap-2 lg:gap-3 xl:gap-4 h-11 text-xs font-medium whitespace-nowrap">
             <button
               onClick={() => onNavigate('inicio')}
-              className={`transition-all py-1 cursor-pointer ${
+              className={`transition-all py-1 px-1.5 cursor-pointer ${
                 currentPage === 'home'
                   ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
                   : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
@@ -176,7 +176,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             <button
               onClick={() => onNavigate('categorias')}
-              className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 ${
+              className={`transition-all py-1 px-1.5 cursor-pointer flex items-center gap-1.5 ${
                 currentPage === 'categorias'
                   ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
                   : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
@@ -184,6 +184,46 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <span>Categorias</span>
               <span className="bg-white/10 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">18</span>
+            </button>
+            <button
+              onClick={() => onNavigate('politicas')}
+              className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border text-xs font-bold shadow-xs ${
+                currentPage === 'politicas'
+                  ? 'bg-slate-200 text-slate-900 border-white'
+                  : 'bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-600/70'
+              }`}
+            >
+              <span>Políticas</span>
+            </button>
+            <button
+              onClick={() => onNavigate('diretrizes-pedagogicas')}
+              className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border text-xs font-bold shadow-xs ${
+                currentPage === 'diretrizes-pedagogicas'
+                  ? 'bg-[#FFC72C] text-slate-950 border-[#FFC72C]'
+                  : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border-amber-500/50'
+              }`}
+            >
+              <span>Diretrizes e Esclarecimento Pedagógico</span>
+            </button>
+            <button
+              onClick={() => onNavigate('artigos')}
+              className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border text-xs font-bold shadow-xs ${
+                currentPage === 'artigos' || currentPage === 'artigo-detalhe'
+                  ? 'bg-cyan-500 text-slate-950 border-cyan-400'
+                  : 'bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border-cyan-500/50'
+              }`}
+            >
+              <span>Artigos Científicos</span>
+            </button>
+            <button
+              onClick={() => onNavigate('blog')}
+              className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border text-xs font-bold shadow-xs ${
+                currentPage === 'blog' || currentPage === 'blog-post'
+                  ? 'bg-[#FFC72C] text-slate-950 border-[#FFC72C]'
+                  : 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border-purple-500/50'
+              }`}
+            >
+              <span>Blog</span>
             </button>
             <button
               onClick={() => onNavigate('categoria:landing-pages-biolinks')}
@@ -225,58 +265,9 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Second Menu Bar: Sub-Menu Buttons (Políticas, Diretrizes, Artigos, Blog, Certificação) */}
+      {/* Third Bar: Validation & Certificates */}
       <div className="hidden lg:block bg-[#111927] border-t border-b border-slate-700/60 py-2 shadow-inner">
-        <div className="max-w-[1600px] mx-auto px-4 flex items-center justify-between gap-3 overflow-x-auto scrollbar-none text-xs font-medium">
-          
-          {/* Left Button Group: Políticas, Diretrizes, Artigos Científicos, Blog */}
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => onNavigate('politicas')}
-              className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-semibold ${
-                currentPage === 'politicas'
-                  ? 'bg-slate-200 text-slate-900 border-white font-bold'
-                  : 'bg-white/5 hover:bg-white/10 text-slate-200 border-white/10'
-              }`}
-            >
-              <span>Políticas</span>
-            </button>
-
-            <button
-              onClick={() => onNavigate('diretrizes-pedagogicas')}
-              className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-semibold ${
-                currentPage === 'diretrizes-pedagogicas'
-                  ? 'bg-[#FFC72C] text-slate-950 border-[#FFC72C] font-bold shadow-sm'
-                  : 'bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border-amber-500/40'
-              }`}
-            >
-              <span>Diretrizes e Esclarecimento Pedagógico</span>
-            </button>
-
-            <button
-              onClick={() => onNavigate('artigos')}
-              className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-semibold ${
-                currentPage === 'artigos' || currentPage === 'artigo-detalhe'
-                  ? 'bg-cyan-500 text-slate-950 border-cyan-400 font-bold'
-                  : 'bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border-cyan-500/40'
-              }`}
-            >
-              <span>Artigos Científicos</span>
-            </button>
-
-            <button
-              onClick={() => onNavigate('blog')}
-              className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-semibold ${
-                currentPage === 'blog' || currentPage === 'blog-post'
-                  ? 'bg-amber-400 text-slate-950 border-amber-400 font-bold'
-                  : 'bg-white/5 hover:bg-white/10 text-slate-200 border-white/10'
-              }`}
-            >
-              <span>Blog</span>
-            </button>
-          </div>
-
-          {/* Right Button Group: Validar Certificado, Valor Legal, Escala de Mérito */}
+        <div className="max-w-[1600px] mx-auto px-4 flex items-center justify-center gap-3 overflow-x-auto scrollbar-none text-xs font-medium">
           <div className="flex items-center gap-2.5 shrink-0">
             <button
               onClick={onOpenValidator}
@@ -302,7 +293,6 @@ export const Header: React.FC<HeaderProps> = ({
               <span>Certificação & Escala de Mérito</span>
             </button>
           </div>
-
         </div>
       </div>
 
