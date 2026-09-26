@@ -152,13 +152,13 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
               <span>Livros & Materiais</span>
             </button>
 
-            {/* Artigos Científicos */}
+            {/* Artigos de Estudo e Pesquisa */}
             <button
               onClick={() => onNavigate && onNavigate('artigos')}
               className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-indigo-900 bg-indigo-100 hover:bg-indigo-200 border border-indigo-300 shadow-2xs flex items-center gap-1.5"
             >
               <span className="w-2 h-2 rounded-full bg-indigo-500 inline-block" />
-              <span>Artigos Científicos</span>
+              <span>Artigos de Estudo e Pesquisa</span>
             </button>
           </div>
         </div>

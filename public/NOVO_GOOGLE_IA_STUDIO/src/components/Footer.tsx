@@ -260,7 +260,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => onNavigate('artigos')}
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold"
                 >
-                  Artigos Científicos & Anais (Zenodo / DOI)
+                  Artigos de Estudo e Pesquisa (Zenodo / DOI)
                 </button>
               </li>
               <li>

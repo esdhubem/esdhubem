@@ -200,7 +200,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                       Enviar o TCC estruturado <strong>OU</strong> publicar um artigo em repositório de Preprint.
                     </td>
                     <td className="py-4 px-6">
-                      Página de Artigos Científicos da Escola / Repositórios (Zenodo, OSF, SciELO) com registro <strong>DOI</strong>.
+                      Página de Artigos de Estudo e Pesquisa da Escola / Repositórios (Zenodo, OSF, SciELO) com registro <strong>DOI</strong>.
                     </td>
                     <td className="py-4 px-6">
                       <span className="inline-block px-2.5 py-1 rounded-full bg-amber-200 text-amber-900 text-xs font-bold">
@@ -233,6 +233,17 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                 </tbody>
               </table>
             </div>
+          </div>
+
+          {/* Esclarecimento sobre os Anais de Estudo e Pesquisa */}
+          <div className="p-5 sm:p-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-slate-800 text-sm leading-relaxed shadow-xs space-y-2 mt-6">
+            <h4 className="font-bold text-[#182333] text-base flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-amber-600" />
+              <span>Sobre os Anais de Estudo e Pesquisa da ESDHUBEM</span>
+            </h4>
+            <p className="text-slate-700 leading-relaxed">
+              Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da <strong className="text-slate-900 font-bold">ESDHUBEM</strong> é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica.
+            </p>
           </div>
         </section>
 

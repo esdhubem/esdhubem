@@ -257,7 +257,7 @@ export const Header: React.FC<HeaderProps> = ({
                 : 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/70 hover:border-cyan-400'
             }`}
           >
-            <span>Artigos Científicos</span>
+            <span>Artigos de Estudo e Pesquisa</span>
           </button>
 
           <button
@@ -331,7 +331,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block px-3">Recursos & Diretrizes</span>
             <button onClick={() => { onNavigate('diretrizes-pedagogicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10">Diretrizes e Esclarecimento Pedagógico</button>
             <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
-            <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Artigos Científicos (Zenodo / DOI)</button>
+            <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Artigos de Estudo e Pesquisa (Zenodo / DOI)</button>
             <button onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Blog</button>
           </div>
 

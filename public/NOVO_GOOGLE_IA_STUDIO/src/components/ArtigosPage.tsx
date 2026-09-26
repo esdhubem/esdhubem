@@ -79,13 +79,13 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4">
                 <BookOpen className="w-4 h-4" />
-                <span>Repositório Aberto de Produção Científica</span>
+                <span>Repositório Aberto de Anais, Estudos e Pesquisa</span>
               </div>
-              <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
-                Artigos Científicos & <span className="text-[#FFC72C]">Anais Acadêmicos</span>
+              <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight uppercase">
+                ARTIGOS DE ESTUDO <span className="text-[#FFC72C]">E PESQUISA</span>
               </h1>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                Acesse a coleção oficial de artigos, pesquisas e estudos publicados pela coordenação pedagógica e por alunos da <strong>ESDHUBEM</strong>, preservados digitalmente com atribuição de <strong>DOI no Zenodo / CERN</strong>.
+                Acesse a coleção oficial de artigos, pesquisas e anais de estudos publicados pela coordenação pedagógica e por alunos da <strong>ESDHUBEM</strong>, preservados digitalmente com atribuição de <strong>DOI no Zenodo / CERN</strong>.
               </p>
             </div>
 
@@ -116,7 +116,18 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
       </div>
 
       {/* Content Area */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 space-y-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 space-y-8">
+        {/* Esclarecimento sobre os Anais de Estudo e Pesquisa */}
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-3xl p-6 sm:p-7 text-slate-800 shadow-sm space-y-2">
+          <div className="flex items-center gap-2 text-amber-900 font-bold text-base">
+            <BookOpen className="w-5 h-5 text-amber-600" />
+            <h3 className="font-bold text-[#182333]">O que são os Anais de Estudo e Pesquisa da ESDHUBEM?</h3>
+          </div>
+          <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da <strong className="text-slate-900 font-bold">ESDHUBEM</strong> é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica.
+          </p>
+        </div>
+
         {/* Search & Filter Bar */}
         <div className="bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-xl flex flex-col md:flex-row gap-4 items-center justify-between">
           <div className="relative w-full md:w-96">

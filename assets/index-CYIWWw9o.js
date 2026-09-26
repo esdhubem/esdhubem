@@ -14027,7 +14027,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 							onClick: () => onNavigate("artigos"),
 							className: `px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${currentPage === "artigos" || currentPage === "artigo-detalhe" ? "bg-cyan-500 text-slate-950 border-cyan-400" : "bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/70 hover:border-cyan-400"}`,
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Artigos Científicos" })
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Artigos de Estudo e Pesquisa" })
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 							onClick: () => onNavigate("blog"),
@@ -14152,7 +14152,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 									setMobileMenuOpen(false);
 								},
 								className: "w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400",
-								children: "Artigos Científicos (Zenodo / DOI)"
+								children: "Artigos de Estudo e Pesquisa (Zenodo / DOI)"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => {
@@ -15218,7 +15218,7 @@ var CourseCatalog = ({ courses, activePillar, onPillarChange, onNavigate, onSele
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => onNavigate && onNavigate("artigos"),
 								className: "px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-indigo-900 bg-indigo-100 hover:bg-indigo-200 border border-indigo-300 shadow-2xs flex items-center gap-1.5",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2 h-2 rounded-full bg-indigo-500 inline-block" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Artigos Científicos" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2 h-2 rounded-full bg-indigo-500 inline-block" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Artigos de Estudo e Pesquisa" })]
 							})
 						]
 					})]
@@ -16274,7 +16274,7 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 										onClick: () => onNavigate("artigos"),
 										className: "hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold",
-										children: "Artigos Científicos & Anais (Zenodo / DOI)"
+										children: "Artigos de Estudo e Pesquisa (Zenodo / DOI)"
 									}) }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 										onClick: () => onNavigate("sala-de-aula"),
@@ -21552,19 +21552,19 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle }) => {
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório Aberto de Produção Científica" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório Aberto de Anais, Estudos e Pesquisa" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-								className: "text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight",
-								children: ["Artigos Científicos & ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight uppercase",
+								children: ["ARTIGOS DE ESTUDO ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 									className: "text-[#FFC72C]",
-									children: "Anais Acadêmicos"
+									children: "E PESQUISA"
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 								className: "text-slate-300 text-base sm:text-lg leading-relaxed",
 								children: [
-									"Acesse a coleção oficial de artigos, pesquisas e estudos publicados pela coordenação pedagógica e por alunos da ",
+									"Acesse a coleção oficial de artigos, pesquisas e anais de estudos publicados pela coordenação pedagógica e por alunos da ",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "ESDHUBEM" }),
 									", preservados digitalmente com atribuição de ",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "DOI no Zenodo / CERN" }),
@@ -21607,8 +21607,28 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle }) => {
 				})]
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 space-y-10",
+			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 space-y-8",
 			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-amber-500/10 border border-amber-500/30 rounded-3xl p-6 sm:p-7 text-slate-800 shadow-sm space-y-2",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-2 text-amber-900 font-bold text-base",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-bold text-[#182333]",
+							children: "O que são os Anais de Estudo e Pesquisa da ESDHUBEM?"
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+						className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+						children: [
+							"Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+								className: "text-slate-900 font-bold",
+								children: "ESDHUBEM"
+							}),
+							" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica."
+						]
+					})]
+				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-xl flex flex-col md:flex-row gap-4 items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -23673,196 +23693,216 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 						className: "space-y-6",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "text-center max-w-3xl mx-auto space-y-2",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layers, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Quadro Geral de Classificação" })]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-									className: "text-2xl sm:text-3xl font-black text-[#182333]",
-									children: "Estrutura Unificada das Categorias de Certificado"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-xs sm:text-sm text-slate-600",
-									children: "Compare os requisitos de cada selo e saiba onde sua produção acadêmica ou profissional será publicada e divulgada."
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "text-center max-w-3xl mx-auto space-y-2",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layers, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Quadro Geral de Classificação" })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+										className: "text-2xl sm:text-3xl font-black text-[#182333]",
+										children: "Estrutura Unificada das Categorias de Certificado"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs sm:text-sm text-slate-600",
+										children: "Compare os requisitos de cada selo e saiba onde sua produção acadêmica ou profissional será publicada e divulgada."
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "overflow-x-auto",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
+										className: "w-full text-left text-xs sm:text-sm",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+											className: "bg-[#182333] text-white border-b border-slate-700",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+													className: "py-4 px-6 font-bold uppercase tracking-wider",
+													children: "Categoria / Selo"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+													className: "py-4 px-6 font-bold uppercase tracking-wider",
+													children: "Requisito Principal"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+													className: "py-4 px-6 font-bold uppercase tracking-wider",
+													children: "Destino da Publicação"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+													className: "py-4 px-6 font-bold uppercase tracking-wider",
+													children: "Complexidade"
+												})
+											]
+										}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tbody", {
+											className: "divide-y divide-slate-100 text-slate-700 font-medium",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+													className: "hover:bg-amber-50/50 transition-colors",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
+															className: "py-4 px-6 font-bold text-amber-900 flex items-center gap-2",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-xl",
+																children: "🥉"
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+																className: "block text-slate-900",
+																children: "Bronze"
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-[11px] text-amber-700 font-normal",
+																children: "Aproveitamento Básico"
+															})] })]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: "Responder às perguntas de múltipla escolha dos questionários de fixação."
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: "Sistema interno da escola (Painel EAD do Aluno)."
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "inline-block px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold",
+																children: "Baixa (Fixação)"
+															})
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+													className: "hover:bg-slate-50 transition-colors",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
+															className: "py-4 px-6 font-bold text-slate-800 flex items-center gap-2",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-xl",
+																children: "🥈"
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+																className: "block text-slate-900",
+																children: "Prata"
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-[11px] text-slate-500 font-normal",
+																children: "Produção de Conteúdo"
+															})] })]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: "Escrever um artigo curto e prático assinado pelo aluno."
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: "Blog Oficial da ESDHUBEM (com link público de autor para portfólio)."
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "inline-block px-2.5 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold",
+																children: "Média-Baixa (Divulgação)"
+															})
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+													className: "hover:bg-amber-50/70 transition-colors",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
+															className: "py-4 px-6 font-bold text-amber-700 flex items-center gap-2",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-xl",
+																children: "🥇"
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+																className: "block text-slate-900",
+																children: "Ouro"
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-[11px] text-amber-600 font-normal",
+																children: "Pesquisa & Preprint"
+															})] })]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
+															className: "py-4 px-6",
+															children: [
+																"Enviar o TCC estruturado ",
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "OU" }),
+																" publicar um artigo em repositório de Preprint."
+															]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
+															className: "py-4 px-6",
+															children: [
+																"Página de Artigos de Estudo e Pesquisa da Escola / Repositórios (Zenodo, OSF, SciELO) com registro ",
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "DOI" }),
+																"."
+															]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "inline-block px-2.5 py-1 rounded-full bg-amber-200 text-amber-900 text-xs font-bold",
+																children: "Média-Alta (Pesquisa)"
+															})
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+													className: "hover:bg-cyan-50/60 transition-colors",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
+															className: "py-4 px-6 font-bold text-cyan-900 flex items-center gap-2",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-xl",
+																children: "💎"
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+																className: "block text-slate-900",
+																children: "Diamante"
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-[11px] text-cyan-700 font-normal",
+																children: "Excelência Científica"
+															})] })]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: "Publicar um artigo aprovado em revista científica externa com revisão por pares."
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: "Periódico científico externo + Destaque especial de honra na página principal da escola."
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+															className: "py-4 px-6",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "inline-block px-2.5 py-1 rounded-full bg-cyan-100 text-cyan-900 text-xs font-bold",
+																children: "Alta (Acadêmica)"
+															})
+														})
+													]
+												})
+											]
+										})]
+									})
 								})
-							]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "overflow-x-auto",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
-									className: "w-full text-left text-xs sm:text-sm",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-										className: "bg-[#182333] text-white border-b border-slate-700",
-										children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-												className: "py-4 px-6 font-bold uppercase tracking-wider",
-												children: "Categoria / Selo"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-												className: "py-4 px-6 font-bold uppercase tracking-wider",
-												children: "Requisito Principal"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-												className: "py-4 px-6 font-bold uppercase tracking-wider",
-												children: "Destino da Publicação"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-												className: "py-4 px-6 font-bold uppercase tracking-wider",
-												children: "Complexidade"
-											})
-										]
-									}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tbody", {
-										className: "divide-y divide-slate-100 text-slate-700 font-medium",
-										children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-												className: "hover:bg-amber-50/50 transition-colors",
-												children: [
-													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
-														className: "py-4 px-6 font-bold text-amber-900 flex items-center gap-2",
-														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "text-xl",
-															children: "🥉"
-														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-															className: "block text-slate-900",
-															children: "Bronze"
-														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "text-[11px] text-amber-700 font-normal",
-															children: "Aproveitamento Básico"
-														})] })]
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: "Responder às perguntas de múltipla escolha dos questionários de fixação."
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: "Sistema interno da escola (Painel EAD do Aluno)."
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "inline-block px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold",
-															children: "Baixa (Fixação)"
-														})
-													})
-												]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-												className: "hover:bg-slate-50 transition-colors",
-												children: [
-													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
-														className: "py-4 px-6 font-bold text-slate-800 flex items-center gap-2",
-														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "text-xl",
-															children: "🥈"
-														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-															className: "block text-slate-900",
-															children: "Prata"
-														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "text-[11px] text-slate-500 font-normal",
-															children: "Produção de Conteúdo"
-														})] })]
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: "Escrever um artigo curto e prático assinado pelo aluno."
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: "Blog Oficial da ESDHUBEM (com link público de autor para portfólio)."
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "inline-block px-2.5 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold",
-															children: "Média-Baixa (Divulgação)"
-														})
-													})
-												]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-												className: "hover:bg-amber-50/70 transition-colors",
-												children: [
-													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
-														className: "py-4 px-6 font-bold text-amber-700 flex items-center gap-2",
-														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "text-xl",
-															children: "🥇"
-														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-															className: "block text-slate-900",
-															children: "Ouro"
-														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "text-[11px] text-amber-600 font-normal",
-															children: "Pesquisa & Preprint"
-														})] })]
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
-														className: "py-4 px-6",
-														children: [
-															"Enviar o TCC estruturado ",
-															/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "OU" }),
-															" publicar um artigo em repositório de Preprint."
-														]
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
-														className: "py-4 px-6",
-														children: [
-															"Página de Artigos Científicos da Escola / Repositórios (Zenodo, OSF, SciELO) com registro ",
-															/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "DOI" }),
-															"."
-														]
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "inline-block px-2.5 py-1 rounded-full bg-amber-200 text-amber-900 text-xs font-bold",
-															children: "Média-Alta (Pesquisa)"
-														})
-													})
-												]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-												className: "hover:bg-cyan-50/60 transition-colors",
-												children: [
-													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
-														className: "py-4 px-6 font-bold text-cyan-900 flex items-center gap-2",
-														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "text-xl",
-															children: "💎"
-														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-															className: "block text-slate-900",
-															children: "Diamante"
-														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "text-[11px] text-cyan-700 font-normal",
-															children: "Excelência Científica"
-														})] })]
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: "Publicar um artigo aprovado em revista científica externa com revisão por pares."
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: "Periódico científico externo + Destaque especial de honra na página principal da escola."
-													}),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
-														className: "py-4 px-6",
-														children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-															className: "inline-block px-2.5 py-1 rounded-full bg-cyan-100 text-cyan-900 text-xs font-bold",
-															children: "Alta (Acadêmica)"
-														})
-													})
-												]
-											})
-										]
-									})]
-								})
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "p-5 sm:p-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-slate-800 text-sm leading-relaxed shadow-xs space-y-2 mt-6",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+									className: "font-bold text-[#182333] text-base flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Sobre os Anais de Estudo e Pesquisa da ESDHUBEM" })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-700 leading-relaxed",
+									children: [
+										"Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "text-slate-900 font-bold",
+											children: "ESDHUBEM"
+										}),
+										" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica."
+									]
+								})]
 							})
-						})]
+						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 						className: "space-y-8",
@@ -25053,15 +25093,25 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 												})
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												className: "p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-slate-800 text-sm leading-relaxed mt-4",
-												children: [
+												className: "p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-slate-800 text-sm leading-relaxed mt-4 space-y-3",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
 													"Para os alunos da ",
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 														className: "text-slate-900 font-bold",
 														children: "ESDHUBEM"
 													}),
 													", aprender a redigir protótipos consistentes e registrá-los em plataformas abertas como o Zenodo, ou publicá-los via redes abertas e comunitárias, proporciona uma experiência real e imediata de autoria reconhecida, impacto social e inclusão no ecossistema global de produção de conhecimento."
-												]
+												] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+													className: "pt-2 border-t border-amber-500/20 text-slate-700",
+													children: [
+														"Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da ",
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+															className: "text-slate-900 font-bold",
+															children: "ESDHUBEM"
+														}),
+														" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica."
+													]
+												})]
 											})
 										]
 									})

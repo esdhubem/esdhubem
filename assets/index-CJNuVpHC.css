@@ -5096,6 +5096,10 @@
       padding: calc(var(--spacing) * 6);
     }
 
+    .sm\:p-7 {
+      padding: calc(var(--spacing) * 7);
+    }
+
     .sm\:p-8 {
       padding: calc(var(--spacing) * 8);
     }
