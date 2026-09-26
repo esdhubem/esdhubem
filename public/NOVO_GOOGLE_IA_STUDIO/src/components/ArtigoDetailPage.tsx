@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   ArrowLeft,
   FileText,
-  Download,
   ExternalLink,
   Copy,
   Check,
@@ -134,23 +133,11 @@ export const ArtigoDetailPage: React.FC<ArtigoDetailPageProps> = ({
           </div>
 
           <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
-            {article.pdfUrl && (
-              <a
-                href={article.pdfUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer"
-              >
-                <Download className="w-4 h-4" />
-                <span>Baixar PDF Completo</span>
-              </a>
-            )}
-
             <a
               href={article.zenodoUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-[#243042] hover:bg-[#182333] text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer"
+              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-[#243042] hover:bg-[#182333] text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer border border-slate-700 hover:border-slate-600"
             >
               <ExternalLink className="w-4 h-4 text-[#FFC72C]" />
               <span>Ver Registro no Zenodo</span>
@@ -325,7 +312,7 @@ export const ArtigoDetailPage: React.FC<ArtigoDetailPageProps> = ({
               </h4>
 
               <p className="text-xs text-slate-300 leading-relaxed">
-                Publicou seu trabalho científico no Zenodo para concluir seu curso livre ou horas complementares? Submeta seu DOI no portal do aluno para ser catalogado em nosso <strong>Repositório Acadêmico Oficial</strong>!
+                Publicou seu trabalho científico no Zenodo para concluir seu curso livre ou horas complementares ou submeteu em ou em revista científicas acadêmicas? Submeta aqui também o seu DOI no portal do aluno para ser catalogado em nosso <strong>Repositório Acadêmico Oficial</strong>! Entre em contato conosco!
               </p>
 
               <button

@@ -21528,7 +21528,6 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle }) => {
 		const matchesCategory = selectedCategory ? art.category === selectedCategory : true;
 		return matchesSearch && matchesCategory;
 	});
-	const featuredArticle = ACADEMIC_ARTICLES.find((art) => art.isFeatured) || ACADEMIC_ARTICLES[0];
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "bg-[#F8FAFC] min-h-screen pb-20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -21607,7 +21606,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle }) => {
 				})]
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 space-y-8",
+			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-20 space-y-8",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "bg-amber-500/10 border border-amber-500/30 rounded-3xl p-6 sm:p-7 text-slate-800 shadow-sm space-y-2",
@@ -21656,61 +21655,6 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle }) => {
 							children: cat.split("&")[0]
 						}, cat))]
 					})]
-				}),
-				featuredArticle && !searchTerm && !selectedCategory && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "bg-gradient-to-r from-[#182333] via-[#243042] to-[#1e293b] text-white rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl relative overflow-hidden group",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "relative z-10 space-y-4",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex flex-wrap items-center gap-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "bg-[#FFC72C] text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm",
-									children: "Publicação Científica em Destaque"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									className: "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold px-3 py-0.5 rounded-full",
-									children: ["DOI: ", featuredArticle.doi]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-								onClick: () => onSelectArticle(featuredArticle),
-								className: "text-2xl sm:text-3xl font-black leading-tight cursor-pointer hover:text-[#FFC72C] transition-colors",
-								children: featuredArticle.title
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-slate-300 text-xs sm:text-sm leading-relaxed max-w-4xl line-clamp-3",
-								children: featuredArticle.abstractPt
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-white/10",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center gap-3 text-xs text-slate-300",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(User, { className: "w-4 h-4 text-[#FFC72C]" }),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-bold text-white",
-											children: featuredArticle.authors.join(", ")
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "•" }),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: featuredArticle.institution })
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center gap-3",
-									children: [featuredArticle.pdfUrl && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-										href: featuredArticle.pdfUrl,
-										target: "_blank",
-										rel: "noreferrer",
-										className: "px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Baixar PDF" })]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-										onClick: () => onSelectArticle(featuredArticle),
-										className: "px-5 py-2 rounded-xl bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ler Artigo Completo" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-4 h-4" })]
-									})]
-								})]
-							})
-						]
-					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "space-y-6",
@@ -21983,21 +21927,15 @@ var ArtigoDetailPage = ({ article, onBackToArticles, onBackToHome }) => {
 						className: "text-sm font-bold text-slate-900",
 						children: ["DOI Oficial: ", article.doi]
 					})] })]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "flex flex-wrap items-center gap-3 w-full sm:w-auto",
-					children: [article.pdfUrl && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-						href: article.pdfUrl,
-						target: "_blank",
-						rel: "noreferrer",
-						className: "flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Baixar PDF Completo" })]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 						href: article.zenodoUrl,
 						target: "_blank",
 						rel: "noreferrer",
-						className: "flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-[#243042] hover:bg-[#182333] text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer",
+						className: "flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-[#243042] hover:bg-[#182333] text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer border border-slate-700 hover:border-slate-600",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Registro no Zenodo" })]
-					})]
+					})
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid grid-cols-1 lg:grid-cols-3 gap-8",
@@ -22157,9 +22095,9 @@ var ArtigoDetailPage = ({ article, onBackToArticles, onBackToHome }) => {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 								className: "text-xs text-slate-300 leading-relaxed",
 								children: [
-									"Publicou seu trabalho científico no Zenodo para concluir seu curso livre ou horas complementares? Submeta seu DOI no portal do aluno para ser catalogado em nosso ",
+									"Publicou seu trabalho científico no Zenodo para concluir seu curso livre ou horas complementares ou submeteu em ou em revista científicas acadêmicas? Submeta aqui também o seu DOI no portal do aluno para ser catalogado em nosso ",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Repositório Acadêmico Oficial" }),
-									"!"
+									"! Entre em contato conosco!"
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {

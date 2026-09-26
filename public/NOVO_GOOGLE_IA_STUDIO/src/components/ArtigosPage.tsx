@@ -50,8 +50,6 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
     return matchesSearch && matchesCategory;
   });
 
-  const featuredArticle = ACADEMIC_ARTICLES.find((art) => art.isFeatured) || ACADEMIC_ARTICLES[0];
-
   return (
     <div className="bg-[#F8FAFC] min-h-screen pb-20">
       {/* Top Banner / Hero */}
@@ -116,7 +114,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
       </div>
 
       {/* Content Area */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-20 space-y-8">
         {/* Esclarecimento sobre os Anais de Estudo e Pesquisa */}
         <div className="bg-amber-500/10 border border-amber-500/30 rounded-3xl p-6 sm:p-7 text-slate-800 shadow-sm space-y-2">
           <div className="flex items-center gap-2 text-amber-900 font-bold text-base">
@@ -168,64 +166,6 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
             ))}
           </div>
         </div>
-
-        {/* Featured Publication Banner */}
-        {featuredArticle && !searchTerm && !selectedCategory && (
-          <div className="bg-gradient-to-r from-[#182333] via-[#243042] to-[#1e293b] text-white rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl relative overflow-hidden group">
-            <div className="relative z-10 space-y-4">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="bg-[#FFC72C] text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
-                  Publicação Científica em Destaque
-                </span>
-                <span className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold px-3 py-0.5 rounded-full">
-                  DOI: {featuredArticle.doi}
-                </span>
-              </div>
-
-              <h2
-                onClick={() => onSelectArticle(featuredArticle)}
-                className="text-2xl sm:text-3xl font-black leading-tight cursor-pointer hover:text-[#FFC72C] transition-colors"
-              >
-                {featuredArticle.title}
-              </h2>
-
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-4xl line-clamp-3">
-                {featuredArticle.abstractPt}
-              </p>
-
-              <div className="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-white/10">
-                <div className="flex items-center gap-3 text-xs text-slate-300">
-                  <User className="w-4 h-4 text-[#FFC72C]" />
-                  <span className="font-bold text-white">{featuredArticle.authors.join(', ')}</span>
-                  <span>•</span>
-                  <span>{featuredArticle.institution}</span>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  {featuredArticle.pdfUrl && (
-                    <a
-                      href={featuredArticle.pdfUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
-                    >
-                      <Download className="w-3.5 h-3.5" />
-                      <span>Baixar PDF</span>
-                    </a>
-                  )}
-
-                  <button
-                    onClick={() => onSelectArticle(featuredArticle)}
-                    className="px-5 py-2 rounded-xl bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
-                  >
-                    <span>Ler Artigo Completo</span>
-                    <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Articles List */}
         <div className="space-y-6">
