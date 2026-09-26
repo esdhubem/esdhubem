@@ -436,10 +436,10 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
         </section>
 
         {/* SECTION 4: CALL TO ACTION BANNER */}
-        <section className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-500/10 via-slate-800 to-slate-900 border border-amber-500/30 flex flex-col md:flex-row items-center justify-between gap-6 text-white">
-          <div className="space-y-1 text-center md:text-left">
+        <section className="p-6 sm:p-8 rounded-3xl bg-[#182333] border border-slate-700/80 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-white relative overflow-hidden">
+          <div className="space-y-1 text-center md:text-left relative z-10">
             <h3 className="text-lg sm:text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
-              <Sparkles className="w-5 h-5 text-amber-400" />
+              <Sparkles className="w-5 h-5 text-[#FFC72C]" />
               Pronto para transformar seu estudo em uma publicação real?
             </h3>
             <p className="text-xs sm:text-sm text-slate-300">
@@ -447,11 +447,11 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+          <div className="flex flex-wrap items-center justify-center gap-3 shrink-0 relative z-10">
             {onNavigateToArticles && (
               <button
                 onClick={onNavigateToArticles}
-                className="px-5 py-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105"
+                className="px-5 py-3 bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105"
               >
                 <BookOpen className="w-4 h-4" />
                 <span>Ver Artigos Publicados</span>
@@ -461,9 +461,9 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             {onOpenCertificatePreview && (
               <button
                 onClick={onOpenCertificatePreview}
-                className="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer border border-slate-600"
+                className="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer border border-slate-600 shadow-md hover:scale-105"
               >
-                <Eye className="w-4 h-4 text-amber-400" />
+                <Eye className="w-4 h-4 text-[#FFC72C]" />
                 <span>Ver Modelo do Certificado</span>
               </button>
             )}
@@ -472,7 +472,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
               href="https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20submeter%20meu%20artigo%20ou%20TCC%20para%20avaliação%20de%20mérito%20acadêmico."
               target="_blank"
               rel="noreferrer"
-              className="px-5 py-3 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg"
+              className="px-5 py-3 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105"
             >
               <MessageCircle className="w-4 h-4 fill-white" />
               <span>Submeter via WhatsApp</span>

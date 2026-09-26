@@ -24137,34 +24137,34 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-						className: "p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-500/10 via-slate-800 to-slate-900 border border-amber-500/30 flex flex-col md:flex-row items-center justify-between gap-6 text-white",
+						className: "p-6 sm:p-8 rounded-3xl bg-[#182333] border border-slate-700/80 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-white relative overflow-hidden",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "space-y-1 text-center md:text-left",
+							className: "space-y-1 text-center md:text-left relative z-10",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
 								className: "text-lg sm:text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-5 h-5 text-amber-400" }), "Pronto para transformar seu estudo em uma publicação real?"]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-5 h-5 text-[#FFC72C]" }), "Pronto para transformar seu estudo em uma publicação real?"]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "text-xs sm:text-sm text-slate-300",
 								children: "Explore nossos artigos científicos já publicados ou submeta seu trabalho para a coordenação acadêmica."
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex flex-wrap items-center justify-center gap-3 shrink-0",
+							className: "flex flex-wrap items-center justify-center gap-3 shrink-0 relative z-10",
 							children: [
 								onNavigateToArticles && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: onNavigateToArticles,
-									className: "px-5 py-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105",
+									className: "px-5 py-3 bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos Publicados" })]
 								}),
 								onOpenCertificatePreview && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: onOpenCertificatePreview,
-									className: "px-5 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer border border-slate-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eye, { className: "w-4 h-4 text-amber-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Modelo do Certificado" })]
+									className: "px-5 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer border border-slate-600 shadow-md hover:scale-105",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eye, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Modelo do Certificado" })]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 									href: "https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20submeter%20meu%20artigo%20ou%20TCC%20para%20avaliação%20de%20mérito%20acadêmico.",
 									target: "_blank",
 									rel: "noreferrer",
-									className: "px-5 py-3 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg",
+									className: "px-5 py-3 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageCircle, { className: "w-4 h-4 fill-white" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Submeter via WhatsApp" })]
 								})
 							]
