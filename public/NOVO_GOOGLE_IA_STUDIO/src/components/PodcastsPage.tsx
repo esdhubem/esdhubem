@@ -726,13 +726,13 @@ export const PodcastsPage: React.FC<PodcastsPageProps> = ({
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
-              Comunidade & Ciência Aberta
+              Comunidade & Produção Intelectual
             </span>
             <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
               Quer submeter um ensaio sonoro ou podcast para os Anais da ESDHUBEM?
             </h3>
             <p className="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed">
-              Incentivamos nossos alunos e pesquisadores a produzirem relatos orais, entrevistas acadêmicas e podcasts temáticos como atividade complementar ou extensão livre.
+              Incentivamos nossos alunos e pesquisadores a produzirem relatos orais, entrevistas acadêmicas e podcasts temáticos como atividade complementar ou produção intelectual livre.
             </p>
           </div>
 

@@ -26030,7 +26030,7 @@ var PodcastsPage = ({ onBackToHome, onNavigateToCourses }) => {
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 									className: "text-xs font-bold text-amber-600 uppercase tracking-wider",
-									children: "Comunidade & Ciência Aberta"
+									children: "Comunidade & Produção Intelectual"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 									className: "text-xl sm:text-2xl font-bold text-slate-900",
@@ -26038,7 +26038,7 @@ var PodcastsPage = ({ onBackToHome, onNavigateToCourses }) => {
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed",
-									children: "Incentivamos nossos alunos e pesquisadores a produzirem relatos orais, entrevistas acadêmicas e podcasts temáticos como atividade complementar ou extensão livre."
+									children: "Incentivamos nossos alunos e pesquisadores a produzirem relatos orais, entrevistas acadêmicas e podcasts temáticos como atividade complementar ou produção intelectual livre."
 								})
 							]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
