@@ -21624,7 +21624,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle }) => {
 								className: "text-slate-900 font-bold",
 								children: "ESDHUBEM"
 							}),
-							" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica."
+							" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, bem como melhorar o seu desempenho profissional e relacional pois a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena."
 						]
 					})]
 				}),
@@ -23836,7 +23836,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 											className: "text-slate-900 font-bold",
 											children: "ESDHUBEM"
 										}),
-										" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica."
+										" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, bem como melhorar o seu desempenho profissional e relacional pois a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena."
 									]
 								})]
 							})
@@ -25047,7 +25047,7 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 															className: "text-slate-900 font-bold",
 															children: "ESDHUBEM"
 														}),
-														" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica."
+														" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, bem como melhorar o seu desempenho profissional e relacional pois a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena."
 													]
 												})]
 											})
