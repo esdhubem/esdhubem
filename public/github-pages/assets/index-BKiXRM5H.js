@@ -24608,6 +24608,70 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-slate-50/80 border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+										children: [
+											"Após uma leitura profunda da realidade e das maiores feridas da educação contemporânea, identificamos os sintomas de uma crise que é, ao mesmo tempo, intelectual, tecnológica e relacional. A ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-slate-900 font-bold",
+												children: "ESDHUBEM"
+											}),
+											" nasce justamente como um ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-amber-800 font-semibold",
+												children: "antídoto para esse cenário caótico"
+											}),
+											"."
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+										children: "No modelo tradicional das universidades, o estudante muitas vezes escreve apenas para tirar nota e agradar a banca, sob temas rígidos impostos pela academia. O resultado? O TCC vira um arquivo PDF esquecido em um repositório institucional que ninguém lê. O conhecimento é tratado como um fardo burocrático."
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+										children: [
+											"Na ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-slate-900 font-bold",
+												children: "ESDHUBEM"
+											}),
+											", nós devolvemos a utilidade e a vida ao saber. Preenchemos a lacuna deixada pelas gavetas acadêmicas e incentivamos nossos alunos a produzirem conhecimentos que geram valor real, visível e aplicável ao desenvolvimento humano. Aqui, o aluno escreve para o mundo e para a comunidade através de formatos plurais e acessíveis:"
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2.5 bg-white border border-slate-200/80 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-800 shadow-2xs",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Artigos de revisão bibliográfica ou narrativa" })]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2.5 bg-white border border-slate-200/80 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-800 shadow-2xs",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ensaios teóricos, conceituais ou críticos" })]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2.5 bg-white border border-slate-200/80 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-800 shadow-2xs",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Relatos de opinião e cartas ao editor" })]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2.5 bg-white border border-slate-200/80 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-800 shadow-2xs",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Escrita criativa e partilha de conhecimento aberto" })]
+											})
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "bg-amber-500/10 border-l-4 border-[#FFC72C] p-3.5 rounded-r-xl",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-slate-900 font-semibold text-sm sm:text-base leading-snug",
+											children: "O saber deixa de ser um documento estático e burocrático para se transformar em um legado circulante."
+										})
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "grid grid-cols-1 md:grid-cols-2 gap-4 pt-2",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

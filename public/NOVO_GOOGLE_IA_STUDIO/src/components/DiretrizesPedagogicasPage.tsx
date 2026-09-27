@@ -123,6 +123,46 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             O objetivo primordial desta plataforma é ser um <strong className="text-slate-900 font-semibold">espaço vivo de cultivo para a expansão da consciência, leitura crítica, escrita reflexiva e desenvolvimento integrativo em diversas áreas da vida</strong>. Atuamos como uma ponte acolhedora entre saberes holísticos/humanistas e as ferramentas estruturadas da comunicação intelectual.
           </p>
 
+          {/* O Antídoto para a Crise Educacional e o Saber Circulante */}
+          <div className="bg-slate-50/80 border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs">
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+              Após uma leitura profunda da realidade e das maiores feridas da educação contemporânea, identificamos os sintomas de uma crise que é, ao mesmo tempo, intelectual, tecnológica e relacional. A <strong className="text-slate-900 font-bold">ESDHUBEM</strong> nasce justamente como um <strong className="text-amber-800 font-semibold">antídoto para esse cenário caótico</strong>.
+            </p>
+
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+              No modelo tradicional das universidades, o estudante muitas vezes escreve apenas para tirar nota e agradar a banca, sob temas rígidos impostos pela academia. O resultado? O TCC vira um arquivo PDF esquecido em um repositório institucional que ninguém lê. O conhecimento é tratado como um fardo burocrático.
+            </p>
+
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+              Na <strong className="text-slate-900 font-bold">ESDHUBEM</strong>, nós devolvemos a utilidade e a vida ao saber. Preenchemos a lacuna deixada pelas gavetas acadêmicas e incentivamos nossos alunos a produzirem conhecimentos que geram valor real, visível e aplicável ao desenvolvimento humano. Aqui, o aluno escreve para o mundo e para a comunidade através de formatos plurais e acessíveis:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+              <div className="flex items-center gap-2.5 bg-white border border-slate-200/80 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-800 shadow-2xs">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Artigos de revisão bibliográfica ou narrativa</span>
+              </div>
+              <div className="flex items-center gap-2.5 bg-white border border-slate-200/80 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-800 shadow-2xs">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Ensaios teóricos, conceituais ou críticos</span>
+              </div>
+              <div className="flex items-center gap-2.5 bg-white border border-slate-200/80 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-800 shadow-2xs">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Relatos de opinião e cartas ao editor</span>
+              </div>
+              <div className="flex items-center gap-2.5 bg-white border border-slate-200/80 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-800 shadow-2xs">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Escrita criativa e partilha de conhecimento aberto</span>
+              </div>
+            </div>
+
+            <div className="bg-amber-500/10 border-l-4 border-[#FFC72C] p-3.5 rounded-r-xl">
+              <p className="text-slate-900 font-semibold text-sm sm:text-base leading-snug">
+                O saber deixa de ser um documento estático e burocrático para se transformar em um legado circulante.
+              </p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <div className="bg-slate-50 p-5 rounded-xl border border-slate-200/60 space-y-2 hover:border-amber-300 transition-colors">
               <div className="flex items-center gap-2 font-bold text-slate-900 text-base">
