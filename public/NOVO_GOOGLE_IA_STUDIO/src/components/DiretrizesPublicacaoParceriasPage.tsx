@@ -75,7 +75,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFC72C]/15 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold tracking-wide uppercase shadow-sm">
               <GraduationCap className="w-4 h-4 text-[#FFC72C]" />
-              <span>DIRETRIZES ACADÊMICAS & PESQUISA ESDHUBEM</span>
+              <span>DIRETRIZES DE PUBLICAÇÃO & PESQUISA ESDHUBEM</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
