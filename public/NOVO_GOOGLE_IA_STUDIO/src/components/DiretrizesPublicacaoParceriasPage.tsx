@@ -107,9 +107,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
           </div>
 
-          <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-            Nossa proposta pedagógica conecta-se perfeitamente com as <strong className="text-slate-900 font-semibold">Revistas de Médio Impacto</strong> (estratos <span className="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold">Qualis B1 a B4</span> / <span className="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold">Quartis Q3 e Q4</span>) e com as <strong className="text-slate-900 font-semibold">Revistas Interdisciplinares e Multidisciplinares</strong>.
-          </p>
+          <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <p>
+              Na estruturação da <strong className="text-slate-900 font-semibold">ESDHUBEM</strong>, adotamos a decisão estratégica de orientar nossos alunos que desejam escrever artigos e receber o <strong className="text-cyan-700 font-semibold">certificado diamante</strong> a direcionarem suas pesquisas para periódicos científicos de impacto intermediário, com forte foco no cenário nacional, regional, de acesso aberto e publicação independente e atendendo a metodologia e formatação dos trabalhos de acordo com que as revistas exigem.
+            </p>
+            <p>
+              Alcançando a publicação em revistas e periódicos o aluno receberá um <strong className="text-cyan-700 font-semibold">certificado diamante</strong> para ostentar no nosso site e nas redes sociais, com publicação gratuita do artigo na nossa página de artigos e nas suas redes sociais.
+            </p>
+            <p>
+              Nossa proposta pedagógica conecta-se perfeitamente com as <strong className="text-slate-900 font-semibold">Revistas de Médio Impacto</strong> (estratos <span className="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold">Qualis B1 a B4</span> / <span className="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold">Quartis Q3 e Q4</span>) e com as <strong className="text-slate-900 font-semibold">Revistas Interdisciplinares e Multidisciplinares</strong>.
+            </p>
+          </div>
 
           <div className="bg-amber-50/70 border-l-4 border-[#FFC72C] p-4 sm:p-5 rounded-r-2xl">
             <p className="text-slate-800 text-sm sm:text-base font-medium leading-relaxed">

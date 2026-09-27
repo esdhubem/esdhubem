@@ -26216,30 +26216,53 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 								children: "Revistas de Médio Impacto & Abordagem Interdisciplinar"
 							})] })]
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-							className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed",
 							children: [
-								"Nossa proposta pedagógica conecta-se perfeitamente com as ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-									className: "text-slate-900 font-semibold",
-									children: "Revistas de Médio Impacto"
-								}),
-								" (estratos ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold",
-									children: "Qualis B1 a B4"
-								}),
-								" / ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold",
-									children: "Quartis Q3 e Q4"
-								}),
-								") e com as ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-									className: "text-slate-900 font-semibold",
-									children: "Revistas Interdisciplinares e Multidisciplinares"
-								}),
-								"."
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+									"Na estruturação da ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-slate-900 font-semibold",
+										children: "ESDHUBEM"
+									}),
+									", adotamos a decisão estratégica de orientar nossos alunos que desejam escrever artigos e receber o ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-cyan-700 font-semibold",
+										children: "certificado diamante"
+									}),
+									" a direcionarem suas pesquisas para periódicos científicos de impacto intermediário, com forte foco no cenário nacional, regional, de acesso aberto e publicação independente e atendendo a metodologia e formatação dos trabalhos de acordo com que as revistas exigem."
+								] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+									"Alcançando a publicação em revistas e periódicos o aluno receberá um ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-cyan-700 font-semibold",
+										children: "certificado diamante"
+									}),
+									" para ostentar no nosso site e nas redes sociais, com publicação gratuita do artigo na nossa página de artigos e nas suas redes sociais."
+								] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+									"Nossa proposta pedagógica conecta-se perfeitamente com as ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-slate-900 font-semibold",
+										children: "Revistas de Médio Impacto"
+									}),
+									" (estratos ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold",
+										children: "Qualis B1 a B4"
+									}),
+									" / ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold",
+										children: "Quartis Q3 e Q4"
+									}),
+									") e com as ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-slate-900 font-semibold",
+										children: "Revistas Interdisciplinares e Multidisciplinares"
+									}),
+									"."
+								] })
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
