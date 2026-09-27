@@ -99,7 +99,18 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
         
         {/* Card 1: O Que Somos e Qual É o Nosso Propósito */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border border-slate-200/80 space-y-6">
-          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+          {/* Vídeo de Apresentação ESDHUBEM */}
+          <div className="w-full rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-950 aspect-video relative">
+            <iframe
+              src="https://odysee.com/$/embed/@esdhubem:a/apresentacao_esdhubem:2"
+              title="Apresentação da Escola de desenvolvimento humano e bem-estar ESDHUBEM"
+              className="w-full h-full border-0 absolute inset-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4 pt-1">
             <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600 shrink-0">
               <Compass className="w-6 h-6" />
             </div>
