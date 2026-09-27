@@ -21951,28 +21951,125 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-20 space-y-8",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "bg-amber-500/10 border border-amber-500/30 rounded-3xl p-6 sm:p-7 text-slate-800 shadow-sm space-y-2",
+					className: "bg-gradient-to-b from-amber-500/10 via-amber-500/5 to-white border border-amber-500/30 rounded-3xl p-6 sm:p-8 text-slate-800 shadow-md space-y-6",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-2 text-amber-900 font-bold text-base",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-bold text-[#182333]",
-								children: "O que são os Anais de Estudo e Pesquisa da ESDHUBEM?"
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-							className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+							className: "space-y-3 pb-4 border-b border-amber-500/20",
 							children: [
-								"Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-									className: "text-slate-900 font-bold",
-									children: "ESDHUBEM"
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-900 text-xs font-bold uppercase tracking-wider",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-amber-700" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Coleção Oficial ESDHUBEM" })]
 								}),
-								" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, bem como melhorar o seu desempenho profissional e relacional pois a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena."
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+									className: "text-2xl sm:text-3xl font-black text-slate-900 tracking-tight",
+									children: "MANUSCRITOS DE ESTUDO E PESQUISA"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+									children: [
+										"Acesse a coleção oficial de ensaios, artigos e anais de estudos produzidos pela coordenação pedagógica e pelos discentes da ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "text-slate-900 font-bold",
+											children: "ESDHUBEM"
+										}),
+										"."
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+									children: [
+										"Todos os trabalhos selecionados são preservados digitalmente e contam com atribuição de ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "text-slate-900 font-semibold",
+											children: "DOI (Digital Object Identifier)"
+										}),
+										" internacional por meio do ecossistema ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "text-amber-900 font-semibold",
+											children: "Zenodo / CERN"
+										}),
+										", garantindo autoria perene e circulação global."
+									]
+								})
 							]
 						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-white/90 border border-amber-200/80 rounded-2xl p-5 space-y-2 shadow-2xs",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
+								className: "text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, { className: "w-4 h-4 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "O que é este Espaço?" })]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+								className: "text-slate-700 text-xs sm:text-sm leading-relaxed",
+								children: [
+									"Este repositório reúne os ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-slate-900 font-semibold",
+										children: "Manuscritos de Conclusão de Curso (MCC)"
+									}),
+									" e as produções intelectuais apresentadas no nosso Seminário de Pesquisa contínuo. Afastando-nos de burocracias engessadas, este é o reflexo de uma comunidade que transita entre mundos: unindo o rigor técnico e científico à sabedoria prática, corporativa e holística."
+								]
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-3",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2 text-slate-900 font-bold text-base sm:text-lg",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Target, { className: "w-5 h-5 text-amber-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "🎯 O Propósito da nossa Produção Escrita" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-slate-700 text-xs sm:text-sm leading-relaxed",
+									children: "Estimulamos a escrita e a pesquisa como ferramentas de emancipação e excelência. Esta biblioteca viva serve como uma preparação prática para:"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-bold text-slate-900 text-xs sm:text-sm block text-amber-900",
+												children: "• Futuros Desafios Acadêmicos"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-slate-600 text-xs leading-relaxed",
+												children: "Domínio de estrutura para TCCs, monografias, dissertações e pós-graduações."
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-bold text-slate-900 text-xs sm:text-sm block text-amber-900",
+												children: "• Provas e Seleções"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-slate-600 text-xs leading-relaxed",
+												children: "Desenvolvimento de escrita dissertativa-argumentativa voltada para redações do ENEM, vestibulares e concursos públicos."
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-bold text-slate-900 text-xs sm:text-sm block text-amber-900",
+												children: "• Destaque no Mercado"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-slate-600 text-xs leading-relaxed",
+												children: "Construção de autoridade intelectual, capacidade de liderança e comunicação clara de ideias no ambiente corporativo e clínico."
+											})]
+										})
+									]
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-amber-500/10 border-l-4 border-amber-500 p-4 sm:p-5 rounded-r-2xl space-y-1.5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+								className: "text-slate-900 font-bold text-sm sm:text-base flex items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Brain, { className: "w-4 h-4 text-amber-700" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "🧠 A Escrita como Desenvolvimento Humano" })]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-slate-700 text-xs sm:text-sm leading-relaxed",
+								children: "Mais do que gerar métricas, acreditamos que a capacidade de ler criticamente, interpretar a realidade e expressar ideias com clareza faz parte de uma jornada de autodescoberta e cidadania. Navegue pelas publicações abaixo e conheça o conhecimento gerado em nossa rede!"
+							})]
+						}),
 						onNavigate && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "pt-2",
+							className: "pt-1",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								type: "button",
 								onClick: () => onNavigate("diretrizes-publicacao"),
