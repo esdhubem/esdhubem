@@ -24596,7 +24596,7 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 									"O objetivo primordial desta plataforma é ser um ",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 										className: "text-slate-900 font-semibold",
-										children: "celeiro de expansão de consciência, leitura crítica e estímulo à escrita reflexiva"
+										children: "espaço vivo de cultivo para a expansão da consciência, leitura crítica, escrita reflexiva e desenvolvimento integrativo em diversas áreas da vida"
 									}),
 									". Atuamos como uma ponte acolhedora entre saberes holísticos/humanistas e as ferramentas estruturadas da comunicação intelectual."
 								]

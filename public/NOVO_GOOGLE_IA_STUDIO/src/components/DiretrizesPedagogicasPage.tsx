@@ -117,7 +117,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </div>
 
           <p className="text-slate-700 text-base leading-relaxed">
-            O objetivo primordial desta plataforma é ser um <strong className="text-slate-900 font-semibold">celeiro de expansão de consciência, leitura crítica e estímulo à escrita reflexiva</strong>. Atuamos como uma ponte acolhedora entre saberes holísticos/humanistas e as ferramentas estruturadas da comunicação intelectual.
+            O objetivo primordial desta plataforma é ser um <strong className="text-slate-900 font-semibold">espaço vivo de cultivo para a expansão da consciência, leitura crítica, escrita reflexiva e desenvolvimento integrativo em diversas áreas da vida</strong>. Atuamos como uma ponte acolhedora entre saberes holísticos/humanistas e as ferramentas estruturadas da comunicação intelectual.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
