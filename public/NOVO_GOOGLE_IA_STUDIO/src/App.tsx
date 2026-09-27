@@ -745,6 +745,7 @@ export default function App() {
               setCurrentPage('sala-de-aula');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onNavigate={handleNavigate}
           />
         </main>
       )}

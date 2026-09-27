@@ -1471,6 +1471,12 @@
     gap: calc(var(--spacing) * 12);
   }
 
+  :where(.space-y-0\.5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * .5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * .5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+
   :where(.space-y-1 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(var(--spacing) * var(--tw-space-y-reverse));
@@ -1784,6 +1790,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .border-amber-400\/50 {
       border-color: color-mix(in oklab, var(--color-amber-400) 50%, transparent);
+    }
+  }
+
+  .border-amber-400\/60 {
+    border-color: #fcbb0099;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-amber-400\/60 {
+      border-color: color-mix(in oklab, var(--color-amber-400) 60%, transparent);
     }
   }
 
@@ -2411,6 +2427,16 @@
     background-color: var(--color-amber-100);
   }
 
+  .bg-amber-100\/80 {
+    background-color: #fef3c6cc;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-amber-100\/80 {
+      background-color: color-mix(in oklab, var(--color-amber-100) 80%, transparent);
+    }
+  }
+
   .bg-amber-100\/90 {
     background-color: #fef3c6e6;
   }
@@ -2578,6 +2604,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-cyan-100\/70 {
       background-color: color-mix(in oklab, var(--color-cyan-100) 70%, transparent);
+    }
+  }
+
+  .bg-cyan-100\/80 {
+    background-color: #cefafecc;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-cyan-100\/80 {
+      background-color: color-mix(in oklab, var(--color-cyan-100) 80%, transparent);
     }
   }
 
@@ -4360,6 +4396,18 @@
 
   .underline {
     text-decoration-line: underline;
+  }
+
+  .decoration-amber-500 {
+    -webkit-text-decoration-color: var(--color-amber-500);
+    -webkit-text-decoration-color: var(--color-amber-500);
+    text-decoration-color: var(--color-amber-500);
+  }
+
+  .decoration-cyan-500 {
+    -webkit-text-decoration-color: var(--color-cyan-500);
+    -webkit-text-decoration-color: var(--color-cyan-500);
+    text-decoration-color: var(--color-cyan-500);
   }
 
   .antialiased {

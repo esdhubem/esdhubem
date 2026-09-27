@@ -26145,7 +26145,7 @@ var PodcastsPage = ({ onBackToHome, onNavigateToCourses }) => {
 };
 //#endregion
 //#region src/components/DiretrizesPublicacaoParceriasPage.tsx
-var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, onNavigateToPortal }) => {
+var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, onNavigateToPortal, onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "bg-[#F8FAFC] min-h-screen text-slate-800 flex flex-col",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -26291,86 +26291,194 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "grid grid-cols-1 md:grid-cols-2 gap-5",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3 hover:border-slate-300 transition-colors",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2 text-cyan-700 font-bold text-base",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Globe, { className: "w-5 h-5 text-cyan-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: "Indexadores de Grande Porte" })]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
-										children: [
-											"Periódicos avaliados por ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800",
-												children: "Bases de Indexação globais"
-											}),
-											" (como ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Scopus" }),
-											" e ",
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Web of Science" }),
-											"), que possuem abertura para Trabalhos de Conclusão de Curso (TCC), iniciação científica e artigos de extensão."
-										]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "pt-2 flex flex-wrap gap-1.5",
-										children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
-												children: "Scopus"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
-												children: "Web of Science"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
-												children: "TCCs & Extensão"
-											})
-										]
-									})
-								]
+								className: "bg-slate-50 border-2 border-cyan-400/50 rounded-2xl p-5 space-y-4 hover:border-cyan-400 transition-colors flex flex-col justify-between shadow-xs",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-3",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-between gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2 text-cyan-700 font-bold text-base",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Globe, { className: "w-5 h-5 text-cyan-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: "Indexadores de Grande Porte" })]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-cyan-100 text-cyan-900 font-black text-[11px] shadow-xs shrink-0",
+												children: "💎 Nível Diamante"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+											className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+											children: [
+												"Periódicos avaliados por ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Bases de Indexação globais"
+												}),
+												" (como ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Scopus" }),
+												" e ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Web of Science" }),
+												"), que possuem abertura para Trabalhos de Conclusão de Curso (TCC), iniciação científica e artigos de extensão."
+											]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "pt-1 flex flex-wrap gap-1.5",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+													children: "Scopus"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+													children: "Web of Science"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+													children: "TCCs & Extensão"
+												})
+											]
+										})
+									]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-cyan-100/80 border border-cyan-300 rounded-xl p-3.5 flex items-start gap-2.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-2xl shrink-0",
+										children: "💎"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "text-xs text-cyan-950 space-y-0.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "block font-black text-cyan-900 text-xs sm:text-sm",
+											children: "Certificado Diamante (Mérito Máximo)"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+											className: "leading-relaxed text-cyan-950 font-medium",
+											children: [
+												"Publicações nestes indexadores de grande porte garantem ao aluno o ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "font-bold underline decoration-cyan-500",
+													children: "Certificado Diamante"
+												}),
+												", com a mais alta chancela de excelência da ESDHUBEM."
+											]
+										})]
+									})]
+								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3 hover:border-slate-300 transition-colors",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2 text-emerald-700 font-bold text-base",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-5 h-5 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: "Plataformas de Ciência Aberta" })]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+								className: "bg-slate-50 border-2 border-amber-400/60 rounded-2xl p-5 space-y-4 hover:border-amber-400 transition-colors flex flex-col justify-between shadow-xs",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-3",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-between gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2 text-emerald-700 font-bold text-base",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-5 h-5 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: "Plataformas de Ciência Aberta" })]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-100 text-amber-950 font-black text-[11px] shadow-xs shrink-0",
+												children: "🥇 Nível Ouro"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+											className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+											children: [
+												"Revistas indexadas no ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Zenodo (CERN / OpenAIRE)"
+												}),
+												" com atribuição de DOI oficial ou em consolidados indexadores latino-americanos, como o ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "SciELO"
+												}),
+												"."
+											]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "pt-1 flex flex-wrap gap-1.5",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+													children: "Zenodo (DOI Oficial)"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+													children: "SciELO"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+													children: "Acesso Aberto"
+												})
+											]
+										})
+									]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-amber-100/80 border border-amber-300 rounded-xl p-3.5 flex items-start gap-2.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-2xl shrink-0",
+										children: "🥇"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "text-xs text-amber-950 space-y-0.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "block font-black text-amber-950 text-xs sm:text-sm",
+											children: "Certificado Ouro (Ciência Aberta & DOI)"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+											className: "leading-relaxed text-amber-950 font-medium",
+											children: [
+												"Artigos catalogados com DOI em plataformas abertas como o Zenodo habilitam o ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "font-bold underline decoration-amber-500",
+													children: "Certificado Ouro"
+												}),
+												" de mérito acadêmico oficial da ESDHUBEM."
+											]
+										})]
+									})]
+								})]
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-gradient-to-r from-slate-900 to-[#182333] border-2 border-[#FFC72C]/60 rounded-2xl p-4 sm:p-5 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-start sm:items-center gap-3.5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "w-11 h-11 rounded-2xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center shrink-0 text-[#FFC72C]",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-6 h-6 text-[#FFC72C]" })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-0.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "inline-flex items-center gap-1.5 text-[#FFC72C] text-[11px] font-black uppercase tracking-wider",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Informação em Destaque • Escala de Mérito" })]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										className: "text-xs sm:text-sm text-slate-200 leading-relaxed",
 										children: [
-											"Revistas indexadas no ",
+											"Os ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800",
-												children: "Zenodo (CERN / OpenAIRE)"
+												className: "text-cyan-300 font-bold",
+												children: "Indexadores de Grande Porte"
 											}),
-											" com atribuição de DOI oficial ou em consolidados indexadores latino-americanos, como o ",
+											" habilitam os ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800",
-												children: "SciELO"
+												className: "text-cyan-300 font-bold",
+												children: "Certificados Diamante 💎"
+											}),
+											", e as ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-[#FFC72C] font-bold",
+												children: "Plataformas de Ciência Aberta com DOI"
+											}),
+											" habilitam os ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-[#FFC72C] font-bold",
+												children: "Certificados Ouro 🥇"
 											}),
 											"."
 										]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "pt-2 flex flex-wrap gap-1.5",
-										children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
-												children: "Zenodo (DOI Oficial)"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
-												children: "SciELO"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
-												children: "Acesso Aberto"
-											})
-										]
-									})
-								]
+									})]
+								})]
+							}), onNavigate && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								type: "button",
+								onClick: () => onNavigate("regras-certificacao-merito"),
+								className: "shrink-0 w-full md:w-auto bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black text-xs px-4 py-2.5 rounded-xl transition-all cursor-pointer shadow-md flex items-center justify-center gap-1.5 active:scale-95",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Escala de Mérito" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-4 h-4 text-slate-950" })]
 							})]
 						})
 					]
@@ -27403,7 +27511,8 @@ function App() {
 							top: 0,
 							behavior: "smooth"
 						});
-					}
+					},
+					onNavigate: handleNavigate
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {

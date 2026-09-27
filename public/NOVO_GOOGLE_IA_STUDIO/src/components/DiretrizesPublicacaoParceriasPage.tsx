@@ -18,19 +18,22 @@ import {
   Layers,
   FileText,
   MessageCircle,
-  Landmark
+  Landmark,
+  ChevronRight
 } from 'lucide-react';
 
 interface DiretrizesPublicacaoParceriasPageProps {
   onBackToHome: () => void;
   onNavigateToArticles?: () => void;
   onNavigateToPortal?: () => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoParceriasPageProps> = ({
   onBackToHome,
   onNavigateToArticles,
-  onNavigateToPortal
+  onNavigateToPortal,
+  onNavigate
 }) => {
   return (
     <div className="bg-[#F8FAFC] min-h-screen text-slate-800 flex flex-col">
@@ -136,37 +139,110 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {/* Indexadores de Grande Porte */}
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3 hover:border-slate-300 transition-colors">
-              <div className="flex items-center gap-2 text-cyan-700 font-bold text-base">
-                <Globe className="w-5 h-5 text-cyan-600" />
-                <h3>Indexadores de Grande Porte</h3>
+            {/* Indexadores de Grande Porte -> Certificado Diamante */}
+            <div className="bg-slate-50 border-2 border-cyan-400/50 rounded-2xl p-5 space-y-4 hover:border-cyan-400 transition-colors flex flex-col justify-between shadow-xs">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 text-cyan-700 font-bold text-base">
+                    <Globe className="w-5 h-5 text-cyan-600" />
+                    <h3>Indexadores de Grande Porte</h3>
+                  </div>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-cyan-100 text-cyan-900 font-black text-[11px] shadow-xs shrink-0">
+                    💎 Nível Diamante
+                  </span>
+                </div>
+
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Periódicos avaliados por <strong className="text-slate-800">Bases de Indexação globais</strong> (como <em>Scopus</em> e <em>Web of Science</em>), que possuem abertura para Trabalhos de Conclusão de Curso (TCC), iniciação científica e artigos de extensão.
+                </p>
+
+                <div className="pt-1 flex flex-wrap gap-1.5">
+                  <span className="bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Scopus</span>
+                  <span className="bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Web of Science</span>
+                  <span className="bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md">TCCs & Extensão</span>
+                </div>
               </div>
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                Periódicos avaliados por <strong className="text-slate-800">Bases de Indexação globais</strong> (como <em>Scopus</em> e <em>Web of Science</em>), que possuem abertura para Trabalhos de Conclusão de Curso (TCC), iniciação científica e artigos de extensão.
-              </p>
-              <div className="pt-2 flex flex-wrap gap-1.5">
-                <span className="bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Scopus</span>
-                <span className="bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Web of Science</span>
-                <span className="bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md">TCCs & Extensão</span>
+
+              {/* Destaque Diamante */}
+              <div className="bg-cyan-100/80 border border-cyan-300 rounded-xl p-3.5 flex items-start gap-2.5">
+                <span className="text-2xl shrink-0">💎</span>
+                <div className="text-xs text-cyan-950 space-y-0.5">
+                  <strong className="block font-black text-cyan-900 text-xs sm:text-sm">
+                    Certificado Diamante (Mérito Máximo)
+                  </strong>
+                  <p className="leading-relaxed text-cyan-950 font-medium">
+                    Publicações nestes indexadores de grande porte garantem ao aluno o <strong className="font-bold underline decoration-cyan-500">Certificado Diamante</strong>, com a mais alta chancela de excelência da ESDHUBEM.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Plataformas de Ciência Aberta */}
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3 hover:border-slate-300 transition-colors">
-              <div className="flex items-center gap-2 text-emerald-700 font-bold text-base">
-                <Sparkles className="w-5 h-5 text-emerald-600" />
-                <h3>Plataformas de Ciência Aberta</h3>
+            {/* Plataformas de Ciência Aberta -> Certificado Ouro */}
+            <div className="bg-slate-50 border-2 border-amber-400/60 rounded-2xl p-5 space-y-4 hover:border-amber-400 transition-colors flex flex-col justify-between shadow-xs">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 text-emerald-700 font-bold text-base">
+                    <Sparkles className="w-5 h-5 text-emerald-600" />
+                    <h3>Plataformas de Ciência Aberta</h3>
+                  </div>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-100 text-amber-950 font-black text-[11px] shadow-xs shrink-0">
+                    🥇 Nível Ouro
+                  </span>
+                </div>
+
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Revistas indexadas no <strong className="text-slate-800">Zenodo (CERN / OpenAIRE)</strong> com atribuição de DOI oficial ou em consolidados indexadores latino-americanos, como o <strong className="text-slate-800">SciELO</strong>.
+                </p>
+
+                <div className="pt-1 flex flex-wrap gap-1.5">
+                  <span className="bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Zenodo (DOI Oficial)</span>
+                  <span className="bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md">SciELO</span>
+                  <span className="bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Acesso Aberto</span>
+                </div>
               </div>
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                Revistas indexadas no <strong className="text-slate-800">Zenodo (CERN / OpenAIRE)</strong> com atribuição de DOI oficial ou em consolidados indexadores latino-americanos, como o <strong className="text-slate-800">SciELO</strong>.
-              </p>
-              <div className="pt-2 flex flex-wrap gap-1.5">
-                <span className="bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Zenodo (DOI Oficial)</span>
-                <span className="bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md">SciELO</span>
-                <span className="bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Acesso Aberto</span>
+
+              {/* Destaque Ouro */}
+              <div className="bg-amber-100/80 border border-amber-300 rounded-xl p-3.5 flex items-start gap-2.5">
+                <span className="text-2xl shrink-0">🥇</span>
+                <div className="text-xs text-amber-950 space-y-0.5">
+                  <strong className="block font-black text-amber-950 text-xs sm:text-sm">
+                    Certificado Ouro (Ciência Aberta & DOI)
+                  </strong>
+                  <p className="leading-relaxed text-amber-950 font-medium">
+                    Artigos catalogados com DOI em plataformas abertas como o Zenodo habilitam o <strong className="font-bold underline decoration-amber-500">Certificado Ouro</strong> de mérito acadêmico oficial da ESDHUBEM.
+                  </p>
+                </div>
               </div>
             </div>
+          </div>
+
+          {/* Destaque de Correlação com a Escala de Mérito */}
+          <div className="bg-gradient-to-r from-slate-900 to-[#182333] border-2 border-[#FFC72C]/60 rounded-2xl p-4 sm:p-5 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-start sm:items-center gap-3.5">
+              <div className="w-11 h-11 rounded-2xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center shrink-0 text-[#FFC72C]">
+                <Award className="w-6 h-6 text-[#FFC72C]" />
+              </div>
+              <div className="space-y-0.5">
+                <div className="inline-flex items-center gap-1.5 text-[#FFC72C] text-[11px] font-black uppercase tracking-wider">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  <span>Informação em Destaque • Escala de Mérito</span>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                  Os <strong className="text-cyan-300 font-bold">Indexadores de Grande Porte</strong> habilitam os <strong className="text-cyan-300 font-bold">Certificados Diamante 💎</strong>, e as <strong className="text-[#FFC72C] font-bold">Plataformas de Ciência Aberta com DOI</strong> habilitam os <strong className="text-[#FFC72C] font-bold">Certificados Ouro 🥇</strong>.
+                </p>
+              </div>
+            </div>
+
+            {onNavigate && (
+              <button
+                type="button"
+                onClick={() => onNavigate('regras-certificacao-merito')}
+                className="shrink-0 w-full md:w-auto bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black text-xs px-4 py-2.5 rounded-xl transition-all cursor-pointer shadow-md flex items-center justify-center gap-1.5 active:scale-95"
+              >
+                <span>Ver Escala de Mérito</span>
+                <ChevronRight className="w-4 h-4 text-slate-950" />
+              </button>
+            )}
           </div>
         </div>
 
