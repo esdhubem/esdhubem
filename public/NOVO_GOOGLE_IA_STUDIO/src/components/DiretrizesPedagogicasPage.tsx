@@ -870,13 +870,155 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
                 </table>
               </div>
 
-              <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-slate-800 text-sm leading-relaxed mt-4 space-y-3">
-                <p>
-                  Para os alunos da <strong className="text-slate-900 font-bold">ESDHUBEM</strong>, aprender a redigir protótipos consistentes e registrá-los em plataformas abertas como o Zenodo, ou publicá-los via redes abertas e comunitárias, proporciona uma experiência real e imediata de autoria reconhecida, impacto social e inclusão no ecossistema global de produção de conhecimento.
-                </p>
-                <p className="pt-2 border-t border-amber-500/20 text-slate-700">
-                  Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da <strong className="text-slate-900 font-bold">ESDHUBEM</strong> é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, bem como melhorar o seu desempenho profissional e relacional pois a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena.
-                </p>
+              {/* O Repositório de Produção Intelectual da ESDHUBEM */}
+              <div className="rounded-2xl bg-gradient-to-b from-amber-50/80 via-white to-amber-50/50 border border-amber-300/80 p-6 sm:p-8 text-slate-800 text-sm leading-relaxed mt-6 space-y-6 shadow-sm">
+                <div className="space-y-2 border-b border-amber-200/80 pb-4">
+                  <span className="text-xs font-bold text-amber-700 uppercase tracking-wider block">
+                    Coleção Oficial & Diretrizes de Conclusão
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-black text-slate-900">
+                    O Repositório de Produção Intelectual da ESDHUBEM
+                  </h3>
+                </div>
+
+                <div className="space-y-3 text-slate-700 sm:text-base leading-relaxed">
+                  <p>
+                    A <strong className="text-slate-900 font-bold">ESDHUBEM</strong> busca ser um ecossistema amplo, voltado para o <strong className="text-slate-900 font-semibold">Desenvolvimento Integral</strong> do indivíduo e do profissional. A escola opera exatamente nessa intersecção: ela traz o rigor e a utilidade prática do mundo científico (como a leitura de exames laboratoriais) e o dinamismo estratégico do ambiente corporativo, financeiro, de liderança e da Inteligência Artificial.
+                  </p>
+                  <p>
+                    Realizamos a disponibilização de publicações dos alunos da ESDHUBEM a respeito dos projetos e trabalhos de conclusão dos nossos cursos, pois valorizamos a educação aberta, a criação e o compartilhamento de recursos educacionais e materiais de ensino sem restrições de uso. Através da valorização da democratização no ensino, no mercado de trabalho e no desenvolvimento humano, profissional e relacional, nós facilitamos o acesso à informação e avanços no estudo e práticas, visando acelerar as descobertas por meio do trabalho conjunto em rede e da troca contínua de informações. Tendo em conta a importância da <strong className="text-slate-900 font-semibold">Transparência e da Reprodutibilidade</strong>, garantimos maior confiabilidade aos estudos ao expor claramente o caminho metodológico percorrido.
+                  </p>
+                  <p>
+                    A nossa escola estimula o aluno a escrever desde textos mais livres para o nosso blog interno até produções robustas e modernas para ecossistemas DeSci e Preprints. Por isso, o trabalho final do curso recebe o nome de <strong className="text-amber-900 font-bold">Manuscrito de Conclusão de Curso (MCC)</strong> — termo derivado do conceito universal <em>manuscript</em>, utilizado internacionalmente por redes de pesquisa e plataformas DeSci —, refletindo essa pluralidade de formatos e o conceito de autoria.
+                  </p>
+                  <p>
+                    O MCC abraça qualquer formato de escrita, seja um ensaio prático de 3 páginas ou um estudo aprofundado, dividindo-se em três formatos principais à escolha do aluno:
+                  </p>
+                </div>
+
+                {/* 3 Formatos Principais de MCC */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-white border border-amber-200/90 rounded-xl p-4 space-y-2 shadow-2xs">
+                    <span className="font-bold text-amber-900 text-sm block">
+                      • Artigo de Autoria e Conclusão (AAC)
+                    </span>
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                      Foca no formato de artigo enxuto e no empoderamento do estudante enquanto autor de suas soluções e ideias.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-amber-200/90 rounded-xl p-4 space-y-2 shadow-2xs">
+                    <span className="font-bold text-amber-900 text-sm block">
+                      • Ensaio de Conclusão de Curso (ECC)
+                    </span>
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                      Ideal para análises reflexivas, conceituais, filosóficas e de opinião densamente fundamentada.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-amber-200/90 rounded-xl p-4 space-y-2 shadow-2xs">
+                    <span className="font-bold text-amber-900 text-sm block">
+                      • Projeto Integrador de Conclusão
+                    </span>
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                      Foca na aplicação prática do conhecimento, unindo a fundamentação técnica (como protocolos integrativos ou análises tecnológicas e de negócios) com as demandas do mundo real.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-3 pt-2">
+                  <p className="text-slate-700 sm:text-base leading-relaxed">
+                    Os nossos repositórios de Produção Intelectual constituem a nossa coleção oficial que reúne os Manuscritos de Conclusão de Curso (MCC), ensaios e artigos desenvolvidos pelos nossos discentes. Afastando-nos de modelos puramente acadêmicos positivistas e burocráticos, damos total liberdade para que o estudante escolha o formato e o destino ideal para a sua produção escrita, divididos em três jornadas possíveis:
+                  </p>
+                </div>
+
+                {/* As Três Jornadas */}
+                <div className="space-y-4 pt-1">
+                  {/* Jornada 1 */}
+                  <div className="bg-white border-2 border-emerald-300/80 rounded-2xl p-5 space-y-3 shadow-2xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">🟢</span>
+                      <h4 className="text-base sm:text-lg font-bold text-emerald-950">
+                        Jornada 1: Produção de Conteúdo e Comunicação (Mídia Própria)
+                      </h4>
+                    </div>
+                    <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                      Para os alunos que desejam focar na escrita clara, informativa e com linguagem acessível para o grande público ou potenciais clientes.
+                    </p>
+                    <div className="space-y-2 text-xs sm:text-sm pt-1">
+                      <p className="text-slate-700">
+                        <strong className="text-emerald-900 font-semibold">• Assuntos adequados:</strong> Conteúdos práticos sobre aplicação de Práticas Integrativas e leitura complementar de exames; guias e insights de Desenvolvimento Pessoal, Humano, Ético e Relacional; artigos sobre Educação Financeira, Formação Livre, Liderança ou o uso de IA e Tecnologias no cotidiano profissional.
+                      </p>
+                      <p className="text-slate-700">
+                        <strong className="text-emerald-900 font-semibold">• Destino:</strong> Publicação no Blog Oficial da ESDHUBEM, funcionando como vitrine profissional e portfólio para terapeutas, consultores e pesquisadores autônomos.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Jornada 2 */}
+                  <div className="bg-white border-2 border-blue-300/80 rounded-2xl p-5 space-y-3 shadow-2xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">🔵</span>
+                      <h4 className="text-base sm:text-lg font-bold text-blue-950">
+                        Jornada 2: Repositórios Abertos Globais e Preprints
+                      </h4>
+                    </div>
+                    <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                      Para os discentes que desejam registrar formalmente suas revisões narrativas, ensaios e cartografias de experiência em infraestruturas globais de pesquisa, garantindo autoria perene com registro DOI.
+                    </p>
+                    <div className="space-y-2 text-xs sm:text-sm pt-1">
+                      <p className="text-slate-700">
+                        <strong className="text-blue-900 font-semibold">• Assuntos adequados:</strong> Estudos e revisões sobre a evolução histórica de saberes tradicionais; ensaios sobre teorias do desenvolvimento da consciência e psicologia; artigos fundamentados em metodologias qualitativas de ciências humanas e sociais; reflexões epistemológicas decoloniais e propostas de educação integrativa.
+                      </p>
+                      <p className="text-slate-700">
+                        <strong className="text-blue-900 font-semibold">• Destinos:</strong> Zenodo (CERN), OSF Preprints, ou plataformas de nicho em ciências sociais e humanas como o SocArXiv e o SciELO Preprints.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Jornada 3 */}
+                  <div className="bg-white border-2 border-purple-300/80 rounded-2xl p-5 space-y-3 shadow-2xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">🟣</span>
+                      <h4 className="text-base sm:text-lg font-bold text-purple-950">
+                        Jornada 3: Ecossistema DeSci (Ciência Descentralizada) e Revistas Comunitárias
+                      </h4>
+                    </div>
+                    <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                      Para os estudantes que desejam vivenciar a vanguarda tecnológica e publicar seus artigos sob a governança de redes autônomas e descentralizadas, livres de barreiras pagas ou monopólios corporativos.
+                    </p>
+                    <div className="space-y-2 text-xs sm:text-sm pt-1">
+                      <p className="text-slate-700">
+                        <strong className="text-purple-900 font-semibold">• Assuntos adequados:</strong> Cartografias fenomenológicas da relação terapeuta-interagente; pesquisas qualitativas sobre o impacto de treinamentos e palestras corporativas no desenvolvimento ético; análises de discurso sobre o comportamento da sociedade digital; e ensaios transdisciplinares sobre novos modelos de negócios e saúde integrativa no ecossistema moderno.
+                      </p>
+                      <div className="space-y-1.5 pt-1">
+                        <strong className="text-purple-900 font-semibold block">• Plataformas DeSci e Abertas Disponíveis:</strong>
+                        <ul className="list-disc pl-5 space-y-1 text-slate-700">
+                          <li><strong>ResearchHub:</strong> Rede colaborativa global que permite publicação de preprints, debates abertos e incentivos comunitários em ecossistema blockchain.</li>
+                          <li><strong>DeSci Publish / Planck Network:</strong> Protocolos que garantem a publicação perene e descentralizada de manuscritos (IPFS/Arweave), protegidos contra a censura ou taxas abusivas.</li>
+                          <li><strong>PubPub (Knowledge Futures Group):</strong> Plataforma de código aberto (nascida em projetos ligados ao MIT Media Lab) voltada para a criação de periódicos dinâmicos e comunitários interativos.</li>
+                          <li><strong>Periódicos com Revisão Aberta (Open Peer Review) e Revistas Comunitárias (OJS):</strong> Espaços transparentes (como F1000Research ou revistas independentes) que acolhem saberes tradicionais, fenomenologia e práticas integrativas de forma pedagógica e construtiva.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* O Propósito Humano e Profissional da Escrita */}
+                <div className="pt-4 border-t border-amber-200/80 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <Award className="w-5 h-5 text-amber-600 shrink-0" />
+                    <h4 className="text-lg font-bold text-slate-900">
+                      O Propósito Humano e Profissional da Escrita
+                    </h4>
+                  </div>
+                  <p className="text-slate-700 sm:text-base leading-relaxed">
+                    Este ecossistema flexível foi desenhado para quem deseja desenvolver a capacidade de ler, estudar e escrever, servindo como preparação prática para redações de vestibulares/ENEM, concursos públicos ou futuras publicações internacionais. Ele atende perfeitamente quem busca o desenvolvimento pessoal, relacional e outras áreas da vida.
+                  </p>
+                  <p className="text-slate-700 sm:text-base leading-relaxed">
+                    Saber estruturar, redigir e apresentar ideias ao mundo faz parte de uma jornada profunda de autodescoberta e aprimoramento contínuo — gerando uma postura ética, responsável e consciente que educa e prepara as pessoas para terem mais êxito em suas carreiras, relações e projetos de vida. Mais do que métricas frias, aprender a organizar o pensamento expande a nossa compreensão da realidade, melhora o desempenho clínico, relacional e empresarial, permitindo ao indivíduo comunicar suas verdades com clareza, liderar com autoridade e exercer a cidadania de forma plena.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
