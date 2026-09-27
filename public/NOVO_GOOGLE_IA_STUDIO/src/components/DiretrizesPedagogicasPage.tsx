@@ -711,6 +711,131 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               </div>
             </div>
 
+            {/* 4. Plataformas Abertas Globais: SciELO Preprints e SocArXiv */}
+            <div className="space-y-4 pt-3 border-t border-slate-100">
+              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <span className="w-7 h-7 rounded-lg bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs">4</span>
+                <span>Plataformas Abertas Globais: SciELO Preprints e SocArXiv</span>
+              </h3>
+
+              <div className="bg-purple-50/40 border border-purple-200/70 rounded-2xl p-5 space-y-4">
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  Plataformas sérias como o <strong className="text-slate-900 font-semibold">SciELO Preprints</strong> e o <strong className="text-slate-900 font-semibold">SocArXiv</strong> publicam de fato muitos textos sobre pensamento decolonial, saberes ancestrais, epistemologias do Sul Global e práticas integrativas. A moderação dessas plataformas filtra pseudociência purista mas aceita de braços abertos temas menos ortodoxos e sem comprovação empírica se eles forem abordados sob o recorte metodológico correto das Ciências Humanas.
+                </p>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  Para ser aceito nesses servidores, o texto do aluno deve migrar do formato "científico naturalista" para o formato de <strong className="text-purple-900 font-semibold">pesquisa qualitativa, social ou filosófica</strong>.
+                </p>
+
+                {/* Subseção 1: Que áreas não ortodoxas e sem comprovações empíricas eles aceitam? */}
+                <div className="space-y-2 pt-2">
+                  <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <span className="text-purple-700">1.</span>
+                    <span>Que áreas não ortodoxas e sem comprovações empíricas eles aceitam?</span>
+                  </h4>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Tanto o SciELO Preprints quanto o SocArXiv aceitam reflexões sobre saberes tradicionais se as pesquisas estiverem enquadradas nas seguintes frentes:
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                    <div className="bg-white p-3.5 rounded-xl border border-purple-200/60 space-y-1 shadow-2xs">
+                      <span className="font-bold text-purple-950 text-xs block">Epistemologias Insurgentes e Decoloniais</span>
+                      <p className="text-slate-600 text-xs leading-relaxed">
+                        Estudos que criticam o monopólio da ciência eurocêntrica e positivista e dão espaço para "justiça cognitiva", pedagogias de encruzilhadas (como matrizes afro-diaspóricas) ou visões de mundo indígenas.
+                      </p>
+                    </div>
+
+                    <div className="bg-white p-3.5 rounded-xl border border-purple-200/60 space-y-1 shadow-2xs">
+                      <span className="font-bold text-purple-950 text-xs block">Antropologia e Sociologia da Religião / Ocultismo</span>
+                      <p className="text-slate-600 text-xs leading-relaxed">
+                        Análises sobre crenças, movimentos neopagãos, esoterismo e sistemas de cura alternativos sob a ótica de como grupos sociais se organizam ou criam significado por meio deles.
+                      </p>
+                    </div>
+
+                    <div className="bg-white p-3.5 rounded-xl border border-purple-200/60 space-y-1 shadow-2xs">
+                      <span className="font-bold text-purple-950 text-xs block">Fenomenologia e Cartografias de Experiência</span>
+                      <p className="text-slate-600 text-xs leading-relaxed">
+                        Estudos que focam na percepção subjetiva do indivíduo. Em vez de medir a "eficácia clínica" de uma terapia holística como a iridologia, investiga-se a experiência vivida pelo paciente, a relação terapeuta-cliente e o impacto no bem-estar percebido.
+                      </p>
+                    </div>
+
+                    <div className="bg-white p-3.5 rounded-xl border border-purple-200/60 space-y-1 shadow-2xs">
+                      <span className="font-bold text-purple-950 text-xs block">História das Ciências e Saberes</span>
+                      <p className="text-slate-600 text-xs leading-relaxed">
+                        Resgates históricos da alquimia, do hermetismo e da própria astrologia, contextualizando o surgimento de correntes de pensamento e suas quebras estruturais ao longo do tempo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Subseção 2: Que tipos de textos podem ser direcionados para lá? */}
+                <div className="space-y-3 pt-3">
+                  <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <span className="text-purple-700">2.</span>
+                    <span>Que tipos de textos podem ser direcionados para lá? (O formato ideal)</span>
+                  </h4>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    O segredo para o aluno da sua escola ter sucesso na moderação dessas plataformas é focar em estruturas textuais que valorizem a argumentação conceitual ou qualitativa. Os formatos mais bem-aceitos são:
+                  </p>
+
+                  <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs bg-white">
+                    <table className="w-full text-left border-collapse text-xs">
+                      <thead>
+                        <tr className="bg-slate-100 text-slate-900 border-b border-slate-200">
+                          <th className="py-2.5 px-3 font-bold">Tipo de Texto Aceito</th>
+                          <th className="py-2.5 px-3 font-bold">Como estruturar para a moderação dessas plataformas</th>
+                          <th className="py-2.5 px-3 font-bold">Exemplo Prático Realista / DeSci</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 text-slate-700">
+                        <tr className="hover:bg-slate-50/80">
+                          <td className="py-2.5 px-3 font-semibold text-purple-950 whitespace-nowrap">Ensaio Teórico / Epistemológico</td>
+                          <td className="py-2.5 px-3">Foco em conectar teorias conceituais densas (como as de Foucault, Jung, ou pensadores decoloniais) com a lógica interna dos saberes holísticos.</td>
+                          <td className="py-2.5 px-3 italic text-slate-600">Um ensaio no SocArXiv discutindo a Alquimia e os arquétipos junguianos como ferramentas de emancipação psíquica fora do modelo psiquiátrico tradicional.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50/80">
+                          <td className="py-2.5 px-3 font-semibold text-purple-950 whitespace-nowrap">Revisão de Literatura Narrativa / Crítica</td>
+                          <td className="py-2.5 px-3">Organizar sistematicamente o que outros autores, historiadores ou sociólogos já escreveram sobre o tema, amarrando com uma crítica contemporânea.</td>
+                          <td className="py-2.5 px-3 italic text-slate-600">Uma revisão de literatura no SciELO Preprints mapeando a evolução histórica do Hermetismo e suas influências na filosofia ocidental oculta.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50/80">
+                          <td className="py-2.5 px-3 font-semibold text-purple-950 whitespace-nowrap">Estudo de Caso Qualitativo / Etnográfico</td>
+                          <td className="py-2.5 px-3">Analisar narrativas individuais, entrevistas de campo ou a história de uma comunidade sem a necessidade de produzir dados estatísticos fechados.</td>
+                          <td className="py-2.5 px-3 italic text-slate-600">Uma pesquisa analisando os discursos e percepções de autocuidado entre praticantes contemporâneos de Iridologia sob a ótica da saúde integrativa.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50/80">
+                          <td className="py-2.5 px-3 font-semibold text-purple-950 whitespace-nowrap">Comentários Críticos ou Análises de Discurso</td>
+                          <td className="py-2.5 px-3">Analisar produtos culturais contemporâneos (como livros, discursos políticos, documentários ou mídias digitais) que usam a linguagem desses saberes tradicionais.</td>
+                          <td className="py-2.5 px-3 italic text-slate-600">Uma análise de discurso sobre como o "boom" da astrologia digital na Geração Z reflete novas buscas por espiritualidade e identidade em tempos de crise institucional.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Subseção 3: O "Filtro de Segurança" para os seus alunos */}
+                <div className="bg-white rounded-xl p-4 border border-amber-200/80 space-y-2.5 shadow-2xs">
+                  <span className="font-bold text-amber-900 text-xs sm:text-sm block">
+                    🛡️ O "Filtro de Segurança" para os alunos
+                  </span>
+                  <p className="text-slate-600 text-xs leading-relaxed">
+                    Para garantir que os textos dos alunos passem pela moderação automática/humana do SciELO e SocArXiv, oriente-os a evitar gatilhos textuais dogmáticos:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                    <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-xs space-y-1">
+                      <span className="font-bold text-red-700 block">❌ O que NÃO escrever:</span>
+                      <p className="italic text-slate-700">"A iridologia comprova que a mancha na íris cura o estômago..."</p>
+                      <span className="text-[11px] text-red-600 block">(Isto é rejeitado como pseudociência factual).</span>
+                    </div>
+                    <div className="p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-xs space-y-1">
+                      <span className="font-bold text-emerald-800 block">✅ O que escrever:</span>
+                      <p className="italic text-slate-700">"Este estudo busca compreender a iridologia como uma prática integrativa e fenomenológica, analisando o discurso dos terapeutas e o impacto sociocultural da técnica..."</p>
+                      <span className="text-[11px] text-emerald-700 block">(Isto é aceito como Ciência Social / Saúde Coletiva legítima).</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Tabela Comparativa: Como Isso se Conecta com a ESDHUBEM */}
             <div className="space-y-4 pt-4 border-t border-slate-100">
               <h3 className="text-xl font-bold text-slate-900">

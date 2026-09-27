@@ -25538,6 +25538,268 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 										})]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "space-y-4 pt-3 border-t border-slate-100",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
+											className: "text-lg font-bold text-slate-900 flex items-center gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "w-7 h-7 rounded-lg bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs",
+												children: "4"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Plataformas Abertas Globais: SciELO Preprints e SocArXiv" })]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-purple-50/40 border border-purple-200/70 rounded-2xl p-5 space-y-4",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+													className: "text-slate-700 text-sm leading-relaxed",
+													children: [
+														"Plataformas sérias como o ",
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+															className: "text-slate-900 font-semibold",
+															children: "SciELO Preprints"
+														}),
+														" e o ",
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+															className: "text-slate-900 font-semibold",
+															children: "SocArXiv"
+														}),
+														" publicam de fato muitos textos sobre pensamento decolonial, saberes ancestrais, epistemologias do Sul Global e práticas integrativas. A moderação dessas plataformas filtra pseudociência purista mas aceita de braços abertos temas menos ortodoxos e sem comprovação empírica se eles forem abordados sob o recorte metodológico correto das Ciências Humanas."
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+													className: "text-slate-700 text-sm leading-relaxed",
+													children: [
+														"Para ser aceito nesses servidores, o texto do aluno deve migrar do formato \"científico naturalista\" para o formato de ",
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+															className: "text-purple-900 font-semibold",
+															children: "pesquisa qualitativa, social ou filosófica"
+														}),
+														"."
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "space-y-2 pt-2",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+															className: "text-sm font-bold text-slate-900 flex items-center gap-2",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-purple-700",
+																children: "1."
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Que áreas não ortodoxas e sem comprovações empíricas eles aceitam?" })]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+															children: "Tanto o SciELO Preprints quanto o SocArXiv aceitam reflexões sobre saberes tradicionais se as pesquisas estiverem enquadradas nas seguintes frentes:"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+															className: "grid grid-cols-1 md:grid-cols-2 gap-3 pt-1",
+															children: [
+																/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																	className: "bg-white p-3.5 rounded-xl border border-purple-200/60 space-y-1 shadow-2xs",
+																	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "font-bold text-purple-950 text-xs block",
+																		children: "Epistemologias Insurgentes e Decoloniais"
+																	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+																		className: "text-slate-600 text-xs leading-relaxed",
+																		children: "Estudos que criticam o monopólio da ciência eurocêntrica e positivista e dão espaço para \"justiça cognitiva\", pedagogias de encruzilhadas (como matrizes afro-diaspóricas) ou visões de mundo indígenas."
+																	})]
+																}),
+																/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																	className: "bg-white p-3.5 rounded-xl border border-purple-200/60 space-y-1 shadow-2xs",
+																	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "font-bold text-purple-950 text-xs block",
+																		children: "Antropologia e Sociologia da Religião / Ocultismo"
+																	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+																		className: "text-slate-600 text-xs leading-relaxed",
+																		children: "Análises sobre crenças, movimentos neopagãos, esoterismo e sistemas de cura alternativos sob a ótica de como grupos sociais se organizam ou criam significado por meio deles."
+																	})]
+																}),
+																/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																	className: "bg-white p-3.5 rounded-xl border border-purple-200/60 space-y-1 shadow-2xs",
+																	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "font-bold text-purple-950 text-xs block",
+																		children: "Fenomenologia e Cartografias de Experiência"
+																	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+																		className: "text-slate-600 text-xs leading-relaxed",
+																		children: "Estudos que focam na percepção subjetiva do indivíduo. Em vez de medir a \"eficácia clínica\" de uma terapia holística como a iridologia, investiga-se a experiência vivida pelo paciente, a relação terapeuta-cliente e o impacto no bem-estar percebido."
+																	})]
+																}),
+																/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																	className: "bg-white p-3.5 rounded-xl border border-purple-200/60 space-y-1 shadow-2xs",
+																	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "font-bold text-purple-950 text-xs block",
+																		children: "História das Ciências e Saberes"
+																	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+																		className: "text-slate-600 text-xs leading-relaxed",
+																		children: "Resgates históricos da alquimia, do hermetismo e da própria astrologia, contextualizando o surgimento de correntes de pensamento e suas quebras estruturais ao longo do tempo."
+																	})]
+																})
+															]
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "space-y-3 pt-3",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
+															className: "text-sm font-bold text-slate-900 flex items-center gap-2",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-purple-700",
+																children: "2."
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Que tipos de textos podem ser direcionados para lá? (O formato ideal)" })]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+															children: "O segredo para o aluno da sua escola ter sucesso na moderação dessas plataformas é focar em estruturas textuais que valorizem a argumentação conceitual ou qualitativa. Os formatos mais bem-aceitos são:"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "overflow-x-auto rounded-xl border border-slate-200 shadow-2xs bg-white",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
+																className: "w-full text-left border-collapse text-xs",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+																	className: "bg-slate-100 text-slate-900 border-b border-slate-200",
+																	children: [
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+																			className: "py-2.5 px-3 font-bold",
+																			children: "Tipo de Texto Aceito"
+																		}),
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+																			className: "py-2.5 px-3 font-bold",
+																			children: "Como estruturar para a moderação dessas plataformas"
+																		}),
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+																			className: "py-2.5 px-3 font-bold",
+																			children: "Exemplo Prático Realista / DeSci"
+																		})
+																	]
+																}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tbody", {
+																	className: "divide-y divide-slate-100 text-slate-700",
+																	children: [
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+																			className: "hover:bg-slate-50/80",
+																			children: [
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3 font-semibold text-purple-950 whitespace-nowrap",
+																					children: "Ensaio Teórico / Epistemológico"
+																				}),
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3",
+																					children: "Foco em conectar teorias conceituais densas (como as de Foucault, Jung, ou pensadores decoloniais) com a lógica interna dos saberes holísticos."
+																				}),
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3 italic text-slate-600",
+																					children: "Um ensaio no SocArXiv discutindo a Alquimia e os arquétipos junguianos como ferramentas de emancipação psíquica fora do modelo psiquiátrico tradicional."
+																				})
+																			]
+																		}),
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+																			className: "hover:bg-slate-50/80",
+																			children: [
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3 font-semibold text-purple-950 whitespace-nowrap",
+																					children: "Revisão de Literatura Narrativa / Crítica"
+																				}),
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3",
+																					children: "Organizar sistematicamente o que outros autores, historiadores ou sociólogos já escreveram sobre o tema, amarrando com uma crítica contemporânea."
+																				}),
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3 italic text-slate-600",
+																					children: "Uma revisão de literatura no SciELO Preprints mapeando a evolução histórica do Hermetismo e suas influências na filosofia ocidental oculta."
+																				})
+																			]
+																		}),
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+																			className: "hover:bg-slate-50/80",
+																			children: [
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3 font-semibold text-purple-950 whitespace-nowrap",
+																					children: "Estudo de Caso Qualitativo / Etnográfico"
+																				}),
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3",
+																					children: "Analisar narrativas individuais, entrevistas de campo ou a história de uma comunidade sem a necessidade de produzir dados estatísticos fechados."
+																				}),
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3 italic text-slate-600",
+																					children: "Uma pesquisa analisando os discursos e percepções de autocuidado entre praticantes contemporâneos de Iridologia sob a ótica da saúde integrativa."
+																				})
+																			]
+																		}),
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+																			className: "hover:bg-slate-50/80",
+																			children: [
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3 font-semibold text-purple-950 whitespace-nowrap",
+																					children: "Comentários Críticos ou Análises de Discurso"
+																				}),
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3",
+																					children: "Analisar produtos culturais contemporâneos (como livros, discursos políticos, documentários ou mídias digitais) que usam a linguagem desses saberes tradicionais."
+																				}),
+																				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+																					className: "py-2.5 px-3 italic text-slate-600",
+																					children: "Uma análise de discurso sobre como o \"boom\" da astrologia digital na Geração Z reflete novas buscas por espiritualidade e identidade em tempos de crise institucional."
+																				})
+																			]
+																		})
+																	]
+																})]
+															})
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "bg-white rounded-xl p-4 border border-amber-200/80 space-y-2.5 shadow-2xs",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+															className: "font-bold text-amber-900 text-xs sm:text-sm block",
+															children: "🛡️ O \"Filtro de Segurança\" para os alunos"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-slate-600 text-xs leading-relaxed",
+															children: "Para garantir que os textos dos alunos passem pela moderação automática/humana do SciELO e SocArXiv, oriente-os a evitar gatilhos textuais dogmáticos:"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+															className: "grid grid-cols-1 md:grid-cols-2 gap-3 pt-1",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																className: "p-3 rounded-lg bg-red-50 border border-red-200 text-xs space-y-1",
+																children: [
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "font-bold text-red-700 block",
+																		children: "❌ O que NÃO escrever:"
+																	}),
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+																		className: "italic text-slate-700",
+																		children: "\"A iridologia comprova que a mancha na íris cura o estômago...\""
+																	}),
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "text-[11px] text-red-600 block",
+																		children: "(Isto é rejeitado como pseudociência factual)."
+																	})
+																]
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																className: "p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-xs space-y-1",
+																children: [
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "font-bold text-emerald-800 block",
+																		children: "✅ O que escrever:"
+																	}),
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+																		className: "italic text-slate-700",
+																		children: "\"Este estudo busca compreender a iridologia como uma prática integrativa e fenomenológica, analisando o discurso dos terapeutas e o impacto sociocultural da técnica...\""
+																	}),
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "text-[11px] text-emerald-700 block",
+																		children: "(Isto é aceito como Ciência Social / Saúde Coletiva legítima)."
+																	})
+																]
+															})]
+														})
+													]
+												})
+											]
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "space-y-4 pt-4 border-t border-slate-100",
 										children: [
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
