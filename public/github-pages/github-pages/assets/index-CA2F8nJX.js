@@ -24539,9 +24539,15 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 								className: "inline-flex items-center gap-2 bg-[#FFC72C]/15 border border-[#FFC72C]/40 px-4 py-1.5 rounded-full text-[#FFC72C] text-xs sm:text-sm font-bold tracking-wide uppercase shadow-sm",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "DIRETRIZES E ESCLARECIMENTO PEDAGÓGICO" })]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-								className: "text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight",
-								children: "Diretrizes e Esclarecimento Pedagógico: Saberes Integrativos, Escrita Criativa e o Método Científico Aberto"
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+								className: "text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-white block",
+									children: "Diretrizes e Esclarecimento Pedagógico:"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[#FFC72C] block text-xl sm:text-2xl lg:text-3xl font-bold mt-2.5 sm:mt-3",
+									children: "Saberes Integrativos, Escrita Criativa e o Método Científico Aberto"
+								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 								className: "text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed",

@@ -83,8 +83,11 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               <span>DIRETRIZES E ESCLARECIMENTO PEDAGÓGICO</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-              Diretrizes e Esclarecimento Pedagógico: Saberes Integrativos, Escrita Criativa e o Método Científico Aberto
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+              <span className="text-white block">Diretrizes e Esclarecimento Pedagógico:</span>
+              <span className="text-[#FFC72C] block text-xl sm:text-2xl lg:text-3xl font-bold mt-2.5 sm:mt-3">
+                Saberes Integrativos, Escrita Criativa e o Método Científico Aberto
+              </span>
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed">
