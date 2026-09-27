@@ -26238,7 +26238,7 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 										className: "text-cyan-700 font-semibold",
 										children: "certificado diamante"
 									}),
-									" para ostentar no nosso site e nas redes sociais, com publicação gratuita do artigo na nossa página de artigos e nas suas redes sociais."
+									" para ostentar no nosso site e nas redes sociais do aluno para divulgação dessa vitória de forma gratuita para o aluno na página da ESDHUBEM."
 								] }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
 									"Nossa proposta pedagógica conecta-se perfeitamente com as ",
