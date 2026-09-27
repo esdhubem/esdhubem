@@ -12774,6 +12774,38 @@ var Info = createLucideIcon("info", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Landmark = createLucideIcon("landmark", [
+	["path", {
+		d: "M10 18v-7",
+		key: "wt116b"
+	}],
+	["path", {
+		d: "M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z",
+		key: "1m329m"
+	}],
+	["path", {
+		d: "M14 18v-7",
+		key: "vav6t3"
+	}],
+	["path", {
+		d: "M18 18v-7",
+		key: "aexdmj"
+	}],
+	["path", {
+		d: "M3 22h18",
+		key: "8prr45"
+	}],
+	["path", {
+		d: "M6 18v-7",
+		key: "1ivflk"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Layers = createLucideIcon("layers", [
 	["path", {
 		d: "M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z",
@@ -26367,11 +26399,11 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 									className: "text-slate-900",
 									children: "CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior)"
 								}),
-								", os cursos livres e os projetos da ESDHUBEM conectam-se diretamente a três grandes áreas do conhecimento:"
+								", os cursos livres e os projetos da ESDHUBEM conectam-se diretamente a quatro grandes áreas do conhecimento:"
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "grid grid-cols-1 md:grid-cols-3 gap-6 pt-2",
+							className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-2",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "bg-gradient-to-b from-rose-50/50 to-white border border-rose-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between",
@@ -26504,6 +26536,51 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 												className: "text-[11px] text-slate-500 mt-1",
 												children: "Avaliam como as novas pedagogias transformam o aprendizado e a evolução profissional."
+											})
+										]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-gradient-to-b from-amber-50/50 to-white border border-amber-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "space-y-3",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600 font-bold",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Landmark, { className: "w-5 h-5" })
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[11px] font-bold uppercase tracking-wider text-amber-600 block",
+												children: "Eixo 04"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-bold text-slate-900 text-lg",
+												children: "Ciências da Religião, História & Cultura"
+											})] }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "text-xs space-y-2 text-slate-600",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Foco:"
+												}), " Esoterismo Ocidental, Novas Formas de Espiritualidade e Fenômenos Contemporâneos."] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Aplicação:"
+												}), " Estudos históricos, antropológicos e sociológicos sobre correntes tradicionais (Alquimia, Cabala, Teosofia, Ocultismo, Maçonaria) e manifestações modernas, como os movimentos New Age, a espiritualidade sem religião e os reflexos culturais do esoterismo na sociedade contemporânea."] })]
+											})
+										]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "pt-3 border-t border-amber-100",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[11px] text-slate-500 block mb-1 font-semibold",
+												children: "Alvo Editorial:"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "inline-block bg-amber-100 text-amber-900 text-xs font-bold px-2.5 py-1 rounded-md",
+												children: "Qualis A3, A4 ou Estrato B"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-[11px] text-slate-500 mt-1",
+												children: "Revistas focadas em Ciências da Religião, Teologia, História Cultural, Antropologia ou Ciências Sociais, que avaliem o impacto de sistemas de crenças e rituais na construção do pensamento humano."
 											})
 										]
 									})]

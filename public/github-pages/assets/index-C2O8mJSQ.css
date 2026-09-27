@@ -1721,6 +1721,10 @@
     border-color: oklab(85.6611% .00996548 .165197 / .6);
   }
 
+  .border-amber-100 {
+    border-color: var(--color-amber-100);
+  }
+
   .border-amber-200 {
     border-color: var(--color-amber-200);
   }
@@ -3086,6 +3090,20 @@
 
   .from-\[\#FFC72C\] {
     --tw-gradient-from: #ffc72c;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+
+  .from-amber-50\/50 {
+    --tw-gradient-from: #fffbeb80;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .from-amber-50\/50 {
+      --tw-gradient-from: color-mix(in oklab, var(--color-amber-50) 50%, transparent);
+    }
+  }
+
+  .from-amber-50\/50 {
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 

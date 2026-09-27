@@ -17,7 +17,8 @@ import {
   Sparkles,
   Layers,
   FileText,
-  MessageCircle
+  MessageCircle,
+  Landmark
 } from 'lucide-react';
 
 interface DiretrizesPublicacaoParceriasPageProps {
@@ -186,10 +187,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-            Alinhados aos critérios de avaliação da <strong className="text-slate-900">CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior)</strong>, os cursos livres e os projetos da ESDHUBEM conectam-se diretamente a três grandes áreas do conhecimento:
+            Alinhados aos critérios de avaliação da <strong className="text-slate-900">CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior)</strong>, os cursos livres e os projetos da ESDHUBEM conectam-se diretamente a quatro grandes áreas do conhecimento:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-2">
             {/* Eixo 1: Saúde Coletiva */}
             <div className="bg-gradient-to-b from-rose-50/50 to-white border border-rose-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between">
               <div className="space-y-3">
@@ -276,6 +277,36 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </span>
                 <p className="text-[11px] text-slate-500 mt-1">
                   Avaliam como as novas pedagogias transformam o aprendizado e a evolução profissional.
+                </p>
+              </div>
+            </div>
+
+            {/* Eixo 4: Ciências da Religião, História & Cultura */}
+            <div className="bg-gradient-to-b from-amber-50/50 to-white border border-amber-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600 font-bold">
+                  <Landmark className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-600 block">Eixo 04</span>
+                  <h3 className="font-bold text-slate-900 text-lg">Ciências da Religião, História & Cultura</h3>
+                </div>
+                <div className="text-xs space-y-2 text-slate-600">
+                  <p>
+                    <strong className="text-slate-800">Foco:</strong> Esoterismo Ocidental, Novas Formas de Espiritualidade e Fenômenos Contemporâneos.
+                  </p>
+                  <p>
+                    <strong className="text-slate-800">Aplicação:</strong> Estudos históricos, antropológicos e sociológicos sobre correntes tradicionais (Alquimia, Cabala, Teosofia, Ocultismo, Maçonaria) e manifestações modernas, como os movimentos New Age, a espiritualidade sem religião e os reflexos culturais do esoterismo na sociedade contemporânea.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-3 border-t border-amber-100">
+                <span className="text-[11px] text-slate-500 block mb-1 font-semibold">Alvo Editorial:</span>
+                <span className="inline-block bg-amber-100 text-amber-900 text-xs font-bold px-2.5 py-1 rounded-md">
+                  Qualis A3, A4 ou Estrato B
+                </span>
+                <p className="text-[11px] text-slate-500 mt-1">
+                  Revistas focadas em Ciências da Religião, Teologia, História Cultural, Antropologia ou Ciências Sociais, que avaliem o impacto de sistemas de crenças e rituais na construção do pensamento humano.
                 </p>
               </div>
             </div>
