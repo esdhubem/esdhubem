@@ -6,9 +6,10 @@ interface BlogPostPageProps {
   post: BlogPost;
   onBackToBlog: () => void;
   onBackToHome: () => void;
+  onNavigateToCourses?: () => void;
 }
 
-export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBackToBlog, onBackToHome }) => {
+export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses }) => {
   const [copied, setCopied] = React.useState(false);
 
   const handleCopyLink = () => {
@@ -111,11 +112,50 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBackToBlog, 
               {post.excerpt}
             </p>
             
+            {/* Vídeo do Post (se configurado) */}
+            {post.videoUrl && (
+              <div className="my-8 w-full aspect-video rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-slate-950 relative">
+                <iframe
+                  src={post.videoUrl}
+                  title={post.title}
+                  className="w-full h-full border-0 absolute inset-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            )}
+
             {/* O conteúdo principal renderizado como HTML */}
             <div 
               className="mt-8 text-slate-700 leading-relaxed space-y-6"
               dangerouslySetInnerHTML={{ __html: post.content }} 
             />
+
+            {/* CTA Box ao final do artigo */}
+            {post.cta && (
+              <div className="mt-12 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#182333] via-[#1E293B] to-[#0F172A] text-white shadow-2xl border border-slate-700/80 text-center relative overflow-hidden not-prose">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,199,44,0.18),transparent_55%)] pointer-events-none" />
+                <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
+                  <span className="inline-block bg-[#FFC72C]/20 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Matrícula Aberta • Acesso Imediato
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                    {post.cta.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    {post.cta.subtitle}
+                  </p>
+                  <div className="pt-3">
+                    <button
+                      onClick={onNavigateToCourses || onBackToHome}
+                      className="inline-flex items-center gap-2 bg-[#FFC72C] hover:bg-[#ffcf47] text-[#182333] font-black text-base sm:text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-[#FFC72C]/30 transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                    >
+                      <span>{post.cta.buttonText}</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Share Mobile */}

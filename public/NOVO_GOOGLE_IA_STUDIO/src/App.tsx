@@ -603,6 +603,13 @@ export default function App() {
               setCurrentPage('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onNavigateToCourses={() => {
+              setCurrentPage('home');
+              setTimeout(() => {
+                const el = document.getElementById('catalogo-cursos');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}
           />
         </main>
       )}
