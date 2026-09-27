@@ -12659,6 +12659,56 @@ var GraduationCap = createLucideIcon("graduation-cap", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Globe = createLucideIcon("globe", [
+	["circle", {
+		cx: "12",
+		cy: "12",
+		r: "10",
+		key: "1mglay"
+	}],
+	["path", {
+		d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20",
+		key: "13o1zl"
+	}],
+	["path", {
+		d: "M2 12h20",
+		key: "9i4pu4"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var Handshake = createLucideIcon("handshake", [
+	["path", {
+		d: "m11 17 2 2a1 1 0 1 0 3-3",
+		key: "efffak"
+	}],
+	["path", {
+		d: "m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4",
+		key: "9pr0kb"
+	}],
+	["path", {
+		d: "m21 3 1 11h-2",
+		key: "1tisrp"
+	}],
+	["path", {
+		d: "M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3",
+		key: "1uvwmv"
+	}],
+	["path", {
+		d: "M3 4h8",
+		key: "1ep09j"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Headphones = createLucideIcon("headphones", [["path", {
 	d: "M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3",
 	key: "1xhozi"
@@ -12672,6 +12722,19 @@ var Headphones = createLucideIcon("headphones", [["path", {
 var HeartHandshake = createLucideIcon("heart-handshake", [["path", {
 	d: "M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762",
 	key: "17lmqv"
+}]]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var HeartPulse = createLucideIcon("heart-pulse", [["path", {
+	d: "M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5",
+	key: "mvr1a0"
+}], ["path", {
+	d: "M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27",
+	key: "auskq0"
 }]]);
 /**
 * @license lucide-react v0.546.0 - ISC
@@ -13354,6 +13417,30 @@ var RefreshCw = createLucideIcon("refresh-cw", [
 	["path", {
 		d: "M8 16H3v5",
 		key: "1cv678"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var Rocket = createLucideIcon("rocket", [
+	["path", {
+		d: "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z",
+		key: "m3kijz"
+	}],
+	["path", {
+		d: "m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z",
+		key: "1fmvmk"
+	}],
+	["path", {
+		d: "M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0",
+		key: "1f8sc4"
+	}],
+	["path", {
+		d: "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5",
+		key: "qeys4"
 	}]
 ]);
 /**
@@ -14190,6 +14277,11 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 							className: `px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${currentPage === "artigos" || currentPage === "artigo-detalhe" ? "bg-cyan-500 text-slate-950 border-cyan-400" : "bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/70 hover:border-cyan-400"}`,
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Artigos de Estudo e Pesquisa" })
 						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							onClick: () => onNavigate("diretrizes-publicacao"),
+							className: `px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${currentPage === "diretrizes-publicacao" || currentPage === "diretrizes-publicacao-parcerias" ? "bg-blue-600 text-white border-blue-400" : "bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 border-blue-500/70 hover:border-blue-400"}`,
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Handshake, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Publicação & Parcerias" })]
+						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 							onClick: () => onNavigate("blog"),
 							className: `px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${currentPage === "blog" || currentPage === "blog-post" ? "bg-purple-600 text-white border-purple-400" : "bg-[#581c87]/60 hover:bg-[#581c87]/80 text-purple-200 border-purple-500/70 hover:border-purple-400"}`,
@@ -14314,6 +14406,14 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 								},
 								className: "w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400",
 								children: "Artigos de Estudo e Pesquisa (Zenodo / DOI)"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								onClick: () => {
+									onNavigate("diretrizes-publicacao");
+									setMobileMenuOpen(false);
+								},
+								className: "w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Handshake, { className: "w-4 h-4 text-blue-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Diretrizes de Publicação & Parcerias" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => {
@@ -15080,7 +15180,7 @@ var MethodologySection = ({ onSelectPillar, onOpenCertificatePreview, onNavigate
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed",
-									children: "Conheça os critérios dos certificados Bronze, Prata, Ouro e Diamante, amparados pela Lei nº 9.394/96 e pela transparência acadêmica."
+									children: "Conheça os critérios dos certificados Bronze, Prata, Ouro e Diamante, amparados pela Lei nº 9.394/96 e pela transparência na Pesquisa, Estudo, Evolução e Prática."
 								})
 							]
 						})]
@@ -16444,6 +16544,11 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 										onClick: () => onNavigate("artigos"),
 										className: "hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold",
 										children: "Artigos de Estudo e Pesquisa (Zenodo / DOI)"
+									}) }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+										onClick: () => onNavigate("diretrizes-publicacao"),
+										className: "hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-blue-300 font-semibold",
+										children: "Diretrizes de Publicação & Parcerias"
 									}) }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 										onClick: () => onNavigate("podcasts"),
@@ -21507,9 +21612,16 @@ var AplicativosPage = ({ onBackToHome }) => {
 								className: "text-2xl sm:text-3xl font-bold",
 								children: "Por que usar nossos Aplicativos e Dashboards?"
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 								className: "text-slate-300 text-sm sm:text-base leading-relaxed",
-								children: "Diferente de sistemas genéricos e complexos, nossas ferramentas foram criadas focando na **realidade prática do empreendedor brasileiro**. Sem complicações, com relatórios diretos ao ponto para você tomar decisões certas e lucrar mais."
+								children: [
+									"Diferente de sistemas genéricos e complexos, nossas ferramentas foram criadas focando na ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-white font-semibold",
+										children: "realidade prática do empreendedor brasileiro"
+									}),
+									". Sem complicações, com relatórios diretos ao ponto para você tomar decisões certas e lucrar mais."
+								]
 							})
 						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -21689,7 +21801,7 @@ var ACADEMIC_ARTICLES = [
 ];
 //#endregion
 //#region src/components/ArtigosPage.tsx
-var ArtigosPage = ({ onBackToHome, onSelectArticle }) => {
+var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 	const [searchTerm, setSearchTerm] = (0, import_react.useState)("");
 	const [selectedCategory, setSelectedCategory] = (0, import_react.useState)(null);
 	const categories = [
@@ -21784,23 +21896,35 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle }) => {
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "bg-amber-500/10 border border-amber-500/30 rounded-3xl p-6 sm:p-7 text-slate-800 shadow-sm space-y-2",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-amber-900 font-bold text-base",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "font-bold text-[#182333]",
-							children: "O que são os Anais de Estudo e Pesquisa da ESDHUBEM?"
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-						className: "text-slate-700 text-sm sm:text-base leading-relaxed",
-						children: [
-							"Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da ",
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-								className: "text-slate-900 font-bold",
-								children: "ESDHUBEM"
-							}),
-							" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, bem como melhorar o seu desempenho profissional e relacional pois a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena."
-						]
-					})]
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-2 text-amber-900 font-bold text-base",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "font-bold text-[#182333]",
+								children: "O que são os Anais de Estudo e Pesquisa da ESDHUBEM?"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+							className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+							children: [
+								"Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-slate-900 font-bold",
+									children: "ESDHUBEM"
+								}),
+								" é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, bem como melhorar o seu desempenho profissional e relacional pois a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena."
+							]
+						}),
+						onNavigate && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "pt-2",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								type: "button",
+								onClick: () => onNavigate("diretrizes-publicacao"),
+								className: "inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-950 hover:text-black bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 px-4 py-2 rounded-xl transition-all cursor-pointer shadow-xs",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conheça nossas Diretrizes de Publicação Científica e Parcerias Estratégicas" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-4 h-4 text-amber-700" })]
+							})
+						})
+					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-xl flex flex-col md:flex-row gap-4 items-center justify-between",
@@ -25988,6 +26112,455 @@ var PodcastsPage = ({ onBackToHome, onNavigateToCourses }) => {
 	});
 };
 //#endregion
+//#region src/components/DiretrizesPublicacaoParceriasPage.tsx
+var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, onNavigateToPortal }) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "bg-[#F8FAFC] min-h-screen text-slate-800 flex flex-col",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "bg-[#182333] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-slate-700/60 shadow-lg",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "absolute inset-0 opacity-10 pointer-events-none",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "absolute inset-0",
+					style: {
+						backgroundImage: "radial-gradient(circle at 25px 25px, white 2%, transparent 0%), radial-gradient(circle at 75px 75px, #FFC72C 2%, transparent 0%)",
+						backgroundSize: "100px 100px"
+					}
+				})
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "max-w-5xl mx-auto relative z-10 space-y-6",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex flex-wrap items-center justify-between gap-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						onClick: onBackToHome,
+						className: "inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-semibold cursor-pointer group",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-4 h-4 transition-transform group-hover:-translate-x-1" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Voltar para o Início" })]
+					}), onNavigateToArticles && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						onClick: onNavigateToArticles,
+						className: "inline-flex items-center gap-1.5 text-xs text-cyan-300 hover:text-white bg-cyan-950/60 border border-cyan-500/40 px-3.5 py-1.5 rounded-full transition-all cursor-pointer",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos & Anais Acadêmicos" })]
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "space-y-4",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFC72C]/15 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold tracking-wide uppercase shadow-sm",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GraduationCap, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "DIRETRIZES ACADÊMICAS & PESQUISA ESDHUBEM" })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+							className: "text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight",
+							children: "Diretrizes de Publicação Científica e Parcerias Estratégicas"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+							className: "text-slate-300 text-base sm:text-lg font-light leading-relaxed max-w-4xl",
+							children: [
+								"Na estruturação da ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-white font-semibold",
+									children: "ESDHUBEM"
+								}),
+								", adotamos a decisão estratégica de orientar nossos alunos a direcionarem suas pesquisas para periódicos científicos de impacto intermediário, com forte foco no cenário nacional, regional e de acesso aberto."
+							]
+						})
+					]
+				})]
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10 flex-1 w-full -mt-6 relative z-20",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-3 pb-4 border-b border-slate-100",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-6 h-6" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-xs font-bold text-amber-600 uppercase tracking-wider",
+								children: "Estratégia Editorial"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "text-xl sm:text-2xl font-bold text-slate-900",
+								children: "Revistas de Médio Impacto & Abordagem Interdisciplinar"
+							})] })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+							className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+							children: [
+								"Nossa proposta pedagógica conecta-se perfeitamente com as ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-slate-900 font-semibold",
+									children: "Revistas de Médio Impacto"
+								}),
+								" (estratos ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold",
+									children: "Qualis B1 a B4"
+								}),
+								" / ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold",
+									children: "Quartis Q3 e Q4"
+								}),
+								") e com as ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-slate-900 font-semibold",
+									children: "Revistas Interdisciplinares e Multidisciplinares"
+								}),
+								"."
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "bg-amber-50/70 border-l-4 border-[#FFC72C] p-4 sm:p-5 rounded-r-2xl",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+								className: "text-slate-800 text-sm sm:text-base font-medium leading-relaxed",
+								children: [
+									"Essas classificações acolhem com excelência a união entre a ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-amber-900",
+										children: "ciência prática"
+									}),
+									", as ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-amber-900",
+										children: "demandas do mercado de trabalho"
+									}),
+									" e o ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-amber-900",
+										children: "desenvolvimento humano"
+									}),
+									"."
+								]
+							})
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-3 pb-4 border-b border-slate-100",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-600 shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Rocket, { className: "w-6 h-6" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-xs font-bold text-cyan-600 uppercase tracking-wider",
+								children: "Visibilidade & Indexação"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "text-xl sm:text-2xl font-bold text-slate-900",
+								children: "🚀 Onde Nossos Alunos Podem Publicar?"
+							})] })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+							children: "Para garantir estratos competitivos, visibilidade internacional e validação acadêmica, incentivamos a submissão em:"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid grid-cols-1 md:grid-cols-2 gap-5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3 hover:border-slate-300 transition-colors",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-2 text-cyan-700 font-bold text-base",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Globe, { className: "w-5 h-5 text-cyan-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: "Indexadores de Grande Porte" })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+										children: [
+											"Periódicos avaliados por ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-slate-800",
+												children: "Bases de Indexação globais"
+											}),
+											" (como ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Scopus" }),
+											" e ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Web of Science" }),
+											"), que possuem abertura para Trabalhos de Conclusão de Curso (TCC), iniciação científica e artigos de extensão."
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "pt-2 flex flex-wrap gap-1.5",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+												children: "Scopus"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+												children: "Web of Science"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+												children: "TCCs & Extensão"
+											})
+										]
+									})
+								]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3 hover:border-slate-300 transition-colors",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-2 text-emerald-700 font-bold text-base",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-5 h-5 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: "Plataformas de Ciência Aberta" })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+										children: [
+											"Revistas indexadas no ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-slate-800",
+												children: "Zenodo (CERN / OpenAIRE)"
+											}),
+											" com atribuição de DOI oficial ou em consolidados indexadores latino-americanos, como o ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-slate-800",
+												children: "SciELO"
+											}),
+											"."
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "pt-2 flex flex-wrap gap-1.5",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+												children: "Zenodo (DOI Oficial)"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+												children: "SciELO"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md",
+												children: "Acesso Aberto"
+											})
+										]
+									})
+								]
+							})]
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-3 pb-4 border-b border-slate-100",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-600 shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Target, { className: "w-6 h-6" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-xs font-bold text-purple-600 uppercase tracking-wider",
+								children: "Alinhamento CAPES"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "text-xl sm:text-2xl font-bold text-slate-900",
+								children: "🎯 Nossos Eixos Temáticos de Pesquisa"
+							})] })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+							className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+							children: [
+								"Alinhados aos critérios de avaliação da ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-slate-900",
+									children: "CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior)"
+								}),
+								", os cursos livres e os projetos da ESDHUBEM conectam-se diretamente a três grandes áreas do conhecimento:"
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid grid-cols-1 md:grid-cols-3 gap-6 pt-2",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-gradient-to-b from-rose-50/50 to-white border border-rose-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "space-y-3",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-600 font-bold",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, { className: "w-5 h-5" })
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[11px] font-bold uppercase tracking-wider text-rose-600 block",
+												children: "Eixo 01"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-bold text-slate-900 text-lg",
+												children: "Saúde Coletiva"
+											})] }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "text-xs space-y-2 text-slate-600",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Foco:"
+												}), " Práticas Integrativas, Bem-Estar e Saúde Mental."] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Aplicação:"
+												}), " Estudos sobre coaching, espiritualidade aplicada, meditação e Práticas Integrativas e Complementares (PICS)."] })]
+											})
+										]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "pt-3 border-t border-rose-100",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[11px] text-slate-500 block mb-1 font-semibold",
+												children: "Alvo Editorial:"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "inline-block bg-rose-100 text-rose-800 text-xs font-bold px-2.5 py-1 rounded-md",
+												children: "Qualis B1, B2 e B3"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-[11px] text-slate-500 mt-1",
+												children: "Revistas que debatem fortemente a humanização e a saúde coletiva."
+											})
+										]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-gradient-to-b from-blue-50/50 to-white border border-blue-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "space-y-3",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-600 font-bold",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Compass, { className: "w-5 h-5" })
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[11px] font-bold uppercase tracking-wider text-blue-600 block",
+												children: "Eixo 02"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-bold text-slate-900 text-lg",
+												children: "Interdisciplinar"
+											})] }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "text-xs space-y-2 text-slate-600",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Foco:"
+												}), " Desenvolvimento Pessoal, Humano, Profissional e Consciencial."] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Aplicação:"
+												}), " Competências socioemocionais cruzando áreas como psicologia, administração e filosofia."] })]
+											})
+										]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "pt-3 border-t border-blue-100",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[11px] text-slate-500 block mb-1 font-semibold",
+												children: "Alvo Editorial:"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "inline-block bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1 rounded-md",
+												children: "Qualis B1 ou B2"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-[11px] text-slate-500 mt-1",
+												children: "Ideais por aceitarem relatos de experiência práticos vindos do mercado corporativo."
+											})
+										]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-gradient-to-b from-emerald-50/50 to-white border border-emerald-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "space-y-3",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 font-bold",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GraduationCap, { className: "w-5 h-5" })
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[11px] font-bold uppercase tracking-wider text-emerald-600 block",
+												children: "Eixo 03"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-bold text-slate-900 text-lg",
+												children: "Ensino & Educação"
+											})] }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "text-xs space-y-2 text-slate-600",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Foco:"
+												}), " Pedagogia Integrativa e Ética."] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800",
+													children: "Aplicação:"
+												}), " Metodologias inovadoras de ensino e educação voltada para adultos."] })]
+											})
+										]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "pt-3 border-t border-emerald-100",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[11px] text-slate-500 block mb-1 font-semibold",
+												children: "Alvo Editorial:"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-md",
+												children: "Estrato B (Qualis)"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-[11px] text-slate-500 mt-1",
+												children: "Avaliam como as novas pedagogias transformam o aprendizado e a evolução profissional."
+											})
+										]
+									})]
+								})
+							]
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "bg-gradient-to-r from-slate-900 to-[#1e293b] rounded-3xl p-6 sm:p-8 lg:p-10 text-white shadow-xl border border-slate-700/80 space-y-6",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-col md:flex-row gap-6 items-start justify-between",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-4 max-w-3xl",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Handshake, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "COOPERAÇÃO ACADÊMICA & REDE DE PESQUISA" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+									className: "text-2xl sm:text-3xl font-black text-white",
+									children: "🤝 Abertura para Parcerias Institucionais"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-300 text-sm sm:text-base leading-relaxed",
+									children: [
+										"A ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "text-white font-semibold",
+											children: "ESDHUBEM"
+										}),
+										" está de portas abertas para construir parcerias com revistas científicas, núcleos universitários de extensão e ecossistemas de publicação aberta. Acreditamos que democratizar o acesso à informação e dar voz às pesquisas dos nossos alunos é o caminho mais rápido para acelerar novas descobertas e transformar a sociedade."
+									]
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col gap-3 shrink-0 w-full sm:w-auto",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+								href: "https://wa.me/5511960319637?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20parcerias%20institucionais%20e%20publica%C3%A7%C3%A3o%20cient%C3%ADfica%20com%20a%20ESDHUBEM",
+								target: "_blank",
+								rel: "noreferrer",
+								className: "bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold px-6 py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md cursor-pointer",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageCircle, { className: "w-4 h-4 fill-white" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Propor Parceria Institucional" })]
+							}), onNavigateToArticles && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								type: "button",
+								onClick: onNavigateToArticles,
+								className: "bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black px-6 py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md cursor-pointer",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Anais & Artigos Publicados" })]
+							})]
+						})]
+					})
+				})
+			]
+		})]
+	});
+};
+//#endregion
 //#region src/App.tsx
 function App() {
 	const [currentPage, setCurrentPage] = (0, import_react.useState)("home");
@@ -26013,6 +26586,11 @@ function App() {
 		const pagina = params.get("pagina");
 		if (pagina === "podcasts" || pagina === "podcast") {
 			setCurrentPage("podcasts");
+			window.history.replaceState({}, "", window.location.pathname);
+			return;
+		}
+		if (pagina === "diretrizes-publicacao" || pagina === "diretrizes-publicacao-parcerias" || pagina === "publicacao-cientifica") {
+			setCurrentPage("diretrizes-publicacao-parcerias");
 			window.history.replaceState({}, "", window.location.pathname);
 			return;
 		}
@@ -26173,6 +26751,14 @@ function App() {
 		}
 		if (sectionId === "podcasts" || sectionId === "podcast") {
 			setCurrentPage("podcasts");
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+			return;
+		}
+		if (sectionId === "diretrizes-publicacao" || sectionId === "diretrizes-publicacao-parcerias" || sectionId === "publicacao-cientifica" || sectionId === "parcerias-estrategicas") {
+			setCurrentPage("diretrizes-publicacao-parcerias");
 			window.scrollTo({
 				top: 0,
 				behavior: "smooth"
@@ -26495,7 +27081,8 @@ function App() {
 							top: 0,
 							behavior: "smooth"
 						});
-					}
+					},
+					onNavigate: handleNavigate
 				})
 			}),
 			currentPage === "artigo-detalhe" && selectedArticle && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
@@ -26714,6 +27301,32 @@ function App() {
 						});
 					},
 					onNavigate: handleNavigate
+				})
+			}),
+			currentPage === "diretrizes-publicacao-parcerias" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+				className: "flex-1",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DiretrizesPublicacaoParceriasPage, {
+					onBackToHome: () => {
+						setCurrentPage("home");
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth"
+						});
+					},
+					onNavigateToArticles: () => {
+						setCurrentPage("artigos");
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth"
+						});
+					},
+					onNavigateToPortal: () => {
+						setCurrentPage("sala-de-aula");
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth"
+						});
+					}
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {

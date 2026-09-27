@@ -281,7 +281,7 @@ export const AplicativosPage: React.FC<AplicativosPageProps> = ({ onBackToHome }
               Por que usar nossos Aplicativos e Dashboards?
             </h3>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Diferente de sistemas genéricos e complexos, nossas ferramentas foram criadas focando na **realidade prática do empreendedor brasileiro**. Sem complicações, com relatórios diretos ao ponto para você tomar decisões certas e lucrar mais.
+              Diferente de sistemas genéricos e complexos, nossas ferramentas foram criadas focando na <strong className="text-white font-semibold">realidade prática do empreendedor brasileiro</strong>. Sem complicações, com relatórios diretos ao ponto para você tomar decisões certas e lucrar mais.
             </p>
           </div>
 

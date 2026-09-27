@@ -14,7 +14,8 @@ import {
   Info,
   Award,
   Scale,
-  Headphones
+  Headphones,
+  Handshake
 } from 'lucide-react';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
 
@@ -273,6 +274,18 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
 
           <button
+            onClick={() => onNavigate('diretrizes-publicacao')}
+            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
+              currentPage === 'diretrizes-publicacao' || currentPage === 'diretrizes-publicacao-parcerias'
+                ? 'bg-blue-600 text-white border-blue-400'
+                : 'bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 border-blue-500/70 hover:border-blue-400'
+            }`}
+          >
+            <Handshake className="w-3.5 h-3.5" />
+            <span>Publicação & Parcerias</span>
+          </button>
+
+          <button
             onClick={() => onNavigate('blog')}
             className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${
               currentPage === 'blog' || currentPage === 'blog-post'
@@ -344,6 +357,10 @@ export const Header: React.FC<HeaderProps> = ({
             <button onClick={() => { onNavigate('diretrizes-pedagogicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10">Diretrizes e Esclarecimento Pedagógico</button>
             <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
             <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Artigos de Estudo e Pesquisa (Zenodo / DOI)</button>
+            <button onClick={() => { onNavigate('diretrizes-publicacao'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2">
+              <Handshake className="w-4 h-4 text-blue-400" />
+              <span>Diretrizes de Publicação & Parcerias</span>
+            </button>
             <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
               <Headphones className="w-4 h-4 text-[#FFC72C]" />
               <span>Podcasts & Ensaios Sonoros</span>

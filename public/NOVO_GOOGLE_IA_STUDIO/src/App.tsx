@@ -30,6 +30,7 @@ import { SecretariaDocumentacaoPage } from './components/SecretariaDocumentacaoP
 import { RegrasCertificacaoMeritoPage } from './components/RegrasCertificacaoMeritoPage';
 import { DiretrizesPedagogicasPage } from './components/DiretrizesPedagogicasPage';
 import { PodcastsPage } from './components/PodcastsPage';
+import { DiretrizesPublicacaoParceriasPage } from './components/DiretrizesPublicacaoParceriasPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -50,7 +51,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'podcasts'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'podcasts' | 'diretrizes-publicacao-parcerias'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -76,6 +77,12 @@ export default function App() {
 
     if (pagina === 'podcasts' || pagina === 'podcast') {
       setCurrentPage('podcasts');
+      window.history.replaceState({}, '', window.location.pathname);
+      return;
+    }
+
+    if (pagina === 'diretrizes-publicacao' || pagina === 'diretrizes-publicacao-parcerias' || pagina === 'publicacao-cientifica') {
+      setCurrentPage('diretrizes-publicacao-parcerias');
       window.history.replaceState({}, '', window.location.pathname);
       return;
     }
@@ -223,6 +230,17 @@ export default function App() {
 
     if (sectionId === 'podcasts' || sectionId === 'podcast') {
       setCurrentPage('podcasts');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (
+      sectionId === 'diretrizes-publicacao' ||
+      sectionId === 'diretrizes-publicacao-parcerias' ||
+      sectionId === 'publicacao-cientifica' ||
+      sectionId === 'parcerias-estrategicas'
+    ) {
+      setCurrentPage('diretrizes-publicacao-parcerias');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -518,6 +536,7 @@ export default function App() {
               setCurrentPage('artigo-detalhe');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onNavigate={handleNavigate}
           />
         </main>
       )}
@@ -707,6 +726,25 @@ export default function App() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onNavigate={handleNavigate}
+          />
+        </main>
+      )}
+
+      {currentPage === 'diretrizes-publicacao-parcerias' && (
+        <main className="flex-1">
+          <DiretrizesPublicacaoParceriasPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigateToArticles={() => {
+              setCurrentPage('artigos');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigateToPortal={() => {
+              setCurrentPage('sala-de-aula');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           />
         </main>
       )}

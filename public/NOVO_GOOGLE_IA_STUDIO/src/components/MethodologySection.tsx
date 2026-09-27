@@ -131,7 +131,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
                   Regras de Certificação & Selos de Mérito
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
-                  Conheça os critérios dos certificados Bronze, Prata, Ouro e Diamante, amparados pela Lei nº 9.394/96 e pela transparência acadêmica.
+                  Conheça os critérios dos certificados Bronze, Prata, Ouro e Diamante, amparados pela Lei nº 9.394/96 e pela transparência na Pesquisa, Estudo, Evolução e Prática.
                 </p>
               </div>
             </div>

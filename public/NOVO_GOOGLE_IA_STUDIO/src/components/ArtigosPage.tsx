@@ -23,11 +23,13 @@ import { AcademicArticle } from '../types';
 interface ArtigosPageProps {
   onBackToHome: () => void;
   onSelectArticle: (article: AcademicArticle) => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 export const ArtigosPage: React.FC<ArtigosPageProps> = ({
   onBackToHome,
   onSelectArticle,
+  onNavigate,
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -124,6 +126,18 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
           <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
             Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da <strong className="text-slate-900 font-bold">ESDHUBEM</strong> é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, bem como melhorar o seu desempenho profissional e relacional pois a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena.
           </p>
+          {onNavigate && (
+            <div className="pt-2">
+              <button
+                type="button"
+                onClick={() => onNavigate('diretrizes-publicacao')}
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-950 hover:text-black bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 px-4 py-2 rounded-xl transition-all cursor-pointer shadow-xs"
+              >
+                <span>Conheça nossas Diretrizes de Publicação Científica e Parcerias Estratégicas</span>
+                <ChevronRight className="w-4 h-4 text-amber-700" />
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Search & Filter Bar */}
