@@ -79,7 +79,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-              Diretrizes de Publicação Científica e Parcerias Estratégicas
+              Canais de Publicação e Compartilhamento de Conhecimento
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg font-light leading-relaxed max-w-4xl">

@@ -14312,7 +14312,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 							onClick: () => onNavigate("diretrizes-publicacao"),
 							className: `px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${currentPage === "diretrizes-publicacao" || currentPage === "diretrizes-publicacao-parcerias" ? "bg-blue-600 text-white border-blue-400" : "bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 border-blue-500/70 hover:border-blue-400"}`,
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Handshake, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Publicação & Parcerias" })]
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Handshake, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Diretrizes de Publicação" })]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 							onClick: () => onNavigate("blog"),
@@ -14445,7 +14445,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 									setMobileMenuOpen(false);
 								},
 								className: "w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Handshake, { className: "w-4 h-4 text-blue-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Diretrizes de Publicação & Parcerias" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Handshake, { className: "w-4 h-4 text-blue-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Diretrizes de Publicação" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => {
@@ -16580,7 +16580,7 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 										onClick: () => onNavigate("diretrizes-publicacao"),
 										className: "hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-blue-300 font-semibold",
-										children: "Diretrizes de Publicação & Parcerias"
+										children: "Diretrizes de Publicação"
 									}) }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 										onClick: () => onNavigate("podcasts"),
@@ -21953,7 +21953,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 								type: "button",
 								onClick: () => onNavigate("diretrizes-publicacao"),
 								className: "inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-950 hover:text-black bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 px-4 py-2 rounded-xl transition-all cursor-pointer shadow-xs",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conheça nossas Diretrizes de Publicação Científica e Parcerias Estratégicas" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-4 h-4 text-amber-700" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conheça nossos Canais de Publicação e Compartilhamento de Conhecimento" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-4 h-4 text-amber-700" })]
 							})
 						})
 					]
@@ -26181,7 +26181,7 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 							className: "text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight",
-							children: "Diretrizes de Publicação Científica e Parcerias Estratégicas"
+							children: "Canais de Publicação e Compartilhamento de Conhecimento"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 							className: "text-slate-300 text-base sm:text-lg font-light leading-relaxed max-w-4xl",

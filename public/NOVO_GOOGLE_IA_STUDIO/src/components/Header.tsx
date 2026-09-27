@@ -282,7 +282,7 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             <Handshake className="w-3.5 h-3.5" />
-            <span>Publicação & Parcerias</span>
+            <span>Diretrizes de Publicação</span>
           </button>
 
           <button
@@ -359,7 +359,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Artigos de Estudo e Pesquisa (Zenodo / DOI)</button>
             <button onClick={() => { onNavigate('diretrizes-publicacao'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2">
               <Handshake className="w-4 h-4 text-blue-400" />
-              <span>Diretrizes de Publicação & Parcerias</span>
+              <span>Diretrizes de Publicação</span>
             </button>
             <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
               <Headphones className="w-4 h-4 text-[#FFC72C]" />

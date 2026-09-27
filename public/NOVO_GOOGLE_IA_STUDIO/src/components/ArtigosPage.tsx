@@ -133,7 +133,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
                 onClick={() => onNavigate('diretrizes-publicacao')}
                 className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-950 hover:text-black bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 px-4 py-2 rounded-xl transition-all cursor-pointer shadow-xs"
               >
-                <span>Conheça nossas Diretrizes de Publicação Científica e Parcerias Estratégicas</span>
+                <span>Conheça nossos Canais de Publicação e Compartilhamento de Conhecimento</span>
                 <ChevronRight className="w-4 h-4 text-amber-700" />
               </button>
             </div>
