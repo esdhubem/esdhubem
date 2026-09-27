@@ -24534,46 +24534,19 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "max-w-4xl mx-auto text-center space-y-4",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "inline-flex items-center gap-2 bg-[#FFC72C]/15 border border-[#FFC72C]/40 px-4 py-1.5 rounded-full text-[#FFC72C] text-xs sm:text-sm font-bold tracking-wide uppercase shadow-sm",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "DIRETRIZES E ESCLARECIMENTO PEDAGÓGICO" })]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-								className: "text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-white block",
-									children: "Diretrizes e Esclarecimento Pedagógico:"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-[#FFC72C] block text-xl sm:text-2xl lg:text-3xl font-bold mt-2.5 sm:mt-3",
-									children: "Saberes Integrativos, Escrita Criativa e o Método Científico Aberto"
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								className: "text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed",
-								children: [
-									"Na nossa escola livre, acreditamos que a sabedoria humana se expande quando unimos",
-									" ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-										className: "text-[#FFC72C] font-semibold",
-										children: "tradição, símbolo, sensibilidade e tecnologia"
-									}),
-									". Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras do conhecimento convencional, integrando estudos dos sistemas simbólicos às discussões contemporâneas. Fazemos isso sob a ótica da",
-									" ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-										className: "text-white font-semibold",
-										children: "pesquisa qualitativa e integrativa"
-									}),
-									", incentivando nossos alunos a transformarem suas reflexões em escrita criativa, ensaios e partilha de conhecimento aberto. Dessa forma, geramos valor real por meio do",
-									" ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-										className: "text-[#FFC72C] font-semibold",
-										children: "Estudo, Evolução e Prática"
-									}),
-									", com a finalidade de impactar o desenvolvimento profissional, relacional, pessoal, ético e humano de cada um."
-								]
-							})
-						]
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "inline-flex items-center gap-2 bg-[#FFC72C]/15 border border-[#FFC72C]/40 px-4 py-1.5 rounded-full text-[#FFC72C] text-xs sm:text-sm font-bold tracking-wide uppercase shadow-sm",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "DIRETRIZES E ESCLARECIMENTO PEDAGÓGICO" })]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+							className: "text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-white block",
+								children: "Diretrizes e Esclarecimento Pedagógico:"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[#FFC72C] block text-xl sm:text-2xl lg:text-3xl font-bold mt-2.5 sm:mt-3",
+								children: "Saberes Integrativos, Escrita Criativa e o Método Científico Aberto"
+							})]
+						})]
 					})
 				})]
 			}),
@@ -24595,6 +24568,30 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 									className: "text-xl sm:text-2xl font-bold text-slate-900",
 									children: "O Que Somos e Qual É o Nosso Propósito"
 								})] })]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+								className: "text-slate-700 text-base leading-relaxed",
+								children: [
+									"Na nossa escola livre, acreditamos que a sabedoria humana se expande quando unimos",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-slate-900 font-semibold",
+										children: "tradição, símbolo, sensibilidade e tecnologia"
+									}),
+									". Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras do conhecimento convencional, integrando estudos dos sistemas simbólicos às discussões contemporâneas. Fazemos isso sob a ótica da",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-slate-900 font-semibold",
+										children: "pesquisa qualitativa e integrativa"
+									}),
+									", incentivando nossos alunos a transformarem suas reflexões em escrita criativa, ensaios e partilha de conhecimento aberto. Dessa forma, geramos valor real por meio do",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-amber-800 font-semibold",
+										children: "Estudo, Evolução e Prática"
+									}),
+									", com a finalidade de impactar o desenvolvimento profissional, relacional, pessoal, ético e humano de cada um."
+								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 								className: "text-slate-700 text-base leading-relaxed",

@@ -89,15 +89,6 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
                 Saberes Integrativos, Escrita Criativa e o Método Científico Aberto
               </span>
             </h1>
-
-            <p className="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed">
-              Na nossa escola livre, acreditamos que a sabedoria humana se expande quando unimos{' '}
-              <strong className="text-[#FFC72C] font-semibold">tradição, símbolo, sensibilidade e tecnologia</strong>.
-              Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras do conhecimento convencional, integrando estudos dos sistemas simbólicos às discussões contemporâneas. Fazemos isso sob a ótica da{' '}
-              <strong className="text-white font-semibold">pesquisa qualitativa e integrativa</strong>,
-              incentivando nossos alunos a transformarem suas reflexões em escrita criativa, ensaios e partilha de conhecimento aberto. Dessa forma, geramos valor real por meio do{' '}
-              <strong className="text-[#FFC72C] font-semibold">Estudo, Evolução e Prática</strong>, com a finalidade de impactar o desenvolvimento profissional, relacional, pessoal, ético e humano de cada um.
-            </p>
           </div>
         </div>
       </section>
@@ -118,6 +109,15 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               </h2>
             </div>
           </div>
+
+          <p className="text-slate-700 text-base leading-relaxed">
+            Na nossa escola livre, acreditamos que a sabedoria humana se expande quando unimos{' '}
+            <strong className="text-slate-900 font-semibold">tradição, símbolo, sensibilidade e tecnologia</strong>.
+            Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras do conhecimento convencional, integrando estudos dos sistemas simbólicos às discussões contemporâneas. Fazemos isso sob a ótica da{' '}
+            <strong className="text-slate-900 font-semibold">pesquisa qualitativa e integrativa</strong>,
+            incentivando nossos alunos a transformarem suas reflexões em escrita criativa, ensaios e partilha de conhecimento aberto. Dessa forma, geramos valor real por meio do{' '}
+            <strong className="text-amber-800 font-semibold">Estudo, Evolução e Prática</strong>, com a finalidade de impactar o desenvolvimento profissional, relacional, pessoal, ético e humano de cada um.
+          </p>
 
           <p className="text-slate-700 text-base leading-relaxed">
             O objetivo primordial desta plataforma é ser um <strong className="text-slate-900 font-semibold">espaço vivo de cultivo para a expansão da consciência, leitura crítica, escrita reflexiva e desenvolvimento integrativo em diversas áreas da vida</strong>. Atuamos como uma ponte acolhedora entre saberes holísticos/humanistas e as ferramentas estruturadas da comunicação intelectual.
