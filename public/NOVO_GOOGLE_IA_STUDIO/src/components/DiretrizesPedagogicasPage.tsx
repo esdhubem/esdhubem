@@ -16,7 +16,8 @@ import {
   Users,
   Search,
   ExternalLink,
-  Target
+  Target,
+  ScrollText
 } from 'lucide-react';
 
 interface DiretrizesPedagogicasPageProps {
@@ -260,6 +261,109 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Card: Diretrizes para Produção Textual e Acadêmica: Saberes Tradicionais e Ciências Humanas */}
+        <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border border-slate-200/80 space-y-6">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+            <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-600 shrink-0">
+              <ScrollText className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">
+                Metodologia & Produção Científica
+              </span>
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+                📜 Diretrizes para Produção Textual e Acadêmica: Saberes Tradicionais e Ciências Humanas
+              </h2>
+            </div>
+          </div>
+
+          <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <p>
+              Em nossa instituição, lidamos com saberes tradicionais, holísticos e esotéricos — como esoterismo, astrologia, hermetismo, alquimia, iridologia, entre outros. No ambiente acadêmico, esses temas não buscam comprovação laboratorial ou validação pelas ciências naturais. Em vez disso, são classificados e investigados sob a ótica das <strong className="text-slate-900 font-semibold">Ciências Humanas e Sociais</strong>, utilizando metodologias da História, Antropologia, Sociologia, Psicologia ou Literatura.
+            </p>
+            <p>
+              Para o desenvolvimento de artigos científicos e publicações em nossa plataforma ou em periódicos externos, os alunos podem adotar <strong className="text-purple-800 font-semibold">três abordagens metodológicas principais</strong>:
+            </p>
+          </div>
+
+          {/* 3 Abordagens Metodológicas */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
+            {/* 1. Ensaio Teórico ou Conceitual */}
+            <div className="bg-gradient-to-b from-purple-50/50 to-slate-50 p-5 rounded-2xl border border-purple-200/70 space-y-4 flex flex-col justify-between shadow-2xs">
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-purple-600 text-white font-black text-xs flex items-center justify-center shrink-0">
+                    1
+                  </span>
+                  <h3 className="font-bold text-slate-900 text-base">Ensaio Teórico ou Conceitual</h3>
+                </div>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  O foco é o debate filosófico ou histórico de ideias, sem a pretensão de validar o esoterismo como verdade científica factual. O valor está na solidez da argumentação e na articulação de conceitos.
+                </p>
+              </div>
+              <div className="bg-white/90 border border-purple-200/60 rounded-xl p-3 text-xs text-slate-700 space-y-1">
+                <span className="font-bold text-purple-700 block uppercase tracking-wider text-[10px]">Exemplo:</span>
+                <p className="italic">
+                  Um ensaio analisando como as teorias do psicólogo Carl Jung utilizaram conceitos da alquimia e do esoterismo para mapear o inconsciente humano.
+                </p>
+              </div>
+            </div>
+
+            {/* 2. Revisão Narrativa ou Histórica */}
+            <div className="bg-gradient-to-b from-blue-50/50 to-slate-50 p-5 rounded-2xl border border-blue-200/70 space-y-4 flex flex-col justify-between shadow-2xs">
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-blue-600 text-white font-black text-xs flex items-center justify-center shrink-0">
+                    2
+                  </span>
+                  <h3 className="font-bold text-slate-900 text-base">Revisão Narrativa ou Histórica</h3>
+                </div>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Serve para mapear, descrever e analisar como determinado tema foi tratado ao longo do tempo ou dentro de um contexto cultural específico, baseando-se em livros, documentos e registros bibliográficos.
+                </p>
+              </div>
+              <div className="bg-white/90 border border-blue-200/60 rounded-xl p-3 text-xs text-slate-700 space-y-1">
+                <span className="font-bold text-blue-700 block uppercase tracking-wider text-[10px]">Exemplo:</span>
+                <p className="italic">
+                  Uma revisão da literatura sobre o papel político dos astrólogos nas cortes europeias durante o período do Renascimento.
+                </p>
+              </div>
+            </div>
+
+            {/* 3. Carta ao Editor ou Ponto de Vista */}
+            <div className="bg-gradient-to-b from-amber-50/50 to-slate-50 p-5 rounded-2xl border border-amber-200/70 space-y-4 flex flex-col justify-between shadow-2xs">
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-amber-600 text-white font-black text-xs flex items-center justify-center shrink-0">
+                    3
+                  </span>
+                  <h3 className="font-bold text-slate-900 text-base">Carta ao Editor ou Ponto de Vista</h3>
+                </div>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Um formato mais curto e direto, geralmente utilizado para debater o impacto contemporâneo desses fenômenos na sociedade atual ou comentar discussões acadêmicas vigentes.
+                </p>
+              </div>
+              <div className="bg-white/90 border border-amber-200/60 rounded-xl p-3 text-xs text-slate-700 space-y-1">
+                <span className="font-bold text-amber-800 block uppercase tracking-wider text-[10px]">Exemplo:</span>
+                <p className="italic">
+                  Uma carta discutindo o crescimento de aplicativos de astrologia entre os jovens da "Geração Z" e o seu impacto no comportamento de consumo digital, sob a perspectiva sociológica.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 🎯 Objetivo e Validade Acadêmica */}
+          <div className="bg-gradient-to-r from-emerald-50/80 via-slate-50 to-emerald-50/40 border border-emerald-200/80 rounded-2xl p-5 sm:p-6 space-y-3 shadow-xs">
+            <div className="flex items-center gap-2 font-bold text-emerald-900 text-base sm:text-lg">
+              <Target className="w-5 h-5 text-emerald-600 shrink-0" />
+              <span>🎯 Objetivo e Validade Acadêmica</span>
+            </div>
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+              Essa abordagem permite que o aluno desenvolva o pensamento crítico e produza materiais aptos a serem aceitos tanto no portal da nossa escola quanto em periódicos científicos externos voltados para o <strong className="text-slate-900 font-semibold">Estudo das Religiões, Ciências Sociais, História Cultural ou Filosofia</strong>. Para a comunidade acadêmica, estes temas são tratados como <strong className="text-slate-900 font-semibold">fatos culturais, históricos e sociais legítimos</strong>, ricos em relevância e merecedores de investigação, independentemente de haver ou não eficácia científica nas práticas.
+            </p>
           </div>
         </div>
 

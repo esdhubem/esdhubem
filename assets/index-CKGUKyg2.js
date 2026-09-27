@@ -13555,6 +13555,30 @@ var Scale = createLucideIcon("scale", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var ScrollText = createLucideIcon("scroll-text", [
+	["path", {
+		d: "M15 12h-5",
+		key: "r7krc0"
+	}],
+	["path", {
+		d: "M15 8h-5",
+		key: "1khuty"
+	}],
+	["path", {
+		d: "M19 17V5a2 2 0 0 0-2-2H4",
+		key: "zz82l3"
+	}],
+	["path", {
+		d: "M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3",
+		key: "1ph1d7"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Search = createLucideIcon("search", [["path", {
 	d: "m21 21-4.34-4.34",
 	key: "14j7rj"
@@ -24811,6 +24835,153 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 										})]
 									})
 								]
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border border-slate-200/80 space-y-6",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-3 border-b border-slate-100 pb-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-600 shrink-0",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ScrollText, { className: "w-6 h-6" })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-xs font-bold text-purple-600 uppercase tracking-wider",
+									children: "Metodologia & Produção Científica"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+									className: "text-xl sm:text-2xl font-bold text-slate-900",
+									children: "📜 Diretrizes para Produção Textual e Acadêmica: Saberes Tradicionais e Ciências Humanas"
+								})] })]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+									"Em nossa instituição, lidamos com saberes tradicionais, holísticos e esotéricos — como esoterismo, astrologia, hermetismo, alquimia, iridologia, entre outros. No ambiente acadêmico, esses temas não buscam comprovação laboratorial ou validação pelas ciências naturais. Em vez disso, são classificados e investigados sob a ótica das ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-slate-900 font-semibold",
+										children: "Ciências Humanas e Sociais"
+									}),
+									", utilizando metodologias da História, Antropologia, Sociologia, Psicologia ou Literatura."
+								] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+									"Para o desenvolvimento de artigos científicos e publicações em nossa plataforma ou em periódicos externos, os alunos podem adotar ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-purple-800 font-semibold",
+										children: "três abordagens metodológicas principais"
+									}),
+									":"
+								] })]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "grid grid-cols-1 md:grid-cols-3 gap-5 pt-2",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "bg-gradient-to-b from-purple-50/50 to-slate-50 p-5 rounded-2xl border border-purple-200/70 space-y-4 flex flex-col justify-between shadow-2xs",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-2.5",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "w-7 h-7 rounded-lg bg-purple-600 text-white font-black text-xs flex items-center justify-center shrink-0",
+													children: "1"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+													className: "font-bold text-slate-900 text-base",
+													children: "Ensaio Teórico ou Conceitual"
+												})]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+												children: "O foco é o debate filosófico ou histórico de ideias, sem a pretensão de validar o esoterismo como verdade científica factual. O valor está na solidez da argumentação e na articulação de conceitos."
+											})]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-white/90 border border-purple-200/60 rounded-xl p-3 text-xs text-slate-700 space-y-1",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-bold text-purple-700 block uppercase tracking-wider text-[10px]",
+												children: "Exemplo:"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "italic",
+												children: "Um ensaio analisando como as teorias do psicólogo Carl Jung utilizaram conceitos da alquimia e do esoterismo para mapear o inconsciente humano."
+											})]
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "bg-gradient-to-b from-blue-50/50 to-slate-50 p-5 rounded-2xl border border-blue-200/70 space-y-4 flex flex-col justify-between shadow-2xs",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-2.5",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "w-7 h-7 rounded-lg bg-blue-600 text-white font-black text-xs flex items-center justify-center shrink-0",
+													children: "2"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+													className: "font-bold text-slate-900 text-base",
+													children: "Revisão Narrativa ou Histórica"
+												})]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+												children: "Serve para mapear, descrever e analisar como determinado tema foi tratado ao longo do tempo ou dentro de um contexto cultural específico, baseando-se em livros, documentos e registros bibliográficos."
+											})]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-white/90 border border-blue-200/60 rounded-xl p-3 text-xs text-slate-700 space-y-1",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-bold text-blue-700 block uppercase tracking-wider text-[10px]",
+												children: "Exemplo:"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "italic",
+												children: "Uma revisão da literatura sobre o papel político dos astrólogos nas cortes europeias durante o período do Renascimento."
+											})]
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "bg-gradient-to-b from-amber-50/50 to-slate-50 p-5 rounded-2xl border border-amber-200/70 space-y-4 flex flex-col justify-between shadow-2xs",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-2.5",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "w-7 h-7 rounded-lg bg-amber-600 text-white font-black text-xs flex items-center justify-center shrink-0",
+													children: "3"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+													className: "font-bold text-slate-900 text-base",
+													children: "Carta ao Editor ou Ponto de Vista"
+												})]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-slate-600 text-xs sm:text-sm leading-relaxed",
+												children: "Um formato mais curto e direto, geralmente utilizado para debater o impacto contemporâneo desses fenômenos na sociedade atual ou comentar discussões acadêmicas vigentes."
+											})]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-white/90 border border-amber-200/60 rounded-xl p-3 text-xs text-slate-700 space-y-1",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-bold text-amber-800 block uppercase tracking-wider text-[10px]",
+												children: "Exemplo:"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "italic",
+												children: "Uma carta discutindo o crescimento de aplicativos de astrologia entre os jovens da \"Geração Z\" e o seu impacto no comportamento de consumo digital, sob a perspectiva sociológica."
+											})]
+										})]
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-gradient-to-r from-emerald-50/80 via-slate-50 to-emerald-50/40 border border-emerald-200/80 rounded-2xl p-5 sm:p-6 space-y-3 shadow-xs",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2 font-bold text-emerald-900 text-base sm:text-lg",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Target, { className: "w-5 h-5 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "🎯 Objetivo e Validade Acadêmica" })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-700 text-sm sm:text-base leading-relaxed",
+									children: [
+										"Essa abordagem permite que o aluno desenvolva o pensamento crítico e produza materiais aptos a serem aceitos tanto no portal da nossa escola quanto em periódicos científicos externos voltados para o ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "text-slate-900 font-semibold",
+											children: "Estudo das Religiões, Ciências Sociais, História Cultural ou Filosofia"
+										}),
+										". Para a comunidade acadêmica, estes temas são tratados como ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "text-slate-900 font-semibold",
+											children: "fatos culturais, históricos e sociais legítimos"
+										}),
+										", ricos em relevância e merecedores de investigação, independentemente de haver ou não eficácia científica nas práticas."
+									]
+								})]
 							})
 						]
 					}),
