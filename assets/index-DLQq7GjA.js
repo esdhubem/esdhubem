@@ -24663,7 +24663,7 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 										className: "bg-amber-500/10 border-l-4 border-[#FFC72C] p-3.5 rounded-r-xl",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 											className: "text-slate-900 font-semibold text-sm sm:text-base leading-snug",
-											children: "O saber deixa de ser um documento estático e burocrático para se transformar em um legado circulante."
+											children: "Nosso intuito é que o saber deixe de ser um documento estático e burocrático para se transformar em um legado circulante."
 										})
 									})
 								]

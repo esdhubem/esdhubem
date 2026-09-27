@@ -158,7 +158,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
 
             <div className="bg-amber-500/10 border-l-4 border-[#FFC72C] p-3.5 rounded-r-xl">
               <p className="text-slate-900 font-semibold text-sm sm:text-base leading-snug">
-                O saber deixa de ser um documento estático e burocrático para se transformar em um legado circulante.
+                Nosso intuito é que o saber deixe de ser um documento estático e burocrático para se transformar em um legado circulante.
               </p>
             </div>
           </div>
