@@ -24541,7 +24541,7 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 								className: "text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight",
-								children: "Nosso Manifesto: Saberes Integrativos, Escrita Criativa e o Método Científico Aberto"
+								children: "Diretrizes e Esclarecimento Pedagógico: Saberes Integrativos, Escrita Criativa e o Método Científico Aberto"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 								className: "text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed",
@@ -24552,19 +24552,19 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onOpenValidator, onOpenCertific
 										className: "text-[#FFC72C] font-semibold",
 										children: "tradição, símbolo, sensibilidade e tecnologia"
 									}),
-									". Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras da filosofia, história, sociologia, astrologia simbólica, hermetismo, alquimia, saúde coletiva e inteligência artificial. Fazemos isso sob a ótica da",
+									". Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras do conhecimento convencional, integrando estudos dos sistemas simbólicos às discussões contemporâneas. Fazemos isso sob a ótica da",
 									" ",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 										className: "text-white font-semibold",
-										children: "pesquisa qualitativa, subjetiva e integrativa"
+										children: "pesquisa qualitativa e integrativa"
 									}),
-									", incentivando nossos alunos a transformarem suas reflexões em escrita criativa, artigos e ciência aberta para o mundo com reconhecimento de",
+									", incentivando nossos alunos a transformarem suas reflexões em escrita criativa, ensaios e partilha de conhecimento aberto. Dessa forma, geramos valor real por meio do",
 									" ",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 										className: "text-[#FFC72C] font-semibold",
 										children: "Estudo, Evolução e Prática"
 									}),
-									"."
+									", com a finalidade de impactar o desenvolvimento profissional, relacional, pessoal, ético e humano de cada um."
 								]
 							})
 						]

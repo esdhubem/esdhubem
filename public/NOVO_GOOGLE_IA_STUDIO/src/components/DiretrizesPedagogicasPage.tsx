@@ -84,16 +84,16 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-              Nosso Manifesto: Saberes Integrativos, Escrita Criativa e o Método Científico Aberto
+              Diretrizes e Esclarecimento Pedagógico: Saberes Integrativos, Escrita Criativa e o Método Científico Aberto
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed">
               Na nossa escola livre, acreditamos que a sabedoria humana se expande quando unimos{' '}
               <strong className="text-[#FFC72C] font-semibold">tradição, símbolo, sensibilidade e tecnologia</strong>.
-              Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras da filosofia, história, sociologia, astrologia simbólica, hermetismo, alquimia, saúde coletiva e inteligência artificial. Fazemos isso sob a ótica da{' '}
-              <strong className="text-white font-semibold">pesquisa qualitativa, subjetiva e integrativa</strong>,
-              incentivando nossos alunos a transformarem suas reflexões em escrita criativa, artigos e ciência aberta para o mundo com reconhecimento de{' '}
-              <strong className="text-[#FFC72C] font-semibold">Estudo, Evolução e Prática</strong>.
+              Nossos cursos e trilhas de aprendizagem navegam pelas fronteiras do conhecimento convencional, integrando estudos dos sistemas simbólicos às discussões contemporâneas. Fazemos isso sob a ótica da{' '}
+              <strong className="text-white font-semibold">pesquisa qualitativa e integrativa</strong>,
+              incentivando nossos alunos a transformarem suas reflexões em escrita criativa, ensaios e partilha de conhecimento aberto. Dessa forma, geramos valor real por meio do{' '}
+              <strong className="text-[#FFC72C] font-semibold">Estudo, Evolução e Prática</strong>, com a finalidade de impactar o desenvolvimento profissional, relacional, pessoal, ético e humano de cada um.
             </p>
           </div>
         </div>
