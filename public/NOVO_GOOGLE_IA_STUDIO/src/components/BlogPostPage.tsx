@@ -23,41 +23,46 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBackToBlog, 
   return (
     <article className="min-h-screen bg-white">
       {/* Header com Imagem */}
-      <div className="relative h-[60vh] min-h-[400px] flex items-end justify-center">
+      <div className="relative min-h-[460px] sm:min-h-[500px] flex items-end justify-center pt-24 pb-12 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={post.imageUrl} 
             alt={post.title} 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#182333] via-[#182333]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#182333] via-[#182333]/85 to-[#182333]/50" />
         </div>
 
         {/* Navegação Topo */}
         <div className="absolute top-0 inset-x-0 p-6 flex justify-between items-center z-20 max-w-5xl mx-auto w-full">
           <button
             onClick={onBackToBlog}
-            className="inline-flex items-center gap-2 text-white hover:text-[#FFC72C] transition-colors text-sm font-semibold bg-black/20 hover:bg-black/40 px-4 py-2 rounded-full backdrop-blur-md"
+            className="inline-flex items-center gap-2 text-white hover:text-[#FFC72C] transition-colors text-sm font-semibold bg-black/40 hover:bg-black/60 px-4 py-2 rounded-full backdrop-blur-md cursor-pointer border border-white/10"
           >
             <ArrowLeft className="w-4 h-4" />
             Voltar para o Blog
           </button>
           <button
             onClick={onBackToHome}
-            className="text-white hover:text-[#FFC72C] text-sm font-semibold transition-colors drop-shadow-md"
+            className="text-white hover:text-[#FFC72C] text-sm font-semibold transition-colors drop-shadow-md cursor-pointer bg-black/20 hover:bg-black/40 px-3.5 py-1.5 rounded-full backdrop-blur-md"
           >
             Ir para Início
           </button>
         </div>
 
         {/* Título e Meta */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full text-center">
-          <span className="inline-block bg-[#FFC72C] text-[#182333] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6 shadow-lg">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+          <span className="inline-block bg-[#FFC72C] text-[#182333] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 shadow-lg">
             {post.category}
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-3 drop-shadow-lg">
             {post.title}
           </h1>
+          {post.subtitle && (
+            <p className="text-base sm:text-lg md:text-xl font-medium text-amber-300 max-w-3xl mx-auto leading-relaxed mb-6 drop-shadow-md">
+              {post.subtitle}
+            </p>
+          )}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-300 font-medium">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-md">

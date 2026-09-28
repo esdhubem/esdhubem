@@ -101,9 +101,14 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onBackToHome, onNavigateToPo
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#182333] mb-3 group-hover:text-[#FFC72C] transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-[#182333] mb-1.5 group-hover:text-[#FFC72C] transition-colors line-clamp-2">
                     {post.title}
                   </h3>
+                  {post.subtitle && (
+                    <p className="text-xs font-semibold text-amber-700 mb-2.5 line-clamp-1">
+                      {post.subtitle}
+                    </p>
+                  )}
                   
                   <p className="text-slate-600 text-sm mb-6 line-clamp-3 flex-1">
                     {post.excerpt}

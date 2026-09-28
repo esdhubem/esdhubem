@@ -21140,7 +21140,8 @@ var PolicyDetailPage = ({ policyId, onBackToPolicies, onBackToHome }) => {
 var BLOG_POSTS = [
 	{
 		id: "tcc-certificados-autoridade-publicacao-cientifica",
-		title: "Seu TCC e Certificados Vão Para a Gaveta? Como Transformar Horas de Estudo em Autoridade Profissional e Publicação Científica Real",
+		title: "Seu TCC e Certificados Vão Para a Gaveta?",
+		subtitle: "Como Transformar Horas de Estudo em Autoridade Profissional e Publicação Científica Real",
 		excerpt: "Você já parou para pensar em quantas horas passou assistindo a videoaulas passivas, fazendo provinhas automáticas e guardando certificados em PDF que ninguém nunca vai ler? Descubra como transformar suas horas de estudo em portfólio público, autoridade profissional e publicação científica real com código DOI permanente.",
 		videoUrl: "https://odysee.com/$/embed/@esdhubem:a/apresentacao_esdhubem:2",
 		imageUrl: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80",
@@ -21428,8 +21429,12 @@ var BlogPage = ({ onBackToHome, onNavigateToPost }) => {
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "text-xl font-bold text-[#182333] mb-3 group-hover:text-[#FFC72C] transition-colors line-clamp-2",
+								className: "text-xl font-bold text-[#182333] mb-1.5 group-hover:text-[#FFC72C] transition-colors line-clamp-2",
 								children: post.title
+							}),
+							post.subtitle && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs font-semibold text-amber-700 mb-2.5 line-clamp-1",
+								children: post.subtitle
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "text-slate-600 text-sm mb-6 line-clamp-3 flex-1",
@@ -21471,7 +21476,7 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses }) =
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 		className: "min-h-screen bg-white",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "relative h-[60vh] min-h-[400px] flex items-end justify-center",
+			className: "relative min-h-[460px] sm:min-h-[500px] flex items-end justify-center pt-24 pb-12 overflow-hidden",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "absolute inset-0",
@@ -21479,30 +21484,34 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses }) =
 						src: post.imageUrl,
 						alt: post.title,
 						className: "w-full h-full object-cover"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-[#182333] via-[#182333]/60 to-transparent" })]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-[#182333] via-[#182333]/85 to-[#182333]/50" })]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "absolute top-0 inset-x-0 p-6 flex justify-between items-center z-20 max-w-5xl mx-auto w-full",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						onClick: onBackToBlog,
-						className: "inline-flex items-center gap-2 text-white hover:text-[#FFC72C] transition-colors text-sm font-semibold bg-black/20 hover:bg-black/40 px-4 py-2 rounded-full backdrop-blur-md",
+						className: "inline-flex items-center gap-2 text-white hover:text-[#FFC72C] transition-colors text-sm font-semibold bg-black/40 hover:bg-black/60 px-4 py-2 rounded-full backdrop-blur-md cursor-pointer border border-white/10",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-4 h-4" }), "Voltar para o Blog"]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 						onClick: onBackToHome,
-						className: "text-white hover:text-[#FFC72C] text-sm font-semibold transition-colors drop-shadow-md",
+						className: "text-white hover:text-[#FFC72C] text-sm font-semibold transition-colors drop-shadow-md cursor-pointer bg-black/20 hover:bg-black/40 px-3.5 py-1.5 rounded-full backdrop-blur-md",
 						children: "Ir para Início"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full text-center",
+					className: "relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "inline-block bg-[#FFC72C] text-[#182333] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6 shadow-lg",
+							className: "inline-block bg-[#FFC72C] text-[#182333] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 shadow-lg",
 							children: post.category
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-							className: "text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg",
+							className: "text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-3 drop-shadow-lg",
 							children: post.title
+						}),
+						post.subtitle && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-base sm:text-lg md:text-xl font-medium text-amber-300 max-w-3xl mx-auto leading-relaxed mb-6 drop-shadow-md",
+							children: post.subtitle
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex flex-wrap items-center justify-center gap-6 text-sm text-slate-300 font-medium",

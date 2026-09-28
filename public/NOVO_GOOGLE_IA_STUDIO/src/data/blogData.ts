@@ -1,6 +1,7 @@
 export interface BlogPost {
   id: string;
   title: string;
+  subtitle?: string;
   excerpt: string;
   content: string; // HTML ou string para renderizar
   imageUrl: string;
@@ -19,7 +20,8 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'tcc-certificados-autoridade-publicacao-cientifica',
-    title: 'Seu TCC e Certificados Vão Para a Gaveta? Como Transformar Horas de Estudo em Autoridade Profissional e Publicação Científica Real',
+    title: 'Seu TCC e Certificados Vão Para a Gaveta?',
+    subtitle: 'Como Transformar Horas de Estudo em Autoridade Profissional e Publicação Científica Real',
     excerpt: 'Você já parou para pensar em quantas horas passou assistindo a videoaulas passivas, fazendo provinhas automáticas e guardando certificados em PDF que ninguém nunca vai ler? Descubra como transformar suas horas de estudo em portfólio público, autoridade profissional e publicação científica real com código DOI permanente.',
     videoUrl: 'https://odysee.com/$/embed/@esdhubem:a/apresentacao_esdhubem:2',
     imageUrl: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80',
