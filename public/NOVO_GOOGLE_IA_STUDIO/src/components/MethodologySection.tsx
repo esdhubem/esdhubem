@@ -25,91 +25,100 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
         </div>
       </div>
 
-      {/* 4 Pillars Grid Section */}
+      {/* 4 Pillars Horizontal Cards Section (Deitados ao invés de torres) */}
       <div className="py-14 sm:py-16 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch -mt-8 sm:-mt-10 relative z-10">
+          <div className="space-y-6 -mt-8 sm:-mt-10 relative z-10">
             {METHODOLOGY_PILLARS.map((pillar) => {
               const isPopular = pillar.isPopular;
 
               return (
                 <div
                   key={pillar.number}
-                  className={`relative rounded-2xl p-5 sm:p-6 lg:p-7 flex flex-col justify-between transition-all duration-300 ${
+                  className={`relative rounded-3xl p-6 sm:p-8 bg-white transition-all duration-300 ${
                     isPopular
-                      ? 'bg-white border-2 border-[#243042] shadow-xl shadow-slate-900/10 -translate-y-1 lg:-translate-y-2'
-                      : 'bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300'
+                      ? 'border-2 border-[#182333] shadow-xl shadow-slate-900/10'
+                      : 'border border-slate-200/90 shadow-md hover:shadow-lg hover:border-slate-300'
                   }`}
                   id={`pillar-card-${pillar.number}`}
                 >
-                  {/* "Mais Procurado" Badge for Pillar */}
+                  {/* "Mais Procurado" Badge for Popular Pillar */}
                   {isPopular && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#182333] text-[#FFC72C] text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md flex items-center gap-1.5 border border-amber-400/30 whitespace-nowrap">
+                    <div className="absolute -top-3.5 right-6 sm:right-10 bg-[#182333] text-[#FFC72C] text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md flex items-center gap-1.5 border border-amber-400/30 whitespace-nowrap z-10">
                       <Sparkles className="w-3.5 h-3.5 text-[#FFC72C] fill-[#FFC72C]" />
                       <span>Mais Procurado</span>
                     </div>
                   )}
 
-                  <div>
-                    {/* Top indicator & title */}
-                    <div className="flex items-center justify-between gap-2 mb-4">
-                      <span
-                        className={`w-9 h-9 rounded-full flex items-center justify-center font-extrabold text-sm ${
-                          isPopular
-                            ? 'bg-[#182333] text-[#FFC72C]'
-                            : 'bg-slate-100 text-slate-700'
-                        }`}
-                      >
-                        {pillar.number}
-                      </span>
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                    {/* Coluna 1: Identificação, Título e Botão de Ação */}
+                    <div className="lg:col-span-4 space-y-4 border-b lg:border-b-0 lg:border-r border-slate-100 pb-5 lg:pb-0 lg:pr-6">
+                      <div className="flex items-center gap-3">
+                        <span
+                          className={`w-10 h-10 rounded-2xl flex items-center justify-center font-black text-base shadow-xs ${
+                            isPopular
+                              ? 'bg-[#182333] text-[#FFC72C]'
+                              : 'bg-slate-100 text-slate-800 border border-slate-200'
+                          }`}
+                        >
+                          {pillar.number}
+                        </span>
+                        <div className="flex flex-col">
+                          <span className="text-[11px] font-extrabold text-amber-600 uppercase tracking-widest">
+                            Etapa {pillar.number}
+                          </span>
+                          <span className="text-xs text-slate-500 font-medium">
+                            {pillar.number === '1' && '🟢 Descoberta'}
+                            {pillar.number === '2' && '🔵 Ação Prática'}
+                            {pillar.number === '3' && '🟡 Validação Acadêmica'}
+                            {pillar.number === '4' && '🔴 Transformação'}
+                          </span>
+                        </div>
+                      </div>
 
-                      <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
-                        Etapa {pillar.number}
-                      </span>
+                      <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-snug">
+                        {pillar.title}
+                      </h3>
+
+                      <div>
+                        <button
+                          onClick={() => {
+                            onSelectPillar(pillar.type);
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                          }}
+                          className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer shadow-xs ${
+                            isPopular
+                              ? 'bg-[#182333] hover:bg-slate-800 text-[#FFC72C]'
+                              : 'bg-slate-900 hover:bg-slate-800 text-white'
+                          }`}
+                        >
+                          <span>Ver {pillar.title}</span>
+                          <ArrowRight className="w-4 h-4 shrink-0" />
+                        </button>
+                      </div>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3.5 leading-snug">
-                      {pillar.title}
-                    </h3>
-
-                    {/* Descrição Block */}
-                    <div className="mb-4 space-y-1">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                        Descrição:
+                    {/* Coluna 2: Descrição Detalhada */}
+                    <div className="lg:col-span-4 space-y-1.5">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                        <FileText className="w-3.5 h-3.5 text-slate-400" />
+                        <span>Descrição</span>
                       </p>
-                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      <p className="text-sm text-slate-700 leading-relaxed font-normal">
                         {pillar.description}
                       </p>
                     </div>
 
-                    {/* Público-alvo Block */}
-                    <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1 mb-5">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#243042] flex items-center gap-1.5">
-                        <Users className="w-3.5 h-3.5 text-amber-500" />
+                    {/* Coluna 3: Público-alvo Box */}
+                    <div className="lg:col-span-4 p-5 rounded-2xl bg-slate-50/90 border border-slate-200/90 space-y-2">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#182333] flex items-center gap-2">
+                        <Users className="w-4 h-4 text-amber-500" />
                         <span>Público-alvo</span>
                       </p>
-                      <p className="text-xs text-slate-600 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         {pillar.targetAudience}
                       </p>
                     </div>
-                  </div>
-
-                  {/* Action CTA */}
-                  <div className="pt-2">
-                    <button
-                      onClick={() => {
-                        onSelectPillar(pillar.type);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                      }}
-                      className={`w-full py-3 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
-                        isPopular
-                          ? 'bg-[#243042] hover:bg-[#182333] text-white shadow-sm'
-                          : 'bg-slate-100 hover:bg-[#243042] text-slate-800 hover:text-white'
-                      }`}
-                    >
-                      <span className="truncate">Ver {pillar.title}</span>
-                      <ArrowRight className="w-4 h-4 shrink-0" />
-                    </button>
                   </div>
                 </div>
               );
