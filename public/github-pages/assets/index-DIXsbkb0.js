@@ -21473,6 +21473,18 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses }) =
 		setCopied(true);
 		setTimeout(() => setCopied(false), 2e3);
 	};
+	const shareUrl = typeof window !== "undefined" ? `${window.location.href.split("?")[0]}?post=${post.id}` : "";
+	const shareTitle = encodeURIComponent(post.title);
+	const encodedUrl = encodeURIComponent(shareUrl);
+	const shareFacebook = () => {
+		window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, "_blank", "noopener,noreferrer");
+	};
+	const shareTwitter = () => {
+		window.open(`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${shareTitle}`, "_blank", "noopener,noreferrer");
+	};
+	const shareLinkedin = () => {
+		window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, "_blank", "noopener,noreferrer");
+	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 		className: "min-h-screen bg-white",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -21542,30 +21554,37 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses }) =
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "hidden lg:flex flex-col gap-4 sticky top-32 h-fit items-center w-16",
+				className: "hidden lg:flex flex-col gap-3 sticky top-32 h-fit items-center w-16",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-xs font-bold text-slate-400 uppercase tracking-widest writing-vertical rotate-180 mb-4",
+						className: "text-[10px] font-bold text-slate-400 uppercase tracking-wider text-center select-none",
 						children: "Compartilhe"
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-12 w-px bg-slate-200 mb-4" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 w-px bg-slate-200 mb-2" }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						className: "w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-blue-600 hover:border-blue-600 hover:bg-blue-50 transition-all",
+						onClick: shareFacebook,
+						title: "Compartilhar no Facebook",
+						className: "w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-blue-600 hover:border-blue-600 hover:bg-blue-50 transition-all cursor-pointer",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, { className: "w-4 h-4" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						className: "w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-sky-500 hover:border-sky-500 hover:bg-sky-50 transition-all",
+						onClick: shareTwitter,
+						title: "Compartilhar no X (Twitter)",
+						className: "w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-sky-500 hover:border-sky-500 hover:bg-sky-50 transition-all cursor-pointer",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Twitter, { className: "w-4 h-4" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						className: "w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-blue-700 hover:border-blue-700 hover:bg-blue-50 transition-all",
+						onClick: shareLinkedin,
+						title: "Compartilhar no LinkedIn",
+						className: "w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-blue-700 hover:border-blue-700 hover:bg-blue-50 transition-all cursor-pointer",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Linkedin, { className: "w-4 h-4" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						onClick: handleCopyLink,
-						className: "w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#182333] hover:border-[#182333] hover:bg-slate-100 transition-all group relative",
+						title: "Copiar link",
+						className: "w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#182333] hover:border-[#182333] hover:bg-slate-100 transition-all group relative cursor-pointer",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4" }), copied && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "absolute left-14 bg-[#182333] text-white text-xs px-2 py-1 rounded",
+							className: "absolute left-14 bg-[#182333] text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap z-30",
 							children: "Copiado!"
 						})]
 					})
@@ -21575,12 +21594,8 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses }) =
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "prose prose-lg prose-slate max-w-none prose-headings:text-[#182333] prose-a:text-amber-600 hover:prose-a:text-amber-700",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-xl text-slate-600 font-medium leading-relaxed mb-8 border-l-4 border-[#FFC72C] pl-6 py-2 bg-slate-50 italic",
-							children: post.excerpt
-						}),
 						post.videoUrl && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "my-8 w-full aspect-video rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-slate-950 relative",
+							className: "mb-10 w-full aspect-video rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-slate-950 relative",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
 								src: post.videoUrl,
 								title: post.title,
@@ -21590,7 +21605,7 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses }) =
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "mt-8 text-slate-700 leading-relaxed space-y-6",
+							className: "mt-6 text-slate-700 leading-relaxed space-y-6",
 							dangerouslySetInnerHTML: { __html: post.content }
 						}),
 						post.cta && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -21633,20 +21648,23 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses }) =
 							className: "flex items-center justify-center gap-4",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-									className: "w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-colors",
+									onClick: shareFacebook,
+									className: "w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-colors cursor-pointer",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, { className: "w-5 h-5" })
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-									className: "w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-sky-500 hover:text-white transition-colors",
+									onClick: shareTwitter,
+									className: "w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-sky-500 hover:text-white transition-colors cursor-pointer",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Twitter, { className: "w-5 h-5" })
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-									className: "w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-700 hover:text-white transition-colors",
+									onClick: shareLinkedin,
+									className: "w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-700 hover:text-white transition-colors cursor-pointer",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Linkedin, { className: "w-5 h-5" })
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 									onClick: handleCopyLink,
-									className: "w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#182333] hover:text-white transition-colors relative",
+									className: "w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#182333] hover:text-white transition-colors relative cursor-pointer",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-5 h-5" })
 								})
 							]
