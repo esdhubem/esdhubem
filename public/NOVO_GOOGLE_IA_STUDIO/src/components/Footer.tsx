@@ -14,7 +14,8 @@ import {
   ArrowUp,
   Heart,
   Award,
-  Eye
+  Eye,
+  Bookmark
 } from 'lucide-react';
 import newsletterImg from '../assets/newsletter.jpg';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
@@ -269,6 +270,15 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-blue-300 font-semibold"
                 >
                   Diretrizes de Publicação
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('gerador-abnt')}
+                  className="hover:text-amber-300 transition-colors cursor-pointer text-left text-[#FFC72C] font-bold flex items-center gap-1.5"
+                >
+                  <Bookmark className="w-3.5 h-3.5 text-[#FFC72C]" />
+                  <span>Gerador de Referências ABNT (Novo)</span>
                 </button>
               </li>
               <li>

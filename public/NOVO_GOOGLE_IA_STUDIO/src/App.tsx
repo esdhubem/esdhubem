@@ -31,6 +31,7 @@ import { DiretrizesPedagogicasPage } from './components/DiretrizesPedagogicasPag
 import { PodcastsPage } from './components/PodcastsPage';
 import { DiretrizesPublicacaoParceriasPage } from './components/DiretrizesPublicacaoParceriasPage';
 import { SobreNosPage } from './components/SobreNosPage';
+import { GeradorAbntPage } from './components/GeradorAbntPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -51,7 +52,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos' | 'gerador-abnt'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -88,6 +89,12 @@ export default function App() {
 
     if (pagina === 'sobre-nos' || pagina === 'sobre' || pagina === 'sobre-esdhubem') {
       setCurrentPage('sobre-nos');
+      window.history.replaceState({}, '', window.location.pathname);
+      return;
+    }
+
+    if (pagina === 'gerador-abnt' || pagina === 'referencias-abnt' || pagina === 'abnt' || pagina === 'gerador-referencias-abnt') {
+      setCurrentPage('gerador-abnt');
       window.history.replaceState({}, '', window.location.pathname);
       return;
     }
@@ -252,6 +259,12 @@ export default function App() {
 
     if (sectionId === 'sobre-nos' || sectionId === 'sobre' || sectionId === 'sobre-esdhubem') {
       setCurrentPage('sobre-nos');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'gerador-abnt' || sectionId === 'referencias-abnt' || sectionId === 'abnt') {
+      setCurrentPage('gerador-abnt');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -789,6 +802,21 @@ export default function App() {
             }}
             onNavigateToPedagogy={() => {
               setCurrentPage('diretrizes-pedagogicas');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
+      {currentPage === 'gerador-abnt' && (
+        <main className="flex-1">
+          <GeradorAbntPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigateToArticles={() => {
+              setCurrentPage('artigos');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           />

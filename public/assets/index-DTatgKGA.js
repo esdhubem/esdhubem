@@ -11668,6 +11668,16 @@ var BookmarkCheck = createLucideIcon("bookmark-check", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Bookmark = createLucideIcon("bookmark", [["path", {
+	d: "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z",
+	key: "1fy3hk"
+}]]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var BrainCircuit = createLucideIcon("brain-circuit", [
 	["path", {
 		d: "M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z",
@@ -12573,6 +12583,26 @@ var FileText = createLucideIcon("file-text", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var FolderPlus = createLucideIcon("folder-plus", [
+	["path", {
+		d: "M12 10v6",
+		key: "1bos4e"
+	}],
+	["path", {
+		d: "M9 13h6",
+		key: "1uhe8q"
+	}],
+	["path", {
+		d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z",
+		key: "1kt360"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Funnel = createLucideIcon("funnel", [["path", {
 	d: "M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z",
 	key: "sc7q7i"
@@ -13267,6 +13297,19 @@ var Play = createLucideIcon("play", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Plus = createLucideIcon("plus", [["path", {
+	d: "M5 12h14",
+	key: "1ays0h"
+}], ["path", {
+	d: "M12 5v14",
+	key: "s699le"
+}]]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Presentation = createLucideIcon("presentation", [
 	["path", {
 		d: "M2 3h20",
@@ -13892,6 +13935,34 @@ var Target = createLucideIcon("target", [
 		cy: "12",
 		r: "2",
 		key: "1c9p78"
+	}]
+]);
+/**
+* @license lucide-react v0.546.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var Trash2 = createLucideIcon("trash-2", [
+	["path", {
+		d: "M10 11v6",
+		key: "nco0om"
+	}],
+	["path", {
+		d: "M14 11v6",
+		key: "outv1u"
+	}],
+	["path", {
+		d: "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6",
+		key: "miytrc"
+	}],
+	["path", {
+		d: "M3 6h18",
+		key: "d0wm0j"
+	}],
+	["path", {
+		d: "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2",
+		key: "e791ji"
 	}]
 ]);
 /**
@@ -16643,6 +16714,11 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 										onClick: () => onNavigate("diretrizes-publicacao"),
 										className: "hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-blue-300 font-semibold",
 										children: "Diretrizes de Publicação"
+									}) }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										onClick: () => onNavigate("gerador-abnt"),
+										className: "hover:text-amber-300 transition-colors cursor-pointer text-left text-[#FFC72C] font-bold flex items-center gap-1.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bookmark, { className: "w-3.5 h-3.5 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Gerador de Referências ABNT (Novo)" })]
 									}) }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 										onClick: () => onNavigate("podcasts"),
@@ -28221,6 +28297,1451 @@ var SobreNosPage = ({ onBackToHome, onOpenValidator, onNavigateToCourses, onNavi
 	});
 };
 //#endregion
+//#region src/components/GeradorAbntPage.tsx
+var MONTHS_ABNT = [
+	{
+		value: "",
+		label: "Selecione o mês (opcional)"
+	},
+	{
+		value: "jan.",
+		label: "Janeiro (jan.)"
+	},
+	{
+		value: "fev.",
+		label: "Fevereiro (fev.)"
+	},
+	{
+		value: "mar.",
+		label: "Março (mar.)"
+	},
+	{
+		value: "abr.",
+		label: "Abril (abr.)"
+	},
+	{
+		value: "maio",
+		label: "Maio (maio)"
+	},
+	{
+		value: "jun.",
+		label: "Junho (jun.)"
+	},
+	{
+		value: "jul.",
+		label: "Julho (jul.)"
+	},
+	{
+		value: "ago.",
+		label: "Agosto (ago.)"
+	},
+	{
+		value: "set.",
+		label: "Setembro (set.)"
+	},
+	{
+		value: "out.",
+		label: "Outubro (out.)"
+	},
+	{
+		value: "nov.",
+		label: "Novembro (nov.)"
+	},
+	{
+		value: "dez.",
+		label: "Dezembro (dez.)"
+	}
+];
+var GeradorAbntPage = ({ onBackToHome, onNavigateToArticles }) => {
+	const [sourceType, setSourceType] = (0, import_react.useState)("livro");
+	const [highlightStyle, setHighlightStyle] = (0, import_react.useState)("bold");
+	const [useEtAl, setUseEtAl] = (0, import_react.useState)(false);
+	const [copiedType, setCopiedType] = (0, import_react.useState)(null);
+	const [pageCitationNumber, setPageCitationNumber] = (0, import_react.useState)("15");
+	const [authors, setAuthors] = (0, import_react.useState)([{
+		lastName: "",
+		firstName: ""
+	}]);
+	const [authorRole, setAuthorRole] = (0, import_react.useState)("autor");
+	const [title, setTitle] = (0, import_react.useState)("");
+	const [subtitle, setSubtitle] = (0, import_react.useState)("");
+	const [edition, setEdition] = (0, import_react.useState)("");
+	const [city, setCity] = (0, import_react.useState)("");
+	const [publisher, setPublisher] = (0, import_react.useState)("");
+	const [year, setYear] = (0, import_react.useState)("");
+	const [totalPageCount, setTotalPageCount] = (0, import_react.useState)("");
+	const [volume, setVolume] = (0, import_react.useState)("");
+	const [url, setUrl] = (0, import_react.useState)("");
+	const [accessDate, setAccessDate] = (0, import_react.useState)("");
+	const [journalName, setJournalName] = (0, import_react.useState)("");
+	const [journalIssue, setJournalIssue] = (0, import_react.useState)("");
+	const [pageRange, setPageRange] = (0, import_react.useState)("");
+	const [month, setMonth] = (0, import_react.useState)("");
+	const [doi, setDoi] = (0, import_react.useState)("");
+	const [bookTitle, setBookTitle] = (0, import_react.useState)("");
+	const [bookSubtitle, setBookSubtitle] = (0, import_react.useState)("");
+	const [bookOrganizers, setBookOrganizers] = (0, import_react.useState)("");
+	const [academicDegree, setAcademicDegree] = (0, import_react.useState)("Trabalho de Conclusão de Curso (Graduação)");
+	const [courseProgram, setCourseProgram] = (0, import_react.useState)("");
+	const [institution, setInstitution] = (0, import_react.useState)("");
+	const [jurisdiction, setJurisdiction] = (0, import_react.useState)("");
+	const [lawNumberAndDate, setLawNumberAndDate] = (0, import_react.useState)("");
+	const [summaryDescription, setSummaryDescription] = (0, import_react.useState)("");
+	const [gazetteName, setGazetteName] = (0, import_react.useState)("Diário Oficial da União");
+	const [gazetteDetails, setGazetteDetails] = (0, import_react.useState)("");
+	const [savedReferences, setSavedReferences] = (0, import_react.useState)(() => {
+		try {
+			const saved = localStorage.getItem("esdhubem_abnt_references");
+			return saved ? JSON.parse(saved) : [];
+		} catch {
+			return [];
+		}
+	});
+	(0, import_react.useEffect)(() => {
+		try {
+			localStorage.setItem("esdhubem_abnt_references", JSON.stringify(savedReferences));
+		} catch (e) {
+			console.error("Erro ao salvar referências:", e);
+		}
+	}, [savedReferences]);
+	const handleSetTodayAccessDate = () => {
+		const today = /* @__PURE__ */ new Date();
+		const day = today.getDate();
+		const monthIndex = today.getMonth();
+		const months = [
+			"jan.",
+			"fev.",
+			"mar.",
+			"abr.",
+			"maio",
+			"jun.",
+			"jul.",
+			"ago.",
+			"set.",
+			"out.",
+			"nov.",
+			"dez."
+		];
+		const currentYear = today.getFullYear();
+		setAccessDate(`${day} ${months[monthIndex]} ${currentYear}`);
+	};
+	const handleAddAuthor = () => {
+		setAuthors([...authors, {
+			lastName: "",
+			firstName: ""
+		}]);
+	};
+	const handleRemoveAuthor = (index) => {
+		if (authors.length === 1) setAuthors([{
+			lastName: "",
+			firstName: ""
+		}]);
+		else setAuthors(authors.filter((_, i) => i !== index));
+	};
+	const handleAuthorChange = (index, field, value) => {
+		const updated = [...authors];
+		updated[index][field] = value;
+		setAuthors(updated);
+	};
+	const loadExample = (type) => {
+		setSourceType(type);
+		if (type === "livro") {
+			setAuthors([{
+				lastName: "FREIRE",
+				firstName: "Paulo"
+			}]);
+			setAuthorRole("autor");
+			setTitle("Pedagogia da autonomia");
+			setSubtitle("saberes necessários à prática educativa");
+			setEdition("25. ed.");
+			setCity("São Paulo");
+			setPublisher("Paz e Terra");
+			setYear("1996");
+			setTotalPageCount("144 p.");
+			setUrl("");
+			setAccessDate("");
+		} else if (type === "artigo") {
+			setAuthors([{
+				lastName: "SILVÉRIO",
+				firstName: "Silviane"
+			}, {
+				lastName: "VIVIAN",
+				firstName: "Henrique"
+			}]);
+			setTitle("O desenvolvimento integral do indivíduo no ecossistema corporativo");
+			setSubtitle("uma abordagem prática da aprendizagem autoral");
+			setJournalName("Revista Científica ESDHUBEM");
+			setCity("São Paulo");
+			setVolume("v. 3");
+			setJournalIssue("n. 1");
+			setPageRange("p. 14-28");
+			setMonth("ago.");
+			setYear("2026");
+			setDoi("10.5281/zenodo.1234567");
+			setUrl("https://zenodo.org/records/1234567");
+			handleSetTodayAccessDate();
+		} else if (type === "site") {
+			setAuthors([{
+				lastName: "ESDHUBEM",
+				firstName: ""
+			}]);
+			setTitle("Como transformar horas de estudo em autoridade profissional e publicação científica real");
+			setSubtitle("");
+			setJournalName("Portal ESDHUBEM");
+			setCity("São Paulo");
+			setYear("2026");
+			setUrl("https://praticasdebemestarsocial.github.io/esdhubem/?post=tcc-certificados-autoridade-publicacao-cientifica");
+			handleSetTodayAccessDate();
+		} else if (type === "tcc") {
+			setAuthors([{
+				lastName: "ALMEIDA",
+				firstName: "Camila Ferreira de"
+			}]);
+			setTitle("Educação aberta e autoridade profissional");
+			setSubtitle("o impacto dos certificados livres no mercado contemporâneo");
+			setAcademicDegree("Trabalho de Conclusão de Curso (Graduação em Pedagogia)");
+			setInstitution("Universidade de São Paulo");
+			setCity("São Paulo");
+			setYear("2025");
+			setTotalPageCount("68 f.");
+			setUrl("");
+			setAccessDate("");
+		} else if (type === "legislacao") {
+			setJurisdiction("BRASIL");
+			setLawNumberAndDate("Lei nº 9.394, de 20 de dezembro de 1996");
+			setSummaryDescription("Estabelece as diretrizes e bases da educação nacional");
+			setGazetteName("Diário Oficial da União");
+			setGazetteDetails("Brasília, DF, seção 1, p. 27833, 23 dez. 1996");
+			setUrl("http://www.planalto.gov.br/ccivil_03/leis/l9394.htm");
+			handleSetTodayAccessDate();
+		} else if (type === "capitulo") {
+			setAuthors([{
+				lastName: "LUCKESI",
+				firstName: "Cipriano Carlos"
+			}]);
+			setTitle("Avaliação da aprendizagem escolar");
+			setSubtitle("apontamentos sobre a prática");
+			setBookOrganizers("SILVA, Marcos (org.)");
+			setBookTitle("Avaliação e prática pedagógica");
+			setBookSubtitle("desafios e perspectivas");
+			setEdition("3. ed.");
+			setCity("São Paulo");
+			setPublisher("Cortez");
+			setYear("2022");
+			setPageRange("p. 45-68");
+			setUrl("");
+			setAccessDate("");
+		}
+	};
+	const clearForm = () => {
+		setAuthors([{
+			lastName: "",
+			firstName: ""
+		}]);
+		setAuthorRole("autor");
+		setTitle("");
+		setSubtitle("");
+		setEdition("");
+		setCity("");
+		setPublisher("");
+		setYear("");
+		setTotalPageCount("");
+		setVolume("");
+		setUrl("");
+		setAccessDate("");
+		setJournalName("");
+		setJournalIssue("");
+		setPageRange("");
+		setMonth("");
+		setDoi("");
+		setBookTitle("");
+		setBookSubtitle("");
+		setBookOrganizers("");
+		setAcademicDegree("Trabalho de Conclusão de Curso (Graduação)");
+		setCourseProgram("");
+		setInstitution("");
+		setJurisdiction("");
+		setLawNumberAndDate("");
+		setSummaryDescription("");
+		setGazetteName("Diário Oficial da União");
+		setGazetteDetails("");
+	};
+	const formatAuthorsABNT = () => {
+		const validAuthors = authors.filter((a) => a.lastName.trim() || a.firstName.trim());
+		if (validAuthors.length === 0) return "";
+		if (useEtAl && validAuthors.length > 3) {
+			const first = validAuthors[0];
+			const last = first.lastName.trim().toUpperCase();
+			const firstN = first.firstName.trim();
+			return `${last}${firstN ? `, ${firstN}` : ""} et al.`;
+		}
+		let res = validAuthors.map((a) => {
+			const last = a.lastName.trim().toUpperCase();
+			const first = a.firstName.trim();
+			return last && first ? `${last}, ${first}` : last || first;
+		}).join("; ");
+		if (authorRole === "org") res += " (org.)";
+		else if (authorRole === "coord") res += " (coord.)";
+		else if (authorRole === "ed") res += " (ed.)";
+		return res;
+	};
+	const buildInTextCitations = () => {
+		const validAuthors = authors.filter((a) => a.lastName.trim() || a.firstName.trim());
+		let authorCiting = "";
+		let authorNarrative = "";
+		if (sourceType === "legislacao") {
+			const juris = jurisdiction.trim().toUpperCase() || "BRASIL";
+			const parsedYear = lawNumberAndDate.match(/\b(19\d\d|20\d\d)\b/)?.[0] || "1996";
+			return {
+				indirect: `(${juris}, ${parsedYear})`,
+				direct: `(${juris}, ${parsedYear}, art. 1º)`,
+				narrative: `Segundo o ${juris.toLowerCase() === "brasil" ? "Brasil" : juris} (${parsedYear})...`
+			};
+		}
+		if (validAuthors.length === 0) {
+			const fallbackTitle = title.trim().split(" ")[0]?.toUpperCase() || "AUTOR";
+			const y = year.trim() || "s.d.";
+			return {
+				indirect: `(${fallbackTitle}, ${y})`,
+				direct: `(${fallbackTitle}, ${y}, p. ${pageCitationNumber || "15"})`,
+				narrative: `De acordo com ${fallbackTitle} (${y})...`
+			};
+		}
+		const y = year.trim() || "s.d.";
+		if (validAuthors.length === 1) {
+			const lastUpper = validAuthors[0].lastName.trim().toUpperCase() || validAuthors[0].firstName.trim().toUpperCase();
+			const lastCapital = (validAuthors[0].lastName.trim() || validAuthors[0].firstName.trim()).split(" ").map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(" ");
+			authorCiting = lastUpper;
+			authorNarrative = lastCapital;
+		} else if (validAuthors.length === 2) {
+			authorCiting = `${validAuthors[0].lastName.trim().toUpperCase()}; ${validAuthors[1].lastName.trim().toUpperCase()}`;
+			authorNarrative = `${validAuthors[0].lastName.trim()} e ${validAuthors[1].lastName.trim()}`;
+		} else if (validAuthors.length === 3 && !useEtAl) {
+			authorCiting = `${validAuthors[0].lastName.trim().toUpperCase()}; ${validAuthors[1].lastName.trim().toUpperCase()}; ${validAuthors[2].lastName.trim().toUpperCase()}`;
+			authorNarrative = `${validAuthors[0].lastName.trim()}, ${validAuthors[1].lastName.trim()} e ${validAuthors[2].lastName.trim()}`;
+		} else {
+			const firstUpper = validAuthors[0].lastName.trim().toUpperCase();
+			const firstCap = validAuthors[0].lastName.trim();
+			authorCiting = `${firstUpper} et al.`;
+			authorNarrative = `${firstCap} et al.`;
+		}
+		return {
+			indirect: `(${authorCiting}, ${y})`,
+			direct: `(${authorCiting}, ${y}, p. ${pageCitationNumber || "15"})`,
+			narrative: `Segundo ${authorNarrative} (${y}), ...`
+		};
+	};
+	const buildReference = () => {
+		const wrapHighlight = (text) => {
+			if (!text) return "";
+			return highlightStyle === "bold" ? `<b>${text}</b>` : `<i>${text}</i>`;
+		};
+		let html = "";
+		let plainText = "";
+		let sortKey = "";
+		const authorStr = formatAuthorsABNT();
+		const authorsSection = authorStr ? `${authorStr}. ` : "";
+		if (sourceType === "livro") {
+			sortKey = authorStr || title || "Z";
+			const mainTitle = title.trim();
+			const subTitleStr = subtitle.trim() ? `: ${subtitle.trim()}` : "";
+			const edStr = edition.trim() ? `${edition.trim()}. ` : "";
+			const cityStr = city.trim() || "[S. l.]";
+			const pubStr = publisher.trim() || "[s. n.]";
+			const yearStr = year.trim() || "[s. d.]";
+			const pagesStr = totalPageCount.trim() ? ` ${totalPageCount.trim()}.` : "";
+			const onlineStr = url.trim() && accessDate.trim() ? ` Disponível em: <a href="${url.trim()}" target="_blank" class="text-amber-600 underline">${url.trim()}</a>. Acesso em: ${accessDate.trim()}.` : "";
+			const onlinePlain = url.trim() && accessDate.trim() ? ` Disponível em: ${url.trim()}. Acesso em: ${accessDate.trim()}.` : "";
+			html = `${authorsSection}${wrapHighlight(mainTitle)}${subTitleStr}. ${edStr}${cityStr}: ${pubStr}, ${yearStr}.${pagesStr}${onlineStr}`;
+			plainText = `${authorsSection}${mainTitle}${subTitleStr}. ${edStr}${cityStr}: ${pubStr}, ${yearStr}.${pagesStr}${onlinePlain}`;
+		} else if (sourceType === "artigo") {
+			sortKey = authorStr || title || "Z";
+			const artTitle = title.trim();
+			const artSub = subtitle.trim() ? `: ${subtitle.trim()}` : "";
+			const jName = journalName.trim() || "Nome da Revista";
+			const cityStr = city.trim() ? `${city.trim()}, ` : "";
+			const volStr = volume.trim() ? `${volume.trim()}, ` : "";
+			const issStr = journalIssue.trim() ? `${journalIssue.trim()}, ` : "";
+			const pRangeStr = pageRange.trim() ? `${pageRange.trim()}, ` : "";
+			const monthStr = month.trim() ? `${month.trim()} ` : "";
+			const yearStr = year.trim() || "[s. d.]";
+			const doiStr = doi.trim() ? ` DOI: ${doi.trim()}.` : "";
+			const onlineStr = url.trim() && accessDate.trim() ? ` Disponível em: <a href="${url.trim()}" target="_blank" class="text-amber-600 underline">${url.trim()}</a>. Acesso em: ${accessDate.trim()}.` : "";
+			const onlinePlain = url.trim() && accessDate.trim() ? ` Disponível em: ${url.trim()}. Acesso em: ${accessDate.trim()}.` : "";
+			html = `${authorsSection}${artTitle}${artSub}. ${wrapHighlight(jName)}, ${cityStr}${volStr}${issStr}${pRangeStr}${monthStr}${yearStr}.${doiStr}${onlineStr}`;
+			plainText = `${authorsSection}${artTitle}${artSub}. ${jName}, ${cityStr}${volStr}${issStr}${pRangeStr}${monthStr}${yearStr}.${doiStr}${onlinePlain}`;
+		} else if (sourceType === "site") {
+			sortKey = authorStr || title || "Z";
+			const pageTitle = title.trim();
+			const pageSub = subtitle.trim() ? `: ${subtitle.trim()}` : "";
+			const sName = journalName.trim() || "Nome do Portal/Site";
+			const yearStr = year.trim() ? `, ${year.trim()}` : "";
+			const onlineStr = url.trim() && accessDate.trim() ? ` Disponível em: <a href="${url.trim()}" target="_blank" class="text-amber-600 underline">${url.trim()}</a>. Acesso em: ${accessDate.trim()}.` : url.trim() ? ` Disponível em: <a href="${url.trim()}" target="_blank" class="text-amber-600 underline">${url.trim()}</a>.` : "";
+			const onlinePlain = url.trim() && accessDate.trim() ? ` Disponível em: ${url.trim()}. Acesso em: ${accessDate.trim()}.` : url.trim() ? ` Disponível em: ${url.trim()}.` : "";
+			html = `${authorsSection}${pageTitle}${pageSub}. ${wrapHighlight(sName)}${yearStr}.${onlineStr}`;
+			plainText = `${authorsSection}${pageTitle}${pageSub}. ${sName}${yearStr}.${onlinePlain}`;
+		} else if (sourceType === "tcc") {
+			sortKey = authorStr || title || "Z";
+			const workTitle = title.trim();
+			const workSub = subtitle.trim() ? `: ${subtitle.trim()}` : "";
+			const yearDefense = year.trim() || "[s. d.]";
+			const pagesStr = totalPageCount.trim() ? `${totalPageCount.trim()}. ` : "";
+			const degStr = academicDegree.trim();
+			const progStr = courseProgram.trim() ? ` em ${courseProgram.trim()}` : "";
+			const instStr = institution.trim() ? ` – ${institution.trim()}` : "";
+			const cityStr = city.trim() ? `, ${city.trim()}` : "";
+			const onlineStr = url.trim() && accessDate.trim() ? ` Disponível em: <a href="${url.trim()}" target="_blank" class="text-amber-600 underline">${url.trim()}</a>. Acesso em: ${accessDate.trim()}.` : "";
+			const onlinePlain = url.trim() && accessDate.trim() ? ` Disponível em: ${url.trim()}. Acesso em: ${accessDate.trim()}.` : "";
+			html = `${authorsSection}${wrapHighlight(workTitle)}${workSub}. ${yearDefense}. ${pagesStr}${degStr}${progStr}${instStr}${cityStr}, ${yearDefense}.${onlineStr}`;
+			plainText = `${authorsSection}${workTitle}${workSub}. ${yearDefense}. ${pagesStr}${degStr}${progStr}${instStr}${cityStr}, ${yearDefense}.${onlinePlain}`;
+		} else if (sourceType === "capitulo") {
+			sortKey = authorStr || title || "Z";
+			const chapTitle = title.trim();
+			const chapSub = subtitle.trim() ? `: ${subtitle.trim()}` : "";
+			const orgStr = bookOrganizers.trim() ? `In: ${bookOrganizers.trim()}. ` : "In: ";
+			const bTitle = bookTitle.trim() || "Título do Livro";
+			const bSub = bookSubtitle.trim() ? `: ${bookSubtitle.trim()}` : "";
+			const edStr = edition.trim() ? `${edition.trim()}. ` : "";
+			const cityStr = city.trim() || "[S. l.]";
+			const pubStr = publisher.trim() || "[s. n.]";
+			const yearStr = year.trim() || "[s. d.]";
+			const pRangeStr = pageRange.trim() ? ` ${pageRange.trim()}.` : "";
+			html = `${authorsSection}${chapTitle}${chapSub}. ${orgStr}${wrapHighlight(bTitle)}${bSub}. ${edStr}${cityStr}: ${pubStr}, ${yearStr}.${pRangeStr}`;
+			plainText = `${authorsSection}${chapTitle}${chapSub}. ${orgStr}${bTitle}${bSub}. ${edStr}${cityStr}: ${pubStr}, ${yearStr}.${pRangeStr}`;
+		} else if (sourceType === "legislacao") {
+			const juris = jurisdiction.trim().toUpperCase() || "BRASIL";
+			sortKey = juris;
+			const act = lawNumberAndDate.trim() || "Lei nº ...";
+			const summary = summaryDescription.trim() ? ` ${summaryDescription.trim()}.` : "";
+			const gazette = gazetteName.trim();
+			const details = gazetteDetails.trim() ? `: ${gazetteDetails.trim()}.` : ".";
+			const onlineStr = url.trim() && accessDate.trim() ? ` Disponível em: <a href="${url.trim()}" target="_blank" class="text-amber-600 underline">${url.trim()}</a>. Acesso em: ${accessDate.trim()}.` : "";
+			const onlinePlain = url.trim() && accessDate.trim() ? ` Disponível em: ${url.trim()}. Acesso em: ${accessDate.trim()}.` : "";
+			html = `${juris}. ${act}.${summary} ${wrapHighlight(gazette)}${details}${onlineStr}`;
+			plainText = `${juris}. ${act}.${summary} ${gazette}${details}${onlinePlain}`;
+		}
+		return {
+			html,
+			plainText,
+			sortKey
+		};
+	};
+	const currentRef = buildReference();
+	const currentCitations = buildInTextCitations();
+	const handleCopyRichText = async (htmlContent, plainContent, typeKey) => {
+		try {
+			if (navigator.clipboard && window.ClipboardItem) {
+				const blobHtml = new Blob([htmlContent], { type: "text/html" });
+				const blobPlain = new Blob([plainContent], { type: "text/plain" });
+				await navigator.clipboard.write([new ClipboardItem({
+					"text/html": blobHtml,
+					"text/plain": blobPlain
+				})]);
+			} else await navigator.clipboard.writeText(plainContent);
+			setCopiedType(typeKey);
+			setTimeout(() => setCopiedType(null), 2500);
+		} catch {
+			await navigator.clipboard.writeText(plainContent);
+			setCopiedType(typeKey);
+			setTimeout(() => setCopiedType(null), 2500);
+		}
+	};
+	const handleSaveReference = () => {
+		if (!title && !lawNumberAndDate) {
+			alert("Por favor, preencha ao menos o título da obra ou norma antes de salvar.");
+			return;
+		}
+		const newRef = {
+			id: Date.now().toString(),
+			type: sourceType,
+			html: currentRef.html,
+			plainText: currentRef.plainText,
+			citationIndirect: currentCitations.indirect,
+			citationDirect: currentCitations.direct,
+			citationNarrative: currentCitations.narrative,
+			sortKey: currentRef.sortKey,
+			createdAt: Date.now()
+		};
+		setSavedReferences((prev) => {
+			const updated = [...prev, newRef];
+			updated.sort((a, b) => a.sortKey.localeCompare(b.sortKey, "pt-BR"));
+			return updated;
+		});
+		setCopiedType("saved-to-list");
+		setTimeout(() => setCopiedType(null), 2500);
+	};
+	const handleRemoveSaved = (id) => {
+		setSavedReferences((prev) => prev.filter((r) => r.id !== id));
+	};
+	const handleClearAllSaved = () => {
+		if (window.confirm("Deseja realmente limpar toda a sua lista de referências salvas?")) setSavedReferences([]);
+	};
+	const handleCopyAllSaved = () => {
+		if (savedReferences.length === 0) return;
+		const allHtml = savedReferences.map((r) => `<p style="margin-bottom: 12pt; text-align: justify;">${r.html}</p>`).join("\n");
+		const allPlain = savedReferences.map((r) => r.plainText).join("\n\n");
+		handleCopyRichText(allHtml, allPlain, "all-saved");
+	};
+	const handleExportTxt = () => {
+		if (savedReferences.length === 0) return;
+		const content = `REFERÊNCIAS (NORMA ABNT NBR 6023:2018)\nGerado no Portal ESDHUBEM\n\n` + savedReferences.map((r) => r.plainText).join("\n\n");
+		const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+		const urlBlob = URL.createObjectURL(blob);
+		const link = document.createElement("a");
+		link.href = urlBlob;
+		link.download = `referencias-abnt-esdhubem-${(/* @__PURE__ */ new Date()).toISOString().slice(0, 10)}.txt`;
+		link.click();
+		URL.revokeObjectURL(urlBlob);
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "bg-[#F8FAFC] min-h-screen pb-24 text-slate-800",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "bg-[#182333] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-slate-700/60",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "absolute inset-0 opacity-10 pointer-events-none",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "absolute inset-0",
+					style: {
+						backgroundImage: "radial-gradient(#FFC72C 1px, transparent 1px)",
+						backgroundSize: "24px 24px"
+					}
+				})
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "max-w-7xl mx-auto relative z-10",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center justify-between gap-4 mb-6",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						onClick: onBackToHome,
+						className: "inline-flex items-center gap-2 text-slate-300 hover:text-[#FFC72C] transition-colors text-sm font-semibold cursor-pointer bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/10",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Voltar para o Início" })]
+					}), onNavigateToArticles && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						onClick: onNavigateToArticles,
+						className: "hidden sm:inline-flex items-center gap-2 text-amber-300 hover:text-white transition-colors text-xs font-bold uppercase tracking-wider bg-amber-500/20 px-3 py-1.5 rounded-full border border-amber-400/30 cursor-pointer",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Produção Intelectual ESDHUBEM" })]
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "max-w-3xl",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/30 text-[#FFC72C] text-xs font-extrabold uppercase tracking-wider mb-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ferramenta Acadêmica Gratuita" })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+							className: "text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4 tracking-tight",
+							children: ["Gerador de Referências & Citações ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[#FFC72C]",
+								children: "ABNT"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+							className: "text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-normal",
+							children: [
+								"Crie referências bibliográficas impecáveis segundo as normas ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "ABNT NBR 6023:2018" }),
+								" e citações diretas/indiretas no texto pela ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "NBR 10520" }),
+								". Sem cadastro, 100% gratuito e pronto para copiar para o Word ou Google Docs."
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-wrap items-center gap-3 text-xs text-slate-300",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5 text-emerald-400" }), " NBR 6023:2018 Atualizada"]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5 text-emerald-400" }), " Copia com Negrito Formatado"]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5 text-emerald-400" }), " Ordenação Automática A-Z"]
+								})
+							]
+						})
+					]
+				})]
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "bg-white rounded-2xl shadow-xl border border-slate-200/80 p-2 sm:p-3 mb-8 overflow-x-auto",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex items-center gap-2 min-w-max",
+						children: [
+							{
+								id: "livro",
+								label: "Livro",
+								icon: BookOpen
+							},
+							{
+								id: "capitulo",
+								label: "Capítulo de Livro",
+								icon: Layers
+							},
+							{
+								id: "artigo",
+								label: "Artigo de Periódico / Revista",
+								icon: FileText
+							},
+							{
+								id: "site",
+								label: "Site / Artigo Web",
+								icon: Globe
+							},
+							{
+								id: "tcc",
+								label: "TCC, Dissertação ou Tese",
+								icon: GraduationCap
+							},
+							{
+								id: "legislacao",
+								label: "Legislação / Leis",
+								icon: Scale
+							}
+						].map((tab) => {
+							const Icon = tab.icon;
+							const isActive = sourceType === tab.id;
+							return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								onClick: () => setSourceType(tab.id),
+								className: `flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all cursor-pointer ${isActive ? "bg-[#182333] text-[#FFC72C] shadow-md shadow-[#182333]/20 scale-[1.02]" : "text-slate-600 hover:text-[#182333] hover:bg-slate-100"}`,
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: `w-4 h-4 ${isActive ? "text-[#FFC72C]" : "text-slate-400"}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: tab.label })]
+							}, tab.id);
+						})
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "grid grid-cols-1 lg:grid-cols-12 gap-8 items-start",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center justify-between pb-4 border-b border-slate-100 flex-wrap gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+									className: "text-xl font-extrabold text-[#182333] flex items-center gap-2",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Preencha os dados da fonte" })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs text-slate-500 mt-0.5",
+									children: "Os campos em tempo real atualizam a referência e as citações no lado direito."
+								})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										type: "button",
+										onClick: () => loadExample(sourceType),
+										className: "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-bold border border-amber-200 transition-colors cursor-pointer",
+										title: "Carregar exemplo completo para ver o resultado",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Carregar Exemplo" })]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										type: "button",
+										onClick: clearForm,
+										className: "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-medium transition-colors cursor-pointer",
+										title: "Limpar todos os campos",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCcw, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Limpar" })]
+									})]
+								})]
+							}),
+							sourceType !== "legislacao" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-3 bg-slate-50/80 p-4 rounded-2xl border border-slate-200/80",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-between",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+											className: "text-xs font-bold uppercase tracking-wider text-slate-700",
+											children: "Autor(es) ou Entidade Responsável"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "flex items-center gap-2",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
+												className: "text-[11px] text-slate-500 flex items-center gap-1 cursor-pointer",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+													type: "checkbox",
+													checked: useEtAl,
+													onChange: (e) => setUseEtAl(e.target.checked),
+													className: "rounded text-amber-600 focus:ring-amber-500"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
+													"Usar ",
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "et al." }),
+													" (+ de 3 autores)"
+												] })]
+											})
+										})]
+									}),
+									authors.map((author, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex-1 grid grid-cols-1 sm:grid-cols-2 gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+												type: "text",
+												placeholder: "Último Sobrenome (ex: SILVA ou FREIRE)",
+												value: author.lastName,
+												onChange: (e) => handleAuthorChange(index, "lastName", e.target.value),
+												className: "bg-white border border-slate-300 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium focus:ring-2 focus:ring-[#FFC72C] focus:border-slate-900 outline-none"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+												type: "text",
+												placeholder: "Nome / Prenomes (ex: Paulo ou Maria Clara)",
+												value: author.firstName,
+												onChange: (e) => handleAuthorChange(index, "firstName", e.target.value),
+												className: "bg-white border border-slate-300 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium focus:ring-2 focus:ring-[#FFC72C] focus:border-slate-900 outline-none"
+											})]
+										}), authors.length > 1 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+											type: "button",
+											onClick: () => handleRemoveAuthor(index),
+											className: "p-2 text-slate-400 hover:text-red-600 transition-colors cursor-pointer",
+											title: "Remover autor",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trash2, { className: "w-4 h-4" })
+										})]
+									}, index)),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-between pt-1",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+											type: "button",
+											onClick: handleAddAuthor,
+											className: "inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800 transition-colors cursor-pointer",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Adicionar outro autor" })]
+										}), sourceType === "livro" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center gap-1.5 text-xs text-slate-600",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Papel:" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("select", {
+												value: authorRole,
+												onChange: (e) => setAuthorRole(e.target.value),
+												className: "bg-white border border-slate-300 rounded-lg px-2 py-1 text-xs outline-none font-medium",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+														value: "autor",
+														children: "Autor Principal"
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+														value: "org",
+														children: "Organizador (org.)"
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+														value: "coord",
+														children: "Coordenador (coord.)"
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+														value: "ed",
+														children: "Editor (ed.)"
+													})
+												]
+											})]
+										})]
+									})
+								]
+							}),
+							sourceType === "legislacao" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+											className: "block text-xs font-bold text-slate-700 mb-1.5",
+											children: "Jurisdição (País, Estado ou Município) *"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "text",
+											placeholder: "Ex: BRASIL ou SÃO PAULO (Estado)",
+											value: jurisdiction,
+											onChange: (e) => setJurisdiction(e.target.value),
+											className: "w-full bg-white border border-slate-300 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#FFC72C] outline-none"
+										})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+											className: "block text-xs font-bold text-slate-700 mb-1.5",
+											children: "Número e Data do Ato Normativo *"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "text",
+											placeholder: "Ex: Lei nº 9.394, de 20 de dezembro de 1996",
+											value: lawNumberAndDate,
+											onChange: (e) => setLawNumberAndDate(e.target.value),
+											className: "w-full bg-white border border-slate-300 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#FFC72C] outline-none"
+										})] })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-xs font-bold text-slate-700 mb-1.5",
+										children: "Ementa / Descrição sumária do teor"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("textarea", {
+										rows: 2,
+										placeholder: "Ex: Estabelece as diretrizes e bases da educação nacional.",
+										value: summaryDescription,
+										onChange: (e) => setSummaryDescription(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#FFC72C] outline-none"
+									})] }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+											className: "block text-xs font-bold text-slate-700 mb-1.5",
+											children: "Órgão de Divulgação (Publicação Oficial) *"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "text",
+											placeholder: "Ex: Diário Oficial da União",
+											value: gazetteName,
+											onChange: (e) => setGazetteName(e.target.value),
+											className: "w-full bg-white border border-slate-300 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#FFC72C] outline-none"
+										})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+											className: "block text-xs font-bold text-slate-700 mb-1.5",
+											children: "Local, Seção, Página e Data"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "text",
+											placeholder: "Ex: Brasília, DF, seção 1, p. 27833, 23 dez. 1996",
+											value: gazetteDetails,
+											onChange: (e) => setGazetteDetails(e.target.value),
+											className: "w-full bg-white border border-slate-300 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#FFC72C] outline-none"
+										})] })]
+									})
+								]
+							}),
+							sourceType !== "legislacao" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+									className: "block text-xs font-bold text-slate-700 mb-1.5",
+									children: "Título principal *"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+									type: "text",
+									placeholder: sourceType === "artigo" ? "Título do artigo (ex: O impacto da IA na educação)" : sourceType === "capitulo" ? "Título do capítulo" : sourceType === "site" ? "Título da matéria ou página" : "Título do livro ou obra",
+									value: title,
+									onChange: (e) => setTitle(e.target.value),
+									className: "w-full bg-white border border-slate-300 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium focus:ring-2 focus:ring-[#FFC72C] outline-none"
+								})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+									className: "block text-xs font-bold text-slate-700 mb-1.5",
+									children: "Subtítulo (se houver, sem negrito)"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+									type: "text",
+									placeholder: "Ex: saberes necessários à prática educativa",
+									value: subtitle,
+									onChange: (e) => setSubtitle(e.target.value),
+									className: "w-full bg-white border border-slate-300 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#FFC72C] outline-none"
+								})] })]
+							}),
+							sourceType === "capitulo" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4 bg-amber-50/50 p-4 rounded-2xl border border-amber-200/70",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									className: "text-xs font-bold uppercase tracking-wider text-amber-900",
+									children: "Dados da Coletânea / Livro Inteiro"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "grid grid-cols-1 sm:grid-cols-2 gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-[11px] font-bold text-slate-700 mb-1",
+										children: "Organizador / Editor do Livro (ex: SILVA, Marcos (org.))"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "text",
+										placeholder: "Ex: SILVA, Marcos (org.)",
+										value: bookOrganizers,
+										onChange: (e) => setBookOrganizers(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs focus:ring-2 focus:ring-[#FFC72C] outline-none"
+									})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-[11px] font-bold text-slate-700 mb-1",
+										children: "Título do Livro (que receberá o destaque) *"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "text",
+										placeholder: "Ex: Avaliação e prática pedagógica",
+										value: bookTitle,
+										onChange: (e) => setBookTitle(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs focus:ring-2 focus:ring-[#FFC72C] outline-none"
+									})] })]
+								})]
+							}),
+							sourceType === "artigo" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4 bg-blue-50/50 p-4 rounded-2xl border border-blue-200/70",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+										className: "text-xs font-bold uppercase tracking-wider text-blue-900",
+										children: "Dados do Periódico / Revista Científica"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "grid grid-cols-1 sm:grid-cols-2 gap-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+											className: "block text-[11px] font-bold text-slate-700 mb-1",
+											children: "Nome da Revista / Periódico (em negrito) *"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "text",
+											placeholder: "Ex: Revista Brasileira de Educação",
+											value: journalName,
+											onChange: (e) => setJournalName(e.target.value),
+											className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs focus:ring-2 focus:ring-[#FFC72C] outline-none"
+										})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+											className: "block text-[11px] font-bold text-slate-700 mb-1",
+											children: "DOI (Identificador Digital)"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "text",
+											placeholder: "Ex: 10.5281/zenodo.1234567",
+											value: doi,
+											onChange: (e) => setDoi(e.target.value),
+											className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs focus:ring-2 focus:ring-[#FFC72C] outline-none"
+										})] })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "grid grid-cols-2 sm:grid-cols-4 gap-2",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+												className: "block text-[10px] font-bold text-slate-600 mb-1",
+												children: "Volume (v.)"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+												type: "text",
+												placeholder: "v. 12",
+												value: volume,
+												onChange: (e) => setVolume(e.target.value),
+												className: "w-full bg-white border border-slate-300 px-2.5 py-1.5 rounded-lg text-xs outline-none"
+											})] }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+												className: "block text-[10px] font-bold text-slate-600 mb-1",
+												children: "Fascículo (n.)"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+												type: "text",
+												placeholder: "n. 2",
+												value: journalIssue,
+												onChange: (e) => setJournalIssue(e.target.value),
+												className: "w-full bg-white border border-slate-300 px-2.5 py-1.5 rounded-lg text-xs outline-none"
+											})] }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+												className: "block text-[10px] font-bold text-slate-600 mb-1",
+												children: "Páginas (p. xx-yy)"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+												type: "text",
+												placeholder: "p. 45-62",
+												value: pageRange,
+												onChange: (e) => setPageRange(e.target.value),
+												className: "w-full bg-white border border-slate-300 px-2.5 py-1.5 rounded-lg text-xs outline-none"
+											})] }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+												className: "block text-[10px] font-bold text-slate-600 mb-1",
+												children: "Mês (abreviado)"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("select", {
+												value: month,
+												onChange: (e) => setMonth(e.target.value),
+												className: "w-full bg-white border border-slate-300 px-2 py-1.5 rounded-lg text-xs outline-none",
+												children: MONTHS_ABNT.map((m) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+													value: m.value,
+													children: m.label
+												}, m.value))
+											})] })
+										]
+									})
+								]
+							}),
+							sourceType === "site" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-3 bg-emerald-50/50 p-4 rounded-2xl border border-emerald-200/70",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									className: "text-xs font-bold uppercase tracking-wider text-emerald-900",
+									children: "Dados do Portal ou Website"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+									className: "block text-[11px] font-bold text-slate-700 mb-1",
+									children: "Nome do Site / Portal / Blog *"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+									type: "text",
+									placeholder: "Ex: Portal ESDHUBEM, G1, Scielo",
+									value: journalName,
+									onChange: (e) => setJournalName(e.target.value),
+									className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs focus:ring-2 focus:ring-[#FFC72C] outline-none"
+								})] })]
+							}),
+							sourceType === "tcc" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4 bg-purple-50/50 p-4 rounded-2xl border border-purple-200/70",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									className: "text-xs font-bold uppercase tracking-wider text-purple-900",
+									children: "Dados Acadêmicos e Institucionais"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "grid grid-cols-1 sm:grid-cols-2 gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-[11px] font-bold text-slate-700 mb-1",
+										children: "Grau / Tipo do Trabalho *"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("select", {
+										value: academicDegree,
+										onChange: (e) => setAcademicDegree(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs font-medium outline-none",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+												value: "Trabalho de Conclusão de Curso (Graduação)",
+												children: "TCC (Graduação)"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+												value: "Monografia (Especialização)",
+												children: "Monografia (Pós-graduação / Especialização)"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+												value: "Dissertação (Mestrado)",
+												children: "Dissertação (Mestrado)"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+												value: "Tese (Doutorado)",
+												children: "Tese (Doutorado)"
+											})
+										]
+									})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-[11px] font-bold text-slate-700 mb-1",
+										children: "Instituição / Universidade *"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "text",
+										placeholder: "Ex: Universidade Federal de São Paulo",
+										value: institution,
+										onChange: (e) => setInstitution(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs focus:ring-2 focus:ring-[#FFC72C] outline-none"
+									})] })]
+								})]
+							}),
+							sourceType !== "legislacao" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "grid grid-cols-2 sm:grid-cols-4 gap-3",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-[11px] font-bold text-slate-700 mb-1",
+										children: "Cidade (Local)"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "text",
+										placeholder: "Ex: São Paulo",
+										value: city,
+										onChange: (e) => setCity(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs outline-none focus:ring-2 focus:ring-[#FFC72C]"
+									})] }),
+									sourceType !== "site" && sourceType !== "tcc" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-[11px] font-bold text-slate-700 mb-1",
+										children: "Editora"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "text",
+										placeholder: "Ex: Cortez",
+										value: publisher,
+										onChange: (e) => setPublisher(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs outline-none focus:ring-2 focus:ring-[#FFC72C]"
+									})] }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-[11px] font-bold text-slate-700 mb-1",
+										children: "Ano de Pub. *"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "text",
+										placeholder: "Ex: 2026",
+										value: year,
+										onChange: (e) => setYear(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs font-semibold outline-none focus:ring-2 focus:ring-[#FFC72C]"
+									})] }),
+									sourceType === "livro" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-[11px] font-bold text-slate-700 mb-1",
+										children: "Edição"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "text",
+										placeholder: "Ex: 2. ed.",
+										value: edition,
+										onChange: (e) => setEdition(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs outline-none focus:ring-2 focus:ring-[#FFC72C]"
+									})] }),
+									(sourceType === "livro" || sourceType === "tcc") && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "block text-[11px] font-bold text-slate-700 mb-1",
+										children: sourceType === "tcc" ? "Folhas (ex: 78 f.)" : "Total Páginas (ex: 210 p.)"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "text",
+										placeholder: sourceType === "tcc" ? "78 f." : "210 p.",
+										value: totalPageCount,
+										onChange: (e) => setTotalPageCount(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs outline-none focus:ring-2 focus:ring-[#FFC72C]"
+									})] })
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-3 pt-2 border-t border-slate-100",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+										className: "text-xs font-bold text-slate-700",
+										children: "Documento Consultado Online (Link & Data de Acesso)"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+										type: "button",
+										onClick: handleSetTodayAccessDate,
+										className: "text-[11px] font-bold text-amber-700 hover:text-amber-800 transition-colors cursor-pointer",
+										children: "+ Preencher data de hoje"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "grid grid-cols-1 sm:grid-cols-3 gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "sm:col-span-2",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "url",
+											placeholder: "URL completa (ex: https://...)",
+											value: url,
+											onChange: (e) => setUrl(e.target.value),
+											className: "w-full bg-white border border-slate-300 px-3.5 py-2 rounded-xl text-xs sm:text-sm outline-none focus:ring-2 focus:ring-[#FFC72C]"
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "text",
+										placeholder: "Ex: 28 set. 2026",
+										value: accessDate,
+										onChange: (e) => setAccessDate(e.target.value),
+										className: "w-full bg-white border border-slate-300 px-3.5 py-2 rounded-xl text-xs sm:text-sm outline-none focus:ring-2 focus:ring-[#FFC72C]"
+									}) })]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "pt-2 flex items-center justify-between text-xs text-slate-600 flex-wrap gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Destaque tipográfico:" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+											type: "button",
+											onClick: () => setHighlightStyle("bold"),
+											className: `px-2.5 py-1 rounded-lg font-bold cursor-pointer transition-all ${highlightStyle === "bold" ? "bg-[#182333] text-white" : "bg-slate-100 hover:bg-slate-200"}`,
+											children: "Negrito (Padrão ABNT)"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+											type: "button",
+											onClick: () => setHighlightStyle("italic"),
+											className: `px-2.5 py-1 rounded-lg italic cursor-pointer transition-all ${highlightStyle === "italic" ? "bg-[#182333] text-white" : "bg-slate-100 hover:bg-slate-200"}`,
+											children: "Itálico"
+										})
+									]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[11px] text-slate-400",
+									children: "A ABNT permite negrito ou itálico, desde que uniforme em todo o trabalho."
+								})]
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "lg:col-span-5 space-y-6 sticky top-28",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-white rounded-3xl p-6 sm:p-7 shadow-lg border border-slate-200/90 relative overflow-hidden",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-between mb-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#182333]",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bookmark, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Referência Bibliográfica (NBR 6023)" })]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800",
+											children: "Formatada"
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 mb-5 text-sm sm:text-base text-slate-800 leading-relaxed font-sans shadow-inner selection:bg-[#FFC72C]/40",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											dangerouslySetInnerHTML: { __html: currentRef.html },
+											className: "break-words select-all"
+										})
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex flex-col sm:flex-row gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+											onClick: () => handleCopyRichText(currentRef.html, currentRef.plainText, "single-rich"),
+											className: "flex-1 inline-flex items-center justify-center gap-2 bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-black text-xs sm:text-sm px-4 py-3 rounded-xl transition-all shadow-md active:scale-95 cursor-pointer",
+											id: "btn-copiar-referencia",
+											children: copiedType === "single-rich" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-900" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Copiado com Negrito!" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Copiar Referência" })] })
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+											onClick: handleSaveReference,
+											className: "inline-flex items-center justify-center gap-2 bg-[#182333] hover:bg-[#243042] text-white font-bold text-xs sm:text-sm px-4 py-3 rounded-xl transition-all shadow-md active:scale-95 cursor-pointer",
+											title: "Salvar na sua lista de referências do TCC",
+											children: copiedType === "saved-to-list" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Adicionada!" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FolderPlus, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Salvar na Lista" })] })
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-[11px] text-slate-400 text-center mt-3",
+										children: "Cole diretamente no Word, Google Docs ou LibreOffice com formatação preservada."
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-white rounded-3xl p-6 shadow-sm border border-slate-200 space-y-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
+										className: "text-xs font-black uppercase tracking-wider text-slate-700 flex items-center gap-1.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, { className: "w-4 h-4 text-amber-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Como Citar no Texto (NBR 10520)" })]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-1 text-[11px] text-slate-500",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Pág:" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "text",
+											value: pageCitationNumber,
+											onChange: (e) => setPageCitationNumber(e.target.value),
+											className: "w-12 bg-slate-100 border border-slate-300 rounded px-1.5 py-0.5 text-xs text-center font-bold outline-none",
+											placeholder: "15"
+										})]
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-2.5 text-xs",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "block text-[10px] font-bold uppercase text-slate-400 mb-0.5",
+												children: "Citação Indireta (fim de frase):"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-mono font-bold text-slate-800 text-xs sm:text-sm",
+												children: currentCitations.indirect
+											})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												onClick: () => handleCopyRichText(currentCitations.indirect, currentCitations.indirect, "cite-ind"),
+												className: "p-2 text-slate-500 hover:text-amber-600 transition-colors cursor-pointer",
+												title: "Copiar citação indireta",
+												children: copiedType === "cite-ind" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4" })
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "block text-[10px] font-bold uppercase text-slate-400 mb-0.5",
+												children: "Citação Direta (com página):"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-mono font-bold text-slate-800 text-xs sm:text-sm",
+												children: currentCitations.direct
+											})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												onClick: () => handleCopyRichText(currentCitations.direct, currentCitations.direct, "cite-dir"),
+												className: "p-2 text-slate-500 hover:text-amber-600 transition-colors cursor-pointer",
+												title: "Copiar citação direta",
+												children: copiedType === "cite-dir" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4" })
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "block text-[10px] font-bold uppercase text-slate-400 mb-0.5",
+												children: "Citação Narrativa (corpo do texto):"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-sans font-medium text-slate-800 text-xs sm:text-sm",
+												children: currentCitations.narrative
+											})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												onClick: () => handleCopyRichText(currentCitations.narrative, currentCitations.narrative, "cite-nar"),
+												className: "p-2 text-slate-500 hover:text-amber-600 transition-colors cursor-pointer",
+												title: "Copiar citação narrativa",
+												children: copiedType === "cite-nar" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4" })
+											})]
+										})
+									]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl p-4 bg-gradient-to-br from-[#182333] to-[#243042] text-white text-xs space-y-2 border border-slate-700 shadow-md",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2 text-[#FFC72C] font-bold",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Publique seu TCC com DOI na ESDHUBEM" })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-300 leading-relaxed text-[11px]",
+									children: [
+										"Na ESDHUBEM, seu Manuscrito de Conclusão de Curso (MCC) não vai para a gaveta: ele pode receber atribuição de ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "DOI internacional pelo ecossistema Zenodo / CERN" }),
+										" e circular mundialmente."
+									]
+								})]
+							})
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mt-16 bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-200",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-slate-200",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-bold mb-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bookmark, { className: "w-3.5 h-3.5 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
+									"Lista da Sua Sessão (",
+									savedReferences.length,
+									" salva",
+									savedReferences.length === 1 ? "" : "s",
+									")"
+								] })]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "text-2xl font-black text-[#182333]",
+								children: "Minha Lista de Referências (A-Z)"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs sm:text-sm text-slate-500",
+								children: "Organizadas automaticamente em ordem alfabética segundo a norma NBR 6023 da ABNT."
+							})
+						] }), savedReferences.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-wrap items-center gap-2",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									onClick: handleCopyAllSaved,
+									className: "inline-flex items-center gap-2 bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-black text-xs px-4 py-2.5 rounded-xl transition-all shadow-sm active:scale-95 cursor-pointer",
+									id: "btn-copiar-todas",
+									children: copiedType === "all-saved" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-900" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Todas Copiadas!" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Copiar Todas Formatadas" })] })
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									onClick: handleExportTxt,
+									className: "inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs px-3.5 py-2.5 rounded-xl transition-all cursor-pointer",
+									title: "Exportar arquivo .txt",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Exportar .TXT" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									onClick: handleClearAllSaved,
+									className: "inline-flex items-center gap-1.5 bg-red-50 hover:bg-red-100 text-red-600 font-semibold text-xs px-3 py-2.5 rounded-xl transition-all cursor-pointer",
+									title: "Limpar lista",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trash2, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Limpar Tudo" })]
+								})
+							]
+						})]
+					}), savedReferences.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "text-center py-16 space-y-3",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mx-auto text-slate-400",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FolderPlus, { className: "w-8 h-8" })
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "text-base font-bold text-slate-700",
+								children: "Nenhuma referência adicionada ainda"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+								className: "text-xs text-slate-400 max-w-md mx-auto",
+								children: [
+									"Preencha os campos acima e clique no botão ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "\"Salvar na Lista\"" }),
+									" para montar a bibliografia completa do seu artigo ou TCC."
+								]
+							})
+						]
+					}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "divide-y divide-slate-100 mt-4",
+						children: savedReferences.map((ref, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex-1 space-y-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "w-5 h-5 rounded-full bg-slate-100 text-slate-500 font-mono text-[10px] font-bold flex items-center justify-center shrink-0",
+										children: idx + 1
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-600",
+										children: ref.type
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									dangerouslySetInnerHTML: { __html: ref.html },
+									className: "text-sm text-slate-800 leading-relaxed font-sans pl-7"
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-2 sm:self-center shrink-0 pl-7 sm:pl-0",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									onClick: () => handleCopyRichText(ref.html, ref.plainText, `item-${ref.id}`),
+									className: "inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-amber-100 text-slate-700 hover:text-amber-900 text-xs font-semibold transition-colors cursor-pointer",
+									title: "Copiar referência",
+									children: copiedType === `item-${ref.id}` ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Copiado" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Copiar" })] })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									onClick: () => handleRemoveSaved(ref.id),
+									className: "p-1.5 text-slate-400 hover:text-red-600 transition-colors cursor-pointer",
+									title: "Remover",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trash2, { className: "w-4 h-4" })
+								})]
+							})]
+						}, ref.id))
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mt-16 bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-200 space-y-6",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "max-w-3xl",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold mb-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, { className: "w-3.5 h-3.5 text-amber-700" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Guia Metodológico ESDHUBEM" })]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "text-2xl font-black text-[#182333]",
+							children: "Principais Regras da ABNT NBR 6023:2018 que você deve saber"
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 text-xs sm:text-sm text-slate-700",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
+									className: "font-bold text-[#182333] text-sm sm:text-base flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "w-6 h-6 rounded-full bg-[#182333] text-[#FFC72C] text-xs font-black flex items-center justify-center",
+										children: "1"
+									}), "Qual elemento recebe o destaque (Negrito)?"]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-600 leading-relaxed text-xs",
+									children: [
+										"Em ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "livros, teses e TCCs" }),
+										", quem recebe o negrito é o ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Título da Obra" }),
+										" (o subtítulo fica em texto normal). Já em ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "artigos científicos" }),
+										", o título do artigo fica normal e quem recebe o negrito é o ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Nome da Revista / Periódico" }),
+										"."
+									]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
+									className: "font-bold text-[#182333] text-sm sm:text-base flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "w-6 h-6 rounded-full bg-[#182333] text-[#FFC72C] text-xs font-black flex items-center justify-center",
+										children: "2"
+									}), "Como organizar a lista final no trabalho?"]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-600 leading-relaxed text-xs",
+									children: [
+										"As referências devem estar em ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "ordem alfabética" }),
+										" única (pelo sobrenome do autor ou título do documento sem autor), com alinhamento à margem ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "esquerda" }),
+										" (não justificado) e espaçamento entrelinhas ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "simples" }),
+										", separadas entre si por um espaço simples."
+									]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
+									className: "font-bold text-[#182333] text-sm sm:text-base flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "w-6 h-6 rounded-full bg-[#182333] text-[#FFC72C] text-xs font-black flex items-center justify-center",
+										children: "3"
+									}), "Como abreviar os meses na ABNT?"]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-600 leading-relaxed text-xs",
+									children: [
+										"Os meses são sempre abreviados com três letras e ponto: ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "jan." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "fev." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "mar." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "abr." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "jun." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "jul." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "ago." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "set." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "out." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "nov." }),
+										", ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("code", { children: "dez." }),
+										". ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Atenção:" }),
+										" o mês de ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "maio" }),
+										" não se abrevia!"
+									]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
+									className: "font-bold text-[#182333] text-sm sm:text-base flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "w-6 h-6 rounded-full bg-[#182333] text-[#FFC72C] text-xs font-black flex items-center justify-center",
+										children: "4"
+									}), "Quando usar \"et al.\"?"]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-600 leading-relaxed text-xs",
+									children: [
+										"Pela NBR 6023:2018, para obras com mais de três autores, é permitido indicar apenas o primeiro seguido da expressão ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "et al." }),
+										" (abreviação latina para \"e outros\"), ou então citar todos os autores. O gerador da ESDHUBEM permite você escolher a modalidade de sua preferência com um clique."
+									]
+								})]
+							})
+						]
+					})]
+				})
+			]
+		})]
+	});
+};
+//#endregion
 //#region src/App.tsx
 function App() {
 	const [currentPage, setCurrentPage] = (0, import_react.useState)("home");
@@ -28255,6 +29776,11 @@ function App() {
 		}
 		if (pagina === "sobre-nos" || pagina === "sobre" || pagina === "sobre-esdhubem") {
 			setCurrentPage("sobre-nos");
+			window.history.replaceState({}, "", window.location.pathname);
+			return;
+		}
+		if (pagina === "gerador-abnt" || pagina === "referencias-abnt" || pagina === "abnt" || pagina === "gerador-referencias-abnt") {
+			setCurrentPage("gerador-abnt");
 			window.history.replaceState({}, "", window.location.pathname);
 			return;
 		}
@@ -28431,6 +29957,14 @@ function App() {
 		}
 		if (sectionId === "sobre-nos" || sectionId === "sobre" || sectionId === "sobre-esdhubem") {
 			setCurrentPage("sobre-nos");
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+			return;
+		}
+		if (sectionId === "gerador-abnt" || sectionId === "referencias-abnt" || sectionId === "abnt") {
+			setCurrentPage("gerador-abnt");
 			window.scrollTo({
 				top: 0,
 				behavior: "smooth"
@@ -29036,6 +30570,25 @@ function App() {
 					},
 					onNavigateToPedagogy: () => {
 						setCurrentPage("diretrizes-pedagogicas");
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth"
+						});
+					}
+				})
+			}),
+			currentPage === "gerador-abnt" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+				className: "flex-1",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GeradorAbntPage, {
+					onBackToHome: () => {
+						setCurrentPage("home");
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth"
+						});
+					},
+					onNavigateToArticles: () => {
+						setCurrentPage("artigos");
 						window.scrollTo({
 							top: 0,
 							behavior: "smooth"
