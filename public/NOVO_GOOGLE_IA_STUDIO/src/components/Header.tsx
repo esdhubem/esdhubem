@@ -219,7 +219,11 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             <button
               onClick={onOpenAbout}
-              className="text-white/80 hover:text-white hover:border-b-2 hover:border-white/30 transition-all py-1 cursor-pointer"
+              className={`transition-all py-1 cursor-pointer ${
+                currentPage === 'sobre-nos'
+                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
+                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
+              }`}
             >
               Sobre Nós
             </button>
@@ -350,7 +354,16 @@ export const Header: React.FC<HeaderProps> = ({
           <button onClick={() => { onNavigate('categoria:landing-pages-biolinks'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-400">Sites & Biolinks</button>
           <button onClick={() => { onNavigate('aplicativos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-[#FFC72C]">Apps & Dashboards (MEI e ME)</button>
           <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300">Livros</button>
-          <button onClick={() => { onOpenAbout(); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Sobre Nós</button>
+          <button
+            onClick={() => { onOpenAbout(); setMobileMenuOpen(false); }}
+            className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium ${
+              currentPage === 'sobre-nos'
+                ? 'bg-[#FFC72C]/20 text-[#FFC72C] font-bold'
+                : 'hover:bg-white/10'
+            }`}
+          >
+            Sobre Nós
+          </button>
 
           <div className="pt-2 border-t border-slate-700 space-y-2">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block px-3">Recursos & Diretrizes</span>

@@ -14301,7 +14301,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: onOpenAbout,
-								className: "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30 transition-all py-1 cursor-pointer",
+								className: `transition-all py-1 cursor-pointer ${currentPage === "sobre-nos" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30"}`,
 								children: "Sobre Nós"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
@@ -14429,7 +14429,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 							onOpenAbout();
 							setMobileMenuOpen(false);
 						},
-						className: "w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10",
+						className: `w-full text-left px-3 py-2 rounded-lg text-sm font-medium ${currentPage === "sobre-nos" ? "bg-[#FFC72C]/20 text-[#FFC72C] font-bold" : "hover:bg-white/10"}`,
 						children: "Sobre Nós"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -16403,163 +16403,6 @@ var CertificatePreviewModal = ({ isOpen, onClose }) => {
 							className: "px-4 py-1.5 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-lg font-bold transition-colors cursor-pointer",
 							children: "Fechar"
 						})]
-					})]
-				})
-			]
-		})
-	});
-};
-//#endregion
-//#region src/components/AboutModal.tsx
-var AboutModal = ({ isOpen, onClose, onOpenValidator }) => {
-	if (!isOpen) return null;
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/70 backdrop-blur-xs animate-in fade-in",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "relative bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl border border-stone-200",
-			onClick: (e) => e.stopPropagation(),
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "p-6 bg-[#182333] text-white flex items-center justify-between border-b border-slate-700/60",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2.5",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heart, { className: "w-6 h-6 text-[#FFC72C] fill-[#FFC72C]" })
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "text-lg font-bold leading-tight",
-							children: "Sobre a ESDHUBEM"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-xs text-slate-300",
-							children: "Escola de Desenvolvimento Humano e Bem-estar"
-						})] })]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						onClick: onClose,
-						className: "w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors cursor-pointer",
-						"aria-label": "Fechar",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "w-5 h-5" })
-					})]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "p-6 overflow-y-auto space-y-6 text-slate-700 text-sm leading-relaxed",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "space-y-3",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-									className: "text-base font-bold text-slate-900 flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-[#FFC72C] fill-[#FFC72C]" }), "Nossa Missão & Propósito"]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-									className: "text-slate-600",
-									children: [
-										"A ",
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "ESDHUBEM" }),
-										" nasceu com o compromisso de democratizar o acesso à educação socioemocional, ao autoconhecimento e às práticas integrativas com rigor didático, empatia e ética."
-									]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-slate-600",
-									children: "Acreditamos que o progresso pessoal e profissional caminham juntos: quando uma pessoa aprende a regular suas emoções, aprimora sua comunicação e compreende seu papel ético no mundo, toda a sociedade ao seu redor floresce."
-								})
-							]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "p-3.5 bg-slate-50 rounded-2xl border border-slate-200",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h5", {
-									className: "font-bold text-[#243042] text-xs uppercase tracking-wide mb-1",
-									children: "Modelo Freepremium"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-xs text-slate-600",
-									children: "Você assiste a todas as aulas de graça. O pagamento ocorre apenas se desejar o certificado formal."
-								})]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "p-3.5 bg-slate-50 rounded-2xl border border-slate-200",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h5", {
-									className: "font-bold text-[#243042] text-xs uppercase tracking-wide mb-1",
-									children: "Certificados Válidos"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-xs text-slate-600",
-									children: "Carga horária legítima e autenticação por QR Code e código alfanumérico com consulta pública instantânea."
-								})]
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-2 text-xs",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h5", {
-								className: "font-bold text-[#182333] flex items-center gap-1.5",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Building, { className: "w-4 h-4 text-[#FFC72C]" }), "Identificação Institucional & Coordenação Pedagógica"]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "space-y-1 text-slate-700",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Razão Social:" }), " ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar"] }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "CNPJ:" }), " 61928778000150"] }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Coordenação & Autoria:" }), " Profª. Silviane Silvério (Especialista em Práticas Integrativas & Desenvolvimento Humano)"] }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										className: "flex flex-wrap items-center gap-2 pt-1 text-[11px]",
-										children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-												href: "http://lattes.cnpq.br/7481458793724724",
-												target: "_blank",
-												rel: "noreferrer",
-												className: "text-blue-600 hover:underline font-bold",
-												children: "Lattes iD: 7481458793724724"
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "•" }),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-												href: "https://orcid.org/0000-0001-6311-1195",
-												target: "_blank",
-												rel: "noreferrer",
-												className: "text-emerald-700 hover:underline font-bold",
-												children: "ORCID iD: 0000-0001-6311-1195"
-											})
-										]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Sede:" }), " São Paulo - SP - Brasil"] }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "E-mail de Contato:" }), " esdhubem@proton.me"] }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Telefone / WhatsApp:" }), " (11) 960319637"] })
-								]
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "pt-2 space-y-3",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-								className: "text-base font-bold text-slate-900",
-								children: "Perguntas Frequentes (FAQ)"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "space-y-2.5",
-								children: FAQ_DATA.map((faq, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("details", {
-									className: "group bg-slate-50 rounded-xl p-3.5 border border-slate-200 text-xs cursor-pointer",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("summary", {
-										className: "font-bold text-slate-800 flex items-center justify-between list-none",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: faq.question }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "text-[#243042] group-open:rotate-180 transition-transform font-bold",
-											children: "▾"
-										})]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "mt-2 text-slate-600 leading-relaxed pt-2 border-t border-slate-200/60",
-										children: faq.answer
-									})]
-								}, idx))
-							})]
-						})
-					]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-						onClick: () => {
-							onClose();
-							onOpenValidator();
-						},
-						className: "text-xs font-semibold text-[#243042] hover:underline flex items-center gap-1 cursor-pointer",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-3.5 h-3.5 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Validar Certificado Agora" })]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						onClick: onClose,
-						className: "text-xs font-semibold px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl transition-colors cursor-pointer",
-						children: "Fechar"
 					})]
 				})
 			]
@@ -27973,6 +27816,384 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 	});
 };
 //#endregion
+//#region src/components/SobreNosPage.tsx
+var SobreNosPage = ({ onBackToHome, onOpenValidator, onNavigateToCourses, onNavigateToPedagogy }) => {
+	const [openFaqIndex, setOpenFaqIndex] = (0, import_react.useState)(null);
+	const toggleFaq = (index) => {
+		setOpenFaqIndex(openFaqIndex === index ? null : index);
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "min-h-screen bg-[#F8FAFC] text-slate-800",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "bg-[#182333] text-white border-b border-slate-700/80 relative overflow-hidden",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,199,44,0.1),transparent_50%)] pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 relative z-10",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-2 text-xs text-slate-400 mb-3",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								onClick: onBackToHome,
+								className: "hover:text-[#FFC72C] transition-colors flex items-center gap-1 cursor-pointer",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Início" })]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "/" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-slate-300",
+								children: "Institucional"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "/" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[#FFC72C] font-semibold",
+								children: "Sobre Nós"
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFC72C]/15 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold uppercase tracking-wider mb-4 shadow-sm",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heart, { className: "w-4 h-4 text-[#FFC72C] fill-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Escola de Desenvolvimento Humano e Bem-estar" })]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+						className: "text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4",
+						children: "Sobre a ESDHUBEM"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-slate-300 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed font-light",
+						children: "Conheça nossa história, propósito formativo, modelo de educação aberta e a visão pedagógica que une tradição, sensibilidade, rigor técnico e tecnologia."
+					})
+				]
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-10",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-3 pb-4 border-b border-slate-100",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-6 h-6 text-[#FFC72C] fill-[#FFC72C]" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-xs font-bold text-amber-600 uppercase tracking-wider",
+								children: "Propósito Institucional"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "text-xl sm:text-2xl font-bold text-slate-900",
+								children: "Nossa Missão & Propósito"
+							})] })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+									"A ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-slate-900 font-semibold",
+										children: "ESDHUBEM"
+									}),
+									" nasceu com o compromisso de democratizar o acesso à educação socioemocional, ao autoconhecimento e às práticas integrativas com rigor didático, empatia e ética."
+								] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Acreditamos que o progresso pessoal e profissional caminham juntos: quando uma pessoa aprende a regular suas emoções, aprimora sua comunicação e compreende seu papel ético no mundo, toda a sociedade ao seu redor floresce." }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+									"Na nossa escola livre, o conhecimento deixa de ser um fardo estático engavetado para se transformar em um ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+										className: "text-amber-800 font-semibold",
+										children: "legado vivo e circulante"
+									}),
+									". Capacitamos alunos a ler criticamente, refletir com profundidade e produzir conhecimento autoral aplicável ao desenvolvimento humano."
+								] })
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid grid-cols-1 md:grid-cols-3 gap-4 pt-2",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "p-5 rounded-2xl bg-amber-50/50 border border-amber-200/80 space-y-1.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "text-xs font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Compass, { className: "w-4 h-4 text-amber-600" }), "Estudo & Autonomia"]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs sm:text-sm text-slate-700 leading-relaxed",
+										children: "Conteúdos completos e estruturados para permitir que cada estudante aprenda no seu ritmo, com liberdade intelectual e método."
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "p-5 rounded-2xl bg-blue-50/50 border border-blue-200/80 space-y-1.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "text-xs font-bold uppercase tracking-wider text-blue-900 flex items-center gap-1.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-blue-600" }), "Evolução Contínua"]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs sm:text-sm text-slate-700 leading-relaxed",
+										children: "Desenvolvimento integrado de inteligência socioemocional, pensamento crítico, liderança e habilidades tecnológicas."
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "p-5 rounded-2xl bg-emerald-50/50 border border-emerald-200/80 space-y-1.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "text-xs font-bold uppercase tracking-wider text-emerald-900 flex items-center gap-1.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600" }), "Prática com Impacto"]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs sm:text-sm text-slate-700 leading-relaxed",
+										children: "Ferramentas práticas para aplicação imediata no mercado de trabalho, em consultórios, empresas e na vida pessoal."
+									})]
+								})
+							]
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-3 pb-4 border-b border-slate-100",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "w-12 h-12 rounded-2xl bg-[#182333] flex items-center justify-center text-[#FFC72C] shrink-0",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GraduationCap, { className: "w-6 h-6" })
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-xs font-bold text-slate-500 uppercase tracking-wider",
+							children: "Metodologia & Transparência"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "text-xl sm:text-2xl font-bold text-slate-900",
+							children: "Diferenciais da Nossa Escola"
+						})] })]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid grid-cols-1 md:grid-cols-2 gap-6",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "p-6 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "w-8 h-8 rounded-xl bg-cyan-100 text-cyan-800 flex items-center justify-center font-bold text-xs",
+										children: "01"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										className: "font-bold text-slate-900 text-base",
+										children: "Modelo Freepremium"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-sm text-slate-600 leading-relaxed",
+									children: "Você assiste a todas as videoaulas e acessa o material didático gratuitamente. A taxa administrativa é simbólica e cobrada apenas se desejar a emissão e validação formal do certificado oficial em PDF."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "p-6 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs",
+										children: "02"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										className: "font-bold text-slate-900 text-base",
+										children: "Certificados Válidos em Todo o Brasil"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-sm text-slate-600 leading-relaxed",
+									children: "Carga horária legítima com amparo na Lei nº 9.394/96 e Decreto Presidencial nº 5.154/04. Todos os certificados contam com QR Code e código alfanumérico para autenticação pública instantânea."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "p-6 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs",
+										children: "03"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										className: "font-bold text-slate-900 text-base",
+										children: "Escala de Méritos & Registro DOI"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-sm text-slate-600 leading-relaxed",
+									children: "Reconhecemos o esforço intelectual: alunos que escrevem artigos e manuscritos de conclusão podem ser publicados no Blog da escola ou depositados com identificador permanente DOI via Zenodo / CERN."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "p-6 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "w-8 h-8 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-xs",
+										children: "04"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										className: "font-bold text-slate-900 text-base",
+										children: "Saberes Integrativos & Humanistas"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-sm text-slate-600 leading-relaxed",
+									children: "Valorizamos a sabedoria ancestral e integrativa dentro da perspectiva das Ciências Humanas e Sociais, integrando saúde, autoconhecimento, liderança e ética relacional."
+								})]
+							})
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-3 pb-4 border-b border-slate-100",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Building, { className: "w-6 h-6 text-[#FFC72C]" })
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-xs font-bold text-amber-600 uppercase tracking-wider",
+							children: "Dados Legais e Acadêmicos"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "text-xl sm:text-2xl font-bold text-slate-900",
+							children: "Identificação Institucional & Coordenação Pedagógica"
+						})] })]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-700",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-3 p-5 rounded-2xl bg-slate-50 border border-slate-200/80",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									className: "font-bold text-slate-900 text-xs uppercase tracking-wider text-slate-500 mb-2",
+									children: "Dados Corporativos"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-slate-900",
+									children: "Razão Social:"
+								}), " ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar"] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-slate-900",
+									children: "CNPJ:"
+								}), " 61.928.778/0001-50"] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-slate-900",
+									children: "Sede:"
+								}), " São Paulo - SP - Brasil"] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-slate-900",
+									children: "Amparo Legal:"
+								}), " Cursos Livres amparados pelo Decreto Presidencial nº 5.154/04 e Lei de Diretrizes e Bases da Educação nº 9.394/96."] })
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-3 p-5 rounded-2xl bg-slate-50 border border-slate-200/80",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									className: "font-bold text-slate-900 text-xs uppercase tracking-wider text-slate-500 mb-2",
+									children: "Coordenação & Autoria Acadêmica"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+									className: "text-slate-900",
+									children: "Coordenação Pedagógica:"
+								}), " Profª. Silviane Silvério (Biomédica, Especialista em Práticas Integrativas & Desenvolvimento Humano)"] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex flex-wrap items-center gap-3 pt-1 text-xs",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											href: "http://lattes.cnpq.br/7481458793724724",
+											target: "_blank",
+											rel: "noreferrer",
+											className: "inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 font-bold hover:underline",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Currículo Lattes iD" })]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-slate-300",
+											children: "•"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											href: "https://orcid.org/0000-0001-6311-1195",
+											target: "_blank",
+											rel: "noreferrer",
+											className: "inline-flex items-center gap-1.5 text-emerald-700 hover:text-emerald-900 font-bold hover:underline",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Registro ORCID iD" })]
+										})
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "pt-2 border-t border-slate-200/80 space-y-1",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										className: "flex items-center gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "w-3.5 h-3.5 text-slate-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "E-mail:" }), " esdhubem@proton.me"] })]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										className: "flex items-center gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, { className: "w-3.5 h-3.5 text-slate-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "WhatsApp:" }), " (11) 960319637"] })]
+									})]
+								})
+							]
+						})]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-3 pb-4 border-b border-slate-100",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, { className: "w-6 h-6" })
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-xs font-bold text-amber-600 uppercase tracking-wider",
+							children: "Dúvidas Rápidas"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "text-xl sm:text-2xl font-bold text-slate-900",
+							children: "Perguntas Frequentes (FAQ)"
+						})] })]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "space-y-3",
+						children: FAQ_DATA.map((faq, idx) => {
+							const isOpen = openFaqIndex === idx;
+							return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-slate-200 overflow-hidden transition-all duration-200",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									type: "button",
+									onClick: () => toggleFaq(idx),
+									className: "w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 bg-slate-50/70 hover:bg-slate-100/80 transition-colors cursor-pointer",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "font-bold text-slate-800 text-sm sm:text-base",
+										children: faq.question
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: `w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180 text-amber-600" : ""}` })]
+								}), isOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "p-4 sm:p-5 bg-white text-slate-600 text-sm leading-relaxed border-t border-slate-100",
+									children: faq.answer
+								})]
+							}, idx);
+						})
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#182333] via-[#1E293B] to-[#0F172A] text-white shadow-2xl border border-slate-700/80 text-center relative overflow-hidden",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,199,44,0.15),transparent_50%)] pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative z-10 space-y-4 max-w-2xl mx-auto",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "inline-block bg-[#FFC72C]/20 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider",
+								children: "Comece Sua Jornada Hoje"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "text-2xl sm:text-3xl font-extrabold text-white leading-tight",
+								children: "Faça Parte da Comunidade ESDHUBEM"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-slate-300 text-sm sm:text-base leading-relaxed",
+								children: "Explore nossos cursos livres, confira a legitimidade dos certificados emitidos ou entre em contato com a coordenação pedagógica."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "pt-4 flex flex-wrap items-center justify-center gap-3",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										onClick: onOpenValidator,
+										className: "inline-flex items-center gap-2 bg-[#FFC72C] hover:bg-[#ffcf47] text-[#182333] font-black text-sm px-6 py-3.5 rounded-full shadow-lg hover:shadow-[#FFC72C]/25 transition-all transform hover:-translate-y-0.5 cursor-pointer",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Validar Certificado" })]
+									}),
+									onNavigateToCourses && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										onClick: onNavigateToCourses,
+										className: "inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-6 py-3.5 rounded-full border border-white/20 transition-all cursor-pointer",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Catálogo de Cursos" })]
+									}),
+									onNavigateToPedagogy && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										onClick: onNavigateToPedagogy,
+										className: "inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-6 py-3.5 rounded-full border border-white/20 transition-all cursor-pointer",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Diretrizes Pedagógicas" })]
+									})
+								]
+							})
+						]
+					})]
+				})
+			]
+		})]
+	});
+};
+//#endregion
 //#region src/App.tsx
 function App() {
 	const [currentPage, setCurrentPage] = (0, import_react.useState)("home");
@@ -27987,7 +28208,6 @@ function App() {
 	const [activePostId, setActivePostId] = (0, import_react.useState)(null);
 	const [isValidatorOpen, setIsValidatorOpen] = (0, import_react.useState)(false);
 	const [isCertificatePreviewOpen, setIsCertificatePreviewOpen] = (0, import_react.useState)(false);
-	const [isAboutOpen, setIsAboutOpen] = (0, import_react.useState)(false);
 	const [savedCourseIds, setSavedCourseIds] = (0, import_react.useState)(["fp-1", "hc-1"]);
 	const [notification, setNotification] = (0, import_react.useState)(null);
 	(0, import_react.useEffect)(() => {
@@ -28003,6 +28223,11 @@ function App() {
 		}
 		if (pagina === "diretrizes-publicacao" || pagina === "diretrizes-publicacao-parcerias" || pagina === "publicacao-cientifica") {
 			setCurrentPage("diretrizes-publicacao-parcerias");
+			window.history.replaceState({}, "", window.location.pathname);
+			return;
+		}
+		if (pagina === "sobre-nos" || pagina === "sobre" || pagina === "sobre-esdhubem") {
+			setCurrentPage("sobre-nos");
 			window.history.replaceState({}, "", window.location.pathname);
 			return;
 		}
@@ -28177,6 +28402,14 @@ function App() {
 			});
 			return;
 		}
+		if (sectionId === "sobre-nos" || sectionId === "sobre" || sectionId === "sobre-esdhubem") {
+			setCurrentPage("sobre-nos");
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+			return;
+		}
 		if (sectionId === "curso-detalhe") {
 			setCurrentPage("curso-detalhe");
 			window.scrollTo({
@@ -28245,7 +28478,13 @@ function App() {
 				searchTerm,
 				onNavigate: handleNavigate,
 				onOpenValidator: () => setIsValidatorOpen(true),
-				onOpenAbout: () => setIsAboutOpen(true),
+				onOpenAbout: () => {
+					setCurrentPage("sobre-nos");
+					window.scrollTo({
+						top: 0,
+						behavior: "smooth"
+					});
+				},
 				savedCount: savedCourseIds.length
 			}),
 			currentPage === "home" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
@@ -28750,6 +28989,33 @@ function App() {
 					onNavigate: handleNavigate
 				})
 			}),
+			currentPage === "sobre-nos" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+				className: "flex-1",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SobreNosPage, {
+					onBackToHome: () => {
+						setCurrentPage("home");
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth"
+						});
+					},
+					onOpenValidator: () => setIsValidatorOpen(true),
+					onNavigateToCourses: () => {
+						setCurrentPage("home");
+						setTimeout(() => {
+							const el = document.getElementById("catalogo-cursos");
+							if (el) el.scrollIntoView({ behavior: "smooth" });
+						}, 100);
+					},
+					onNavigateToPedagogy: () => {
+						setCurrentPage("diretrizes-pedagogicas");
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth"
+						});
+					}
+				})
+			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {
 				onSelectCategory: (cat) => {
 					if (currentPage !== "home") setCurrentPage("home");
@@ -28760,7 +29026,13 @@ function App() {
 					}, 100);
 				},
 				onOpenValidator: () => setIsValidatorOpen(true),
-				onOpenAbout: () => setIsAboutOpen(true),
+				onOpenAbout: () => {
+					setCurrentPage("sobre-nos");
+					window.scrollTo({
+						top: 0,
+						behavior: "smooth"
+					});
+				},
 				onNavigate: handleNavigate,
 				onOpenCertificatePreview: () => setIsCertificatePreviewOpen(true)
 			}),
@@ -28773,14 +29045,6 @@ function App() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CertificatePreviewModal, {
 				isOpen: isCertificatePreviewOpen,
 				onClose: () => setIsCertificatePreviewOpen(false)
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AboutModal, {
-				isOpen: isAboutOpen,
-				onClose: () => setIsAboutOpen(false),
-				onOpenValidator: () => {
-					setIsAboutOpen(false);
-					setIsValidatorOpen(true);
-				}
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 				href: "https://wa.me/5511960319637?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20cursos%20da%20ESDHUBEM",

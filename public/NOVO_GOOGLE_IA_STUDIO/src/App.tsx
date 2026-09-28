@@ -9,7 +9,6 @@ import { LivrariaPage } from './components/LivrariaPage';
 import { CourseCatalog } from './components/CourseCatalog';
 import { CertificateValidatorModal } from './components/CertificateValidatorModal';
 import { CertificatePreviewModal } from './components/CertificatePreviewModal';
-import { AboutModal } from './components/AboutModal';
 import { Footer } from './components/Footer';
 import { StudentPortalPage } from './components/StudentPortalPage';
 import { CourseDetailPage } from './components/CourseDetailPage';
@@ -31,6 +30,7 @@ import { RegrasCertificacaoMeritoPage } from './components/RegrasCertificacaoMer
 import { DiretrizesPedagogicasPage } from './components/DiretrizesPedagogicasPage';
 import { PodcastsPage } from './components/PodcastsPage';
 import { DiretrizesPublicacaoParceriasPage } from './components/DiretrizesPublicacaoParceriasPage';
+import { SobreNosPage } from './components/SobreNosPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -51,7 +51,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'podcasts' | 'diretrizes-publicacao-parcerias'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -64,7 +64,6 @@ export default function App() {
   const [activePostId, setActivePostId] = useState<string | null>(null);
   const [isValidatorOpen, setIsValidatorOpen] = useState(false);
   const [isCertificatePreviewOpen, setIsCertificatePreviewOpen] = useState(false);
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [savedCourseIds, setSavedCourseIds] = useState<string[]>(['fp-1', 'hc-1']); // Initial saved items matching the "2" indicator
   const [notification, setNotification] = useState<string | null>(null);
 
@@ -83,6 +82,12 @@ export default function App() {
 
     if (pagina === 'diretrizes-publicacao' || pagina === 'diretrizes-publicacao-parcerias' || pagina === 'publicacao-cientifica') {
       setCurrentPage('diretrizes-publicacao-parcerias');
+      window.history.replaceState({}, '', window.location.pathname);
+      return;
+    }
+
+    if (pagina === 'sobre-nos' || pagina === 'sobre' || pagina === 'sobre-esdhubem') {
+      setCurrentPage('sobre-nos');
       window.history.replaceState({}, '', window.location.pathname);
       return;
     }
@@ -245,6 +250,12 @@ export default function App() {
       return;
     }
 
+    if (sectionId === 'sobre-nos' || sectionId === 'sobre' || sectionId === 'sobre-esdhubem') {
+      setCurrentPage('sobre-nos');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
     if (sectionId === 'curso-detalhe') {
       setCurrentPage('curso-detalhe');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -312,7 +323,10 @@ export default function App() {
         searchTerm={searchTerm}
         onNavigate={handleNavigate}
         onOpenValidator={() => setIsValidatorOpen(true)}
-        onOpenAbout={() => setIsAboutOpen(true)}
+        onOpenAbout={() => {
+          setCurrentPage('sobre-nos');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
         savedCount={savedCourseIds.length}
       />
 
@@ -758,6 +772,29 @@ export default function App() {
         </main>
       )}
 
+      {currentPage === 'sobre-nos' && (
+        <main className="flex-1">
+          <SobreNosPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onOpenValidator={() => setIsValidatorOpen(true)}
+            onNavigateToCourses={() => {
+              setCurrentPage('home');
+              setTimeout(() => {
+                const el = document.getElementById('catalogo-cursos');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}
+            onNavigateToPedagogy={() => {
+              setCurrentPage('diretrizes-pedagogicas');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </main>
+      )}
+
       {/* 5. Footer with Fale Conosco, Métodos de Pagamento, Links, Categorias, Newsletter & Copyright */}
       <Footer
         onSelectCategory={(cat) => {
@@ -769,7 +806,10 @@ export default function App() {
           }, 100);
         }}
         onOpenValidator={() => setIsValidatorOpen(true)}
-        onOpenAbout={() => setIsAboutOpen(true)}
+        onOpenAbout={() => {
+          setCurrentPage('sobre-nos');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
         onNavigate={handleNavigate}
         onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
       />
@@ -787,15 +827,6 @@ export default function App() {
       <CertificatePreviewModal
         isOpen={isCertificatePreviewOpen}
         onClose={() => setIsCertificatePreviewOpen(false)}
-      />
-
-      <AboutModal
-        isOpen={isAboutOpen}
-        onClose={() => setIsAboutOpen(false)}
-        onOpenValidator={() => {
-          setIsAboutOpen(false);
-          setIsValidatorOpen(true);
-        }}
       />
 
       {/* Floating WhatsApp / Direct Contact Support Button */}
