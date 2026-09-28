@@ -72,6 +72,13 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     accentColor: 'from-cyan-600 to-blue-600',
   },
   {
+    id: 'cursos-capacitacao',
+    title: 'Cursos de\nCapacitação',
+    coursesCount: 24,
+    iconName: 'Sparkles',
+    accentColor: 'from-blue-600 to-indigo-600',
+  },
+  {
     id: 'horas-complementares',
     title: 'Horas\nComplementares',
     coursesCount: 45,
@@ -162,6 +169,15 @@ export const METHODOLOGY_PILLARS: MethodologyPillar[] = [
   },
   {
     number: '2',
+    title: 'Cursos de Capacitação',
+    description:
+      'Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas, metodologias e habilidades profissionais que geram resultado real no consultório, na empresa ou no projeto pessoal. Certificação com carga horária válida em todo o Brasil.',
+    targetAudience:
+      'Terapeutas, coaches, consultores, educadores e profissionais autônomos que buscam atualização técnica, requalificação ou expansão de repertório para atender melhor seus clientes, aumentar sua autoridade e melhorar seus resultados financeiros.',
+    type: 'capacitacao',
+  },
+  {
+    number: '3',
     title: 'Cursos para Horas Complementares',
     isPopular: true,
     description:
@@ -171,7 +187,7 @@ export const METHODOLOGY_PILLARS: MethodologyPillar[] = [
     type: 'horas-complementares',
   },
   {
-    number: '3',
+    number: '4',
     title: 'Cursos de Formação Livre',
     description:
       'Cursos mais longos, densos e completos desenhados para gerar transformação e emprego. Um mergulho profundo nas ferramentas mais exigidas pelo mercado de trabalho contemporâneo, focado em resultados rápidos e geração de renda.',

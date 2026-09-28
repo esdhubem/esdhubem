@@ -823,6 +823,10 @@
     margin-bottom: calc(var(--spacing) * 3);
   }
 
+  .mb-3\.5 {
+    margin-bottom: calc(var(--spacing) * 3.5);
+  }
+
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -1288,6 +1292,10 @@
     min-width: 0;
   }
 
+  .min-w-\[620px\] {
+    min-width: 620px;
+  }
+
   .flex-1 {
     flex: 1;
   }
@@ -1664,6 +1672,11 @@
     border-top-right-radius: var(--radius-xl);
   }
 
+  .rounded-l-xl {
+    border-top-left-radius: var(--radius-xl);
+    border-bottom-left-radius: var(--radius-xl);
+  }
+
   .rounded-r-2xl {
     border-top-right-radius: var(--radius-2xl);
     border-bottom-right-radius: var(--radius-2xl);
@@ -1892,6 +1905,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .border-amber-500\/20 {
       border-color: color-mix(in oklab, var(--color-amber-500) 20%, transparent);
+    }
+  }
+
+  .border-amber-500\/25 {
+    border-color: #f99c0040;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-amber-500\/25 {
+      border-color: color-mix(in oklab, var(--color-amber-500) 25%, transparent);
     }
   }
 
@@ -5303,6 +5326,16 @@
       background-color: #ffcf47;
     }
 
+    .hover\:bg-amber-50\/30:hover {
+      background-color: #fffbeb4d;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-amber-50\/30:hover {
+        background-color: color-mix(in oklab, var(--color-amber-50) 30%, transparent);
+      }
+    }
+
     .hover\:bg-amber-50\/50:hover {
       background-color: #fffbeb80;
     }
@@ -5369,6 +5402,16 @@
       background-color: var(--color-blue-50);
     }
 
+    .hover\:bg-blue-50\/30:hover {
+      background-color: #eff6ff4d;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-blue-50\/30:hover {
+        background-color: color-mix(in oklab, var(--color-blue-50) 30%, transparent);
+      }
+    }
+
     .hover\:bg-blue-100:hover {
       background-color: var(--color-blue-100);
     }
@@ -5419,6 +5462,16 @@
       background-color: var(--color-emerald-50);
     }
 
+    .hover\:bg-emerald-50\/30:hover {
+      background-color: #ecfdf54d;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-emerald-50\/30:hover {
+        background-color: color-mix(in oklab, var(--color-emerald-50) 30%, transparent);
+      }
+    }
+
     .hover\:bg-emerald-100:hover {
       background-color: var(--color-emerald-100);
     }
@@ -5466,6 +5519,16 @@
     @supports (color: color-mix(in lab, red, red)) {
       .hover\:bg-red-500\/30:hover {
         background-color: color-mix(in oklab, var(--color-red-500) 30%, transparent);
+      }
+    }
+
+    .hover\:bg-rose-50\/30:hover {
+      background-color: #fff1f24d;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-rose-50\/30:hover {
+        background-color: color-mix(in oklab, var(--color-rose-50) 30%, transparent);
       }
     }
 
@@ -6292,6 +6355,10 @@
     .lg\:border-l {
       border-left-style: var(--tw-border-style);
       border-left-width: 1px;
+    }
+
+    .lg\:p-7 {
+      padding: calc(var(--spacing) * 7);
     }
 
     .lg\:p-10 {

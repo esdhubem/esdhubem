@@ -33,7 +33,7 @@ export interface MethodologyPillar {
   isPopular?: boolean;
   description: string;
   targetAudience: string;
-  type: 'freepremium' | 'horas-complementares' | 'formacao-livre';
+  type: 'freepremium' | 'capacitacao' | 'horas-complementares' | 'formacao-livre';
 }
 
 export interface CertificateVerification {

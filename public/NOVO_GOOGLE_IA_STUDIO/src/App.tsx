@@ -372,11 +372,12 @@ export default function App() {
             selectedCategory={selectedCategory}
           />
 
-          {/* 4. A Jornada Perfeita para o Seu Sucesso (The 3 Methodology Pillars) */}
+          {/* 4. A Jornada Perfeita para o Seu Sucesso (The 4 Methodology Pillars) */}
           <MethodologySection
             onSelectPillar={(pillarType) => {
               const slugMap: Record<string, string> = {
                 'freepremium': 'cursos-freepremium',
+                'capacitacao': 'cursos-capacitacao',
                 'horas-complementares': 'horas-complementares',
                 'formacao-livre': 'formacao-livre'
               };
