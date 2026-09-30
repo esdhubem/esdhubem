@@ -15326,6 +15326,15 @@ var MethodologySection = ({ onSelectPillar, onOpenCertificatePreview, onNavigate
 				})]
 			})
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "py-12 sm:py-14 bg-[#F8FAFC]",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					className: "text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight",
+					children: "Quais tipos de cursor oferecemos?"
+				})
+			})
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "py-14 sm:py-16 bg-[#F8FAFC]",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
