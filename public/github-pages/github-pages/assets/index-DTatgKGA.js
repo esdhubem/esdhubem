@@ -14362,7 +14362,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								onClick: () => onNavigate("aplicativos"),
-								className: `transition-all py-1 cursor-pointer ${currentPage === "aplicativos" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-[#FFC72C] hover:text-[#FFC72C]/80 hover:border-b-2 hover:border-[#FFC72C]/50"}`,
+								className: `transition-all py-1 cursor-pointer ${currentPage === "aplicativos" ? "text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]" : "text-white/80 hover:text-white hover:border-b-2 hover:border-white/30"}`,
 								children: "Apps & Dashboards"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
@@ -14621,18 +14621,18 @@ var Hero = ({ onSelectCategory }) => {
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-bold tracking-wide shadow-lg",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Cursos Online ESDHUBEM" })]
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "CURSOS E TREINAMENTOS" })]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 							className: "text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] flex flex-col items-center",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Encontre o seu" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ESDHUBEM" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "text-[#FFC72C] text-[1.75rem] sm:text-4xl lg:text-5xl whitespace-normal sm:whitespace-nowrap mt-2",
-								children: "treinamento e desenvolvimento."
+								children: "Escola de Desenvolvimento Humano e Bem-Estar."
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "text-lg sm:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl",
-							children: "Cursos que você precisa para aprender Desenvolvimento Pessoal, Humano, Profissional, Ético e Relacional."
+							children: "Aprenda. Reflita. Produza. Compartilhe."
 						})
 					]
 				})
@@ -14729,7 +14729,17 @@ var renderCategoryIcon$1 = (iconName, className = "w-6 h-6") => {
 	}
 };
 var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigateToCategoriesPage, onNavigateToCategoryDetail }) => {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "py-10 sm:py-14 bg-gradient-to-b from-white to-slate-50",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "text-base sm:text-lg text-slate-700 leading-relaxed font-medium",
+				children: "Uma escola livre voltada ao desenvolvimento humano, à aprendizagem, à escrita e à produção autoral de conhecimento. Na ESDHUBEM, você não precisa apenas consumir conteúdo. Pode transformar aquilo que aprende em reflexão, escrita, pesquisa e produção própria."
+			})
+		})
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "py-12 sm:py-16 bg-white",
 		id: "explorar-categorias",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -14806,6 +14816,7 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 				})
 			})]
 		})
+	})]
 	});
 };
 //#endregion
@@ -15226,10 +15237,92 @@ var MethodologySection = ({ onSelectPillar, onOpenCertificatePreview, onNavigate
 				className: "max-w-5xl mx-auto text-center",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 					className: "text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 tracking-tight mb-4",
-					children: "A Jornada Perfeita para o Seu Sucesso"
+					children: "Uma jornada que vai além do curso."
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "text-sm sm:text-base lg:text-lg text-slate-800 font-normal leading-relaxed max-w-3xl mx-auto",
-					children: "Nossa metodologia educacional foi desenhada para acompanhar você em todas as fases do seu desenvolvimento, desde o aprendizado prático e acessível até a transformação total da sua carreira."
+					children: "Aqui na ESDHUBEM o seu curso livre pode virar autoria publicada. Você pode escolher o seu percurso e desenvolver produções autorais e avançar na Escala de Autoria ESDHUBEM."
+				})]
+			})
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+			className: "py-14 sm:py-18 bg-white",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "text-center mb-10",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight",
+						children: "Escala de Autoria ESDHUBEM"
+					})
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative rounded-2xl border-2 border-amber-700/30 bg-gradient-to-b from-amber-50 to-orange-50 p-6 text-center shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "text-4xl mb-3",
+							children: "\u{1F949}"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "text-lg font-extrabold text-amber-800 mb-2",
+							children: "Bronze"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-sm font-bold text-slate-700 italic mb-2",
+							children: "Eu aprendi."
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-xs text-slate-600 leading-relaxed",
+							children: "Produ\u00e7\u00e3o de conclus\u00e3o relacionada \u00e0 forma\u00e7\u00e3o."
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative rounded-2xl border-2 border-slate-300 bg-gradient-to-b from-slate-50 to-slate-100 p-6 text-center shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "text-4xl mb-3",
+							children: "\u{1F948}"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "text-lg font-extrabold text-slate-700 mb-2",
+							children: "Prata"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-sm font-bold text-slate-700 italic mb-2",
+							children: "Eu escrevi."
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-xs text-slate-600 leading-relaxed",
+							children: "Artigo autoral publicado no Blog ESDHUBEM."
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative rounded-2xl border-2 border-yellow-400/60 bg-gradient-to-b from-yellow-50 to-amber-50 p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "text-4xl mb-3",
+							children: "\u{1F947}"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "text-lg font-extrabold text-yellow-700 mb-2",
+							children: "Ouro"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-sm font-bold text-slate-700 italic mb-2",
+							children: "Eu pesquisei."
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-xs text-slate-600 leading-relaxed",
+							children: "Desenvolvimento de um Manuscrito de Conclus\u00e3o de Curso \u2014 MCC."
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative rounded-2xl border-2 border-cyan-300/60 bg-gradient-to-b from-cyan-50 to-sky-50 p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ring-1 ring-cyan-200/50",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "text-4xl mb-3",
+							children: "\u{1F48E}"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "text-lg font-extrabold text-cyan-700 mb-2",
+							children: "Diamante"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-sm font-bold text-slate-700 italic mb-2",
+							children: "Eu criei uma obra."
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-xs text-slate-600 leading-relaxed",
+							children: "Desenvolvimento e publica\u00e7\u00e3o de um livro autoral."
+						})]
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "text-center mt-10",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						onClick: () => onNavigate("regras-certificacao-merito"),
+						className: "inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-base font-bold text-slate-950 bg-[#FFC72C] hover:bg-[#F5B014] border border-amber-400 shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 active:scale-95 transition-all cursor-pointer",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhe\u00e7a a Escala de Autoria" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "\u2192" })]
+					})
 				})]
 			})
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -15493,7 +15586,7 @@ var MethodologySection = ({ onSelectPillar, onOpenCertificatePreview, onNavigate
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-amber-400/20 text-[#FFC72C] text-[11px] font-bold uppercase tracking-wider",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Escala de Mérito Acadêmico ESDHUBEM" })]
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Escala de Mérito de Autoria ESDHUBEM" })]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 										className: "text-lg sm:text-xl font-bold text-white",
@@ -24352,7 +24445,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", { className: "hidden sm:inline" }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "text-[#FFC72C]",
-										children: "Escala de Mérito Acadêmico"
+										children: "Escala de Mérito de Autoria"
 									})
 								]
 							}),
