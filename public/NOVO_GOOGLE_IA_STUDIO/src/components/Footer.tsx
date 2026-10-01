@@ -391,7 +391,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-extrabold flex items-center gap-1"
                 >
                   <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
-                  <span>Regras de Certificação (Mérito de Autoria)</span>
+                  <span>Regras de Certificação (Escala de Autoria)</span>
                 </button>
               </li>
               <li>

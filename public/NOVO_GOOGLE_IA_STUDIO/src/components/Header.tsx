@@ -321,7 +321,7 @@ export const Header: React.FC<HeaderProps> = ({
             className="bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 text-[#FFC72C] border border-[#FFC72C]/60 hover:border-[#FFC72C] font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs"
           >
             <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
-            <span>Certificação & Escala de Mérito</span>
+            <span>Certificação & Escala de Autoria</span>
           </button>
         </div>
       </div>
@@ -393,7 +393,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             <button onClick={() => { onNavigate('regras-certificacao-merito'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
               <Award className="w-4 h-4 text-[#FFC72C]" />
-              <span>Certificação & Escala de Mérito</span>
+              <span>Certificação & Escala de Autoria</span>
             </button>
           </div>
         </div>
