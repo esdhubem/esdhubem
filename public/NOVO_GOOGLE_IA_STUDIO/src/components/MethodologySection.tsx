@@ -294,7 +294,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
                   <span>Escala de Mérito de Autoria ESDHUBEM</span>
                 </div>
                 <h4 className="text-lg sm:text-xl font-bold text-white">
-                  Regras de Certificação & Selos de Mérito
+                  Regras de Certificação & Selos de Autoria
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
                   Conheça os critérios dos certificados Bronze, Prata, Ouro e Diamante, amparados pela Lei nº 9.394/96 e pela transparência na Pesquisa, Estudo, Evolução e Prática.
