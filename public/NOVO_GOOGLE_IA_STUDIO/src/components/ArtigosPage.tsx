@@ -87,7 +87,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
                 ARTIGOS DE ESTUDO <span className="text-[#FFC72C]">E PESQUISA</span>
               </h1>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                Acesse a coleção oficial de artigos, pesquisas e anais de estudos publicados pela coordenação pedagógica e por alunos da <strong>ESDHUBEM</strong>, preservados digitalmente com atribuição de <strong>DOI no Zenodo / CERN</strong>.
+                Acesse a coleção oficial de manuscritos de conclusão de curso, artigos, pesquisas e de estudos publicados pela coordenação pedagógica e por alunos da <strong>ESDHUBEM</strong>, preservados digitalmente com atribuição de <strong>DOI no Zenodo / CERN</strong>.
               </p>
             </div>
 
@@ -127,24 +127,13 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
               <span>Coleção Oficial ESDHUBEM</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-              MANUSCRITOS DE ESTUDO E PESQUISA
+              O que é este Espaço de Artigos, Estudos e Pesquisa?
             </h2>
             <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-              Acesse a coleção oficial de ensaios, artigos e anais de estudos produzidos pela coordenação pedagógica e pelos discentes da <strong className="text-slate-900 font-bold">ESDHUBEM</strong>.
+              Este repositório reúne os <strong>Manuscritos de Conclusão de Curso (MCC)</strong> e as produções intelectuais escritas por nossos alunos como forma de obtenção de certificação do tipo ouro. Aqui buscamos refletir uma comunidade engajada em melhorar a qualidade da sua escrita, produção intelectual e publicação.
             </p>
             <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-              Todos os trabalhos selecionados são preservados digitalmente e contam com atribuição de <strong className="text-slate-900 font-semibold">DOI (Digital Object Identifier)</strong> internacional por meio do ecossistema <strong className="text-amber-900 font-semibold">Zenodo / CERN</strong>, garantindo autoria perene e circulação global.
-            </p>
-          </div>
-
-          {/* O que é este Espaço? */}
-          <div className="bg-white/90 border border-amber-200/80 rounded-2xl p-5 space-y-2 shadow-2xs">
-            <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
-              <FileText className="w-4 h-4 text-amber-600" />
-              <span>O que é este Espaço?</span>
-            </h3>
-            <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-              Este repositório reúne os <strong className="text-slate-900 font-semibold">Manuscritos de Conclusão de Curso (MCC)</strong> e as produções intelectuais apresentadas no nosso Seminário de Pesquisa contínuo. Afastando-nos de burocracias engessadas, este é o reflexo de uma comunidade que transita entre mundos: unindo o rigor técnico e científico à sabedoria prática, corporativa e holística.
+              Todos os trabalhos selecionados são preservados digitalmente e contam com atribuição de <strong>DOI (Digital Object Identifier)</strong> internacional por meio do ecossistema <strong>Zenodo / CERN</strong>, garantindo autoria perene e circulação global.
             </p>
           </div>
 
@@ -205,7 +194,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
                 onClick={() => onNavigate('diretrizes-publicacao')}
                 className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-950 hover:text-black bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 px-4 py-2 rounded-xl transition-all cursor-pointer shadow-xs"
               >
-                <span>Conheça nossos Canais de Publicação e Compartilhamento de Conhecimento</span>
+                <span>Conheça as diretrizes de publicação da ESDHUBEM</span>
                 <ChevronRight className="w-4 h-4 text-amber-700" />
               </button>
             </div>
