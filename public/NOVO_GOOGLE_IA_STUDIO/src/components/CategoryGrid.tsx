@@ -85,8 +85,16 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
   onNavigateToCategoryDetail,
 }) => {
   return (
-    <section className="py-12 sm:py-16 bg-white" id="explorar-categorias">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
+      <section className="py-10 sm:py-14 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+            Uma escola livre voltada ao desenvolvimento humano, à aprendizagem, à escrita e à produção autoral de conhecimento. Na ESDHUBEM, você não precisa apenas consumir conteúdo. Pode transformar aquilo que aprende em reflexão, escrita, pesquisa e produção própria.
+          </p>
+        </div>
+      </section>
+      <section className="py-12 sm:py-16 bg-white" id="explorar-categorias">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
@@ -171,5 +179,6 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
         </div>
       </div>
     </section>
-  );
+  </div>
+);
 };

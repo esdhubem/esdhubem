@@ -54,7 +54,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             <span>/</span>
             <span className="text-slate-300">Secretaria Acadêmica</span>
             <span>/</span>
-            <span className="text-[#FFC72C] font-semibold">Regras de Certificação por Mérito Acadêmico</span>
+            <span className="text-[#FFC72C] font-semibold">Regras de Certificação por Mérito de Autoria</span>
           </div>
 
           <div className="hidden sm:flex items-center gap-2 text-xs text-slate-300">
@@ -75,7 +75,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
               Regras de Certificação: <br className="hidden sm:inline" />
-              <span className="text-[#FFC72C]">Escala de Mérito Acadêmico</span>
+              <span className="text-[#FFC72C]">Escala de Mérito de Autoria</span>
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
@@ -480,7 +480,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             )}
 
             <a
-              href="https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20submeter%20meu%20artigo%20ou%20TCC%20para%20avaliação%20de%20mérito%20acadêmico."
+              href="https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20submeter%20meu%20artigo%20ou%20TCC%20para%20avaliação%20de%20mérito%20de%20autoria."
               target="_blank"
               rel="noreferrer"
               className="px-5 py-3 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105"

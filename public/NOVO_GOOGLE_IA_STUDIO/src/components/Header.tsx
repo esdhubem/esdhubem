@@ -202,7 +202,7 @@ export const Header: React.FC<HeaderProps> = ({
               className={`transition-all py-1 cursor-pointer ${
                 currentPage === 'aplicativos'
                   ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-[#FFC72C] hover:text-[#FFC72C]/80 hover:border-b-2 hover:border-[#FFC72C]/50'
+                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
               }`}
             >
               Apps & Dashboards
@@ -352,7 +352,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">18</span>
           </button>
           <button onClick={() => { onNavigate('categoria:landing-pages-biolinks'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-400">Sites & Biolinks</button>
-          <button onClick={() => { onNavigate('aplicativos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-[#FFC72C]">Apps & Dashboards (MEI e ME)</button>
+          <button onClick={() => { onNavigate('aplicativos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-slate-200">Apps & Dashboards (MEI e ME)</button>
           <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300">Livros</button>
           <button
             onClick={() => { onOpenAbout(); setMobileMenuOpen(false); }}

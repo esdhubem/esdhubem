@@ -2,34 +2,43 @@ const fs = require('fs');
 const path = require('path');
 
 function copyFolderSync(from, to) {
+  if (!fs.existsSync(from)) return;
   if (!fs.existsSync(to)) {
     fs.mkdirSync(to, { recursive: true });
   }
   fs.readdirSync(from).forEach(element => {
-    if (fs.lstatSync(path.join(from, element)).isFile()) {
-      fs.copyFileSync(path.join(from, element), path.join(to, element));
+    const srcPath = path.join(from, element);
+    const destPath = path.join(to, element);
+    if (fs.lstatSync(srcPath).isFile()) {
+      fs.copyFileSync(srcPath, destPath);
     } else {
-      copyFolderSync(path.join(from, element), path.join(to, element));
+      copyFolderSync(srcPath, destPath);
     }
   });
 }
 
-const baseDir = path.resolve(__dirname, '../CURSOS-ESDHUBEM');
-const distDir = path.join(baseDir, 'dist');
+const baseDir = __dirname;
+const distDir = path.join(baseDir, 'public/NOVO_GOOGLE_IA_STUDIO/dist');
 const distAssets = path.join(distDir, 'assets');
+const distIndex = path.join(distDir, 'index.html');
 
-// Copy dist assets to github-pages
-const ghPages = path.join(baseDir, 'public/github-pages');
-const ghPagesAssets = path.join(ghPages, 'assets');
-const ghPagesNested = path.join(ghPages, 'github-pages/assets');
-const rootAssets = path.join(baseDir, 'assets');
+const targets = [
+  { html: path.join(baseDir, 'index.html'), assets: path.join(baseDir, 'assets') },
+  { html: path.join(baseDir, 'public/index.html'), assets: path.join(baseDir, 'public/assets') },
+  { html: path.join(baseDir, 'public/github-pages/index.html'), assets: path.join(baseDir, 'public/github-pages/assets') },
+  { html: path.join(baseDir, 'public/github-pages/github-pages/index.html'), assets: path.join(baseDir, 'public/github-pages/github-pages/assets') }
+];
 
-copyFolderSync(distAssets, ghPagesAssets);
-copyFolderSync(distAssets, ghPagesNested);
-copyFolderSync(distAssets, rootAssets);
+targets.forEach(({ html, assets }) => {
+  if (fs.existsSync(distIndex)) {
+    fs.mkdirSync(path.dirname(html), { recursive: true });
+    fs.copyFileSync(distIndex, html);
+    console.log(`Copied index.html to ${html}`);
+  }
+  if (fs.existsSync(distAssets)) {
+    copyFolderSync(distAssets, assets);
+    console.log(`Copied assets to ${assets}`);
+  }
+});
 
-// Copy dist/index.html to ghPages/index.html
-fs.copyFileSync(path.join(distDir, 'index.html'), path.join(ghPages, 'index.html'));
-fs.copyFileSync(path.join(distDir, 'index.html'), path.join(ghPages, 'github-pages/index.html'));
-
-console.log('Build output successfully synced to github-pages and assets directories!');
+console.log('All locations successfully synchronized!');

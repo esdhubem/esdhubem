@@ -30,20 +30,20 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-bold tracking-wide shadow-lg">
               <Sparkles className="w-4 h-4 text-[#FFC72C]" />
-              <span>Cursos Online ESDHUBEM</span>
+              <span>CURSOS E TREINAMENTOS</span>
             </div>
 
             {/* Main Title */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] flex flex-col items-center">
-              <span>Encontre o seu</span>
+              <span>ESDHUBEM</span>
               <span className="text-[#FFC72C] text-[1.75rem] sm:text-4xl lg:text-5xl whitespace-normal sm:whitespace-nowrap mt-2">
-                treinamento e desenvolvimento.
+                Escola de Desenvolvimento Humano e Bem-Estar.
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl">
-              Cursos que você precisa para aprender Desenvolvimento Pessoal, Humano, Profissional, Ético e Relacional.
+              Aprenda. Reflita. Produza. Compartilhe.
             </p>
           </div>
         </div>
