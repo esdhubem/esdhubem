@@ -208,16 +208,6 @@ export const Header: React.FC<HeaderProps> = ({
               Apps & Dashboards
             </button>
             <button
-              onClick={() => onNavigate('livraria')}
-              className={`transition-all py-1 cursor-pointer ${
-                currentPage === 'livraria'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              Livros
-            </button>
-            <button
               onClick={onOpenAbout}
               className={`transition-all py-1 cursor-pointer ${
                 currentPage === 'sobre-nos'
@@ -252,12 +242,13 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Sub-Menu Bar: Buttons (Diretrizes, Artigos, Blog, Validação & Certificados) */}
+      {/* Sub-Menu Bar: Buttons */}
       <div className="hidden lg:block bg-[#111927] border-t border-b border-slate-700/60 py-2.5 shadow-inner">
-        <div className="max-w-[1600px] mx-auto px-4 flex items-center justify-center gap-2.5 sm:gap-3 overflow-x-auto scrollbar-none text-xs font-medium">
+        <div className="max-w-[1600px] mx-auto px-4 flex items-center justify-center gap-2 sm:gap-2.5 overflow-x-auto scrollbar-none text-xs font-medium">
+          {/* 1. Diretrizes Pedagógicas */}
           <button
             onClick={() => onNavigate('diretrizes-pedagogicas')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${
+            className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
               currentPage === 'diretrizes-pedagogicas'
                 ? 'bg-[#FFC72C] text-slate-950 border-[#FFC72C]'
                 : 'bg-amber-500/10 hover:bg-amber-500/20 text-[#FFC72C] border-amber-500/70 hover:border-amber-400'
@@ -266,20 +257,10 @@ export const Header: React.FC<HeaderProps> = ({
             <span>Diretrizes Pedagógicas</span>
           </button>
 
-          <button
-            onClick={() => onNavigate('artigos')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${
-              currentPage === 'artigos' || currentPage === 'artigo-detalhe'
-                ? 'bg-cyan-500 text-slate-950 border-cyan-400'
-                : 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/70 hover:border-cyan-400'
-            }`}
-          >
-            <span>Artigos de Estudo e Pesquisa</span>
-          </button>
-
+          {/* 2. Diretrizes de Publicação */}
           <button
             onClick={() => onNavigate('diretrizes-publicacao')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
+            className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
               currentPage === 'diretrizes-publicacao' || currentPage === 'diretrizes-publicacao-parcerias'
                 ? 'bg-blue-600 text-white border-blue-400'
                 : 'bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 border-blue-500/70 hover:border-blue-400'
@@ -289,39 +270,76 @@ export const Header: React.FC<HeaderProps> = ({
             <span>Diretrizes de Publicação</span>
           </button>
 
+          {/* 3. Diretrizes de Certificação */}
           <button
-            onClick={() => onNavigate('blog')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs ${
-              currentPage === 'blog' || currentPage === 'blog-post'
-                ? 'bg-purple-600 text-white border-purple-400'
-                : 'bg-[#581c87]/60 hover:bg-[#581c87]/80 text-purple-200 border-purple-500/70 hover:border-purple-400'
+            onClick={() => onNavigate('regras-certificacao-merito')}
+            className={`bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 text-[#FFC72C] border border-[#FFC72C]/60 hover:border-[#FFC72C] font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs ${
+              currentPage === 'regras-certificacao-merito'
+                ? 'bg-[#FFC72C] text-slate-950 border-[#FFC72C]'
+                : ''
             }`}
           >
-            <span>Blog</span>
+            <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
+            <span>Diretrizes de Certificação</span>
           </button>
 
-          <button
-            onClick={onOpenValidator}
-            className="bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/60 hover:border-emerald-400 font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs"
-          >
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Validar Certificado</span>
-          </button>
-
+          {/* 4. Valor Legal dos Certificados */}
           <button
             onClick={() => onNavigate('informacoes-legais')}
-            className="bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/60 hover:border-cyan-400 font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs"
+            className={`bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/60 hover:border-cyan-400 font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs ${
+              currentPage === 'informacoes-legais'
+                ? 'bg-cyan-500 text-slate-950 border-cyan-400'
+                : ''
+            }`}
           >
             <Scale className="w-3.5 h-3.5 text-cyan-400" />
             <span>Valor Legal dos Certificados</span>
           </button>
 
+          {/* 5. Validar Certificados */}
           <button
-            onClick={() => onNavigate('regras-certificacao-merito')}
-            className="bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 text-[#FFC72C] border border-[#FFC72C]/60 hover:border-[#FFC72C] font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs"
+            onClick={onOpenValidator}
+            className="bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/60 hover:border-emerald-400 font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs"
           >
-            <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
-            <span>Certificação & Escala de Autoria</span>
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Validar Certificados</span>
+          </button>
+
+          {/* 6. Repositório de Artigos */}
+          <button
+            onClick={() => onNavigate('artigos')}
+            className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
+              currentPage === 'artigos' || currentPage === 'artigo-detalhe'
+                ? 'bg-cyan-500 text-slate-950 border-cyan-400'
+                : 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/70 hover:border-cyan-400'
+            }`}
+          >
+            <span>Repositório de Artigos</span>
+          </button>
+
+          {/* 7. Postagens de Blog */}
+          <button
+            onClick={() => onNavigate('blog')}
+            className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
+              currentPage === 'blog' || currentPage === 'blog-post'
+                ? 'bg-purple-600 text-white border-purple-400'
+                : 'bg-[#581c87]/60 hover:bg-[#581c87]/80 text-purple-200 border-purple-500/70 hover:border-purple-400'
+            }`}
+          >
+            <span>Postagens de Blog</span>
+          </button>
+
+          {/* 8. Livraria */}
+          <button
+            onClick={() => onNavigate('livraria')}
+            className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
+              currentPage === 'livraria'
+                ? 'bg-amber-400 text-slate-950 border-amber-300'
+                : 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border-amber-500/70 hover:border-amber-400'
+            }`}
+          >
+            <BookOpen className="w-3.5 h-3.5" />
+            <span>Livraria</span>
           </button>
         </div>
       </div>
@@ -353,7 +371,7 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
           <button onClick={() => { onNavigate('categoria:landing-pages-biolinks'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-400">Sites & Biolinks</button>
           <button onClick={() => { onNavigate('aplicativos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-slate-200">Apps & Dashboards (MEI e ME)</button>
-          <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300">Livros</button>
+          <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300">Livraria</button>
           <button
             onClick={() => { onOpenAbout(); setMobileMenuOpen(false); }}
             className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium ${
@@ -368,32 +386,36 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="pt-2 border-t border-slate-700 space-y-2">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block px-3">Recursos & Diretrizes</span>
             <button onClick={() => { onNavigate('diretrizes-pedagogicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10">Diretrizes Pedagógicas</button>
-            <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
-            <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Artigos de Estudo e Pesquisa (Zenodo / DOI)</button>
             <button onClick={() => { onNavigate('diretrizes-publicacao'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2">
               <Handshake className="w-4 h-4 text-blue-400" />
               <span>Diretrizes de Publicação</span>
             </button>
+            <button onClick={() => { onNavigate('regras-certificacao-merito'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
+              <Award className="w-4 h-4 text-[#FFC72C]" />
+              <span>Diretrizes de Certificação</span>
+            </button>
+            <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Repositório de Artigos</button>
+            <button onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-purple-300">Postagens de Blog</button>
+            <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300 flex items-center gap-2">
+              <BookOpen className="w-4 h-4 text-amber-400" />
+              <span>Livraria</span>
+            </button>
+            <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
             <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
               <Headphones className="w-4 h-4 text-[#FFC72C]" />
               <span>Podcasts & Ensaios Sonoros</span>
             </button>
-            <button onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Blog</button>
           </div>
 
           <div className="pt-2 border-t border-slate-700 space-y-2">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block px-3">Validação & Certificados</span>
             <button onClick={() => { onOpenValidator(); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-emerald-400 hover:bg-white/10 flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Validar Certificado</span>
+              <span>Validar Certificados</span>
             </button>
             <button onClick={() => { onNavigate('informacoes-legais'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-cyan-400 hover:bg-white/10 flex items-center gap-2">
               <Scale className="w-4 h-4 text-cyan-400" />
               <span>Valor Legal dos Certificados</span>
-            </button>
-            <button onClick={() => { onNavigate('regras-certificacao-merito'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
-              <Award className="w-4 h-4 text-[#FFC72C]" />
-              <span>Certificação & Escala de Autoria</span>
             </button>
           </div>
         </div>
