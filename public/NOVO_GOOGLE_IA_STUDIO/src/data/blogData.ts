@@ -14,10 +14,83 @@ export interface BlogPost {
     title: string;
     subtitle: string;
     buttonText: string;
+    link?: string;
   };
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'transforme-seu-aprendizado-em-autoridade-e-publicacao',
+    title: 'Seu conhecimento não precisa ficar guardado numa gaveta.',
+    subtitle: 'Transforme seu aprendizado em autoridade, publicação real e portfólio.',
+    excerpt: 'A maioria dos cursos termina com um PDF arquivado. Aqui você pode ir além: escrever, publicar e construir uma trajetória visível. Nossos cursos livres são válidos para horas complementares em todo o Brasil.',
+    videoUrl: 'https://odysee.com/$/embed/@esdhubem:a/apresentacao_esdhubem:2?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ',
+    imageUrl: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80',
+    author: 'ESDHUBEM • Desenvolvimento Humano & Autoria',
+    date: '02 de Outubro, 2026',
+    category: 'Autoria & Publicação',
+    readTime: '3 min de leitura',
+    content: `
+      <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-[#FFC72C] p-6 rounded-2xl mb-8">
+        <p class="text-lg text-slate-800 leading-relaxed font-medium">
+          A maioria dos cursos termina com um PDF arquivado. Aqui você pode ir além: escrever, publicar e construir uma trajetória visível. Nossos cursos livres são válidos para horas complementares em todo o Brasil.
+        </p>
+      </div>
+
+      <div class="my-10 bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="text-2xl">🔒</span>
+          <h3 class="text-2xl font-black text-slate-900 tracking-tight m-0">
+            Técnicas de Copyright e Proteção Autoral
+          </h3>
+        </div>
+        <p class="text-slate-600 text-sm mb-6">
+          Valorizamos o esforço intelectual e a autoria autêntica. Confira como asseguramos a integridade e o prestígio de cada produção:
+        </p>
+        <div class="space-y-3.5">
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+            <span class="text-emerald-600 font-bold text-lg leading-none">✅</span>
+            <span class="text-slate-800 text-base font-semibold">Seu trabalho leva seu nome e autoria registrada</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+            <span class="text-emerald-600 font-bold text-lg leading-none">✅</span>
+            <span class="text-slate-800 text-base font-semibold">Publicação com identificação digital (DOI) quando aplicável</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+            <span class="text-emerald-600 font-bold text-lg leading-none">✅</span>
+            <span class="text-slate-800 text-base font-semibold">Direitos preservados conforme legislação vigente</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+            <span class="text-emerald-600 font-bold text-lg leading-none">✅</span>
+            <span class="text-slate-800 text-base font-semibold">Uso consciente de ferramentas: a tecnologia apoia, você é o autor</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+            <span class="text-emerald-600 font-bold text-lg leading-none">✅</span>
+            <span class="text-slate-800 text-base font-semibold">Orientações sobre como proteger e reconhecer sua produção</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-10 p-6 sm:p-8 rounded-3xl bg-slate-900 text-white space-y-4">
+        <div class="flex items-center gap-2 text-[#FFC72C] font-bold text-sm uppercase tracking-wider">
+          <span>🚀</span>
+          <span>Próximo Passo</span>
+        </div>
+        <h4 class="text-xl sm:text-2xl font-extrabold text-white">
+          Quer entender todos os caminhos?
+        </h4>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Descubra como funciona a nossa escala progressiva que vai da aprendizagem até os níveis de publicação reconhecida: Bronze, Prata, Ouro e Diamante.
+        </p>
+      </div>
+    `,
+    cta: {
+      title: 'Quer entender todos os caminhos?',
+      subtitle: 'Conheça em detalhes a nossa proposta pedagógica, modalidades de estudo e os 4 níveis de reconhecimento.',
+      buttonText: '👉 Conheça as Diretrizes e Níveis de Reconhecimento',
+      link: 'diretrizes-pedagogicas'
+    }
+  },
   {
     id: 'tcc-certificados-autoridade-publicacao-cientifica',
     title: 'Seu TCC e Certificados Vão Para a Gaveta?',

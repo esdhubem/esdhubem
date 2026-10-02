@@ -638,6 +638,7 @@ export default function App() {
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }, 100);
             }}
+            onNavigate={handleNavigate}
           />
         </main>
       )}

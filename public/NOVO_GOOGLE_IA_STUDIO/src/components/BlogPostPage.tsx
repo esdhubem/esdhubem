@@ -7,9 +7,10 @@ interface BlogPostPageProps {
   onBackToBlog: () => void;
   onBackToHome: () => void;
   onNavigateToCourses?: () => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
-export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses }) => {
+export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses, onNavigate }) => {
   const [copied, setCopied] = React.useState(false);
 
   const handleCopyLink = () => {
@@ -178,7 +179,16 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBackToBlog, 
                   </p>
                   <div className="pt-3">
                     <button
-                      onClick={onNavigateToCourses || onBackToHome}
+                      onClick={() => {
+                        if (post.cta?.link && onNavigate) {
+                          onNavigate(post.cta.link);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else if (onNavigateToCourses) {
+                          onNavigateToCourses();
+                        } else {
+                          onBackToHome();
+                        }
+                      }}
                       className="inline-flex items-center gap-2 bg-[#FFC72C] hover:bg-[#ffcf47] text-[#182333] font-black text-base sm:text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-[#FFC72C]/30 transition-all transform hover:-translate-y-0.5 cursor-pointer"
                     >
                       <span>{post.cta.buttonText}</span>
