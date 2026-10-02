@@ -138,42 +138,62 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
           </div>
 
           {/* 🎯 O Propósito da nossa Produção Escrita */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             <div className="flex items-center gap-2 text-slate-900 font-bold text-base sm:text-lg">
               <Target className="w-5 h-5 text-amber-600 shrink-0" />
-              <span>🎯 O Propósito da nossa Produção Escrita</span>
+              <span>🎯 O Propósito da Nossa Produção Escrita</span>
             </div>
-            <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-              Estimulamos a escrita e a pesquisa como ferramentas de emancipação e excelência. Esta biblioteca viva serve como uma preparação prática para:
+            
+            <div className="space-y-1">
+              <p className="text-slate-800 font-medium text-xs sm:text-sm leading-relaxed">
+                Escrever é aprender, organizar ideias e compartilhar conhecimento.
+              </p>
+              <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                Na <strong>ESDHUBEM</strong>, a produção escrita pode contribuir para:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pt-1">
+              <div className="bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs">
+                <span className="font-bold text-slate-900 text-xs sm:text-sm block text-amber-900">
+                  • Formação acadêmica
+                </span>
+                <p className="text-slate-600 text-xs leading-relaxed">
+                  Desenvolver leitura, escrita, pesquisa e argumentação.
+                </p>
+              </div>
+
+              <div className="bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs">
+                <span className="font-bold text-slate-900 text-xs sm:text-sm block text-amber-900">
+                  • Comunicação
+                </span>
+                <p className="text-slate-600 text-xs leading-relaxed">
+                  Aprender a expressar ideias com clareza.
+                </p>
+              </div>
+
+              <div className="bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs">
+                <span className="font-bold text-slate-900 text-xs sm:text-sm block text-amber-900">
+                  • Desenvolvimento profissional
+                </span>
+                <p className="text-slate-600 text-xs leading-relaxed">
+                  Construir competências de pesquisa, escrita e comunicação.
+                </p>
+              </div>
+
+              <div className="bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs">
+                <span className="font-bold text-slate-900 text-xs sm:text-sm block text-amber-900">
+                  • Autoria
+                </span>
+                <p className="text-slate-600 text-xs leading-relaxed">
+                  Transformar conhecimentos e experiências em artigos, estudos, manuais e livros.
+                </p>
+              </div>
+            </div>
+
+            <p className="text-slate-800 font-semibold text-xs sm:text-sm leading-relaxed pt-1">
+              Aprender também pode ser o começo de uma trajetória de autoria.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1">
-              <div className="bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs">
-                <span className="font-bold text-slate-900 text-xs sm:text-sm block text-amber-900">
-                  • Futuros Desafios Acadêmicos
-                </span>
-                <p className="text-slate-600 text-xs leading-relaxed">
-                  Domínio de estrutura para TCCs, monografias, dissertações e pós-graduações.
-                </p>
-              </div>
-
-              <div className="bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs">
-                <span className="font-bold text-slate-900 text-xs sm:text-sm block text-amber-900">
-                  • Provas e Seleções
-                </span>
-                <p className="text-slate-600 text-xs leading-relaxed">
-                  Desenvolvimento de escrita dissertativa-argumentativa voltada para redações do ENEM, vestibulares e concursos públicos.
-                </p>
-              </div>
-
-              <div className="bg-white border border-slate-200/90 rounded-xl p-4 space-y-1.5 shadow-2xs">
-                <span className="font-bold text-slate-900 text-xs sm:text-sm block text-amber-900">
-                  • Destaque no Mercado
-                </span>
-                <p className="text-slate-600 text-xs leading-relaxed">
-                  Construção de autoridade intelectual, capacidade de liderança e comunicação clara de ideias no ambiente corporativo e clínico.
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* 🧠 A Escrita como Desenvolvimento Humano */}
