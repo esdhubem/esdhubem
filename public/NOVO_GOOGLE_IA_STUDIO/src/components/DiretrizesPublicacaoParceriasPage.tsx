@@ -79,178 +79,501 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-              Diretrizes de Publicação e Compartilhamento de Conhecimento
+              Diretrizes de Publicação
             </h1>
-
-            <p className="text-slate-300 text-base sm:text-lg font-light leading-relaxed max-w-4xl">
-              Na estruturação da <strong className="text-white font-semibold">ESDHUBEM</strong>, adotamos a decisão estratégica de orientar nossos alunos a direcionarem suas pesquisas para periódicos científicos de impacto intermediário, com forte foco no cenário nacional, regional e de acesso aberto.
-            </p>
           </div>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10 flex-1 w-full -mt-6 relative z-20">
-        {/* Card 1: Contexto e Proposta Pedagógica */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6">
-          <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
-            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
-              <Award className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
-                Estratégia Editorial
+        
+        {/* Bloco Principal: Diretrizes de Publicação - Da aprendizagem à autoria */}
+        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-10">
+          
+          {/* Introdução e Sequência do Percurso */}
+          <div className="space-y-6 pb-8 border-b border-slate-200">
+            <div className="space-y-2">
+              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block">
+                Da aprendizagem à autoria
               </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                Revistas de Médio Impacto & Abordagem Interdisciplinar
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                Diretrizes de Publicação
               </h2>
             </div>
-          </div>
 
-          <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
-            <p>
-              Na estruturação da <strong className="text-slate-900 font-semibold">ESDHUBEM</strong>, adotamos a decisão estratégica de orientar nossos alunos que desejam escrever artigos e receber o <strong className="text-cyan-700 font-semibold">certificado diamante</strong> a direcionarem suas pesquisas para periódicos científicos de impacto intermediário, com forte foco no cenário nacional, regional, de acesso aberto e publicação independente e atendendo a metodologia e formatação dos trabalhos de acordo com que as revistas exigem.
-            </p>
-            <p>
-              Alcançando a publicação em revistas e periódicos o aluno receberá um <strong className="text-cyan-700 font-semibold">certificado diamante</strong> para ostentar no nosso site e nas redes sociais do aluno para divulgação dessa vitória de forma gratuita para o aluno na página da ESDHUBEM.
-            </p>
-            <p>
-              Nossa proposta pedagógica conecta-se perfeitamente com as <strong className="text-slate-900 font-semibold">Revistas de Médio Impacto</strong> (estratos <span className="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold">Qualis B1 a B4</span> / <span className="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-mono text-xs font-bold">Quartis Q3 e Q4</span>) e com as <strong className="text-slate-900 font-semibold">Revistas Interdisciplinares e Multidisciplinares</strong>.
-            </p>
-          </div>
-
-          <div className="bg-amber-50/70 border-l-4 border-[#FFC72C] p-4 sm:p-5 rounded-r-2xl">
-            <p className="text-slate-800 text-sm sm:text-base font-medium leading-relaxed">
-              Essas classificações acolhem com excelência a união entre a <strong className="text-amber-900">ciência prática</strong>, as <strong className="text-amber-900">demandas do mercado de trabalho</strong> e o <strong className="text-amber-900">desenvolvimento humano</strong>.
-            </p>
-          </div>
-        </div>
-
-        {/* Card 2: 🚀 Onde Nossos Alunos Podem Publicar? */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6">
-          <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
-            <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-600 shrink-0">
-              <Rocket className="w-6 h-6" />
+            <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+              <p>
+                A <strong className="text-slate-900 font-semibold">ESDHUBEM</strong> oferece diferentes possibilidades para que o estudante transforme sua experiência de aprendizagem em uma produção escrita e autoral.
+              </p>
+              <p>
+                Após concluir o percurso formativo previsto no curso, o estudante deverá comunicar à ESDHUBEM qual modalidade de produção pretende desenvolver.
+              </p>
+              <p>
+                A partir dessa escolha, receberá as orientações específicas para elaboração do trabalho.
+              </p>
             </div>
-            <div>
-              <span className="text-xs font-bold text-cyan-600 uppercase tracking-wider">
-                Visibilidade & Indexação
+
+            {/* Fluxo do Percurso */}
+            <div className="p-5 rounded-2xl bg-slate-900 text-white space-y-3 shadow-md border-l-4 border-[#FFC72C]">
+              <span className="text-xs uppercase tracking-wider text-[#FFC72C] font-bold block">
+                O percurso segue esta sequência:
               </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                🚀 Onde Nossos Alunos Podem Publicar?
-              </h2>
+              <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-slate-200 leading-relaxed">
+                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Conclusão do curso</span>
+                <span className="text-[#FFC72C]">→</span>
+                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Comunicação da modalidade</span>
+                <span className="text-[#FFC72C]">→</span>
+                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Questionário de aprendizagem</span>
+                <span className="text-[#FFC72C]">→</span>
+                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Certificado correspondente</span>
+                <span className="text-[#FFC72C]">→</span>
+                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Produção</span>
+                <span className="text-[#FFC72C]">→</span>
+                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Análise</span>
+                <span className="text-[#FFC72C]">→</span>
+                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Pagamento da taxa específica</span>
+                <span className="text-[#FFC72C]">→</span>
+                <span className="bg-[#FFC72C] text-slate-950 font-bold px-2.5 py-1 rounded-lg shadow-xs">Emissão do certificado de autoria</span>
+              </div>
+            </div>
+
+            <div className="space-y-3 text-slate-700 text-sm sm:text-base leading-relaxed pt-2">
+              <p>
+                O <strong className="text-amber-900 font-bold">Certificado Bronze</strong> está relacionado à conclusão do curso e não depende da produção posterior de um artigo, manuscrito ou livro.
+              </p>
+              <p>
+                Os certificados <strong className="text-slate-800 font-semibold">Prata</strong>, <strong className="text-amber-600 font-semibold">Ouro</strong> e <strong className="text-cyan-700 font-semibold">Diamante</strong> estão vinculados às respectivas produções e serão emitidos após a entrega e aprovação do trabalho, além do pagamento da taxa correspondente à modalidade escolhida.
+              </p>
             </div>
           </div>
 
-          <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-            Para garantir estratos competitivos, visibilidade internacional e validação acadêmica, incentivamos a submissão em:
-          </p>
+          {/* OS QUATRO PERCURSOS */}
+          <div className="space-y-8">
+            <div className="text-center space-y-1">
+              <h3 className="text-xl sm:text-2xl font-black text-slate-900 uppercase tracking-tight">
+                Os Quatro Percursos
+              </h3>
+              <p className="text-slate-500 text-xs sm:text-sm">
+                Escolha o nível que melhor atende aos seus objetivos formativos e autorais
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {/* Indexadores de Grande Porte -> Certificado Diamante */}
-            <div className="bg-slate-50 border-2 border-cyan-400/50 rounded-2xl p-5 space-y-4 hover:border-cyan-400 transition-colors flex flex-col justify-between shadow-xs">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2 text-cyan-700 font-bold text-base">
-                    <Globe className="w-5 h-5 text-cyan-600" />
-                    <h3>Indexadores de Grande Porte</h3>
+            <div className="space-y-6">
+              {/* 🥉 BRONZE */}
+              <div className="bg-gradient-to-r from-amber-50/50 via-white to-white border-2 border-amber-300/80 rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">🥉</span>
+                  <div>
+                    <h4 className="text-lg sm:text-xl font-bold text-amber-950">
+                      BRONZE — APRENDER E COMPREENDER
+                    </h4>
+                    <span className="text-xs font-semibold text-amber-800">Conclusão do curso</span>
                   </div>
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-cyan-100 text-cyan-900 font-black text-[11px] shadow-xs shrink-0">
-                    💎 Nível Diamante
-                  </span>
                 </div>
 
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                  Periódicos avaliados por <strong className="text-slate-800">Bases de Indexação globais</strong> (como <em>Scopus</em> e <em>Web of Science</em>), que possuem abertura para Trabalhos de Conclusão de Curso (TCC), iniciação científica e artigos de extensão.
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  O Bronze é destinado ao estudante que deseja concluir o curso, demonstrar sua aprendizagem e receber o certificado correspondente.
                 </p>
 
-                <div className="pt-1 flex flex-wrap gap-1.5">
-                  <span className="bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Scopus</span>
-                  <span className="bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Web of Science</span>
-                  <span className="bg-cyan-100/70 text-cyan-800 text-[11px] font-bold px-2 py-0.5 rounded-md">TCCs & Extensão</span>
+                <div className="bg-white border border-amber-200/80 rounded-xl p-4 space-y-2">
+                  <span className="font-bold text-xs uppercase tracking-wider text-amber-900 block">Requisitos:</span>
+                  <ul className="text-xs sm:text-sm text-slate-700 space-y-1.5 list-disc list-inside">
+                    <li>Conclusão do material previsto no curso;</li>
+                    <li>Acompanhamento das atividades estabelecidas;</li>
+                    <li>Realização do questionário de aprendizagem;</li>
+                    <li>Cumprimento dos demais requisitos específicos do curso.</li>
+                  </ul>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-600 font-medium italic">
+                  * O estudante não precisa produzir um artigo ou livro para receber o Certificado Bronze.
+                </p>
+              </div>
+
+              {/* 🥈 PRATA */}
+              <div className="bg-gradient-to-r from-slate-50 via-white to-white border-2 border-slate-300/80 rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">🥈</span>
+                  <div>
+                    <h4 className="text-lg sm:text-xl font-bold text-slate-900">
+                      PRATA — EXPRESSAR E COMUNICAR
+                    </h4>
+                    <span className="text-xs font-semibold text-slate-600">Artigo para o Blog da ESDHUBEM</span>
+                  </div>
+                </div>
+
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  O Prata é destinado ao estudante que deseja transformar o conhecimento desenvolvido no curso em um artigo autoral para publicação no espaço de artigos da ESDHUBEM.
+                </p>
+
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  Após a escolha dessa modalidade e o pagamento da taxa correspondente, o estudante receberá um vídeo com orientações detalhadas para a elaboração do artigo.
+                </p>
+
+                <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2">
+                  <span className="font-bold text-xs uppercase tracking-wider text-slate-900 block">
+                    As orientações poderão incluir:
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-700">
+                    <div>• Estrutura do artigo</div>
+                    <div>• Definição do tema e do público</div>
+                    <div>• Título e subtítulos</div>
+                    <div>• Organização das informações</div>
+                    <div>• Linguagem clara e acessível</div>
+                    <div>• Técnicas de redação para a internet</div>
+                    <div>• Princípios de SEO</div>
+                    <div>• Estratégias de comunicação</div>
+                    <div>• Direitos autorais</div>
+                    <div>• Utilização responsável de fontes</div>
+                    <div>• Revisão e preparação para publicação</div>
+                  </div>
+                </div>
+
+                <div className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed bg-amber-50/50 p-4 rounded-xl border border-amber-200/50">
+                  <p>O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM.</p>
+                  <p>
+                    A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca. Não representa garantia de posicionamento ou ranqueamento no Google.
+                  </p>
+                  <p className="font-semibold text-slate-800">
+                    Após a aprovação, o artigo poderá ser publicado no Blog da ESDHUBEM, acompanhado da identificação do autor, conforme os critérios da escola.
+                  </p>
                 </div>
               </div>
 
-              {/* Destaque Diamante */}
-              <div className="bg-cyan-100/80 border border-cyan-300 rounded-xl p-3.5 flex items-start gap-2.5">
-                <span className="text-2xl shrink-0">💎</span>
-                <div className="text-xs text-cyan-950 space-y-0.5">
-                  <strong className="block font-black text-cyan-900 text-xs sm:text-sm">
-                    Certificado Diamante (Mérito Máximo)
-                  </strong>
-                  <p className="leading-relaxed text-cyan-950 font-medium">
-                    Publicações nestes indexadores de grande porte garantem ao aluno o <strong className="font-bold underline decoration-cyan-500">Certificado Diamante</strong>, com a mais alta chancela de excelência da ESDHUBEM.
+              {/* 🥇 OURO */}
+              <div className="bg-gradient-to-r from-amber-50/60 via-white to-white border-2 border-[#FFC72C] rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">🥇</span>
+                  <div>
+                    <h4 className="text-lg sm:text-xl font-bold text-amber-950">
+                      OURO — INVESTIGAR E APROFUNDAR
+                    </h4>
+                    <span className="text-xs font-semibold text-amber-800">Manuscrito de Conclusão de Curso + Zenodo + DOI</span>
+                  </div>
+                </div>
+
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  O Ouro é destinado ao estudante que deseja aprofundar o conhecimento desenvolvido no curso por meio de um Manuscrito de Conclusão de Curso.
+                </p>
+
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  O trabalho deverá apresentar uma estrutura compatível com uma produção de investigação e receberá orientações específicas para sua elaboração.
+                </p>
+
+                <div className="bg-white border border-amber-200 rounded-xl p-4 space-y-2">
+                  <span className="font-bold text-xs uppercase tracking-wider text-amber-950 block">
+                    Após a escolha da modalidade e o pagamento da taxa correspondente, o estudante receberá um vídeo com orientações sobre a construção do manuscrito, incluindo, conforme a natureza do trabalho:
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-700">
+                    <div>• Definição do tema</div>
+                    <div>• Questão ou problema de estudo</div>
+                    <div>• Objetivos</div>
+                    <div>• Introdução</div>
+                    <div>• Fundamentação</div>
+                    <div>• Metodologia, quando aplicável</div>
+                    <div>• Desenvolvimento</div>
+                    <div>• Análise e discussão</div>
+                    <div>• Conclusão</div>
+                    <div>• Citações e referências</div>
+                    <div>• Organização das fontes</div>
+                    <div>• Apresentação final do trabalho</div>
+                  </div>
+                </div>
+
+                <div className="space-y-2 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/70 p-4 rounded-xl border border-amber-200">
+                  <p>
+                    Após a conclusão e aprovação do manuscrito, será realizado o depósito no Zenodo, conforme as orientações fornecidas.
+                  </p>
+                  <p>
+                    Quando o depósito for concluído e o Zenodo atribuir o identificador correspondente, o trabalho terá um <strong>DOI — Digital Object Identifier</strong>, que permite sua identificação e localização persistente na internet.
+                  </p>
+                  <p className="text-slate-600 italic">
+                    O DOI identifica a publicação. Ele não significa, por si só, revisão por pares, certificação científica ou validação acadêmica do conteúdo.
+                  </p>
+                  <p className="font-bold text-amber-950 pt-1">
+                    O Certificado Ouro será emitido após o cumprimento dos requisitos da modalidade e o pagamento da taxa correspondente.
+                  </p>
+                </div>
+              </div>
+
+              {/* 💎 DIAMANTE */}
+              <div className="bg-gradient-to-r from-cyan-50/50 via-white to-white border-2 border-cyan-400 rounded-2xl p-6 sm:p-7 space-y-5 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">💎</span>
+                  <div>
+                    <h4 className="text-lg sm:text-xl font-bold text-cyan-950">
+                      DIAMANTE — AUTORAR E CONSTRUIR
+                    </h4>
+                    <span className="text-xs font-semibold text-cyan-800">Livro + Registro de Direitos Autorais</span>
+                  </div>
+                </div>
+
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  O Diamante é destinado ao estudante que deseja transformar seu conhecimento, experiência, estudo ou investigação em uma obra autoral de maior extensão.
+                </p>
+
+                <div className="bg-white border border-cyan-200 rounded-xl p-4 space-y-2">
+                  <span className="font-bold text-xs uppercase tracking-wider text-cyan-950 block">
+                    A obra poderá assumir diferentes formatos, de acordo com sua finalidade e público, incluindo:
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-700">
+                    <div>• Livros de desenvolvimento pessoal</div>
+                    <div>• Ensaios</div>
+                    <div>• Obras acadêmicas ou didáticas</div>
+                    <div>• Manuais técnicos</div>
+                    <div>• Guias profissionais</div>
+                    <div>• Livros de referência</div>
+                    <div>• Biografias e autobiografias</div>
+                    <div>• Memórias</div>
+                    <div>• Livros-reportagem</div>
+                    <div>• Obras sobre espiritualidade e religião</div>
+                    <div>• Outras formas de não ficção</div>
+                    <div>• Obras de ficção adulta, quando compatíveis</div>
+                  </div>
+                </div>
+
+                {/* Requisito Mínimo */}
+                <div className="bg-cyan-100/60 border-l-4 border-cyan-500 p-4 rounded-r-xl space-y-1.5 text-xs sm:text-sm text-cyan-950">
+                  <span className="font-black uppercase tracking-wider block">Requisito mínimo</span>
+                  <p>
+                    Para a modalidade Diamante, o livro deverá possuir <strong>mínimo de 50 páginas de conteúdo</strong>, não sendo contabilizados, para esse mínimo, elementos como capa, folha de rosto, sumário e demais elementos editoriais.
+                  </p>
+                  <p className="text-slate-600 italic">
+                    A extensão, entretanto, não substitui a qualidade da obra. O livro deverá apresentar conteúdo desenvolvido, organização coerente e uma proposta autoral definida.
+                  </p>
+                </div>
+
+                {/* Orientação para a Produção do Livro */}
+                <div className="space-y-3 pt-2">
+                  <h5 className="font-bold text-sm sm:text-base text-slate-900 uppercase tracking-wide">
+                    ORIENTAÇÃO PARA A PRODUÇÃO DO LIVRO
+                  </h5>
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                    Após a escolha da modalidade e o pagamento da taxa correspondente, o estudante receberá um vídeo com orientações detalhadas para a preparação da obra.
+                  </p>
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                    As orientações buscarão apresentar formatos utilizados atualmente no mercado editorial e nas plataformas de autopublicação, considerando as características de cada gênero. Entre os aspectos abordados poderão estar:
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <div>• Definição do público</div>
+                    <div>• Proposta da obra</div>
+                    <div>• Estrutura do livro</div>
+                    <div>• Organização dos capítulos</div>
+                    <div>• Título e subtítulo</div>
+                    <div>• Introdução</div>
+                    <div>• Desenvolvimento</div>
+                    <div>• Conclusão</div>
+                    <div>• Referências</div>
+                    <div>• Elementos pré-textuais</div>
+                    <div>• Elementos pós-textuais</div>
+                    <div>• Preparação do arquivo</div>
+                    <div>• Apresentação editorial</div>
+                    <div>• Descrição da obra</div>
+                    <div>• Organização para publicação</div>
+                  </div>
+                  <p className="text-slate-600 text-xs leading-relaxed">
+                    No caso de manuais técnicos e guias profissionais, a produção poderá utilizar artigos científicos, livros, normas, documentos oficiais e outras fontes pertinentes. O foco será a clareza, a utilidade, a organização e a responsabilidade das informações apresentadas.
+                  </p>
+                </div>
+
+                {/* Registro de Direitos Autorais */}
+                <div className="bg-white border-2 border-slate-200 rounded-2xl p-5 space-y-3 shadow-xs">
+                  <h5 className="font-bold text-sm sm:text-base text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                    <ShieldCheck className="w-5 h-5 text-cyan-600" />
+                    <span>REGISTRO DE DIREITOS AUTORAIS</span>
+                  </h5>
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                    Para a modalidade Diamante, o autor deverá realizar o registro da obra junto ao <strong>Escritório de Direitos Autorais da Fundação Biblioteca Nacional — EDA/FBN</strong>, seguindo os procedimentos oficiais vigentes.
+                  </p>
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                    O pedido de registro é realizado pelo próprio requerente por meio do Portal Gov.Br.
+                  </p>
+                  
+                  <div className="pt-1">
+                    <a
+                      href="https://www.gov.br/pt-br/servicos/registrar-ou-averbar-direitos-autorais-na-biblioteca-nacional"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-xs sm:text-sm transition-all shadow-sm"
+                    >
+                      <span>Registrar ou averbar Direitos Autorais na Biblioteca Nacional — Portal Gov.Br</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+
+                  <p className="text-slate-600 text-xs leading-relaxed pt-2">
+                    No procedimento oficial, o requerente deverá realizar o acesso com sua conta Gov.Br, preencher as informações solicitadas, anexar a obra e os documentos necessários e efetuar o pagamento pela própria plataforma, conforme as regras vigentes.
+                  </p>
+                  <p className="text-slate-600 text-xs leading-relaxed">
+                    A Fundação Biblioteca Nacional informa que o pedido passa por análise e poderá ser deferido ou indeferido. O documento correspondente ao resultado fica disponível ao requerente no Portal Gov.Br.
+                  </p>
+                  <p className="text-slate-600 text-xs leading-relaxed">
+                    A ESDHUBEM orientará o estudante sobre a preparação da obra para essa etapa, mas o pedido de registro é realizado pelo próprio autor perante a Fundação Biblioteca Nacional. Para informações atualizadas sobre documentos, valores, procedimentos e prazos, devem ser consultadas diretamente as orientações oficiais da Fundação Biblioteca Nacional.
+                  </p>
+                </div>
+
+                {/* Publicação e Mural de Livros da ESDHUBEM */}
+                <div className="space-y-3 pt-2">
+                  <h5 className="font-bold text-sm sm:text-base text-slate-900 uppercase tracking-wide">
+                    PUBLICAÇÃO E MURAL DE LIVROS DA ESDHUBEM
+                  </h5>
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                    Após cumprir os requisitos da modalidade Diamante, o autor poderá solicitar a inclusão de sua obra no Mural de Livros da ESDHUBEM. A obra poderá ser disponibilizada:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
+                      <strong className="text-slate-900 font-bold block mb-1">Gratuitamente:</strong>
+                      <p>• No site da ESDHUBEM;</p>
+                      <p>• Em formato digital;</p>
+                      <p>• Em repositórios;</p>
+                      <p>• Em outras plataformas de acesso público.</p>
+                    </div>
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
+                      <strong className="text-slate-900 font-bold block mb-1">Comercialmente:</strong>
+                      <p>• No espaço de livros da ESDHUBEM, quando disponível;</p>
+                      <p>• Em plataformas de autopublicação;</p>
+                      <p>• Em livrarias e marketplaces;</p>
+                      <p>• Diretamente pelo autor ou em outros canais escolhidos.</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-600 text-xs leading-relaxed pt-1">
+                    A inclusão no Mural de Livros da ESDHUBEM não estabelece exclusividade comercial. O autor permanece livre para disponibilizar ou comercializar sua obra em outras plataformas e canais, de acordo com seus próprios interesses e com as condições de direitos autorais e publicação aplicáveis.
+                  </p>
+                  <p className="text-slate-600 text-xs leading-relaxed">
+                    A ESDHUBEM poderá divulgar a obra e apresentar informações fornecidas pelo autor, conforme as condições estabelecidas para o Mural de Livros.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Plataformas de Ciência Aberta -> Certificado Ouro */}
-            <div className="bg-slate-50 border-2 border-amber-400/60 rounded-2xl p-5 space-y-4 hover:border-amber-400 transition-colors flex flex-col justify-between shadow-xs">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2 text-emerald-700 font-bold text-base">
-                    <Sparkles className="w-5 h-5 text-emerald-600" />
-                    <h3>Plataformas de Ciência Aberta</h3>
-                  </div>
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-100 text-amber-950 font-black text-[11px] shadow-xs shrink-0">
-                    🥇 Nível Ouro
-                  </span>
-                </div>
+          {/* Autoria e Responsabilidade & Inteligência Artificial */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-200">
+            {/* Autoria e Responsabilidade */}
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base uppercase tracking-wider flex items-center gap-2">
+                <FileText className="w-4 h-4 text-amber-600" />
+                <span>Autoria e Responsabilidade</span>
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                A produção intelectual pertence ao seu autor. A ESDHUBEM oferece orientação, modelos e critérios para desenvolvimento e publicação, mas não substitui o autor na criação da obra.
+              </p>
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
+                O autor é responsável pelo conteúdo que apresenta e assina, incluindo:
+              </p>
+              <ul className="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                <li>Informações, argumentos e interpretações;</li>
+                <li>Referências e citações;</li>
+                <li>Imagens e materiais utilizados;</li>
+                <li>Respeito aos direitos de terceiros;</li>
+                <li>Revisão final da produção.</li>
+              </ul>
+              <p className="text-[11px] text-slate-500 italic pt-1">
+                A publicação de uma obra pela ESDHUBEM não significa que a instituição endosse automaticamente todas as opiniões, interpretações ou conclusões apresentadas pelo autor.
+              </p>
+            </div>
 
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                  Revistas indexadas no <strong className="text-slate-800">Zenodo (CERN / OpenAIRE)</strong> com atribuição de DOI oficial ou em consolidados indexadores latino-americanos, como o <strong className="text-slate-800">SciELO</strong>.
-                </p>
-
-                <div className="pt-1 flex flex-wrap gap-1.5">
-                  <span className="bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Zenodo (DOI Oficial)</span>
-                  <span className="bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md">SciELO</span>
-                  <span className="bg-emerald-100/70 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded-md">Acesso Aberto</span>
-                </div>
-              </div>
-
-              {/* Destaque Ouro */}
-              <div className="bg-amber-100/80 border border-amber-300 rounded-xl p-3.5 flex items-start gap-2.5">
-                <span className="text-2xl shrink-0">🥇</span>
-                <div className="text-xs text-amber-950 space-y-0.5">
-                  <strong className="block font-black text-amber-950 text-xs sm:text-sm">
-                    Certificado Ouro (Ciência Aberta & DOI)
-                  </strong>
-                  <p className="leading-relaxed text-amber-950 font-medium">
-                    Artigos catalogados com DOI em plataformas abertas como o Zenodo habilitam o <strong className="font-bold underline decoration-amber-500">Certificado Ouro</strong> de mérito acadêmico oficial da ESDHUBEM.
-                  </p>
-                </div>
+            {/* Inteligência Artificial e Autoria */}
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base uppercase tracking-wider flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-purple-600" />
+                <span>Inteligência Artificial e Autoria</span>
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                Ferramentas de inteligência artificial poderão ser utilizadas como apoio à produção, de acordo com as orientações da ESDHUBEM. Podem auxiliar na organização de ideias, elaboração de estruturas, revisão textual e aprimoramento da linguagem.
+              </p>
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                Entretanto, o autor continua responsável por compreender, verificar e revisar aquilo que publica. Informações, referências, dados ou resultados não devem ser apresentados como verdadeiros sem verificação adequada.
+              </p>
+              <div className="bg-purple-100/60 p-3 rounded-xl border border-purple-200 text-xs text-purple-950 font-medium">
+                A tecnologia pode auxiliar a produção. A autoria e a responsabilidade permanecem com o autor.
               </div>
             </div>
           </div>
 
-          {/* Destaque de Correlação com a Escala de Mérito */}
-          <div className="bg-gradient-to-r from-slate-900 to-[#182333] border-2 border-[#FFC72C]/60 rounded-2xl p-4 sm:p-5 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-start sm:items-center gap-3.5">
-              <div className="w-11 h-11 rounded-2xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center shrink-0 text-[#FFC72C]">
-                <Award className="w-6 h-6 text-[#FFC72C]" />
-              </div>
-              <div className="space-y-0.5">
-                <div className="inline-flex items-center gap-1.5 text-[#FFC72C] text-[11px] font-black uppercase tracking-wider">
-                  <ShieldCheck className="w-3.5 h-3.5" />
-                  <span>Informação em Destaque • Escala de Autoria</span>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                  Os <strong className="text-cyan-300 font-bold">Indexadores de Grande Porte</strong> habilitam os <strong className="text-cyan-300 font-bold">Certificados Diamante 💎</strong>, e as <strong className="text-[#FFC72C] font-bold">Plataformas de Ciência Aberta com DOI</strong> habilitam os <strong className="text-[#FFC72C] font-bold">Certificados Ouro 🥇</strong>.
-                </p>
-              </div>
+          {/* Certificação e Valores */}
+          <div className="space-y-4 pt-4 border-t border-slate-200">
+            <h4 className="font-bold text-slate-900 text-base sm:text-lg uppercase tracking-wider">
+              Certificação e Valores
+            </h4>
+            <div className="space-y-2 text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <p>Cada modalidade possui um valor específico para a emissão do certificado correspondente.</p>
+              <p>O valor da certificação será informado ao estudante antes da escolha da modalidade.</p>
+              <p className="font-semibold text-slate-900">
+                O pagamento da certificação não substitui a necessidade de cumprir os requisitos da modalidade escolhida.
+              </p>
             </div>
 
-            {onNavigate && (
-              <button
-                type="button"
-                onClick={() => onNavigate('regras-certificacao-merito')}
-                className="shrink-0 w-full md:w-auto bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black text-xs px-4 py-2.5 rounded-xl transition-all cursor-pointer shadow-md flex items-center justify-center gap-1.5 active:scale-95"
-              >
-                <span>Ver Escala de Autoria</span>
-                <ChevronRight className="w-4 h-4 text-slate-950" />
-              </button>
-            )}
+            {/* Tabela Resumo dos Percursos */}
+            <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs pt-1">
+              <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[550px]">
+                <thead>
+                  <tr className="bg-slate-900 text-white">
+                    <th className="py-3 px-4 font-bold uppercase tracking-wider">Nível</th>
+                    <th className="py-3 px-4 font-bold uppercase tracking-wider">Produção</th>
+                    <th className="py-3 px-4 font-bold uppercase tracking-wider">Resultado</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                  <tr className="hover:bg-amber-50/30">
+                    <td className="py-3 px-4 font-bold text-amber-950">🥉 Bronze</td>
+                    <td className="py-3 px-4">Conclusão do curso + questionário</td>
+                    <td className="py-3 px-4 font-medium text-slate-900">Certificado Bronze</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">🥈 Prata</td>
+                    <td className="py-3 px-4">Artigo para o Blog ESDHUBEM</td>
+                    <td className="py-3 px-4 font-medium text-slate-900">Publicação + Certificado Prata</td>
+                  </tr>
+                  <tr className="hover:bg-amber-50/30">
+                    <td className="py-3 px-4 font-bold text-amber-800">🥇 Ouro</td>
+                    <td className="py-3 px-4">Manuscrito de Conclusão de Curso + depósito no Zenodo + DOI</td>
+                    <td className="py-3 px-4 font-medium text-slate-900">Certificado Ouro</td>
+                  </tr>
+                  <tr className="hover:bg-cyan-50/30">
+                    <td className="py-3 px-4 font-bold text-cyan-900">💎 Diamante</td>
+                    <td className="py-3 px-4">Livro com mínimo de 50 páginas + registro de direitos autorais</td>
+                    <td className="py-3 px-4 font-medium text-slate-900">Mural de Livros + Certificado Diamante</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="text-xs text-slate-500 italic">
+              * Os certificados Prata, Ouro e Diamante dependem da entrega e aprovação da produção correspondente.
+            </p>
+          </div>
+
+          {/* UM PERCURSO DE AUTORIA */}
+          <div className="bg-gradient-to-r from-slate-900 to-[#182333] text-white p-6 sm:p-8 rounded-2xl space-y-4 shadow-lg text-center">
+            <h4 className="text-lg sm:text-xl font-black uppercase tracking-wider text-[#FFC72C]">
+              Um Percurso de Autoria
+            </h4>
+            <div className="max-w-2xl mx-auto space-y-1.5 text-xs sm:text-sm text-slate-200 leading-relaxed">
+              <p>O estudante não é obrigado a realizar todos os níveis.</p>
+              <p>Pode concluir o curso e permanecer no <strong>Bronze</strong>.</p>
+              <p>Pode escolher escrever um artigo e avançar para o <strong>Prata</strong>.</p>
+              <p>Pode desenvolver um manuscrito e seguir para o <strong>Ouro</strong>.</p>
+              <p>Pode transformar seu conhecimento em um livro e alcançar o <strong>Diamante</strong>.</p>
+              <p className="pt-2 font-medium text-white">
+                Cada percurso corresponde a uma forma diferente de transformar aprendizagem em produção.
+              </p>
+            </div>
+
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-black text-[#FFC72C]">
+              <span>APRENDER</span>
+              <span>→</span>
+              <span>EXPRESSAR</span>
+              <span>→</span>
+              <span>INVESTIGAR</span>
+              <span>→</span>
+              <span>AUTORAR</span>
+            </div>
+
+            <p className="text-xs text-slate-400 italic pt-1">
+              O curso pode ser o começo. A produção é uma possibilidade. A autoria é uma construção.
+            </p>
           </div>
         </div>
 
@@ -294,15 +617,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </p>
                 </div>
               </div>
-              <div className="pt-3 border-t border-rose-100">
-                <span className="text-[11px] text-slate-500 block mb-1 font-semibold">Alvo Editorial:</span>
-                <span className="inline-block bg-rose-100 text-rose-800 text-xs font-bold px-2.5 py-1 rounded-md">
-                  Qualis B1, B2 e B3
-                </span>
-                <p className="text-[11px] text-slate-500 mt-1">
-                  Revistas que debatem fortemente a humanização e a saúde coletiva.
-                </p>
-              </div>
             </div>
 
             {/* Eixo 2: Interdisciplinar */}
@@ -323,15 +637,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <strong className="text-slate-800">Aplicação:</strong> Competências socioemocionais cruzando áreas como psicologia, administração e filosofia.
                   </p>
                 </div>
-              </div>
-              <div className="pt-3 border-t border-blue-100">
-                <span className="text-[11px] text-slate-500 block mb-1 font-semibold">Alvo Editorial:</span>
-                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1 rounded-md">
-                  Qualis B1 ou B2
-                </span>
-                <p className="text-[11px] text-slate-500 mt-1">
-                  Ideais por aceitarem relatos de experiência práticos vindos do mercado corporativo.
-                </p>
               </div>
             </div>
 
@@ -354,15 +659,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </p>
                 </div>
               </div>
-              <div className="pt-3 border-t border-emerald-100">
-                <span className="text-[11px] text-slate-500 block mb-1 font-semibold">Alvo Editorial:</span>
-                <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-md">
-                  Estrato B (Qualis)
-                </span>
-                <p className="text-[11px] text-slate-500 mt-1">
-                  Avaliam como as novas pedagogias transformam o aprendizado e a evolução profissional.
-                </p>
-              </div>
             </div>
 
             {/* Eixo 4: Ciências da Religião, História & Cultura */}
@@ -383,15 +679,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <strong className="text-slate-800">Aplicação:</strong> Estudos históricos, antropológicos e sociológicos sobre correntes tradicionais (Alquimia, Cabala, Teosofia, Ocultismo, Maçonaria) e manifestações modernas, como os movimentos New Age, a espiritualidade sem religião e os reflexos culturais do esoterismo na sociedade contemporânea.
                   </p>
                 </div>
-              </div>
-              <div className="pt-3 border-t border-amber-100">
-                <span className="text-[11px] text-slate-500 block mb-1 font-semibold">Alvo Editorial:</span>
-                <span className="inline-block bg-amber-100 text-amber-900 text-xs font-bold px-2.5 py-1 rounded-md">
-                  Qualis A3, A4 ou Estrato B
-                </span>
-                <p className="text-[11px] text-slate-500 mt-1">
-                  Revistas focadas em Ciências da Religião, Teologia, História Cultural, Antropologia ou Ciências Sociais, que avaliem o impacto de sistemas de crenças e rituais na construção do pensamento humano.
-                </p>
               </div>
             </div>
           </div>
