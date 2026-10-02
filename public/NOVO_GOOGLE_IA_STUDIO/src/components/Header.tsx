@@ -15,7 +15,8 @@ import {
   Award,
   Scale,
   Headphones,
-  Handshake
+  Handshake,
+  BookOpen
 } from 'lucide-react';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
 
