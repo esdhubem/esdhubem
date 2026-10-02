@@ -251,6 +251,82 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </div>
         </section>
 
+        {/* Quadro: Modalidade, Acesso, Formação e Certificação */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+              <Award className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block">
+                Estrutura de Ensino & Certificação
+              </span>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                Modalidades de Aprendizagem e Reconhecimento
+              </h2>
+            </div>
+          </div>
+
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+            <table className="w-full text-left text-sm border-collapse min-w-[640px]">
+              <thead>
+                <tr className="bg-slate-900 text-white">
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Modalidade</th>
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Acesso</th>
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Formação</th>
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Certificação</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                <tr className="hover:bg-slate-50/80 transition-colors">
+                  <td className="py-3.5 px-4 font-bold text-slate-900">Curso livre gratuito</td>
+                  <td className="py-3.5 px-4">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+                      Aberto
+                    </span>
+                  </td>
+                  <td className="py-3.5 px-4">Conteúdo introdutório/complementar</td>
+                  <td className="py-3.5 px-4 text-slate-600">Opcional e conforme modalidade escolhida</td>
+                </tr>
+                <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
+                  <td className="py-3.5 px-4 font-bold text-slate-900">Curso livre pago</td>
+                  <td className="py-3.5 px-4">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                      Inscrição
+                    </span>
+                  </td>
+                  <td className="py-3.5 px-4">Formação estruturada</td>
+                  <td className="py-3.5 px-4 text-slate-600">Conforme o curso</td>
+                </tr>
+                <tr className="hover:bg-slate-50/80 transition-colors">
+                  <td className="py-3.5 px-4 font-bold text-slate-900">Curso de formação</td>
+                  <td className="py-3.5 px-4">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-100 text-purple-800">
+                      Matrícula e requisitos definidos
+                    </span>
+                  </td>
+                  <td className="py-3.5 px-4">Formação mais aprofundada e acompanhada</td>
+                  <td className="py-3.5 px-4 font-medium text-slate-900">Certificado de formação</td>
+                </tr>
+                <tr className="hover:bg-amber-50/50 transition-colors bg-amber-50/20">
+                  <td className="py-3.5 px-4 font-bold text-amber-950">Produção autoral</td>
+                  <td className="py-3.5 px-4">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900">
+                      Após conclusão do percurso
+                    </span>
+                  </td>
+                  <td className="py-3.5 px-4">Artigo, manuscrito ou livro</td>
+                  <td className="py-3.5 px-4">
+                    <span className="font-bold text-amber-700 bg-amber-50 border border-amber-200/80 px-2.5 py-1 rounded-lg text-xs inline-block">
+                      Prata, Ouro ou Diamante
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         {/* Uma escola onde o conhecimento também ganha voz */}
         <section className="bg-gradient-to-br from-[#182333] to-[#243042] text-white rounded-3xl p-8 sm:p-12 shadow-xl space-y-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
