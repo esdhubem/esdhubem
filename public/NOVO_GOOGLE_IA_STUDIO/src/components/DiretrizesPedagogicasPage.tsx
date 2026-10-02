@@ -60,11 +60,11 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-            Escola de Desenvolvimento Humano e Bem-Estar
+            Diretrizes e Esclarecimento Pedagógico
           </h1>
 
           <p className="text-[#FFC72C] text-lg sm:text-xl font-semibold max-w-2xl mx-auto leading-relaxed">
-            Uma escola de cursos livres que também valoriza a expressão, a investigação e a autoria.
+            Uma escola de cursos livres que vai além do certificado através da escrita valoriza a expressão, a investigação e a autoria.
           </p>
         </div>
       </header>
@@ -251,79 +251,262 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </div>
         </section>
 
-        {/* Quadro: Modalidade, Acesso, Formação e Certificação */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
-              <Award className="w-6 h-6" />
+        {/* Quadro: Modalidades de Aprendizagem e Reconhecimento */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-10">
+          <div>
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                <Award className="w-6 h-6" />
+              </div>
+              <div>
+                <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block">
+                  Estrutura de Ensino & Certificação
+                </span>
+                <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                  Modalidades de Aprendizagem e Reconhecimento
+                </h2>
+              </div>
             </div>
-            <div>
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block">
-                Estrutura de Ensino & Certificação
-              </span>
-              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
-                Modalidades de Aprendizagem e Reconhecimento
-              </h2>
-            </div>
+            <p className="text-sm text-slate-600 mt-2">
+              Compreenda as diferenças de objetivo, exigências e formas de certificação para cada modalidade oferecida ou reconhecida.
+            </p>
           </div>
 
+          {/* Tabela Principal */}
           <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
-            <table className="w-full text-left text-sm border-collapse min-w-[640px]">
+            <table className="w-full text-left text-sm border-collapse min-w-[760px]">
               <thead>
                 <tr className="bg-slate-900 text-white">
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Modalidade</th>
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Acesso</th>
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Formação</th>
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Certificação</th>
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">MODALIDADE</th>
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">FOCO PRINCIPAL</th>
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">EXIGÊNCIA / CARACTERÍSTICA</th>
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">CERTIFICAÇÃO / DESTAQUE</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
                 <tr className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-3.5 px-4 font-bold text-slate-900">Curso livre gratuito</td>
-                  <td className="py-3.5 px-4">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
-                      Aberto
-                    </span>
+                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                    🎓 Formação
                   </td>
-                  <td className="py-3.5 px-4">Conteúdo introdutório/complementar</td>
-                  <td className="py-3.5 px-4 text-slate-600">Opcional e conforme modalidade escolhida</td>
+                  <td className="py-4 px-4">
+                    Trilhas de aprendizado completas que preparam o profissional do zero até o nível avançado em uma profissão específica
+                  </td>
+                  <td className="py-4 px-4 text-slate-600">
+                    Requer escolaridade de ingresso e estrutura curricular definida.
+                  </td>
+                  <td className="py-4 px-4 font-semibold text-slate-900">
+                    Certificado livre para exercício profissional
+                  </td>
                 </tr>
                 <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
-                  <td className="py-3.5 px-4 font-bold text-slate-900">Curso livre pago</td>
-                  <td className="py-3.5 px-4">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
-                      Inscrição
-                    </span>
+                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                    🛠️ Capacitação
                   </td>
-                  <td className="py-3.5 px-4">Formação estruturada</td>
-                  <td className="py-3.5 px-4 text-slate-600">Conforme o curso</td>
+                  <td className="py-4 px-4">
+                    Desenvolver uma habilidade técnica específica para o trabalho.
+                  </td>
+                  <td className="py-4 px-4 text-slate-600">
+                    Não exige formação prévia na área. Foco na prática e empregabilidade.
+                  </td>
+                  <td className="py-4 px-4 font-semibold text-slate-900">
+                    Certificado de capacitação profissional
+                  </td>
                 </tr>
                 <tr className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-3.5 px-4 font-bold text-slate-900">Curso de formação</td>
-                  <td className="py-3.5 px-4">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-100 text-purple-800">
-                      Matrícula e requisitos definidos
-                    </span>
+                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                    ⚙️ Treinamento
                   </td>
-                  <td className="py-3.5 px-4">Formação mais aprofundada e acompanhada</td>
-                  <td className="py-3.5 px-4 font-medium text-slate-900">Certificado de formação</td>
+                  <td className="py-4 px-4">
+                    Ensinar a executar uma tarefa ou ferramenta específica (comum em empresas).
+                  </td>
+                  <td className="py-4 px-4 text-slate-600">
+                    Curto prazo. Foco imediato na aplicação prática. Objetivo: dominar uma tarefa.
+                  </td>
+                  <td className="py-4 px-4 font-semibold text-slate-900">
+                    Certificado de conclusão / participação
+                  </td>
                 </tr>
-                <tr className="hover:bg-amber-50/50 transition-colors bg-amber-50/20">
-                  <td className="py-3.5 px-4 font-bold text-amber-950">Produção autoral</td>
-                  <td className="py-3.5 px-4">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900">
-                      Após conclusão do percurso
-                    </span>
+                <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
+                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                    📚 Cursos Livres
                   </td>
-                  <td className="py-3.5 px-4">Artigo, manuscrito ou livro</td>
-                  <td className="py-3.5 px-4">
-                    <span className="font-bold text-amber-700 bg-amber-50 border border-amber-200/80 px-2.5 py-1 rounded-lg text-xs inline-block">
-                      Prata, Ouro ou Diamante
+                  <td className="py-4 px-4">
+                    Conhecimento geral e atualização em temas variados.
+                  </td>
+                  <td className="py-4 px-4 text-slate-600">
+                    Sem exigência de escolaridade. Educação não-formal, ágil e flexível.
+                  </td>
+                  <td className="py-4 px-4 font-semibold text-slate-900">
+                    Certificado de participação / conclusão
+                  </td>
+                </tr>
+                <tr className="hover:bg-slate-50/80 transition-colors">
+                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                    ⏱️ Horas Complementares
+                  </td>
+                  <td className="py-4 px-4">
+                    Cumprir exigência de carga horária das instituições de ensino superior.
+                  </td>
+                  <td className="py-4 px-4 text-slate-600">
+                    Obrigatório para estudantes universitários. Pode incluir cursos, palestras e workshops.
+                  </td>
+                  <td className="py-4 px-4 font-semibold text-slate-900">
+                    Declaração / certificado com carga horária para validação acadêmica
+                  </td>
+                </tr>
+                <tr className="hover:bg-amber-50/50 transition-colors bg-amber-50/30">
+                  <td className="py-4 px-4 font-bold text-amber-950 whitespace-nowrap">
+                    ✍️ Produção Autoral
+                  </td>
+                  <td className="py-4 px-4">
+                    Criar conteúdo próprio: artigos, livros, manuais, softwares, registros.
+                  </td>
+                  <td className="py-4 px-4 text-slate-600">
+                    Demonstra autoria, inovação e autoridade no tema. Enriquecimento do currículo acadêmico e profissional.
+                  </td>
+                  <td className="py-4 px-4">
+                    <span className="font-bold text-amber-800 bg-amber-100/90 border border-amber-300 px-3 py-1 rounded-lg text-xs inline-block">
+                      Prata, Ouro ou Diamante — conforme nível de publicação e impacto
                     </span>
                   </td>
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          {/* 📖 Entenda em Detalhes */}
+          <div className="space-y-6 pt-4 border-t border-slate-200">
+            <div className="flex items-center gap-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-2">
+                <span>📖</span> Entenda em Detalhes
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Formação */}
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2 hover:border-slate-300 transition-colors">
+                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
+                  <span>🎓</span>
+                  <h4>Formação</h4>
+                </div>
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  É a base da sua carreira. São cursos de longa duração regulamentados pelo MEC — como graduações, licenciaturas e cursos técnicos — que conferem um título oficial para você exercer uma profissão. Requer escolaridade de ingresso e estrutura curricular definida.
+                </p>
+              </div>
+
+              {/* Capacitação */}
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2 hover:border-slate-300 transition-colors">
+                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
+                  <span>🛠️</span>
+                  <h4>Capacitação</h4>
+                </div>
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  Serve para preparar você para uma nova função ou aprimorar o que você já faz. É um meio-termo entre teoria e prática, focado na empregabilidade. Não exige formação prévia na área e oferece conhecimento aplicável logo no início.
+                </p>
+              </div>
+
+              {/* Treinamento */}
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2 hover:border-slate-300 transition-colors">
+                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
+                  <span>⚙️</span>
+                  <h4>Treinamento</h4>
+                </div>
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  É o aprendizado mais prático e rápido de todos. Geralmente é aplicado quando você precisa dominar uma ferramenta, procedimento ou tarefa específica — por exemplo, uso de software, normas de segurança ou processo operacional. Foco na execução imediata.
+                </p>
+              </div>
+
+              {/* Cursos Livres */}
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2 hover:border-slate-300 transition-colors">
+                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
+                  <span>📚</span>
+                  <h4>Cursos Livres</h4>
+                </div>
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  São cursos de qualificação rápida que não dependem de autorização do MEC. Podem abordar qualquer assunto — desde desenvolvimento pessoal até temas técnicos. Servem para atualização de currículo, enriquecimento cultural e aprendizado flexível. Sem exigência de escolaridade.
+                </p>
+              </div>
+
+              {/* Horas Complementares */}
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2 hover:border-slate-300 transition-colors">
+                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
+                  <span>⏱️</span>
+                  <h4>Horas Complementares</h4>
+                </div>
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  Não são um "tipo de curso", mas sim uma exigência das faculdades: para se formar, o aluno precisa comprovar atividades complementares fora da grade obrigatória. Cursos livres, palestras, workshops e eventos podem ser aproveitados para esse cumprimento. Emitimos documento com carga horária para validação.
+                </p>
+              </div>
+
+              {/* Produção Autoral */}
+              <div className="bg-amber-50/60 rounded-2xl p-6 border border-amber-200/80 space-y-2 hover:border-amber-300 transition-colors">
+                <div className="flex items-center gap-2 text-lg font-bold text-amber-950">
+                  <span>✍️</span>
+                  <h4>Produção Autoral</h4>
+                </div>
+                <p className="text-sm text-slate-800 leading-relaxed">
+                  É quando você deixa de ser apenas estudante e passa a ser criador: escrever artigo, publicar livro, registrar patente ou desenvolver solução original conta como produção autoral. Isso valoriza muito o currículo acadêmico (Lattes) e o posicionamento de mercado. Recebe reconhecimento em níveis: Prata, Ouro ou Diamante, conforme impacto e forma de publicação.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 🎯 Resumo Visual Rápido */}
+          <div className="space-y-4 pt-4 border-t border-slate-200">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <span>🎯</span> Resumo Visual Rápido
+            </h3>
+
+            <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+              <table className="w-full text-left text-sm border-collapse min-w-[620px]">
+                <thead>
+                  <tr className="bg-slate-900 text-white">
+                    <th className="py-3 px-4 font-bold text-xs uppercase tracking-wider">Modalidade</th>
+                    <th className="py-3 px-4 font-bold text-xs uppercase tracking-wider">Prazo</th>
+                    <th className="py-3 px-4 font-bold text-xs uppercase tracking-wider">Foco</th>
+                    <th className="py-3 px-4 font-bold text-xs uppercase tracking-wider">Validação Principal</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                  <tr className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3 px-4 font-bold text-slate-900">Formação</td>
+                    <td className="py-3 px-4 text-slate-600">Longo</td>
+                    <td className="py-3 px-4">Profissão oficial</td>
+                    <td className="py-3 px-4 font-medium text-slate-900">Diploma regulamentado</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
+                    <td className="py-3 px-4 font-bold text-slate-900">Capacitação</td>
+                    <td className="py-3 px-4 text-slate-600">Médio</td>
+                    <td className="py-3 px-4">Habilidade prática</td>
+                    <td className="py-3 px-4 font-medium text-slate-900">Certificado profissional</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3 px-4 font-bold text-slate-900">Treinamento</td>
+                    <td className="py-3 px-4 text-slate-600">Curto</td>
+                    <td className="py-3 px-4">Tarefa / ferramenta</td>
+                    <td className="py-3 px-4 font-medium text-slate-900">Certificado de participação</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
+                    <td className="py-3 px-4 font-bold text-slate-900">Curso Livre</td>
+                    <td className="py-3 px-4 text-slate-600">Variável</td>
+                    <td className="py-3 px-4">Conhecimento geral</td>
+                    <td className="py-3 px-4 font-medium text-slate-900">Certificado de conclusão</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3 px-4 font-bold text-slate-900">Horas Complementares</td>
+                    <td className="py-3 px-4 text-slate-600">Conforme exigência</td>
+                    <td className="py-3 px-4">Cumprimento de requisito acadêmico</td>
+                    <td className="py-3 px-4 font-medium text-slate-900">Declaração de carga horária</td>
+                  </tr>
+                  <tr className="hover:bg-amber-50/50 transition-colors bg-amber-50/20">
+                    <td className="py-3 px-4 font-bold text-amber-950">Produção Autoral</td>
+                    <td className="py-3 px-4 text-slate-600">Conforme projeto</td>
+                    <td className="py-3 px-4">Criação e autoria</td>
+                    <td className="py-3 px-4 font-semibold text-amber-800">Nível Prata / Ouro / Diamante</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
