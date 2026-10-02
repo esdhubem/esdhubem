@@ -47,24 +47,45 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
       </div>
 
       {/* Hero Header */}
-      <header className="bg-[#243042] text-white relative overflow-hidden py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60">
-        <div className="max-w-4xl mx-auto text-center space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/20 text-[#FFC72C] text-xs font-bold uppercase tracking-wider border border-amber-400/30">
-            <BookOpen className="w-4 h-4" />
-            <span>ESDHUBEM</span>
+      <header className="bg-[#243042] text-white relative overflow-hidden py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60">
+        <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Lado Esquerdo: Textos */}
+          <div className="lg:col-span-7 space-y-4 text-left">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/20 text-[#FFC72C] text-xs font-bold uppercase tracking-wider border border-amber-400/30">
+              <BookOpen className="w-4 h-4" />
+              <span>ESDHUBEM</span>
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+              Diretrizes Pedagógicas
+            </h1>
+
+            <p className="text-[#FFC72C] text-lg sm:text-xl font-semibold leading-relaxed">
+              Uma escola de cursos livres que vai além do certificado.
+            </p>
+
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed pt-1">
+              A ESDHUBEM valoriza a expressão, a investigação e a autoria. Oferecemos cursos livres voltados à formação, capacitação, horas complementares e treinamentos focados no desenvolvimento humano, ampliação de conhecimentos, produção intelectual e bem-estar.
+            </p>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-            Diretrizes Pedagógicas
-          </h1>
-
-          <p className="text-[#FFC72C] text-lg sm:text-xl font-semibold max-w-2xl mx-auto leading-relaxed">
-            Uma escola de cursos livres que vai além do certificado.
-          </p>
-
-          <p className="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed pt-2">
-            A ESDHUBEM valoriza a expressão, a investigação e a autoria. Oferecemos cursos livres voltados à formação, capacitação, horas complementares e treinamentos focados no desenvolvimento humano, ampliação de conhecimentos, produção intelectual e bem-estar.
-          </p>
+          {/* Lado Direito: Vídeo Odysee */}
+          <div className="lg:col-span-5 w-full">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-700/80 bg-slate-950 aspect-video group">
+              <iframe
+                id="odysee-iframe"
+                className="w-full h-full border-0 absolute inset-0"
+                src="https://odysee.com/$/embed/@esdhubem:a/apresentacao_esdhubem:2?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                allowFullScreen
+                title="Apresentação ESDHUBEM"
+                loading="lazy"
+              />
+            </div>
+            <p className="text-xs text-center text-slate-400 mt-2.5 flex items-center justify-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#FFC72C]" />
+              <span>Vídeo de Apresentação da Proposta Pedagógica ESDHUBEM</span>
+            </p>
+          </div>
         </div>
       </header>
 
