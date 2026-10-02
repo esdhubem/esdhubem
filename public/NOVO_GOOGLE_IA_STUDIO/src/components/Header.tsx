@@ -263,7 +263,7 @@ export const Header: React.FC<HeaderProps> = ({
                 : 'bg-amber-500/10 hover:bg-amber-500/20 text-[#FFC72C] border-amber-500/70 hover:border-amber-400'
             }`}
           >
-            <span>Diretrizes e Esclarecimento Pedagógico</span>
+            <span>Diretrizes Pedagógicas</span>
           </button>
 
           <button
@@ -367,7 +367,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           <div className="pt-2 border-t border-slate-700 space-y-2">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block px-3">Recursos & Diretrizes</span>
-            <button onClick={() => { onNavigate('diretrizes-pedagogicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10">Diretrizes e Esclarecimento Pedagógico</button>
+            <button onClick={() => { onNavigate('diretrizes-pedagogicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10">Diretrizes Pedagógicas</button>
             <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
             <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Artigos de Estudo e Pesquisa (Zenodo / DOI)</button>
             <button onClick={() => { onNavigate('diretrizes-publicacao'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2">
