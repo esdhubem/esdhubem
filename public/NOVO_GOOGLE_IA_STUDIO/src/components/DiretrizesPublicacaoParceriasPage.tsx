@@ -507,34 +507,44 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
             {/* Tabela Resumo dos Percursos */}
             <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs pt-1">
-              <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[550px]">
+              <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
                 <thead>
                   <tr className="bg-slate-900 text-white">
                     <th className="py-3 px-4 font-bold uppercase tracking-wider">Nível</th>
-                    <th className="py-3 px-4 font-bold uppercase tracking-wider">Produção</th>
+                    <th className="py-3 px-4 font-bold uppercase tracking-wider">O estudante faz</th>
+                    <th className="py-3 px-4 font-bold uppercase tracking-wider">Produção / requisito</th>
                     <th className="py-3 px-4 font-bold uppercase tracking-wider">Resultado</th>
+                    <th className="py-3 px-4 font-bold uppercase tracking-wider">O que paga</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
                   <tr className="hover:bg-amber-50/30">
-                    <td className="py-3 px-4 font-bold text-amber-950">🥉 Bronze</td>
-                    <td className="py-3 px-4">Conclusão do curso + questionário</td>
-                    <td className="py-3 px-4 font-medium text-slate-900">Certificado Bronze</td>
+                    <td className="py-3.5 px-4 font-bold text-amber-950 whitespace-nowrap">🥉 Bronze</td>
+                    <td className="py-3.5 px-4">Conclui o curso e responde ao questionário</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Questionário de aprendizagem</td>
+                    <td className="py-3.5 px-4">Certificado Bronze</td>
+                    <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Bronze</td>
                   </tr>
                   <tr className="hover:bg-slate-50">
-                    <td className="py-3 px-4 font-bold text-slate-900">🥈 Prata</td>
-                    <td className="py-3 px-4">Artigo para o Blog ESDHUBEM</td>
-                    <td className="py-3 px-4 font-medium text-slate-900">Publicação + Certificado Prata</td>
+                    <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
+                    <td className="py-3.5 px-4">Produz um artigo para o blog e envia para aprovação</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Artigo para o Blog ESDHUBEM</td>
+                    <td className="py-3.5 px-4">Publicação no Blog Esdhubem + Certificado Prata</td>
+                    <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
                   </tr>
                   <tr className="hover:bg-amber-50/30">
-                    <td className="py-3 px-4 font-bold text-amber-800">🥇 Ouro</td>
-                    <td className="py-3 px-4">Manuscrito de Conclusão de Curso + depósito no Zenodo + DOI</td>
-                    <td className="py-3 px-4 font-medium text-slate-900">Certificado Ouro</td>
+                    <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
+                    <td className="py-3.5 px-4">Produz um manuscrito e realiza o depósito e envia para aprovação</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Manuscrito de Conclusão de Curso + depósito no Zenodo + DOI</td>
+                    <td className="py-3.5 px-4">Publicação no Repositório da ESDHUBEM + Certificado Ouro</td>
+                    <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
                   </tr>
                   <tr className="hover:bg-cyan-50/30">
-                    <td className="py-3 px-4 font-bold text-cyan-900">💎 Diamante</td>
-                    <td className="py-3 px-4">Livro com mínimo de 50 páginas + registro de direitos autorais</td>
-                    <td className="py-3 px-4 font-medium text-slate-900">Mural de Livros + Certificado Diamante</td>
+                    <td className="py-3.5 px-4 font-bold text-cyan-900 whitespace-nowrap">💎 Diamante</td>
+                    <td className="py-3.5 px-4">Produz um livro e realiza o registro de direitos autorais e envia para aprovação</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Livro com mínimo de 50 páginas + registro de direitos autorais</td>
+                    <td className="py-3.5 px-4">Mural de Livros + Certificado Diamante</td>
+                    <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Diamante</td>
                   </tr>
                 </tbody>
               </table>
