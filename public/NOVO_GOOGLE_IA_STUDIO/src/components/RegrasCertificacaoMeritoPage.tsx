@@ -54,12 +54,12 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             <span>/</span>
             <span className="text-slate-300">Secretaria Acadêmica</span>
             <span>/</span>
-            <span className="text-[#FFC72C] font-semibold">Regras de Certificação por Mérito de Autoria</span>
+            <span className="text-[#FFC72C] font-semibold">Diretrizes de Certificação e Escala de Autoria</span>
           </div>
 
           <div className="hidden sm:flex items-center gap-2 text-xs text-slate-300">
             <Sparkles className="w-4 h-4 text-[#FFC72C]" />
-            <span>Sistema de Selos de Mérito: Bronze, Prata, Ouro e Diamante</span>
+            <span>Sistema de Selos de Autoria: Bronze, Prata, Ouro e Diamante</span>
           </div>
         </div>
       </div>
@@ -70,16 +70,20 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/20 text-[#FFC72C] text-xs font-bold uppercase tracking-wider border border-amber-400/30">
               <GraduationCap className="w-4 h-4" />
-              <span>Escala de Mérito & Reconhecimento Científico</span>
+              <span>Escala de Autoria</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-              Regras de Certificação: <br className="hidden sm:inline" />
-              <span className="text-[#FFC72C]">Escala de Mérito de Autoria</span>
+              Diretrizes de Certificação e <br className="hidden sm:inline" />
+              <span className="text-[#FFC72C]">Escala de Autoria</span>
             </h1>
 
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando selos de mérito (Bronze, Prata, Ouro e Diamante) através da publicação de artigos, TCCs e pesquisas científicas com registro DOI.
+            <p className="text-[#FFC72C] text-base sm:text-lg font-semibold leading-relaxed">
+              Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando Selos de Autoria (Bronze, Prata, Ouro e Diamante) através da publicação de artigos, manuscritos com registro DOI e Livros
+            </p>
+
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed pt-2">
+              A ESDHUBEM é uma instituição de ensino livre focada no desenvolvimento humano que vai muito além da emissão de certificados tradicionais. A escola valoriza diversos saberes, promovendo o pensamento crítico e a capacidade de distinguir factos de meras opiniões. Os programas de ensino dividem-se em várias categorias, como formações completas, capacitações práticas e cursos livres. Os alunos podem seguir um percurso de quatro etapas que começa na aprendizagem e culmina na criação autoral de conteúdos originais. Este trajeto académico organiza-se em quatro níveis de reconhecimento, permitindo que cada estudante avance ao seu próprio ritmo. Por fim, a instituição incentiva o uso ético da inteligência artificial como ferramenta de apoio, assegurando que a autoria e o pensamento original pertençam sempre ao aluno.
             </p>
           </div>
 
