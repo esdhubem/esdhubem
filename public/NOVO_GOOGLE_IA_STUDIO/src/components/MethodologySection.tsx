@@ -20,7 +20,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
           </h2>
 
           <p className="text-sm sm:text-base lg:text-lg text-slate-800 font-normal leading-relaxed max-w-3xl mx-auto">
-            Aqui na ESDHUBEM o seu curso livre pode virar autoria publicada. Você pode escolher o seu percurso e desenvolver produções autorais e avançar na Escala de Autoria ESDHUBEM.
+            Na ESDHUBEM o seu curso livre pode virar autoria publicada. Escolha o seu percurso, desenvolva produções autorais e avance na Escala de Autoria ESDHUBEM.
           </p>
         </div>
       </div>
