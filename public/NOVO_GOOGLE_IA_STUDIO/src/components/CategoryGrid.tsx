@@ -173,7 +173,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-xl">🟡</span>
                   <h4 className="font-bold text-slate-900 text-base sm:text-lg">
-                    Cursos com Foco em Validação Acadêmica — Horas Complementares
+                    Cursos de Horas Complementares — com Foco em Validação Acadêmica
                   </h4>
                 </div>
                 <div className="space-y-3.5 text-slate-600">
