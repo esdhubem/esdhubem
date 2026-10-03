@@ -105,6 +105,59 @@ const CATEGORY_META: Record<
       }
     ]
   },
+  'aprofundamento-profissional-saude': {
+    heroTag: 'Graduados em Saúde & Aperfeiçoamento',
+    description:
+      'Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, troca de experiência e desenvolvimento técnico — não se tratam de pós-graduação, mas de aprofundamento profissional prático e fundamentado. Para participar, é necessário comprovar formação superior.',
+    targetPublic:
+      'Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos, terapeutas e demais profissionais formados em saúde.',
+    skillsSummary: [
+      'Atualização Técnica em Saúde',
+      'Boas Práticas e Conduta Clínica',
+      'Prontuário e Comunicação Interprofissional',
+      'Saúde Baseada em Evidências'
+    ],
+    b2bHighlights: [
+      'Conteúdo exclusivo para profissionais com nível superior comprovado',
+      'Certificado de Aprofundamento Profissional emitido pela ESDHUBEM'
+    ],
+    faq: [
+      {
+        question: 'Estes cursos são considerados pós-graduação lato sensu?',
+        answer:
+          'Não. Trata-se de cursos livres de aprofundamento profissional e aperfeiçoamento contínuo para graduados, focados na prática e atualização técnica sem o formato acadêmico de especialização/pós-graduação.'
+      },
+      {
+        question: 'É necessário enviar comprovação de diploma de graduação?',
+        answer:
+          'Sim, por se tratar de um módulo de aprofundamento exclusivo para profissionais formados da área da saúde, é solicitado o comprovante de formação superior.'
+      }
+    ]
+  },
+  'workshop-orientacao-carreira': {
+    heroTag: 'Transformação Profissional & Novos Rumos',
+    description:
+      'Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e quais tendências redesenham o mundo do trabalho. Entenda a mobilidade entre funções e planeje seus estudos para o futuro.',
+    targetPublic:
+      'Profissionais em transição, pessoas em dúvida sobre o futuro da sua área, recém-formados e empreendedores que buscam reinvenção no mercado.',
+    skillsSummary: [
+      'Tendências e Futuro do Trabalho',
+      'Mobilidade e Transição de Carreira',
+      'Planejamento de Estudos Estratégicos',
+      'Posicionamento e Marca Pessoal'
+    ],
+    b2bHighlights: [
+      'Workshops dinâmicos com análise de cenários reais de mercado',
+      'Planos de ação personalizados para reinvenção profissional'
+    ],
+    faq: [
+      {
+        question: 'O workshop é indicado para quem quer mudar totalmente de área?',
+        answer:
+          'Sim! O workshop aborda justamente como identificar habilidades transferíveis, tendências emergentes e como planejar sua transição de carreira com segurança.'
+      }
+    ]
+  },
   'desenvolvimento-profissional': {
     heroTag: 'Carreira & Liderança Executiva',
     description:

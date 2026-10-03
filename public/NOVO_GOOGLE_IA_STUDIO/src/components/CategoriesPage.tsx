@@ -150,6 +150,14 @@ const CATEGORY_DETAILS: Record<string, { summary: string; skills: string[] }> = 
   'formacao-empresarial': {
     summary: 'Gestão de negócios, empreendedorismo ético, processos executivos e visão estratégica.',
     skills: ['Planejamento Estratégico', 'Empreendedorismo', 'Modelos de Negócio', 'Inovação']
+  },
+  'aprofundamento-profissional-saude': {
+    summary: 'Cursos exclusivos para graduados em saúde: atualização técnica, boas práticas e evolução clínica fundamentada.',
+    skills: ['Graduados em Saúde', 'Prática Clínica', 'Atualização Técnica', 'Evolução Contínua']
+  },
+  'workshop-orientacao-carreira': {
+    summary: 'Análise de tendências do mercado de trabalho, mobilidade entre funções e planejamento de transformação profissional.',
+    skills: ['Transição de Carreira', 'Futuro do Trabalho', 'Planejamento Estratégico', 'Mobilidade Profissional']
   }
 };
 
@@ -165,7 +173,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
 
   // Filter groups
   const groups = [
-    { id: 'todos', label: 'Todas as Áreas (18)' },
+    { id: 'todos', label: `Todas as Áreas (${CATEGORIES_DATA.length})` },
     { id: 'humano', label: 'Desenvolvimento Humano & Emocional' },
     { id: 'carreira', label: 'Profissional & Liderança' },
     { id: 'praticas', label: 'Práticas Integrativas & Saúde' },
@@ -177,10 +185,10 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
     if (['desenvolvimento-pessoal', 'desenvolvimento-humano', 'desenvolvimento-etico', 'desenvolvimento-relacional', 'desenvolvimento-da-consciencia'].includes(id)) {
       return 'humano';
     }
-    if (['desenvolvimento-profissional', 'desenvolvimento-financeiro', 'desenvolvimento-tecnologico-ia', 'desenvolvimento-nas-empresas', 'formacao-empresarial'].includes(id)) {
+    if (['desenvolvimento-profissional', 'desenvolvimento-financeiro', 'desenvolvimento-tecnologico-ia', 'desenvolvimento-nas-empresas', 'formacao-empresarial', 'workshop-orientacao-carreira'].includes(id)) {
       return 'carreira';
     }
-    if (['praticas-integrativas', 'coach-integrativo', 'pedagogia-integrativa', 'desenvolvimento-ambiental'].includes(id)) {
+    if (['praticas-integrativas', 'coach-integrativo', 'pedagogia-integrativa', 'desenvolvimento-ambiental', 'aprofundamento-profissional-saude'].includes(id)) {
       return 'praticas';
     }
     return 'academicas';

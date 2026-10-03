@@ -187,7 +187,7 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               <span>Categorias</span>
-              <span className="bg-white/10 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">18</span>
+              <span className="bg-white/10 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">20</span>
             </button>
             <button
               onClick={() => onNavigate('categoria:landing-pages-biolinks')}
@@ -228,17 +228,6 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               Nossas Políticas
-            </button>
-            <button
-              onClick={() => onNavigate('podcasts')}
-              className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 ${
-                currentPage === 'podcasts'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              <Headphones className="w-3.5 h-3.5 text-[#FFC72C]" />
-              <span>Podcasts</span>
             </button>
           </nav>
         </div>
@@ -348,6 +337,19 @@ export const Header: React.FC<HeaderProps> = ({
             <BookOpen className="w-3.5 h-3.5" />
             <span>Livraria</span>
           </button>
+
+          {/* 9. Podcasts */}
+          <button
+            onClick={() => onNavigate('podcasts')}
+            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
+              currentPage === 'podcasts'
+                ? 'bg-amber-600 text-white border-amber-300 shadow-md ring-1 ring-amber-300/50'
+                : 'bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 text-[#FFC72C] border-[#FFC72C]/60 hover:border-[#FFC72C]'
+            }`}
+          >
+            <Headphones className="w-3.5 h-3.5 text-[#FFC72C]" />
+            <span>Podcasts</span>
+          </button>
         </div>
       </div>
 
@@ -374,7 +376,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button onClick={() => { onNavigate('inicio'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Início</button>
           <button onClick={() => { onNavigate('categorias'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 flex justify-between">
             <span>Categorias</span>
-            <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">18</span>
+            <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">20</span>
           </button>
           <button onClick={() => { onNavigate('categoria:landing-pages-biolinks'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-400">Sites & Biolinks</button>
           <button onClick={() => { onNavigate('aplicativos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-slate-200">Apps & Dashboards (MEI e ME)</button>

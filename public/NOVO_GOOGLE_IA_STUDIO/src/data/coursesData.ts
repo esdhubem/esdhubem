@@ -135,6 +135,20 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     accentColor: 'from-yellow-600 to-amber-800',
   },
   {
+    id: 'aprofundamento-profissional-saude',
+    title: 'Aprofundamento na\nÁrea da Saúde',
+    coursesCount: 8,
+    iconName: 'HeartHandshake',
+    accentColor: 'from-blue-600 to-teal-700',
+  },
+  {
+    id: 'workshop-orientacao-carreira',
+    title: 'Orientação de\nCarreira & Futuro',
+    coursesCount: 6,
+    iconName: 'Compass',
+    accentColor: 'from-amber-600 to-orange-700',
+  },
+  {
     id: 'livros',
     title: 'Livros\n& Materiais',
     coursesCount: 8,
@@ -193,6 +207,24 @@ export const METHODOLOGY_PILLARS: MethodologyPillar[] = [
       'Cursos mais longos, densos e completos desenhados para gerar transformação e emprego. Um mergulho profundo nas ferramentas mais exigidas pelo mercado de trabalho contemporâneo, focado em resultados rápidos e geração de renda.',
     targetAudience:
       'Pessoas que desejam mudar de carreira, profissionais que buscam aprender uma nova profissão do zero ou empreendedores que querem se capacitar para ganhar dinheiro imediatamente.',
+    type: 'formacao-livre',
+  },
+  {
+    number: '5',
+    title: 'Aprofundamento Profissional — Área da Saúde',
+    description:
+      'Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, troca de experiência e desenvolvimento técnico — não se tratam de pós-graduação, mas de aprofundamento profissional prático e fundamentado. Para participar, é necessário comprovar formação superior. Foco em conteúdos relevantes, boas práticas e evolução contínua da atuação.',
+    targetAudience:
+      'Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos, terapeutas e demais profissionais já formados que buscam atualização, ampliação de repertório e aperfeiçoamento sem precisar ingressar em programa de pós-graduação.',
+    type: 'capacitacao',
+  },
+  {
+    number: '6',
+    title: 'Workshop de Orientação de Carreira — Transformação Profissional',
+    description:
+      'Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e quais tendências redesenham o mundo do trabalho. Você vai entender para onde vai a sua área, como ocorre a mobilidade entre funções, o que outros profissionais já estão fazendo e — principalmente — o que pode estudar agora para se manter relevante e preparado para o que vem a seguir.',
+    targetAudience:
+      'Quem está em dúvida sobre o futuro da profissão, deseja mudar de área, precisa se reinventar no mercado ou quer planejar com clareza quais caminhos seguir e quais conhecimentos desenvolver para não ficar para trás.',
     type: 'formacao-livre',
   },
 ];

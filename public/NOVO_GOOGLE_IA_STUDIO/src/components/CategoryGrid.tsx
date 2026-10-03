@@ -93,7 +93,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
             Uma escola de Cursos Livres voltada ao desenvolvimento humano, onde você pode ir além da aprendizagem!
           </p>
           <p className="mt-4 text-base sm:text-lg lg:text-xl text-slate-900 leading-relaxed font-medium max-w-4xl mx-auto">
-            Na ESDHUBEM, você não precisa apenas consumir conteúdo, aqui você também tem a oportunidade de desenvolver a sua escrita e produção autoral. Aproveite a oportunidade para transformar aquilo que aprende em reflexão, escrita, pesquisa e produção própria.
+            Na ESDHUBEM, você não precisa apenas consumir conteúdo, aqui você também tem a oportunidade de desenvolver a sua escrita e produção autoral. Transforme o que aprendeu em produção autoral.
           </p>
         </div>
       </section>
@@ -265,6 +265,58 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
                     <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                       Estudantes, pesquisadores, terapeutas e profissionais que desejam ir além do certificado, organizar suas ideias e publicar artigos, ensaios ou livros autorais.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 7: Aprofundamento Profissional — Área da Saúde */}
+            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xl">💙</span>
+                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
+                    Aprofundamento Profissional — Área da Saúde
+                  </h4>
+                </div>
+                <div className="space-y-3.5 text-slate-600">
+                  <div>
+                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                      Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, troca de experiência e desenvolvimento técnico — não se tratam de pós-graduação, mas de aprofundamento profissional prático e fundamentado. Para participar, é necessário comprovar formação superior. Foco em conteúdos relevantes, boas práticas e evolução contínua da atuação.
+                    </p>
+                  </div>
+                  <div>
+                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                      Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos, terapeutas e demais profissionais já formados que buscam atualização, ampliação de repertório e aperfeiçoamento sem precisar ingressar em programa de pós-graduação.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 8: Workshop de Orientação de Carreira — Transformação Profissional */}
+            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xl">🧭</span>
+                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
+                    Workshop de Orientação de Carreira — Transformação Profissional
+                  </h4>
+                </div>
+                <div className="space-y-3.5 text-slate-600">
+                  <div>
+                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                      Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e quais tendências redesenham o mundo do trabalho. Você vai entender para onde vai a sua área, como ocorre a mobilidade entre funções, o que outros profissionais já estão fazendo e — principalmente — o que pode estudar agora para se manter relevante e preparado para o que vem a seguir.
+                    </p>
+                  </div>
+                  <div>
+                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                      Quem está em dúvida sobre o futuro da profissão, deseja mudar de área, precisa se reinventar no mercado ou quer planejar com clareza quais caminhos seguir e quais conhecimentos desenvolver para não ficar para trás.
                     </p>
                   </div>
                 </div>
