@@ -86,11 +86,323 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
 }) => {
   return (
     <div>
-      <section className="py-10 sm:py-14 bg-gradient-to-b from-white to-slate-50">
+      {/* Faixa Institucional com cor mais escura */}
+      <section className="py-12 sm:py-16 bg-slate-100 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+          <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-medium">
             Uma escola de Cursos Livres voltada ao desenvolvimento humano, onde você pode ir além da aprendizagem!. Na ESDHUBEM, você não precisa apenas consumir conteúdo, aqui você também tem a oportunidade de desenvolver a sua escrita e produção autoral. Aproveite a oportunidade para transformar aquilo que aprende em reflexão, escrita, pesquisa e produção própria.
           </p>
+        </div>
+      </section>
+
+      {/* Seção Tipos de Cursos — ESDHUBEM */}
+      <section className="py-10 sm:py-14 bg-slate-50/70 border-b border-slate-200/80">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-amber-100 text-amber-900 border border-amber-200 mb-2">
+              📋 Modalidades de Formação
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Tipos de Cursos — ESDHUBEM
+            </h2>
+            <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+              Conheça os formatos de ensino e escolha a modalidade ideal para o seu momento de aprendizado, validação acadêmica ou evolução profissional.
+            </p>
+          </div>
+
+          {/* Tabela Resumida - Desktop (Tabela estruturada) */}
+          <div className="hidden md:block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm mb-10">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-slate-800 text-white text-xs uppercase tracking-wider">
+                  <th className="py-3.5 px-4 font-bold w-[26%]">TIPO</th>
+                  <th className="py-3.5 px-4 font-bold w-[26%]">CLASSIFICAÇÃO</th>
+                  <th className="py-3.5 px-4 font-bold">DESCRIÇÃO RESUMIDA</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200 text-sm">
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="py-3.5 px-4 font-semibold text-emerald-800 flex items-center gap-2">
+                    <span className="text-base">🟢</span> Descoberta
+                  </td>
+                  <td className="py-3.5 px-4 font-medium text-slate-700">Freepremium</td>
+                  <td className="py-3.5 px-4 text-slate-600 leading-relaxed">
+                    Acesso gratuito às videoaulas e material completo. Paga apenas taxa de emissão se quiser o certificado.
+                  </td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="py-3.5 px-4 font-semibold text-blue-800 flex items-center gap-2">
+                    <span className="text-base">🔵</span> Ação Prática
+                  </td>
+                  <td className="py-3.5 px-4 font-medium text-slate-700">Capacitação</td>
+                  <td className="py-3.5 px-4 text-slate-600 leading-relaxed">
+                    Foco em "saber fazer": técnicas e ferramentas aplicáveis imediatamente. Certificado com carga horária válida em todo o Brasil.
+                  </td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="py-3.5 px-4 font-semibold text-purple-800 flex items-center gap-2">
+                    <span className="text-base">🟣</span> Desempenho Profissional
+                  </td>
+                  <td className="py-3.5 px-4 font-medium text-slate-700">Treinamento Corporativo</td>
+                  <td className="py-3.5 px-4 text-slate-600 leading-relaxed">
+                    Programas curtos e práticos para equipes e empresas. Execução exata conforme normas e rotinas da organização.
+                  </td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="py-3.5 px-4 font-semibold text-amber-800 flex items-center gap-2">
+                    <span className="text-base">🟡</span> Validação Acadêmica
+                  </td>
+                  <td className="py-3.5 px-4 font-medium text-slate-700">Horas Complementares</td>
+                  <td className="py-3.5 px-4 text-slate-600 leading-relaxed">
+                    Planejado para cumprir exigência de carga horária das faculdades. Documentação pronta para validação acadêmica.
+                  </td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="py-3.5 px-4 font-semibold text-rose-800 flex items-center gap-2">
+                    <span className="text-base">🔴</span> Transformação
+                  </td>
+                  <td className="py-3.5 px-4 font-medium text-slate-700">Formação Livre</td>
+                  <td className="py-3.5 px-4 text-slate-600 leading-relaxed">
+                    Mergulho completo e estruturado. Prepara para nova profissão, mudança de área ou empreendimento.
+                  </td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="py-3.5 px-4 font-semibold text-purple-900 flex items-center gap-2">
+                    <span className="text-base">🟣</span> Autoria e Destaque
+                  </td>
+                  <td className="py-3.5 px-4 font-medium text-slate-700">Desenvolvimento da Escrita</td>
+                  <td className="py-3.5 px-4 text-slate-600 leading-relaxed">
+                    Aprenda a estruturar, escrever e publicar. Do texto prático ao livro — com reconhecimento Prata, Ouro ou Diamante.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Versão Responsiva para Mobile - Sem rolagem horizontal, texto 100% legível */}
+          <div className="md:hidden space-y-3 mb-8">
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="font-bold text-emerald-800 text-sm flex items-center gap-1.5">
+                  <span>🟢</span> Descoberta
+                </span>
+                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  Freepremium
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Acesso gratuito às videoaulas e material completo. Paga apenas taxa de emissão se quiser o certificado.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="font-bold text-blue-800 text-sm flex items-center gap-1.5">
+                  <span>🔵</span> Ação Prática
+                </span>
+                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+                  Capacitação
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Foco em "saber fazer": técnicas e ferramentas aplicáveis imediatamente. Certificado com carga horária válida em todo o Brasil.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="font-bold text-purple-800 text-sm flex items-center gap-1.5">
+                  <span>🟣</span> Desempenho Profissional
+                </span>
+                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200">
+                  Treinamento Corporativo
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Programas curtos e práticos para equipes e empresas. Execução exata conforme normas e rotinas da organização.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="font-bold text-amber-800 text-sm flex items-center gap-1.5">
+                  <span>🟡</span> Validação Acadêmica
+                </span>
+                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
+                  Horas Complementares
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Planejado para cumprir exigência de carga horária das faculdades. Documentação pronta para validação acadêmica.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="font-bold text-rose-800 text-sm flex items-center gap-1.5">
+                  <span>🔴</span> Transformação
+                </span>
+                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200">
+                  Formação Livre
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Mergulho completo e estruturado. Prepara para nova profissão, mudança de área ou empreendimento.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="font-bold text-purple-900 text-sm flex items-center gap-1.5">
+                  <span>🟣</span> Autoria e Destaque
+                </span>
+                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-800 border border-purple-200">
+                  Desenvolvimento da Escrita
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Aprenda a estruturar, escrever e publicar. Do texto prático ao livro — com reconhecimento Prata, Ouro ou Diamante.
+              </p>
+            </div>
+          </div>
+
+          {/* Cards Detalhados - Descrição e Público-alvo (Perfeita visualização e quebra de linha sem cortes) */}
+          <div className="mt-8 pt-8 border-t border-slate-200">
+            <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-6 text-center">
+              Quais tipos de cursos oferecemos?
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              {/* Card 1: Freepremium */}
+              <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl">🟢</span>
+                    <h4 className="font-bold text-slate-900 text-base sm:text-lg">
+                      Cursos Freepremium — Descoberta
+                    </h4>
+                  </div>
+                  <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
+                      <p className="leading-relaxed">
+                        Aprenda sem barreiras. Assista a todas as videoaulas e acesse o material didático completo de forma 100% gratuita para testar o conteúdo e conhecer nossa metodologia. Você só paga uma taxa de emissão se decidir que quer o documento oficial.
+                      </p>
+                    </div>
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
+                      <p className="leading-relaxed text-slate-700">
+                        Estudantes e profissionais que buscam conhecimento rápido, querem validar a qualidade do curso antes de investir ou precisam apenas do aprendizado prático imediato sem custo inicial.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Capacitação */}
+              <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl">🔵</span>
+                    <h4 className="font-bold text-slate-900 text-base sm:text-lg">
+                      Cursos de Capacitação — Ação Prática
+                    </h4>
+                  </div>
+                  <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
+                      <p className="leading-relaxed">
+                        Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas, metodologias e habilidades profissionais que geram resultado real no consultório, na empresa ou no projeto pessoal.
+                      </p>
+                    </div>
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
+                      <p className="leading-relaxed text-slate-700">
+                        Profissionais em atividade que precisam atualizar competências, aprender uma nova ferramenta de trabalho ou resolver demandas específicas da sua rotina profissional.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3: Horas Complementares */}
+              <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl">🟡</span>
+                    <h4 className="font-bold text-slate-900 text-base sm:text-lg">
+                      Cursos com Foco em Validação Acadêmica — Horas Complementares
+                    </h4>
+                  </div>
+                  <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
+                      <p className="leading-relaxed">
+                        Cursos estruturados para atender diretamente às exigências de Atividades Complementares de cursos de graduação e pós-graduação. Conteúdo alinhado às diretrizes do MEC para cursos livres, com certificado detalhado que especifica carga horária, conteúdo programático e dados da instituição.
+                      </p>
+                    </div>
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
+                      <p className="leading-relaxed text-slate-700">
+                        Universitários de qualquer período e área que precisam cumprir a carga horária complementar exigida pela sua faculdade para poder colar grau.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 4: Formação Livre */}
+              <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl">🔴</span>
+                    <h4 className="font-bold text-slate-900 text-base sm:text-lg">
+                      Cursos de Formação Livre — Transformação
+                    </h4>
+                  </div>
+                  <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
+                      <p className="leading-relaxed">
+                        Jornadas completas de aprendizado para quem quer dominar uma área do início ao fim. Diferente de um curso rápido, a formação livre oferece uma visão ampla e profunda, combinando teoria consistente, prática orientada e estudos de caso reais.
+                      </p>
+                    </div>
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
+                      <p className="leading-relaxed text-slate-700">
+                        Pessoas em transição de carreira, iniciantes que querem uma base sólida antes de atuar ou qualquer pessoa que deseja um mergulho profundo e transformador em um tema.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 5: Treinamentos Corporativos */}
+              <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between md:col-span-2">
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl">🟣</span>
+                    <h4 className="font-bold text-slate-900 text-base sm:text-lg">
+                      Treinamentos Corporativos — Desempenho Profissional
+                    </h4>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-600">
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
+                      <p className="leading-relaxed">
+                        Programas desenvolvidos sob medida para equipes, empresas e instituições. Foco em alinhar processos, capacitar colaboradores em rotinas específicas, melhorar o clima organizacional e desenvolver lideranças com metodologias ativas e mensuração de resultados.
+                      </p>
+                    </div>
+                    <div>
+                      <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
+                      <p className="leading-relaxed text-slate-700">
+                        Gestores de RH, líderes de equipe, diretores de empresas e organizações do terceiro setor que precisam capacitar seus times com agilidade e qualidade pedagógica comprovada.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section className="py-12 sm:py-16 bg-white" id="explorar-categorias">
