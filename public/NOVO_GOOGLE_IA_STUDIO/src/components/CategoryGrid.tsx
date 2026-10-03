@@ -90,7 +90,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
       <section className="py-12 sm:py-16 bg-[#FFC72C] border-b border-amber-400/40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xl sm:text-2xl lg:text-3xl text-slate-900 leading-relaxed font-extrabold tracking-tight">
-            Uma escola de Cursos Livres voltada ao desenvolvimento humano, onde você pode ir além da aprendizagem!.
+            Uma escola de Cursos Livres voltada ao desenvolvimento humano, onde você pode ir além da aprendizagem!
           </p>
           <p className="mt-4 text-base sm:text-lg lg:text-xl text-slate-900 leading-relaxed font-medium max-w-4xl mx-auto">
             Na ESDHUBEM, você não precisa apenas consumir conteúdo, aqui você também tem a oportunidade de desenvolver a sua escrita e produção autoral. Aproveite a oportunidade para transformar aquilo que aprende em reflexão, escrita, pesquisa e produção própria.
@@ -113,7 +113,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
             </p>
           </div>
 
-          {/* Cards Detalhados - Descrição e Público-alvo (Perfeita visualização e quebra de linha sem cortes) */}
+          {/* Cards Detalhados - Descrição e Público-alvo (Tamanho harmonizado com a descrição do cabeçalho) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {/* Card 1: Freepremium */}
             <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
@@ -124,16 +124,16 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     Cursos Freepremium — Descoberta
                   </h4>
                 </div>
-                <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                <div className="space-y-3.5 text-slate-600">
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       Aprenda sem barreiras. Assista a todas as videoaulas e acesse o material didático completo de forma 100% gratuita para testar o conteúdo e conhecer nossa metodologia. Você só paga uma taxa de emissão se decidir que quer o documento oficial.
                     </p>
                   </div>
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="leading-relaxed text-slate-700">
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                       Estudantes e profissionais que buscam conhecimento rápido, querem validar a qualidade do curso antes de investir ou precisam apenas do aprendizado prático imediato sem custo inicial.
                     </p>
                   </div>
@@ -150,16 +150,16 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     Cursos de Capacitação — Ação Prática
                   </h4>
                 </div>
-                <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                <div className="space-y-3.5 text-slate-600">
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas, metodologias e habilidades profissionais que geram resultado real no consultório, na empresa ou no projeto pessoal.
                     </p>
                   </div>
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="leading-relaxed text-slate-700">
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                       Profissionais em atividade que precisam atualizar competências, aprender uma nova ferramenta de trabalho ou resolver demandas específicas da sua rotina profissional.
                     </p>
                   </div>
@@ -176,16 +176,16 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     Cursos com Foco em Validação Acadêmica — Horas Complementares
                   </h4>
                 </div>
-                <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                <div className="space-y-3.5 text-slate-600">
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       Cursos estruturados para atender diretamente às exigências de Atividades Complementares de cursos de graduação e pós-graduação. Conteúdo alinhado às diretrizes do MEC para cursos livres, com certificado detalhado que especifica carga horária, conteúdo programático e dados da instituição.
                     </p>
                   </div>
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="leading-relaxed text-slate-700">
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                       Universitários de qualquer período e área que precisam cumprir a carga horária complementar exigida pela sua faculdade para poder colar grau.
                     </p>
                   </div>
@@ -202,16 +202,16 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     Cursos de Formação Livre — Transformação
                   </h4>
                 </div>
-                <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                <div className="space-y-3.5 text-slate-600">
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       Jornadas completas de aprendizado para quem quer dominar uma área do início ao fim. Diferente de um curso rápido, a formação livre oferece uma visão ampla e profunda, combinando teoria consistente, prática orientada e estudos de caso reais.
                     </p>
                   </div>
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="leading-relaxed text-slate-700">
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                       Pessoas em transição de carreira, iniciantes que querem uma base sólida antes de atuar ou qualquer pessoa que deseja um mergulho profundo e transformador em um tema.
                     </p>
                   </div>
@@ -228,16 +228,16 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     Treinamentos Corporativos — Desempenho Profissional
                   </h4>
                 </div>
-                <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                <div className="space-y-3.5 text-slate-600">
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       Programas desenvolvidos sob medida para equipes, empresas e instituições. Foco em alinhar processos, capacitar colaboradores em rotinas específicas, melhorar o clima organizacional e desenvolver lideranças com metodologias ativas e mensuração de resultados.
                     </p>
                   </div>
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="leading-relaxed text-slate-700">
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                       Gestores de RH, líderes de equipe, diretores de empresas e organizações do terceiro setor que precisam capacitar seus times com agilidade e qualidade pedagógica comprovada.
                     </p>
                   </div>
@@ -254,16 +254,16 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     Autoria e Destaque — Desenvolvimento da Escrita
                   </h4>
                 </div>
-                <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+                <div className="space-y-3.5 text-slate-600">
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       Aprenda a estruturar, escrever e publicar. Do texto prático ao livro — com reconhecimento Prata, Ouro ou Diamante. Transforme o que você aprendeu em conhecimento compartilhado e construa sua presença e credibilidade intelectual.
                     </p>
                   </div>
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="leading-relaxed text-slate-700">
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                       Estudantes, pesquisadores, terapeutas e profissionais que desejam ir além do certificado, organizar suas ideias e publicar artigos, ensaios ou livros autorais.
                     </p>
                   </div>

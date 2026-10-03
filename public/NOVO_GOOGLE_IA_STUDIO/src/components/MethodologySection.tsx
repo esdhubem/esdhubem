@@ -25,6 +25,46 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
         </div>
       </div>
 
+      {/* Quadro Escala de Autoria ESDHUBEM — Tipos de trabalho para concluir ou avançar no curso */}
+      <section className="py-12 sm:py-16 bg-white border-b border-slate-200/80">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Escala de Autoria ESDHUBEM
+            </h3>
+            <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+              Conheça os tipos de produção e trabalho para concluir a formação e alcançar os selos da nossa escola:
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="relative rounded-2xl border-2 border-amber-700/30 bg-gradient-to-b from-amber-50 to-orange-50 p-6 text-center shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+              <div className="text-4xl mb-3">🥉</div>
+              <h4 className="text-lg font-extrabold text-amber-800 mb-2">Bronze</h4>
+              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu aprendi.</p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Produção de conclusão relacionada à formação.</p>
+            </div>
+            <div className="relative rounded-2xl border-2 border-slate-300 bg-gradient-to-b from-slate-50 to-slate-100 p-6 text-center shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+              <div className="text-4xl mb-3">🥈</div>
+              <h4 className="text-lg font-extrabold text-slate-700 mb-2">Prata</h4>
+              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu escrevi.</p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Artigo autoral publicado no Blog ESDHUBEM.</p>
+            </div>
+            <div className="relative rounded-2xl border-2 border-yellow-400/60 bg-gradient-to-b from-yellow-50 to-amber-50 p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+              <div className="text-4xl mb-3">🥇</div>
+              <h4 className="text-lg font-extrabold text-yellow-700 mb-2">Ouro</h4>
+              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu pesquisei.</p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Desenvolvimento de um Manuscrito de Conclusão de Curso — MCC.</p>
+            </div>
+            <div className="relative rounded-2xl border-2 border-cyan-300/60 bg-gradient-to-b from-cyan-50 to-sky-50 p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ring-1 ring-cyan-200/50">
+              <div className="text-4xl mb-3">💎</div>
+              <h4 className="text-lg font-extrabold text-cyan-700 mb-2">Diamante</h4>
+              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu criei uma obra.</p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Desenvolvimento e publicação de um livro autoral.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Seção da Jornada Pedagógica ESDHUBEM */}
       <div className="py-14 sm:py-16 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
