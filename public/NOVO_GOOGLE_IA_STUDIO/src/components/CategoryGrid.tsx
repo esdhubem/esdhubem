@@ -327,31 +327,31 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     }
                   }
                 }}
-                className={`group relative p-4 rounded-xl text-center transition-all duration-200 flex flex-col items-center justify-between min-h-[160px] border cursor-pointer ${
+                className={`group relative p-4 sm:p-5 rounded-2xl text-center transition-all duration-200 flex flex-col items-center justify-between min-h-[175px] sm:min-h-[190px] border cursor-pointer ${
                   isSelected
-                    ? 'bg-slate-50 border-2 border-[#243042] shadow-md -translate-y-0.5 ring-2 ring-[#FFC72C]/50'
-                    : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5'
+                    ? 'bg-slate-50 border-2 border-[#243042] shadow-lg -translate-y-0.5 ring-2 ring-[#FFC72C]/50'
+                    : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-lg hover:-translate-y-0.5'
                 }`}
                 id={`cat-card-${cat.id}`}
               >
                 {/* Circular Dark Navy Badge with Yellow Icon (As in user screenshot) */}
-                <div className="w-13 h-13 rounded-full bg-[#182333] flex items-center justify-center mb-2.5 shadow-sm group-hover:scale-105 transition-transform shrink-0">
+                <div className="w-14 h-14 rounded-full bg-[#182333] flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform shrink-0">
                   {renderCategoryIcon(cat.iconName, 'w-6 h-6 text-[#FBBF24]')}
                 </div>
 
                 {/* Centered Category Title */}
                 <div className="flex-1 flex flex-col justify-center w-full">
-                  <h3 className="text-xs sm:text-[13px] font-bold text-slate-800 leading-snug group-hover:text-[#243042] line-clamp-2">
+                  <h3 className="text-sm sm:text-base font-extrabold text-slate-900 leading-snug group-hover:text-[#243042] transition-colors">
                     {cat.title}
                   </h3>
-                  <span className="text-[11px] text-slate-400 font-normal mt-1 block">
+                  <span className="text-xs text-slate-500 font-medium mt-1 block">
                     Cursos
                   </span>
                 </div>
 
                 {/* Selected Indicator Pill */}
                 {isSelected && (
-                  <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-[#FFC72C]" />
+                  <span className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-[#FFC72C] ring-2 ring-white" />
                 )}
               </button>
             );
