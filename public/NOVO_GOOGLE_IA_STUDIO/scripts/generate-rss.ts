@@ -6,6 +6,15 @@ import { BLOG_POSTS } from '../src/data/blogData.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+function escapeXml(unsafe: string = ''): string {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 // Helper to convert Brazilian dates (e.g. "02 de Outubro, 2026") into RFC 822 Date format
 function parseDateToRFC822(dateStr: string): string {
   const monthsPt: Record<string, string> = {
@@ -49,21 +58,25 @@ function generateRssXml(): string {
   const itemsXml = BLOG_POSTS.map((post) => {
     const postUrl = `${siteUrl}/?page=blog-post&amp;id=${post.id}`;
     const pubDate = parseDateToRFC822(post.date);
+    const authorEscaped = escapeXml(post.author);
+    const categoryEscaped = escapeXml(post.category);
     
     return `    <item>
       <title><![CDATA[${post.title}]]></title>
       <link>${postUrl}</link>
       <guid isPermaLink="false">esdhubem-post-${post.id}</guid>
       <pubDate>${pubDate}</pubDate>
-      <author>esdhubem@proton.me (${post.author})</author>
+      <dc:creator><![CDATA[${post.author}]]></dc:creator>
+      <author>esdhubem@proton.me (${authorEscaped})</author>
       <category><![CDATA[${post.category}]]></category>
       <description><![CDATA[${post.excerpt}]]></description>
       <content:encoded><![CDATA[${post.content || post.excerpt}]]></content:encoded>
-      <enclosure url="${post.imageUrl}" type="image/jpeg" length="0" />
+      <enclosure url="${escapeXml(post.imageUrl)}" type="image/jpeg" length="0" />
     </item>`;
   }).join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/esdhubem/feed.xsl" type="text/xsl"?>
 <rss version="2.0" 
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:atom="http://www.w3.org/2005/Atom"
@@ -93,6 +106,9 @@ function main() {
   const baseDir = path.resolve(__dirname, '..');
   const projectRootDir = path.resolve(baseDir, '..', '..');
 
+  const xslSource = path.join(baseDir, 'public', 'feed.xsl');
+  const xslContent = fs.existsSync(xslSource) ? fs.readFileSync(xslSource, 'utf-8') : '';
+
   const targets = [
     // Vite public folder (copied into dist during build)
     path.join(baseDir, 'public', 'feed.xml'),
@@ -110,6 +126,13 @@ function main() {
     path.join(projectRootDir, 'public', 'github-pages', 'github-pages', 'rss.xml'),
   ];
 
+  const xslTargets = [
+    path.join(projectRootDir, 'feed.xsl'),
+    path.join(projectRootDir, 'public', 'feed.xsl'),
+    path.join(projectRootDir, 'public', 'github-pages', 'feed.xsl'),
+    path.join(projectRootDir, 'public', 'github-pages', 'github-pages', 'feed.xsl'),
+  ];
+
   targets.forEach((targetPath) => {
     try {
       const dir = path.dirname(targetPath);
@@ -122,6 +145,21 @@ function main() {
       console.error(`[RSS Error] Failed to write ${targetPath}:`, err);
     }
   });
+
+  if (xslContent) {
+    xslTargets.forEach((targetPath) => {
+      try {
+        const dir = path.dirname(targetPath);
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir, { recursive: true });
+        }
+        fs.writeFileSync(targetPath, xslContent, 'utf-8');
+        console.log(`[XSL] Generated -> ${targetPath}`);
+      } catch (err) {
+        console.error(`[XSL Error] Failed to write ${targetPath}:`, err);
+      }
+    });
+  }
 
   console.log('✅ RSS Feed generation completed successfully!');
 }
