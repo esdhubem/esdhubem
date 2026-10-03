@@ -7,7 +7,8 @@ import {
   Brain,
   ShieldCheck,
   Award,
-  ArrowRight
+  ArrowRight,
+  Feather
 } from 'lucide-react';
 
 interface DiretrizesPedagogicasPageProps {
@@ -91,28 +92,53 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
 
       {/* Main Content Body */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-        {/* Conhecimento com responsabilidade */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-5">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-              Conhecimento com responsabilidade
-            </h2>
-          </div>
+        {/* Bloco Inicial: Propósito e Escrever é Processar */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            A ESDHUBEM oferece formações voltadas para o desenvolvimento humano, a ampliação de conhecimentos, a produção intelectual e o bem-estar.
+          </p>
 
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-            Valorizamos diferentes formas de conhecimento e produção intelectual: científica, filosófica, humanística, cultural, tradicional, experiencial e qualitativa.
+            Valorizamos o conhecimento em todas as suas formas: científica, filosófica, cultural, tradicional e também a sabedoria que vem da experiência.
           </p>
 
           <div className="p-5 rounded-2xl bg-amber-50/80 border-l-4 border-[#FFC72C] text-slate-800 text-base sm:text-lg font-medium leading-relaxed">
-            Buscamos distinguir com clareza: <strong>experiência, opinião, interpretação, hipótese, argumento e evidência.</strong>
+            <strong>Com responsabilidade:</strong> aqui aprendemos a distinguir com clareza o que é fato, o que é opinião, o que é hipótese e o que é evidência. Ler, questionar, comparar e comunicar com honestidade faz parte do nosso caminho.
           </div>
 
-          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-            Nosso compromisso é estimular uma relação mais consciente com o conhecimento: ler, questionar, pesquisar, comparar perspectivas e comunicar com responsabilidade.
-          </p>
+          <div className="pt-4 border-t border-slate-200/80 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                <Feather className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                Escrever é processar
+              </h3>
+            </div>
+
+            <p className="text-base text-slate-700 leading-relaxed">
+              Escrever não é apenas "entregar uma tarefa". É uma ferramenta de organização do pensamento:
+            </p>
+
+            <div className="space-y-2.5 pl-2">
+              <div className="flex items-center gap-3 text-slate-700 text-sm sm:text-base">
+                <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
+                <span>Quando apenas lemos, a informação fica fragmentada</span>
+              </div>
+              <div className="flex items-center gap-3 text-slate-700 text-sm sm:text-base">
+                <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
+                <span>Ao escrever, damos estrutura lógica às ideias</span>
+              </div>
+              <div className="flex items-center gap-3 text-slate-700 text-sm sm:text-base">
+                <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
+                <span>O que colocamos no papel ganha clareza e aplicabilidade</span>
+              </div>
+            </div>
+
+            <p className="text-base text-slate-800 font-semibold leading-relaxed pt-2">
+              Por isso, ir além do certificado faz sentido: escrever é colocar o aprendizado em prática.
+            </p>
+          </div>
         </section>
 
         {/* 📋 Modalidades de Aprendizagem */}
@@ -133,183 +159,60 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
 
           {/* Tabela de Modalidades */}
           <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
-            <table className="w-full text-left text-sm border-collapse min-w-[720px]">
+            <table className="w-full text-left text-sm border-collapse min-w-[560px]">
               <thead>
                 <tr className="bg-slate-900 text-white">
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">MODALIDADE</th>
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">FOCO PRINCIPAL</th>
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">EXIGÊNCIA / CARACTERÍSTICA</th>
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">CERTIFICAÇÃO</th>
+                  <th className="py-3.5 px-5 font-bold text-xs uppercase tracking-wider w-1/3">Modalidade</th>
+                  <th className="py-3.5 px-5 font-bold text-xs uppercase tracking-wider">O que é</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
                 <tr className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
                     🎓 Formação
                   </td>
-                  <td className="py-4 px-4">
-                    Trilhas completas que preparam do zero ao avançado em uma profissão
-                  </td>
-                  <td className="py-4 px-4 text-slate-600">
-                    Requer escolaridade de ingresso e estrutura curricular definida
-                  </td>
-                  <td className="py-4 px-4 font-semibold text-slate-900">
-                    Certificado livre para exercício profissional
+                  <td className="py-4 px-5 leading-relaxed">
+                    Trilha completa para uma profissão. Desenvolve competências técnicas e comportamentais focadas nas necessidades do mercado.
                   </td>
                 </tr>
                 <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
-                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
                     🛠️ Capacitação
                   </td>
-                  <td className="py-4 px-4">
-                    Desenvolver habilidade técnica específica para o trabalho
-                  </td>
-                  <td className="py-4 px-4 text-slate-600">
-                    Não exige formação prévia. Foco na prática e empregabilidade
-                  </td>
-                  <td className="py-4 px-4 font-semibold text-slate-900">
-                    Certificado de capacitação profissional
+                  <td className="py-4 px-5 leading-relaxed">
+                    Habilidade prática de forma rápida. O aluno aprende a executar uma tarefa ou dominar uma ferramenta específica.
                   </td>
                 </tr>
                 <tr className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
                     ⚙️ Treinamento
                   </td>
-                  <td className="py-4 px-4">
-                    Executar tarefa ou ferramenta específica
-                  </td>
-                  <td className="py-4 px-4 text-slate-600">
-                    Curto prazo, foco em aplicação imediata
-                  </td>
-                  <td className="py-4 px-4 font-semibold text-slate-900">
-                    Certificado de conclusão / participação
+                  <td className="py-4 px-5 leading-relaxed">
+                    Curta duração. Ajusta o desempenho em uma tarefa muito específica, conforme exigência de processos ou empresas.
                   </td>
                 </tr>
                 <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
-                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
-                    📚 Cursos Livres
+                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
+                    📖 Curso Livre
                   </td>
-                  <td className="py-4 px-4">
-                    Conhecimento geral e atualização
-                  </td>
-                  <td className="py-4 px-4 text-slate-600">
-                    Sem exigência de escolaridade. Flexível e ágil
-                  </td>
-                  <td className="py-4 px-4 font-semibold text-slate-900">
-                    Certificado de participação / conclusão
+                  <td className="py-4 px-5 leading-relaxed">
+                    Aprendizado flexível e sem burocracia. Sem exigência de escolaridade prévia, sobre temas variados.
                   </td>
                 </tr>
                 <tr className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
                     ⏱️ Horas Complementares
                   </td>
-                  <td className="py-4 px-4">
-                    Cumprir exigência de carga horária da faculdade
-                  </td>
-                  <td className="py-4 px-4 text-slate-600">
-                    Para estudantes universitários. Inclui cursos, palestras, eventos
-                  </td>
-                  <td className="py-4 px-4 font-semibold text-slate-900">
-                    Declaração com carga horária para validação acadêmica
-                  </td>
-                </tr>
-                <tr className="hover:bg-amber-50/50 transition-colors bg-amber-50/30">
-                  <td className="py-4 px-4 font-bold text-amber-950 whitespace-nowrap">
-                    ✍️ Produção Autoral
-                  </td>
-                  <td className="py-4 px-4">
-                    Criar conteúdo próprio: artigos, livros, registros, softwares
-                  </td>
-                  <td className="py-4 px-4 text-slate-600">
-                    Demonstra autoria, inovação e autoridade no tema
-                  </td>
-                  <td className="py-4 px-4">
-                    <span className="font-bold text-amber-800 bg-amber-100 border border-amber-300 px-3 py-1 rounded-lg text-xs inline-block">
-                      Prata / Ouro / Diamante — conforme impacto e publicação
-                    </span>
+                  <td className="py-4 px-5 leading-relaxed">
+                    Voltado para estudantes universitários. Cumpre exigência da faculdade e expande o conhecimento além da grade curricular.
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-
-          {/* Detalhamento de cada modalidade */}
-          <div className="space-y-6 pt-4 border-t border-slate-200">
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-              Detalhamento de cada modalidade
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {/* Formação */}
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2">
-                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                  <span>🎓</span>
-                  <h4>Formação</h4>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  É a base da carreira. Cursos de estrutura definida que preparam para o exercício profissional, com requisitos de ingresso e programa completo.
-                </p>
-              </div>
-
-              {/* Capacitação */}
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2">
-                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                  <span>🛠️</span>
-                  <h4>Capacitação</h4>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  Prepara para nova função ou aprimoramento. Une teoria e prática com foco em aplicabilidade. Não exige formação prévia na área.
-                </p>
-              </div>
-
-              {/* Treinamento */}
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2">
-                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                  <span>⚙️</span>
-                  <h4>Treinamento</h4>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  Aprendizado prático e direto. Focado em dominar ferramenta, procedimento ou tarefa específica em curto prazo.
-                </p>
-              </div>
-
-              {/* Cursos Livres */}
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2">
-                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                  <span>📚</span>
-                  <h4>Cursos Livres</h4>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  Educação flexível, sem exigência de escolaridade. Atualização, desenvolvimento pessoal e cultural em temas variados.
-                </p>
-              </div>
-
-              {/* Horas Complementares */}
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-2">
-                <div className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                  <span>⏱️</span>
-                  <h4>Horas Complementares</h4>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  Comprovação de atividades fora da grade obrigatória do ensino superior. Documentação oficial para validação na instituição de origem.
-                </p>
-              </div>
-
-              {/* Produção Autoral */}
-              <div className="bg-amber-50/60 rounded-2xl p-6 border border-amber-200/80 space-y-2">
-                <div className="flex items-center gap-2 text-lg font-bold text-amber-950">
-                  <span>✍️</span>
-                  <h4>Produção Autoral</h4>
-                </div>
-                <p className="text-sm text-slate-800 leading-relaxed">
-                  O aluno passa de estudante a criador. Trabalhos próprios recebem reconhecimento em níveis crescentes conforme a forma de publicação e impacto.
-                </p>
-              </div>
-            </div>
-          </div>
         </section>
 
-        {/* 🏅 Percurso de Aprendizagem e Autoria */}
+        {/* 🏅 O Percurso: Aprender → Expressar → Investigar → Autorar */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-8">
           <div>
             <div className="flex items-center gap-3 mb-2">
@@ -317,80 +220,78 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
                 <Sparkles className="w-6 h-6" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                🏅 Percurso de Aprendizagem e Autoria
+                🏅 O Percurso: Aprender → Expressar → Investigar → Autorar
               </h2>
             </div>
             <p className="text-base text-slate-700 leading-relaxed">
-              Na ESDHUBEM, o aprendizado não precisa terminar no certificado. Você pode escolher até onde deseja avançar:
+              Você pode concluir o curso e receber seu certificado — e isso é muito valioso. Mas também pode escolher ir além:
             </p>
-          </div>
-
-          {/* Fluxo Visual em Texto Destacado */}
-          <div className="bg-slate-900 text-[#FFC72C] p-5 rounded-2xl font-mono text-center text-sm sm:text-base font-bold tracking-wider shadow-inner">
-            APRENDER → EXPRESSAR → INVESTIGAR → AUTORAR
           </div>
 
           {/* Tabela de Níveis */}
           <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
-            <table className="w-full text-left text-sm border-collapse min-w-[620px]">
+            <table className="w-full text-left text-sm border-collapse min-w-[580px]">
               <thead>
                 <tr className="bg-slate-900 text-white">
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Nível</th>
                   <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Etapa</th>
-                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">O que significa</th>
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">O que acontece</th>
+                  <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">Nível</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
                 <tr className="hover:bg-slate-50/80 transition-colors">
+                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                    1. Aprender
+                  </td>
+                  <td className="py-4 px-4 text-slate-700 leading-relaxed">
+                    Faz o curso, compreende os conceitos, valida o conhecimento
+                  </td>
                   <td className="py-4 px-4 font-bold text-amber-800 whitespace-nowrap">
                     🥉 Bronze
                   </td>
-                  <td className="py-4 px-4 font-semibold text-slate-900">
-                    Aprender e compreender
-                  </td>
-                  <td className="py-4 px-4 text-slate-700">
-                    Realizar o curso, adquirir conhecimento e receber certificação de conclusão
-                  </td>
                 </tr>
                 <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
+                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                    2. Expressar
+                  </td>
+                  <td className="py-4 px-4 text-slate-700 leading-relaxed">
+                    Transforma o aprendizado em texto compartilhado publicamente
+                  </td>
                   <td className="py-4 px-4 font-bold text-slate-600 whitespace-nowrap">
                     🥈 Prata
                   </td>
-                  <td className="py-4 px-4 font-semibold text-slate-900">
-                    Expressar e comunicar
-                  </td>
-                  <td className="py-4 px-4 text-slate-700">
-                    Transformar o aprendizado em texto estruturado e compartilhar publicamente
-                  </td>
                 </tr>
                 <tr className="hover:bg-slate-50/80 transition-colors">
+                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                    3. Investigar
+                  </td>
+                  <td className="py-4 px-4 text-slate-700 leading-relaxed">
+                    Aprofunda com referências, rigor e reflexão crítica
+                  </td>
                   <td className="py-4 px-4 font-bold text-amber-600 whitespace-nowrap">
                     🥇 Ouro
                   </td>
-                  <td className="py-4 px-4 font-semibold text-slate-900">
-                    Investigar e aprofundar
-                  </td>
-                  <td className="py-4 px-4 text-slate-700">
-                    Desenvolver trabalho com referências, reflexão crítica e rigor intelectual
-                  </td>
                 </tr>
                 <tr className="hover:bg-amber-50/50 transition-colors bg-amber-50/30">
+                  <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                    4. Autorar
+                  </td>
+                  <td className="py-4 px-4 text-slate-700 leading-relaxed">
+                    Cria obra original — livro, manual, artigo — com sua assinatura
+                  </td>
                   <td className="py-4 px-4 font-bold text-blue-700 whitespace-nowrap">
                     💎 Diamante
-                  </td>
-                  <td className="py-4 px-4 font-semibold text-slate-900">
-                    Autorar e construir
-                  </td>
-                  <td className="py-4 px-4 text-slate-700">
-                    Criar obra original — manual, ensaio, livro ou artigo — com reconhecimento de excelência
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-100 text-slate-600 text-sm leading-relaxed">
-            Os níveis representam diferentes possibilidades de trajetória, não uma hierarquia entre pessoas. Cada um escolhe conforme seus objetivos, tempo e possibilidades.
+          <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 text-slate-800 text-sm leading-relaxed flex items-start gap-2.5">
+            <span className="text-base shrink-0">⚠️</span>
+            <span>
+              <strong>Não é hierarquia entre pessoas.</strong> São possibilidades de caminho: conforme seu objetivo, seu tempo, sua necessidade ou sua estratégia de divulgação. Você escolhe até onde quer avançar.
+            </span>
           </div>
         </section>
 
@@ -415,6 +316,30 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
 
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
             A responsabilidade sobre o conteúdo criado permanece sempre com o autor.
+          </p>
+        </section>
+
+        {/* Conhecimento com responsabilidade (Abaixo de Inteligência Artificial) */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Conhecimento com responsabilidade
+            </h2>
+          </div>
+
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            Valorizamos diferentes formas de conhecimento e produção intelectual: científica, filosófica, humanística, cultural, tradicional, experiencial e qualitativa.
+          </p>
+
+          <div className="p-5 rounded-2xl bg-amber-50/80 border-l-4 border-[#FFC72C] text-slate-800 text-base sm:text-lg font-medium leading-relaxed">
+            Buscamos distinguir com clareza: <strong>experiência, opinião, interpretação, hipótese, argumento e evidência.</strong>
+          </div>
+
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            Nosso compromisso é estimular uma relação mais consciente com o conhecimento: ler, questionar, pesquisar, comparar perspectivas e comunicar com responsabilidade.
           </p>
         </section>
 
