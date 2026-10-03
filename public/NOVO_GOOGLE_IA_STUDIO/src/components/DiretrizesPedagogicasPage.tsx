@@ -109,9 +109,6 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-amber-100 text-amber-900 border border-amber-200 mb-2">
               📋 Modalidades e Programas
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-              Quais tipos de cursos oferecemos?
-            </h2>
             <p className="mt-2 text-sm sm:text-base text-slate-600">
               Descubra a proposta de cada formato e escolha o percurso alinhado ao seu momento profissional ou acadêmico.
             </p>
