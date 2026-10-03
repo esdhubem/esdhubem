@@ -76,7 +76,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               <iframe
                 id="odysee-iframe"
                 className="w-full h-full border-0 absolute inset-0"
-                src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-pedagogicas-esdhubem:0"
+                src="https://odysee.com/$/embed/@esdhubem:a/Diretrizes-Pedag%C3%B3gicas:9?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
                 allowFullScreen
                 title="Diretrizes Pedagógicas ESDHUBEM"
                 loading="lazy"
