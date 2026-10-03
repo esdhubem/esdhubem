@@ -56,7 +56,7 @@ function generateRssXml(): string {
   const buildDate = new Date().toUTCString();
 
   const itemsXml = BLOG_POSTS.map((post) => {
-    const postUrl = `${siteUrl}/?page=blog-post&amp;id=${post.id}`;
+    const postUrl = `${siteUrl}/?post=${post.id}`;
     const pubDate = parseDateToRFC822(post.date);
     const authorEscaped = escapeXml(post.author);
     const categoryEscaped = escapeXml(post.category);

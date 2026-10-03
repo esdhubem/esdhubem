@@ -70,33 +70,32 @@ export default function App() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const cursoId = params.get('curso');
-    const categoriaId = params.get('categoria');
-    const postId = params.get('post');
-    const pagina = params.get('pagina');
+    const hash = window.location.hash.replace('#', '');
 
-    if (pagina === 'podcasts' || pagina === 'podcast') {
-      setCurrentPage('podcasts');
-      window.history.replaceState({}, '', window.location.pathname);
-      return;
+    const postId = params.get('post') || params.get('id') || (params.get('page') === 'blog-post' ? params.get('id') : null);
+    const artigoId = params.get('artigo') || params.get('article');
+    const cursoId = params.get('curso') || params.get('course');
+    const categoriaId = params.get('categoria') || params.get('category');
+    const pagina = params.get('pagina') || params.get('page') || params.get('p') || hash;
+
+    if (postId) {
+      const post = BLOG_POSTS.find(p => p.id === postId);
+      if (post) {
+        setActivePostId(post.id);
+        setCurrentPage('blog-post');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        return;
+      }
     }
 
-    if (pagina === 'diretrizes-publicacao' || pagina === 'diretrizes-publicacao-parcerias' || pagina === 'publicacao-cientifica') {
-      setCurrentPage('diretrizes-publicacao-parcerias');
-      window.history.replaceState({}, '', window.location.pathname);
-      return;
-    }
-
-    if (pagina === 'sobre-nos' || pagina === 'sobre' || pagina === 'sobre-esdhubem') {
-      setCurrentPage('sobre-nos');
-      window.history.replaceState({}, '', window.location.pathname);
-      return;
-    }
-
-    if (pagina === 'gerador-abnt' || pagina === 'referencias-abnt' || pagina === 'abnt' || pagina === 'gerador-referencias-abnt') {
-      setCurrentPage('gerador-abnt');
-      window.history.replaceState({}, '', window.location.pathname);
-      return;
+    if (artigoId) {
+      const artigo = ACADEMIC_ARTICLES.find(a => a.id === artigoId);
+      if (artigo) {
+        setSelectedArticle(artigo);
+        setCurrentPage('artigo-detalhe');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        return;
+      }
     }
 
     if (cursoId) {
@@ -104,7 +103,7 @@ export default function App() {
       if (course) {
         setSelectedCourse(course);
         setCurrentPage('curso-detalhe');
-        window.history.replaceState({}, '', window.location.pathname);
+        window.scrollTo({ top: 0, behavior: 'instant' });
         return;
       }
     }
@@ -112,18 +111,68 @@ export default function App() {
     if (categoriaId) {
       setActiveCategorySlug(categoriaId);
       setCurrentPage('categoria-detalhe');
-      window.history.replaceState({}, '', window.location.pathname);
+      window.scrollTo({ top: 0, behavior: 'instant' });
       return;
     }
 
-    if (postId) {
-      const post = BLOG_POSTS.find(p => p.id === postId);
-      if (post) {
-        setActivePostId(post.id);
-        setCurrentPage('blog-post');
-        window.history.replaceState({}, '', window.location.pathname);
-        return;
-      }
+    if (pagina === 'podcasts' || pagina === 'podcast') {
+      setCurrentPage('podcasts');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'diretrizes-publicacao' || pagina === 'diretrizes-publicacao-parcerias' || pagina === 'publicacao-cientifica') {
+      setCurrentPage('diretrizes-publicacao-parcerias');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'diretrizes-pedagogicas') {
+      setCurrentPage('diretrizes-pedagogicas');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'regras-certificacao-merito' || pagina === 'certificacao') {
+      setCurrentPage('regras-certificacao-merito');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'informacoes-legais' || pagina === 'legal') {
+      setCurrentPage('informacoes-legais');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'sobre-nos' || pagina === 'sobre' || pagina === 'sobre-esdhubem') {
+      setCurrentPage('sobre-nos');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'gerador-abnt' || pagina === 'referencias-abnt' || pagina === 'abnt' || pagina === 'gerador-referencias-abnt') {
+      setCurrentPage('gerador-abnt');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'blog' || pagina === 'posts') {
+      setCurrentPage('blog');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'artigos' || pagina === 'repositorio') {
+      setCurrentPage('artigos');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'livraria' || pagina === 'livros') {
+      setCurrentPage('livraria');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
     }
   }, []);
 
