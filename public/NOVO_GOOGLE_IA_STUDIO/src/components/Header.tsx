@@ -251,7 +251,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('diretrizes-pedagogicas')}
             className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
               currentPage === 'diretrizes-pedagogicas'
-                ? 'bg-[#FFC72C] text-slate-950 border-[#FFC72C]'
+                ? 'bg-amber-600 text-white border-amber-400 shadow-md ring-1 ring-amber-400/50'
                 : 'bg-amber-500/10 hover:bg-amber-500/20 text-[#FFC72C] border-amber-500/70 hover:border-amber-400'
             }`}
           >
@@ -263,7 +263,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('diretrizes-publicacao')}
             className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
               currentPage === 'diretrizes-publicacao' || currentPage === 'diretrizes-publicacao-parcerias'
-                ? 'bg-blue-600 text-white border-blue-400'
+                ? 'bg-blue-600 text-white border-blue-400 shadow-md ring-1 ring-blue-400/50'
                 : 'bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 border-blue-500/70 hover:border-blue-400'
             }`}
           >
@@ -274,26 +274,26 @@ export const Header: React.FC<HeaderProps> = ({
           {/* 3. Diretrizes de Certificação */}
           <button
             onClick={() => onNavigate('regras-certificacao-merito')}
-            className={`bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 text-[#FFC72C] border border-[#FFC72C]/60 hover:border-[#FFC72C] font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs ${
+            className={`font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs border ${
               currentPage === 'regras-certificacao-merito'
-                ? 'bg-[#FFC72C] text-slate-950 border-[#FFC72C]'
-                : ''
+                ? 'bg-amber-600 text-white border-amber-400 shadow-md ring-1 ring-amber-400/50'
+                : 'bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 text-[#FFC72C] border-[#FFC72C]/60 hover:border-[#FFC72C]'
             }`}
           >
-            <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
+            <Award className={`w-3.5 h-3.5 ${currentPage === 'regras-certificacao-merito' ? 'text-white' : 'text-[#FFC72C]'}`} />
             <span>Diretrizes de Certificação</span>
           </button>
 
           {/* 4. Valor Legal dos Certificados */}
           <button
             onClick={() => onNavigate('informacoes-legais')}
-            className={`bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/60 hover:border-cyan-400 font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs ${
+            className={`font-bold text-xs px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs border ${
               currentPage === 'informacoes-legais'
-                ? 'bg-cyan-500 text-slate-950 border-cyan-400'
-                : ''
+                ? 'bg-cyan-600 text-white border-cyan-300 shadow-md ring-1 ring-cyan-300/50'
+                : 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/60 hover:border-cyan-400'
             }`}
           >
-            <Scale className="w-3.5 h-3.5 text-cyan-400" />
+            <Scale className={`w-3.5 h-3.5 ${currentPage === 'informacoes-legais' ? 'text-white' : 'text-cyan-400'}`} />
             <span>Valor Legal dos Certificados</span>
           </button>
 
@@ -311,7 +311,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('artigos')}
             className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
               currentPage === 'artigos' || currentPage === 'artigo-detalhe'
-                ? 'bg-cyan-500 text-slate-950 border-cyan-400'
+                ? 'bg-cyan-600 text-white border-cyan-400 shadow-md ring-1 ring-cyan-300/50'
                 : 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/70 hover:border-cyan-400'
             }`}
           >
@@ -323,7 +323,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('blog')}
             className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
               currentPage === 'blog' || currentPage === 'blog-post'
-                ? 'bg-purple-600 text-white border-purple-400'
+                ? 'bg-purple-600 text-white border-purple-400 shadow-md ring-1 ring-purple-400/50'
                 : 'bg-[#581c87]/60 hover:bg-[#581c87]/80 text-purple-200 border-purple-500/70 hover:border-purple-400'
             }`}
           >
@@ -335,7 +335,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('livraria')}
             className={`px-3 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
               currentPage === 'livraria'
-                ? 'bg-amber-400 text-slate-950 border-amber-300'
+                ? 'bg-amber-600 text-white border-amber-300 shadow-md ring-1 ring-amber-300/50'
                 : 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border-amber-500/70 hover:border-amber-400'
             }`}
           >
