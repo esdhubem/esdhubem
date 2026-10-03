@@ -62,13 +62,13 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
           <div>
             <div className="inline-flex items-center gap-2 text-[#243042] text-xs font-bold uppercase tracking-wider mb-2">
               <BookOpen className="w-4 h-4 text-amber-500" />
-              <span>Grade de Treinamentos e Certificações</span>
+              <span>Grade de Cursos Livres e Produtos da ESDHUBEM</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
               Catálogo de Cursos Online ESDHUBEM
             </h2>
             <p className="mt-2 text-slate-600 text-sm sm:text-base max-w-2xl">
-              Selecione o formato ideal para seu momento atual: videoaulas 100% livres, horas acadêmicas certificadas ou formações completas para renda imediata.
+              Selecione o curso ou o produto para rentabilizar o seu desempenho profissional.
             </p>
           </div>
 

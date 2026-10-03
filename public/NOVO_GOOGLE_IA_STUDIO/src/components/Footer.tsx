@@ -121,399 +121,371 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
       </div>
 
-      {/* Main Footer Links Grid */}
+      {/* Main Footer Links Grid - 4 Distinctly Colored Columns */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-800 text-xs sm:text-sm">
-          {/* Column 1: Fale Conosco */}
-          <div className="space-y-4 lg:col-span-1">
-            <div className="mb-8 w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden bg-white/5 flex items-center justify-center p-1 border border-white/10 shadow-lg">
-               <img src={esdhubemLogo} alt="ESDHUBEM Logo" className="w-full h-full object-cover rounded-full" />
-            </div>
-            <h4 className="text-white font-bold text-base uppercase tracking-wider">
-              Fale Conosco
-            </h4>
-            <div className="space-y-3 text-slate-300 text-xs">
-              <a
-                href="https://wa.me/5511960319637"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2.5 hover:text-[#FFC72C] transition-colors group"
-                id="footer-contact-phone"
-              >
-                <div className="w-7 h-7 rounded-lg bg-slate-800 group-hover:bg-[#243042] flex items-center justify-center text-[#FFC72C] shrink-0 transition-colors">
-                  <Phone className="w-3.5 h-3.5" />
-                </div>
-                <span className="font-semibold">(11) 960319637</span>
-              </a>
-
-              <a
-                href="mailto:esdhubem@proton.me"
-                className="flex items-center gap-2.5 hover:text-[#FFC72C] transition-colors group"
-                id="footer-contact-email"
-              >
-                <div className="w-7 h-7 rounded-lg bg-slate-800 group-hover:bg-[#243042] flex items-center justify-center text-[#FFC72C] shrink-0 transition-colors">
-                  <Mail className="w-3.5 h-3.5" />
-                </div>
-                <span className="break-all">esdhubem@proton.me</span>
-              </a>
-
-              <div className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 shrink-0">
-                  <Clock className="w-3.5 h-3.5" />
-                </div>
-                <span>9h - 17h, Segunda - Sexta</span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-slate-800 text-xs sm:text-sm">
+          {/* Coluna 1 — CONTATO & ESCOLA (Accent: Amber / Ouro) */}
+          <div className="rounded-2xl p-5 bg-slate-900/80 border border-amber-500/30 shadow-lg space-y-4 flex flex-col justify-between">
+            <div>
+              <div className="mb-5 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-white/5 flex items-center justify-center p-1 border border-amber-400/40 shadow-md">
+                <img src={esdhubemLogo} alt="ESDHUBEM Logo" className="w-full h-full object-cover rounded-full" />
               </div>
+              
+              <h4 className="text-amber-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                Contato & Escola
+              </h4>
+              <p className="text-white font-semibold text-xs mt-1">
+                ESDHUBEM — Educação Integral
+              </p>
 
-              <div className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 shrink-0">
-                  <MapPin className="w-3.5 h-3.5" />
+              <div className="mt-4 space-y-2.5 text-slate-300 text-xs">
+                <a
+                  href="https://wa.me/5511960319837"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2.5 hover:text-amber-300 transition-colors group"
+                  id="footer-contact-phone"
+                >
+                  <div className="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 group-hover:bg-amber-500/20 transition-colors">
+                    <Phone className="w-3.5 h-3.5" />
+                  </div>
+                  <span className="font-semibold text-white group-hover:text-amber-300 transition-colors">(11) 96031-9837</span>
+                </a>
+
+                <a
+                  href="mailto:esdhubem@proton.me"
+                  className="flex items-center gap-2.5 hover:text-amber-300 transition-colors group"
+                  id="footer-contact-email"
+                >
+                  <div className="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 group-hover:bg-amber-500/20 transition-colors">
+                    <Mail className="w-3.5 h-3.5" />
+                  </div>
+                  <span className="break-all text-slate-200 group-hover:text-amber-300 transition-colors">esdhubem@proton.me</span>
+                </a>
+
+                <div className="flex items-center gap-2.5 text-slate-300">
+                  <div className="w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 shrink-0">
+                    <Clock className="w-3.5 h-3.5" />
+                  </div>
+                  <span>Atend.: 9h–17h • Seg–Sex</span>
                 </div>
-                <span>São Paulo SP Brasil</span>
+
+                <div className="flex items-center gap-2.5 text-slate-300">
+                  <div className="w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 shrink-0">
+                    <MapPin className="w-3.5 h-3.5" />
+                  </div>
+                  <span>São Paulo / SP — Brasil</span>
+                </div>
               </div>
             </div>
 
             {/* Métodos de Pagamento */}
-            <div className="pt-4 border-t border-slate-800">
-              <h5 className="text-white font-semibold text-xs uppercase tracking-wider mb-2.5">
+            <div className="pt-4 border-t border-amber-500/20 mt-2">
+              <h5 className="text-amber-300 font-bold text-[11px] uppercase tracking-wider mb-2">
                 Métodos de Pagamento
               </h5>
-              <div className="flex flex-wrap gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/90 border border-slate-700 text-slate-200 text-xs font-semibold">
-                  <QrCode className="w-3.5 h-3.5 text-emerald-400" />
+              <div className="flex flex-wrap gap-1.5">
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-emerald-500/30 text-emerald-300 text-[11px] font-semibold">
+                  <QrCode className="w-3 h-3 text-emerald-400" />
                   Pix
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/90 border border-slate-700 text-slate-200 text-xs font-semibold">
-                  <CreditCard className="w-3.5 h-3.5 text-blue-400" />
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-blue-500/30 text-blue-300 text-[11px] font-semibold">
+                  <CreditCard className="w-3 h-3 text-blue-400" />
                   Cartão
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/90 border border-slate-700 text-slate-200 text-xs font-semibold">
-                  <Sun className="w-3.5 h-3.5 text-[#FFC72C]" />
-                  Sol
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-amber-500/30 text-amber-300 text-[11px] font-semibold">
+                  <Bookmark className="w-3 h-3 text-amber-400" />
+                  Boleto
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Links úteis */}
-          <div className="space-y-4">
-            <h4 className="text-white font-bold text-base uppercase tracking-wider">
-              Links úteis
+          {/* Coluna 2 — NAVEGAÇÃO PRINCIPAL (Accent: Esmeralda / Verde) */}
+          <div className="rounded-2xl p-5 bg-slate-900/80 border border-emerald-500/30 shadow-lg space-y-4">
+            <h4 className="text-emerald-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+              Navegação Principal
             </h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-2 text-xs">
               <li>
                 <button
                   onClick={() => onNavigate('inicio')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  Início
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('blog')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left font-medium"
-                >
-                  Blog ESDHUBEM
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('diretrizes-pedagogicas')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-amber-300 font-semibold"
-                >
-                  Diretrizes Pedagógicas
+                  <span className="text-emerald-500">•</span>
+                  <span>Início</span>
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => onNavigate('categorias')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-white font-medium"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  Aprofunde: Categorias (18 Áreas)
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('livraria')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-semibold"
-                >
-                  Livraria (Livros & Materiais)
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('categoria:landing-pages-biolinks')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold"
-                >
-                  Sites & Biolinks (Landing Pages)
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('aplicativos')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-cyan-400 font-semibold"
-                >
-                  Aplicativos & Dashboards (MEI e ME)
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('artigos')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold"
-                >
-                  Artigos de Estudo e Pesquisa (Zenodo / DOI)
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('diretrizes-publicacao')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-blue-300 font-semibold"
-                >
-                  Diretrizes de Publicação
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('gerador-abnt')}
-                  className="hover:text-amber-300 transition-colors cursor-pointer text-left text-[#FFC72C] font-bold flex items-center gap-1.5"
-                >
-                  <Bookmark className="w-3.5 h-3.5 text-[#FFC72C]" />
-                  <span>Gerador de Referências ABNT (Novo)</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('podcasts')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-semibold flex items-center gap-1.5"
-                >
-                  <span>Podcasts & Ensaios Sonoros</span>
+                  <span className="text-emerald-500">•</span>
+                  <span>Categorias de Cursos</span>
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => onNavigate('sala-de-aula')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-white font-semibold flex items-center gap-1.5"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2 font-medium"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#FFC72C]" />
-                  <span>Sala de Aula (Área do Aluno)</span>
+                  <span className="text-emerald-500">•</span>
+                  <span>Sala de Aula</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('livraria')}
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
+                >
+                  <span className="text-emerald-500">•</span>
+                  <span>Livraria & Materiais</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('blog')}
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
+                >
+                  <span className="text-emerald-500">•</span>
+                  <span>Blog</span>
                 </button>
               </li>
               <li>
                 <button
                   onClick={onOpenAbout}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  Sobre nós / A Escola
+                  <span className="text-emerald-500">•</span>
+                  <span>Sobre Nós</span>
                 </button>
               </li>
               <li>
                 <button
-                  onClick={onOpenValidator}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-semibold flex items-center gap-1"
+                  onClick={() => onNavigate('contato')}
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  <CheckCircle2 className="w-3 h-3 text-[#FFC72C]" />
+                  <span className="text-emerald-500">•</span>
+                  <span>Contato</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('podcasts')}
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                >
+                  <span className="text-emerald-500">•</span>
+                  <span>Podcasts & Ensaios Sonoros</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('aplicativos')}
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                >
+                  <span className="text-emerald-500">•</span>
+                  <span>Aplicativos & Dashboards</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('categoria:landing-pages-biolinks')}
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                >
+                  <span className="text-emerald-500">•</span>
+                  <span>Sites & Biolinks</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Coluna 3 — CERTIFICAÇÃO & APRENDIZAGEM (Accent: Azul / Ciano) */}
+          <div className="rounded-2xl p-5 bg-slate-900/80 border border-sky-500/30 shadow-lg space-y-4">
+            <h4 className="text-sky-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-sky-400"></span>
+              Certificação & Aprendizagem
+            </h4>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <button
+                  onClick={onOpenValidator}
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2 font-semibold"
+                >
+                  <span className="text-sky-400">•</span>
                   <span>Validar Certificado</span>
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onOpenCertificatePreview?.()}
-                  className="hover:text-amber-300 transition-colors cursor-pointer text-left text-amber-400 font-bold flex items-center gap-1"
-                >
-                  <Award className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Modelo do Certificado & Guia PDF</span>
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => onNavigate('regras-certificacao-merito')}
-                  className="hover:text-amber-300 transition-colors cursor-pointer text-left text-[#FFC72C] font-extrabold flex items-center gap-1"
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
+                  <span className="text-sky-400">•</span>
                   <span>Regras de Certificação</span>
                 </button>
               </li>
               <li>
-                <a
-                  href="https://wa.me/5511960319637"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-[#FFC72C] transition-colors"
-                >
-                  Contato e Suporte WhatsApp
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Informações Legais */}
-          <div className="space-y-4">
-            <h4 className="text-white font-bold text-base uppercase tracking-wider">
-              Informações Legais
-            </h4>
-            <ul className="space-y-2.5 text-xs">
-              <li>
                 <button
-                  onClick={() => onNavigate('corpo-docente')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-amber-400 font-semibold"
+                  onClick={() => onOpenCertificatePreview?.()}
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  Corpo Docente & Especialistas (E-E-A-T)
+                  <span className="text-sky-400">•</span>
+                  <span>Modelo de Certificado</span>
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('direitos-aluno')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold"
+                  onClick={() => onNavigate('informacoes-legais')}
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  Horas Complementares & Amparo Legal
+                  <span className="text-sky-400">•</span>
+                  <span>Valor Legal dos Certificados</span>
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('politica-pagamento')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-cyan-400 font-semibold"
+                  onClick={() => onNavigate('artigos')}
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  Política de Pagamento & Reembolso (CDC)
+                  <span className="text-sky-400">•</span>
+                  <span>Artigos de Estudo & Pesquisa</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('diretrizes-publicacao')}
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
+                >
+                  <span className="text-sky-400">•</span>
+                  <span>Diretrizes de Publicação</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('diretrizes-pedagogicas')}
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                >
+                  <span className="text-sky-400">•</span>
+                  <span>Diretrizes Pedagógicas</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('gerador-abnt')}
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                >
+                  <span className="text-sky-400">•</span>
+                  <span>Gerador de Referências ABNT</span>
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => onNavigate('secretaria-documentacao')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-extrabold flex items-center gap-1"
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
                 >
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#FFC72C]" />
-                  <span>Secretaria & Tabela de Serviços</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('regras-certificacao-merito')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-[#FFC72C] font-extrabold flex items-center gap-1"
-                >
-                  <Award className="w-3.5 h-3.5 text-[#FFC72C]" />
-                  <span>Regras de Certificação (Escala de Autoria)</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('informacoes-legais')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-white font-semibold"
-                >
-                  Validade dos Certificados (Lei 9.394/96)
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('politicas')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left"
-                >
-                  Política de Privacidade & LGPD
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('informacoes-legais')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left"
-                >
-                  Termos de Uso & Responsabilidades
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('informacoes-legais')}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left"
-                >
-                  Dados Institucionais & Coordenação
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={onOpenValidator}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left text-emerald-400 font-semibold"
-                >
-                  Verificação Antifraude com QR Code
+                  <span className="text-sky-400">•</span>
+                  <span>Secretaria & Serviços Acadêmicos</span>
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Column 4 & 5: Categorias */}
-          <div className="space-y-4 lg:col-span-2">
-            <div className="flex items-center justify-between">
-              <h4 className="text-white font-bold text-base uppercase tracking-wider">
-                Categorias
-              </h4>
-              <button
-                onClick={() => onNavigate('categorias')}
-                className="text-xs text-[#FFC72C] hover:underline font-bold cursor-pointer"
-              >
-                Ver Todas as 18 →
-              </button>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs">
-              {[
-                { name: 'Treinamento nas Empresas B2B', slug: 'categoria:treinamentos-palestras-corporativas', isB2b: true },
-                { name: 'Formação Empresarial', slug: 'categoria:formacao-empresarial' },
-                { name: 'Cursos Freepremium', slug: 'categoria:cursos-freepremium' },
-                { name: 'Horas Complementares', slug: 'categoria:horas-complementares' },
-                { name: 'Formação Livre', slug: 'categoria:formacao-livre' },
-                { name: 'Desenvolvimento Pessoal', slug: 'categoria:desenvolvimento-pessoal' },
-                { name: 'Desenvolvimento Humano', slug: 'categoria:desenvolvimento-humano' },
-                { name: 'Desenvolvimento Profissional', slug: 'categoria:desenvolvimento-profissional' },
-                { name: 'Desenvolvimento Ético', slug: 'categoria:desenvolvimento-etico' },
-                { name: 'Desenvolvimento Relacional', slug: 'categoria:desenvolvimento-relacional' },
-                { name: 'Desenvolvimento Financeiro', slug: 'categoria:desenvolvimento-financeiro' },
-                { name: 'Desenvolvimento Ambiental', slug: 'categoria:desenvolvimento-ambiental' },
-                { name: 'Desenvolvimento da Consciência', slug: 'categoria:desenvolvimento-da-consciencia' },
-                { name: 'Desenvolvimento Tecnológico e IA', slug: 'categoria:desenvolvimento-tecnologico-ia' },
-                { name: 'Desenvolvimento nas Empresas', slug: 'categoria:desenvolvimento-nas-empresas' },
-                { name: 'Práticas Integrativas', slug: 'categoria:praticas-integrativas' },
-                { name: 'Coach Integrativo', slug: 'categoria:coach-integrativo' },
-                { name: 'Pedagogia Integrativa', slug: 'categoria:pedagogia-integrativa' },
-                { name: 'Livros & Materiais', slug: 'livraria' },
-                { name: 'Aplicativos & Dashboards', slug: 'aplicativos' },
-                { name: 'Landing Pages & Biolinks', slug: 'categoria:landing-pages-biolinks' },
-              ].map((item) => (
+          {/* Coluna 4 — LEGAL & TRANSPARÊNCIA (Accent: Púrpura / Violeta) */}
+          <div className="rounded-2xl p-5 bg-slate-900/80 border border-purple-500/30 shadow-lg space-y-4">
+            <h4 className="text-purple-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-purple-400"></span>
+              Legal & Transparência
+            </h4>
+            <ul className="space-y-2 text-xs">
+              <li>
                 <button
-                  key={item.name}
-                  onClick={() => {
-                    onNavigate(item.slug);
-                  }}
-                  className="hover:text-[#FFC72C] transition-colors cursor-pointer text-left py-0.5 truncate text-slate-300 flex items-center gap-1"
+                  onClick={() => onNavigate('politicas')}
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  <span>• {item.name}</span>
-                  {item.isB2b && (
-                    <span className="text-[9px] bg-[#FFC72C] text-slate-950 font-black px-1 rounded uppercase ml-1">
-                      B2B
-                    </span>
-                  )}
+                  <span className="text-purple-400">•</span>
+                  <span>Política de Privacidade & LGPD</span>
                 </button>
-              ))}
-            </div>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('informacoes-legais')}
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
+                >
+                  <span className="text-purple-400">•</span>
+                  <span>Termos de Uso & Responsabilidades</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('politica-pagamento')}
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
+                >
+                  <span className="text-purple-400">•</span>
+                  <span>Política de Pagamento & Reembolso</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('informacoes-legais')}
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
+                >
+                  <span className="text-purple-400">•</span>
+                  <span>Código de Conduta</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={onOpenValidator}
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2 font-semibold"
+                >
+                  <span className="text-purple-400">•</span>
+                  <span>Verificação Antifraude</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('direitos-aluno')}
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                >
+                  <span className="text-purple-400">•</span>
+                  <span>Horas Complementares & Amparo Legal</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('corpo-docente')}
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                >
+                  <span className="text-purple-400">•</span>
+                  <span>Corpo Docente & Especialistas</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('informacoes-legais')}
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                >
+                  <span className="text-purple-400">•</span>
+                  <span>Dados Institucionais & Coordenação</span>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
 
         {/* Bottom Copyright & Back to Top */}
-        <div className="pt-8 mt-8 border-t border-slate-800/50 flex flex-col items-center justify-center gap-6 text-center text-slate-400">
-          <div className="text-[10px] leading-relaxed max-w-4xl text-slate-500">
-            <p className="mb-2">
-              <strong>ESDHUBEM</strong> — CNPJ 61.928.778/0001-50. Certificados de Cursos Livres emitidos pela instituição.
-            </p>
-            <p>
-              Amparado pela Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/96) e Decreto nº 5.154/04. Não é diploma de graduação, pós-graduação ou ensino técnico. A aceitação como atividade complementar fica sujeita às normas internas de cada instituição de ensino.
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-between w-full text-xs">
-            <p>© 2026 ESDHUBEM São Paulo SP Brasil. Todos os direitos reservados.</p>
-            <button
-              onClick={scrollToTop}
-              className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 mt-4 sm:mt-0"
-            >
-              <span>Voltar ao topo</span>
-              <ArrowUp className="w-3.5 h-3.5" />
-            </button>
-          </div>
+        <div className="pt-8 mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 text-center sm:text-left">
+          <p>© 2026 ESDHUBEM — Escola de Desenvolvimento Humano e Bem-Estar. Todos os direitos reservados.</p>
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 shrink-0"
+          >
+            <span>Voltar ao topo</span>
+            <ArrowUp className="w-3.5 h-3.5" />
+          </button>
         </div>
       </div>
 
