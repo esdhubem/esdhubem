@@ -16,7 +16,8 @@ import {
   Scale,
   Headphones,
   Handshake,
-  BookOpen
+  BookOpen,
+  ShieldCheck
 } from 'lucide-react';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
 
@@ -261,6 +262,19 @@ export const Header: React.FC<HeaderProps> = ({
             <span>Diretrizes de Publicação</span>
           </button>
 
+          {/* 3. Proteção à Autoria */}
+          <button
+            onClick={() => onNavigate('diretrizes-protecao-autoria')}
+            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
+              currentPage === 'diretrizes-protecao-autoria'
+                ? 'bg-emerald-600 text-white border-emerald-400 shadow-md ring-1 ring-emerald-400/50'
+                : 'bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border-emerald-500/70 hover:border-emerald-400'
+            }`}
+          >
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Proteção à Autoria</span>
+          </button>
+
           {/* 3. Diretrizes de Certificação */}
           <button
             onClick={() => onNavigate('regras-certificacao-merito')}
@@ -398,6 +412,10 @@ export const Header: React.FC<HeaderProps> = ({
             <button onClick={() => { onNavigate('diretrizes-publicacao'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2">
               <Handshake className="w-4 h-4 text-blue-400" />
               <span>Diretrizes de Publicação</span>
+            </button>
+            <button onClick={() => { onNavigate('diretrizes-protecao-autoria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-emerald-300 hover:bg-white/10 flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span>Proteção à Autoria</span>
             </button>
             <button onClick={() => { onNavigate('regras-certificacao-merito'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
               <Award className="w-4 h-4 text-[#FFC72C]" />

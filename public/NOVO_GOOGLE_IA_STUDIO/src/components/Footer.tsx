@@ -365,6 +365,15 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('diretrizes-protecao-autoria')}
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-emerald-300 flex items-center gap-2 font-medium"
+                >
+                  <span className="text-emerald-400">•</span>
+                  <span>Proteção à Autoria</span>
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('diretrizes-pedagogicas')}
                   className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
                 >
