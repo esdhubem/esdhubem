@@ -250,7 +250,7 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
               </p>
               <div className="flex flex-wrap items-center gap-3 pt-1 text-xs">
                 <a
-                  href="http://lattes.cnpq.br/7481458793724724"
+                  href="https://lattes.cnpq.br/7481458793724724"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 font-bold hover:underline"

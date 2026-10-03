@@ -512,7 +512,7 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
                     <strong>Professora Silviane Silvério</strong> • Biomédica graduada, Pós-graduada em Práticas Integrativas e Complementares em Saúde, atuante na formação de líderes e desenvolvimento humano humanizado.
                   </p>
                   <a
-                    href="http://lattes.cnpq.br/7481458793724724"
+                    href="https://lattes.cnpq.br/7481458793724724"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-[#243042] hover:text-[#FFC72C] transition-colors"

@@ -94,7 +94,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({
               <p><strong>CNPJ:</strong> 61928778000150</p>
               <p><strong>Coordenação & Autoria:</strong> Profª. Silviane Silvério (Especialista em Práticas Integrativas & Desenvolvimento Humano)</p>
               <p className="flex flex-wrap items-center gap-2 pt-1 text-[11px]">
-                <a href="http://lattes.cnpq.br/7481458793724724" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline font-bold">Lattes iD: 7481458793724724</a>
+                <a href="https://lattes.cnpq.br/7481458793724724" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline font-bold">Lattes iD: 7481458793724724</a>
                 <span>•</span>
                 <a href="https://orcid.org/0000-0001-6311-1195" target="_blank" rel="noreferrer" className="text-emerald-700 hover:underline font-bold">ORCID iD: 0000-0001-6311-1195</a>
               </p>

@@ -160,7 +160,7 @@ export const CorpoDocentePage: React.FC<CorpoDocentePageProps> = ({
 
                   <div className="flex flex-wrap gap-2 pt-1">
                     <a
-                      href="http://lattes.cnpq.br/7481458793724724"
+                      href="https://lattes.cnpq.br/7481458793724724"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50 border border-blue-200 hover:bg-blue-100 text-blue-900 text-xs font-bold transition-all shadow-xs group"

@@ -1056,7 +1056,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                   Currículo Lattes CNPq:
                 </span>
                 <a
-                  href="http://lattes.cnpq.br/7481458793724724"
+                  href="https://lattes.cnpq.br/7481458793724724"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#243042] underline font-bold hover:text-[#FFC72C]"

@@ -209,7 +209,7 @@ export const GeradorAbntPage: React.FC<GeradorAbntPageProps> = ({ onBackToHome, 
       setSummaryDescription('Estabelece as diretrizes e bases da educação nacional');
       setGazetteName('Diário Oficial da União');
       setGazetteDetails('Brasília, DF, seção 1, p. 27833, 23 dez. 1996');
-      setUrl('http://www.planalto.gov.br/ccivil_03/leis/l9394.htm');
+      setUrl('https://www.planalto.gov.br/ccivil_03/leis/l9394.htm');
       handleSetTodayAccessDate();
     } else if (type === 'capitulo') {
       setAuthors([{ lastName: 'LUCKESI', firstName: 'Cipriano Carlos' }]);
