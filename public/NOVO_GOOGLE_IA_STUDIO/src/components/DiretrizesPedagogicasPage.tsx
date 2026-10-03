@@ -76,15 +76,15 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               <iframe
                 id="odysee-iframe"
                 className="w-full h-full border-0 absolute inset-0"
-                src="https://odysee.com/$/embed/@esdhubem:a/apresentacao_esdhubem:2?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-pedagogicas-esdhubem:0"
                 allowFullScreen
-                title="Apresentação ESDHUBEM"
+                title="Diretrizes Pedagógicas ESDHUBEM"
                 loading="lazy"
               />
             </div>
             <p className="text-xs text-center text-slate-400 mt-2.5 flex items-center justify-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-[#FFC72C]" />
-              <span>Vídeo de Apresentação da Proposta Pedagógica ESDHUBEM</span>
+              <span>Vídeo de Diretrizes Pedagógicas ESDHUBEM</span>
             </p>
           </div>
         </div>
@@ -102,11 +102,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             Valorizamos o conhecimento em todas as suas formas: científica, filosófica, cultural, tradicional e também a sabedoria que vem da experiência.
           </p>
 
-          <div className="p-5 rounded-2xl bg-amber-50/80 border-l-4 border-[#FFC72C] text-slate-800 text-base sm:text-lg font-medium leading-relaxed">
-            <strong>Com responsabilidade:</strong> aqui aprendemos a distinguir com clareza o que é fato, o que é opinião, o que é hipótese e o que é evidência. Ler, questionar, comparar e comunicar com honestidade faz parte do nosso caminho.
-          </div>
-
-          <div className="pt-4 border-t border-slate-200/80 space-y-4">
+          <div className="pt-2 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
                 <Feather className="w-6 h-6" />
@@ -294,6 +290,11 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             </span>
           </div>
         </section>
+
+        {/* Destaque: Com responsabilidade */}
+        <div className="p-6 rounded-2xl bg-amber-50/80 border-l-4 border-[#FFC72C] text-slate-800 text-base sm:text-lg font-medium leading-relaxed shadow-xs">
+          <strong>Com responsabilidade:</strong> aqui aprendemos a distinguir com clareza o que é fato, o que é opinião, o que é hipótese e o que é evidência. Ler, questionar, comparar e comunicar com honestidade faz parte do nosso caminho.
+        </div>
 
         {/* Inteligência Artificial com responsabilidade */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
