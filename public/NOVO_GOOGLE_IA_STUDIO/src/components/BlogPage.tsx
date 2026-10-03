@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Search, Calendar, User, Clock, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Search, Calendar, User, Clock, ChevronRight, Rss } from 'lucide-react';
 import { BLOG_POSTS, BlogPost } from '../data/blogData';
 
 interface BlogPageProps {
@@ -26,13 +26,25 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onBackToHome, onNavigateToPo
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <button
-            onClick={onBackToHome}
-            className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium mb-6 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full cursor-pointer"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Voltar para a Home
-          </button>
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+            <button
+              onClick={onBackToHome}
+              className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full cursor-pointer"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Voltar para a Home
+            </button>
+            <a
+              href="https://praticasdebemestarsocial.github.io/esdhubem/feed.xml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-amber-300 hover:text-amber-200 transition-colors text-sm font-bold bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 px-4 py-2 rounded-full cursor-pointer"
+              title="Assinar Feed RSS do Blog ESDHUBEM"
+            >
+              <Rss className="w-4 h-4 text-[#FFC72C]" />
+              <span>Feed RSS</span>
+            </a>
+          </div>
           
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
             Blog <span className="text-[#FFC72C]">ESDHUBEM</span>
