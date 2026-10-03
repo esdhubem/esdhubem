@@ -86,11 +86,14 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
 }) => {
   return (
     <div>
-      {/* Faixa Institucional com cor mais escura */}
-      <section className="py-12 sm:py-16 bg-slate-100 border-b border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-medium">
-            Uma escola de Cursos Livres voltada ao desenvolvimento humano, onde você pode ir além da aprendizagem!. Na ESDHUBEM, você não precisa apenas consumir conteúdo, aqui você também tem a oportunidade de desenvolver a sua escrita e produção autoral. Aproveite a oportunidade para transformar aquilo que aprende em reflexão, escrita, pesquisa e produção própria.
+      {/* Faixa Institucional com fundo amarelo e letra maior */}
+      <section className="py-12 sm:py-16 bg-[#FFC72C] border-b border-amber-400/40">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-xl sm:text-2xl lg:text-3xl text-slate-900 leading-relaxed font-extrabold tracking-tight">
+            Uma escola de Cursos Livres voltada ao desenvolvimento humano, onde você pode ir além da aprendizagem!.
+          </p>
+          <p className="mt-4 text-base sm:text-lg lg:text-xl text-slate-900 leading-relaxed font-medium max-w-4xl mx-auto">
+            Na ESDHUBEM, você não precisa apenas consumir conteúdo, aqui você também tem a oportunidade de desenvolver a sua escrita e produção autoral. Aproveite a oportunidade para transformar aquilo que aprende em reflexão, escrita, pesquisa e produção própria.
           </p>
         </div>
       </section>
