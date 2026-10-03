@@ -89,7 +89,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
       <section className="py-10 sm:py-14 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-            Uma escola livre voltada ao desenvolvimento humano, à aprendizagem, à escrita e à produção autoral de conhecimento. Na ESDHUBEM, você não precisa apenas consumir conteúdo. Pode transformar aquilo que aprende em reflexão, escrita, pesquisa e produção própria.
+            Uma escola de Cursos Livres voltada ao desenvolvimento humano, onde você pode ir além da aprendizagem!. Na ESDHUBEM, você não precisa apenas consumir conteúdo, aqui você também tem a oportunidade de desenvolver a sua escrita e produção autoral. Aproveite a oportunidade para transformar aquilo que aprende em reflexão, escrita, pesquisa e produção própria.
           </p>
         </div>
       </section>
