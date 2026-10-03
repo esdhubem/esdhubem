@@ -671,7 +671,7 @@ export default function App() {
       {currentPage === 'blog-post' && activePostId && (
         <main className="flex-1">
           <BlogPostPage
-            post={BLOG_POSTS.find(p => p.id === activePostId)!}
+            post={BLOG_POSTS.find(p => p.id === activePostId) || BLOG_POSTS[0]}
             onBackToBlog={() => {
               setCurrentPage('blog');
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -688,6 +688,11 @@ export default function App() {
               }, 100);
             }}
             onNavigate={handleNavigate}
+            onNavigateToPost={(newPostId) => {
+              setActivePostId(newPostId);
+              setCurrentPage('blog-post');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           />
         </main>
       )}

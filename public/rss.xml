@@ -10,7 +10,7 @@
     <atom:link href="https://praticasdebemestarsocial.github.io/esdhubem/feed.xml" rel="self" type="application/rss+xml" />
     <description>Blog Oficial da ESDHUBEM - Educação Integral, Autoria, Publicação e Desenvolvimento Humano</description>
     <language>pt-BR</language>
-    <lastBuildDate>Sat, 03 Oct 2026 19:54:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 20:13:24 GMT</lastBuildDate>
     <generator>ESDHUBEM RSS Generator</generator>
     <image>
       <url>https://praticasdebemestarsocial.github.io/esdhubem/logo-cursos.png</url>
@@ -18,10 +18,98 @@
       <link>https://praticasdebemestarsocial.github.io/esdhubem/</link>
     </image>
     <item>
+      <title><![CDATA[Como escolher um curso livre para melhorar sua carreira]]></title>
+      <link>https://praticasdebemestarsocial.github.io/esdhubem/?post=como-escolher-um-curso-livre-para-melhorar-sua-carreira</link>
+      <guid isPermaLink="false">esdhubem-post-como-escolher-um-curso-livre-para-melhorar-sua-carreira</guid>
+      <pubDate>Sat, 03 Oct 2026 15:00:00 GMT</pubDate>
+      <dc:creator><![CDATA[Prof.ª Silviane Silvério]]></dc:creator>
+      <author>esdhubem@proton.me (Prof.ª Silviane Silvério)</author>
+      <category><![CDATA[Carreira e cursos livres]]></category>
+      <description><![CDATA[Veja critérios práticos para escolher um curso livre, comparar opções e avaliar se uma formação atende aos seus objetivos.]]></description>
+      <content:encoded><![CDATA[
+      <p class="text-lg text-slate-800 leading-relaxed font-normal mb-6">
+        Escolher um curso livre pode contribuir para o desenvolvimento profissional quando o conteúdo, a carga horária e os objetivos da formação estão alinhados às necessidades do estudante.
+      </p>
+
+      <h2 id="objetivo" class="text-2xl font-black text-slate-900 mt-10 mb-4 tracking-tight">
+        1. Defina seu objetivo
+      </h2>
+
+      <p class="text-base text-slate-700 leading-relaxed mb-6">
+        Antes de se matricular, procure definir o que deseja aprender e como pretende utilizar esse conhecimento. Você busca atualização rápida, cumprimento de horas complementares na faculdade, desenvolvimento de competências comportamentais (<em>soft skills</em>) ou ferramentas para produzir e publicar trabalhos autorais?
+      </p>
+
+      <h2 id="comparacao" class="text-2xl font-black text-slate-900 mt-10 mb-4 tracking-tight">
+        2. Compare os cursos
+      </h2>
+
+      <p class="text-base text-slate-700 leading-relaxed mb-6">
+        Alguns critérios essenciais podem ajudar na comparação entre diferentes formações disponíveis no mercado educacional:
+      </p>
+
+      <div class="my-8 overflow-x-auto rounded-2xl border border-slate-200 shadow-sm bg-white">
+        <table class="w-full text-left border-collapse text-sm">
+          <caption class="p-4 text-xs font-bold text-slate-500 uppercase tracking-wider bg-slate-50 border-b border-slate-200 text-left">
+            Critérios para comparar cursos livres
+          </caption>
+          <thead>
+            <tr class="bg-slate-100/80 text-slate-900 border-b border-slate-200">
+              <th scope="col" class="py-3 px-5 font-bold">Critério</th>
+              <th scope="col" class="py-3 px-5 font-bold">O que verificar</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/70">
+              <th scope="row" class="py-3.5 px-5 font-semibold text-slate-900 whitespace-nowrap">Conteúdo</th>
+              <td class="py-3.5 px-5">Programa, módulos, ementa clara e atualização do material didático.</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <th scope="row" class="py-3.5 px-5 font-semibold text-slate-900 whitespace-nowrap">Prática</th>
+              <td class="py-3.5 px-5">Exercícios reflexivos, projetos aplicados, exemplos reais e estímulo à escrita.</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <th scope="row" class="py-3.5 px-5 font-semibold text-slate-900 whitespace-nowrap">Suporte</th>
+              <td class="py-3.5 px-5">Canais diretos de atendimento, secretaria ativa e orientação ao aluno.</td>
+            </tr>
+            <tr class="hover:bg-slate-50/70">
+              <th scope="row" class="py-3.5 px-5 font-semibold text-slate-900 whitespace-nowrap">Certificado</th>
+              <td class="py-3.5 px-5">Critérios transparentes para emissão, amparo legal (Lei 9.394/96), QR Code antifraude e validação pública.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="qualidade" class="text-2xl font-black text-slate-900 mt-10 mb-4 tracking-tight">
+        3. Analise a qualidade do material
+      </h2>
+
+      <p class="text-base text-slate-700 leading-relaxed mb-6">
+        Procure informações sobre o corpo docente, a autoria, as fontes bibliográficas utilizadas e os objetivos de cada formação. Um curso de qualidade oferece referências sólidas e estimula o pensamento crítico, evitando fórmulas prontas ou promessas irreais.
+      </p>
+
+      <h2 id="autoria-portfolio" class="text-2xl font-black text-slate-900 mt-10 mb-4 tracking-tight">
+        4. Da aprendizagem à autoria e portfólio
+      </h2>
+
+      <p class="text-base text-slate-700 leading-relaxed mb-6">
+        Na ESDHUBEM, incentivamos que o curso livre vá além do consumo passivo de aulas. Por meio da nossa <a href="/esdhubem/?page=diretrizes-pedagogicas" class="text-amber-600 font-bold hover:underline">proposta pedagógica de autoria</a>, os estudantes têm a oportunidade de transformar o aprendizado em artigos, ensaios e produções com registro formal, construindo um portfólio profissional verificável.
+      </p>
+
+      <h2 id="conclusao" class="text-2xl font-black text-slate-900 mt-10 mb-4 tracking-tight">
+        Conclusão
+      </h2>
+
+      <p class="text-base text-slate-700 leading-relaxed mb-6">
+        A escolha de um curso livre é mais assertiva quando o estudante compara objetivos, conteúdo, atividades, suporte e dados sobre a instituição. Investir em conhecimento bem fundamentado é o caminho mais seguro para enriquecer o currículo e abrir novas portas profissionais.
+      </p>
+    ]]></content:encoded>
+      <enclosure url="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" type="image/jpeg" length="0" />
+    </item>
+    <item>
       <title><![CDATA[Seu conhecimento não precisa ficar guardado numa gaveta.]]></title>
       <link>https://praticasdebemestarsocial.github.io/esdhubem/?post=transforme-seu-aprendizado-em-autoridade-e-publicacao</link>
       <guid isPermaLink="false">esdhubem-post-transforme-seu-aprendizado-em-autoridade-e-publicacao</guid>
-      <pubDate>Sat, 03 Oct 2026 19:54:50 GMT</pubDate>
+      <pubDate>Sat, 03 Oct 2026 20:13:24 GMT</pubDate>
       <dc:creator><![CDATA[ESDHUBEM • Desenvolvimento Humano & Autoria]]></dc:creator>
       <author>esdhubem@proton.me (ESDHUBEM • Desenvolvimento Humano &amp; Autoria)</author>
       <category><![CDATA[Autoria & Publicação]]></category>
@@ -86,7 +174,7 @@
       <title><![CDATA[Seu TCC e Certificados Vão Para a Gaveta?]]></title>
       <link>https://praticasdebemestarsocial.github.io/esdhubem/?post=tcc-certificados-autoridade-publicacao-cientifica</link>
       <guid isPermaLink="false">esdhubem-post-tcc-certificados-autoridade-publicacao-cientifica</guid>
-      <pubDate>Sat, 03 Oct 2026 19:54:50 GMT</pubDate>
+      <pubDate>Sat, 03 Oct 2026 20:13:24 GMT</pubDate>
       <dc:creator><![CDATA[Coordenação Pedagógica ESDHUBEM]]></dc:creator>
       <author>esdhubem@proton.me (Coordenação Pedagógica ESDHUBEM)</author>
       <category><![CDATA[Educação & Carreira]]></category>
@@ -121,106 +209,6 @@
       <p class="text-base text-slate-700 leading-relaxed mb-8">
         Na ESDHUBEM, nós ajudamos você a desenvolver uma escrita sem burocracia. Você aprende a estruturar seus conhecimentos em artigos práticos, ensaios conceituais ou relatos de experiência.
       </p>
-
-      <h3 class="text-2xl font-black text-[#182333] mt-10 mb-4 tracking-tight">
-        Escala de Méritos Progressiva: Escolha até onde levar seu trabalho
-      </h3>
-
-      <p class="text-slate-600 mb-6 text-sm">
-        Ao concluir o curso, você decide o quão longe quer levar o seu trabalho através da nossa Escala de Méritos Progressiva:
-      </p>
-
-      <div class="space-y-4 my-8">
-        <div class="p-5 rounded-2xl bg-amber-50/50 border border-amber-200 flex items-start gap-4">
-          <span class="text-2xl shrink-0">🥉</span>
-          <div>
-            <h4 class="font-bold text-slate-900 text-base">Nível Bronze (Fixação)</h4>
-            <p class="text-slate-700 text-sm mt-1 leading-relaxed">
-              Assista às aulas, responda aos questionários de forma assertiva e baixe seu certificado de conclusão diretamente na plataforma para enriquecer seu currículo e redes sociais.
-            </p>
-          </div>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-4">
-          <span class="text-2xl shrink-0">🥈</span>
-          <div>
-            <h4 class="font-bold text-slate-900 text-base">Nível Prata (Portfólio & Autoridade)</h4>
-            <p class="text-slate-700 text-sm mt-1 leading-relaxed">
-              Escreva um artigo prático ou estudo de caso e publique no Blog Oficial da ESDHUBEM, gerando autoridade para o seu nome e criando um link público para enriquecer seu LinkedIn.
-            </p>
-          </div>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-yellow-50/60 border border-yellow-300 flex items-start gap-4">
-          <span class="text-2xl shrink-0">🥇</span>
-          <div>
-            <h4 class="font-bold text-slate-900 text-base">Nível Ouro (Pesquisa & Código DOI)</h4>
-            <p class="text-slate-700 text-sm mt-1 leading-relaxed">
-              Seja guiado para registrar seu manuscrito em repositórios internacionais (como o Zenodo), garantindo um código DOI permanente — um identificador digital científico universal de autoria.
-            </p>
-          </div>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-cyan-50/60 border border-cyan-300 flex items-start gap-4">
-          <span class="text-2xl shrink-0">💎</span>
-          <div>
-            <h4 class="font-bold text-slate-900 text-base">Nível Diamante (Excelência Aplicada)</h4>
-            <p class="text-slate-700 text-sm mt-1 leading-relaxed">
-              Conquiste a aprovação do seu trabalho em periódicos de impacto intermediário e ganhe destaque na vitrine oficial da escola.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <h3 class="text-2xl font-black text-[#182333] mt-10 mb-4 tracking-tight">
-        Para quem é a ESDHUBEM?
-      </h3>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
-          <h4 class="font-bold text-slate-900 text-sm mb-1.5 flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-            Estudantes Universitários
-          </h4>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Que precisam de horas complementares e querem se preparar com antecedência para o TCC ou pós-graduação.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
-          <h4 class="font-bold text-slate-900 text-sm mb-1.5 flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-            Concurseiros e Candidatos ao ENEM
-          </h4>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Que buscam dominar a escrita dissertativa, a interpretação de texto e a estruturação lógica de argumentos.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
-          <h4 class="font-bold text-slate-900 text-sm mb-1.5 flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-            Profissionais, Terapeutas Integrativos e Holísticos
-          </h4>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Que desejam transformar seus atendimentos e vivências de mercado em autoridade publicada.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
-          <h4 class="font-bold text-slate-900 text-sm mb-1.5 flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-            Buscadores de Autoconhecimento
-          </h4>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Que querem expandir a autoconsciência, compreender o mundo ao redor e se expressar com clareza através da escrita.
-          </p>
-        </div>
-      </div>
-
-      <p class="text-base text-slate-800 font-semibold leading-relaxed my-8 bg-slate-100/90 p-5 rounded-2xl border border-slate-200 text-center">
-        Não seja apenas um espectador no seu próprio currículo. Chegou a hora de sair do piloto automático e construir a autoridade que o seu conhecimento merece.
-      </p>
     ]]></content:encoded>
       <enclosure url="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" type="image/jpeg" length="0" />
     </item>
@@ -228,7 +216,7 @@
       <title><![CDATA[O Poder do Desenvolvimento Pessoal na Carreira]]></title>
       <link>https://praticasdebemestarsocial.github.io/esdhubem/?post=o-poder-do-desenvolvimento-pessoal</link>
       <guid isPermaLink="false">esdhubem-post-o-poder-do-desenvolvimento-pessoal</guid>
-      <pubDate>Sat, 03 Oct 2026 19:54:50 GMT</pubDate>
+      <pubDate>Sat, 03 Oct 2026 20:13:24 GMT</pubDate>
       <dc:creator><![CDATA[Equipe ESDHUBEM]]></dc:creator>
       <author>esdhubem@proton.me (Equipe ESDHUBEM)</author>
       <category><![CDATA[Desenvolvimento Pessoal]]></category>
@@ -256,7 +244,7 @@
       <title><![CDATA[Liderança Humanizada: O Futuro das Organizações]]></title>
       <link>https://praticasdebemestarsocial.github.io/esdhubem/?post=lideranca-humanizada</link>
       <guid isPermaLink="false">esdhubem-post-lideranca-humanizada</guid>
-      <pubDate>Sat, 03 Oct 2026 19:54:50 GMT</pubDate>
+      <pubDate>Sat, 03 Oct 2026 20:13:24 GMT</pubDate>
       <dc:creator><![CDATA[Equipe ESDHUBEM]]></dc:creator>
       <author>esdhubem@proton.me (Equipe ESDHUBEM)</author>
       <category><![CDATA[Gestão e Liderança]]></category>
