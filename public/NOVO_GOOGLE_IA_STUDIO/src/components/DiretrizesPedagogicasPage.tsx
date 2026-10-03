@@ -103,9 +103,9 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </p>
         </div>
 
-        {/* Quadro Tipos de Cursos - Design fluido e 100% responsivo para mobile sem quebras ruins nem rolagem horizontal */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-sm space-y-8">
-          <div className="border-b border-slate-100 pb-5">
+        {/* Seção Tipos de Cursos - Totalmente livre fora de caixas ou gaiolas */}
+        <section className="space-y-8 pt-2">
+          <div className="border-b border-slate-200 pb-5">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-amber-100 text-amber-900 border border-amber-200 mb-2">
               📋 Modalidades e Programas
             </span>
@@ -117,7 +117,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             </p>
           </div>
 
-          <div className="space-y-6 divide-y divide-slate-100">
+          <div className="space-y-8 divide-y divide-slate-200">
             {/* 1. Freepremium */}
             <div className="pt-2 first:pt-0 space-y-3">
               <div className="flex flex-wrap items-center gap-2">
@@ -139,7 +139,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             </div>
 
             {/* 2. Capacitação */}
-            <div className="pt-6 space-y-3">
+            <div className="pt-8 space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xl">🔵</span>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -159,7 +159,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             </div>
 
             {/* 3. Horas Complementares */}
-            <div className="pt-6 space-y-3">
+            <div className="pt-8 space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xl">🟡</span>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -179,7 +179,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             </div>
 
             {/* 4. Formação Livre */}
-            <div className="pt-6 space-y-3">
+            <div className="pt-8 space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xl">🔴</span>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -199,7 +199,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             </div>
 
             {/* 5. Treinamentos Corporativos */}
-            <div className="pt-6 space-y-3">
+            <div className="pt-8 space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xl">🟣</span>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -219,7 +219,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
             </div>
 
             {/* 6. Desenvolvimento da Escrita */}
-            <div className="pt-6 space-y-3">
+            <div className="pt-8 space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xl">🟣</span>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -236,12 +236,12 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
                   Quem deseja ir além do certificado: estudantes que querem se destacar academicamente, profissionais que buscam construir presença e credibilidade, terapeutas, pesquisadores e todos que sentem que têm algo a dizer e querem aprender a expressar com clareza, estrutura e impacto.
                 </p>
 
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5 mt-2">
+                <div className="pt-3 space-y-1.5">
                   <p className="font-bold text-slate-900 text-xs sm:text-sm uppercase tracking-wider">
                     Caminho possível:
                   </p>
                   <p className="text-xs sm:text-sm text-slate-600">Conforme avança, você pode alcançar os níveis:</p>
-                  <ul className="space-y-1 text-xs sm:text-sm font-medium text-slate-800 pt-1">
+                  <ul className="space-y-1.5 text-xs sm:text-sm font-medium text-slate-800 pt-1">
                     <li className="flex items-center gap-2">
                       <span>🥉</span> <strong>Prata:</strong> texto publicado no blog da escola
                     </li>
