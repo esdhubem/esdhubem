@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] flex flex-col items-center">
               <span>ESDHUBEM</span>
               <span className="text-[#FFC72C] text-[1.75rem] sm:text-4xl lg:text-5xl whitespace-normal sm:whitespace-nowrap mt-2">
-                Escola de Desenvolvimento Humano e Bem-Estar.
+                Escola com oportunidade de você ir além
               </span>
             </h1>
 
