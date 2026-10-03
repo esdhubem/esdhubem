@@ -103,10 +103,10 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
               📋 Modalidades de Formação
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-              Tipos de Cursos — ESDHUBEM
+              Conheça os Cursos LIvres da ESDHUBEM!
             </h2>
             <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
-              Conheça os formatos de ensino e escolha a modalidade ideal para o seu momento de aprendizado, validação acadêmica ou evolução profissional.
+              Aqui na nossa escola temos várias formas de ensino. Escolha a modalidade ideal para o seu momento de aprendizado, complementação acadêmica ou evolução profissional.
             </p>
           </div>
 
