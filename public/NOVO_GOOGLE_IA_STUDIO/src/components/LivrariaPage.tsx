@@ -111,7 +111,11 @@ export const LivrariaPage: React.FC<LivrariaPageProps> = ({ onBackToHome }) => {
                 <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-xl font-black text-emerald-600">{book.price}</span>
                   
-                  <button className="w-10 h-10 rounded-xl bg-[#243042] text-white flex items-center justify-center hover:bg-[#182333] hover:scale-105 transition-all cursor-pointer shadow-md">
+                  <button 
+                    aria-label={`Adicionar ${book.title} ao carrinho de compras`}
+                    title="Adicionar ao carrinho"
+                    className="w-10 h-10 rounded-xl bg-[#243042] text-white flex items-center justify-center hover:bg-[#182333] hover:scale-105 transition-all cursor-pointer shadow-md focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#FFC72C]"
+                  >
                     <ShoppingCart className="w-4 h-4" />
                   </button>
                 </div>

@@ -1,51 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Início -->
   <url>
     <loc>https://praticasdebemestarsocial.github.io/esdhubem/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Categorias & Cursos -->
   <url>
-    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=corpo-docente</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=categorias</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Repositório de Artigos Acadêmicos -->
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=artigos</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=direitos-aluno</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=politica-pagamento</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?artigo=geometria-da-vitalidade</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?artigo=comunicacao-assertiva-lideranca-corporativa</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?artigo=pedagogia-integrativa-e-bem-estar</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog & Postagens -->
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=blog</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?post=transforme-seu-aprendizado-em-autoridade-e-publicacao</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?post=tcc-certificados-autoridade-publicacao-cientifica</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?post=o-poder-do-desenvolvimento-pessoal</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?post=lideranca-humanizada</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Livraria -->
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=livraria</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Podcasts -->
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=podcasts</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Diretrizes & Certificações -->
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=diretrizes-pedagogicas</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=diretrizes-publicacao</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=regras-certificacao-merito</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=informacoes-legais</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=artigos</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=direitos-aluno</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Institucional & Ferramentas -->
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=sobre-nos</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=corpo-docente</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=gerador-abnt</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=aplicativos</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=blog</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://praticasdebemestarsocial.github.io/esdhubem/?page=politica-pagamento</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
