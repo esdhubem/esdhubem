@@ -92,119 +92,215 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
 
       {/* Main Content Body */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-        {/* Bloco Inicial: Propósito e Escrever é Processar */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
-          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-            A ESDHUBEM oferece formações voltadas para o desenvolvimento humano, a ampliação de conhecimentos, a produção intelectual e o bem-estar.
+        {/* Texto Institucional e Filosófico - Fora de caixas, direto e elegante */}
+        <div className="space-y-6 text-slate-800">
+          <p className="text-base sm:text-lg lg:text-xl leading-relaxed font-normal">
+            A ESDHUBEM oferece Cursos Livres, Capacitações, Treinamentos, Horas Complementares e Formações voltadas para o desenvolvimento humano, a ampliação de conhecimentos, a produção intelectual e o bem-estar.
           </p>
 
-          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-            Valorizamos o conhecimento em todas as suas formas: científica, filosófica, cultural, tradicional e também a sabedoria que vem da experiência.
+          <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-slate-700">
+            Aqui na nossa escola valorizamos o conhecimento em todas as suas formas: científica, filosófica, sociológica, cultural, tradicional, ancestral e também a sabedoria que vem da experiência.
           </p>
+        </div>
 
-          <div className="pt-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
-                <Feather className="w-6 h-6" />
+        {/* Quadro Tipos de Cursos - Design fluido e 100% responsivo para mobile sem quebras ruins nem rolagem horizontal */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-sm space-y-8">
+          <div className="border-b border-slate-100 pb-5">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-amber-100 text-amber-900 border border-amber-200 mb-2">
+              📋 Modalidades e Programas
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Quais tipos de cursos oferecemos?
+            </h2>
+            <p className="mt-2 text-sm sm:text-base text-slate-600">
+              Descubra a proposta de cada formato e escolha o percurso alinhado ao seu momento profissional ou acadêmico.
+            </p>
+          </div>
+
+          <div className="space-y-6 divide-y divide-slate-100">
+            {/* 1. Freepremium */}
+            <div className="pt-2 first:pt-0 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xl">🟢</span>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                  Cursos Freepremium — Descoberta
+                </h3>
               </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
-                Escrever é processar
-              </h3>
+              <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
+                  Aprenda sem barreiras. Assista a todas as videoaulas e acesse o material didático completo de forma 100% gratuita para testar o conteúdo e conhecer nossa metodologia. Você só paga uma taxa de emissão se decidir que quer o documento oficial.
+                </p>
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
+                  Estudantes e profissionais que buscam conhecimento rápido, querem validar a qualidade do curso antes de investir ou precisam apenas do aprendizado prático imediato sem custo inicial.
+                </p>
+              </div>
             </div>
 
-            <p className="text-base text-slate-700 leading-relaxed">
-              Escrever não é apenas "entregar uma tarefa". É uma ferramenta de organização do pensamento:
-            </p>
-
-            <div className="space-y-2.5 pl-2">
-              <div className="flex items-center gap-3 text-slate-700 text-sm sm:text-base">
-                <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
-                <span>Quando apenas lemos, a informação fica fragmentada</span>
+            {/* 2. Capacitação */}
+            <div className="pt-6 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xl">🔵</span>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                  Cursos de Capacitação — Ação Prática
+                </h3>
               </div>
-              <div className="flex items-center gap-3 text-slate-700 text-sm sm:text-base">
-                <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
-                <span>Ao escrever, damos estrutura lógica às ideias</span>
-              </div>
-              <div className="flex items-center gap-3 text-slate-700 text-sm sm:text-base">
-                <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
-                <span>O que colocamos no papel ganha clareza e aplicabilidade</span>
+              <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
+                  Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas, metodologias e habilidades profissionais que geram resultado real no consultório, na empresa ou no projeto pessoal. Certificação com carga horária válida em todo o Brasil.
+                </p>
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
+                  Terapeutas, coaches, consultores, educadores e profissionais autônomos que buscam atualização técnica, requalificação ou expansão de repertório para atender melhor seus clientes, aumentar sua autoridade e melhorar seus resultados financeiros.
+                </p>
               </div>
             </div>
 
-            <p className="text-base text-slate-800 font-semibold leading-relaxed pt-2">
-              Por isso, ir além do certificado faz sentido: escrever é colocar o aprendizado em prática.
-            </p>
+            {/* 3. Horas Complementares */}
+            <div className="pt-6 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xl">🟡</span>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                  Cursos para Horas Complementares — Validação Acadêmica
+                </h3>
+              </div>
+              <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
+                  Cursos planejados sob medida para cumprir as exigências das Atividades Complementares das faculdades. Certificados legítimos com carga horária adequada para rápida aprovação na secretaria acadêmica.
+                </p>
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
+                  Alunos de graduação de qualquer faculdade do Brasil que precisam acumular horas extras obrigatórias no currículo acadêmico para garantir a colação de grau e se formar sem atrasos.
+                </p>
+              </div>
+            </div>
+
+            {/* 4. Formação Livre */}
+            <div className="pt-6 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xl">🔴</span>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                  Cursos de Formação Livre — Transformação
+                </h3>
+              </div>
+              <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
+                  Cursos mais longos, densos e completos desenhados para gerar transformação e emprego. Um mergulho profundo nas ferramentas mais exigidas pelo mercado de trabalho contemporâneo, focado em resultados sólidos e geração de renda.
+                </p>
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
+                  Pessoas que desejam mudar de carreira, aprender uma nova profissão do zero ou empreendedores que querem se capacitar para atuar com autoridade e consistência.
+                </p>
+              </div>
+            </div>
+
+            {/* 5. Treinamentos Corporativos */}
+            <div className="pt-6 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xl">🟣</span>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                  Treinamentos Corporativos e Empresariais — Desempenho Profissional
+                </h3>
+              </div>
+              <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
+                  Programas práticos e de curtíssima duração, desenhados sob medida para o ambiente de trabalho. Foco em execução imediata: domínio de ferramentas, cumprimento de normas, procedimentos internos, atendimento, segurança operacional e tarefas específicas. O profissional aprende a fazer exatamente do jeito que a empresa exige.
+                </p>
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
+                  Colaboradores, equipes e gestores que precisam dominar rapidamente uma função, padronizar processos ou atualizar-se conforme regras e rotinas da organização. Também atendemos empresas que buscam capacitar sua equipe com agilidade e foco em resultado.
+                </p>
+              </div>
+            </div>
+
+            {/* 6. Desenvolvimento da Escrita */}
+            <div className="pt-6 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xl">🟣</span>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                  Cursos de Desenvolvimento da Escrita — Autoria e Destaque
+                </h3>
+              </div>
+              <div className="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
+                  Transforme o que você aprendeu em conhecimento compartilhado. Aprenda a organizar ideias, estruturar textos, escrever com clareza e rigor, e publicar seu trabalho com reconhecimento. Da redação prática ao artigo científico, do relato de experiência ao livro — desenvolver a escrita é também desenvolver a sua autoridade. Seu texto pode ganhar publicação, identificação única e ficar acessível para sempre.
+                </p>
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
+                  Quem deseja ir além do certificado: estudantes que querem se destacar academicamente, profissionais que buscam construir presença e credibilidade, terapeutas, pesquisadores e todos que sentem que têm algo a dizer e querem aprender a expressar com clareza, estrutura e impacto.
+                </p>
+
+                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5 mt-2">
+                  <p className="font-bold text-slate-900 text-xs sm:text-sm uppercase tracking-wider">
+                    Caminho possível:
+                  </p>
+                  <p className="text-xs sm:text-sm text-slate-600">Conforme avança, você pode alcançar os níveis:</p>
+                  <ul className="space-y-1 text-xs sm:text-sm font-medium text-slate-800 pt-1">
+                    <li className="flex items-center gap-2">
+                      <span>🥉</span> <strong>Prata:</strong> texto publicado no blog da escola
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span>🥇</span> <strong>Ouro:</strong> trabalho com DOI em repositório científico
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span>💎</span> <strong>Diamante:</strong> obra original publicada como livro ou artigo em revista
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* 📋 Modalidades de Aprendizagem */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-8">
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
-                <Award className="w-6 h-6" />
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-2">
-                <span>📋</span> Modalidades de Aprendizagem
-              </h2>
+        {/* Escrever é processar - Direto no layout sem bordas pesadas de caixa */}
+        <section className="py-4 space-y-5 text-slate-800">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
+              <Feather className="w-6 h-6" />
             </div>
-            <p className="text-sm sm:text-base text-slate-600 mt-2">
-              Compreenda as diferenças de objetivo, exigências e formas de certificação para cada modalidade oferecida ou reconhecida.
-            </p>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Escrever é processar
+            </h3>
           </div>
 
-          {/* Tabela de Modalidades */}
-          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
-            <table className="w-full text-left text-sm border-collapse min-w-[560px]">
-              <thead>
-                <tr className="bg-slate-900 text-white">
-                  <th className="py-3.5 px-5 font-bold text-xs uppercase tracking-wider w-1/3">Modalidade</th>
-                  <th className="py-3.5 px-5 font-bold text-xs uppercase tracking-wider">O que é</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
-                <tr className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
-                    🎓 Formação
-                  </td>
-                  <td className="py-4 px-5 leading-relaxed">
-                    Trilha completa para uma profissão. Desenvolve competências técnicas e comportamentais focadas nas necessidades do mercado.
-                  </td>
-                </tr>
-                <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
-                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
-                    🛠️ Capacitação
-                  </td>
-                  <td className="py-4 px-5 leading-relaxed">
-                    Habilidade prática de forma rápida. O aluno aprende a executar uma tarefa ou dominar uma ferramenta específica.
-                  </td>
-                </tr>
-                <tr className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
-                    ⚙️ Treinamento
-                  </td>
-                  <td className="py-4 px-5 leading-relaxed">
-                    Curta duração. Ajusta o desempenho em uma tarefa muito específica, conforme exigência de processos ou empresas.
-                  </td>
-                </tr>
-                <tr className="hover:bg-slate-50/80 transition-colors bg-slate-50/30">
-                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
-                    📖 Curso Livre
-                  </td>
-                  <td className="py-4 px-5 leading-relaxed">
-                    Aprendizado flexível e sem burocracia. Sem exigência de escolaridade prévia, sobre temas variados.
-                  </td>
-                </tr>
-                <tr className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-4 px-5 font-bold text-slate-900 whitespace-nowrap align-top">
-                    ⏱️ Horas Complementares
-                  </td>
-                  <td className="py-4 px-5 leading-relaxed">
-                    Voltado para estudantes universitários. Cumpre exigência da faculdade e expande o conhecimento além da grade curricular.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            Escrever não é apenas "entregar uma tarefa". É uma ferramenta de organização do pensamento:
+          </p>
+
+          <div className="space-y-2.5 pl-2 sm:pl-4">
+            <div className="flex items-start gap-3 text-slate-700 text-sm sm:text-base">
+              <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0 mt-2"></span>
+              <span>Quando apenas lemos, a informação fica fragmentada</span>
+            </div>
+            <div className="flex items-start gap-3 text-slate-700 text-sm sm:text-base">
+              <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0 mt-2"></span>
+              <span>Ao escrever, damos estrutura lógica às ideias</span>
+            </div>
+            <div className="flex items-start gap-3 text-slate-700 text-sm sm:text-base">
+              <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0 mt-2"></span>
+              <span>O que colocamos no papel ganha clareza e aplicabilidade</span>
+            </div>
+          </div>
+
+          <p className="text-base sm:text-lg text-slate-900 font-semibold leading-relaxed pt-1">
+            Por isso, ir além do certificado faz sentido: escrever é colocar o aprendizado em prática.
+          </p>
+
+          {/* Botão de Chamada para Diretrizes de Publicação */}
+          <div className="pt-4">
+            <button
+              onClick={() => onNavigate ? onNavigate('diretrizes-publicacao') : undefined}
+              className="inline-flex items-center gap-2.5 bg-[#243042] hover:bg-slate-900 text-white font-bold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer text-sm sm:text-base group"
+            >
+              <span>Conhecer as Diretrizes de Publicação na Nossa Escola</span>
+              <ArrowRight className="w-4 h-4 text-[#FFC72C] group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
         </section>
 
