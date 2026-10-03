@@ -24,7 +24,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
   onNavigate
 }) => {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-800 font-sans pb-20">
+    <div className="min-h-screen bg-white text-slate-800 font-sans pb-20">
       {/* Top Breadcrumbs */}
       <div className="bg-[#182333] border-b border-slate-700/60 py-3">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
