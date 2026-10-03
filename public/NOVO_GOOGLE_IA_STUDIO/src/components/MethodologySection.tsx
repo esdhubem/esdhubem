@@ -36,7 +36,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
               Conheça os tipos de produção e trabalho para concluir a formação e alcançar os selos da nossa escola:
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
             <div className="relative rounded-2xl border-2 border-amber-700/30 bg-gradient-to-b from-amber-50 to-orange-50 p-6 text-center shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
               <div className="text-4xl mb-3">🥉</div>
               <h4 className="text-lg font-extrabold text-amber-800 mb-2">Bronze</h4>
@@ -62,14 +62,8 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Desenvolvimento e publicação de um livro autoral.</p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Seção da Jornada Pedagógica ESDHUBEM */}
-      <div className="py-14 sm:py-16 bg-[#F8FAFC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Strategic Banner: Regras de Certificação */}
+          {/* Strategic Banner: Regras de Certificação (Posicionado diretamente abaixo dos 4 cards) */}
           <div className="p-6 rounded-3xl bg-[#182333] text-white border border-slate-700 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0">
@@ -104,7 +98,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 };
