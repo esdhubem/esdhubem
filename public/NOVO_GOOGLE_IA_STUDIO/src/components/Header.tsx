@@ -302,21 +302,6 @@ export const Header: React.FC<HeaderProps> = ({
                     </button>
 
                     <button
-                      onClick={() => onNavigate('informacoes-legais')}
-                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
-                        currentPage === 'informacoes-legais'
-                          ? 'bg-cyan-500/20 text-cyan-300 font-bold'
-                          : 'text-slate-200 hover:text-white hover:bg-white/10'
-                      }`}
-                    >
-                      <Scale className="w-4 h-4 text-cyan-400 shrink-0" />
-                      <div>
-                        <div className="font-semibold text-xs">Valor Legal dos Certificados</div>
-                        <div className="text-[10px] text-slate-400">Lei 9.394/96 e validade nacional</div>
-                      </div>
-                    </button>
-
-                    <button
                       onClick={() => onNavigate('diretrizes-protecao-autoria')}
                       className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
                         currentPage === 'diretrizes-protecao-autoria'
@@ -358,6 +343,21 @@ export const Header: React.FC<HeaderProps> = ({
                       <div>
                         <div className="font-semibold text-xs">Diretrizes de Publicação</div>
                         <div className="text-[10px] text-slate-400">Normas para artigos, livros e parcerias</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('informacoes-legais')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'informacoes-legais'
+                          ? 'bg-cyan-500/20 text-cyan-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Scale className="w-4 h-4 text-cyan-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Valor Legal dos Certificados</div>
+                        <div className="text-[10px] text-slate-400">Lei 9.394/96 e validade nacional</div>
                       </div>
                     </button>
                   </div>
@@ -588,10 +588,6 @@ export const Header: React.FC<HeaderProps> = ({
               <Award className="w-4 h-4 text-[#FFC72C]" />
               <span>Diretrizes de Certificação</span>
             </button>
-            <button onClick={() => { onNavigate('informacoes-legais'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400 flex items-center gap-2">
-              <Scale className="w-4 h-4 text-cyan-400" />
-              <span>Valor Legal dos Certificados</span>
-            </button>
             <button onClick={() => { onNavigate('diretrizes-protecao-autoria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-300 flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span>Diretrizes de Proteção à Autoria</span>
@@ -600,6 +596,10 @@ export const Header: React.FC<HeaderProps> = ({
             <button onClick={() => { onNavigate('diretrizes-publicacao'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2">
               <Handshake className="w-4 h-4 text-blue-400" />
               <span>Diretrizes de Publicação</span>
+            </button>
+            <button onClick={() => { onNavigate('informacoes-legais'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400 flex items-center gap-2">
+              <Scale className="w-4 h-4 text-cyan-400" />
+              <span>Valor Legal dos Certificados</span>
             </button>
           </div>
 
