@@ -185,9 +185,9 @@ const CATEGORY_META: Record<
   'landing-pages-biolinks': {
     heroTag: 'Desenvolvimento Web & Soluções Digitais',
     description:
-      'Soluções de alta conversão para profissionais, advogados, psicólogos, médicos e empresas. Criação de Landing Pages personalizadas, Biolinks interativos, hospedagem e estrutura técnica completa.',
+      'Soluções de alta conversão para profissionais e empresas. Criação de Landing Pages personalizadas, Biolinks interativos, hospedagem e estrutura técnica completa.',
     targetPublic:
-      'Advogados, psicólogos, médicos, corretores de imóveis, consultores e profissionais liberais que buscam presença digital forte e atração de clientes.',
+      'Consultores, técnicos e profissionais liberais que buscam presença digital forte e atração de clientes.',
     skillsSummary: [
       'Design Responsivo & Alta Conversão',
       'Integração com WhatsApp & Formulários',
