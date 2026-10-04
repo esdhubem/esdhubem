@@ -146,11 +146,11 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
-                  Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas, metodologias e habilidades profissionais que geram resultado real no consultório, na empresa ou no projeto pessoal. Certificação com carga horária válida em todo o Brasil.
+                  Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas, metodologias e habilidades profissionais que geram resultado real no consultório, na empresa ou no projeto pessoal.
                 </p>
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
-                  Terapeutas, coaches, consultores, educadores e profissionais autônomos que buscam atualização técnica, requalificação ou expansão de repertório para atender melhor seus clientes, aumentar sua autoridade e melhorar seus resultados financeiros.
+                  Profissionais em atividade que precisam atualizar competências, aprender uma nova ferramenta de trabalho ou resolver demandas específicas da sua rotina profissional.
                 </p>
               </div>
             </div>
@@ -160,17 +160,17 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xl">🟡</span>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
-                  Cursos para Horas Complementares — Validação Acadêmica
+                  Cursos de Horas Complementares — com Foco em Validação Acadêmica
                 </h3>
               </div>
               <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
-                  Cursos planejados sob medida para cumprir as exigências das Atividades Complementares das faculdades. Certificados legítimos com carga horária adequada para rápida aprovação na secretaria acadêmica.
+                  Cursos estruturados para atender diretamente às exigências de Atividades Complementares de cursos de graduação e pós-graduação. Conteúdo alinhado às diretrizes do MEC para cursos livres, com certificado detalhado que especifica carga horária, conteúdo programático e dados da instituição.
                 </p>
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
-                  Alunos de graduação de qualquer faculdade do Brasil que precisam acumular horas extras obrigatórias no currículo acadêmico para garantir a colação de grau e se formar sem atrasos.
+                  Universitários de qualquer período e área que precisam cumprir a carga horária complementar exigida pela sua faculdade para poder colar grau.
                 </p>
               </div>
             </div>
@@ -186,11 +186,11 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
-                  Cursos mais longos, densos e completos desenhados para gerar transformação e emprego. Um mergulho profundo nas ferramentas mais exigidas pelo mercado de trabalho contemporâneo, focado em resultados sólidos e geração de renda.
+                  Jornadas completas de aprendizado para quem quer dominar uma área do início ao fim. Diferente de um curso rápido, a formação livre oferece uma visão ampla e profunda, combinando teoria consistente, prática orientada e estudos de caso reais.
                 </p>
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
-                  Pessoas que desejam mudar de carreira, aprender uma nova profissão do zero ou empreendedores que querem se capacitar para atuar com autoridade e consistência.
+                  Pessoas em transição de carreira, iniciantes que querem uma base sólida antes de atuar ou qualquer pessoa que deseja um mergulho profundo e transformador em um tema.
                 </p>
               </div>
             </div>
@@ -200,37 +200,37 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xl">🟣</span>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
-                  Treinamentos Corporativos e Empresariais — Desempenho Profissional
+                  Treinamentos Corporativos — Desempenho Profissional
                 </h3>
               </div>
               <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
-                  Programas práticos e de curtíssima duração, desenhados sob medida para o ambiente de trabalho. Foco em execução imediata: domínio de ferramentas, cumprimento de normas, procedimentos internos, atendimento, segurança operacional e tarefas específicas. O profissional aprende a fazer exatamente do jeito que a empresa exige.
+                  Programas desenvolvidos sob medida para equipes, empresas e instituições. Foco em alinhar processos, capacitar colaboradores em rotinas específicas, melhorar o clima organizacional e desenvolver lideranças com metodologias ativas e mensuração de resultados.
                 </p>
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
-                  Colaboradores, equipes e gestores que precisam dominar rapidamente uma função, padronizar processos ou atualizar-se conforme regras e rotinas da organização. Também atendemos empresas que buscam capacitar sua equipe com agilidade e foco em resultado.
+                  Gestores de RH, líderes de equipe, diretores de empresas e organizações do terceiro setor que precisam capacitar seus times com agilidade e qualidade pedagógica comprovada.
                 </p>
               </div>
             </div>
 
-            {/* 6. Desenvolvimento da Escrita */}
+            {/* 6. Autoria e Destaque */}
             <div className="pt-8 space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xl">🟣</span>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
-                  Cursos de Desenvolvimento da Escrita — Autoria e Destaque
+                  Autoria e Destaque — Desenvolvimento da Escrita
                 </h3>
               </div>
               <div className="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
-                  Transforme o que você aprendeu em conhecimento compartilhado. Aprenda a organizar ideias, estruturar textos, escrever com clareza e rigor, e publicar seu trabalho com reconhecimento. Da redação prática ao artigo científico, do relato de experiência ao livro — desenvolver a escrita é também desenvolver a sua autoridade. Seu texto pode ganhar publicação, identificação única e ficar acessível para sempre.
+                  Aprenda a estruturar, escrever e publicar. Do texto prático ao livro — com reconhecimento Prata, Ouro ou Diamante. Transforme o que você aprendeu em conhecimento compartilhado e construa sua presença e credibilidade intelectual.
                 </p>
                 <p>
                   <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
-                  Quem deseja ir além do certificado: estudantes que querem se destacar academicamente, profissionais que buscam construir presença e credibilidade, terapeutas, pesquisadores e todos que sentem que têm algo a dizer e querem aprender a expressar com clareza, estrutura e impacto.
+                  Estudantes, pesquisadores, terapeutas e profissionais que desejam ir além do certificado, organizar suas ideias e publicar artigos, ensaios ou livros autorais.
                 </p>
 
                 <div className="pt-3 space-y-1.5">
@@ -250,6 +250,46 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
                     </li>
                   </ul>
                 </div>
+              </div>
+            </div>
+
+            {/* 7. Aprofundamento Profissional - Saúde */}
+            <div className="pt-8 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xl">💙</span>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                  Aprofundamento Profissional — Área da Saúde
+                </h3>
+              </div>
+              <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
+                  Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, troca de experiência e desenvolvimento técnico — não se tratam de pós-graduação, mas de aprofundamento profissional prático e fundamentado. Para participar, é necessário comprovar formação superior. Foco em conteúdos relevantes, boas práticas e evolução contínua da atuação.
+                </p>
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
+                  Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos, terapeutas e demais profissionais já formados que buscam atualização, ampliação de repertório e aperfeiçoamento sem precisar ingressar em programa de pós-graduação.
+                </p>
+              </div>
+            </div>
+
+            {/* 8. Workshop de Orientação de Carreira */}
+            <div className="pt-8 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xl">🧭</span>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                  Workshop de Orientação de Carreira — Transformação Profissional
+                </h3>
+              </div>
+              <div className="space-y-2 text-sm sm:text-base text-slate-700 leading-relaxed pl-1 sm:pl-7">
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Descrição:</strong>
+                  Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e quais tendências redesenham o mundo do trabalho. Você vai entender para onde vai a sua área, como ocorre a mobilidade entre funções, o que outros profissionais já estão fazendo e — principalmente — o que pode estudar agora para se manter relevante e preparado para o que vem a seguir.
+                </p>
+                <p>
+                  <strong className="text-slate-900 font-semibold block text-xs uppercase tracking-wider mb-0.5">Público-alvo:</strong>
+                  Quem está em dúvida sobre o futuro da profissão, deseja mudar de área, precisa se reinventar no mercado ou quer planejar com clareza quais caminhos seguir e quais conhecimentos desenvolver para não ficar para trás.
+                </p>
               </div>
             </div>
           </div>
