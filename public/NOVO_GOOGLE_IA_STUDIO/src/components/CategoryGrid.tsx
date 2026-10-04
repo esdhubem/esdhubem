@@ -258,7 +258,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Aprenda a estruturar, escrever e publicar. Do texto prático ao livro — com reconhecimento Prata, Ouro ou Diamante. Transforme o que você aprendeu em conhecimento compartilhado e construa sua presença e credibilidade intelectual.
+                      Aprenda a estruturar, escrever e publicar. Do texto prático ao livro, com reconhecimento Prata, Ouro ou Diamante. Transforme o que você aprendeu em conhecimento compartilhado e construa sua presença e credibilidade intelectual.
                     </p>
                   </div>
                   <div>
