@@ -19,7 +19,8 @@ import {
   FileText,
   MessageCircle,
   Landmark,
-  ChevronRight
+  ChevronRight,
+  Info
 } from 'lucide-react';
 
 interface DiretrizesPublicacaoParceriasPageProps {
@@ -658,6 +659,124 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </p>
           </div>
 
+          {/* 🎯 Nossos Eixos Temáticos de Pesquisa (Alinhados à CAPES) */}
+          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+            <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-600 shrink-0">
+                <Target className="w-6 h-6" />
+              </div>
+              <div>
+                <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">
+                  Alinhamento CAPES
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-2">
+                  <span>🎯 Nossos Eixos Temáticos de Pesquisa</span>
+                </h3>
+              </div>
+            </div>
+
+            {/* Esclarecimento importante */}
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-1.5">
+              <div className="font-bold text-slate-900 flex items-center gap-2">
+                <Info className="w-4 h-4 text-blue-600 shrink-0" />
+                <span>Esclarecimento importante:</span>
+              </div>
+              <p>
+                A ESDHUBEM adota este alinhamento como <strong>referência organizacional e metodológica</strong> para nortear, estruturar e dar coerência interna aos nossos cursos e produções. Esta escolha não confere à escola status de instituição acadêmica ou científica <em>stricto sensu</em> — trata-se de uma forma de ordenar nosso sistema de ensino, definir linhas de estudo e seguir critérios reconhecidos, sem, contudo, assumir natureza ou competência que não nos cabe.
+              </p>
+            </div>
+
+            <p className="text-slate-700 text-xs sm:text-sm sm:text-base leading-relaxed">
+              Alinhados aos critérios de avaliação da <strong className="text-slate-900">CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior)</strong>, os cursos livres e os projetos da ESDHUBEM conectam-se diretamente a quatro grandes áreas do conhecimento:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 pt-1">
+              {/* Eixo 1: Saúde Coletiva */}
+              <div className="bg-gradient-to-b from-rose-50/50 to-white border border-rose-200/80 rounded-2xl p-5 space-y-4 shadow-xs flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-600 font-bold">
+                    <HeartPulse className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-rose-600 block">Eixo 01</span>
+                    <h4 className="font-bold text-slate-900 text-base sm:text-lg">Saúde Coletiva</h4>
+                  </div>
+                  <div className="text-xs space-y-2 text-slate-600 leading-relaxed">
+                    <p>
+                      <strong className="text-slate-800">Foco:</strong> Práticas Integrativas, Bem-Estar e Saúde Mental.
+                    </p>
+                    <p>
+                      <strong className="text-slate-800">Aplicação:</strong> Estudos sobre coaching, espiritualidade aplicada, meditação e Práticas Integrativas e Complementares (PICS).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Eixo 2: Interdisciplinar */}
+              <div className="bg-gradient-to-b from-blue-50/50 to-white border border-blue-200/80 rounded-2xl p-5 space-y-4 shadow-xs flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-600 font-bold">
+                    <Compass className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600 block">Eixo 02</span>
+                    <h4 className="font-bold text-slate-900 text-base sm:text-lg">Interdisciplinar</h4>
+                  </div>
+                  <div className="text-xs space-y-2 text-slate-600 leading-relaxed">
+                    <p>
+                      <strong className="text-slate-800">Foco:</strong> Desenvolvimento Pessoal, Humano, Profissional e Consciencial.
+                    </p>
+                    <p>
+                      <strong className="text-slate-800">Aplicação:</strong> Competências socioemocionais cruzando áreas como psicologia, administração e filosofia.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Eixo 3: Ensino & Educação */}
+              <div className="bg-gradient-to-b from-emerald-50/50 to-white border border-emerald-200/80 rounded-2xl p-5 space-y-4 shadow-xs flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 font-bold">
+                    <GraduationCap className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 block">Eixo 03</span>
+                    <h4 className="font-bold text-slate-900 text-base sm:text-lg">Ensino & Educação</h4>
+                  </div>
+                  <div className="text-xs space-y-2 text-slate-600 leading-relaxed">
+                    <p>
+                      <strong className="text-slate-800">Foco:</strong> Pedagogia Integrativa e Ética.
+                    </p>
+                    <p>
+                      <strong className="text-slate-800">Aplicação:</strong> Metodologias inovadoras de ensino e educação voltada para adultos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Eixo 4: Ciências da Religião, História & Cultura */}
+              <div className="bg-gradient-to-b from-amber-50/50 to-white border border-amber-200/80 rounded-2xl p-5 space-y-4 shadow-xs flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600 font-bold">
+                    <Landmark className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-amber-600 block">Eixo 04</span>
+                    <h4 className="font-bold text-slate-900 text-base sm:text-lg">Ciências da Religião, História & Cultura</h4>
+                  </div>
+                  <div className="text-xs space-y-2 text-slate-600 leading-relaxed">
+                    <p>
+                      <strong className="text-slate-800">Foco:</strong> Esoterismo Ocidental, Novas Formas de Espiritualidade e Fenômenos Contemporâneos.
+                    </p>
+                    <p>
+                      <strong className="text-slate-800">Aplicação:</strong> Estudos históricos, antropológicos e sociológicos sobre correntes tradicionais (Alquimia, Cabala, Teosofia, Ocultismo, Maçonaria) e manifestações modernas, como os movimentos New Age, a espiritualidade sem religião e os reflexos culturais do esoterismo na sociedade contemporânea.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* UM PERCURSO DE AUTORIA */}
           <div className="bg-gradient-to-r from-slate-900 to-[#182333] text-white p-6 sm:p-8 rounded-2xl space-y-4 shadow-lg text-center">
             <h4 className="text-lg sm:text-xl font-black uppercase tracking-wider text-[#FFC72C]">
@@ -687,113 +806,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             <p className="text-xs text-slate-400 italic pt-1">
               O curso pode ser o começo. A produção é uma possibilidade. A autoria é uma construção.
             </p>
-          </div>
-        </div>
-
-        {/* Card 3: 🎯 Nossos Eixos Temáticos de Pesquisa (Alinhados à CAPES) */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6">
-          <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
-            <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-600 shrink-0">
-              <Target className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">
-                Alinhamento CAPES
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                🎯 Nossos Eixos Temáticos de Pesquisa
-              </h2>
-            </div>
-          </div>
-
-          <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-            Alinhados aos critérios de avaliação da <strong className="text-slate-900">CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior)</strong>, os cursos livres e os projetos da ESDHUBEM conectam-se diretamente a quatro grandes áreas do conhecimento:
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-2">
-            {/* Eixo 1: Saúde Coletiva */}
-            <div className="bg-gradient-to-b from-rose-50/50 to-white border border-rose-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-600 font-bold">
-                  <HeartPulse className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-rose-600 block">Eixo 01</span>
-                  <h3 className="font-bold text-slate-900 text-lg">Saúde Coletiva</h3>
-                </div>
-                <div className="text-xs space-y-2 text-slate-600">
-                  <p>
-                    <strong className="text-slate-800">Foco:</strong> Práticas Integrativas, Bem-Estar e Saúde Mental.
-                  </p>
-                  <p>
-                    <strong className="text-slate-800">Aplicação:</strong> Estudos sobre coaching, espiritualidade aplicada, meditação e Práticas Integrativas e Complementares (PICS).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Eixo 2: Interdisciplinar */}
-            <div className="bg-gradient-to-b from-blue-50/50 to-white border border-blue-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-600 font-bold">
-                  <Compass className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600 block">Eixo 02</span>
-                  <h3 className="font-bold text-slate-900 text-lg">Interdisciplinar</h3>
-                </div>
-                <div className="text-xs space-y-2 text-slate-600">
-                  <p>
-                    <strong className="text-slate-800">Foco:</strong> Desenvolvimento Pessoal, Humano, Profissional e Consciencial.
-                  </p>
-                  <p>
-                    <strong className="text-slate-800">Aplicação:</strong> Competências socioemocionais cruzando áreas como psicologia, administração e filosofia.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Eixo 3: Ensino & Educação */}
-            <div className="bg-gradient-to-b from-emerald-50/50 to-white border border-emerald-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 font-bold">
-                  <GraduationCap className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 block">Eixo 03</span>
-                  <h3 className="font-bold text-slate-900 text-lg">Ensino & Educação</h3>
-                </div>
-                <div className="text-xs space-y-2 text-slate-600">
-                  <p>
-                    <strong className="text-slate-800">Foco:</strong> Pedagogia Integrativa e Ética.
-                  </p>
-                  <p>
-                    <strong className="text-slate-800">Aplicação:</strong> Metodologias inovadoras de ensino e educação voltada para adultos.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Eixo 4: Ciências da Religião, História & Cultura */}
-            <div className="bg-gradient-to-b from-amber-50/50 to-white border border-amber-200/80 rounded-2xl p-5 space-y-4 shadow-sm flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600 font-bold">
-                  <Landmark className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-600 block">Eixo 04</span>
-                  <h3 className="font-bold text-slate-900 text-lg">Ciências da Religião, História & Cultura</h3>
-                </div>
-                <div className="text-xs space-y-2 text-slate-600">
-                  <p>
-                    <strong className="text-slate-800">Foco:</strong> Esoterismo Ocidental, Novas Formas de Espiritualidade e Fenômenos Contemporâneos.
-                  </p>
-                  <p>
-                    <strong className="text-slate-800">Aplicação:</strong> Estudos históricos, antropológicos e sociológicos sobre correntes tradicionais (Alquimia, Cabala, Teosofia, Ocultismo, Maçonaria) e manifestações modernas, como os movimentos New Age, a espiritualidade sem religião e os reflexos culturais do esoterismo na sociedade contemporânea.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
