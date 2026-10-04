@@ -14,23 +14,17 @@ import {
   Compass,
   Cpu,
   Target,
-  BookOpenCheck,
   Building2,
   Award,
-  ArrowRight,
   ArrowLeft,
   Search,
   BookOpen,
-  CheckCircle2,
-  Clock,
-  Star,
   Layers,
   ChevronRight,
   ShieldCheck
 } from 'lucide-react';
 import { CategoryItem, Course } from '../types';
-import { CATEGORIES_DATA, COURSES_DATA } from '../data/coursesData';
-import profSilvianeImg from '../assets/prof-silviane.png';
+import { CATEGORIES_DATA } from '../data/coursesData';
 
 interface CategoriesPageProps {
   onBackToHome: () => void;
@@ -70,106 +64,98 @@ const renderCategoryIcon = (iconName: string, className: string = 'w-6 h-6') => 
       return <Cpu className={className} />;
     case 'Target':
       return <Target className={className} />;
-    case 'BookOpenCheck':
-      return <BookOpenCheck className={className} />;
     case 'Building2':
       return <Building2 className={className} />;
     case 'Award':
       return <Award className={className} />;
+    case 'BookOpen':
     default:
       return <BookOpen className={className} />;
   }
 };
 
-// Descriptions and key competencies for each category
+// Rich details metadata for all 18 categories
 const CATEGORY_DETAILS: Record<string, { summary: string; skills: string[] }> = {
   'desenvolvimento-pessoal': {
     summary: 'Autoconhecimento, inteligência emocional, foco, hábitos saudáveis e transformação individual.',
-    skills: ['Autogestão', 'Inteligência Emocional', 'Resiliência', 'Mindset de Crescimento']
+    skills: ['Inteligência Emocional', 'Autodisciplina', 'Comunicação Empática', 'Gestão do Tempo']
   },
   'desenvolvimento-humano': {
-    summary: 'Compreensão do potencial humano, relações interpessoais profundas, empatia e bem-estar integral.',
-    skills: ['Psicologia Positiva', 'Comunicação Empática', 'Saúde Mental', 'Relações Saudáveis']
+    summary: 'Estudos aprofundados sobre ciclos da vida, relações humanas, maturidade e potencial realizador.',
+    skills: ['Psicologia Relacional', 'Comportamento Humano', 'Antropologia Prática', 'Resolução de Conflitos']
   },
   'desenvolvimento-profissional': {
-    summary: 'Carreira, oratória, comunicação corporativa, liderança e competências técnicas do mercado.',
-    skills: ['Liderança Assertiva', 'Comunicação Corporativa', 'Gestão de Projetos', 'Negociação']
+    summary: 'Habilidades de liderança, comunicação corporativa, gestão estratégica e ascensão na carreira.',
+    skills: ['Liderança 360°', 'Comunicação Assertiva', 'Gestão de Projetos', 'Negociação Estratégica']
   },
   'desenvolvimento-etico': {
-    summary: 'Conduta ética, responsabilidade social, integridade nas decisões e conformidade profissional.',
-    skills: ['Ética Profissional', 'Tomada de Decisão', 'Compliance', 'Cidadania']
+    summary: 'Fundamentos de ética aplicada, responsabilidade civil, conduta profissional e integridade.',
+    skills: ['Ética Corporativa', 'Compliance Moral', 'Tomada de Decisão', 'Direito Preventivo']
   },
   'desenvolvimento-relacional': {
-    summary: 'Comunicação Não-Violenta (CNV), gestão de conflitos familiares e profissionais e sociabilidade.',
-    skills: ['CNV', 'Mediação de Conflitos', 'Escuta Ativa', 'Dinâmicas de Grupo']
+    summary: 'Dinâmicas familiares, vínculos afetivos, convivência pacífica e comunicação interpessoal não violenta.',
+    skills: ['CNV Aplicada', 'Mediação Familiar', 'Escuta Ativa', 'Inteligência Social']
   },
   'desenvolvimento-financeiro': {
-    summary: 'Educação financeira prática, planejamento orçamentário, investimentos conscientes e prosperidade.',
-    skills: ['Planejamento Financeiro', 'Investimentos', 'Mentalidade Próspera', 'Controle de Gastos']
-  },
-  'praticas-integrativas': {
-    summary: 'Terapias complementares, meditação, fitoterapia, aromaterapia e saúde integrativa (PICS).',
-    skills: ['Naturopatia', 'Mindfulness', 'Bioenergética', 'Qualidade de Vida']
+    summary: 'Planejamento patrimonial, mentalidade de prosperidade, controle orçamentário e finanças comportamentais.',
+    skills: ['Finanças Comportamentais', 'Orçamento Inteligente', 'Planejamento Pessoal', 'Investimentos Básicos']
   },
   'desenvolvimento-da-consciencia': {
-    summary: 'Filosofia prática, presença plena, ampliação perceptual e transcendência no cotidiano.',
-    skills: ['Autopercepção', 'Presença Plena', 'Maturidade Emocional', 'Filosofia Aplicada']
+    summary: 'Práticas meditativas, presença plena, espiritualidade laica, filosofia aplicada e autorreflexão.',
+    skills: ['Mindfulness', 'Filosofia Prática', 'Auto-observação', 'Equilíbrio Mental']
+  },
+  'praticas-integrativas': {
+    summary: 'Terapias complementares, abordagens holísticas da saúde, equilíbrio bioenergético e bem-estar.',
+    skills: ['PICS / SUS', 'Abordagem Holística', 'Equilíbrio Energético', 'Saúde Preventiva']
   },
   'desenvolvimento-ambiental': {
-    summary: 'Sustentabilidade prática, consumo consciente, ecologia pessoal e responsabilidade planetária.',
-    skills: ['ESG', 'Sustentabilidade', 'Consumo Consciente', 'Eco-eficiência']
+    summary: 'Sustentabilidade prática, consumo consciente, ecologia pessoal e conexão responsável com o planeta.',
+    skills: ['Sustentabilidade Cotidiana', 'Eco-eficiência', 'Consumo Consciente', 'Gestão de Resíduos']
   },
-  'cursos-freepremium': {
-    summary: 'Aulas 100% gratuitas para assistir e aprender, com certificado oficial opcional de alta qualidade.',
-    skills: ['Acesso Imediato', 'Zero Custo Inicial', 'Material Grátis', 'Certificação Rápida']
-  },
-  'horas-complementares': {
-    summary: 'Cursos desenhados especificamente para averbação de horas acadêmicas em universidades do Brasil.',
-    skills: ['Horas Complementares*', 'Emissão com Carga Horária', 'QR Code Antifraude', 'Acesso Imediato']
-  },
-  'formacao-livre': {
-    summary: 'Programas densos e práticos para nova carreira profissional, transição e geração de renda.',
-    skills: ['Formação Completa', 'Foco no Mercado', 'Mentoria', 'Portfólio Prático']
+  'desenvolvimento-solidario': {
+    summary: 'Voluntariado estruturado, terceiro setor, responsabilidade social e projetos comunitários de impacto.',
+    skills: ['Gestão de ONGs', 'Projetos Sociais', 'Empatia Coletiva', 'Captação de Recursos']
   },
   'desenvolvimento-tecnologico-ia': {
-    summary: 'Inteligência artificial aplicada ao trabalho, ferramentas digitais e produtividade moderna.',
-    skills: ['Prompt Engineering', 'Automação', 'Ferramentas IA', 'Produtividade Digital']
+    summary: 'Inteligência Artificial ética, produtividade com ferramentas digitais, automação e futuro do trabalho.',
+    skills: ['Engenharia de Prompts', 'Automação sem Código', 'IA para Negócios', 'Cultura Digital']
   },
-  'coach-integrativo': {
-    summary: 'Técnicas de coaching integrativo, ferramentas de facilitação e mentoria humanizada.',
-    skills: ['Perguntas Poderosas', 'Metas SMART', 'Rapport', 'Plano de Vida']
+  'cursos-freepremium': {
+    summary: 'Cursos abertos e 100% gratuitos para assistir e testar, com taxa simbólica opcional para certificação formal.',
+    skills: ['Aulas Abertas', 'Flexibilidade Total', 'Testes Práticos', 'Certificação Opcional']
   },
-  'pedagogia-integrativa': {
-    summary: 'Educação humanizada, metodologias ativas de ensino e práticas acolhedoras de aprendizagem.',
-    skills: ['Metodologias Ativas', 'Educação Socioemocional', 'Inclusão', 'Facilitação']
+  'cursos-capacitacao': {
+    summary: 'Formações técnicas e operacionais voltadas para a prática imediata no mercado de trabalho e consultoria.',
+    skills: ['Metodologia Aplicada', 'Ferramentas de Mercado', 'Protocolos Profissionais', 'Cases Reais']
   },
-  'desenvolvimento-nas-empresas': {
-    summary: 'Treinamentos in-company, cultura organizacional, team building e clima corporativo positivo.',
-    skills: ['Cultura Organizacional', 'Engajamento de Times', 'Feedback 360°', 'Liderança Humanizada']
+  'horas-complementares': {
+    summary: 'Cargas horárias certificadas (20h a 120h) válidas para comprovação em universidades e faculdades brasileiras.',
+    skills: ['Validade Universitária', 'Decreto 5.154/04', 'Carga Horária Flexível', 'Validação Online']
   },
-  'formacao-empresarial': {
-    summary: 'Gestão de negócios, empreendedorismo ético, processos executivos e visão estratégica.',
-    skills: ['Planejamento Estratégico', 'Empreendedorismo', 'Modelos de Negócio', 'Inovação']
+  'formacao-livre': {
+    summary: 'Programas de extensão livres e multidisciplinares focados em qualificação contínua e novos saberes.',
+    skills: ['Multidisciplinaridade', 'Atualização Contínua', 'Sem Pré-requisito', 'Ritmo Próprio']
+  },
+  'autoria-destaque': {
+    summary: 'Estruturação, redação e publicação de artigos de conclusão, anais e livros com certificação Prata, Ouro e Diamante.',
+    skills: ['Redação Científica', 'Publicação DOI', 'Mentoria Editorial', 'Registro Autoral']
   },
   'aprofundamento-profissional-saude': {
-    summary: 'Cursos exclusivos para graduados em saúde: atualização técnica, boas práticas e evolução clínica fundamentada.',
-    skills: ['Graduados em Saúde', 'Prática Clínica', 'Atualização Técnica', 'Evolução Contínua']
+    summary: 'Cursos exclusivos para graduados em Biomedicina, Enfermagem, Nutrição, Psicologia e Fisioterapia.',
+    skills: ['Atualização Técnica', 'Boas Práticas Clínicas', 'Evidências Científicas', 'Saúde Integrativa']
   },
   'workshop-orientacao-carreira': {
-    summary: 'Análise de tendências do mercado de trabalho, mobilidade entre funções e planejamento de transformação profissional.',
-    skills: ['Transição de Carreira', 'Futuro do Trabalho', 'Planejamento Estratégico', 'Mobilidade Profissional']
+    summary: 'Workshops intensivos para diagnóstico de carreira, transição profissional e novos rumos de mercado.',
+    skills: ['Diagnóstico de Perfil', 'Transição de Carreira', 'Portfólio & Posicionamento', 'Mercado Futuro']
   }
 };
 
 export const CategoriesPage: React.FC<CategoriesPageProps> = ({
   onBackToHome,
-  onSelectCourse,
-  onNavigateToCourseDetail,
   onNavigateToCategoryDetail
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGroup, setSelectedGroup] = useState<string>('todos');
-  const [activeCategorySlug, setActiveCategorySlug] = useState<string | null>('desenvolvimento-pessoal');
 
   // Filter groups
   const groups = [
@@ -205,30 +191,6 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
       return matchesSearch && matchesGroup;
     });
   }, [searchTerm, selectedGroup]);
-
-  // Active Category Object
-  const activeCategory = CATEGORIES_DATA.find((c) => c.id === activeCategorySlug) || CATEGORIES_DATA[0];
-
-  // Matching courses for active category
-  const categoryCourses = useMemo(() => {
-    if (!activeCategorySlug) return COURSES_DATA.slice(0, 4);
-    
-    // Check if matching course category name or pillar
-    const cleanTitle = activeCategory.title.replace('\n', ' ');
-    const directMatches = COURSES_DATA.filter((c) => {
-      return (
-        c.category.toLowerCase().includes(cleanTitle.toLowerCase()) ||
-        cleanTitle.toLowerCase().includes(c.category.toLowerCase()) ||
-        (activeCategorySlug === 'cursos-freepremium' && c.pillar === 'freepremium') ||
-        (activeCategorySlug === 'horas-complementares' && c.pillar === 'horas-complementares') ||
-        (activeCategorySlug === 'formacao-livre' && c.pillar === 'formacao-livre')
-      );
-    });
-
-    if (directMatches.length > 0) return directMatches;
-    // Fallback so user always sees relevant high-quality courses
-    return COURSES_DATA.slice(0, 3);
-  }, [activeCategorySlug, activeCategory]);
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800">
@@ -289,7 +251,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
                 {searchTerm && (
                   <button
                     onClick={() => setSearchTerm('')}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 px-2 py-1 bg-slate-100 rounded-md"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 px-2 py-1 rounded-md cursor-pointer"
                   >
                     Limpar
                   </button>
@@ -321,15 +283,10 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </div>
           </div>
         </div>
-
-        {/* Decorative background logo */}
-        <div className="absolute -right-10 -bottom-10 opacity-5 pointer-events-none">
-          <BookOpenCheck className="w-96 h-96 text-white" />
-        </div>
       </header>
 
       {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 space-y-10">
         
         {/* Filter Pills */}
         <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
@@ -362,7 +319,6 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredCategories.map((cat) => {
-              const isSelected = activeCategorySlug === cat.id;
               const details = CATEGORY_DETAILS[cat.id] || {
                 summary: 'Capacitação prática e aprofundada para seu desenvolvimento contínuo.',
                 skills: ['Prática', 'Certificação', 'EAD', 'Flexibilidade']
@@ -371,12 +327,12 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
               return (
                 <div
                   key={cat.id}
-                  onClick={() => setActiveCategorySlug(cat.id)}
-                  className={`bg-white rounded-2xl border transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group ${
-                    isSelected
-                      ? 'border-[#243042] ring-2 ring-[#FFC72C] shadow-lg shadow-black/5 bg-slate-50/50'
-                      : 'border-slate-200/80 hover:border-slate-300 hover:shadow-md'
-                  }`}
+                  onClick={() => {
+                    if (onNavigateToCategoryDetail) {
+                      onNavigateToCategoryDetail(cat.id);
+                    }
+                  }}
+                  className="bg-white rounded-2xl border border-slate-200/80 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
                   id={`cat-card-${cat.id}`}
                 >
                   <div className="space-y-3">
@@ -418,181 +374,18 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
 
                   {/* Bottom Action Footer */}
                   <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs">
-                    <span
-                      className={`font-bold flex items-center gap-1 ${
-                        isSelected ? 'text-[#243042]' : 'text-slate-500 group-hover:text-[#243042]'
-                      }`}
-                    >
-                      {isSelected ? 'Categoria Ativa' : 'Selecionar'}
+                    <span className="font-bold text-[#243042] group-hover:text-[#182333] flex items-center gap-1">
+                      Ver Detalhes & Cursos
                     </span>
-                    {onNavigateToCategoryDetail ? (
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onNavigateToCategoryDetail(cat.id);
-                        }}
-                        className="text-[11px] font-bold text-[#243042] bg-slate-100 hover:bg-[#243042] hover:text-white px-2.5 py-1 rounded-lg transition-colors flex items-center gap-1 cursor-pointer"
-                        title="Ver página exclusiva desta categoria"
-                      >
-                        <span>Ver Cursos</span>
-                        <ChevronRight className="w-3 h-3" />
-                      </button>
-                    ) : (
-                      <div
-                        className={`w-6 h-6 rounded-full flex items-center justify-center transition-all ${
-                          isSelected
-                            ? 'bg-[#FFC72C] text-slate-950'
-                            : 'bg-slate-100 text-slate-400 group-hover:bg-[#243042] group-hover:text-white'
-                        }`}
-                      >
-                        <ChevronRight className="w-3.5 h-3.5" />
-                      </div>
-                    )}
+                    <div className="w-7 h-7 rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#243042] group-hover:text-[#FFC72C] flex items-center justify-center transition-all shadow-xs">
+                      <ChevronRight className="w-4 h-4" />
+                    </div>
                   </div>
                 </div>
               );
             })}
           </div>
         </div>
-
-        {/* Selected Category Course Showcase */}
-        {activeCategory && (
-          <section className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-sm space-y-6">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-6">
-              <div>
-                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
-                  <span>Cursos em Destaque na Área</span>
-                </div>
-                <h3 className="text-2xl font-black text-[#182333] flex items-center gap-3">
-                  <div
-                    className={`w-9 h-9 rounded-xl flex items-center justify-center text-white bg-gradient-to-br ${activeCategory.accentColor}`}
-                  >
-                    {renderCategoryIcon(activeCategory.iconName, 'w-5 h-5')}
-                  </div>
-                  <span>{activeCategory.title.replace('\n', ' ')}</span>
-                </h3>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                <div className="text-xs text-slate-500 max-w-md leading-relaxed">
-                  {CATEGORY_DETAILS[activeCategory.id]?.summary}
-                </div>
-                {onNavigateToCategoryDetail && (
-                  <button
-                    onClick={() => onNavigateToCategoryDetail(activeCategory.id)}
-                    className="inline-flex items-center gap-2 bg-[#243042] hover:bg-[#182333] text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm cursor-pointer transition-all whitespace-nowrap"
-                    id={`btn-pagina-categoria-${activeCategory.id}`}
-                  >
-                    <span>Ver Página da Categoria</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#FFC72C]" />
-                  </button>
-                )}
-              </div>
-            </div>
-
-            {/* Courses Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {categoryCourses.map((course) => (
-                <div
-                  key={course.id}
-                  className="bg-[#F8FAFC] border border-slate-200 rounded-2xl overflow-hidden hover:shadow-md transition-all flex flex-col justify-between group"
-                >
-                  <div className="relative">
-                    <img
-                      src={course.image}
-                      alt={course.title}
-                      className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
-                    <span className="absolute bottom-3 left-3 bg-[#243042]/90 backdrop-blur-xs text-[#FFC72C] text-[11px] font-bold px-2.5 py-0.5 rounded-md">
-                      {course.tag}
-                    </span>
-                    <span className="absolute top-3 right-3 bg-white/90 text-slate-800 text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
-                      <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
-                      {course.rating}
-                    </span>
-                  </div>
-
-                  <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                    <div>
-                      <h4 className="font-bold text-[#182333] text-base leading-snug line-clamp-2">
-                        {course.title}
-                      </h4>
-                      <p className="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-                        {course.subtitle}
-                      </p>
-                    </div>
-
-                    <div className="pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs">
-                      <div className="flex items-center gap-1.5 text-slate-500">
-                        <Clock className="w-3.5 h-3.5 text-[#243042]" />
-                        <span>{course.hours} horas</span>
-                      </div>
-                      <div className="font-semibold text-emerald-700 flex items-center gap-1">
-                        <CheckCircle2 className="w-3.5 h-3.5" />
-                        <span>Certificado Incluso</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-2 pt-2">
-                      {course.id === 'fp-assertiva' ? (
-                        <button
-                          onClick={onNavigateToCourseDetail}
-                          className="flex-1 bg-[#243042] hover:bg-[#182333] text-[#FFC72C] font-bold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center gap-1 cursor-pointer"
-                        >
-                          <span>Página do Curso</span>
-                          <ArrowRight className="w-3.5 h-3.5" />
-                        </button>
-                      ) : (
-                        <button
-                          onClick={() => onSelectCourse(course)}
-                          className="flex-1 bg-[#243042] hover:bg-[#182333] text-[#FFC72C] font-bold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center gap-1 cursor-pointer"
-                        >
-                          <span>Ver Detalhes</span>
-                          <ArrowRight className="w-3.5 h-3.5" />
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Special Callout: Comunicação Assertiva */}
-            <div className="bg-gradient-to-r from-[#182333] to-[#243042] rounded-2xl p-6 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md border border-slate-700">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-md">
-                  <img
-                    src={profSilvianeImg}
-                    alt="Professora Silviane Silvério"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="space-y-2 text-center sm:text-left">
-                  <span className="bg-[#FFC72C] text-slate-950 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full">
-                    Curso em Destaque 40h
-                  </span>
-                  <h4 className="text-xl font-bold text-white">
-                    Comunicação Assertiva com a Liderança
-                  </h4>
-                  <p className="text-xs text-slate-300 max-w-xl">
-                    Ministrado pela Professora Silviane Silvério. Aprenda postura corporativa, CNV e feedback 360° com certificado de 40h válido para horas complementares.
-                  </p>
-                </div>
-              </div>
-
-              <button
-                onClick={onNavigateToCourseDetail}
-                className="bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-black text-xs px-6 py-3 rounded-xl transition-all shrink-0 cursor-pointer shadow-md flex items-center gap-1.5"
-              >
-                <span>Acessar Curso Completo</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </section>
-        )}
 
       </div>
     </div>
