@@ -1,7 +1,7 @@
 import React from 'react';
 import { METHODOLOGY_PILLARS } from '../data/coursesData';
 import { MethodologyPillar } from '../types';
-import { Sparkles, Users, Award, GraduationCap, CheckCircle2, ArrowRight, Eye, FileText, ShieldCheck, Compass } from 'lucide-react';
+import { Sparkles, Users, Award, GraduationCap, CheckCircle2, ArrowRight, Eye, FileText, ShieldCheck, Compass, ClipboardList } from 'lucide-react';
 
 interface MethodologySectionProps {
   onSelectPillar: (pillarType: 'freepremium' | 'capacitacao' | 'horas-complementares' | 'formacao-livre') => void;
