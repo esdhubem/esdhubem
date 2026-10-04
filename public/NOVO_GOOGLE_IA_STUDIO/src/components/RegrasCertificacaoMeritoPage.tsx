@@ -79,7 +79,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             </h1>
 
             <p className="text-[#FFC72C] text-base sm:text-lg font-semibold leading-relaxed">
-              Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando Selos de Autoria (Bronze, Prata, Ouro e Diamante) através da publicação de artigos, manuscritos com registro DOI e Livros.
+              Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando Selos de Autoria (Bronze, Prata, Ouro e Diamante) através da publicação de artigos de blog, manuscritos com registro DOI ou Livros na Biblioteca Nacional.
             </p>
           </div>
 
@@ -116,12 +116,16 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
 
         {/* Sobre os Estudo e Pesquisa da ESDHUBEM */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-amber-500/10 border border-amber-500/30 text-slate-800 text-sm sm:text-base leading-relaxed shadow-sm space-y-3">
-          <h3 className="font-extrabold text-[#182333] text-lg sm:text-xl flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-amber-600" />
-            <span>Sobre os Estudo e Pesquisa da ESDHUBEM</span>
-          </h3>
-          <p className="text-slate-700 leading-relaxed">
+        <div className="text-slate-800 text-sm sm:text-base leading-relaxed space-y-4 max-w-4xl mx-auto">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
+              <BookOpen className="w-5 h-5" />
+            </div>
+            <h3 className="font-extrabold text-[#182333] text-xl sm:text-2xl tracking-tight">
+              Sobre os Estudo e Pesquisa da ESDHUBEM
+            </h3>
+          </div>
+          <p className="text-slate-700 leading-relaxed text-base sm:text-lg">
             No nosso site da <strong className="text-slate-900 font-bold">ESDHUBEM</strong> é um espaço reservado a publicação dos alunos que concluíram o curso e optaram por entregar um manuscrito de conclusão de curso como o objetivo de desenvolver métodos de escrita e adquirir um certificado com mais valor. Tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, publicação de livros e blogs, bem como melhorar o seu desempenho profissional e relacional. Acreditamos que a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena.
           </p>
         </div>
