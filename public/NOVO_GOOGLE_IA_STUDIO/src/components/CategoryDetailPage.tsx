@@ -444,6 +444,28 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                   <span className="text-xs text-slate-300 font-medium">Foco em Resultado</span>
                 </div>
               </div>
+            ) : currentCategory.id === 'landing-pages-biolinks' ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 w-full max-w-2xl text-left">
+                <div className="bg-[#182333]/90 border border-emerald-500/30 rounded-xl p-3.5 space-y-1">
+                  <div className="flex items-center gap-2 font-bold text-white text-xs sm:text-sm">
+                    <span className="text-base">🌐</span>
+                    <span>Páginas e Sites para Divulgação</span>
+                  </div>
+                  <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                    Páginas e sites prontos para você comprar e divulgar seu trabalho profissional, produtos ou serviços com alta conversão.
+                  </p>
+                </div>
+
+                <div className="bg-[#182333]/90 border border-[#FFC72C]/30 rounded-xl p-3.5 space-y-1">
+                  <div className="flex items-center gap-2 font-bold text-white text-xs sm:text-sm">
+                    <span className="text-base">📱</span>
+                    <span>Biolinks para Redes Sociais</span>
+                  </div>
+                  <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                    Biolinks interativos para organizar todos os seus contatos e links importantes de forma profissional nas redes sociais.
+                  </p>
+                </div>
+              </div>
             ) : (
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 w-full justify-center">
                 <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
