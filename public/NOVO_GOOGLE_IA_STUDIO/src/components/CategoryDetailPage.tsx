@@ -393,7 +393,9 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              <span className="block mb-2">{currentCategory.id === 'landing-pages-biolinks' ? 'Venda de' : 'Cursos de'}</span>
+              {currentCategory.id !== 'landing-pages-biolinks' && (
+                <span className="block mb-2">Cursos de</span>
+              )}
               <span className="text-[#FFC72C] block">{categoryCleanName}</span>
             </h1>
 
@@ -445,25 +447,24 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                 </div>
               </div>
             ) : currentCategory.id === 'landing-pages-biolinks' ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 w-full max-w-2xl text-left">
-                <div className="bg-[#182333]/90 border border-emerald-500/30 rounded-xl p-3.5 space-y-1">
-                  <div className="flex items-center gap-2 font-bold text-white text-xs sm:text-sm">
-                    <span className="text-base">🌐</span>
-                    <span>Páginas e Sites para Divulgação</span>
-                  </div>
-                  <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
-                    Páginas e sites prontos para você comprar e divulgar seu trabalho profissional, produtos ou serviços com alta conversão.
-                  </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 w-full justify-center">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
+                  <span className="block text-xl font-bold text-[#FFC72C]">
+                    {relatedCourses.length}
+                  </span>
+                  <span className="text-[11px] text-slate-300">Modelos Prontos</span>
                 </div>
-
-                <div className="bg-[#182333]/90 border border-[#FFC72C]/30 rounded-xl p-3.5 space-y-1">
-                  <div className="flex items-center gap-2 font-bold text-white text-xs sm:text-sm">
-                    <span className="text-base">📱</span>
-                    <span>Biolinks para Redes Sociais</span>
-                  </div>
-                  <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
-                    Biolinks interativos para organizar todos os seus contatos e links importantes de forma profissional nas redes sociais.
-                  </p>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
+                  <span className="block text-xl font-bold text-emerald-400">48h</span>
+                  <span className="text-[11px] text-slate-300">Prazo de Entrega</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center">
+                  <span className="block text-xl font-bold text-[#FFC72C]">1 Ano</span>
+                  <span className="text-[11px] text-slate-300">Hospedagem Grátis</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 text-center flex flex-col items-center justify-center">
+                  <span className="block text-xl font-bold text-emerald-400">100%</span>
+                  <span className="text-[11px] text-slate-300">Responsivo</span>
                 </div>
               </div>
             ) : (
@@ -539,44 +540,6 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                     <ShieldCheck className="w-4 h-4 text-emerald-400" />
                     <span>Validar Certificados</span>
                   </button>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Right Card: Digital Products Promo */}
-          {currentCategory.id === 'landing-pages-biolinks' && (
-            <div className="bg-[#182333] border border-emerald-500/30 rounded-2xl p-6 lg:max-w-3xl w-full shadow-xl">
-              <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
-                <div className="flex-1 space-y-4 w-full text-left">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold shadow-md">
-                      <LayoutTemplate className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="text-base font-extrabold text-white">Domínio & Hospedagem Grátis</h4>
-                      <p className="text-xs text-emerald-400">Por 1 Ano Completo</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-slate-300">
-                    Seu próximo cliente precisa encontrar você. Escolha um dos modelos abaixo, e nós cuidamos de toda a parte técnica, design e publicação para você focar no seu negócio.
-                  </p>
-                </div>
-                <div className="flex-1 w-full md:border-l md:border-slate-700/60 md:pl-6 flex flex-col gap-3">
-                  <ul className="space-y-2 text-sm text-slate-300">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Design de alta conversão (Focado em Vendas)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Integração Direta com WhatsApp</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Pronto em 48 horas (Após briefing)</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -824,15 +787,96 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
         </section>
       )}
 
+      {/* 4.2 Dedicated Section for Landing Pages & Biolinks */}
+      {currentCategory.id === 'landing-pages-biolinks' && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-6">
+          {/* Top 2 Cards: Páginas e Sites para Divulgação & Biolinks para Redes Sociais */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="bg-[#182333] border border-emerald-500/30 rounded-2xl p-6 text-white shadow-md space-y-2 hover:border-emerald-500/60 transition-all">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-xl">
+                  🌐
+                </div>
+                <h3 className="text-base sm:text-lg font-bold text-white">
+                  Páginas e Sites para Divulgação
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Páginas e sites prontos para você comprar e divulgar seu trabalho profissional, produtos ou serviços com alta conversão.
+              </p>
+            </div>
+
+            <div className="bg-[#182333] border border-[#FFC72C]/30 rounded-2xl p-6 text-white shadow-md space-y-2 hover:border-[#FFC72C]/60 transition-all">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#FFC72C]/20 text-[#FFC72C] border border-[#FFC72C]/30 flex items-center justify-center text-xl">
+                  📱
+                </div>
+                <h3 className="text-base sm:text-lg font-bold text-white">
+                  Biolinks para Redes Sociais
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Biolinks interativos para organizar todos os seus contatos e links importantes de forma profissional nas redes sociais.
+              </p>
+            </div>
+          </div>
+
+          {/* Banner: Domínio & Hospedagem Grátis Por 1 Ano Completo */}
+          <div className="bg-linear-to-r from-[#182333] via-[#243042] to-[#182333] border border-emerald-500/40 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
+              <div className="flex-1 space-y-4 text-left">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center font-bold shadow-lg shrink-0">
+                    <LayoutTemplate className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg sm:text-xl font-extrabold text-white">
+                      Domínio & Hospedagem Grátis
+                    </h4>
+                    <p className="text-xs sm:text-sm text-emerald-400 font-semibold">
+                      Por 1 Ano Completo
+                    </p>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Seu próximo cliente precisa encontrar você. Escolha um dos modelos abaixo, e nós cuidamos de toda a parte técnica, design e publicação para você focar no seu negócio.
+                </p>
+              </div>
+
+              <div className="w-full md:w-auto md:border-l md:border-slate-700/80 md:pl-8 flex flex-col justify-center">
+                <ul className="space-y-3 text-xs sm:text-sm text-slate-200">
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span className="font-medium">Design de alta conversão (Focado em Vendas)</span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span className="font-medium">Integração Direta com WhatsApp</span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span className="font-medium">Pronto em 48 horas (Após briefing)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* 5. Course Catalog Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h3 className="text-xl font-bold text-[#243042]">
-              Cursos Disponíveis em {categoryCleanName}
+              {currentCategory.id === 'landing-pages-biolinks'
+                ? `Modelos Disponíveis em ${categoryCleanName}`
+                : `Cursos Disponíveis em ${categoryCleanName}`}
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
-              Mostrando {relatedCourses.length} cursos com certificação válida e metodologia prática
+              {currentCategory.id === 'landing-pages-biolinks'
+                ? `Mostrando ${relatedCourses.length} modelos prontos com alta conversão e design responsivo`
+                : `Mostrando ${relatedCourses.length} cursos com certificação válida e metodologia prática`}
             </p>
           </div>
 
