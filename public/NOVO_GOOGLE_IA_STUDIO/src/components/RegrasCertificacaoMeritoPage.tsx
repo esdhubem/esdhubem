@@ -625,6 +625,49 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
         </section>
 
+        {/* SECTION: Sobre Revisão, Ajustes e Reembolso */}
+        <section className="text-slate-800 space-y-6 max-w-4xl mx-auto py-2">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
+              <Scale className="w-5 h-5" />
+            </div>
+            <h2 className="font-extrabold text-[#182333] text-2xl sm:text-3xl tracking-tight">
+              Sobre Revisão, Ajustes e Reembolso
+            </h2>
+          </div>
+
+          <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
+            <p>
+              Caso o aluno não concorde com as sugestões e orientações da revisão, tem todo o direito de solicitar o reembolso do valor pago. Nessa situação:
+            </p>
+
+            <ul className="space-y-3 pl-1 text-sm sm:text-base">
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
+                <span>
+                  <strong className="text-slate-900 font-bold">Será emitido e entregue o Certificado Bronze</strong> de Conclusão de Curso, referente à participação e aproveitamento do conteúdo;
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
+                <span>
+                  <strong className="text-slate-900 font-bold">Do valor total, será descontada</strong> a taxa correspondente à emissão do certificado e ao suporte pedagógico prestado;
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
+                <span>
+                  <strong className="text-slate-900 font-bold">O valor restante</strong> será devolvido em até 7 dias úteis.
+                </span>
+              </li>
+            </ul>
+
+            <p className="text-xs sm:text-sm text-slate-500 leading-relaxed pt-2">
+              <strong className="text-slate-700 font-semibold">Justificativa:</strong> O trabalho de análise, leitura e orientação já foi realizado pela equipe — por isso, a emissão do certificado Bronze e o desconto correspondente reconhecem o atendimento e a participação no percurso, devolvendo o que excede esse valor.
+            </p>
+          </div>
+        </section>
+
         {/* SECTION 4: CALL TO ACTION BANNER */}
         <section className="p-6 sm:p-8 rounded-3xl bg-[#182333] border border-slate-700/80 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-white relative overflow-hidden">
           <div className="space-y-1 text-center md:text-left relative z-10">
