@@ -8,7 +8,15 @@ import {
   ShieldCheck,
   Award,
   ArrowRight,
-  Feather
+  Feather,
+  Scale,
+  FileText,
+  ExternalLink,
+  HelpCircle,
+  GraduationCap,
+  Clock,
+  Building2,
+  FileCheck2
 } from 'lucide-react';
 
 interface DiretrizesPedagogicasPageProps {
@@ -42,7 +50,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
 
           <div className="hidden sm:flex items-center gap-2 text-xs text-slate-300">
             <Sparkles className="w-4 h-4 text-[#FFC72C]" />
-            <span>ESDHUBEM • Proposta Pedagógica</span>
+            <span>ESDHUBEM • Proposta Pedagógica & Regulação</span>
           </div>
         </div>
       </div>
@@ -54,15 +62,15 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           <div className="lg:col-span-7 space-y-4 text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/20 text-[#FFC72C] text-xs font-bold uppercase tracking-wider border border-amber-400/30">
               <BookOpen className="w-4 h-4" />
-              <span>ESDHUBEM</span>
+              <span>ESDHUBEM • Marco Pedagógico</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-              Diretrizes Pedagógicas
+              Diretrizes Pedagógicas e Regulamentação
             </h1>
 
             <p className="text-[#FFC72C] text-lg sm:text-xl font-semibold leading-relaxed">
-              Uma escola de cursos livres que vai além do certificado.
+              Uma escola de cursos livres fundamentada na qualidade, na autoria e na transparência legal.
             </p>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed pt-1">
@@ -91,26 +99,45 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
       </header>
 
       {/* Main Content Body */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-        {/* Texto Institucional e Filosófico - Fora de caixas, direto e elegante */}
-        <div className="space-y-6 text-slate-800">
-          <p className="text-base sm:text-lg lg:text-xl leading-relaxed font-normal">
-            A ESDHUBEM oferece Cursos Livres, Capacitações, Treinamentos, Horas Complementares e Formações voltadas para o desenvolvimento humano, a ampliação de conhecimentos, a produção intelectual e o bem-estar.
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14">
+        {/* Seção 1: O Que São Diretrizes Pedagógicas para Cursos Livres e EaD */}
+        <section className="bg-slate-50 border border-slate-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-5 text-slate-800">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
+              <GraduationCap className="w-6 h-6" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+              O que são Diretrizes Pedagógicas em Escolas de Cursos Livres e EaD?
+            </h2>
+          </div>
+
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            As <strong>diretrizes pedagógicas para escolas e cursos livres de ensino a distância (EaD)</strong> são orientações fundamentais que visam assegurar a qualidade e a efetividade na prática pedagógica virtual. Elas estabelecem princípios e normas que devem ser seguidos por instituições de ensino, docentes e discentes, promovendo uma formação sólida e inclusiva.
           </p>
 
-          <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-slate-700">
-            Aqui na nossa escola valorizamos o conhecimento em todas as suas formas: científica, filosófica, sociológica, cultural, tradicional, ancestral e também a sabedoria que vem da experiência.
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            Essas diretrizes abordam aspectos essenciais como a <strong>estrutura curricular, avaliação formativa, acessibilidade, interatividade e produção autoral</strong>, garantindo que o ensino a distância não apenas amplie o acesso à educação, mas também mantenha altos padrões de aprendizado, rigor conceitual e desenvolvimento humano integral.
           </p>
-        </div>
 
-        {/* Seção Tipos de Cursos - Totalmente livre fora de caixas ou gaiolas */}
+          <div className="p-4 rounded-2xl bg-white border border-slate-200 text-slate-700 text-sm sm:text-base flex items-start gap-3">
+            <Sparkles className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+            <span>
+              Na ESDHUBEM, valorizamos o conhecimento em todas as suas formas: <strong>científica, filosófica, sociológica, cultural, tradicional, ancestral</strong> e também a sabedoria que vem da vivência prática e da experiência profissional.
+            </span>
+          </div>
+        </section>
+
+        {/* Seção 2: Modalidades e Tipos de Cursos ESDHUBEM */}
         <section className="space-y-8 pt-2">
           <div className="border-b border-slate-200 pb-5">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-amber-100 text-amber-900 border border-amber-200 mb-2">
-              📋 Modalidades e Programas
+              📋 Modalidades e Programas Oficiais
             </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+              Estrutura dos Tipos de Cursos da ESDHUBEM
+            </h2>
             <p className="mt-2 text-sm sm:text-base text-slate-600">
-              Descubra a proposta de cada formato e escolha o percurso alinhado ao seu momento profissional ou acadêmico.
+              Descubra a proposta de cada formato e escolha o percurso alinhado ao seu momento profissional, acadêmico ou pessoal.
             </p>
           </div>
 
@@ -295,7 +322,103 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </div>
         </section>
 
-        {/* Escrever é processar - Direto no layout sem bordas pesadas de caixa */}
+        {/* Seção 3: Marco Legal e Normativa dos Cursos Livres no Brasil */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center shrink-0">
+              <Scale className="w-6 h-6" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+              Normativa e Base Legal dos Cursos Livres
+            </h2>
+          </div>
+
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            Os cursos livres no Brasil são regulamentados pelo <strong>Decreto Presidencial nº 5.154, de 23 de julho de 2004</strong>, e pela <strong>Portaria nº 008, de 25/06/2002</strong>. Esses cursos integram a Educação Profissional e Tecnológica aberta, não exigem autorização prévia de funcionamento e não são regulamentados ou tutelados diretamente pelo MEC para fins de reconhecimento de diploma universitário formal.
+          </p>
+
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            A legislação federal permite que instituições de ensino, pessoas jurídicas e físicas ofereçam cursos livres com finalidades diversas, desde que respeitem as diretrizes da <strong>Lei nº 9.394/1996 (Lei de Diretrizes e Bases da Educação Nacional - LDB)</strong> e do <strong>Decreto nº 5.154/2004</strong>.
+          </p>
+
+          <div className="p-5 rounded-2xl bg-blue-50/70 border-l-4 border-blue-600 text-slate-800 text-sm sm:text-base leading-relaxed space-y-2">
+            <p className="font-semibold text-slate-900">
+              Educação Não-Formal e Qualificação Profissional:
+            </p>
+            <p>
+              Os cursos livres constituem uma <strong>modalidade de educação não-formal</strong>, destinada a proporcionar conhecimentos que permitam a profissionalização, qualificação, requalificação e atualização contínua do trabalhador. Eles conferem certificado válido com base na legislação brasileira, não conferindo diploma de graduação ou pós-graduação tradicional.
+            </p>
+          </div>
+        </section>
+
+        {/* Seção 4: Carga Horária - O Que a Norma Fixa e o Que Não Fixa */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
+              <Clock className="w-6 h-6" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+              Carga Horária: O Que a Norma Fixa e O Que Não Fixa
+            </h2>
+          </div>
+
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            <strong>Não há carga horária mínima geral para curso livre.</strong> Um curso livre pode ter de algumas horas a vários meses de duração, conforme a complexidade do conteúdo, a metodologia didática e o projeto pedagógico da instituição.
+          </p>
+
+          <div className="p-5 rounded-2xl bg-amber-50/80 border border-amber-200 text-slate-800 text-sm sm:text-base leading-relaxed space-y-3">
+            <div className="flex items-center gap-2 font-bold text-slate-900">
+              <HelpCircle className="w-5 h-5 text-amber-600" />
+              <span>A Exceção Normativa que Gera Dúvidas:</span>
+            </div>
+            <p>
+              O <strong>Decreto nº 5.154/2004, no art. 3º, § 1º</strong> (com redação dada pelo Decreto nº 8.268, de 2014), estabelece carga horária mínima de <strong>160 horas</strong> para a formação inicial quando o curso é estruturado dentro das trajetórias de formação específicas regulamentadas pelo Ministério da Educação (na forma do art. 1º, § 1º do mesmo decreto).
+            </p>
+            <p className="font-semibold text-slate-900">
+              👉 Fora desse regime específico de catálogo ministerial, a carga horária é definida com total autonomia pela entidade que oferta o curso livre, segundo o plano de ensino e a necessidade formativa do aluno.
+            </p>
+          </div>
+        </section>
+
+        {/* Seção 5: Quem Pode Ofertar e Garantia de Validade */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
+              <Building2 className="w-6 h-6" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+              Quem Pode Ofertar Cursos Livres e Como Garantir a Validade?
+            </h2>
+          </div>
+
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+            A oferta de cursos livres <strong>não é exclusividade de instituições de ensino superior</strong>: entidades de formação profissional, centros de treinamento, empresas, cooperativas e profissionais autônomos habilitados também ofertam cursos livres e emitem os respectivos certificados.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div className="flex items-center gap-2 text-slate-900 font-bold">
+                <FileCheck2 className="w-5 h-5 text-emerald-600" />
+                <span>Autenticidade e Rastreabilidade</span>
+              </div>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Para garantir a validade acadêmica e profissional, a instituição deve fornecer certificado com identificação clara do aluno, carga horária, ementa programática, dados do responsável pedagógico e código de verificação autêntico.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div className="flex items-center gap-2 text-slate-900 font-bold">
+                <Award className="w-5 h-5 text-amber-600" />
+                <span>Aceitação Institucional</span>
+              </div>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Faculdades e empresas aceitam certificados de cursos livres para horas complementares (AACCs), enriquecimento curricular e pontuação em provas de títulos, conforme o edital de cada instituição.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Seção 6: Escrever é Processar */}
         <section className="py-4 space-y-5 text-slate-800">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
@@ -332,7 +455,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           {/* Botão de Chamada para Diretrizes de Publicação */}
           <div className="pt-4">
             <button
-              onClick={() => onNavigate ? onNavigate('diretrizes-publicacao') : undefined}
+              onClick={() => onNavigate ? onNavigate('diretrizes-publicacao-parcerias') : undefined}
               className="inline-flex items-center gap-2.5 bg-[#243042] hover:bg-slate-900 text-white font-bold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer text-sm sm:text-base group"
             >
               <span>Conhecer as Diretrizes de Publicação na Nossa Escola</span>
@@ -341,7 +464,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </div>
         </section>
 
-        {/* 🏅 O Percurso: Aprender → Expressar → Investigar → Autorar */}
+        {/* Seção 7: 🏅 O Percurso: Aprender → Expressar → Investigar → Autorar */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-8">
           <div>
             <div className="flex items-center gap-3 mb-2">
@@ -426,10 +549,10 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
 
         {/* Destaque: Com responsabilidade */}
         <div className="p-6 rounded-2xl bg-amber-50/80 border-l-4 border-[#FFC72C] text-slate-800 text-base sm:text-lg font-medium leading-relaxed shadow-xs">
-          <strong>Com responsabilidade:</strong> aqui aprendemos a distinguir com clareza o que é fato, o que é opinião, o que é hipótese e o que é evidência. Ler, questionar, comparar e comunicar com honestidade faz parte do nosso caminho.
+          <strong>Com responsabilidade:</strong> aqui aprendemos a distinguir com clareza o que é fato, o que é opinião, o que é hipótese e o que é evidência. Ler, questionar, comparar e comunicar com honestidade faz parte do nosso caminho pedagógico.
         </div>
 
-        {/* Inteligência Artificial com responsabilidade */}
+        {/* Seção 8: Inteligência Artificial com responsabilidade */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
@@ -441,7 +564,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </div>
 
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-            A ESDHUBEM abraça a IA como ferramenta de apoio: auxilia na organização, revisão e planejamento. Mas defendemos um princípio:
+            A ESDHUBEM abraça a IA como ferramenta de apoio: auxilia na organização, revisão e planejamento. Mas defendemos um princípio essencial:
           </p>
 
           <div className="p-5 rounded-2xl bg-slate-900 text-white font-medium text-base sm:text-lg leading-relaxed border-l-4 border-[#FFC72C]">
@@ -449,11 +572,11 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </div>
 
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-            A responsabilidade sobre o conteúdo criado permanece sempre com o autor.
+            A responsabilidade sobre o conteúdo criado e a propriedade intelectual permanecem sempre com o autor.
           </p>
         </section>
 
-        {/* Conhecimento com responsabilidade (Abaixo de Inteligência Artificial) */}
+        {/* Seção 9: Conhecimento com responsabilidade */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-5">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
@@ -477,7 +600,96 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
           </p>
         </section>
 
-        {/* A escola que também dá voz */}
+        {/* Seção 10: Referências Bibliográficas e Normativas Oficiais */}
+        <section className="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-slate-900 text-[#FFC72C] flex items-center justify-center shrink-0">
+              <FileText className="w-6 h-6" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+              Referências Bibliográficas e Normativas Oficiais
+            </h2>
+          </div>
+
+          <p className="text-sm sm:text-base text-slate-600">
+            A fundamentação legal, pedagógica e normativa das diretrizes da ESDHUBEM apoia-se em documentos oficiais do Ministério da Educação e na legislação educacional brasileira:
+          </p>
+
+          <ul className="space-y-4 text-sm sm:text-base text-slate-700 divide-y divide-slate-200">
+            <li className="pt-3 first:pt-0 space-y-1">
+              <div className="flex items-start gap-2">
+                <ExternalLink className="w-4 h-4 text-amber-600 shrink-0 mt-1" />
+                <div>
+                  <a
+                    href="https://www.gov.br/mec/pt-br/acesso-a-informacao/perguntas-frequentes/politica-de-regulacao-e-supervisao-da-educacao-superior/cursos-livres/o-que-sao-cursos-livres"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-slate-900 hover:text-amber-600 hover:underline"
+                  >
+                    Ministério da Educação (MEC) — O que são cursos livres? Os cursos livres devem ser autorizados pelo Ministério da Educação? Tais cursos conferem diploma?
+                  </a>
+                  <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+                    Esclarecimento oficial do MEC sobre a natureza jurídica não-formal, dispensa de autorização prévia e legitimidade dos certificados de cursos livres.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li className="pt-3 space-y-1">
+              <div className="flex items-start gap-2">
+                <ExternalLink className="w-4 h-4 text-amber-600 shrink-0 mt-1" />
+                <div>
+                  <a
+                    href="https://www.gov.br/mec/pt-br/cne/diretrizes-nacionais-para-a-educacao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-slate-900 hover:text-amber-600 hover:underline"
+                  >
+                    Conselho Nacional de Educação (CNE/MEC) — Diretrizes Nacionais para a Educação
+                  </a>
+                  <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+                    Princípios, normas e fundamentos orientadores para a prática pedagógica, inclusão, interatividade e educação a distância no Brasil.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li className="pt-3 space-y-1">
+              <div className="flex items-start gap-2">
+                <ExternalLink className="w-4 h-4 text-amber-600 shrink-0 mt-1" />
+                <div>
+                  <a
+                    href="https://www.ceasbrasil.com.br/legislacaocursoslivres.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-slate-900 hover:text-amber-600 hover:underline"
+                  >
+                    Legislação de Cursos Livres no Brasil — Decreto Presidencial nº 5.154/2004 e Lei nº 9.394/1996 (LDB)
+                  </a>
+                  <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+                    Compilado de atos normativos, Portaria nº 008/2002 e jurisprudência sobre validade e carga horária na educação profissional livre.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li className="pt-3 space-y-1">
+              <div className="flex items-start gap-2">
+                <ExternalLink className="w-4 h-4 text-amber-600 shrink-0 mt-1" />
+                <div>
+                  <span className="font-bold text-slate-900">
+                    Supremo Tribunal Federal & CNE — ADI 1/2021 e Pareceres Normativos da Educação Livre
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+                    Garantia constitucional do livre exercício profissional e da autonomia didática e metodológica na oferta de cursos abertos e de qualificação.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        {/* Seção 11: A Escola que Também Dá Voz */}
         <section className="bg-gradient-to-br from-[#182333] to-[#243042] text-white rounded-3xl p-8 sm:p-12 shadow-xl space-y-8">
           <div className="text-center space-y-2">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -490,11 +702,11 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
 
           <div className="max-w-xl mx-auto space-y-3">
             {[
-              'Possibilidade de aprender',
-              'Possibilidade de desenvolver a escrita',
-              'Possibilidade de investigar',
-              'Possibilidade de publicar',
-              'Possibilidade de construir uma trajetória autoral'
+              'Possibilidade de aprender sem barreiras',
+              'Possibilidade de desenvolver a escrita e a comunicação',
+              'Possibilidade de investigar com rigor e reflexão crítica',
+              'Possibilidade de publicar e registrar sua produção',
+              'Possibilidade de construir uma trajetória autoral com credibilidade'
             ].map((item, idx) => (
               <div
                 key={idx}
@@ -520,7 +732,7 @@ export const DiretrizesPedagogicasPage: React.FC<DiretrizesPedagogicasPageProps>
               ESDHUBEM
             </div>
             <p className="text-lg sm:text-xl font-bold text-white max-w-2xl mx-auto leading-relaxed">
-              Aprender é o começo. Criar, investigar e compartilhar também podem fazer parte do caminho.
+              Aprender é o começo. Criar, investigar e compartilhar também fazem parte do caminho.
             </p>
           </div>
 
