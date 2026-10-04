@@ -128,7 +128,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Aprenda sem barreiras. Assista a todas as videoaulas e acesse o material didático completo de forma 100% gratuita para testar o conteúdo e conhecer nossa metodologia. Você só paga uma taxa de emissão se decidir que quer o documento oficial.
+                      Aprenda sem barreiras. Assista a todas as videoaulas  de forma 100% gratuita para testar o conteúdo, fazer os testes de multipla escolha e conhecer nossa metodologia. Você só paga uma taxa de emissão de certificado Bronze se decidir que quer o documento oficial.
                     </p>
                   </div>
                   <div>

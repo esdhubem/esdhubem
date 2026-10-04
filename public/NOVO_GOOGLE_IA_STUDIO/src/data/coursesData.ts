@@ -176,7 +176,7 @@ export const METHODOLOGY_PILLARS: MethodologyPillar[] = [
     number: '1',
     title: 'Cursos Freepremium',
     description:
-      'Aprenda sem barreiras. Assista a todas as videoaulas e acesse o material didático completo de forma 100% gratuita para testar o conteúdo e conhecer nossa metodologia. Você só paga uma taxa de emissão se decidir que quer o documento oficial.',
+      'Aprenda sem barreiras. Assista a todas as videoaulas  de forma 100% gratuita para testar o conteúdo, fazer os testes de multipla escolha e conhecer nossa metodologia. Você só paga uma taxa de emissão de certificado Bronze se decidir que quer o documento oficial.',
     targetAudience:
       'Estudantes e profissionais que buscam conhecimento rápido, querem validar a qualidade do curso antes de investir ou precisam apenas do aprendizado prático imediato sem custo inicial.',
     type: 'freepremium',
