@@ -6,7 +6,8 @@ import {
   CheckCircle2,
   ArrowRight,
   ShieldCheck,
-  Feather
+  Feather,
+  BookOpen
 } from 'lucide-react';
 
 interface CartaAbertaPageProps {
@@ -97,7 +98,78 @@ export const CartaAbertaPage: React.FC<CartaAbertaPageProps> = ({
           <p>
             Exigimos de todos: ética, verdade e respeito. O conteúdo deve estar alinhado com o curso realizado. Não publicaremos notícias falsas, textos antiéticos, contrários à ciência, teorias conspiratórias, manifestações políticas com nomes de figuras públicas, ofensas, acusações ou afirmações sem comprovação. Aqui só publicamos com permissão expressa do autor, e a publicação sempre virá acompanhada de indicação do nível e do certificado correspondente.
           </p>
+        </section>
 
+        {/* Sobre Disponibilização para Venda */}
+        <section className="space-y-6 text-slate-800 text-base sm:text-lg leading-relaxed font-normal border-t border-slate-200 pt-8">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
+              <BookOpen className="w-6 h-6" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              📖 Sobre Disponibilização para Venda
+            </h2>
+          </div>
+
+          <p>
+            Também é preciso esclarecer: caso você queira disponibilizar seu livro ou obra para venda ao público, a <strong>ESDHUBEM estabelece uma parceria como afiliado por meio da plataforma Hotmart</strong>.
+          </p>
+
+          <p className="font-semibold text-slate-900">
+            Por que fazemos assim?
+          </p>
+
+          <div className="space-y-3.5 pt-1">
+            <div className="flex items-start gap-3 text-base sm:text-lg text-slate-700 leading-relaxed">
+              <span className="text-emerald-600 font-bold shrink-0 text-xl">✅</span>
+              <div>
+                <strong>Você continua sendo o autor e o titular dos direitos</strong> — a parceria não muda a propriedade da obra;
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 text-base sm:text-lg text-slate-700 leading-relaxed">
+              <span className="text-emerald-600 font-bold shrink-0 text-xl">✅</span>
+              <div>
+                <strong>A Hotmart cuida de toda a estrutura:</strong> pagamento, processamento, entrega, segurança digital e relatórios;
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 text-base sm:text-lg text-slate-700 leading-relaxed">
+              <span className="text-emerald-600 font-bold shrink-0 text-xl">✅</span>
+              <div>
+                <strong>A parceria permite que a escola divulgue seu trabalho</strong> para nossa rede de contatos, ampliando sua visibilidade;
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 text-base sm:text-lg text-slate-700 leading-relaxed">
+              <span className="text-emerald-600 font-bold shrink-0 text-xl">✅</span>
+              <div>
+                <strong>Cada parte recebe a participação combinada sobre as vendas</strong> — você como autor, a escola como parceira de divulgação;
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 text-base sm:text-lg text-slate-700 leading-relaxed">
+              <span className="text-emerald-600 font-bold shrink-0 text-xl">✅</span>
+              <div>
+                <strong>Tudo com transparência:</strong> os valores, as porcentagens e as condições são combinadas previamente, de forma clara e acordada;
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 text-base sm:text-lg text-slate-700 leading-relaxed">
+              <span className="text-emerald-600 font-bold shrink-0 text-xl">✅</span>
+              <div>
+                <strong>Você pode optar por não vender:</strong> a publicação gratuita no blog ou repositório não exige parceria de venda — isso é uma escolha sua, quando quiser avançar para comercialização.
+              </div>
+            </div>
+          </div>
+
+          <p className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 text-amber-950 text-sm sm:text-base leading-relaxed mt-4">
+            <strong>Em resumo:</strong> a parceria existe para dar estrutura, alcance e suporte à sua obra quando você decidir disponibilizá-la comercialmente. A obra continua sendo sua — nós apenas abrimos caminho para que mais pessoas possam conhecê-la.
+          </p>
+        </section>
+
+        {/* Importância da Escrita */}
+        <section className="space-y-6 text-slate-800 text-base sm:text-lg leading-relaxed font-normal border-t border-slate-200 pt-8">
           <p>
             Acreditamos que a escrita é um processo essencial do desenvolvimento humano — e que todos temos o direito e o dever de aprender a escrever. E para isso, é preciso praticar.
           </p>
