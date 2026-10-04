@@ -904,11 +904,8 @@ export default function App() {
             }}
             onOpenValidator={() => setIsValidatorOpen(true)}
             onNavigateToCourses={() => {
-              setCurrentPage('home');
-              setTimeout(() => {
-                const el = document.getElementById('catalogo-cursos');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }, 100);
+              setCurrentPage('categorias');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onNavigateToPedagogy={() => {
               setCurrentPage('diretrizes-pedagogicas');
