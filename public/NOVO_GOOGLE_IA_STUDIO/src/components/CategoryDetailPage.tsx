@@ -410,21 +410,23 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
               </div>
             </div>
 
-            {/* Strategic Certificate Button */}
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={() => {
-                  if (onNavigate) onNavigate('regras-certificacao-merito');
-                  else if (onOpenCertificatePreview) onOpenCertificatePreview();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="px-4 py-2 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 font-black text-xs rounded-xl transition-all inline-flex items-center gap-2 shadow-md cursor-pointer hover:scale-105"
-              >
-                <Award className="w-4 h-4" />
-                <span>Regras de Certificação</span>
-              </button>
-            </div>
+            {/* Strategic Certificate Button - Oculto para landing pages / biolinks */}
+            {currentCategory.id !== 'landing-pages-biolinks' && (
+              <div className="pt-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (onNavigate) onNavigate('regras-certificacao-merito');
+                    else if (onOpenCertificatePreview) onOpenCertificatePreview();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="px-4 py-2 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 font-black text-xs rounded-xl transition-all inline-flex items-center gap-2 shadow-md cursor-pointer hover:scale-105"
+                >
+                  <Award className="w-4 h-4" />
+                  <span>Regras de Certificação</span>
+                </button>
+              </div>
+            )}
 
             {/* B2B Authority Indicators - Only for Corporativas */}
             {currentCategory.id === 'treinamentos-palestras-corporativas' ? (
