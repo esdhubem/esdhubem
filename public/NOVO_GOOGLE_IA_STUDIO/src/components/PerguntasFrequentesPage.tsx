@@ -8,7 +8,8 @@ import {
   Microscope,
   BookOpen,
   ShieldCheck,
-  ArrowRight
+  ArrowRight,
+  FileText
 } from 'lucide-react';
 
 interface PerguntasFrequentesPageProps {
@@ -64,10 +65,12 @@ export const PerguntasFrequentesPage: React.FC<PerguntasFrequentesPageProps> = (
 
       {/* Main Content Body */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
-        {/* 📌 Apresentação */}
+        {/* Apresentação */}
         <section className="space-y-4 border-b border-slate-200 pb-8">
-          <div className="flex items-center gap-2.5">
-            <span className="text-2xl">📌</span>
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
+              <FileText className="w-5 h-5" />
+            </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
               Apresentação
             </h2>
