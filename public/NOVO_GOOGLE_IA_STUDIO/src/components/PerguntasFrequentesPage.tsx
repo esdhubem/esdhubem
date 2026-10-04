@@ -414,7 +414,7 @@ export const PerguntasFrequentesPage: React.FC<PerguntasFrequentesPageProps> = (
 
             {onNavigate && (
               <button
-                onClick={() => onNavigate('sala-de-aula')}
+                onClick={() => onNavigate('categorias')}
                 className="bg-[#243042] hover:bg-slate-900 text-white font-bold px-7 py-3 rounded-xl shadow-md transition-colors flex items-center gap-2 cursor-pointer text-sm sm:text-base"
               >
                 <span>Conheça Nossos Cursos</span>
