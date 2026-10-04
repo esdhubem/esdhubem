@@ -18,7 +18,8 @@ import {
   Handshake,
   BookOpen,
   ShieldCheck,
-  HelpCircle
+  HelpCircle,
+  ClipboardList
 } from 'lucide-react';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
 
@@ -270,7 +271,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="relative group py-2">
                 <button
                   className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
-                    ['regras-certificacao-merito', 'informacoes-legais', 'diretrizes-protecao-autoria', 'diretrizes-pedagogicas', 'diretrizes-publicacao-parcerias', 'diretrizes-publicacao'].includes(currentPage)
+                    ['regras-certificacao-merito', 'informacoes-legais', 'diretrizes-protecao-autoria', 'diretrizes-pedagogicas', 'diretrizes-publicacao-parcerias', 'diretrizes-publicacao', 'modalidades-formacao'].includes(currentPage)
                       ? 'text-[#FFC72C] font-bold bg-white/5'
                       : 'text-white/80 hover:text-white hover:bg-white/5'
                   }`}
@@ -355,6 +356,21 @@ export const Header: React.FC<HeaderProps> = ({
                       <div>
                         <div className="font-semibold text-xs">Valor Legal dos Certificados</div>
                         <div className="text-[10px] text-slate-400">Lei 9.394/96 e validade nacional</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('modalidades-formacao')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'modalidades-formacao'
+                          ? 'bg-amber-500/20 text-amber-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <ClipboardList className="w-4 h-4 text-amber-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Modalidades de Formação</div>
+                        <div className="text-[10px] text-slate-400">Conheça os Cursos Livres da ESDHUBEM</div>
                       </div>
                     </button>
                   </div>
@@ -594,6 +610,10 @@ export const Header: React.FC<HeaderProps> = ({
             <button onClick={() => { onNavigate('informacoes-legais'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400 flex items-center gap-2">
               <Scale className="w-4 h-4 text-cyan-400" />
               <span>Valor Legal dos Certificados</span>
+            </button>
+            <button onClick={() => { onNavigate('modalidades-formacao'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300 flex items-center gap-2">
+              <ClipboardList className="w-4 h-4 text-amber-400" />
+              <span>Modalidades de Formação</span>
             </button>
           </div>
 

@@ -35,6 +35,7 @@ import { SobreNosPage } from './components/SobreNosPage';
 import { GeradorAbntPage } from './components/GeradorAbntPage';
 import { PerguntasFrequentesPage } from './components/PerguntasFrequentesPage';
 import { CartaAbertaPage } from './components/CartaAbertaPage';
+import { ModalidadesFormacaoPage } from './components/ModalidadesFormacaoPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -55,7 +56,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'diretrizes-protecao-autoria' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos' | 'gerador-abnt' | 'perguntas-frequentes' | 'carta-aberta'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'modalidades-formacao' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'diretrizes-protecao-autoria' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos' | 'gerador-abnt' | 'perguntas-frequentes' | 'carta-aberta'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -150,6 +151,12 @@ export default function App() {
 
     if (pagina === 'informacoes-legais' || pagina === 'legal') {
       setCurrentPage('informacoes-legais');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'modalidades-formacao' || pagina === 'modalidades' || pagina === 'formas-de-ensino' || pagina === 'cursos-livres') {
+      setCurrentPage('modalidades-formacao');
       window.scrollTo({ top: 0, behavior: 'instant' });
       return;
     }
@@ -276,6 +283,12 @@ export default function App() {
 
     if (sectionId === 'informacoes-legais') {
       setCurrentPage('informacoes-legais');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'modalidades-formacao' || sectionId === 'modalidades' || sectionId === 'formas-de-ensino' || sectionId === 'cursos-livres') {
+      setCurrentPage('modalidades-formacao');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -588,6 +601,19 @@ export default function App() {
             onOpenValidator={() => setIsValidatorOpen(true)}
             onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
             onNavigate={handleNavigate}
+          />
+        </main>
+      )}
+
+      {currentPage === 'modalidades-formacao' && (
+        <main className="flex-1">
+          <ModalidadesFormacaoPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigate={handleNavigate}
+            onOpenValidator={() => setIsValidatorOpen(true)}
           />
         </main>
       )}
