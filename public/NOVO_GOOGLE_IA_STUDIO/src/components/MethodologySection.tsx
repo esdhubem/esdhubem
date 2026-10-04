@@ -15,8 +15,9 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
       {/* Vibrant Golden Yellow Header Banner */}
       <div className="bg-[#FFC72C] py-14 sm:py-18 px-4 sm:px-6 lg:px-8 border-y border-amber-400/40">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 tracking-tight mb-4">
-            Aqui oferecemos uma oportunidade que pode ir além do curso.
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 tracking-tight mb-4 leading-tight">
+            Aqui oferecemos uma oportunidade <br />
+            que pode ir além do curso.
           </h2>
 
           <p className="text-sm sm:text-base lg:text-lg text-slate-800 font-normal leading-relaxed max-w-3xl mx-auto">
