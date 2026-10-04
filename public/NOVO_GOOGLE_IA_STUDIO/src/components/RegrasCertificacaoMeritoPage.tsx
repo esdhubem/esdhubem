@@ -19,7 +19,8 @@ import {
   Upload,
   BookMarked,
   Globe,
-  Layers
+  Layers,
+  XCircle
 } from 'lucide-react';
 
 interface RegrasCertificacaoMeritoPageProps {
@@ -449,6 +450,167 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             </div>
 
           </div>
+        </section>
+
+        {/* SECTION: Sobre a Revisão de Trabalhos */}
+        <section className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-sm space-y-8">
+          
+          {/* Header */}
+          <div className="space-y-2 max-w-3xl">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+              <FileCheck className="w-4 h-4 text-amber-600" />
+              <span>Processo Editorial & Orientação</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#182333] tracking-tight">
+              Sobre a Revisão de Trabalhos
+            </h2>
+            <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-medium">
+              A <strong className="text-slate-900 font-bold">ESDHUBEM</strong> oferece orientação e revisão dos textos enviados. Nosso papel é aprimorar, nunca substituir o autor.
+            </p>
+          </div>
+
+          {/* O que fazemos vs O que NÃO fazemos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            {/* O que fazemos */}
+            <div className="p-6 rounded-2xl bg-emerald-50/70 border border-emerald-200/80 space-y-4">
+              <h3 className="text-base sm:text-lg font-extrabold text-emerald-900 flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                <span>O que fazemos:</span>
+              </h3>
+              <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
+                  <div>
+                    <strong className="text-slate-900 font-bold">Revisão linguística:</strong> ortografia, gramática, acentuação e clareza
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
+                  <div>
+                    <strong className="text-slate-900 font-bold">Organização:</strong> estrutura de títulos, parágrafos e seções
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
+                  <div>
+                    <strong className="text-slate-900 font-bold">Leitura crítica:</strong> coerência, encadeamento das ideias e sugestões de aprofundamento
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
+                  <div>
+                    <strong className="text-slate-900 font-bold">Ajustes de visibilidade:</strong> nos níveis aplicáveis, orientação sobre boas práticas de escrita para mecanismos de busca (SEO)
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
+                  <div>
+                    <strong className="text-slate-900 font-bold">Padronização:</strong> referências, citações e formato conforme o nível de publicação
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* O que NÃO fazemos */}
+            <div className="p-6 rounded-2xl bg-rose-50/70 border border-rose-200/80 space-y-4">
+              <h3 className="text-base sm:text-lg font-extrabold text-rose-900 flex items-center gap-2">
+                <XCircle className="w-5 h-5 text-rose-600 shrink-0" />
+                <span>O que NÃO fazemos:</span>
+              </h3>
+              <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-rose-600 font-bold shrink-0 mt-0.5">❌</span>
+                  <div>
+                    <strong className="text-slate-900 font-bold">Não reescrevemos</strong> o texto em lugar do autor
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-rose-600 font-bold shrink-0 mt-0.5">❌</span>
+                  <div>
+                    <strong className="text-slate-900 font-bold">Não criamos</strong> conteúdo novo que não seja do participante
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-rose-600 font-bold shrink-0 mt-0.5">❌</span>
+                  <div>
+                    <strong className="text-slate-900 font-bold">Não alteramos</strong> a mensagem, a opinião ou a voz do autor
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-rose-600 font-bold shrink-0 mt-0.5">❌</span>
+                  <div>
+                    <strong className="text-slate-900 font-bold">Não realizamos</strong> revisão por pares nem revisão acadêmica oficial — essa avaliação é própria de instituições de ensino superior e periódicos científicos;
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          {/* Como funciona */}
+          <div className="space-y-4 pt-2">
+            <h3 className="text-lg sm:text-xl font-extrabold text-[#182333] flex items-center gap-2">
+              <Layers className="w-5 h-5 text-amber-600" />
+              <span>Como funciona:</span>
+            </h3>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+                <div className="w-7 h-7 rounded-full bg-[#182333] text-[#FFC72C] font-black text-xs flex items-center justify-center">
+                  1
+                </div>
+                <div className="text-xs sm:text-sm font-bold text-slate-900">
+                  Você envia seu texto
+                </div>
+                <p className="text-[11px] text-slate-500 leading-tight">
+                  Envio do manuscrito ou artigo prático pela plataforma ou suporte acadêmico.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+                <div className="w-7 h-7 rounded-full bg-[#182333] text-[#FFC72C] font-black text-xs flex items-center justify-center">
+                  2
+                </div>
+                <div className="text-xs sm:text-sm font-bold text-slate-900">
+                  Leitura e comentários
+                </div>
+                <p className="text-[11px] text-slate-500 leading-tight">
+                  Nossa equipe lê e devolve com comentários e ajustes sugeridos.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+                <div className="w-7 h-7 rounded-full bg-[#182333] text-[#FFC72C] font-black text-xs flex items-center justify-center">
+                  3
+                </div>
+                <div className="text-xs sm:text-sm font-bold text-slate-900">
+                  Você revisa e decide
+                </div>
+                <p className="text-[11px] text-slate-500 leading-tight">
+                  Você revisa, ajusta e devolve, o texto é seu, você decide.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-300 space-y-2">
+                <div className="w-7 h-7 rounded-full bg-emerald-600 text-white font-black text-xs flex items-center justify-center">
+                  4
+                </div>
+                <div className="text-xs sm:text-sm font-bold text-emerald-950">
+                  Aprovado → Publicado!
+                </div>
+                <p className="text-[11px] text-emerald-800 leading-tight">
+                  Trabalho publicado e emissão do selo correspondente.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Quote Block */}
+          <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border-l-4 border-amber-500 text-slate-800 italic text-sm sm:text-base font-medium">
+            “A revisão existe para dar clareza ao que você pensou, não para colocar palavras que você não disse.”
+          </div>
+
         </section>
 
         {/* SECTION 4: CALL TO ACTION BANNER */}
