@@ -921,7 +921,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   className="bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black px-6 py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md cursor-pointer"
                 >
                   <BookOpen className="w-4 h-4 text-slate-950" />
-                  <span>Anais & Artigos Publicados</span>
+                  <span>Repositório de Artigos</span>
                 </button>
               )}
             </div>
