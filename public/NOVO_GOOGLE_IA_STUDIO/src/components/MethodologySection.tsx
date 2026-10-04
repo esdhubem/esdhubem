@@ -31,7 +31,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Escala de Autoria ESDHUBEM
+              Conheça a Escala de Autoria ESDHUBEM
             </h3>
             <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
               Conheça os tipos de produção e trabalho para concluir a formação e alcançar os selos da nossa escola:
