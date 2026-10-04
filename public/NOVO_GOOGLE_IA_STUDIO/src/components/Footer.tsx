@@ -231,7 +231,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('sala-de-aula')}
-                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2 font-medium"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-emerald-500">•</span>
                   <span>Sala de Aula</span>
@@ -276,25 +276,25 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('perguntas-frequentes')}
-                  className="hover:text-[#FFC72C] font-semibold transition-colors cursor-pointer text-left text-amber-300 flex items-center gap-2"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  <span className="text-[#FFC72C]">•</span>
+                  <span className="text-emerald-500">•</span>
                   <span>Perguntas Frequentes (FAQ)</span>
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => onNavigate('carta-aberta')}
-                  className="hover:text-[#FFC72C] font-semibold transition-colors cursor-pointer text-left text-amber-300 flex items-center gap-2"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  <span className="text-[#FFC72C]">•</span>
+                  <span className="text-emerald-500">•</span>
                   <span>Carta Aberta</span>
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => onNavigate('podcasts')}
-                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-emerald-500">•</span>
                   <span>Podcasts & Ensaios Sonoros</span>
@@ -303,7 +303,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('aplicativos')}
-                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-emerald-500">•</span>
                   <span>Aplicativos & Dashboards</span>
@@ -312,7 +312,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('categoria:landing-pages-biolinks')}
-                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-emerald-500">•</span>
                   <span>Sites & Biolinks</span>
@@ -331,7 +331,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={onOpenValidator}
-                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2 font-semibold"
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-sky-400">•</span>
                   <span>Validar Certificado</span>
@@ -385,16 +385,16 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('diretrizes-protecao-autoria')}
-                  className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-emerald-300 flex items-center gap-2 font-medium"
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
-                  <span className="text-emerald-400">•</span>
+                  <span className="text-sky-400">•</span>
                   <span>Proteção à Autoria</span>
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => onNavigate('diretrizes-pedagogicas')}
-                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-sky-400">•</span>
                   <span>Diretrizes Pedagógicas</span>
@@ -403,7 +403,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('gerador-abnt')}
-                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-sky-400">•</span>
                   <span>Gerador de Referências ABNT</span>
@@ -412,7 +412,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('secretaria-documentacao')}
-                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                  className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-sky-400">•</span>
                   <span>Secretaria & Serviços Acadêmicos</span>
@@ -467,7 +467,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={onOpenValidator}
-                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2 font-semibold"
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-purple-400">•</span>
                   <span>Verificação Antifraude</span>
@@ -476,7 +476,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('direitos-aluno')}
-                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-purple-400">•</span>
                   <span>Horas Complementares & Amparo Legal</span>
@@ -485,7 +485,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('corpo-docente')}
-                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-purple-400">•</span>
                   <span>Corpo Docente & Especialistas</span>
@@ -494,7 +494,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigate('informacoes-legais')}
-                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
+                  className="hover:text-purple-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >
                   <span className="text-purple-400">•</span>
                   <span>Dados Institucionais & Coordenação</span>
