@@ -14,7 +14,14 @@ import {
   Info,
   Check,
   Layers,
-  ArrowRight
+  ArrowRight,
+  Compass,
+  AlertTriangle,
+  GraduationCap,
+  HeartPulse,
+  Users,
+  History,
+  BookMarked
 } from 'lucide-react';
 
 interface DiretrizesProtecaoAutoriaPageProps {
@@ -71,8 +78,8 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-12">
         
-        {/* 1. Apresentação */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-5">
+        {/* 1. Apresentação & Compromisso Institucional */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-[#FFC72C] flex items-center justify-center font-bold text-xl border border-amber-500/20">
               <Feather className="w-6 h-6 text-amber-600" />
@@ -85,16 +92,151 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
             </div>
           </div>
 
-          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-            A <strong>ESDHUBEM</strong> reconhece e valoriza a produção intelectual como parte essencial do aprendizado. Entendemos que a escrita é também afirmação de voz e de pensamento. Por este motivo, toda produção enviada pelos participantes permanece sendo de sua <strong>propriedade intelectual</strong>.
-          </p>
+          <div className="space-y-4 text-base sm:text-lg text-slate-700 leading-relaxed">
+            <p>
+              A <strong>ESDHUBEM</strong> reconhece e valoriza a produção intelectual como parte essencial do aprendizado. Entendemos que a escrita é também afirmação de voz e de pensamento. Por este motivo, toda produção enviada pelos participantes permanece sendo de sua <strong>propriedade intelectual</strong>.
+            </p>
 
-          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-            A escola <strong>não se apropria, não reivindica e não utiliza o trabalho de outrem sem autorização expressa</strong>. Nosso papel é valorizar, divulgar e proteger a criação de cada autor.
-          </p>
+            <p>
+              A escola <strong>não se apropria, não reivindica e não utiliza o trabalho de outrem sem autorização expressa</strong>. Nosso papel é valorizar, divulgar e proteger a criação de cada autor.
+            </p>
+
+            <p>
+              A ESDHUBEM <strong>não se posiciona como instituição de produção acadêmica stricto sensu</strong>. Ainda que nos níveis avançados busquemos seguir as boas práticas de escrita científica e publicação com identificação digital (DOI), <strong>não nos apresentamos como entidade de certificação científica oficial</strong>. Nosso propósito é o treinamento e o desenvolvimento de diferentes formas de escrita, voltadas para as mais diversas finalidades de estudo e crescimento de cada aluno.
+            </p>
+
+            <p>
+              Respeitamos integralmente a autoria de cada participante. O envio do texto por e-mail à escola, antes da publicação, já funciona como prova de recebimento: <strong>ficam registrados nome, data, hora e o arquivo original</strong> — tudo isso é garantia de segurança para você.
+            </p>
+
+            <p>
+              Pode acontecer de a escola solicitar ajustes no texto. Caso as alterações não sejam realizadas, o trabalho poderá não ser publicado. Nesse caso, o valor pago será devolvido integralmente ou o aluno poderá receber o certificado Bronze, conforme combinado.
+            </p>
+
+            <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-amber-950 text-sm sm:text-base leading-relaxed space-y-2">
+              <div className="font-bold flex items-center gap-2 text-amber-900">
+                <AlertTriangle className="w-5 h-5 text-amber-700 shrink-0" />
+                <span>Exigência Institucional: Ética, Verdade e Respeito</span>
+              </div>
+              <p className="text-slate-800">
+                Exigimos de todos: ética, verdade e respeito. O conteúdo deve estar alinhado com o curso realizado. Não publicaremos notícias falsas, textos antieticos, contrários à ciência, teorias conspiratórias, manifestações políticas com nomes de figuras públicas, ofensas, acusações ou afirmações sem comprovação. Aqui só publicamos com permissão expressa do autor, e a publicação sempre virá acompanhada de indicação do nível e do certificado correspondente.
+              </p>
+            </div>
+          </div>
         </section>
 
-        {/* 2. Garantias ao Autor */}
+        {/* 2. 🎯 Alinhamento CAPES — Eixos Temáticos de Pesquisa */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl border border-blue-200">
+              <Compass className="w-6 h-6 text-blue-700" />
+            </div>
+            <div>
+              <span className="text-xs font-bold text-blue-600 uppercase tracking-wider block">Diretriz Metodológica</span>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                🎯 Alinhamento CAPES — Eixos Temáticos de Pesquisa
+              </h2>
+            </div>
+          </div>
+
+          {/* Esclarecimento Prévio */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-700 leading-relaxed space-y-2">
+            <div className="font-bold text-slate-900 flex items-center gap-2">
+              <Info className="w-4 h-4 text-blue-600 shrink-0" />
+              <span>Esclarecimento prévio:</span>
+            </div>
+            <p>
+              A ESDHUBEM adota este alinhamento como <strong>referência organizacional e metodológica</strong> para nortear, estruturar e dar coerência interna aos nossos cursos e produções. Esta escolha não confere à escola status de instituição acadêmica ou científica <em>stricto sensu</em> — trata-se de uma forma de ordenar nosso sistema de ensino, definir linhas de estudo e seguir critérios reconhecidos, sem, contudo, assumir natureza ou competência que não nos cabe.
+            </p>
+          </div>
+
+          <p className="text-base text-slate-700 leading-relaxed">
+            Alinhados aos critérios de avaliação da <strong>CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior)</strong>, os cursos livres e os projetos da ESDHUBEM conectam-se diretamente a <strong>quatro grandes áreas do conhecimento</strong>:
+          </p>
+
+          {/* Tabela dos Eixos Temáticos */}
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+            <table className="w-full text-left border-collapse text-sm">
+              <caption className="sr-only">Eixos Temáticos de Pesquisa alinhados à CAPES na ESDHUBEM</caption>
+              <thead>
+                <tr className="bg-[#182333] text-white border-b border-slate-700">
+                  <th scope="col" className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider w-1/4 sm:w-1/5">
+                    Eixo
+                  </th>
+                  <th scope="col" className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider w-1/3">
+                    Foco
+                  </th>
+                  <th scope="col" className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider">
+                    Aplicação
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200 bg-white">
+                <tr className="hover:bg-emerald-50/30 transition-colors">
+                  <th scope="row" className="py-4 px-4 font-bold text-slate-900 align-top">
+                    <span className="inline-flex items-center gap-1.5 text-emerald-700 font-extrabold">
+                      <HeartPulse className="w-4 h-4 shrink-0" />
+                      <span>01 — Saúde Coletiva</span>
+                    </span>
+                  </th>
+                  <td className="py-4 px-4 text-slate-800 font-semibold align-top">
+                    Práticas Integrativas, Bem-Estar e Saúde Mental
+                  </td>
+                  <td className="py-4 px-4 text-slate-600 leading-relaxed align-top">
+                    Estudos sobre coaching, espiritualidade aplicada, meditação e Práticas Integrativas e Complementares (PICS)
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-blue-50/30 transition-colors">
+                  <th scope="row" className="py-4 px-4 font-bold text-slate-900 align-top">
+                    <span className="inline-flex items-center gap-1.5 text-blue-700 font-extrabold">
+                      <Users className="w-4 h-4 shrink-0" />
+                      <span>02 — Interdisciplinar</span>
+                    </span>
+                  </th>
+                  <td className="py-4 px-4 text-slate-800 font-semibold align-top">
+                    Desenvolvimento Pessoal, Humano, Profissional e Consciencial
+                  </td>
+                  <td className="py-4 px-4 text-slate-600 leading-relaxed align-top">
+                    Competências socioemocionais cruzando áreas como psicologia, administração e filosofia
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-amber-50/30 transition-colors">
+                  <th scope="row" className="py-4 px-4 font-bold text-slate-900 align-top">
+                    <span className="inline-flex items-center gap-1.5 text-amber-700 font-extrabold">
+                      <GraduationCap className="w-4 h-4 shrink-0" />
+                      <span>03 — Ensino & Educação</span>
+                    </span>
+                  </th>
+                  <td className="py-4 px-4 text-slate-800 font-semibold align-top">
+                    Pedagogia Integrativa e Ética
+                  </td>
+                  <td className="py-4 px-4 text-slate-600 leading-relaxed align-top">
+                    Metodologias inovadoras de ensino e educação voltada para adultos
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-purple-50/30 transition-colors">
+                  <th scope="row" className="py-4 px-4 font-bold text-slate-900 align-top">
+                    <span className="inline-flex items-center gap-1.5 text-purple-700 font-extrabold">
+                      <History className="w-4 h-4 shrink-0" />
+                      <span>04 — Ciências da Religião, História & Cultura</span>
+                    </span>
+                  </th>
+                  <td className="py-4 px-4 text-slate-800 font-semibold align-top">
+                    Esoterismo Ocidental, Novas Formas de Espiritualidade e Fenômenos Contemporâneos
+                  </td>
+                  <td className="py-4 px-4 text-slate-600 leading-relaxed align-top">
+                    Estudos históricos, antropológicos e sociológicos sobre correntes tradicionais (Alquimia, Cabala, Teosofia, Ocultismo, Maçonaria) e manifestações modernas, como os movimentos New Age, a espiritualidade sem religião e os reflexos culturais do esoterismo na sociedade contemporânea
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* 3. Garantias ao Autor */}
         <section className="space-y-6">
           <div className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider block mb-1">Segurança Jurídica & Editorial</span>
@@ -199,7 +341,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </div>
         </section>
 
-        {/* 3. Funcionamento da Publicação */}
+        {/* 4. Funcionamento da Publicação */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
           <div className="border-b border-slate-100 pb-4">
             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 flex items-center gap-2">
@@ -233,7 +375,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </div>
         </section>
 
-        {/* 4. Medidas de Proteção e Registro */}
+        {/* 5. Medidas de Proteção e Registro */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-8">
           <div className="border-b border-slate-100 pb-4">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Procedimentos Práticos</span>
@@ -363,7 +505,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
               <aside className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm leading-relaxed flex items-start gap-3">
                 <Info className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
                 <div>
-                  <strong>Importante:</strong> Os textos publicados no nível Prata (blog) não recebem DOI, por se tratar de identificador exclusivo de trabalhos depositados em repositórios científicos. Isto não significa ausência de proteção — todos os trabalhos contam com registro de envio, nome visível, endereço próprio e data pública, amparados pela Lei nº 9.610/1998.
+                  <strong>⚠️ Importante:</strong> Os textos publicados no nível Prata (blog) não recebem DOI, por se tratar de identificador exclusivo de trabalhos depositados em repositórios científicos. Isto não significa ausência de proteção — todos os trabalhos contam com registro de envio, nome visível, endereço próprio e data pública, amparados pela Lei nº 9.610/1998.
                 </div>
               </aside>
             </div>
@@ -382,7 +524,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <div className="text-xs sm:text-sm text-slate-600">
                   <span className="font-bold text-slate-900 block mb-0.5">Registro Voluntário na Biblioteca Nacional</span>
-                  O registro voluntário em órgãos competentes, como a Fundação Biblioteca Nacional, é facultativo e pode ser realizado pelo autor.
+                  O registro voluntário em órgãos competentes, como a Fundação Biblioteca Nacional, é facultativo e pode ser realizado pelo autor:
                 </div>
                 <a
                   href="https://www.gov.br/pt-br/servicos/registrar-ou-averbar-direitos-autorais-na-biblioteca-nacional"
@@ -390,7 +532,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-colors shrink-0 shadow-xs cursor-pointer"
                 >
-                  <span>Portal Gov.br</span>
+                  <span>🔗 Portal Gov.br</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -398,7 +540,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </div>
         </section>
 
-        {/* 5. Termo de Autorização de Uso */}
+        {/* 6. Termo de Autorização de Uso */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-6">
           <div className="border-b border-slate-100 pb-4">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Declaração e Submissão</span>
@@ -454,7 +596,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </div>
         </section>
 
-        {/* 6. Uso Responsável de Inteligência Artificial */}
+        {/* 7. Uso Responsável de Inteligência Artificial */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-4">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xl border border-indigo-200">
@@ -497,7 +639,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </ul>
         </section>
 
-        {/* 7. Direito de Remoção / Retirada de Publicação */}
+        {/* 8. Direito de Remoção / Retirada de Publicação */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-4">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-xl border border-rose-200">
@@ -520,7 +662,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </p>
         </section>
 
-        {/* 8. Aviso — Não Garantia de Aceitação em Revista ou Periódico */}
+        {/* 9. Aviso — Não Garantia de Aceitação em Revista ou Periódico */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-4">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-xl border border-amber-200">
@@ -558,7 +700,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </ul>
         </section>
 
-        {/* 9. Princípio Fundamental */}
+        {/* 10. Princípio Fundamental */}
         <section className="bg-[#FFC72C] rounded-3xl p-8 sm:p-12 text-slate-950 text-center border border-amber-400 shadow-xl space-y-4">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-black/10 text-slate-950">
             ⭐ Princípio Fundamental ESDHUBEM
