@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React from 'react';
 import { Course } from '../types';
 import {
   Clock,
@@ -12,85 +12,8 @@ import {
   CheckCircle,
   PlayCircle,
   ShieldCheck,
-  Flame,
-  TrendingUp,
-  Search,
-  RotateCcw
+  Search
 } from 'lucide-react';
-
-interface SearchMetricItem {
-  id: string;
-  name: string;
-  searchTerm: string;
-  count: number;
-  badge: string;
-  accentBg: string;
-  accentText: string;
-  borderClass: string;
-}
-
-const INITIAL_POPULAR_SEARCHES: SearchMetricItem[] = [
-  {
-    id: 'assertiva',
-    name: 'Comunicação Assertiva com a Liderança',
-    searchTerm: 'Comunicação Assertiva',
-    count: 1540,
-    badge: '1º Mais Procurado',
-    accentBg: 'bg-amber-500/10 hover:bg-amber-500/20',
-    accentText: 'text-amber-900',
-    borderClass: 'border-amber-300'
-  },
-  {
-    id: 'emocional',
-    name: 'Inteligência Emocional & Relações',
-    searchTerm: 'Inteligência Emocional',
-    count: 1290,
-    badge: '2º Mais Procurado',
-    accentBg: 'bg-cyan-500/10 hover:bg-cyan-500/20',
-    accentText: 'text-cyan-900',
-    borderClass: 'border-cyan-300'
-  },
-  {
-    id: 'pics',
-    name: 'Práticas Integrativas (PICS)',
-    searchTerm: 'Práticas Integrativas',
-    count: 980,
-    badge: '3º Mais Procurado',
-    accentBg: 'bg-emerald-500/10 hover:bg-emerald-500/20',
-    accentText: 'text-emerald-900',
-    borderClass: 'border-emerald-300'
-  },
-  {
-    id: 'lideranca',
-    name: 'Liderança e Gestão 360°',
-    searchTerm: 'Liderança',
-    count: 870,
-    badge: 'Em Alta',
-    accentBg: 'bg-purple-500/10 hover:bg-purple-500/20',
-    accentText: 'text-purple-900',
-    borderClass: 'border-purple-300'
-  },
-  {
-    id: 'landing',
-    name: 'Landing Pages & Biolinks',
-    searchTerm: 'Landing Page',
-    count: 790,
-    badge: 'Destaque Pro',
-    accentBg: 'bg-blue-500/10 hover:bg-blue-500/20',
-    accentText: 'text-blue-900',
-    borderClass: 'border-blue-300'
-  },
-  {
-    id: 'financas',
-    name: 'Finanças Comportamentais',
-    searchTerm: 'Finanças',
-    count: 680,
-    badge: 'Tendência',
-    accentBg: 'bg-rose-500/10 hover:bg-rose-500/20',
-    accentText: 'text-rose-900',
-    borderClass: 'border-rose-300'
-  }
-];
 
 interface CourseCatalogProps {
   courses: Course[];
@@ -119,96 +42,6 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
   selectedCategory,
   onCategoryChange,
 }) => {
-  // Real-time tracking of popular course searches
-  const [popularSearches, setPopularSearches] = useState<SearchMetricItem[]>(() => {
-    try {
-      const saved = localStorage.getItem('esdhubem_popular_searches');
-      if (saved) {
-        return JSON.parse(saved);
-      }
-    } catch {
-      // Fallback
-    }
-    return INITIAL_POPULAR_SEARCHES;
-  });
-
-  // Track when a user actively searches
-  const handleSelectPopularSearch = (item: SearchMetricItem) => {
-    // 1. Increment metric count in state and localStorage
-    const updated = popularSearches.map((entry) => {
-      if (entry.id === item.id || entry.searchTerm.toLowerCase() === item.searchTerm.toLowerCase()) {
-        return { ...entry, count: entry.count + 1 };
-      }
-      return entry;
-    });
-
-    // Sort by most searched
-    updated.sort((a, b) => b.count - a.count);
-
-    setPopularSearches(updated);
-    try {
-      localStorage.setItem('esdhubem_popular_searches', JSON.stringify(updated));
-    } catch {
-      // Ignore localStorage errors
-    }
-
-    // 2. Set search filter in the application
-    if (onCategoryChange) onCategoryChange(null);
-    if (onPillarChange) onPillarChange('all');
-    if (onSearchChange) {
-      if (searchTerm.toLowerCase() === item.searchTerm.toLowerCase()) {
-        onSearchChange('');
-      } else {
-        onSearchChange(item.searchTerm);
-      }
-    }
-  };
-
-  // Record user manual searches to update trends dynamically
-  useEffect(() => {
-    if (!searchTerm || searchTerm.trim().length < 3) return;
-
-    const timeout = setTimeout(() => {
-      setPopularSearches((prev) => {
-        const query = searchTerm.trim().toLowerCase();
-        const existingIdx = prev.findIndex(
-          (p) => p.searchTerm.toLowerCase() === query || query.includes(p.searchTerm.toLowerCase())
-        );
-
-        let nextList: SearchMetricItem[];
-        if (existingIdx >= 0) {
-          nextList = prev.map((item, idx) =>
-            idx === existingIdx ? { ...item, count: item.count + 1 } : item
-          );
-        } else {
-          // Add newly discovered popular query
-          const newItem: SearchMetricItem = {
-            id: `query-${Date.now()}`,
-            name: searchTerm.trim(),
-            searchTerm: searchTerm.trim(),
-            count: 1,
-            badge: 'Nova Busca',
-            accentBg: 'bg-amber-500/10 hover:bg-amber-500/20',
-            accentText: 'text-amber-900',
-            borderClass: 'border-amber-300'
-          };
-          nextList = [...prev, newItem];
-        }
-
-        nextList.sort((a, b) => b.count - a.count);
-        const topList = nextList.slice(0, 8);
-        try {
-          localStorage.setItem('esdhubem_popular_searches', JSON.stringify(topList));
-        } catch {
-          // Ignore
-        }
-        return topList;
-      });
-    }, 1500);
-
-    return () => clearTimeout(timeout);
-  }, [searchTerm]);
-
   // Filter courses by pillar, search, and category
   const filteredCourses = courses.filter((course) => {
     const matchesPillar = activePillar === 'all' || course.pillar === activePillar;
@@ -230,80 +63,18 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
     <section className="py-16 bg-[#F8FAFC]" id="catalogo-cursos">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading & Most Searched Box */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10">
-          <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 text-[#243042] text-xs font-bold uppercase tracking-wider mb-2">
-              <BookOpen className="w-4 h-4 text-amber-500" />
-              <span>Grade de Cursos Livres e Produtos da ESDHUBEM</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Catálogo de Cursos Online ESDHUBEM
-            </h2>
-            <p className="mt-2 text-slate-600 text-sm sm:text-base">
-              Explore os cursos livres e formações mais procuradas para rentabilizar e potencializar seu desenvolvimento humano e profissional.
-            </p>
+        {/* Section Heading */}
+        <div className="max-w-3xl mb-10">
+          <div className="inline-flex items-center gap-2 text-[#243042] text-xs font-bold uppercase tracking-wider mb-2">
+            <BookOpen className="w-4 h-4 text-amber-500" />
+            <span>Grade de Cursos Livres e Produtos da ESDHUBEM</span>
           </div>
-
-          {/* Dynamic "Cursos Mais Procurados e Pesquisados" Container */}
-          <div className="bg-white/95 rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm lg:max-w-xl w-full flex flex-col justify-between">
-            {/* Header with live tracking indicator */}
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
-              <div className="flex items-center gap-2">
-                <span className="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center">
-                  <Flame className="w-4 h-4 fill-amber-500 text-amber-500" />
-                </span>
-                <div>
-                  <h3 className="font-extrabold text-slate-900 text-xs sm:text-sm flex items-center gap-1.5">
-                    <span>Cursos Mais Procurados na Escola</span>
-                  </h3>
-                  <p className="text-[10px] text-slate-500">Ranking automático baseado nas pesquisas dos alunos</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-1.5 bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-full text-[10px] font-bold">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Mais Pesquisados</span>
-              </div>
-            </div>
-
-            {/* Clickable Popular Course Search Pills */}
-            <div className="flex flex-wrap gap-2">
-              {popularSearches.slice(0, 6).map((item, idx) => {
-                const isActive = searchTerm.toLowerCase() === item.searchTerm.toLowerCase();
-
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => handleSelectPopularSearch(item)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 border ${
-                      isActive
-                        ? 'bg-[#182333] text-[#FFC72C] border-[#182333] shadow-md ring-2 ring-[#FFC72C]/40'
-                        : `${item.accentBg} ${item.accentText} ${item.borderClass} shadow-2xs hover:scale-102`
-                    }`}
-                    title={`Pesquisado ${item.count} vezes na ESDHUBEM`}
-                  >
-                    <span className="text-[10px] opacity-75 font-mono">#{idx + 1}</span>
-                    <span>{item.name}</span>
-                    <span className={`text-[9px] px-1.5 py-0.2 rounded font-extrabold ${isActive ? 'bg-[#FFC72C] text-slate-900' : 'bg-white/80 text-slate-700'}`}>
-                      🔥 {(item.count / 1000).toFixed(1)}k
-                    </span>
-                  </button>
-                );
-              })}
-
-              {/* Reset filter button if a search is active */}
-              {searchTerm && onSearchChange && (
-                <button
-                  onClick={() => onSearchChange('')}
-                  className="px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition-all flex items-center gap-1 cursor-pointer"
-                >
-                  <RotateCcw className="w-3 h-3" />
-                  <span>Ver Todos</span>
-                </button>
-              )}
-            </div>
-          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Produtos mais procurados  ESDHUBEM
+          </h2>
+          <p className="mt-2 text-slate-600 text-sm sm:text-base leading-relaxed">
+            Conheça os nossos cursos livres e produtos mais procurados para rentabilizar e potencializar seu desenvolvimento humano e profissional. Conheça o Ranking automático baseado nas pesquisas dos alunos
+          </p>
         </div>
 
         {/* Active Filters Bar */}
