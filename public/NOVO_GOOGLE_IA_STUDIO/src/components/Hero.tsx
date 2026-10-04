@@ -36,14 +36,14 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Main Title */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] flex flex-col items-center">
               <span>ESDHUBEM</span>
-              <span className="text-[#FFC72C] text-[1.75rem] sm:text-4xl lg:text-5xl whitespace-normal sm:whitespace-nowrap mt-2">
-                Cursos Livres para quem quer ir além
+              <span className="text-[#FFC72C] text-3xl sm:text-4xl lg:text-5xl whitespace-normal sm:whitespace-nowrap mt-2">
+                Cursos Livres.
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl">
-              Aprenda. Escreva. Publique. Construa sua autoridade.
+            <p className="text-base sm:text-lg lg:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl">
+              Aprenda. Conquiste seu certificado! Se quiser, escreva e vá mais além.
             </p>
           </div>
         </div>
