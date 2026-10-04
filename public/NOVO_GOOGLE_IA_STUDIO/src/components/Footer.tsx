@@ -15,7 +15,8 @@ import {
   Heart,
   Award,
   Eye,
-  Bookmark
+  Bookmark,
+  ArrowRight
 } from 'lucide-react';
 import newsletterImg from '../assets/newsletter.jpg';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
@@ -500,6 +501,18 @@ export const Footer: React.FC<FooterProps> = ({
                 </button>
               </li>
             </ul>
+
+            {/* Botão Destacado: Carta Aberta */}
+            <div className="pt-3.5 border-t border-purple-500/30">
+              <button
+                onClick={() => onNavigate('carta-aberta')}
+                className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#FFC72C] via-amber-400 to-[#FFC72C] hover:from-amber-400 hover:to-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-amber-500/25 transition-all cursor-pointer group"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-slate-950 shrink-0 group-hover:rotate-12 transition-transform" />
+                <span>Carta Aberta</span>
+                <ArrowRight className="w-3.5 h-3.5 text-slate-950 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+              </button>
+            </div>
           </div>
         </div>
 
