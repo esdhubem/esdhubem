@@ -161,10 +161,10 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
                 <span className="w-8 h-8 rounded-xl bg-cyan-100 text-cyan-800 flex items-center justify-center font-bold text-xs">
                   01
                 </span>
-                <h3 className="font-bold text-slate-900 text-base">Modelo Freepremium</h3>
+                <h3 className="font-bold text-slate-900 text-base">Cursos Freepremium & Cursos Pagos</h3>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Você assiste a todas as videoaulas e acessa o material didático gratuitamente. A taxa administrativa é simbólica e cobrada apenas se desejar a emissão e validação formal do certificado oficial em PDF.
+                Disponibilizamos cursos no modelo Freepremium — onde você assiste a todas as videoaulas e acessa o material didático gratuitamente (com taxa administrativa simbólica cobrada apenas se desejar a emissão e validação formal do certificado oficial em PDF) — além de cursos e formações avançadas pagas.
               </p>
             </div>
 
@@ -185,10 +185,10 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
                 <span className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs">
                   03
                 </span>
-                <h3 className="font-bold text-slate-900 text-base">Escala de Méritos & Registro DOI</h3>
+                <h3 className="font-bold text-slate-900 text-base">Escala de Autoria & Registro</h3>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Reconhecemos o esforço intelectual: alunos que escrevem artigos e manuscritos de conclusão podem ser publicados no Blog da escola ou depositados com identificador permanente DOI via Zenodo / CERN.
+                Reconhecemos o esforço intelectual: alunos que escrevem artigos e manuscritos de conclusão podem ser publicados no Blog da escola ou no nosso repositório de artigos ou na nossa livraria.
               </p>
             </div>
 
