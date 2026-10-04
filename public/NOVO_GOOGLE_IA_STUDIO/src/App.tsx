@@ -488,7 +488,9 @@ export default function App() {
             onToggleSaveCourse={handleToggleSaveCourse}
             savedCourseIds={savedCourseIds}
             searchTerm={searchTerm}
+            onSearchChange={setSearchTerm}
             selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
           />
 
           {/* 4. A Jornada Perfeita para o Seu Sucesso (The 4 Methodology Pillars) */}

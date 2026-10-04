@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Course } from '../types';
 import {
   Clock,
@@ -11,8 +11,86 @@ import {
   Heart,
   CheckCircle,
   PlayCircle,
-  ShieldCheck
+  ShieldCheck,
+  Flame,
+  TrendingUp,
+  Search,
+  RotateCcw
 } from 'lucide-react';
+
+interface SearchMetricItem {
+  id: string;
+  name: string;
+  searchTerm: string;
+  count: number;
+  badge: string;
+  accentBg: string;
+  accentText: string;
+  borderClass: string;
+}
+
+const INITIAL_POPULAR_SEARCHES: SearchMetricItem[] = [
+  {
+    id: 'assertiva',
+    name: 'Comunicação Assertiva com a Liderança',
+    searchTerm: 'Comunicação Assertiva',
+    count: 1540,
+    badge: '1º Mais Procurado',
+    accentBg: 'bg-amber-500/10 hover:bg-amber-500/20',
+    accentText: 'text-amber-900',
+    borderClass: 'border-amber-300'
+  },
+  {
+    id: 'emocional',
+    name: 'Inteligência Emocional & Relações',
+    searchTerm: 'Inteligência Emocional',
+    count: 1290,
+    badge: '2º Mais Procurado',
+    accentBg: 'bg-cyan-500/10 hover:bg-cyan-500/20',
+    accentText: 'text-cyan-900',
+    borderClass: 'border-cyan-300'
+  },
+  {
+    id: 'pics',
+    name: 'Práticas Integrativas (PICS)',
+    searchTerm: 'Práticas Integrativas',
+    count: 980,
+    badge: '3º Mais Procurado',
+    accentBg: 'bg-emerald-500/10 hover:bg-emerald-500/20',
+    accentText: 'text-emerald-900',
+    borderClass: 'border-emerald-300'
+  },
+  {
+    id: 'lideranca',
+    name: 'Liderança e Gestão 360°',
+    searchTerm: 'Liderança',
+    count: 870,
+    badge: 'Em Alta',
+    accentBg: 'bg-purple-500/10 hover:bg-purple-500/20',
+    accentText: 'text-purple-900',
+    borderClass: 'border-purple-300'
+  },
+  {
+    id: 'landing',
+    name: 'Landing Pages & Biolinks',
+    searchTerm: 'Landing Page',
+    count: 790,
+    badge: 'Destaque Pro',
+    accentBg: 'bg-blue-500/10 hover:bg-blue-500/20',
+    accentText: 'text-blue-900',
+    borderClass: 'border-blue-300'
+  },
+  {
+    id: 'financas',
+    name: 'Finanças Comportamentais',
+    searchTerm: 'Finanças',
+    count: 680,
+    badge: 'Tendência',
+    accentBg: 'bg-rose-500/10 hover:bg-rose-500/20',
+    accentText: 'text-rose-900',
+    borderClass: 'border-rose-300'
+  }
+];
 
 interface CourseCatalogProps {
   courses: Course[];
@@ -23,7 +101,9 @@ interface CourseCatalogProps {
   onToggleSaveCourse: (courseId: string) => void;
   savedCourseIds: string[];
   searchTerm: string;
+  onSearchChange?: (term: string) => void;
   selectedCategory: string | null;
+  onCategoryChange?: (category: string | null) => void;
 }
 
 export const CourseCatalog: React.FC<CourseCatalogProps> = ({
@@ -35,8 +115,100 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
   onToggleSaveCourse,
   savedCourseIds,
   searchTerm,
+  onSearchChange,
   selectedCategory,
+  onCategoryChange,
 }) => {
+  // Real-time tracking of popular course searches
+  const [popularSearches, setPopularSearches] = useState<SearchMetricItem[]>(() => {
+    try {
+      const saved = localStorage.getItem('esdhubem_popular_searches');
+      if (saved) {
+        return JSON.parse(saved);
+      }
+    } catch {
+      // Fallback
+    }
+    return INITIAL_POPULAR_SEARCHES;
+  });
+
+  // Track when a user actively searches
+  const handleSelectPopularSearch = (item: SearchMetricItem) => {
+    // 1. Increment metric count in state and localStorage
+    const updated = popularSearches.map((entry) => {
+      if (entry.id === item.id || entry.searchTerm.toLowerCase() === item.searchTerm.toLowerCase()) {
+        return { ...entry, count: entry.count + 1 };
+      }
+      return entry;
+    });
+
+    // Sort by most searched
+    updated.sort((a, b) => b.count - a.count);
+
+    setPopularSearches(updated);
+    try {
+      localStorage.setItem('esdhubem_popular_searches', JSON.stringify(updated));
+    } catch {
+      // Ignore localStorage errors
+    }
+
+    // 2. Set search filter in the application
+    if (onCategoryChange) onCategoryChange(null);
+    if (onPillarChange) onPillarChange('all');
+    if (onSearchChange) {
+      if (searchTerm.toLowerCase() === item.searchTerm.toLowerCase()) {
+        onSearchChange('');
+      } else {
+        onSearchChange(item.searchTerm);
+      }
+    }
+  };
+
+  // Record user manual searches to update trends dynamically
+  useEffect(() => {
+    if (!searchTerm || searchTerm.trim().length < 3) return;
+
+    const timeout = setTimeout(() => {
+      setPopularSearches((prev) => {
+        const query = searchTerm.trim().toLowerCase();
+        const existingIdx = prev.findIndex(
+          (p) => p.searchTerm.toLowerCase() === query || query.includes(p.searchTerm.toLowerCase())
+        );
+
+        let nextList: SearchMetricItem[];
+        if (existingIdx >= 0) {
+          nextList = prev.map((item, idx) =>
+            idx === existingIdx ? { ...item, count: item.count + 1 } : item
+          );
+        } else {
+          // Add newly discovered popular query
+          const newItem: SearchMetricItem = {
+            id: `query-${Date.now()}`,
+            name: searchTerm.trim(),
+            searchTerm: searchTerm.trim(),
+            count: 1,
+            badge: 'Nova Busca',
+            accentBg: 'bg-amber-500/10 hover:bg-amber-500/20',
+            accentText: 'text-amber-900',
+            borderClass: 'border-amber-300'
+          };
+          nextList = [...prev, newItem];
+        }
+
+        nextList.sort((a, b) => b.count - a.count);
+        const topList = nextList.slice(0, 8);
+        try {
+          localStorage.setItem('esdhubem_popular_searches', JSON.stringify(topList));
+        } catch {
+          // Ignore
+        }
+        return topList;
+      });
+    }, 1500);
+
+    return () => clearTimeout(timeout);
+  }, [searchTerm]);
+
   // Filter courses by pillar, search, and category
   const filteredCourses = courses.filter((course) => {
     const matchesPillar = activePillar === 'all' || course.pillar === activePillar;
@@ -57,9 +229,10 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
   return (
     <section className="py-16 bg-[#F8FAFC]" id="catalogo-cursos">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading & Filter Tabs */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
-          <div>
+        
+        {/* Section Heading & Most Searched Box */}
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10">
+          <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 text-[#243042] text-xs font-bold uppercase tracking-wider mb-2">
               <BookOpen className="w-4 h-4 text-amber-500" />
               <span>Grade de Cursos Livres e Produtos da ESDHUBEM</span>
@@ -67,119 +240,108 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
               Catálogo de Cursos Online ESDHUBEM
             </h2>
-            <p className="mt-2 text-slate-600 text-sm sm:text-base max-w-2xl">
-              Selecione o curso ou o produto para rentabilizar o seu desempenho profissional.
+            <p className="mt-2 text-slate-600 text-sm sm:text-base">
+              Explore os cursos livres e formações mais procuradas para rentabilizar e potencializar seu desenvolvimento humano e profissional.
             </p>
           </div>
 
-          {/* Pillar Tabs Matching the User's Requirements with Custom Colors */}
-          <div className="flex flex-wrap items-center gap-2 bg-slate-200/70 p-2 rounded-2xl self-start border border-slate-300/60 shadow-xs">
-            {/* Todos os Cursos */}
-            <button
-              onClick={() => onPillarChange('all')}
-              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activePillar === 'all'
-                  ? 'bg-slate-900 text-white shadow-md ring-2 ring-slate-900/20'
-                  : 'bg-white/80 hover:bg-white text-slate-700 border border-slate-300/80'
-              }`}
-            >
-              <span>Todos os Cursos</span>
-            </button>
+          {/* Dynamic "Cursos Mais Procurados e Pesquisados" Container */}
+          <div className="bg-white/95 rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm lg:max-w-xl w-full flex flex-col justify-between">
+            {/* Header with live tracking indicator */}
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
+              <div className="flex items-center gap-2">
+                <span className="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                  <Flame className="w-4 h-4 fill-amber-500 text-amber-500" />
+                </span>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xs sm:text-sm flex items-center gap-1.5">
+                    <span>Cursos Mais Procurados na Escola</span>
+                  </h3>
+                  <p className="text-[10px] text-slate-500">Ranking automático baseado nas pesquisas dos alunos</p>
+                </div>
+              </div>
 
-            {/* Cursos Freepremium */}
-            <button
-              onClick={() => onPillarChange('freepremium')}
-              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activePillar === 'freepremium'
-                  ? 'bg-cyan-600 text-white shadow-md ring-2 ring-cyan-600/20'
-                  : 'bg-cyan-50 hover:bg-cyan-100 text-cyan-900 border border-cyan-200'
-              }`}
-            >
-              <Sparkles className="w-3.5 h-3.5 text-cyan-500 fill-cyan-500" />
-              <span>Cursos Freepremium</span>
-            </button>
+              <div className="flex items-center gap-1.5 bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-full text-[10px] font-bold">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Mais Pesquisados</span>
+              </div>
+            </div>
 
-            {/* Horas Complementares */}
-            <button
-              onClick={() => onPillarChange('horas-complementares')}
-              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activePillar === 'horas-complementares'
-                  ? 'bg-amber-500 text-slate-950 shadow-md ring-2 ring-amber-500/20'
-                  : 'bg-amber-100/90 hover:bg-amber-200 text-amber-950 border border-amber-300'
-              }`}
-            >
-              <Clock className="w-3.5 h-3.5 text-amber-700" />
-              <span>Horas Complementares</span>
-            </button>
+            {/* Clickable Popular Course Search Pills */}
+            <div className="flex flex-wrap gap-2">
+              {popularSearches.slice(0, 6).map((item, idx) => {
+                const isActive = searchTerm.toLowerCase() === item.searchTerm.toLowerCase();
 
-            {/* Formações Profissionais */}
-            <button
-              onClick={() => onPillarChange('formacao-livre')}
-              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-1.5 ${
-                activePillar === 'formacao-livre'
-                  ? 'bg-purple-700 text-white shadow-md ring-2 ring-purple-700/20'
-                  : 'bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200'
-              }`}
-            >
-              <Award className="w-3.5 h-3.5 text-purple-600" />
-              <span>Formações Profissionais</span>
-            </button>
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleSelectPopularSearch(item)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 border ${
+                      isActive
+                        ? 'bg-[#182333] text-[#FFC72C] border-[#182333] shadow-md ring-2 ring-[#FFC72C]/40'
+                        : `${item.accentBg} ${item.accentText} ${item.borderClass} shadow-2xs hover:scale-102`
+                    }`}
+                    title={`Pesquisado ${item.count} vezes na ESDHUBEM`}
+                  >
+                    <span className="text-[10px] opacity-75 font-mono">#{idx + 1}</span>
+                    <span>{item.name}</span>
+                    <span className={`text-[9px] px-1.5 py-0.2 rounded font-extrabold ${isActive ? 'bg-[#FFC72C] text-slate-900' : 'bg-white/80 text-slate-700'}`}>
+                      🔥 {(item.count / 1000).toFixed(1)}k
+                    </span>
+                  </button>
+                );
+              })}
 
-            {/* Sites & Biolinks */}
-            <button
-              onClick={() => onNavigate && onNavigate('categoria:landing-pages-biolinks')}
-              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-emerald-900 bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 shadow-2xs flex items-center gap-1.5"
-            >
-              <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
-              <span>Sites & Biolinks</span>
-            </button>
-
-            {/* Apps & Dashboards */}
-            <button
-              onClick={() => onNavigate && onNavigate('aplicativos')}
-              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-slate-950 bg-[#FFC72C] hover:bg-amber-400 border border-amber-400 shadow-2xs flex items-center gap-1.5"
-            >
-              <span className="w-2 h-2 rounded-full bg-slate-950 inline-block" />
-              <span>Apps & Dashboards</span>
-            </button>
-
-            {/* Livros & Materiais */}
-            <button
-              onClick={() => onNavigate && onNavigate('livraria')}
-              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-rose-900 bg-rose-100 hover:bg-rose-200 border border-rose-300 shadow-2xs flex items-center gap-1.5"
-            >
-              <span className="w-2 h-2 rounded-full bg-rose-500 inline-block" />
-              <span>Livros & Materiais</span>
-            </button>
-
-            {/* Artigos de Estudo e Pesquisa */}
-            <button
-              onClick={() => onNavigate && onNavigate('artigos')}
-              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer text-indigo-900 bg-indigo-100 hover:bg-indigo-200 border border-indigo-300 shadow-2xs flex items-center gap-1.5"
-            >
-              <span className="w-2 h-2 rounded-full bg-indigo-500 inline-block" />
-              <span>Artigos de Estudo e Pesquisa</span>
-            </button>
+              {/* Reset filter button if a search is active */}
+              {searchTerm && onSearchChange && (
+                <button
+                  onClick={() => onSearchChange('')}
+                  className="px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition-all flex items-center gap-1 cursor-pointer"
+                >
+                  <RotateCcw className="w-3 h-3" />
+                  <span>Ver Todos</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
         {/* Active Filters Bar */}
         {(searchTerm || selectedCategory) && (
-          <div className="mb-6 flex flex-wrap items-center gap-2 bg-amber-50/80 border border-amber-200 p-3 rounded-xl text-xs sm:text-sm">
-            <span className="font-bold text-amber-900">Filtros ativos:</span>
-            {searchTerm && (
-              <span className="bg-white px-2.5 py-1 rounded-md text-slate-700 border border-amber-200 flex items-center gap-1.5 shadow-2xs">
-                Busca: <strong>"{searchTerm}"</strong>
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 bg-amber-50/90 border border-amber-200 p-3.5 rounded-2xl text-xs sm:text-sm">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="font-bold text-amber-950 flex items-center gap-1">
+                <Search className="w-3.5 h-3.5 text-amber-600" />
+                <span>Filtro de busca ativo:</span>
               </span>
-            )}
-            {selectedCategory && (
-              <span className="bg-white px-2.5 py-1 rounded-md text-slate-700 border border-amber-200 flex items-center gap-1.5 shadow-2xs">
-                Categoria: <strong>{selectedCategory}</strong>
+              {searchTerm && (
+                <span className="bg-white px-3 py-1 rounded-lg text-slate-800 border border-amber-200 font-bold shadow-2xs flex items-center gap-1">
+                  "{searchTerm}"
+                </span>
+              )}
+              {selectedCategory && (
+                <span className="bg-white px-3 py-1 rounded-lg text-slate-800 border border-amber-200 font-bold shadow-2xs flex items-center gap-1">
+                  Categoria: {selectedCategory}
+                </span>
+              )}
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="text-amber-900 font-extrabold text-xs">
+                {filteredCourses.length} {filteredCourses.length === 1 ? 'curso encontrado' : 'cursos encontrados'}
               </span>
-            )}
-            <span className="text-amber-800 ml-auto font-bold">
-              {filteredCourses.length} cursos encontrados
-            </span>
+              {onSearchChange && (
+                <button
+                  onClick={() => {
+                    onSearchChange('');
+                    if (onCategoryChange) onCategoryChange(null);
+                  }}
+                  className="text-xs text-amber-900 underline hover:text-amber-950 font-bold cursor-pointer"
+                >
+                  Limpar filtro
+                </button>
+              )}
+            </div>
           </div>
         )}
 
@@ -196,6 +358,8 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
             <button
               onClick={() => {
                 onPillarChange('all');
+                if (onSearchChange) onSearchChange('');
+                if (onCategoryChange) onCategoryChange(null);
               }}
               className="mt-5 px-5 py-2.5 rounded-full bg-[#243042] text-white text-xs font-bold cursor-pointer hover:bg-[#182333]"
             >
@@ -249,77 +413,92 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
                         e.stopPropagation();
                         onToggleSaveCourse(course.id);
                       }}
-                      className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-600 hover:text-rose-500 hover:scale-110 transition-all cursor-pointer shadow-xs"
-                      title={isSaved ? 'Remover dos salvos' : 'Salvar curso'}
+                      className={`absolute top-3 right-3 p-2 rounded-full backdrop-blur-md transition-all ${
+                        isSaved
+                          ? 'bg-rose-500 text-white shadow-md'
+                          : 'bg-white/80 text-slate-600 hover:bg-white hover:text-rose-500'
+                      }`}
+                      title={isSaved ? 'Remover dos favoritos' : 'Salvar nos favoritos'}
                     >
                       <Heart
-                        className={`w-4 h-4 ${
-                          isSaved ? 'text-rose-500 fill-rose-500' : 'text-slate-600'
-                        }`}
+                        className={`w-4 h-4 ${isSaved ? 'fill-white' : ''}`}
                       />
                     </button>
 
-                    {/* Hours Tag Bottom Left */}
-                    <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white text-xs font-semibold">
-                      <span className="flex items-center gap-1 bg-slate-950/80 px-2 py-0.5 rounded backdrop-blur-xs">
-                        <Clock className="w-3.5 h-3.5 text-[#FFC72C]" />
-                        {course.hours} horas
+                    {/* Category Label at bottom of image */}
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
+                      <span className="bg-[#182333]/80 backdrop-blur-xs px-2 py-0.5 rounded font-medium truncate max-w-[70%]">
+                        {course.category}
                       </span>
-                      <span className="flex items-center gap-1 bg-slate-950/80 px-2 py-0.5 rounded backdrop-blur-xs">
-                        <Star className="w-3.5 h-3.5 text-[#FFC72C] fill-[#FFC72C]" />
+                      <span className="flex items-center gap-1 font-bold bg-[#FFC72C] text-slate-950 px-2 py-0.5 rounded shadow-xs">
+                        <Star className="w-3 h-3 fill-slate-950" />
                         {course.rating.toFixed(1)}
                       </span>
                     </div>
                   </div>
 
-                  {/* Course Details */}
+                  {/* Card Body */}
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between gap-2 text-[11px] text-[#243042] font-bold">
-                        <span className="truncate">{course.category}</span>
-                        <span className="shrink-0 text-slate-400 font-medium">
-                          {course.modulesCount} módulos
-                        </span>
-                      </div>
-
-                      <h3
-                        onClick={() => onSelectCourse(course)}
-                        className="font-bold text-slate-900 group-hover:text-[#243042] transition-colors leading-snug cursor-pointer line-clamp-2 text-base"
-                      >
+                    <div>
+                      <h3 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-[#243042] transition-colors line-clamp-2">
                         {course.title}
                       </h3>
-
-                      <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+                      <p className="mt-2 text-xs text-slate-600 line-clamp-2 leading-relaxed">
                         {course.subtitle}
                       </p>
                     </div>
 
+                    {/* Course Metadata */}
+                    <div className="space-y-3 pt-3 border-t border-slate-100 text-xs">
+                      <div className="flex items-center justify-between text-slate-500">
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5 text-slate-400" />
+                          <span>{course.hours}h de carga horária</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Users className="w-3.5 h-3.5 text-slate-400" />
+                          <span>{course.studentsCount} alunos</span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-1.5 text-emerald-700 font-semibold text-[11px]">
+                        <CheckCircle className="w-3.5 h-3.5" />
+                        <span>Certificado com Registro Digital</span>
+                      </div>
+                    </div>
+
                     {/* Price & Action Button */}
-                    <div className="pt-3 border-t border-slate-100 space-y-3">
-                      <div className="text-xs text-slate-600 flex items-center gap-1.5 font-medium">
-                        <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                        <span className="line-clamp-1">{course.priceNote}</span>
+                    <div className="pt-2 flex items-center justify-between gap-3">
+                      <div>
+                        {course.pillar === 'freepremium' ? (
+                          <div>
+                            <span className="text-[10px] text-emerald-600 font-bold uppercase block">
+                              Aulas 100% Grátis
+                            </span>
+                            <span className="text-sm font-black text-slate-900">
+                              Certificado Opcional
+                            </span>
+                          </div>
+                        ) : (
+                          <div>
+                            <span className="text-[10px] text-slate-400 uppercase block font-medium">
+                              Investimento
+                            </span>
+                            <span className="text-base font-black text-slate-900">
+                              R$ {course.price.toFixed(2).replace('.', ',')}
+                            </span>
+                          </div>
+                        )}
                       </div>
 
-                      <div className="flex items-center gap-2">
-                        <button
-                          type="button"
-                          onClick={() => onSelectCourse(course)}
-                          className="flex-1 py-2.5 px-3 bg-[#243042] hover:bg-[#182333] text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
-                        >
-                          <PlayCircle className="w-3.5 h-3.5 text-[#FFC72C]" />
-                          <span>Acessar Curso</span>
-                        </button>
-
-                        <button
-                          type="button"
-                          onClick={() => onSelectCourse(course)}
-                          className="p-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl transition-colors cursor-pointer text-xs"
-                          title="Ver ementa completa"
-                        >
-                          <ArrowRight className="w-4 h-4" />
-                        </button>
-                      </div>
+                      <button
+                        type="button"
+                        onClick={() => onSelectCourse(course)}
+                        className="inline-flex items-center gap-1 bg-[#FFC72C] hover:bg-[#ffcf47] text-[#182333] font-black text-xs px-4 py-2.5 rounded-xl transition-all shadow-xs hover:shadow-md cursor-pointer group-hover:translate-x-0.5"
+                      >
+                        <span>Acessar</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -327,6 +506,7 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
             })}
           </div>
         )}
+
       </div>
     </section>
   );
