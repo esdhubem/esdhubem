@@ -870,12 +870,12 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
           <div>
             <h3 className="text-xl font-bold text-[#243042]">
               {currentCategory.id === 'landing-pages-biolinks'
-                ? `Modelos Disponíveis em ${categoryCleanName}`
+                ? `Produtos Disponíveis em ${categoryCleanName}`
                 : `Cursos Disponíveis em ${categoryCleanName}`}
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
               {currentCategory.id === 'landing-pages-biolinks'
-                ? `Mostrando ${relatedCourses.length} modelos prontos com alta conversão e design responsivo`
+                ? `Mostrando ${relatedCourses.length} produtos e modelos prontos com alta conversão e design responsivo`
                 : `Mostrando ${relatedCourses.length} cursos com certificação válida e metodologia prática`}
             </p>
           </div>
