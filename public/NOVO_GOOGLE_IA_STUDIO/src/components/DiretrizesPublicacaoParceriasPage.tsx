@@ -493,11 +493,9 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         <span>🆓</span>
                         <strong className="text-base">Disponibilização Gratuita</strong>
                       </div>
-                      <ul className="space-y-1 text-slate-700">
+                      <ul className="space-y-1.5 text-slate-700">
                         <li>• Página própria no site da ESDHUBEM;</li>
-                        <li>• Formato digital para leitura ou download;</li>
-                        <li>• Depósito em repositórios de acesso público;</li>
-                        <li>• Divulgação em canais da escola.</li>
+                        <li>• Disponível a capa da imagem do livro e a descrição e informação do certificado diamante emitido pela escola.</li>
                       </ul>
                     </div>
 
@@ -507,16 +505,16 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         <span>💰</span>
                         <strong className="text-base">Sobre Disponibilização para Venda</strong>
                       </div>
-                      <p className="text-slate-700">
-                        Caso você queira disponibilizar seu livro ou obra para venda ao público, a ESDHUBEM estabelece uma <strong>parceria como afiliado por meio da plataforma Hotmart</strong>.
+                      <p className="text-slate-700 leading-relaxed">
+                        Caso você queira disponibilizar seu livro ou obra para venda ao público, a ESDHUBEM estabelece uma <strong>parceria como afiliado por meio da plataforma Hotmart</strong>. Por que fazemos assim?
                       </p>
                     </div>
                   </div>
 
                   {/* Detalhamento Venda Hotmart */}
-                  <div className="bg-white border border-amber-200/80 rounded-2xl p-5 space-y-3 text-xs sm:text-sm">
+                  <div className="bg-white border border-amber-200/80 rounded-2xl p-5 space-y-3 text-xs sm:text-sm shadow-xs">
                     <p className="font-bold text-amber-950">Por que fazemos assim?</p>
-                    <ul className="space-y-1.5 text-slate-700">
+                    <ul className="space-y-2 text-slate-700">
                       <li className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">✅</span>
                         <span><strong>Você continua sendo o autor e o titular dos direitos</strong> — a parceria não altera a propriedade da obra;</span>
@@ -527,11 +525,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">✅</span>
-                        <span><strong>A parceria permite que a escola divulgue seu trabalho</strong> para nossa rede de contatos, ampliando sua visibilidade;</span>
+                        <span><strong>A parceria permite que a escola divulgue a venda do seu trabalho</strong> para nossa rede de contatos, ampliando sua visibilidade;</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">✅</span>
-                        <span><strong>Cada parte recebe a participação combinada sobre as vendas</strong> — você como autor, a escola como parceira de divulgação;</span>
+                        <span><strong>Cada parte recebe a participação combinada sobre as vendas</strong>, você como autor, a escola como parceira de divulgação;</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">✅</span>
@@ -539,13 +537,9 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">✅</span>
-                        <span><strong>Você pode optar por não vender:</strong> a publicação gratuita no site ou repositório não exige parceria de venda — isso é uma escolha sua, feita quando quiser avançar para comercialização.</span>
+                        <span><strong>Você pode optar por não vender:</strong> a publicação gratuita no site ou repositório não exige parceria de venda, isso é uma escolha sua, feita quando quiser avançar para comercialização.</span>
                       </li>
                     </ul>
-
-                    <p className="p-3 bg-amber-50 rounded-xl border border-amber-200 text-amber-900 italic text-xs mt-2">
-                      <strong>Em resumo:</strong> a parceria existe para dar estrutura, alcance e suporte à sua obra quando você decidir disponibilizá-la comercialmente. A obra continua sendo sua — nós apenas abrimos caminho para que mais pessoas possam conhecê-la.
-                    </p>
                   </div>
                 </div>
               </div>
