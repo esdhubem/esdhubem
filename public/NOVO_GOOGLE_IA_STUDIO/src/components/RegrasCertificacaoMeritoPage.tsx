@@ -116,20 +116,32 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
       {/* Main Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
 
-        {/* Sobre os Estudo e Pesquisa da ESDHUBEM */}
-        <div className="text-slate-800 text-sm sm:text-base leading-relaxed space-y-4 max-w-4xl mx-auto">
+        {/* Por que criamos as Diretrizes de Publicação e a Escala de Autoria? */}
+        <section className="text-slate-800 space-y-6 max-w-4xl mx-auto py-2">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
               <BookOpen className="w-5 h-5" />
             </div>
-            <h3 className="font-extrabold text-[#182333] text-xl sm:text-2xl tracking-tight">
-              Sobre os Estudo e Pesquisa da ESDHUBEM
-            </h3>
+            <h2 className="font-extrabold text-[#182333] text-2xl sm:text-3xl tracking-tight">
+              Por que criamos as Diretrizes de Publicação e a Escala de Autoria?
+            </h2>
           </div>
-          <p className="text-slate-700 leading-relaxed text-base sm:text-lg">
-            No nosso site da <strong className="text-slate-900 font-bold">ESDHUBEM</strong> é um espaço reservado a publicação dos alunos que concluíram o curso e optaram por entregar um manuscrito de conclusão de curso como o objetivo de desenvolver métodos de escrita e adquirir um certificado com mais valor. Tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, publicação de livros e blogs, bem como melhorar o seu desempenho profissional e relacional. Acreditamos que a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena.
-          </p>
-        </div>
+
+          <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
+            <p>
+              A <strong className="text-slate-900 font-bold">ESDHUBEM</strong> instituiu estas diretrizes e a Escala de Autoria para oferecer um caminho claro, seguro e valorizado para quem deseja ir além da simples conclusão de um curso.
+            </p>
+            <p>
+              Nosso espaço de publicação é destinado aos alunos que, ao finalizarem sua formação, escolhem entregar um manuscrito como trabalho de conclusão com o propósito de desenvolver a prática da escrita e receber um reconhecimento que reflete verdadeiramente o esforço e a dedicação aplicados.
+            </p>
+            <p>
+              Sabemos que muitos chegam até nós buscando preparo para desafios reais: elaborar Trabalhos de Conclusão de Curso, redações do ENEM, provas de concursos públicos, artigos para revistas científicas, livros, conteúdos para a internet e, sobretudo, para se expressar com clareza no ambiente profissional e nas relações pessoais. A Escala de Autoria foi estruturada justamente para acompanhar cada etapa desse crescimento: do primeiro texto prático ao trabalho de maior extensão e profundidade.
+            </p>
+            <p>
+              Acreditamos que saber ler e escrever com clareza não é apenas uma habilidade técnica, é uma forma de compreender o mundo, de compartilhar ideias e de exercer a cidadania plena. Por isso, organizamos níveis, critérios e proteções para que cada aluno possa praticar, publicar e crescer com segurança, reconhecimento e total respeito à sua autoria.
+            </p>
+          </div>
+        </section>
 
         {/* SUMMARY TABLE SECTION */}
         <section className="space-y-6">
