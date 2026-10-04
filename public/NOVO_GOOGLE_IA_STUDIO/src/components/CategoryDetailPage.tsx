@@ -108,7 +108,7 @@ const CATEGORY_META: Record<
   'aprofundamento-profissional-saude': {
     heroTag: 'Graduados em Saúde & Aperfeiçoamento',
     description:
-      'Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, troca de experiência e desenvolvimento técnico — não se tratam de pós-graduação, mas de aprofundamento profissional prático e fundamentado. Para participar, é necessário comprovar formação superior.',
+      'Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, troca de experiência e desenvolvimento técnico, não se tratam de pós-graduação, mas de aprofundamento profissional prático e fundamentado. Para participar, é necessário comprovar formação superior.',
     targetPublic:
       'Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos, terapeutas e demais profissionais formados em saúde.',
     skillsSummary: [

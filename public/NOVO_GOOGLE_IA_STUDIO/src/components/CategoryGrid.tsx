@@ -284,7 +284,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, troca de experiência e desenvolvimento técnico — não se tratam de pós-graduação, mas de aprofundamento profissional prático e fundamentado. Para participar, é necessário comprovar formação superior. Foco em conteúdos relevantes, boas práticas e evolução contínua da atuação.
+                      Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, troca de experiência e desenvolvimento técnico, não se tratam de pós-graduação, mas de aprofundamento profissional prático e fundamentado. Para participar, é necessário comprovar formação superior. Foco em conteúdos relevantes, boas práticas e evolução contínua da atuação.
                     </p>
                   </div>
                   <div>
