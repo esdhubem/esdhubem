@@ -79,11 +79,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             </h1>
 
             <p className="text-[#FFC72C] text-base sm:text-lg font-semibold leading-relaxed">
-              Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando Selos de Autoria (Bronze, Prata, Ouro e Diamante) através da publicação de artigos, manuscritos com registro DOI e Livros
-            </p>
-
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed pt-2">
-              A ESDHUBEM é uma instituição de ensino livre focada no desenvolvimento humano que vai muito além da emissão de certificados tradicionais. A escola valoriza diversos saberes, promovendo o pensamento crítico e a capacidade de distinguir factos de meras opiniões. Os programas de ensino dividem-se em várias categorias, como formações completas, capacitações práticas e cursos livres. Os alunos podem seguir um percurso de quatro etapas que começa na aprendizagem e culmina na criação autoral de conteúdos originais. Este trajeto académico organiza-se em quatro níveis de reconhecimento, permitindo que cada estudante avance ao seu próprio ritmo. Por fim, a instituição incentiva o uso ético da inteligência artificial como ferramenta de apoio, assegurando que a autoria e o pensamento original pertençam sempre ao aluno.
+              Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando Selos de Autoria (Bronze, Prata, Ouro e Diamante) através da publicação de artigos, manuscritos com registro DOI e Livros.
             </p>
           </div>
 
@@ -118,6 +114,17 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
       {/* Main Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        {/* Sobre os Estudo e Pesquisa da ESDHUBEM */}
+        <div className="p-6 sm:p-8 rounded-3xl bg-amber-500/10 border border-amber-500/30 text-slate-800 text-sm sm:text-base leading-relaxed shadow-sm space-y-3">
+          <h3 className="font-extrabold text-[#182333] text-lg sm:text-xl flex items-center gap-2">
+            <BookOpen className="w-5 h-5 text-amber-600" />
+            <span>Sobre os Estudo e Pesquisa da ESDHUBEM</span>
+          </h3>
+          <p className="text-slate-700 leading-relaxed">
+            No nosso site da <strong className="text-slate-900 font-bold">ESDHUBEM</strong> é um espaço reservado a publicação dos alunos que concluíram o curso e optaram por entregar um manuscrito de conclusão de curso como o objetivo de desenvolver métodos de escrita e adquirir um certificado com mais valor. Tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, publicação de livros e blogs, bem como melhorar o seu desempenho profissional e relacional. Acreditamos que a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena.
+          </p>
+        </div>
 
         {/* SUMMARY TABLE SECTION */}
         <section className="space-y-6">
@@ -219,35 +226,24 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                       <span className="text-xl">💎</span>
                       <div>
                         <strong className="block text-slate-900">Diamante</strong>
-                        <span className="text-[11px] text-cyan-700 font-normal">Excelência Científica</span>
+                        <span className="text-[11px] text-cyan-700 font-normal">Publicação de Livro</span>
                       </div>
                     </td>
                     <td className="py-4 px-6">
-                      Publicar um artigo aprovado em revista científica externa com revisão por pares.
+                      Produzir um livro autoral com mínimo de 50 páginas de conteúdo e realizar o registro de direitos autorais.
                     </td>
                     <td className="py-4 px-6">
-                      Periódico científico externo + Destaque especial de honra na página principal da escola.
+                      Mural de Livros / Livraria Digital da ESDHUBEM + Registro Formal de Direitos Autorais.
                     </td>
                     <td className="py-4 px-6">
                       <span className="inline-block px-2.5 py-1 rounded-full bg-cyan-100 text-cyan-900 text-xs font-bold">
-                        Alta (Acadêmica)
+                        Alta (Autoral)
                       </span>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-          </div>
-
-          {/* Esclarecimento sobre os Anais de Estudo e Pesquisa */}
-          <div className="p-5 sm:p-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-slate-800 text-sm leading-relaxed shadow-xs space-y-2 mt-6">
-            <h4 className="font-bold text-[#182333] text-base flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-amber-600" />
-              <span>Sobre os Anais de Estudo e Pesquisa da ESDHUBEM</span>
-            </h4>
-            <p className="text-slate-700 leading-relaxed">
-              Os Anais de estudo e pesquisa, também chamados de anais de eventos ou proceedings, são coleções oficiais que reúnem os trabalhos, resumos, artigos e relatos apresentados em congressos, simpósios, seminários ou conferências. No nosso site da <strong className="text-slate-900 font-bold">ESDHUBEM</strong> é um espaço reservado a publicação dos trabalhos de conclusão de curso dos alunos da nossa escola, tendo em conta que nossos alunos desejam desenvolver a capacidade de ler, estudar e escrever como forma de se preparar e se desenvolver para trabalhos de conclusão de cursos acadêmicos, redações de ENEM, concursos públicos e futuras publicações em revistas científica, bem como melhorar o seu desempenho profissional e relacional pois a capacidade de ler e escrever ajuda as pessoas a compreender o mundo ao redor, comunicar ideias com clareza e exercer a cidadania de forma plena.
-            </p>
           </div>
         </section>
 
@@ -369,21 +365,22 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                   💎
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">Nível Diamante: Excelência Científica</h3>
-                  <span className="text-xs text-cyan-700 font-semibold">Honraria Máxima & Revisão por Pares</span>
+                  <h3 className="text-xl font-bold text-slate-900">Nível Diamante: Autorar e Construir</h3>
+                  <span className="text-xs text-cyan-700 font-semibold">Livro Autoral & Registro de Direitos Autorais</span>
                 </div>
               </div>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                O nível mais elevado de reconhecimento acadêmico. Exige que o trabalho científico desenvolvido pelo aluno passe por aprovação e revisão por pares (*peer-review*) em uma revista ou periódico científico qualificado nacional ou internacional.
+                O nível mais elevado da escala autoral. Destinado ao estudante que deseja transformar seu conhecimento, experiência, estudo ou investigação em uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo), com orientação estrutural e registro formal de direitos autorais.
               </p>
 
               <div className="p-4 rounded-2xl bg-cyan-50 border border-cyan-200 text-xs space-y-2 text-cyan-950">
                 <strong>📌 Requisitos & Destaque Especial:</strong>
                 <ul className="list-disc pl-4 space-y-1">
-                  <li>Publicação confirmada em revista científica externa com comitê editorial.</li>
-                  <li><strong>Destaque de Honra:</strong> Exibição do feito em posição de destaque na página principal da ESDHUBEM.</li>
-                  <li><strong>Chancela Diamante:</strong> Impressão de honraria máxima no certificado do aluno com QR Code de validação.</li>
+                  <li>Produção de livro autoral com mínimo de 50 páginas de conteúdo desenvolvido e estruturado.</li>
+                  <li>Orientação e preparação editorial da obra para autopublicação ou registro.</li>
+                  <li><strong>Registro de Direitos Autorais:</strong> Registro formal da obra amparado pela Lei nº 9.610/1998.</li>
+                  <li><strong>Chancela Diamante:</strong> Impressão de honraria máxima no certificado do aluno com QR Code de validação e destaque no Mural de Livros da ESDHUBEM.</li>
                 </ul>
               </div>
             </div>
