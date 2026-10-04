@@ -274,6 +274,15 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('perguntas-frequentes')}
+                  className="hover:text-[#FFC72C] font-semibold transition-colors cursor-pointer text-left text-amber-300 flex items-center gap-2"
+                >
+                  <span className="text-[#FFC72C]">•</span>
+                  <span>Perguntas Frequentes (FAQ)</span>
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('podcasts')}
                   className="hover:text-emerald-300 transition-colors cursor-pointer text-left text-slate-300 flex items-center gap-2"
                 >

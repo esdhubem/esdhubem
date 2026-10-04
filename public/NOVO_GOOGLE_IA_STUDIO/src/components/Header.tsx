@@ -17,7 +17,8 @@ import {
   Headphones,
   Handshake,
   BookOpen,
-  ShieldCheck
+  ShieldCheck,
+  HelpCircle
 } from 'lucide-react';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
 
@@ -230,6 +231,16 @@ export const Header: React.FC<HeaderProps> = ({
             >
               Nossas Políticas
             </button>
+            <button
+              onClick={() => onNavigate('perguntas-frequentes')}
+              className={`transition-all py-1 cursor-pointer ${
+                currentPage === 'perguntas-frequentes'
+                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
+                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
+              }`}
+            >
+              Perguntas Frequentes
+            </button>
           </nav>
         </div>
       </div>
@@ -428,6 +439,10 @@ export const Header: React.FC<HeaderProps> = ({
               <span>Livraria</span>
             </button>
             <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
+            <button onClick={() => { onNavigate('perguntas-frequentes'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10 flex items-center gap-2">
+              <HelpCircle className="w-4 h-4 text-amber-400" />
+              <span>Perguntas Frequentes</span>
+            </button>
             <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
               <Headphones className="w-4 h-4 text-[#FFC72C]" />
               <span>Podcasts & Ensaios Sonoros</span>
