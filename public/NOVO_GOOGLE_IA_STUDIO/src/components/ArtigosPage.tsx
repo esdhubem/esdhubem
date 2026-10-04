@@ -81,10 +81,10 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4">
                 <BookOpen className="w-4 h-4" />
-                <span>Repositório Aberto de Anais, Estudos e Pesquisa</span>
+                <span>Repositório Aberto de Manuscritos de Estudos e Pesquisa</span>
               </div>
               <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight uppercase">
-                ARTIGOS DE ESTUDO <span className="text-[#FFC72C]">E PESQUISA</span>
+                REPOSITÓRIO ARTIGOS DOS ALUNOS <span className="text-[#FFC72C]">ESDHUBEM</span>
               </h1>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
                 Acesse a coleção oficial de manuscritos de conclusão de curso, artigos, pesquisas e de estudos publicados pela coordenação pedagógica e por alunos da <strong>ESDHUBEM</strong>, preservados digitalmente com atribuição de <strong>DOI no Zenodo / CERN</strong>.
