@@ -169,11 +169,8 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Unified Navigation Bar with Dropdown Submenus */}
       <div className="hidden lg:block bg-[#182333] border-b border-slate-800/80 shadow-md">
         <div className="max-w-[1600px] mx-auto px-4 lg:px-6">
-          <nav className="flex items-center justify-between h-12 text-xs xl:text-sm font-medium">
-            
-            {/* Left Nav Group */}
-            <div className="flex items-center gap-1 xl:gap-2">
-              {/* 1. Início */}
+          <nav className="flex items-center justify-center gap-1.5 xl:gap-2.5 h-12 text-xs xl:text-sm font-medium">
+            {/* 1. Início */}
               <button
                 onClick={() => onNavigate('inicio')}
                 className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
@@ -519,21 +516,18 @@ export const Header: React.FC<HeaderProps> = ({
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Right Group: Standalone Prominent "Validar Certificados" Button */}
-            <div className="flex items-center gap-3">
-              <button
-                onClick={onOpenValidator}
-                className="bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold px-4 py-2 rounded-xl shadow-lg hover:shadow-emerald-500/25 flex items-center gap-2 transition-all text-xs shrink-0 cursor-pointer border border-emerald-400/80 ring-2 ring-emerald-400/20 group"
-                id="btn-destaque-validar-certificado"
-                title="Consulte a autenticidade de um certificado emitido pela ESDHUBEM"
-              >
-                <ShieldCheck className="w-4 h-4 text-emerald-200 group-hover:scale-110 transition-transform" />
-                <span>Validar Certificados</span>
-                <span className="bg-emerald-950/60 text-emerald-300 text-[10px] font-black px-1.5 py-0.5 rounded ml-0.5">OFICIAL</span>
-              </button>
-            </div>
+            {/* Standalone Prominent "Validar Certificados" Button */}
+            <button
+              onClick={onOpenValidator}
+              className="bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold px-3.5 py-1.5 rounded-xl shadow-lg hover:shadow-emerald-500/25 flex items-center gap-2 transition-all text-xs shrink-0 cursor-pointer border border-emerald-400/80 ring-2 ring-emerald-400/20 group ml-2"
+              id="btn-destaque-validar-certificado"
+              title="Consulte a autenticidade de um certificado emitido pela ESDHUBEM"
+            >
+              <ShieldCheck className="w-4 h-4 text-emerald-200 group-hover:scale-110 transition-transform" />
+              <span>Validar Certificados</span>
+              <span className="bg-emerald-950/60 text-emerald-300 text-[10px] font-black px-1.5 py-0.5 rounded ml-0.5">OFICIAL</span>
+            </button>
           </nav>
         </div>
       </div>
