@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, BookOpen, ShieldCheck, Award, Building2 } from 'lucide-react';
+import { Sparkles, Lock, Award, GraduationCap, Heart } from 'lucide-react';
 
 interface HeroProps {
   onSelectCategory: (category: string) => void;
@@ -54,46 +54,47 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-y-8 lg:gap-4">
             
+            {/* 1. Seu texto é sempre seu */}
             <div className="flex items-center justify-center lg:justify-start gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-[#F8FAFC] border border-slate-200 flex items-center justify-center text-[#243042] shrink-0 shadow-sm">
-                <BookOpen className="w-6 h-6" />
+              <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200/80 flex items-center justify-center text-emerald-600 shrink-0 shadow-sm">
+                <Lock className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-base font-extrabold text-[#182333]">100% Online</h4>
-                <p className="text-sm text-slate-500">Estude no seu ritmo</p>
+                <h4 className="text-sm sm:text-base font-extrabold text-[#182333]">Seu texto é sempre seu</h4>
+                <p className="text-xs text-slate-500 leading-tight">Proteção à autoria garantida</p>
               </div>
             </div>
 
+            {/* 2. 4 Níveis de reconhecimento */}
             <div className="flex items-center justify-center lg:justify-center gap-4 sm:border-l border-slate-200 sm:pl-6 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0">
-              <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-amber-700 shrink-0 shadow-sm">
-                <ShieldCheck className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="text-base font-extrabold text-[#182333]">Certificado Livre</h4>
-                <p className="text-xs text-slate-500 leading-tight">Válido p/ horas complementares*</p>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-center lg:justify-center gap-4 lg:border-l border-slate-200 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0">
-              <div className="w-14 h-14 rounded-2xl bg-[#F8FAFC] border border-slate-200 flex items-center justify-center text-amber-500 shrink-0 shadow-sm">
+              <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-amber-600 shrink-0 shadow-sm">
                 <Award className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-base font-extrabold text-[#182333]">Aulas Gratuitas</h4>
-                <p className="text-xs text-slate-500 leading-tight">Taxa opcional p/ certificado</p>
+                <h4 className="text-sm sm:text-base font-extrabold text-[#182333]">4 Níveis de reconhecimento</h4>
+                <p className="text-xs text-slate-500 leading-tight font-medium">Bronze → Prata → Ouro → Diamante</p>
               </div>
             </div>
 
-            <div 
-              onClick={() => onSelectCategory('treinamentos-palestras-corporativas')}
-              className="flex items-center justify-center lg:justify-center gap-4 sm:border-l border-slate-200 sm:pl-6 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0 cursor-pointer group"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-[#243042] flex items-center justify-center text-[#FFC72C] shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                <Building2 className="w-6 h-6" />
+            {/* 3. Horas complementares */}
+            <div className="flex items-center justify-center lg:justify-center gap-4 lg:border-l border-slate-200 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0">
+              <div className="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-200/80 flex items-center justify-center text-sky-600 shrink-0 shadow-sm">
+                <GraduationCap className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-base font-extrabold text-[#182333] group-hover:text-amber-600 transition-colors">Nas Empresas</h4>
-                <p className="text-xs text-slate-500 leading-tight">Treinamento Presencial</p>
+                <h4 className="text-sm sm:text-base font-extrabold text-[#182333]">Horas complementares</h4>
+                <p className="text-xs text-slate-500 leading-tight">Válidas com base legal</p>
+              </div>
+            </div>
+
+            {/* 4. Desenvolvimento integral */}
+            <div className="flex items-center justify-center lg:justify-center gap-4 sm:border-l border-slate-200 sm:pl-6 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0">
+              <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200/80 flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
+                <Heart className="w-6 h-6 fill-blue-500/20" />
+              </div>
+              <div>
+                <h4 className="text-sm sm:text-base font-extrabold text-[#182333]">Desenvolvimento integral</h4>
+                <p className="text-xs text-slate-500 leading-tight">Conhecimento, escrita e bem-estar</p>
               </div>
             </div>
 
