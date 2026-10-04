@@ -20,7 +20,8 @@ import {
   ArrowRight,
   Filter,
   Library,
-  LayoutDashboard
+  LayoutDashboard,
+  ClipboardList
 } from 'lucide-react';
 import { CategoryItem } from '../types';
 
@@ -30,6 +31,7 @@ interface CategoryGridProps {
   onSelectCategory: (categoryName: string | null) => void;
   onNavigateToCategoriesPage?: () => void;
   onNavigateToCategoryDetail?: (categorySlug: string) => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 // Icon mapping helper
@@ -83,6 +85,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
   onSelectCategory,
   onNavigateToCategoriesPage,
   onNavigateToCategoryDetail,
+  onNavigate,
 }) => {
   return (
     <div>
@@ -101,230 +104,299 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
         </div>
       </section>
 
-      {/* Seção Tipos de Cursos — ESDHUBEM */}
-      <section className="py-10 sm:py-14 bg-slate-50/70 border-b border-slate-200/80">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-amber-100 text-amber-900 border border-amber-200 mb-2">
-              📋 Modalidades de Formação
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+      {/* Seção Modalidades de Formação — Conheça os Cursos Livres da ESDHUBEM */}
+      <section className="py-14 sm:py-18 bg-slate-50 border-b border-slate-200" id="modalidades-formacao-home">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold uppercase tracking-wider">
+              <ClipboardList className="w-3.5 h-3.5 text-blue-600" />
+              <span>Modalidades de Formação</span>
+            </div>
+            
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#182333] tracking-tight">
               Conheça os Cursos Livres da ESDHUBEM!
-            </h2>
-            <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+            </h3>
+            
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
               Aqui na nossa escola temos várias formas de ensino. Escolha a modalidade ideal para o seu momento de aprendizado, complementação acadêmica ou evolução profissional.
             </p>
           </div>
 
-          {/* Cards Detalhados - Descrição e Público-alvo (Tamanho harmonizado com a descrição do cabeçalho) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            {/* Card 1: Freepremium */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xl">🟢</span>
-                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
-                    Cursos Freepremium — Descoberta
-                  </h4>
+          {/* 8 Modalities Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+            {/* 1. Freepremium */}
+            <div 
+              onClick={() => {
+                if (onNavigate) onNavigate('modalidades-formacao');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl">🟢</span>
+                  <span className="text-[11px] font-bold bg-emerald-50 text-emerald-700 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                    Descoberta
+                  </span>
                 </div>
-                <div className="space-y-3.5 text-slate-600">
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Aprenda sem barreiras. Assista a todas as videoaulas  de forma 100% gratuita para testar o conteúdo, fazer os testes de multipla escolha e conhecer nossa metodologia. Você só paga uma taxa de emissão de certificado Bronze se decidir que quer o documento oficial.
-                    </p>
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      Estudantes e profissionais que buscam conhecimento rápido, querem validar a qualidade do curso antes de investir ou precisam apenas do aprendizado prático imediato sem custo inicial.
-                    </p>
-                  </div>
+                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-emerald-600 transition-colors">
+                  Cursos Freepremium
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Aprenda sem barreiras. Assista a todas as videoaulas de forma 100% gratuita para testar o conteúdo, fazer os testes de múltipla escolha e conhecer nossa metodologia. Você só paga taxa de certificado Bronze se quiser o documento oficial.
+                </p>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
+                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
+                  <span className="line-clamp-2">Estudantes e profissionais que buscam conhecimento rápido sem custo inicial.</span>
                 </div>
+              </div>
+              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-600">
+                <span>Ver Detalhes</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
 
-            {/* Card 2: Capacitação */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xl">🔵</span>
-                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
-                    Cursos de Capacitação — Ação Prática
-                  </h4>
+            {/* 2. Capacitação */}
+            <div 
+              onClick={() => {
+                if (onNavigate) onNavigate('modalidades-formacao');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-white rounded-2xl border border-slate-200/90 hover:border-blue-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl">🔵</span>
+                  <span className="text-[11px] font-bold bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full border border-blue-200">
+                    Ação Prática
+                  </span>
                 </div>
-                <div className="space-y-3.5 text-slate-600">
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas, metodologias e habilidades profissionais que geram resultado real no consultório, na empresa ou no projeto pessoal.
-                    </p>
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      Profissionais em atividade que precisam atualizar competências, aprender uma nova ferramenta de trabalho ou resolver demandas específicas da sua rotina profissional.
-                    </p>
-                  </div>
+                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-blue-600 transition-colors">
+                  Cursos de Capacitação
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas e metodologias que geram resultado real.
+                </p>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
+                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
+                  <span className="line-clamp-2">Profissionais que precisam atualizar competências e resolver demandas da rotina.</span>
                 </div>
+              </div>
+              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-blue-600">
+                <span>Ver Detalhes</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
 
-            {/* Card 3: Horas Complementares */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xl">🟡</span>
-                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
-                    Cursos de Horas Complementares — com Foco em Validação Acadêmica
-                  </h4>
+            {/* 3. Horas Complementares */}
+            <div 
+              onClick={() => {
+                if (onNavigate) onNavigate('modalidades-formacao');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-white rounded-2xl border border-slate-200/90 hover:border-amber-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl">🟡</span>
+                  <span className="text-[11px] font-bold bg-amber-50 text-amber-700 px-2.5 py-0.5 rounded-full border border-amber-200">
+                    Validação Acadêmica
+                  </span>
                 </div>
-                <div className="space-y-3.5 text-slate-600">
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Cursos estruturados para atender diretamente às exigências de Atividades Complementares de cursos de graduação e pós-graduação. Conteúdo alinhado às diretrizes do MEC para cursos livres, com certificado detalhado que especifica carga horária, conteúdo programático e dados da instituição.
-                    </p>
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      Universitários de qualquer período e área que precisam cumprir a carga horária complementar exigida pela sua faculdade para poder colar grau.
-                    </p>
-                  </div>
+                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-amber-600 transition-colors">
+                  Horas Complementares
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Cursos estruturados para atender diretamente às exigências de Atividades Complementares de graduação e pós-graduação, com certificado detalhado especificando carga horária, ementa e dados institucionais.
+                </p>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
+                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
+                  <span className="line-clamp-2">Universitários de qualquer período e área que precisam cumprir horas para colar grau.</span>
                 </div>
+              </div>
+              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-amber-600">
+                <span>Ver Detalhes</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
 
-            {/* Card 4: Formação Livre */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xl">🔴</span>
-                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
-                    Cursos de Formação Livre — Transformação
-                  </h4>
+            {/* 4. Formação Livre */}
+            <div 
+              onClick={() => {
+                if (onNavigate) onNavigate('modalidades-formacao');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-white rounded-2xl border border-slate-200/90 hover:border-rose-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl">🔴</span>
+                  <span className="text-[11px] font-bold bg-rose-50 text-rose-700 px-2.5 py-0.5 rounded-full border border-rose-200">
+                    Transformação
+                  </span>
                 </div>
-                <div className="space-y-3.5 text-slate-600">
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Jornadas completas de aprendizado para quem quer dominar uma área do início ao fim. Diferente de um curso rápido, a formação livre oferece uma visão ampla e profunda, combinando teoria consistente, prática orientada e estudos de caso reais.
-                    </p>
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      Pessoas em transição de carreira, iniciantes que querem uma base sólida antes de atuar ou qualquer pessoa que deseja um mergulho profundo e transformador em um tema.
-                    </p>
-                  </div>
+                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-rose-600 transition-colors">
+                  Formação Livre
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Jornadas completas de aprendizado para quem quer dominar uma área do início ao fim, combinando teoria consistente, prática orientada e estudos de caso reais para uma visão ampla e profunda.
+                </p>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
+                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
+                  <span className="line-clamp-2">Pessoas em transição de carreira ou que buscam uma base sólida e aprofundada.</span>
                 </div>
+              </div>
+              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-rose-600">
+                <span>Ver Detalhes</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
 
-            {/* Card 5: Treinamentos Corporativos */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xl">🟣</span>
-                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
-                    Treinamentos Corporativos — Desempenho Profissional
-                  </h4>
+            {/* 5. Treinamentos Corporativos */}
+            <div 
+              onClick={() => {
+                if (onNavigate) onNavigate('categoria:treinamentos-palestras-corporativas');
+                else if (onNavigateToCategoryDetail) onNavigateToCategoryDetail('treinamentos-palestras-corporativas');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-white rounded-2xl border border-slate-200/90 hover:border-purple-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl">🟣</span>
+                  <span className="text-[11px] font-bold bg-purple-50 text-purple-700 px-2.5 py-0.5 rounded-full border border-purple-200">
+                    Desempenho Profissional
+                  </span>
                 </div>
-                <div className="space-y-3.5 text-slate-600">
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Programas desenvolvidos sob medida para equipes, empresas e instituições. Foco em alinhar processos, capacitar colaboradores em rotinas específicas, melhorar o clima organizacional e desenvolver lideranças com metodologias ativas e mensuração de resultados.
-                    </p>
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      Gestores de RH, líderes de equipe, diretores de empresas e organizações do terceiro setor que precisam capacitar seus times com agilidade e qualidade pedagógica comprovada.
-                    </p>
-                  </div>
+                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-purple-600 transition-colors">
+                  Treinamentos Corporativos
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Programas desenvolvidos sob medida para equipes, empresas e instituições. Foco em alinhar processos, capacitar colaboradores, melhorar o clima organizacional e desenvolver lideranças ativas.
+                </p>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
+                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
+                  <span className="line-clamp-2">Gestores de RH, líderes de equipe e diretores de empresas e terceiro setor.</span>
                 </div>
+              </div>
+              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-600">
+                <span>Ver Detalhes</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
 
-            {/* Card 6: Autoria e Destaque */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xl">🟣</span>
-                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
-                    Autoria e Destaque — Desenvolvimento da Escrita
-                  </h4>
+            {/* 6. Autoria e Destaque */}
+            <div 
+              onClick={() => {
+                if (onNavigate) onNavigate('regras-certificacao-merito');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-white rounded-2xl border border-slate-200/90 hover:border-indigo-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl">🟣</span>
+                  <span className="text-[11px] font-bold bg-indigo-50 text-indigo-700 px-2.5 py-0.5 rounded-full border border-indigo-200">
+                    Desenvolvimento da Escrita
+                  </span>
                 </div>
-                <div className="space-y-3.5 text-slate-600">
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Aprenda a estruturar, escrever e publicar. Do texto prático ao livro, com reconhecimento Prata, Ouro ou Diamante. Transforme o que você aprendeu em conhecimento compartilhado e construa sua presença e credibilidade intelectual.
-                    </p>
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      Estudantes, pesquisadores, terapeutas e profissionais que desejam ir além do certificado, organizar suas ideias e publicar artigos, ensaios ou livros autorais.
-                    </p>
-                  </div>
+                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-indigo-600 transition-colors">
+                  Autoria e Destaque
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Aprenda a estruturar, escrever e publicar do texto prático ao livro, com reconhecimento Prata, Ouro ou Diamante. Transforme seu aprendizado em conhecimento compartilhado e credibilidade.
+                </p>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
+                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
+                  <span className="line-clamp-2">Estudantes, pesquisadores, terapeutas e profissionais que desejam publicar.</span>
                 </div>
+              </div>
+              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-indigo-600">
+                <span>Ver Detalhes</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
 
-            {/* Card 7: Aprofundamento Profissional — Área da Saúde */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xl">💙</span>
-                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
-                    Aprofundamento Profissional — Área da Saúde
-                  </h4>
+            {/* 7. Aprofundamento Profissional — Área da Saúde */}
+            <div 
+              onClick={() => {
+                if (onNavigate) onNavigate('categoria:aprofundamento-profissional-saude');
+                else if (onNavigateToCategoryDetail) onNavigateToCategoryDetail('aprofundamento-profissional-saude');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl">💙</span>
+                  <span className="text-[11px] font-bold bg-sky-50 text-sky-700 px-2.5 py-0.5 rounded-full border border-sky-200">
+                    Área da Saúde
+                  </span>
                 </div>
-                <div className="space-y-3.5 text-slate-600">
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, troca de experiência e desenvolvimento técnico, não se tratam de pós-graduação, mas de aprofundamento profissional prático e fundamentado. Para participar, é necessário comprovar formação superior. Foco em conteúdos relevantes, boas práticas e evolução contínua da atuação.
-                    </p>
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos, terapeutas e demais profissionais já formados que buscam atualização, ampliação de repertório e aperfeiçoamento sem precisar ingressar em programa de pós-graduação.
-                    </p>
-                  </div>
+                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-sky-600 transition-colors">
+                  Aprofundamento na Saúde
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Cursos exclusivos para graduados em saúde. Espaço de atualização e desenvolvimento técnico fundamentado (não se tratam de pós-graduação). Exige comprovação de nível superior.
+                </p>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
+                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
+                  <span className="line-clamp-2">Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos e terapeutas graduados.</span>
                 </div>
+              </div>
+              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-sky-600">
+                <span>Ver Detalhes</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
 
-            {/* Card 8: Workshop de Orientação de Carreira — Transformação Profissional */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xl">🧭</span>
-                  <h4 className="font-bold text-slate-900 text-base sm:text-lg">
-                    Workshop de Orientação de Carreira — Transformação Profissional
-                  </h4>
+            {/* 8. Workshop de Orientação de Carreira */}
+            <div 
+              onClick={() => {
+                if (onNavigate) onNavigate('categoria:workshop-orientacao-carreira');
+                else if (onNavigateToCategoryDetail) onNavigateToCategoryDetail('workshop-orientacao-carreira');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-white rounded-2xl border border-slate-200/90 hover:border-orange-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl">🧭</span>
+                  <span className="text-[11px] font-bold bg-orange-50 text-orange-700 px-2.5 py-0.5 rounded-full border border-orange-200">
+                    Transformação Profissional
+                  </span>
                 </div>
-                <div className="space-y-3.5 text-slate-600">
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e quais tendências redesenham o mundo do trabalho. Você vai entender para onde vai a sua área, como ocorre a mobilidade entre funções, o que outros profissionais já estão fazendo e, principalmente, o que pode estudar agora para se manter relevante e preparado para o que vem a seguir.
-                    </p>
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Público-alvo:</span>
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      Quem está em dúvida sobre o futuro da profissão, deseja mudar de área, precisa se reinventar no mercado ou quer planejar com clareza quais caminhos seguir e quais conhecimentos desenvolver para não ficar para trás.
-                    </p>
-                  </div>
+                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-orange-600 transition-colors">
+                  Orientação de Carreira
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Análise dos novos rumos do mercado: carreiras em transformação, mobilidade entre funções e o que você pode estudar agora para se manter relevante e preparado para o futuro do trabalho.
+                </p>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
+                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
+                  <span className="line-clamp-2">Quem deseja planejar com clareza quais caminhos seguir e habilidades desenvolver.</span>
                 </div>
               </div>
+              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-orange-600">
+                <span>Ver Detalhes</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
             </div>
+          </div>
+
+          {/* Action to Full Modalities Page */}
+          <div className="text-center pt-2">
+            <button
+              onClick={() => {
+                if (onNavigate) onNavigate('modalidades-formacao');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#182333] hover:bg-[#243042] text-[#FFC72C] font-bold text-xs sm:text-sm rounded-xl transition-all shadow-md cursor-pointer hover:scale-105"
+            >
+              <ClipboardList className="w-4 h-4 text-[#FFC72C]" />
+              <span>Ver Guia Completo das Modalidades de Formação</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </section>
