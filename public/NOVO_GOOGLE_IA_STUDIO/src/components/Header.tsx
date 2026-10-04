@@ -166,215 +166,375 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Bottom Bar: Navigation Links (Desktop/Laptop) */}
-      <div className="hidden lg:block bg-[#182333]">
-        <div className="max-w-[1600px] mx-auto px-4 lg:px-6 overflow-x-auto scrollbar-none">
-          <nav className="flex items-center justify-center gap-5 lg:gap-7 xl:gap-8 h-11 text-xs xl:text-sm font-medium whitespace-nowrap">
-            <button
-              onClick={() => onNavigate('inicio')}
-              className={`transition-all py-1 cursor-pointer ${
-                currentPage === 'home'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              Início
-            </button>
-            <button
-              onClick={() => onNavigate('categorias')}
-              className={`transition-all py-1 cursor-pointer flex items-center gap-1.5 ${
-                currentPage === 'categorias'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              <span>Categorias</span>
-              <span className="bg-white/10 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">20</span>
-            </button>
-            <button
-              onClick={() => onNavigate('categoria:landing-pages-biolinks')}
-              className={`transition-all py-1 cursor-pointer ${
-                currentPage.startsWith('categoria:landing-pages-biolinks')
-                  ? 'text-emerald-400 font-bold border-b-2 border-emerald-400'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              Sites & Biolinks
-            </button>
-            <button
-              onClick={() => onNavigate('aplicativos')}
-              className={`transition-all py-1 cursor-pointer ${
-                currentPage === 'aplicativos'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              Apps & Dashboards
-            </button>
-            <button
-              onClick={onOpenAbout}
-              className={`transition-all py-1 cursor-pointer ${
-                currentPage === 'sobre-nos'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              Sobre Nós
-            </button>
-            <button
-              onClick={() => onNavigate('politicas')}
-              className={`transition-all py-1 cursor-pointer ${
-                currentPage === 'politicas'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              Nossas Políticas
-            </button>
-            <button
-              onClick={() => onNavigate('perguntas-frequentes')}
-              className={`transition-all py-1 cursor-pointer ${
-                currentPage === 'perguntas-frequentes'
-                  ? 'text-[#FFC72C] font-bold border-b-2 border-[#FFC72C]'
-                  : 'text-white/80 hover:text-white hover:border-b-2 hover:border-white/30'
-              }`}
-            >
-              Perguntas Frequentes
-            </button>
+      {/* Unified Navigation Bar with Dropdown Submenus */}
+      <div className="hidden lg:block bg-[#182333] border-b border-slate-800/80 shadow-md">
+        <div className="max-w-[1600px] mx-auto px-4 lg:px-6">
+          <nav className="flex items-center justify-between h-12 text-xs xl:text-sm font-medium">
+            
+            {/* Left Nav Group */}
+            <div className="flex items-center gap-1 xl:gap-2">
+              {/* 1. Início */}
+              <button
+                onClick={() => onNavigate('inicio')}
+                className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                  currentPage === 'home' || currentPage === 'inicio'
+                    ? 'text-[#FFC72C] font-bold bg-white/5'
+                    : 'text-white/80 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                Início
+              </button>
+
+              {/* 2. Submenu: Produtos & Soluções */}
+              <div className="relative group py-2">
+                <button
+                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
+                    ['categorias', 'categoria-detalhe', 'aplicativos', 'livraria'].includes(currentPage) || currentPage.startsWith('categoria:')
+                      ? 'text-[#FFC72C] font-bold bg-white/5'
+                      : 'text-white/80 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Produtos & Soluções</span>
+                  <span className="text-[10px] bg-white/10 text-white font-bold px-1.5 py-0.2 rounded-full">20</span>
+                  <span className="text-white/50 text-[10px] group-hover:rotate-180 transition-transform duration-200">▼</span>
+                </button>
+
+                {/* Dropdown Card */}
+                <div className="absolute left-0 top-full pt-1 hidden group-hover:block z-50 min-w-[260px] animate-in fade-in slide-in-from-top-1 duration-150">
+                  <div className="bg-[#1E293B] border border-slate-700/90 rounded-2xl p-2 shadow-2xl space-y-1">
+                    <button
+                      onClick={() => onNavigate('categorias')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center justify-between cursor-pointer ${
+                        currentPage === 'categorias'
+                          ? 'bg-[#FFC72C]/15 text-[#FFC72C] font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <LayoutGrid className="w-4 h-4 text-amber-400 shrink-0" />
+                        <div>
+                          <div className="font-semibold text-xs">Categorias</div>
+                          <div className="text-[10px] text-slate-400">20 áreas temáticas integradas</div>
+                        </div>
+                      </div>
+                      <span className="bg-amber-400/20 text-amber-300 text-[10px] font-black px-1.5 py-0.5 rounded">20</span>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('categoria:landing-pages-biolinks')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage.startsWith('categoria:landing-pages-biolinks')
+                          ? 'bg-emerald-500/20 text-emerald-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Sparkles className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Sites & Biolinks</div>
+                        <div className="text-[10px] text-slate-400">Estruturas prontas de alta conversão</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('aplicativos')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'aplicativos'
+                          ? 'bg-blue-500/20 text-blue-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Sparkles className="w-4 h-4 text-blue-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Apps & Dashboards</div>
+                        <div className="text-[10px] text-slate-400">Soluções digitais para MEI e ME</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('livraria')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'livraria'
+                          ? 'bg-amber-500/20 text-amber-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <BookOpen className="w-4 h-4 text-amber-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Livraria</div>
+                        <div className="text-[10px] text-slate-400">Obras publicadas dos autores à venda</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* 3. Submenu: Certificação & Validação */}
+              <div className="relative group py-2">
+                <button
+                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
+                    ['regras-certificacao-merito', 'informacoes-legais', 'diretrizes-protecao-autoria', 'diretrizes-pedagogicas', 'diretrizes-publicacao-parcerias', 'diretrizes-publicacao'].includes(currentPage)
+                      ? 'text-[#FFC72C] font-bold bg-white/5'
+                      : 'text-white/80 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  <Award className="w-3.5 h-3.5 text-sky-400" />
+                  <span>Certificação & Validação</span>
+                  <span className="text-white/50 text-[10px] group-hover:rotate-180 transition-transform duration-200">▼</span>
+                </button>
+
+                {/* Dropdown Card */}
+                <div className="absolute left-0 top-full pt-1 hidden group-hover:block z-50 min-w-[280px] animate-in fade-in slide-in-from-top-1 duration-150">
+                  <div className="bg-[#1E293B] border border-slate-700/90 rounded-2xl p-2 shadow-2xl space-y-1">
+                    <button
+                      onClick={() => onNavigate('regras-certificacao-merito')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'regras-certificacao-merito'
+                          ? 'bg-[#FFC72C]/15 text-[#FFC72C] font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Award className="w-4 h-4 text-amber-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Diretrizes de Certificação</div>
+                        <div className="text-[10px] text-slate-400">Escala de Autoria e Selos de Mérito</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('informacoes-legais')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'informacoes-legais'
+                          ? 'bg-cyan-500/20 text-cyan-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Scale className="w-4 h-4 text-cyan-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Valor Legal dos Certificados</div>
+                        <div className="text-[10px] text-slate-400">Lei 9.394/96 e validade nacional</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('diretrizes-protecao-autoria')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'diretrizes-protecao-autoria'
+                          ? 'bg-emerald-500/20 text-emerald-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Diretrizes de Proteção à Autoria</div>
+                        <div className="text-[10px] text-slate-400">Salvaguarda intelectual e originalidade</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('diretrizes-pedagogicas')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'diretrizes-pedagogicas'
+                          ? 'bg-amber-500/20 text-amber-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <BookOpen className="w-4 h-4 text-amber-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Diretrizes Pedagógicas</div>
+                        <div className="text-[10px] text-slate-400">Metodologia Freepremium e didática</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('diretrizes-publicacao')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'diretrizes-publicacao' || currentPage === 'diretrizes-publicacao-parcerias'
+                          ? 'bg-blue-500/20 text-blue-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Handshake className="w-4 h-4 text-blue-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Diretrizes de Publicação</div>
+                        <div className="text-[10px] text-slate-400">Normas para artigos, livros e parcerias</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* 4. Submenu: Conteúdo & Publicações */}
+              <div className="relative group py-2">
+                <button
+                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
+                    ['artigos', 'artigo-detalhe', 'blog', 'blog-post', 'podcasts'].includes(currentPage)
+                      ? 'text-[#FFC72C] font-bold bg-white/5'
+                      : 'text-white/80 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+                  <span>Conteúdo & Publicações</span>
+                  <span className="text-white/50 text-[10px] group-hover:rotate-180 transition-transform duration-200">▼</span>
+                </button>
+
+                {/* Dropdown Card */}
+                <div className="absolute left-0 top-full pt-1 hidden group-hover:block z-50 min-w-[280px] animate-in fade-in slide-in-from-top-1 duration-150">
+                  <div className="bg-[#1E293B] border border-slate-700/90 rounded-2xl p-2 shadow-2xl space-y-1">
+                    <button
+                      onClick={() => onNavigate('artigos')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'artigos' || currentPage === 'artigo-detalhe'
+                          ? 'bg-cyan-500/20 text-cyan-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Award className="w-4 h-4 text-cyan-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Repositório de Artigos</div>
+                        <div className="text-[10px] text-slate-400">Pesquisas e estudos acadêmicos</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('blog')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'blog' || currentPage === 'blog-post'
+                          ? 'bg-purple-500/20 text-purple-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Sparkles className="w-4 h-4 text-purple-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Postagens de Blog</div>
+                        <div className="text-[10px] text-slate-400">Artigos autorais e reflexões</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('podcasts')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'podcasts'
+                          ? 'bg-amber-500/20 text-amber-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Headphones className="w-4 h-4 text-amber-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Podcasts</div>
+                        <div className="text-[10px] text-slate-400">Ensaios sonoros e áudios educativos</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('livraria')}
+                      className="w-full text-left px-3 py-2.5 rounded-xl text-slate-200 hover:text-white hover:bg-white/10 transition-all flex items-center gap-2.5 cursor-pointer"
+                    >
+                      <BookOpen className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Livros</div>
+                        <div className="text-[10px] text-slate-400">Obras Diamante disponíveis para leitura</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5. Submenu: Institucional & Apoio */}
+              <div className="relative group py-2">
+                <button
+                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
+                    ['sobre-nos', 'politicas', 'perguntas-frequentes', 'carta-aberta'].includes(currentPage)
+                      ? 'text-[#FFC72C] font-bold bg-white/5'
+                      : 'text-white/80 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  <Info className="w-3.5 h-3.5 text-slate-300" />
+                  <span>Institucional & Apoio</span>
+                  <span className="text-white/50 text-[10px] group-hover:rotate-180 transition-transform duration-200">▼</span>
+                </button>
+
+                {/* Dropdown Card */}
+                <div className="absolute left-0 top-full pt-1 hidden group-hover:block z-50 min-w-[260px] animate-in fade-in slide-in-from-top-1 duration-150">
+                  <div className="bg-[#1E293B] border border-slate-700/90 rounded-2xl p-2 shadow-2xl space-y-1">
+                    <button
+                      onClick={onOpenAbout}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'sobre-nos'
+                          ? 'bg-[#FFC72C]/15 text-[#FFC72C] font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Info className="w-4 h-4 text-amber-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Sobre Nós</div>
+                        <div className="text-[10px] text-slate-400">Nossa história e missão educacional</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('politicas')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'politicas'
+                          ? 'bg-[#FFC72C]/15 text-[#FFC72C] font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Scale className="w-4 h-4 text-purple-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Nossas Políticas</div>
+                        <div className="text-[10px] text-slate-400">Privacidade, LGPD e termos de uso</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('perguntas-frequentes')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'perguntas-frequentes'
+                          ? 'bg-[#FFC72C]/15 text-[#FFC72C] font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <HelpCircle className="w-4 h-4 text-sky-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Perguntas Frequentes</div>
+                        <div className="text-[10px] text-slate-400">Respostas para dúvidas comuns (FAQ)</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('carta-aberta')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'carta-aberta'
+                          ? 'bg-amber-500/20 text-amber-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Sparkles className="w-4 h-4 text-[#FFC72C]" />
+                      <div>
+                        <div className="font-semibold text-xs">Carta Aberta</div>
+                        <div className="text-[10px] text-slate-400">Manifesto educacional da fundação</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Group: Standalone Prominent "Validar Certificados" Button */}
+            <div className="flex items-center gap-3">
+              <button
+                onClick={onOpenValidator}
+                className="bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold px-4 py-2 rounded-xl shadow-lg hover:shadow-emerald-500/25 flex items-center gap-2 transition-all text-xs shrink-0 cursor-pointer border border-emerald-400/80 ring-2 ring-emerald-400/20 group"
+                id="btn-destaque-validar-certificado"
+                title="Consulte a autenticidade de um certificado emitido pela ESDHUBEM"
+              >
+                <ShieldCheck className="w-4 h-4 text-emerald-200 group-hover:scale-110 transition-transform" />
+                <span>Validar Certificados</span>
+                <span className="bg-emerald-950/60 text-emerald-300 text-[10px] font-black px-1.5 py-0.5 rounded ml-0.5">OFICIAL</span>
+              </button>
+            </div>
           </nav>
-        </div>
-      </div>
-
-      {/* 2ª Barra de Menu: Diretrizes & Certificações */}
-      <div className="hidden lg:block bg-[#111927] border-t border-slate-700/60 py-2 shadow-inner">
-        <div className="max-w-[1600px] mx-auto px-4 flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto scrollbar-none text-xs font-medium">
-          {/* 1. Diretrizes Pedagógicas */}
-          <button
-            onClick={() => onNavigate('diretrizes-pedagogicas')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
-              currentPage === 'diretrizes-pedagogicas'
-                ? 'bg-amber-600 text-white border-amber-400 shadow-md ring-1 ring-amber-400/50'
-                : 'bg-amber-500/10 hover:bg-amber-500/20 text-[#FFC72C] border-amber-500/70 hover:border-amber-400'
-            }`}
-          >
-            <span>Diretrizes Pedagógicas</span>
-          </button>
-
-          {/* 2. Diretrizes de Publicação */}
-          <button
-            onClick={() => onNavigate('diretrizes-publicacao')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
-              currentPage === 'diretrizes-publicacao' || currentPage === 'diretrizes-publicacao-parcerias'
-                ? 'bg-blue-600 text-white border-blue-400 shadow-md ring-1 ring-blue-400/50'
-                : 'bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 border-blue-500/70 hover:border-blue-400'
-            }`}
-          >
-            <Handshake className="w-3.5 h-3.5" />
-            <span>Diretrizes de Publicação</span>
-          </button>
-
-          {/* 3. Proteção à Autoria */}
-          <button
-            onClick={() => onNavigate('diretrizes-protecao-autoria')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
-              currentPage === 'diretrizes-protecao-autoria'
-                ? 'bg-emerald-600 text-white border-emerald-400 shadow-md ring-1 ring-emerald-400/50'
-                : 'bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border-emerald-500/70 hover:border-emerald-400'
-            }`}
-          >
-            <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Proteção à Autoria</span>
-          </button>
-
-          {/* 3. Diretrizes de Certificação */}
-          <button
-            onClick={() => onNavigate('regras-certificacao-merito')}
-            className={`font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs border ${
-              currentPage === 'regras-certificacao-merito'
-                ? 'bg-amber-600 text-white border-amber-400 shadow-md ring-1 ring-amber-400/50'
-                : 'bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 text-[#FFC72C] border-[#FFC72C]/60 hover:border-[#FFC72C]'
-            }`}
-          >
-            <Award className={`w-3.5 h-3.5 ${currentPage === 'regras-certificacao-merito' ? 'text-white' : 'text-[#FFC72C]'}`} />
-            <span>Diretrizes de Certificação</span>
-          </button>
-
-          {/* 4. Valor Legal dos Certificados */}
-          <button
-            onClick={() => onNavigate('informacoes-legais')}
-            className={`font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs border ${
-              currentPage === 'informacoes-legais'
-                ? 'bg-cyan-600 text-white border-cyan-300 shadow-md ring-1 ring-cyan-300/50'
-                : 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/60 hover:border-cyan-400'
-            }`}
-          >
-            <Scale className={`w-3.5 h-3.5 ${currentPage === 'informacoes-legais' ? 'text-white' : 'text-cyan-400'}`} />
-            <span>Valor Legal dos Certificados</span>
-          </button>
-        </div>
-      </div>
-
-      {/* 3ª Barra de Menu: Validação, Artigos, Blog & Livraria */}
-      <div className="hidden lg:block bg-[#0b101b] border-t border-b border-slate-800/80 py-2 shadow-inner">
-        <div className="max-w-[1600px] mx-auto px-4 flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto scrollbar-none text-xs font-medium">
-          {/* 5. Validar Certificados */}
-          <button
-            onClick={onOpenValidator}
-            className="bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/60 hover:border-emerald-400 font-bold text-xs px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer shrink-0 shadow-xs hover:text-emerald-300"
-          >
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Validar Certificados</span>
-          </button>
-
-          {/* 6. Repositório de Artigos */}
-          <button
-            onClick={() => onNavigate('artigos')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
-              currentPage === 'artigos' || currentPage === 'artigo-detalhe'
-                ? 'bg-cyan-600 text-white border-cyan-400 shadow-md ring-1 ring-cyan-300/50'
-                : 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border-cyan-500/70 hover:border-cyan-400'
-            }`}
-          >
-            <span>Repositório de Artigos</span>
-          </button>
-
-          {/* 7. Postagens de Blog */}
-          <button
-            onClick={() => onNavigate('blog')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
-              currentPage === 'blog' || currentPage === 'blog-post'
-                ? 'bg-purple-600 text-white border-purple-400 shadow-md ring-1 ring-purple-400/50'
-                : 'bg-[#581c87]/60 hover:bg-[#581c87]/80 text-purple-200 border-purple-500/70 hover:border-purple-400'
-            }`}
-          >
-            <span>Postagens de Blog</span>
-          </button>
-
-          {/* 8. Livraria */}
-          <button
-            onClick={() => onNavigate('livraria')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
-              currentPage === 'livraria'
-                ? 'bg-amber-600 text-white border-amber-300 shadow-md ring-1 ring-amber-300/50'
-                : 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border-amber-500/70 hover:border-amber-400'
-            }`}
-          >
-            <BookOpen className="w-3.5 h-3.5" />
-            <span>Livraria</span>
-          </button>
-
-          {/* 9. Podcasts */}
-          <button
-            onClick={() => onNavigate('podcasts')}
-            className={`px-3.5 py-1.5 rounded-md transition-all flex items-center gap-1.5 cursor-pointer border font-bold shadow-xs shrink-0 ${
-              currentPage === 'podcasts'
-                ? 'bg-amber-600 text-white border-amber-300 shadow-md ring-1 ring-amber-300/50'
-                : 'bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 text-[#FFC72C] border-[#FFC72C]/60 hover:border-[#FFC72C]'
-            }`}
-          >
-            <Headphones className="w-3.5 h-3.5 text-[#FFC72C]" />
-            <span>Podcasts</span>
-          </button>
         </div>
       </div>
 
@@ -397,71 +557,79 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#1E293B] border-t border-slate-700 px-4 py-4 space-y-3 shadow-2xl text-white">
-          <button onClick={() => { onNavigate('inicio'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Início</button>
-          <button onClick={() => { onNavigate('categorias'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 flex justify-between">
-            <span>Categorias</span>
-            <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">20</span>
-          </button>
-          <button onClick={() => { onNavigate('categoria:landing-pages-biolinks'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-400">Sites & Biolinks</button>
-          <button onClick={() => { onNavigate('aplicativos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-slate-200">Apps & Dashboards (MEI e ME)</button>
-          <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300">Livraria</button>
+        <div className="lg:hidden bg-[#1E293B] border-t border-slate-700 px-4 py-4 space-y-4 shadow-2xl text-white">
+          {/* Standalone Destaque Validar no Mobile */}
           <button
-            onClick={() => { onOpenAbout(); setMobileMenuOpen(false); }}
-            className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium ${
-              currentPage === 'sobre-nos'
-                ? 'bg-[#FFC72C]/20 text-[#FFC72C] font-bold'
-                : 'hover:bg-white/10'
-            }`}
+            onClick={() => { onOpenValidator(); setMobileMenuOpen(false); }}
+            className="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm flex items-center justify-center gap-2 shadow-lg border border-emerald-400 cursor-pointer"
           >
-            Sobre Nós
+            <ShieldCheck className="w-5 h-5 text-white" />
+            <span>Validar Certificados (Oficial)</span>
           </button>
 
-          <div className="pt-2 border-t border-slate-700 space-y-2">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block px-3">Recursos & Diretrizes</span>
-            <button onClick={() => { onNavigate('diretrizes-pedagogicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10">Diretrizes Pedagógicas</button>
+          <button onClick={() => { onNavigate('inicio'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold hover:bg-white/10">Início</button>
+
+          {/* Grupo 1: Produtos & Soluções */}
+          <div className="pt-2 border-t border-slate-700/80 space-y-1">
+            <span className="text-[11px] font-extrabold text-amber-400 uppercase tracking-wider block px-3">Produtos & Soluções</span>
+            <button onClick={() => { onNavigate('categorias'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 flex justify-between">
+              <span>Categorias de Cursos</span>
+              <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full font-bold">20</span>
+            </button>
+            <button onClick={() => { onNavigate('categoria:landing-pages-biolinks'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-400">Sites & Biolinks</button>
+            <button onClick={() => { onNavigate('aplicativos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-slate-200">Apps & Dashboards (MEI e ME)</button>
+            <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300">Livraria (Obras à Venda)</button>
+          </div>
+
+          {/* Grupo 2: Certificação & Validação */}
+          <div className="pt-2 border-t border-slate-700/80 space-y-1">
+            <span className="text-[11px] font-extrabold text-sky-400 uppercase tracking-wider block px-3">Certificação & Validação</span>
+            <button onClick={() => { onNavigate('regras-certificacao-merito'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-[#FFC72C] flex items-center gap-2">
+              <Award className="w-4 h-4 text-[#FFC72C]" />
+              <span>Diretrizes de Certificação</span>
+            </button>
+            <button onClick={() => { onNavigate('informacoes-legais'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400 flex items-center gap-2">
+              <Scale className="w-4 h-4 text-cyan-400" />
+              <span>Valor Legal dos Certificados</span>
+            </button>
+            <button onClick={() => { onNavigate('diretrizes-protecao-autoria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-300 flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span>Diretrizes de Proteção à Autoria</span>
+            </button>
+            <button onClick={() => { onNavigate('diretrizes-pedagogicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-amber-300 hover:bg-white/10">Diretrizes Pedagógicas</button>
             <button onClick={() => { onNavigate('diretrizes-publicacao'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2">
               <Handshake className="w-4 h-4 text-blue-400" />
               <span>Diretrizes de Publicação</span>
             </button>
-            <button onClick={() => { onNavigate('diretrizes-protecao-autoria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-emerald-300 hover:bg-white/10 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>Proteção à Autoria</span>
-            </button>
-            <button onClick={() => { onNavigate('regras-certificacao-merito'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
-              <Award className="w-4 h-4 text-[#FFC72C]" />
-              <span>Diretrizes de Certificação</span>
-            </button>
+          </div>
+
+          {/* Grupo 3: Conteúdo & Publicações */}
+          <div className="pt-2 border-t border-slate-700/80 space-y-1">
+            <span className="text-[11px] font-extrabold text-purple-400 uppercase tracking-wider block px-3">Conteúdo & Publicações</span>
             <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-cyan-400">Repositório de Artigos</button>
             <button onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-purple-300">Postagens de Blog</button>
-            <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300 flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-amber-400" />
-              <span>Livraria</span>
-            </button>
-            <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Políticas</button>
-            <button onClick={() => { onNavigate('perguntas-frequentes'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10 flex items-center gap-2">
-              <HelpCircle className="w-4 h-4 text-amber-400" />
-              <span>Perguntas Frequentes</span>
-            </button>
-            <button onClick={() => { onNavigate('carta-aberta'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#FFC72C]" />
-              <span>Carta Aberta</span>
-            </button>
-            <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
+            <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
               <Headphones className="w-4 h-4 text-[#FFC72C]" />
               <span>Podcasts & Ensaios Sonoros</span>
             </button>
+            <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-300 flex items-center gap-2">
+              <BookOpen className="w-4 h-4 text-emerald-400" />
+              <span>Livros (Obras Diamante)</span>
+            </button>
           </div>
 
-          <div className="pt-2 border-t border-slate-700 space-y-2">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block px-3">Validação & Certificados</span>
-            <button onClick={() => { onOpenValidator(); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-emerald-400 hover:bg-white/10 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Validar Certificados</span>
+          {/* Grupo 4: Institucional */}
+          <div className="pt-2 border-t border-slate-700/80 space-y-1">
+            <span className="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider block px-3">Institucional & Apoio</span>
+            <button onClick={() => { onOpenAbout(); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Sobre Nós</button>
+            <button onClick={() => { onNavigate('politicas'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10">Nossas Políticas</button>
+            <button onClick={() => { onNavigate('perguntas-frequentes'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 flex items-center gap-2">
+              <HelpCircle className="w-4 h-4 text-amber-400" />
+              <span>Perguntas Frequentes</span>
             </button>
-            <button onClick={() => { onNavigate('informacoes-legais'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-cyan-400 hover:bg-white/10 flex items-center gap-2">
-              <Scale className="w-4 h-4 text-cyan-400" />
-              <span>Valor Legal dos Certificados</span>
+            <button onClick={() => { onNavigate('carta-aberta'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-amber-300 hover:bg-white/10 flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-[#FFC72C]" />
+              <span>Carta Aberta</span>
             </button>
           </div>
         </div>
