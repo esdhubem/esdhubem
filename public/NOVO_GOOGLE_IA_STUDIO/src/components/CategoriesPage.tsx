@@ -21,20 +21,28 @@ import {
   BookOpen,
   Layers,
   ChevronRight,
-  ShieldCheck
+  ShieldCheck,
+  BookOpenCheck,
+  Library,
+  LayoutTemplate,
+  LayoutDashboard,
+  HeartPulse,
+  PenTool,
+  ArrowRight,
+  ClipboardList
 } from 'lucide-react';
-import { CategoryItem, Course } from '../types';
-import { CATEGORIES_DATA } from '../data/coursesData';
+import { Course } from '../types';
 
 interface CategoriesPageProps {
   onBackToHome: () => void;
-  onSelectCourse: (course: Course) => void;
-  onNavigateToCourseDetail: () => void;
+  onSelectCourse?: (course: Course) => void;
+  onNavigateToCourseDetail?: () => void;
   onNavigateToCategoryDetail?: (categorySlug: string) => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 // Map icons cleanly
-const renderCategoryIcon = (iconName: string, className: string = 'w-6 h-6') => {
+const renderIcon = (iconName: string, className: string = 'w-6 h-6') => {
   switch (iconName) {
     case 'Sparkles':
       return <Sparkles className={className} />;
@@ -68,133 +76,389 @@ const renderCategoryIcon = (iconName: string, className: string = 'w-6 h-6') => 
       return <Building2 className={className} />;
     case 'Award':
       return <Award className={className} />;
+    case 'BookOpenCheck':
+      return <BookOpenCheck className={className} />;
+    case 'Library':
+      return <Library className={className} />;
+    case 'LayoutTemplate':
+      return <LayoutTemplate className={className} />;
+    case 'LayoutDashboard':
+      return <LayoutDashboard className={className} />;
+    case 'HeartPulse':
+      return <HeartPulse className={className} />;
+    case 'PenTool':
+      return <PenTool className={className} />;
     case 'BookOpen':
     default:
       return <BookOpen className={className} />;
   }
 };
 
-// Rich details metadata for all 18 categories
-const CATEGORY_DETAILS: Record<string, { summary: string; skills: string[] }> = {
-  'desenvolvimento-pessoal': {
+// 1. All Areas of Knowledge (Áreas de Conhecimento)
+const KNOWLEDGE_AREAS = [
+  {
+    id: 'desenvolvimento-pessoal',
+    title: 'Desenvolvimento Pessoal',
+    badge: '24 Cursos',
+    iconName: 'Sparkles',
+    accentColor: 'from-amber-500 to-orange-600',
     summary: 'Autoconhecimento, inteligência emocional, foco, hábitos saudáveis e transformação individual.',
-    skills: ['Inteligência Emocional', 'Autodisciplina', 'Comunicação Empática', 'Gestão do Tempo']
+    skills: ['Inteligência Emocional', 'Autodisciplina', 'Comunicação Empática'],
+    group: 'humano'
   },
-  'desenvolvimento-humano': {
+  {
+    id: 'desenvolvimento-humano',
+    title: 'Desenvolvimento Humano',
+    badge: '18 Cursos',
+    iconName: 'HeartHandshake',
+    accentColor: 'from-emerald-600 to-teal-700',
     summary: 'Estudos aprofundados sobre ciclos da vida, relações humanas, maturidade e potencial realizador.',
-    skills: ['Psicologia Relacional', 'Comportamento Humano', 'Antropologia Prática', 'Resolução de Conflitos']
+    skills: ['Psicologia Relacional', 'Comportamento Humano', 'Antropologia Prática'],
+    group: 'humano'
   },
-  'desenvolvimento-profissional': {
+  {
+    id: 'desenvolvimento-profissional',
+    title: 'Desenvolvimento Profissional',
+    badge: '32 Cursos',
+    iconName: 'Briefcase',
+    accentColor: 'from-blue-600 to-indigo-700',
     summary: 'Habilidades de liderança, comunicação corporativa, gestão estratégica e ascensão na carreira.',
-    skills: ['Liderança 360°', 'Comunicação Assertiva', 'Gestão de Projetos', 'Negociação Estratégica']
+    skills: ['Liderança 360°', 'Comunicação Assertiva', 'Gestão de Projetos'],
+    group: 'carreira'
   },
-  'desenvolvimento-etico': {
+  {
+    id: 'desenvolvimento-etico',
+    title: 'Desenvolvimento Ético',
+    badge: '12 Cursos',
+    iconName: 'Scale',
+    accentColor: 'from-purple-600 to-violet-800',
     summary: 'Fundamentos de ética aplicada, responsabilidade civil, conduta profissional e integridade.',
-    skills: ['Ética Corporativa', 'Compliance Moral', 'Tomada de Decisão', 'Direito Preventivo']
+    skills: ['Ética Corporativa', 'Compliance Moral', 'Tomada de Decisão'],
+    group: 'humano'
   },
-  'desenvolvimento-relacional': {
+  {
+    id: 'desenvolvimento-relacional',
+    title: 'Desenvolvimento Relacional',
+    badge: '16 Cursos',
+    iconName: 'Users',
+    accentColor: 'from-rose-500 to-pink-600',
     summary: 'Dinâmicas familiares, vínculos afetivos, convivência pacífica e comunicação interpessoal não violenta.',
-    skills: ['CNV Aplicada', 'Mediação Familiar', 'Escuta Ativa', 'Inteligência Social']
+    skills: ['CNV Aplicada', 'Mediação Familiar', 'Escuta Ativa'],
+    group: 'humano'
   },
-  'desenvolvimento-financeiro': {
+  {
+    id: 'desenvolvimento-financeiro',
+    title: 'Desenvolvimento Financeiro',
+    badge: '15 Cursos',
+    iconName: 'CircleDollarSign',
+    accentColor: 'from-amber-600 to-yellow-600',
     summary: 'Planejamento patrimonial, mentalidade de prosperidade, controle orçamentário e finanças comportamentais.',
-    skills: ['Finanças Comportamentais', 'Orçamento Inteligente', 'Planejamento Pessoal', 'Investimentos Básicos']
+    skills: ['Finanças Comportamentais', 'Orçamento Inteligente', 'Planejamento Pessoal'],
+    group: 'carreira'
   },
-  'desenvolvimento-da-consciencia': {
-    summary: 'Práticas meditativas, presença plena, espiritualidade laica, filosofia aplicada e autorreflexão.',
-    skills: ['Mindfulness', 'Filosofia Prática', 'Auto-observação', 'Equilíbrio Mental']
-  },
-  'praticas-integrativas': {
-    summary: 'Terapias complementares, abordagens holísticas da saúde, equilíbrio bioenergético e bem-estar.',
-    skills: ['PICS / SUS', 'Abordagem Holística', 'Equilíbrio Energético', 'Saúde Preventiva']
-  },
-  'desenvolvimento-ambiental': {
-    summary: 'Sustentabilidade prática, consumo consciente, ecologia pessoal e conexão responsável com o planeta.',
-    skills: ['Sustentabilidade Cotidiana', 'Eco-eficiência', 'Consumo Consciente', 'Gestão de Resíduos']
-  },
-  'desenvolvimento-solidario': {
-    summary: 'Voluntariado estruturado, terceiro setor, responsabilidade social e projetos comunitários de impacto.',
-    skills: ['Gestão de ONGs', 'Projetos Sociais', 'Empatia Coletiva', 'Captação de Recursos']
-  },
-  'desenvolvimento-tecnologico-ia': {
+  {
+    id: 'desenvolvimento-tecnologico-ia',
+    title: 'Desenvolvimento Tecnológico e IA',
+    badge: '17 Cursos',
+    iconName: 'Cpu',
+    accentColor: 'from-violet-600 to-indigo-600',
     summary: 'Inteligência Artificial ética, produtividade com ferramentas digitais, automação e futuro do trabalho.',
-    skills: ['Engenharia de Prompts', 'Automação sem Código', 'IA para Negócios', 'Cultura Digital']
+    skills: ['Engenharia de Prompts', 'Automação sem Código', 'IA para Negócios'],
+    group: 'carreira'
   },
-  'cursos-freepremium': {
-    summary: 'Cursos abertos e 100% gratuitos para assistir e testar, com taxa simbólica opcional para certificação formal.',
-    skills: ['Aulas Abertas', 'Flexibilidade Total', 'Testes Práticos', 'Certificação Opcional']
+  {
+    id: 'desenvolvimento-da-consciencia',
+    title: 'Desenvolvimento da Consciência',
+    badge: '14 Cursos',
+    iconName: 'Brain',
+    accentColor: 'from-indigo-500 to-purple-700',
+    summary: 'Práticas meditativas, presença plena, espiritualidade laica, filosofia aplicada e autorreflexão.',
+    skills: ['Mindfulness', 'Filosofia Prática', 'Auto-observação'],
+    group: 'humano'
   },
-  'cursos-capacitacao': {
-    summary: 'Formações técnicas e operacionais voltadas para a prática imediata no mercado de trabalho e consultoria.',
-    skills: ['Metodologia Aplicada', 'Ferramentas de Mercado', 'Protocolos Profissionais', 'Cases Reais']
+  {
+    id: 'desenvolvimento-ambiental',
+    title: 'Desenvolvimento Ambiental',
+    badge: '10 Cursos',
+    iconName: 'Leaf',
+    accentColor: 'from-green-600 to-emerald-700',
+    summary: 'Sustentabilidade prática, consumo consciente, ecologia pessoal e conexão responsável com o planeta.',
+    skills: ['Sustentabilidade Cotidiana', 'Eco-eficiência', 'Consumo Consciente'],
+    group: 'humano'
   },
-  'horas-complementares': {
-    summary: 'Cargas horárias certificadas (20h a 120h) válidas para comprovação em universidades e faculdades brasileiras.',
-    skills: ['Validade Universitária', 'Decreto 5.154/04', 'Carga Horária Flexível', 'Validação Online']
+  {
+    id: 'praticas-integrativas',
+    title: 'Práticas Integrativas',
+    badge: '21 Cursos',
+    iconName: 'SunMedium',
+    accentColor: 'from-teal-500 to-emerald-600',
+    summary: 'Terapias complementares, abordagens holísticas da saúde, equilíbrio bioenergético e bem-estar.',
+    skills: ['PICS / SUS', 'Abordagem Holística', 'Equilíbrio Energético'],
+    group: 'praticas'
   },
-  'formacao-livre': {
-    summary: 'Programas de extensão livres e multidisciplinares focados em qualificação contínua e novos saberes.',
-    skills: ['Multidisciplinaridade', 'Atualização Contínua', 'Sem Pré-requisito', 'Ritmo Próprio']
+  {
+    id: 'coach-integrativo',
+    title: 'Coach Integrativo',
+    badge: '11 Cursos',
+    iconName: 'Target',
+    accentColor: 'from-emerald-700 to-teal-800',
+    summary: 'Metodologias de desenvolvimento integral, estabelecimento de metas, superação de bloqueios e alinhamento de vida.',
+    skills: ['Metas Humanizadas', 'Perguntas Poderosas', 'Plano de Ação'],
+    group: 'praticas'
   },
-  'autoria-destaque': {
-    summary: 'Estruturação, redação e publicação de artigos de conclusão, anais e livros com certificação Prata, Ouro e Diamante.',
-    skills: ['Redação Científica', 'Publicação DOI', 'Mentoria Editorial', 'Registro Autoral']
+  {
+    id: 'pedagogia-integrativa',
+    title: 'Pedagogia Integrativa',
+    badge: '13 Cursos',
+    iconName: 'BookOpenCheck',
+    accentColor: 'from-orange-600 to-amber-700',
+    summary: 'Didáticas contemporâneas, educação emocional para professores, mediação de aprendizagem e inclusão.',
+    skills: ['Didática Ativa', 'Educação Emocional', 'Mediação de Aprendizagem'],
+    group: 'praticas'
   },
-  'aprofundamento-profissional-saude': {
-    summary: 'Cursos exclusivos para graduados em Biomedicina, Enfermagem, Nutrição, Psicologia e Fisioterapia.',
-    skills: ['Atualização Técnica', 'Boas Práticas Clínicas', 'Evidências Científicas', 'Saúde Integrativa']
+  {
+    id: 'aprofundamento-profissional-saude',
+    title: 'Aprofundamento na Área da Saúde',
+    badge: '8 Cursos',
+    iconName: 'HeartPulse',
+    accentColor: 'from-blue-600 to-teal-700',
+    summary: 'Cursos exclusivos para graduados em Biomedicina, Enfermagem, Nutrição, Psicologia, Fisioterapia e áreas afins.',
+    skills: ['Atualização Técnica', 'Boas Práticas Clínicas', 'Evidências Científicas'],
+    group: 'praticas'
   },
-  'workshop-orientacao-carreira': {
-    summary: 'Workshops intensivos para diagnóstico de carreira, transição profissional e novos rumos de mercado.',
-    skills: ['Diagnóstico de Perfil', 'Transição de Carreira', 'Portfólio & Posicionamento', 'Mercado Futuro']
+  {
+    id: 'workshop-orientacao-carreira',
+    title: 'Orientação de Carreira & Futuro',
+    badge: '6 Cursos',
+    iconName: 'Compass',
+    accentColor: 'from-amber-600 to-orange-700',
+    summary: 'Workshops intensivos para diagnóstico de carreira, transição profissional e preparação para as tendências de mercado.',
+    skills: ['Diagnóstico de Perfil', 'Transição de Carreira', 'Portfólio & Posicionamento'],
+    group: 'carreira'
+  },
+  {
+    id: 'formacao-empresarial',
+    title: 'Formação Empresarial',
+    badge: '14 Cursos',
+    iconName: 'Award',
+    accentColor: 'from-yellow-600 to-amber-800',
+    summary: 'Gestão de pequenos negócios, governança, modelos operacionais, inovação e posicionamento comercial.',
+    skills: ['Gestão de Negócios', 'Estratégia Operacional', 'Inovação Comercial'],
+    group: 'carreira'
+  },
+  {
+    id: 'desenvolvimento-nas-empresas',
+    title: 'Desenvolvimento nas Empresas',
+    badge: '16 Cursos',
+    iconName: 'Building2',
+    accentColor: 'from-slate-600 to-slate-800',
+    summary: 'Capacitação corporativa, cultura organizacional, liderança humanizada e eficiência de equipes.',
+    skills: ['Cultura Organizacional', 'Liderança Humanizada', 'Eficiência de Equipes'],
+    group: 'carreira'
   }
-};
+];
+
+// 2. All 8 Course Modalities (Modalidades de Curso)
+const MODALITIES_DATA = [
+  {
+    id: 'freepremium',
+    title: 'Cursos Freepremium',
+    badge: 'Descoberta',
+    iconName: 'Gift',
+    accentColor: 'from-emerald-500 to-teal-600',
+    summary: 'Aprenda sem barreiras. Assista a todas as videoaulas de forma 100% gratuita para testar o conteúdo, fazer os testes de múltipla escolha e conhecer nossa metodologia. Você só paga uma taxa de emissão do certificado Bronze se decidir que quer o documento oficial.',
+    target: 'Estudantes e profissionais que buscam conhecimento rápido sem custo inicial.',
+    chips: ['100% Gratuito para Assistir', 'Testes de Fixação', 'Certificado Opcional'],
+    destination: 'modalidades-formacao'
+  },
+  {
+    id: 'capacitacao',
+    title: 'Cursos de Capacitação',
+    badge: 'Ação Prática',
+    iconName: 'Sparkles',
+    accentColor: 'from-blue-600 to-indigo-600',
+    summary: 'Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas e metodologias profissionais.',
+    target: 'Profissionais em atividade que precisam atualizar competências e resolver demandas da rotina.',
+    chips: ['Saber Fazer Imediato', 'Protocolos Profissionais', 'Aplicação Direta'],
+    destination: 'modalidades-formacao'
+  },
+  {
+    id: 'horas-complementares',
+    title: 'Horas Complementares',
+    badge: 'Validação Acadêmica',
+    iconName: 'GraduationCap',
+    accentColor: 'from-amber-500 to-yellow-600',
+    summary: 'Cursos estruturados para atender diretamente às exigências de Atividades Complementares de graduação e pós-graduação, com certificado detalhado (carga horária, ementa e dados institucionais).',
+    target: 'Universitários de qualquer período e área que precisam cumprir horas complementares para colar grau.',
+    chips: ['Válido em Universidades', 'Decreto nº 5.154/04', 'Cargas 20h a 120h'],
+    destination: 'modalidades-formacao'
+  },
+  {
+    id: 'formacao-livre',
+    title: 'Cursos de Formação Livre',
+    badge: 'Transformação',
+    iconName: 'Compass',
+    accentColor: 'from-rose-500 to-red-600',
+    summary: 'Jornadas completas de aprendizado para quem quer dominar uma área do início ao fim. Combina teoria consistente, prática orientada e estudos de caso reais.',
+    target: 'Pessoas em transição de carreira ou que buscam uma base sólida e aprofundada em um tema.',
+    chips: ['Jornadas Completas', 'Teoria + Prática Orientada', 'Transição de Carreira'],
+    destination: 'modalidades-formacao'
+  },
+  {
+    id: 'treinamentos-corporativos',
+    title: 'Treinamentos Corporativos',
+    badge: 'Desempenho Profissional',
+    iconName: 'Users',
+    accentColor: 'from-purple-600 to-violet-700',
+    summary: 'Programas desenvolvidos sob medida para equipes, empresas e instituições. Foco em alinhar processos, capacitar colaboradores, clima organizacional e lideranças com mensuração de resultados.',
+    target: 'Gestores de RH, líderes de equipe e diretores de empresas e terceiro setor.',
+    chips: ['Programas In Company', 'Capacitação de Equipes', 'Métricas de Resultado'],
+    destination: 'modalidades-formacao'
+  },
+  {
+    id: 'autoria-destaque',
+    title: 'Autoria e Destaque',
+    badge: 'Desenvolvimento da Escrita',
+    iconName: 'PenTool',
+    accentColor: 'from-indigo-600 to-purple-800',
+    summary: 'Aprenda a estruturar, escrever e publicar. Do texto prático ao livro, com reconhecimento Prata, Ouro ou Diamante. Transforme o aprendizado em presença e credibilidade intelectual.',
+    target: 'Estudantes, pesquisadores, terapeutas e autores que desejam publicar e construir autoridade.',
+    chips: ['Artigos & Livros', 'Registro DOI', 'Selos Prata, Ouro, Diamante'],
+    destination: 'regras-certificacao-merito'
+  },
+  {
+    id: 'aprofundamento-saude',
+    title: 'Aprofundamento na Área da Saúde',
+    badge: 'Área da Saúde',
+    iconName: 'HeartPulse',
+    accentColor: 'from-sky-500 to-cyan-700',
+    summary: 'Cursos exclusivos para graduados de nível superior da área da saúde. Espaço de atualização, boas práticas e evolução técnica fundamentada sem necessidade de pós-graduação formal.',
+    target: 'Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos e terapeutas graduados.',
+    chips: ['Exclusivo Graduados', 'Atualização Técnica', 'Prática Fundamentada'],
+    destination: 'modalidades-formacao'
+  },
+  {
+    id: 'workshop-orientacao-carreira-mod',
+    title: 'Workshop Orientação de Carreira',
+    badge: 'Transformação Profissional',
+    iconName: 'Compass',
+    accentColor: 'from-amber-600 to-orange-700',
+    summary: 'Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e tendências do trabalho para você se manter relevante e preparado para o que vem a seguir.',
+    target: 'Quem deseja planejar com clareza quais caminhos seguir e quais conhecimentos desenvolver.',
+    chips: ['Tendências de Mercado', 'Mobilidade Funcional', 'Planejamento de Futuro'],
+    destination: 'modalidades-formacao'
+  }
+];
+
+// 3. Digital Products & Solutions (Conheça nossos produtos)
+const PRODUCTS_DATA = [
+  {
+    id: 'livros',
+    title: 'Livros & Materiais',
+    badge: 'Livraria Oficial',
+    iconName: 'Library',
+    accentColor: 'from-red-500 to-rose-700',
+    summary: 'Obras publicadas dos autores certificados Diamante da ESDHUBEM, apostilas completas e e-books especializados em desenvolvimento humano e bem-estar.',
+    chips: ['Obras de Autores', 'Biblioteca Nacional', 'E-books & Apostilas'],
+    destination: 'livraria',
+    btnLabel: 'Acessar Livraria'
+  },
+  {
+    id: 'landing-pages-biolinks',
+    title: 'Landing Pages & Biolinks',
+    badge: 'Alta Conversão',
+    iconName: 'LayoutTemplate',
+    accentColor: 'from-emerald-500 to-teal-700',
+    summary: 'Estruturas prontas e personalizáveis de alta conversão para terapeutas, professores e profissionais divulgarem seus atendimentos, cursos e serviços com autoridade.',
+    chips: ['Design Responsivo', 'Pronto para Vender', 'Conexão WhatsApp'],
+    destination: 'categoria:landing-pages-biolinks',
+    btnLabel: 'Ver Modelos Prontos'
+  },
+  {
+    id: 'aplicativos-dashboards',
+    title: 'Aplicativos & Dashboards',
+    badge: 'Gestão Inteligente',
+    iconName: 'LayoutDashboard',
+    accentColor: 'from-blue-600 to-cyan-600',
+    summary: 'Soluções digitais intuitivas, painéis operacionais e organizadores automatizados desenvolvidos para MEI, pequenas clínicas e consultórios.',
+    chips: ['Sistemas Web', 'Gestão Simplificada', 'Produtividade Diária'],
+    destination: 'aplicativos',
+    btnLabel: 'Conhecer Aplicativos'
+  }
+];
 
 export const CategoriesPage: React.FC<CategoriesPageProps> = ({
   onBackToHome,
-  onNavigateToCategoryDetail
+  onNavigateToCategoryDetail,
+  onNavigate
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGroup, setSelectedGroup] = useState<string>('todos');
 
-  // Filter groups
+  // Filter groups for Knowledge Areas
   const groups = [
-    { id: 'todos', label: `Todas as Áreas (${CATEGORIES_DATA.length})` },
+    { id: 'todos', label: `Todas as Áreas (${KNOWLEDGE_AREAS.length})` },
     { id: 'humano', label: 'Desenvolvimento Humano & Emocional' },
-    { id: 'carreira', label: 'Profissional & Liderança' },
-    { id: 'praticas', label: 'Práticas Integrativas & Saúde' },
-    { id: 'academicas', label: 'Horas Acadêmicas & Formações' },
+    { id: 'carreira', label: 'Profissional, Liderança & Negócios' },
+    { id: 'praticas', label: 'Práticas Integrativas & Saúde' }
   ];
 
-  // Group membership classifier
-  const getCategoryGroup = (id: string): string => {
-    if (['desenvolvimento-pessoal', 'desenvolvimento-humano', 'desenvolvimento-etico', 'desenvolvimento-relacional', 'desenvolvimento-da-consciencia'].includes(id)) {
-      return 'humano';
-    }
-    if (['desenvolvimento-profissional', 'desenvolvimento-financeiro', 'desenvolvimento-tecnologico-ia', 'desenvolvimento-nas-empresas', 'formacao-empresarial', 'workshop-orientacao-carreira'].includes(id)) {
-      return 'carreira';
-    }
-    if (['praticas-integrativas', 'coach-integrativo', 'pedagogia-integrativa', 'desenvolvimento-ambiental', 'aprofundamento-profissional-saude'].includes(id)) {
-      return 'praticas';
-    }
-    return 'academicas';
-  };
-
-  // Filtered categories
-  const filteredCategories = useMemo(() => {
-    return CATEGORIES_DATA.filter((cat) => {
+  // Filtered knowledge areas
+  const filteredKnowledgeAreas = useMemo(() => {
+    return KNOWLEDGE_AREAS.filter((cat) => {
       const matchesSearch =
         cat.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        cat.id.toLowerCase().includes(searchTerm.toLowerCase());
-      
-      const matchesGroup = selectedGroup === 'todos' || getCategoryGroup(cat.id) === selectedGroup;
+        cat.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        cat.summary.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        cat.skills.some((s) => s.toLowerCase().includes(searchTerm.toLowerCase()));
+
+      const matchesGroup = selectedGroup === 'todos' || cat.group === selectedGroup;
       return matchesSearch && matchesGroup;
     });
   }, [searchTerm, selectedGroup]);
 
+  // Filtered modalities
+  const filteredModalities = useMemo(() => {
+    if (!searchTerm) return MODALITIES_DATA;
+    return MODALITIES_DATA.filter(
+      (m) =>
+        m.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        m.badge.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        m.summary.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
+
+  // Filtered products
+  const filteredProducts = useMemo(() => {
+    if (!searchTerm) return PRODUCTS_DATA;
+    return PRODUCTS_DATA.filter(
+      (p) =>
+        p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        p.badge.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        p.summary.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
+
+  const handleCardClick = (destination: string) => {
+    if (destination.startsWith('categoria:')) {
+      const slug = destination.replace('categoria:', '');
+      if (onNavigateToCategoryDetail) onNavigateToCategoryDetail(slug);
+      return;
+    }
+
+    if (onNavigate) {
+      onNavigate(destination);
+      return;
+    }
+
+    if (onNavigateToCategoryDetail) {
+      onNavigateToCategoryDetail(destination);
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-800">
-      {/* Breadcrumb Navigation */}
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-800 font-sans pb-24">
+      {/* Top Breadcrumb Navigation */}
       <div className="bg-[#182333] border-b border-slate-700/60 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center gap-2 text-sm text-slate-400">
@@ -207,33 +471,33 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </button>
             <span>/</span>
             <span className="text-[#FFC72C] font-semibold">
-              Aprofunde nas Categorias & Áreas do Saber
+              Categorias & Modalidades de Formação
             </span>
           </div>
 
           <div className="hidden sm:flex items-center gap-2 text-xs text-slate-300">
             <ShieldCheck className="w-4 h-4 text-[#FFC72C]" />
-            <span>18 Categorias Oficiais da ESDHUBEM</span>
+            <span>Catálogo Completo ESDHUBEM</span>
           </div>
         </div>
       </div>
 
       {/* Hero Header */}
-      <header className="bg-[#243042] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60">
+      <header className="bg-[#243042] text-white relative overflow-hidden py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60">
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider">
               <Layers className="w-3.5 h-3.5" />
-              <span>Catálogo Acadêmico Estruturado</span>
+              <span>Catálogo Acadêmico & Soluções</span>
             </div>
-            
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
               Categorias de Cursos <br className="hidden sm:inline" />
               <span className="text-[#FFC72C]">Desenvolvimento & Bem-Estar</span>
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Conheça nossas categorias temáticas integradas.
+              Conheça nossas áreas de conhecimento temáticas, modalidades de formação e soluções digitais integradas.
             </p>
 
             {/* Live Search Bar */}
@@ -244,7 +508,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
                   type="text"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Pesquisar por categoria (ex: Liderança, Práticas, Finanças...)"
+                  placeholder="Pesquisar áreas, modalidades ou temas..."
                   className="w-full bg-white text-slate-900 placeholder-slate-400 pl-11 pr-4 py-3.5 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#FFC72C] shadow-lg"
                   id="categories-search-input"
                 />
@@ -263,129 +527,288 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
           {/* Platform Metric Badges */}
           <div className="grid grid-cols-2 gap-3.5 w-full md:w-auto shrink-0">
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
-              <div className="text-3xl font-black text-[#FFC72C]">18</div>
+              <div className="text-3xl font-black text-[#FFC72C]">16</div>
               <div className="text-xs text-slate-300 font-medium mt-1">Áreas do Saber</div>
             </div>
 
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
-              <div className="text-3xl font-black text-white">+300h</div>
-              <div className="text-xs text-slate-300 font-medium mt-1">Aulas Certificadas</div>
+              <div className="text-3xl font-black text-white">8</div>
+              <div className="text-xs text-slate-300 font-medium mt-1">Modalidades</div>
             </div>
 
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
               <div className="text-3xl font-black text-emerald-400">100%</div>
-              <div className="text-xs text-slate-300 font-medium mt-1">Horas Complementares*</div>
+              <div className="text-xs text-slate-300 font-medium mt-1">Horas Válidas*</div>
             </div>
 
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
               <div className="text-3xl font-black text-amber-300">4.9/5</div>
-              <div className="text-xs text-slate-300 font-medium mt-1">Satisfação Alunos</div>
+              <div className="text-xs text-slate-300 font-medium mt-1">Avaliação dos Alunos</div>
             </div>
           </div>
         </div>
       </header>
 
       {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-16">
         
-        {/* Filter Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-          {groups.map((grp) => (
-            <button
-              key={grp.id}
-              onClick={() => setSelectedGroup(grp.id)}
-              className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer border ${
-                selectedGroup === grp.id
-                  ? 'bg-[#243042] text-[#FFC72C] border-[#243042] shadow-sm'
-                  : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
-              }`}
-            >
-              {grp.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Categories Grid (All 18 Categories) */}
-        <div>
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-2">
-              <Layers className="w-5 h-5 text-[#243042]" />
-              <span>Explore as Áreas de Conhecimento</span>
-            </h2>
-            <span className="text-xs font-semibold text-slate-500">
-              Exibindo {filteredCategories.length} de 18 categorias
+        {/* ========================================================================= */}
+        {/* SESSÃO 1: Percorra as Áreas de Conhecimento da ESDHUBEM                  */}
+        {/* ========================================================================= */}
+        <section className="space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-0.5 rounded-full border border-amber-200 mb-2">
+                <BookOpen className="w-3.5 h-3.5" />
+                <span>Navegue por Áreas de Conhecimento</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-[#182333] tracking-tight">
+                Percorra as Áreas de Conhecimento da ESDHUBEM
+              </h2>
+            </div>
+            <span className="text-xs font-semibold text-slate-500 shrink-0">
+              Exibindo {filteredKnowledgeAreas.length} de {KNOWLEDGE_AREAS.length} áreas
             </span>
           </div>
 
+          {/* Filter Pills */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+            {groups.map((grp) => (
+              <button
+                key={grp.id}
+                onClick={() => setSelectedGroup(grp.id)}
+                className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer border ${
+                  selectedGroup === grp.id
+                    ? 'bg-[#243042] text-[#FFC72C] border-[#243042] shadow-sm'
+                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                }`}
+              >
+                {grp.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Knowledge Areas Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filteredCategories.map((cat) => {
-              const details = CATEGORY_DETAILS[cat.id] || {
-                summary: 'Capacitação prática e aprofundada para seu desenvolvimento contínuo.',
-                skills: ['Prática', 'Certificação', 'EAD', 'Flexibilidade']
-              };
-
-              return (
-                <div
-                  key={cat.id}
-                  onClick={() => {
-                    if (onNavigateToCategoryDetail) {
-                      onNavigateToCategoryDetail(cat.id);
-                    }
-                  }}
-                  className="bg-white rounded-2xl border border-slate-200/80 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-                  id={`cat-card-${cat.id}`}
-                >
-                  <div className="space-y-3">
-                    {/* Top row with Icon and Badge */}
-                    <div className="flex items-center justify-between">
-                      <div
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center text-white bg-gradient-to-br ${cat.accentColor} shadow-md group-hover:scale-105 transition-transform`}
-                      >
-                        {renderCategoryIcon(cat.iconName, 'w-6 h-6')}
-                      </div>
-
-                      <span className="text-[11px] font-bold bg-[#182333]/5 text-[#243042] px-2.5 py-1 rounded-full border border-slate-200">
-                        {cat.coursesCount} Cursos
-                      </span>
+            {filteredKnowledgeAreas.map((cat) => (
+              <div
+                key={cat.id}
+                onClick={() => {
+                  if (onNavigateToCategoryDetail) {
+                    onNavigateToCategoryDetail(cat.id);
+                  }
+                }}
+                className="bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+                id={`cat-card-${cat.id}`}
+              >
+                <div className="space-y-3">
+                  {/* Top row with Icon and Badge */}
+                  <div className="flex items-center justify-between">
+                    <div
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center text-white bg-gradient-to-br ${cat.accentColor} shadow-md group-hover:scale-105 transition-transform`}
+                    >
+                      {renderIcon(cat.iconName, 'w-6 h-6')}
                     </div>
 
-                    {/* Category Title */}
-                    <h3 className="font-extrabold text-[#182333] text-base sm:text-lg leading-tight group-hover:text-[#243042] transition-colors">
-                      {cat.title.replace('\n', ' ')}
-                    </h3>
-
-                    {/* Summary Description */}
-                    <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
-                      {details.summary}
-                    </p>
-
-                    {/* Skills Tags */}
-                    <div className="flex flex-wrap gap-1.5 pt-1">
-                      {details.skills.slice(0, 3).map((skill, sIdx) => (
-                        <span
-                          key={sIdx}
-                          className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
+                    <span className="text-[11px] font-bold bg-[#182333]/5 text-[#243042] px-2.5 py-1 rounded-full border border-slate-200">
+                      {cat.badge}
+                    </span>
                   </div>
 
-                  {/* Bottom Action Footer */}
-                  <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs">
-                    <span className="font-bold text-[#243042] group-hover:text-[#182333] flex items-center gap-1">
-                      Ver Detalhes & Cursos
-                    </span>
-                    <div className="w-7 h-7 rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#243042] group-hover:text-[#FFC72C] flex items-center justify-center transition-all shadow-xs">
-                      <ChevronRight className="w-4 h-4" />
-                    </div>
+                  {/* Category Title */}
+                  <h3 className="font-extrabold text-[#182333] text-base sm:text-lg leading-tight group-hover:text-amber-600 transition-colors">
+                    {cat.title}
+                  </h3>
+
+                  {/* Summary Description */}
+                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
+                    {cat.summary}
+                  </p>
+
+                  {/* Skills Tags */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {cat.skills.map((skill, sIdx) => (
+                      <span
+                        key={sIdx}
+                        className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              );
-            })}
+
+                {/* Bottom Action Footer */}
+                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span className="font-bold text-[#243042] group-hover:text-amber-600 flex items-center gap-1">
+                    Ver Detalhes & Cursos
+                  </span>
+                  <div className="w-7 h-7 rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#243042] group-hover:text-[#FFC72C] flex items-center justify-center transition-all shadow-xs">
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
+        </section>
+
+        {/* ========================================================================= */}
+        {/* SESSÃO 2: Conheça as Modalidades de Curso                                */}
+        {/* ========================================================================= */}
+        <section className="space-y-6 pt-4 border-t border-slate-200">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-0.5 rounded-full border border-blue-200 mb-2">
+                <ClipboardList className="w-3.5 h-3.5" />
+                <span>Formatos & Metodologias</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-[#182333] tracking-tight">
+                Conheça as Modalidades de Curso
+              </h2>
+            </div>
+            <span className="text-xs font-semibold text-slate-500 shrink-0">
+              8 Modalidades de Aprendizado
+            </span>
+          </div>
+
+          {/* Modalities Cards in the same exact Category Card visual pattern */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {filteredModalities.map((mod) => (
+              <div
+                key={mod.id}
+                onClick={() => handleCardClick(mod.destination)}
+                className="bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+                id={`mod-card-${mod.id}`}
+              >
+                <div className="space-y-3">
+                  {/* Top row with Icon and Badge */}
+                  <div className="flex items-center justify-between">
+                    <div
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center text-white bg-gradient-to-br ${mod.accentColor} shadow-md group-hover:scale-105 transition-transform`}
+                    >
+                      {renderIcon(mod.iconName, 'w-6 h-6')}
+                    </div>
+
+                    <span className="text-[11px] font-bold bg-[#182333]/5 text-[#243042] px-2.5 py-1 rounded-full border border-slate-200">
+                      {mod.badge}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-extrabold text-[#182333] text-base sm:text-lg leading-tight group-hover:text-blue-600 transition-colors">
+                    {mod.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                    {mod.summary}
+                  </p>
+
+                  {/* Chips */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {mod.chips.map((chip, cIdx) => (
+                      <span
+                        key={cIdx}
+                        className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium"
+                      >
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bottom Action Footer */}
+                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span className="font-bold text-[#243042] group-hover:text-blue-600 flex items-center gap-1">
+                    Ver Modalidade
+                  </span>
+                  <div className="w-7 h-7 rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#243042] group-hover:text-[#FFC72C] flex items-center justify-center transition-all shadow-xs">
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ========================================================================= */}
+        {/* SESSÃO 3: Conheça Nossos Produtos                                         */}
+        {/* ========================================================================= */}
+        <section className="space-y-6 pt-4 border-t border-slate-200">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-0.5 rounded-full border border-emerald-200 mb-2">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Soluções & Recursos</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-[#182333] tracking-tight">
+                Conheça nossos produtos
+              </h2>
+            </div>
+            <span className="text-xs font-semibold text-slate-500 shrink-0">
+              Livros, Biolinks & Aplicativos
+            </span>
+          </div>
+
+          {/* Products Grid in the same exact Category Card visual pattern */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {filteredProducts.map((prod) => (
+              <div
+                key={prod.id}
+                onClick={() => handleCardClick(prod.destination)}
+                className="bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+                id={`prod-card-${prod.id}`}
+              >
+                <div className="space-y-3">
+                  {/* Top row with Icon and Badge */}
+                  <div className="flex items-center justify-between">
+                    <div
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center text-white bg-gradient-to-br ${prod.accentColor} shadow-md group-hover:scale-105 transition-transform`}
+                    >
+                      {renderIcon(prod.iconName, 'w-6 h-6')}
+                    </div>
+
+                    <span className="text-[11px] font-bold bg-[#182333]/5 text-[#243042] px-2.5 py-1 rounded-full border border-slate-200">
+                      {prod.badge}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-extrabold text-[#182333] text-base sm:text-lg leading-tight group-hover:text-emerald-600 transition-colors">
+                    {prod.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                    {prod.summary}
+                  </p>
+
+                  {/* Chips */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {prod.chips.map((chip, cIdx) => (
+                      <span
+                        key={cIdx}
+                        className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium"
+                      >
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bottom Action Footer */}
+                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span className="font-bold text-[#243042] group-hover:text-emerald-600 flex items-center gap-1">
+                    {prod.btnLabel}
+                  </span>
+                  <div className="w-7 h-7 rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#243042] group-hover:text-[#FFC72C] flex items-center justify-center transition-all shadow-xs">
+                    <ChevronRight className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
       </div>
     </div>

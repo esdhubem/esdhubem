@@ -550,6 +550,7 @@ export default function App() {
               setCurrentPage('categoria-detalhe');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onNavigate={handleNavigate}
           />
         </main>
       )}
