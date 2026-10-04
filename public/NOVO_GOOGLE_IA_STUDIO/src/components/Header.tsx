@@ -443,6 +443,10 @@ export const Header: React.FC<HeaderProps> = ({
               <HelpCircle className="w-4 h-4 text-amber-400" />
               <span>Perguntas Frequentes</span>
             </button>
+            <button onClick={() => { onNavigate('carta-aberta'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-amber-300 hover:bg-white/10 flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-[#FFC72C]" />
+              <span>Carta Aberta</span>
+            </button>
             <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-[#FFC72C] hover:bg-white/10 flex items-center gap-2">
               <Headphones className="w-4 h-4 text-[#FFC72C]" />
               <span>Podcasts & Ensaios Sonoros</span>

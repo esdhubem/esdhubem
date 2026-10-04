@@ -34,6 +34,7 @@ import { DiretrizesPublicacaoParceriasPage } from './components/DiretrizesPublic
 import { SobreNosPage } from './components/SobreNosPage';
 import { GeradorAbntPage } from './components/GeradorAbntPage';
 import { PerguntasFrequentesPage } from './components/PerguntasFrequentesPage';
+import { CartaAbertaPage } from './components/CartaAbertaPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -54,7 +55,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'diretrizes-protecao-autoria' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos' | 'gerador-abnt' | 'perguntas-frequentes'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'diretrizes-protecao-autoria' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos' | 'gerador-abnt' | 'perguntas-frequentes' | 'carta-aberta'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -171,6 +172,12 @@ export default function App() {
       return;
     }
 
+    if (pagina === 'carta-aberta' || pagina === 'carta') {
+      setCurrentPage('carta-aberta');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
     if (pagina === 'blog' || pagina === 'posts') {
       setCurrentPage('blog');
       window.scrollTo({ top: 0, behavior: 'instant' });
@@ -281,6 +288,12 @@ export default function App() {
 
     if (sectionId === 'perguntas-frequentes' || sectionId === 'faq' || sectionId === 'duvidas' || sectionId === 'duvidas-frequentes') {
       setCurrentPage('perguntas-frequentes');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'carta-aberta' || sectionId === 'carta') {
+      setCurrentPage('carta-aberta');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -923,6 +936,18 @@ export default function App() {
       {currentPage === 'perguntas-frequentes' && (
         <main className="flex-1">
           <PerguntasFrequentesPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigate={handleNavigate}
+          />
+        </main>
+      )}
+
+      {currentPage === 'carta-aberta' && (
+        <main className="flex-1">
+          <CartaAbertaPage
             onBackToHome={() => {
               setCurrentPage('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
