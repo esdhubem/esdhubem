@@ -271,7 +271,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Explore nossas 18 áreas temáticas integradas. Da psicologia das relações e inteligência emocional até liderança corporativa, práticas integrativas e horas complementares universitárias.
+              Conheça nossas categorias temáticas integradas.
             </p>
 
             {/* Live Search Bar */}
