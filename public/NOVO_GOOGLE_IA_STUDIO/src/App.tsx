@@ -604,6 +604,8 @@ export default function App() {
               setCurrentPage('politica-detalhe');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onNavigate={handleNavigate}
+            onOpenValidator={() => setIsValidatorOpen(true)}
           />
         </main>
       )}

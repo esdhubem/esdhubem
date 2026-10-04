@@ -197,5 +197,96 @@ export const POLICIES_DETAIL_DATA: PolicyDetail[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'codigo-conduta',
+    title: 'Código de Conduta e Convivência Ética',
+    lastUpdated: '12 de Março de 2026',
+    iconName: 'Gavel',
+    color: 'from-purple-600 to-indigo-700',
+    introduction: 'O Código de Conduta da ESDHUBEM estabelece os princípios éticos e padrões de convivência para alunos, autores, instrutores e colaboradores em todos os espaços de aprendizagem e publicação da escola.',
+    sections: [
+      {
+        title: '1. Respeito Mútuo e Diversidade',
+        content: [
+          'Todos os participantes devem agir com empatia, civilidade e respeito à diversidade de opiniões, trajetórias acadêmicas e experiências profissionais.',
+          'São expressamente proibidas manifestações discriminatórias, discursos de ódio, assédio moral ou qualquer forma de preconceito.'
+        ]
+      },
+      {
+        title: '2. Integridade Intelectual e Autoria',
+        content: [
+          'A ESDHUBEM preza pela originalidade das ideias. O plágio acadêmico, a apropriação indevida de textos de terceiros ou o envio de trabalhos não autorais para obtenção de selos de mérito constitui infração grave com cancelamento do reconhecimento.',
+          'O uso de ferramentas de IA deve ser declarado de maneira transparente como suporte metodológico, mantendo o protagonismo humano da reflexão.'
+        ]
+      },
+      {
+        title: '3. Avaliações e Certificação com Mérito',
+        content: [
+          'As avaliações e produções textuais devem refletir o esforço autêntico do aluno. A cooperação mútua é incentivada, mas a cópia sistemática de respostas ou fraudes em testes de múltipla escolha acarretará anulação da tentativa.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'antifraude',
+    title: 'Verificação Antifraude e Autenticidade',
+    lastUpdated: '25 de Fevereiro de 2026',
+    iconName: 'ShieldCheck',
+    color: 'from-emerald-600 to-teal-700',
+    introduction: 'A ESDHUBEM adota rigorosos protocolos criptográficos e sistemas antifraude para assegurar que todo certificado emitido seja único, inviolável e facilmente verificável por universidades e empregadores.',
+    sections: [
+      {
+        title: '1. Código de Autenticidade Único e QR Code',
+        content: [
+          'Cada certificado emitido pela ESDHUBEM conta com um código hash exclusivo e um QR Code público que direciona diretamente para a página de validação institucional da escola.',
+          'Qualquer alteração nos dados do documento físico ou digital torna o certificado inválido no sistema.'
+        ]
+      },
+      {
+        title: '2. Consulta Pública e Imediata',
+        content: [
+          'Faculdades, conselhos de classe, empresas e órgãos públicos podem checar a qualquer momento o nome do titular, curso concluído, carga horária, data de emissão e selo de mérito conferido.'
+        ]
+      },
+      {
+        title: '3. Combate a Falsificações',
+        content: [
+          'A reprodução fraudulenta de assinaturas, logotipos ou carimbos da ESDHUBEM constitui crime tipificado no Código Penal (falsidade ideológica e documental). Casos suspeitos são encaminhados às instâncias legais competentes.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'institucional',
+    title: 'Dados Institucionais e Coordenação',
+    lastUpdated: '18 de Março de 2026',
+    iconName: 'Scale',
+    color: 'from-slate-700 to-slate-900',
+    introduction: 'Informações institucionais, societárias e de governança pedagógica da Escola de Desenvolvimento Humano e Bem-estar (ESDHUBEM).',
+    sections: [
+      {
+        title: '1. Identificação Jurídica',
+        content: [
+          'Razão Social: ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar.',
+          'CNPJ: 61.928.778/0001-50.',
+          'Sede e Operação: São Paulo / SP — Brasil.',
+          'Atendimento Oficial: E-mail: esdhubem@proton.me | Telefone / WhatsApp: (11) 96031-9837 (Seg–Sex das 9h às 17h).'
+        ]
+      },
+      {
+        title: '2. Natureza Jurídica e Amparo dos Cursos',
+        content: [
+          'Instituição de ensino dedicada a cursos livres de aperfeiçoamento, qualificação profissional e desenvolvimento humano, amparada pela Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/96) e Decreto Federal nº 5.154/04.'
+        ]
+      },
+      {
+        title: '3. Coordenação Pedagógica e Ouvidoria',
+        content: [
+          'A coordenação é responsável pela curadoria das grades curriculares, análise de manuscritos da Escala de Autoria e validação de selos de mérito.',
+          'Sugestões, dúvidas ou solicitações de ouvidoria podem ser enviadas diretamente aos canais oficiais de atendimento com protocolo registrado.'
+        ]
+      }
+    ]
   }
 ];
