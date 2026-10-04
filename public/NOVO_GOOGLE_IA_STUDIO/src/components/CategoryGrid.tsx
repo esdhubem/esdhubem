@@ -310,7 +310,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                   <div>
                     <span className="font-bold text-slate-800 block text-xs uppercase tracking-wider mb-1">Descrição:</span>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e quais tendências redesenham o mundo do trabalho. Você vai entender para onde vai a sua área, como ocorre a mobilidade entre funções, o que outros profissionais já estão fazendo e — principalmente — o que pode estudar agora para se manter relevante e preparado para o que vem a seguir.
+                      Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e quais tendências redesenham o mundo do trabalho. Você vai entender para onde vai a sua área, como ocorre a mobilidade entre funções, o que outros profissionais já estão fazendo e, principalmente, o que pode estudar agora para se manter relevante e preparado para o que vem a seguir.
                     </p>
                   </div>
                   <div>

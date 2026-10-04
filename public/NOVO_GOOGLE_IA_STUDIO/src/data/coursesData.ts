@@ -222,7 +222,7 @@ export const METHODOLOGY_PILLARS: MethodologyPillar[] = [
     number: '6',
     title: 'Workshop de Orientação de Carreira — Transformação Profissional',
     description:
-      'Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e quais tendências redesenham o mundo do trabalho. Você vai entender para onde vai a sua área, como ocorre a mobilidade entre funções, o que outros profissionais já estão fazendo e — principalmente — o que pode estudar agora para se manter relevante e preparado para o que vem a seguir.',
+      'Análise dos novos rumos do mercado: quais carreiras estão se transformando, quais estão surgindo e quais tendências redesenham o mundo do trabalho. Você vai entender para onde vai a sua área, como ocorre a mobilidade entre funções, o que outros profissionais já estão fazendo e, principalmente, o que pode estudar agora para se manter relevante e preparado para o que vem a seguir.',
     targetAudience:
       'Quem está em dúvida sobre o futuro da profissão, deseja mudar de área, precisa se reinventar no mercado ou quer planejar com clareza quais caminhos seguir e quais conhecimentos desenvolver para não ficar para trás.',
     type: 'formacao-livre',
