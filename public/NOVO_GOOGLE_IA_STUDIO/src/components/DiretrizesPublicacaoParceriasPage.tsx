@@ -298,151 +298,254 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
 
               {/* 💎 DIAMANTE */}
-              <div className="bg-gradient-to-r from-cyan-50/50 via-white to-white border-2 border-cyan-400 rounded-2xl p-6 sm:p-7 space-y-5 shadow-sm">
+              <div className="bg-gradient-to-r from-cyan-50/50 via-white to-white border-2 border-cyan-400 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl">💎</span>
                   <div>
-                    <h4 className="text-lg sm:text-xl font-bold text-cyan-950">
+                    <h4 className="text-lg sm:text-xl font-black text-cyan-950">
                       DIAMANTE — AUTORAR E CONSTRUIR
                     </h4>
-                    <span className="text-xs font-semibold text-cyan-800">Livro + Registro de Direitos Autorais</span>
+                    <span className="text-xs font-bold text-cyan-800">Livro Autoral + Registro de Direitos Autorais na Biblioteca Nacional</span>
                   </div>
                 </div>
 
-                <p className="text-slate-700 text-sm leading-relaxed">
-                  O Diamante é destinado ao estudante que deseja transformar seu conhecimento, experiência, estudo ou investigação em uma obra autoral de maior extensão.
+                <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+                  O nível <strong>Diamante</strong> é destinado ao participante que deseja transformar conhecimento, experiência, estudo ou investigação em uma obra autoral de maior extensão.
                 </p>
 
-                <div className="bg-white border border-cyan-200 rounded-xl p-4 space-y-2">
-                  <span className="font-bold text-xs uppercase tracking-wider text-cyan-950 block">
-                    A obra poderá assumir diferentes formatos, de acordo com sua finalidade e público, incluindo:
+                {/* Formatos de Obra Aceitos */}
+                <div className="bg-white border border-cyan-200 rounded-2xl p-5 space-y-3 shadow-2xs">
+                  <span className="font-extrabold text-xs uppercase tracking-wider text-cyan-950 flex items-center gap-2">
+                    <span>📚</span>
+                    <span>Formatos de Obra Aceitos</span>
                   </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-700">
-                    <div>• Livros de desenvolvimento pessoal</div>
-                    <div>• Ensaios</div>
-                    <div>• Obras acadêmicas ou didáticas</div>
-                    <div>• Manuais técnicos</div>
-                    <div>• Guias profissionais</div>
-                    <div>• Livros de referência</div>
-                    <div>• Biografias e autobiografias</div>
-                    <div>• Memórias</div>
-                    <div>• Livros-reportagem</div>
-                    <div>• Obras sobre espiritualidade e religião</div>
-                    <div>• Outras formas de não ficção</div>
-                    <div>• Obras de ficção adulta, quando compatíveis</div>
+                  <p className="text-xs text-slate-600">
+                    A obra poderá assumir diferentes formatos, conforme a finalidade e o público-alvo:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs text-slate-700 pt-1">
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Livros de desenvolvimento pessoal</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Ensaios</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Obras acadêmicas ou didáticas</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Manuais técnicos</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Guias profissionais</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Livros de referência</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Biografias e autobiografias</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Memórias</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Livros-reportagem</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Obras sobre espiritualidade e religião</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Outras formas de não ficção</div>
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Obras de ficção adulta (compatíveis com os princípios da escola)</div>
                   </div>
                 </div>
 
-                {/* Requisito Mínimo */}
-                <div className="bg-cyan-100/60 border-l-4 border-cyan-500 p-4 rounded-r-xl space-y-1.5 text-xs sm:text-sm text-cyan-950">
-                  <span className="font-black uppercase tracking-wider block">Requisito mínimo</span>
-                  <p>
-                    Para a modalidade Diamante, o livro deverá possuir <strong>mínimo de 50 páginas de conteúdo</strong>, não sendo contabilizados, para esse mínimo, elementos como capa, folha de rosto, sumário e demais elementos editoriais.
+                {/* Requisito Mínimo de Extensão */}
+                <div className="bg-cyan-100/70 border-l-4 border-cyan-600 p-5 rounded-r-2xl space-y-2 text-xs sm:text-sm text-cyan-950 shadow-2xs">
+                  <div className="flex items-center gap-2 font-black uppercase tracking-wider text-cyan-900">
+                    <span>✅</span>
+                    <span>Requisito Mínimo de Extensão</span>
+                  </div>
+                  <p className="font-semibold text-slate-900">
+                    O texto deverá conter no <strong>mínimo 50 páginas de conteúdo</strong>.
                   </p>
-                  <p className="text-slate-600 italic">
-                    A extensão, entretanto, não substitui a qualidade da obra. O livro deverá apresentar conteúdo desenvolvido, organização coerente e uma proposta autoral definida.
+                  <p className="text-slate-700">
+                    ⚠️ <strong>Não são contabilizadas para este mínimo:</strong> capa, folha de rosto, sumário, referências e demais elementos editoriais pré e pós-textuais.
+                  </p>
+                  <p className="text-slate-600 italic text-xs pt-1">
+                    A extensão, entretanto, não substitui a qualidade. A obra deverá apresentar conteúdo desenvolvido, organização coerente e proposta autoral definida.
                   </p>
                 </div>
 
-                {/* Orientação para a Produção do Livro */}
-                <div className="space-y-3 pt-2">
-                  <h5 className="font-bold text-sm sm:text-base text-slate-900 uppercase tracking-wide">
-                    ORIENTAÇÃO PARA A PRODUÇÃO DO LIVRO
-                  </h5>
-                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    Após a escolha da modalidade e o pagamento da taxa correspondente, o estudante receberá um vídeo com orientações detalhadas para a preparação da obra.
-                  </p>
-                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    As orientações buscarão apresentar formatos utilizados atualmente no mercado editorial e nas plataformas de autopublicação, considerando as características de cada gênero. Entre os aspectos abordados poderão estar:
-                  </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-200">
-                    <div>• Definição do público</div>
-                    <div>• Proposta da obra</div>
-                    <div>• Estrutura do livro</div>
-                    <div>• Organização dos capítulos</div>
-                    <div>• Título e subtítulo</div>
-                    <div>• Introdução</div>
-                    <div>• Desenvolvimento</div>
-                    <div>• Conclusão</div>
-                    <div>• Referências</div>
-                    <div>• Elementos pré-textuais</div>
-                    <div>• Elementos pós-textuais</div>
-                    <div>• Preparação do arquivo</div>
-                    <div>• Apresentação editorial</div>
-                    <div>• Descrição da obra</div>
-                    <div>• Organização para publicação</div>
+                {/* Orientações para Produção */}
+                <div className="space-y-4 pt-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">📝</span>
+                    <h5 className="font-black text-sm sm:text-base text-slate-900 uppercase tracking-wide">
+                      Orientações para Produção
+                    </h5>
                   </div>
-                  <p className="text-slate-600 text-xs leading-relaxed">
-                    No caso de manuais técnicos e guias profissionais, a produção poderá utilizar artigos científicos, livros, normas, documentos oficiais e outras fontes pertinentes. O foco será a clareza, a utilidade, a organização e a responsabilidade das informações apresentadas.
+                  
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                    Após a confirmação da participação e do pagamento da taxa correspondente, o autor receberá material de orientação detalhado com diretrizes para estruturação e preparação da obra.
                   </p>
+
+                  <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs">
+                    <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-slate-900 text-white">
+                          <th className="py-2.5 px-4 font-bold uppercase tracking-wider w-1/3">Etapa</th>
+                          <th className="py-2.5 px-4 font-bold uppercase tracking-wider">Conteúdo Abordado</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                        <tr className="hover:bg-slate-50">
+                          <td className="py-3 px-4 font-bold text-slate-900">Planejamento</td>
+                          <td className="py-3 px-4">Definição de público, proposta da obra, estrutura geral</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50">
+                          <td className="py-3 px-4 font-bold text-slate-900">Desenvolvimento</td>
+                          <td className="py-3 px-4">Organização de capítulos, introdução, desenvolvimento, conclusão</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50">
+                          <td className="py-3 px-4 font-bold text-slate-900">Elementos editoriais</td>
+                          <td className="py-3 px-4">Folha de rosto, dedicatória, agradecimentos, sumário, referências</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50">
+                          <td className="py-3 px-4 font-bold text-slate-900">Preparação do arquivo</td>
+                          <td className="py-3 px-4">Formatação, padronização, versões para impressão e digital</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50">
+                          <td className="py-3 px-4 font-bold text-slate-900">Apresentação</td>
+                          <td className="py-3 px-4">Descrição da obra, texto de divulgação, palavras-chave</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 space-y-1">
+                    <strong className="text-slate-900 font-bold block">Para Manuais Técnicos e Guias Profissionais:</strong>
+                    <p>
+                      Poderão ser utilizadas como base artigos científicos, normas, documentos oficiais e fontes pertinentes. O foco será clareza, utilidade, organização e responsabilidade das informações.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Registro de Direitos Autorais */}
-                <div className="bg-white border-2 border-slate-200 rounded-2xl p-5 space-y-3 shadow-xs">
-                  <h5 className="font-bold text-sm sm:text-base text-slate-900 uppercase tracking-wide flex items-center gap-2">
-                    <ShieldCheck className="w-5 h-5 text-cyan-600" />
-                    <span>REGISTRO DE DIREITOS AUTORAIS</span>
-                  </h5>
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-4 shadow-sm">
+                  <div className="flex items-center gap-2 text-cyan-950 font-black text-sm sm:text-base uppercase tracking-wide">
+                    <ShieldCheck className="w-5 h-5 text-cyan-700" />
+                    <span>📜 Registro de Direitos Autorais (EDA / FBN)</span>
+                  </div>
+
                   <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    Para a modalidade Diamante, o autor deverá realizar o registro da obra junto ao <strong>Escritório de Direitos Autorais da Fundação Biblioteca Nacional — EDA/FBN</strong>, seguindo os procedimentos oficiais vigentes.
+                    Para o nível Diamante, o autor deverá realizar o <strong>registro oficial da obra junto ao Escritório de Direitos Autorais da Fundação Biblioteca Nacional (EDA/FBN)</strong>.
                   </p>
-                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    O pedido de registro é realizado pelo próprio requerente por meio do Portal Gov.Br.
-                  </p>
-                  
-                  <div className="pt-1">
+
+                  <div className="space-y-2 text-xs sm:text-sm text-slate-700">
+                    <p className="font-bold text-slate-900">Como funciona:</p>
+                    <ul className="space-y-1.5">
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span>O pedido é realizado pelo próprio autor diretamente no Portal Gov.Br;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span>Acesso com conta Gov.Br; preenchimento de dados; anexo da obra e documentos;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span>Pagamento das taxas conforme valores vigentes na plataforma;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span>O processo passa por análise e pode ser deferido ou indeferido;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span>O resultado e o certificado ficam disponíveis no próprio portal.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="pt-2">
                     <a
                       href="https://www.gov.br/pt-br/servicos/registrar-ou-averbar-direitos-autorais-na-biblioteca-nacional"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-xs sm:text-sm transition-all shadow-sm"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-cyan-800 hover:bg-cyan-900 text-white font-bold text-xs sm:text-sm transition-all shadow-sm"
                     >
-                      <span>Registrar ou averbar Direitos Autorais na Biblioteca Nacional — Portal Gov.Br</span>
+                      <span>🔗 Acessar Registro na Biblioteca Nacional — Portal Gov.Br</span>
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
 
-                  <p className="text-slate-600 text-xs leading-relaxed pt-2">
-                    No procedimento oficial, o requerente deverá realizar o acesso com sua conta Gov.Br, preencher as informações solicitadas, anexar a obra e os documentos necessários e efetuar o pagamento pela própria plataforma, conforme as regras vigentes.
-                  </p>
-                  <p className="text-slate-600 text-xs leading-relaxed">
-                    A Fundação Biblioteca Nacional informa que o pedido passa por análise e poderá ser deferido ou indeferido. O documento correspondente ao resultado fica disponível ao requerente no Portal Gov.Br.
-                  </p>
-                  <p className="text-slate-600 text-xs leading-relaxed">
-                    A ESDHUBEM orientará o estudante sobre a preparação da obra para essa etapa, mas o pedido de registro é realizado pelo próprio autor perante a Fundação Biblioteca Nacional. Para informações atualizadas sobre documentos, valores, procedimentos e prazos, devem ser consultadas diretamente as orientações oficiais da Fundação Biblioteca Nacional.
-                  </p>
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2 text-slate-700">
+                    <p className="font-bold text-slate-900">Papel da ESDHUBEM:</p>
+                    <div className="space-y-1">
+                      <div className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Orienta sobre a preparação da obra para atender aos requisitos;</div>
+                      <div className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Apoia na organização dos elementos necessários;</div>
+                      <div className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> <strong>Não realiza o registro em nome do autor</strong> — é procedimento pessoal e intransferível;</div>
+                      <div className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> Não tem ingerência sobre a análise e decisão da Fundação Biblioteca Nacional.</div>
+                    </div>
+                    <p className="text-slate-500 italic pt-1 border-t border-slate-200">
+                      * Para informações atualizadas sobre documentos, valores, procedimentos e prazos, consulte sempre diretamente as orientações oficiais da Fundação Biblioteca Nacional.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Publicação e Mural de Livros da ESDHUBEM */}
-                <div className="space-y-3 pt-2">
-                  <h5 className="font-bold text-sm sm:text-base text-slate-900 uppercase tracking-wide">
-                    PUBLICAÇÃO E MURAL DE LIVROS DA ESDHUBEM
-                  </h5>
+                <div className="space-y-4 pt-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">📖</span>
+                    <h5 className="font-black text-sm sm:text-base text-slate-900 uppercase tracking-wide">
+                      Publicação e Mural de Livros da ESDHUBEM
+                    </h5>
+                  </div>
+                  
                   <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    Após cumprir os requisitos da modalidade Diamante, o autor poderá solicitar a inclusão de sua obra no Mural de Livros da ESDHUBEM. A obra poderá ser disponibilizada:
+                    Após cumprir todos os requisitos, a obra poderá ser incluída no <strong>Mural de Livros da ESDHUBEM</strong>.
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
-                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
-                      <strong className="text-slate-900 font-bold block mb-1">Gratuitamente:</strong>
-                      <p>• No site da ESDHUBEM;</p>
-                      <p>• Em formato digital;</p>
-                      <p>• Em repositórios;</p>
-                      <p>• Em outras plataformas de acesso público.</p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Disponibilização Gratuita */}
+                    <div className="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-5 space-y-2.5 text-xs sm:text-sm">
+                      <div className="flex items-center gap-2 font-bold text-emerald-950">
+                        <span>🆓</span>
+                        <strong className="text-base">Disponibilização Gratuita</strong>
+                      </div>
+                      <ul className="space-y-1 text-slate-700">
+                        <li>• Página própria no site da ESDHUBEM;</li>
+                        <li>• Formato digital para leitura ou download;</li>
+                        <li>• Depósito em repositórios de acesso público;</li>
+                        <li>• Divulgação em canais da escola.</li>
+                      </ul>
                     </div>
-                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
-                      <strong className="text-slate-900 font-bold block mb-1">Comercialmente:</strong>
-                      <p>• No espaço de livros da ESDHUBEM, quando disponível;</p>
-                      <p>• Em plataformas de autopublicação;</p>
-                      <p>• Em livrarias e marketplaces;</p>
-                      <p>• Diretamente pelo autor ou em outros canais escolhidos.</p>
+
+                    {/* Sobre Disponibilização para Venda */}
+                    <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-5 space-y-2.5 text-xs sm:text-sm">
+                      <div className="flex items-center gap-2 font-bold text-amber-950">
+                        <span>💰</span>
+                        <strong className="text-base">Sobre Disponibilização para Venda</strong>
+                      </div>
+                      <p className="text-slate-700">
+                        Caso você queira disponibilizar seu livro ou obra para venda ao público, a ESDHUBEM estabelece uma <strong>parceria como afiliado por meio da plataforma Hotmart</strong>.
+                      </p>
                     </div>
                   </div>
-                  <p className="text-slate-600 text-xs leading-relaxed pt-1">
-                    A inclusão no Mural de Livros da ESDHUBEM não estabelece exclusividade comercial. O autor permanece livre para disponibilizar ou comercializar sua obra em outras plataformas e canais, de acordo com seus próprios interesses e com as condições de direitos autorais e publicação aplicáveis.
-                  </p>
-                  <p className="text-slate-600 text-xs leading-relaxed">
-                    A ESDHUBEM poderá divulgar a obra e apresentar informações fornecidas pelo autor, conforme as condições estabelecidas para o Mural de Livros.
-                  </p>
+
+                  {/* Detalhamento Venda Hotmart */}
+                  <div className="bg-white border border-amber-200/80 rounded-2xl p-5 space-y-3 text-xs sm:text-sm">
+                    <p className="font-bold text-amber-950">Por que fazemos assim?</p>
+                    <ul className="space-y-1.5 text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>Você continua sendo o autor e o titular dos direitos</strong> — a parceria não altera a propriedade da obra;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>A Hotmart cuida de toda a estrutura:</strong> processamento de pagamentos, entrega, segurança digital e relatórios;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>A parceria permite que a escola divulgue seu trabalho</strong> para nossa rede de contatos, ampliando sua visibilidade;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>Cada parte recebe a participação combinada sobre as vendas</strong> — você como autor, a escola como parceira de divulgação;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>Tudo com transparência:</strong> valores, porcentagens e condições são combinados previamente, de forma clara e acordada;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>Você pode optar por não vender:</strong> a publicação gratuita no site ou repositório não exige parceria de venda — isso é uma escolha sua, feita quando quiser avançar para comercialização.</span>
+                      </li>
+                    </ul>
+
+                    <p className="p-3 bg-amber-50 rounded-xl border border-amber-200 text-amber-900 italic text-xs mt-2">
+                      <strong>Em resumo:</strong> a parceria existe para dar estrutura, alcance e suporte à sua obra quando você decidir disponibilizá-la comercialmente. A obra continua sendo sua — nós apenas abrimos caminho para que mais pessoas possam conhecê-la.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
