@@ -256,6 +256,45 @@ export const ArtigoDetailPage: React.FC<ArtigoDetailPageProps> = ({
                 </div>
               </div>
             </div>
+
+            {/* Aviso: Pré-Print Não é Publicação em Periódico */}
+            <div className="bg-amber-50/70 rounded-3xl p-6 border border-amber-200 text-slate-800 space-y-3">
+              <div className="flex items-center gap-2.5 text-amber-900 font-bold text-sm">
+                <span className="text-base">🔬</span>
+                <h4>Esclarecimento Importante — Pré-print e Registro Digital</h4>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                O depósito em repositório com atribuição de <strong>DOI</strong> constitui <strong>registro e divulgação prévia</strong> da obra — também chamado de <strong>pré-print</strong>. Isto significa que:
+              </p>
+              <ul className="space-y-1.5 text-xs sm:text-sm text-slate-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 font-bold">✅</span>
+                  <span>Fica registrada oficialmente a autoria e a data de criação;</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 font-bold">✅</span>
+                  <span>O trabalho passa a ser acessível publicamente;</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-rose-600 font-bold">❌</span>
+                  <span><strong>Não equivale a publicação em revista científica com avaliação por pares</strong>;</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-rose-600 font-bold">❌</span>
+                  <span>Não significa que o trabalho foi aceito ou endossado por periódico;</span>
+                </li>
+              </ul>
+              <p className="text-xs text-slate-500 italic pt-1 border-t border-amber-200/60">
+                Se você pretende submeter o mesmo texto a revista, <strong>verifique previamente a política de publicação</strong> do periódico — alguns aceitam pré-print, outros exigem retirada prévia.
+              </p>
+            </div>
+
+            {/* Aviso: Opinião do Autor */}
+            <div className="p-4 rounded-2xl bg-slate-100 border border-slate-200 text-slate-600 text-xs leading-relaxed">
+              <p>
+                <strong className="text-slate-800 font-bold">Nota:</strong> O conteúdo apresentado é de responsabilidade exclusiva do autor. As ideias, interpretações e conclusões expressas não representam necessariamente a posição institucional da ESDHUBEM.
+              </p>
+            </div>
           </div>
 
           {/* Sidebar Column: Metadata & Student Submission Info */}

@@ -454,7 +454,111 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </div>
         </section>
 
-        {/* 6. Princípio Fundamental */}
+        {/* 6. Uso Responsável de Inteligência Artificial */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xl border border-indigo-200">
+              🤖
+            </div>
+            <div>
+              <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider block">Diretrizes de Tecnologia</span>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                Uso Responsável de Inteligência Artificial
+              </h3>
+            </div>
+          </div>
+
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+            A ESDHUBEM reconhece a Inteligência Artificial como recurso útil para organização, pesquisa e revisão. Defendemos, porém, que:
+          </p>
+
+          <ul className="space-y-2.5 text-sm sm:text-base text-slate-700 pl-2">
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 font-bold">•</span>
+              <span>A tecnologia <strong>não substitui</strong> o pensamento, a compreensão e a criação humana;</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 font-bold">•</span>
+              <span>A responsabilidade sobre o conteúdo é <strong>sempre do autor</strong>;</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 font-bold">•</span>
+              <div>
+                <span>Se utilizou IA em qualquer etapa, <strong>declare de forma transparente</strong> como foi aplicada:</span>
+                <div className="mt-2 p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-600 italic">
+                  Exemplo: "Utilizei IA para organizar referências e revisar ortografia; o texto e a argumentação são de minha autoria."
+                </div>
+              </div>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-amber-500 font-bold">•</span>
+              <span>O uso não declarado poderá impedir a publicação ou, se detectado posteriormente, resultar em retirada da obra.</span>
+            </li>
+          </ul>
+        </section>
+
+        {/* 7. Direito de Remoção / Retirada de Publicação */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-xl border border-rose-200">
+              📂
+            </div>
+            <div>
+              <span className="text-xs font-bold text-rose-600 uppercase tracking-wider block">Autonomia do Autor</span>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                Direito de Remoção / Retirada de Publicação
+              </h3>
+            </div>
+          </div>
+
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+            O autor pode solicitar a exclusão de seu texto a qualquer momento, mediante comunicação formal. O prazo para retirada da página e dos índices públicos é de até <strong>15 dias úteis</strong> contados do recebimento da solicitação.
+          </p>
+
+          <p className="text-xs sm:text-sm text-slate-500 italic bg-slate-50 p-4 rounded-xl border border-slate-200">
+            * Em casos de depósito em repositório externo (ex: Zenodo / CERN), a remoção segue as regras daquela plataforma — a ESDHUBEM auxilia no processo, mas não tem controle direto sobre sistemas terceiros.
+          </p>
+        </section>
+
+        {/* 8. Aviso — Não Garantia de Aceitação em Revista ou Periódico */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-xl border border-amber-200">
+              📤
+            </div>
+            <div>
+              <span className="text-xs font-bold text-amber-700 uppercase tracking-wider block">Periódicos Externos</span>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                Sobre Publicação em Periódicos Científicos
+              </h3>
+            </div>
+          </div>
+
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+            A ESDHUBEM oferece orientação, estruturação, revisão e encaminhamento para plataformas científicas. <strong>Não garantimos, porém, a aceitação do trabalho em revista, periódico ou repositório específico.</strong>
+          </p>
+
+          <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+            <li className="flex items-start gap-2">
+              <span className="text-slate-400 font-bold">•</span>
+              <span>A decisão de aceite é exclusiva da instituição ou comitê responsável pelo periódico;</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-slate-400 font-bold">•</span>
+              <span>O trabalho poderá ser devolvido para ajustes ou recusado sem prejuízo;</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-slate-400 font-bold">•</span>
+              <span>A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira;</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-slate-400 font-bold">•</span>
+              <span>O suporte prestado visa preparar o texto — o mérito e a decisão final são totalmente independentes.</span>
+            </li>
+          </ul>
+        </section>
+
+        {/* 9. Princípio Fundamental */}
         <section className="bg-[#FFC72C] rounded-3xl p-8 sm:p-12 text-slate-950 text-center border border-amber-400 shadow-xl space-y-4">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-black/10 text-slate-950">
             ⭐ Princípio Fundamental ESDHUBEM

@@ -694,6 +694,88 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
         </div>
 
+        {/* Avisos Importantes e Termos de Publicação */}
+        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-8">
+          <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
+            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
+                Transparência & Integridade
+              </span>
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+                Avisos Importantes sobre Publicação e Autoria
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Aviso 4: Não Garantia de Aceitação */}
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                <span>📤</span>
+                <h4>Sobre Publicação em Periódicos e Revistas</h4>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                A ESDHUBEM oferece orientação, estruturação, revisão e encaminhamento para plataformas científicas. <strong>Não garantimos, porém, a aceitação do trabalho em revista, periódico ou repositório específico.</strong>
+              </p>
+              <ul className="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                <li>A decisão de aceite é exclusiva da instituição ou comitê responsável;</li>
+                <li>O trabalho poderá ser devolvido para ajustes ou recusado sem prejuízo;</li>
+                <li>A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira.</li>
+              </ul>
+            </div>
+
+            {/* Aviso 5: Pré-print não é revista */}
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                <span>🔬</span>
+                <h4>Pré-print e Depósito com DOI</h4>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                O depósito em repositório com atribuição de <strong>DOI</strong> constitui <strong>registro e divulgação prévia</strong> da obra (pré-print):
+              </p>
+              <ul className="text-xs text-slate-600 space-y-1">
+                <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Fica registrada oficialmente a autoria e data de criação;</li>
+                <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> O trabalho passa a ser acessível publicamente;</li>
+                <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> <strong>Não equivale a publicação em revista com revisão por pares</strong>;</li>
+                <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> Verifique a política do periódico caso queira submeter a mesma obra.</li>
+              </ul>
+            </div>
+
+            {/* Aviso 6: Uso de IA */}
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                <span>🤖</span>
+                <h4>Uso Responsável de Inteligência Artificial</h4>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                A tecnologia é ferramenta de apoio, <strong>não de substituição</strong> do pensamento e criação humana.
+              </p>
+              <ul className="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                <li>A responsabilidade sobre o conteúdo é sempre do autor;</li>
+                <li>Se utilizou IA em qualquer etapa, <strong>declare com transparência</strong> como foi aplicada;</li>
+                <li>O uso não declarado poderá impedir ou cancelar a publicação.</li>
+              </ul>
+            </div>
+
+            {/* Aviso 8: Retirada de Publicação */}
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                <span>📂</span>
+                <h4>Direito de Remoção / Retirada</h4>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                O autor pode solicitar a exclusão de seu texto a qualquer momento. O prazo para retirada da página e dos índices públicos é de até <strong>15 dias úteis</strong>.
+              </p>
+              <p className="text-[11px] text-slate-500 italic">
+                * Em repositórios externos (Zenodo/CERN), a exclusão segue as normas da plataforma terceira.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Card 4: 🤝 Abertura para Parcerias Institucionais */}
         <div className="bg-gradient-to-r from-slate-900 to-[#1e293b] rounded-3xl p-6 sm:p-8 lg:p-10 text-white shadow-xl border border-slate-700/80 space-y-6">
           <div className="flex flex-col md:flex-row gap-6 items-start justify-between">

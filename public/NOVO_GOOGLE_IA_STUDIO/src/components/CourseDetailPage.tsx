@@ -452,9 +452,54 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
                     </div>
                     <span>Validade Oficial e Legislação</span>
                   </h3>
-                  <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl">
-                    <p className="text-sm sm:text-base text-amber-900 leading-relaxed text-justify">
-                      Certificado de Curso Livre emitido pela <strong>ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar (CNPJ 61.928.778/0001-50)</strong> em total conformidade com a <strong>Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/96)</strong>. Não é diploma de graduação, pós-graduação ou ensino técnico.
+
+                  {/* Aviso Específico para Cursos de Saúde / Aprofundamento */}
+                  {(category.toLowerCase().includes('saúde') || category.toLowerCase().includes('saude') || category.toLowerCase().includes('aprofundamento')) && (
+                    <div className="bg-amber-50 border-2 border-amber-300 p-6 rounded-2xl space-y-3">
+                      <div className="flex items-center gap-2.5 text-amber-950 font-bold text-base">
+                        <span>⚠️</span>
+                        <h4>AVISO IMPORTANTE — NÃO É PÓS-GRADUAÇÃO</h4>
+                      </div>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        Este curso <strong>não constitui programa de Pós-Graduação Lato Sensu nem Stricto Sensu</strong>. Trata-se de curso livre de <strong>Aprofundamento Profissional</strong>, destinado a atualização e desenvolvimento contínuo, conforme legislação vigente (Decreto nº 5.154/2004).
+                      </p>
+                      <ul className="space-y-1.5 text-xs text-slate-700">
+                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Exige comprovação de formação superior para participação;</li>
+                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Foca em atualização prática e troca de experiência;</li>
+                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Emite certificado de Aperfeiçoamento Profissional;</li>
+                        <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> Não confere título de especialista reconhecido pelo MEC;</li>
+                        <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> Não equivale a diploma de pós-graduação.</li>
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Aviso Específico para Horas Complementares */}
+                  {(category.toLowerCase().includes('horas') || category.toLowerCase().includes('complementares')) && (
+                    <div className="bg-blue-50 border-2 border-blue-300 p-6 rounded-2xl space-y-3">
+                      <div className="flex items-center gap-2.5 text-blue-950 font-bold text-base">
+                        <span>📋</span>
+                        <h4>AVISO — VALIDADE DE HORAS COMPLEMENTARES</h4>
+                      </div>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        Os certificados emitidos pela ESDHUBEM têm base legal nos termos do <strong>Decreto nº 5.154/2004</strong> e são válidos como comprovação de carga horária complementar.
+                      </p>
+                      <p className="text-xs sm:text-sm text-slate-700">
+                        No entanto, <strong>cada instituição de ensino estabelece suas próprias regras</strong> quanto à aceitação de atividades complementares. Recomendamos que você:
+                      </p>
+                      <ul className="space-y-1 text-xs text-slate-700">
+                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Consulte previamente a secretaria acadêmica de sua faculdade;</li>
+                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Verifique os critérios específicos do seu curso;</li>
+                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Confirme documentos exigidos e prazos.</li>
+                      </ul>
+                      <p className="text-xs text-slate-500 italic pt-1 border-t border-blue-200">
+                        A ESDHUBEM fornece toda a documentação necessária — cabe à instituição de destino a decisão final de aceite.
+                      </p>
+                    </div>
+                  )}
+
+                  <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed text-justify">
+                      Certificado de Curso Livre emitido pela <strong>ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar (CNPJ 61.928.778/0001-50)</strong> em total conformidade com a <strong>Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/96)</strong> e o <strong>Decreto Presidencial nº 5.154/2004</strong>. Não é diploma de graduação, pós-graduação formal stricto sensu ou ensino técnico.
                     </p>
                   </div>
                 </div>

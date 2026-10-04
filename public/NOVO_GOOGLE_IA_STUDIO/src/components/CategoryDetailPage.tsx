@@ -558,6 +558,58 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </div>
           )}
 
+          {/* Right Card: Aviso Saúde - Não é Pós-Graduação */}
+          {currentCategory.id === 'aprofundamento-profissional-saude' && (
+            <div className="bg-amber-500/10 border-2 border-[#FFC72C]/40 rounded-2xl p-6 lg:max-w-3xl w-full shadow-xl text-left space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#FFC72C] text-slate-950 flex items-center justify-center font-bold text-lg shadow-sm">
+                  ⚠️
+                </div>
+                <div>
+                  <h4 className="text-base font-extrabold text-white tracking-wide">AVISO IMPORTANTE — NÃO É PÓS-GRADUAÇÃO</h4>
+                  <p className="text-xs text-[#FFC72C] font-semibold">Aprofundamento Profissional para Graduados em Saúde</p>
+                </div>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                Este curso <strong className="text-white">não constitui programa de Pós-Graduação Lato Sensu nem Stricto Sensu</strong>. Trata-se de curso livre de <strong>Aprofundamento Profissional</strong>, destinado a atualização e desenvolvimento contínuo, conforme legislação vigente (Decreto nº 5.154/2004).
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
+                <div className="flex items-start gap-1.5 text-emerald-300"><span className="text-emerald-400 font-bold">✅</span> Exige comprovação de formação superior para participação;</div>
+                <div className="flex items-start gap-1.5 text-emerald-300"><span className="text-emerald-400 font-bold">✅</span> Foca em atualização prática e troca de experiência;</div>
+                <div className="flex items-start gap-1.5 text-emerald-300"><span className="text-emerald-400 font-bold">✅</span> Emite certificado de Aperfeiçoamento Profissional;</div>
+                <div className="flex items-start gap-1.5 text-rose-300"><span className="text-rose-400 font-bold">❌</span> Não confere título de especialista reconhecido pelo MEC;</div>
+                <div className="flex items-start gap-1.5 text-rose-300 sm:col-span-2"><span className="text-rose-400 font-bold">❌</span> Não equivale a diploma de pós-graduação.</div>
+              </div>
+            </div>
+          )}
+
+          {/* Right Card: Aviso Horas Complementares */}
+          {currentCategory.id === 'horas-complementares' && (
+            <div className="bg-blue-500/10 border-2 border-blue-400/40 rounded-2xl p-6 lg:max-w-3xl w-full shadow-xl text-left space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                  📋
+                </div>
+                <div>
+                  <h4 className="text-base font-extrabold text-white tracking-wide">AVISO — VALIDADE DE HORAS COMPLEMENTARES</h4>
+                  <p className="text-xs text-blue-300 font-semibold">Sobre a Aceitação Acadêmica</p>
+                </div>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                Os certificados emitidos pela ESDHUBEM têm base legal nos termos do <strong>Decreto nº 5.154/2004</strong> e são válidos como comprovação de carga horária complementar. No entanto, <strong className="text-white">cada instituição de ensino estabelece suas próprias regras</strong> quanto à aceitação de atividades complementares.
+              </p>
+              <div className="space-y-1.5 text-xs text-slate-200 pt-1">
+                <p className="font-semibold text-blue-300">Recomendamos que você:</p>
+                <div className="flex items-start gap-1.5"><span className="text-emerald-400 font-bold">✅</span> Consulte previamente a secretaria acadêmica de sua faculdade;</div>
+                <div className="flex items-start gap-1.5"><span className="text-emerald-400 font-bold">✅</span> Verifique os critérios específicos do seu curso;</div>
+                <div className="flex items-start gap-1.5"><span className="text-emerald-400 font-bold">✅</span> Confirme documentos exigidos e prazos.</div>
+              </div>
+              <p className="text-xs text-slate-400 italic pt-1 border-t border-slate-700/60">
+                A ESDHUBEM fornece toda a documentação necessária — cabe à instituição de destino a decisão final de aceite.
+              </p>
+            </div>
+          )}
+
         </div>
       </header>
 

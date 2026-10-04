@@ -329,6 +329,13 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
             </div>
           </section>
 
+          {/* Aviso: Opinião do Autor */}
+          <div className="aviso-opiniao-autor my-8 p-4 rounded-2xl bg-slate-100/90 border border-slate-200 text-slate-600 text-xs sm:text-sm leading-relaxed">
+            <p>
+              <strong className="text-slate-800 font-bold">Nota de Autoria:</strong> O conteúdo apresentado é de responsabilidade exclusiva do autor. As ideias, interpretações e conclusões expressas não representam necessariamente a posição institucional da ESDHUBEM.
+            </p>
+          </div>
+
           {/* Seção: Continue Lendo (Conteúdos Relacionados) */}
           {post.relatedPosts && post.relatedPosts.length > 0 && (
             <nav className="conteudos-relacionados my-10 pt-6 border-t border-slate-200" aria-label="Conteúdos relacionados">
