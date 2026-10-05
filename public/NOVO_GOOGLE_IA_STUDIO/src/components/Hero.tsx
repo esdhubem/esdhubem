@@ -25,18 +25,22 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* Content over image */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center mb-20 sm:mb-32">
-          <div className="max-w-3xl space-y-6 flex flex-col items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center mb-16 sm:mb-24">
+          <div className="max-w-5xl space-y-4 sm:space-y-5 flex flex-col items-center">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-bold tracking-wide shadow-lg">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-bold tracking-wide shadow-lg">
               <Sparkles className="w-4 h-4 text-[#FFC72C]" />
               <span>ESDHUBEM • CURSOS LIVRES</span>
             </div>
 
             {/* Main Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.2] max-w-4xl">
-              Cursos Livres para Desenvolvimento <br className="hidden sm:inline" />
-              <span className="text-[#FFC72C]">Pessoal, Profissional, Empresarial e Bem-Estar</span>
+            <h1 className="tracking-tight leading-tight flex flex-col items-center">
+              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-extrabold text-white whitespace-normal sm:whitespace-nowrap">
+                Cursos Livres para Desenvolvimento
+              </span>
+              <span className="text-lg sm:text-2xl md:text-3xl lg:text-[30px] font-black text-[#FFC72C] whitespace-normal sm:whitespace-nowrap mt-1.5 sm:mt-2">
+                Pessoal, Profissional, Empresarial e Bem-Estar
+              </span>
             </h1>
           </div>
         </div>
