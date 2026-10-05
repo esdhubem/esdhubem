@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Subtitle */}
             <div className="space-y-2 max-w-3xl">
               <p className="text-base sm:text-lg lg:text-xl text-[#FFC72C] font-semibold leading-relaxed">
-                Cursos de capacitação, formação e desenvolvimento pessoal, profissional e empresarial.
+                Capacitação e formação para o desenvolvimento pessoal, profissional e empresarial.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-slate-200 font-medium leading-relaxed">
                 Aprenda com vídeo-aulas. Mapas Mentais. Receba seu certificado.
