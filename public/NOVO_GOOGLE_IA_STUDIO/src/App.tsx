@@ -485,6 +485,7 @@ export default function App() {
               setCurrentPage('categoria-detalhe');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onNavigate={handleNavigate}
           />
 
           {/* 3. Cursos Freepremium, Horas Complementares e Formações Profissionais (Movido para perto das categorias) */}
