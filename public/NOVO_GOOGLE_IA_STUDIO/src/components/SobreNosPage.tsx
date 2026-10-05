@@ -98,7 +98,7 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
               <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
                 A <strong className="text-[#182333] font-semibold">ESDHUBEM</strong> se consolidou como um ecossistema digital de educação e desenvolvimento, uma plataforma que vai além do ensino tradicional: conecta aprendizado, autoria, publicação, reconhecimento e crescimento profissional em um único espaço.
               </p>
-              <p className="text-slate-600 text-sm sm:text-base font-medium italic">
+              <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
                 Uma plataforma digital de aprendizagem, desenvolvimento e produção de conhecimento.
               </p>
             </div>
