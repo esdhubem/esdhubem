@@ -82,24 +82,47 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
         {/* ========================================================================= */}
         <section className="space-y-8 text-slate-800 pb-4 border-b border-slate-200/80">
           {/* Header Principal */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-200/80 text-slate-800 text-xs font-bold uppercase tracking-wider">
               <span>🏛️ Visão Geral do Ecossistema</span>
             </div>
             
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#182333] tracking-tight leading-tight">
-              🏛️ ESDHUBEM — Ecossistema Digital de Educação e Desenvolvimento
-            </h2>
-
-            <div className="space-y-2 pt-1">
-              <h3 className="text-lg sm:text-xl font-bold text-[#182333]">
-                O que somos
-              </h3>
-              <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
-                A <strong className="text-[#182333] font-semibold">ESDHUBEM</strong> se consolidou como um ecossistema digital de educação e desenvolvimento, uma plataforma que vai além do ensino tradicional: conecta aprendizado, autoria, publicação, reconhecimento e crescimento profissional em um único espaço.
+            <div className="space-y-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#182333] tracking-tight leading-tight">
+                🏛️ ESDHUBEM — ECOSSISTEMA DIGITAL DE EDUCAÇÃO E DESENVOLVIMENTO
+              </h2>
+              <p className="text-sm sm:text-base font-bold text-amber-700 uppercase tracking-wider">
+                UMA PLATAFORMA DIGITAL DE APRENDIZAGEM, DESENVOLVIMENTO E PRODUÇÃO DE CONHECIMENTO
               </p>
-              <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
-                Uma plataforma digital de aprendizagem, desenvolvimento e produção de conhecimento.
+            </div>
+
+            <div className="space-y-4 pt-1 text-slate-700 text-base sm:text-lg leading-relaxed">
+              <p>
+                A <strong className="text-[#182333] font-bold">ESDHUBEM</strong> se desenvolveu como uma plataforma SaaS educacional, tornando-se um ecossistema digital de educação e desenvolvimento. Aqui nós oferecemos ao aluno a experiência completa de cadastro e login, de acesso à sala de aula, de acompanhamento das videoaulas, de estudo dos materiais didáticos, de consulta aos mapas mentais, de acompanhamento do seu percurso de aprendizado, de recebimento dos certificados e de validação pública desses certificados para que qualquer pessoa possa conferir a legitimidade do documento emitido.
+              </p>
+              <p>
+                A nossa escola disponibiliza um amplo catálogo de cursos organizados por categorias, onde o aluno encontra diferentes caminhos de formação, incluindo cursos de capacitação prática, cursos de horas complementares com foco em validação acadêmica, percursos de formação integral, processos claros de certificação, regras transparentes de funcionamento e oportunidades de publicação do conhecimento produzido ao longo do aprendizado.
+              </p>
+              <p>
+                Além de todo o percurso de estudo, a ESDHUBEM facilita ao aluno a experiência de autoria plena, permitindo que cada pessoa transforme o que aprendeu em conhecimento compartilhado. O aluno pode escrever e publicar um artigo para o Blog Oficial da escola, com seu nome e perfil próprios; pode elaborar um artigo científico ou pré-print que recebe identificação digital e fica registrado em plataformas de acesso público; pode escrever e publicar um livro ou obra completa, com todos os cuidados de proteção à autoria; e também tem a possibilidade de realizar publicação monetizada, onde o seu trabalho passa a estar disponível para aquisição dentro do próprio ecossistema, garantindo reconhecimento e valorização pelo esforço dedicado.
+              </p>
+              <p>
+                A ESDHUBEM vai além dos cursos e das publicações e oferece também produtos digitais prontos e desenvolvidos para fortalecer a presença e a atuação de cada pessoa. O aluno e o profissional interessado podem adquirir Landing Pages profissionais para divulgação de seu trabalho, com design voltado para resultados, integração direta com WhatsApp e domínio e hospedagem gratuitos durante o primeiro ano; podem contratar Biolinks interativos para organizar de forma profissional todos os seus contatos e links importantes nas redes sociais; podem contar com Aplicativos e Dashboards personalizados para o acompanhamento de informações e resultados; e também podem adquirir produtos físicos, especialmente os livros publicados por autores da própria escola, levando conhecimento impresso para todo o Brasil.
+              </p>
+              <p>
+                A oferta da ESDHUBEM também se estende ao ambiente corporativo, com a possibilidade de treinamentos personalizados para empresas, capacitação de equipes, desenvolvimento de lideranças e soluções educacionais desenhadas conforme a necessidade de cada instituição, sempre com a mesma qualidade pedagógica e o mesmo cuidado com o desenvolvimento humano que marca a nossa atuação.
+              </p>
+              <p>
+                Todo o conhecimento produzido e compartilhado na ESDHUBEM está acessível de forma ampla, e o aluno — assim como qualquer pessoa interessada — pode encontrar conteúdo de qualidade através do nosso Blog, onde são publicados artigos e reflexões; da nossa Biblioteca, com materiais de referência e apoio; do nosso acervo de Livros, com obras autorais de alunos e colaboradores; de Materiais Complementares que aprofundam temas específicos; e também através da nossa Newsletter, que leva novidades, conteúdos exclusivos e acompanhamento do que acontece na escola diretamente para o e-mail de quem se interessa.
+              </p>
+              <p>
+                Para que tudo isso funcione com ordem, clareza e responsabilidade, a nossa equipe realiza a administração completa de todo o ecossistema: fazemos a gestão de alunos, acompanhando cada percurso; a gestão dos cursos, mantendo o conteúdo sempre acessível e atualizado; a gestão dos certificados, garantindo que cada documento seja emitido com exatidão e possa ser verificado publicamente; a gestão dos produtos digitais e físicos; a gestão das publicações, orientando e acompanhando cada autor; a gestão dos pagamentos, com transparência em cada etapa; e funcionamos também como a secretaria da escola, recebendo dúvidas, orientando caminhos e atendendo a cada pessoa com respeito e dedicação.
+              </p>
+              <p>
+                No ecossistema da ESDHUBEM circulam diferentes perfis, cada um com seu papel importante e reconhecido: o Aluno, que faz os cursos, estuda, se dedica e recebe os certificados; o Autor, que vai além do conteúdo consumido, escreve, cria e publica artigos e livros levando sua voz; o Profissional, que busca fortalecer sua atuação e adquire ferramentas digitais para crescer no mercado; a Empresa, que confia na nossa escola para capacitar seus colaboradores e verifica a legitimidade dos certificados apresentados; e o Administrador, que cuida, organiza, mantém e evolui todo o espaço para que ele continue funcionando e acolhendo cada pessoa.
+              </p>
+              <p className="font-bold text-[#182333] pt-2 border-t border-slate-200/80">
+                A ESDHUBEM é, acima de tudo, uma plataforma digital de aprendizagem, desenvolvimento e produção de conhecimento, um lugar onde você não apenas estuda, mas também cria, compartilha, protege sua autoria e constrói sua própria trajetória.
               </p>
             </div>
           </div>
