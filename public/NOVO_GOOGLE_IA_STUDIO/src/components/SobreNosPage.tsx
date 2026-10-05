@@ -77,6 +77,221 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-10">
         
+        {/* ========================================================================= */}
+        {/* SESSÃO INSTITUCIONAL: Ecossistema Digital de Educação e Desenvolvimento */}
+        {/* ========================================================================= */}
+        <section className="space-y-8 text-slate-800 pb-4 border-b border-slate-200/80">
+          {/* Header Principal */}
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-200/80 text-slate-800 text-xs font-bold uppercase tracking-wider">
+              <span>🏛️ Visão Geral do Ecossistema</span>
+            </div>
+            
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#182333] tracking-tight leading-tight">
+              🏛️ ESDHUBEM — Ecossistema Digital de Educação e Desenvolvimento
+            </h2>
+
+            <div className="space-y-2 pt-1">
+              <h3 className="text-lg sm:text-xl font-bold text-[#182333]">
+                O que somos
+              </h3>
+              <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+                A <strong className="text-[#182333] font-semibold">ESDHUBEM</strong> se consolidou como um ecossistema digital de educação e desenvolvimento, uma plataforma que vai além do ensino tradicional: conecta aprendizado, autoria, publicação, reconhecimento e crescimento profissional em um único espaço.
+              </p>
+              <p className="text-slate-600 text-sm sm:text-base font-medium italic">
+                Uma plataforma digital de aprendizagem, desenvolvimento e produção de conhecimento.
+              </p>
+            </div>
+          </div>
+
+          {/* Grid de Pilares do Ecossistema */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
+            {/* 🎓 Para o Aluno */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-extrabold text-[#182333] flex items-center gap-2 border-b border-slate-200 pb-2">
+                <span>🎓</span> Para o Aluno — Aprendizado Completo
+              </h3>
+              <ul className="space-y-1.5 text-sm text-slate-700">
+                <li className="flex items-start gap-2">• <span>Cadastro e acesso personalizado</span></li>
+                <li className="flex items-start gap-2">• <span>Sala de aula virtual</span></li>
+                <li className="flex items-start gap-2">• <span>Videoaulas e materiais didáticos</span></li>
+                <li className="flex items-start gap-2">• <span>Mapas mentais e recursos de estudo</span></li>
+                <li className="flex items-start gap-2">• <span>Acompanhamento do percurso</span></li>
+                <li className="flex items-start gap-2">• <span>Emissão de certificados</span></li>
+                <li className="flex items-start gap-2">• <span>Validação pública de certificados</span></li>
+              </ul>
+              <div className="pt-2">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                  Catálogo de Formação:
+                </h4>
+                <ul className="space-y-1 text-xs text-slate-600 pl-2">
+                  <li>— Cursos livres</li>
+                  <li>— Capacitação prática</li>
+                  <li>— Horas complementares (validação acadêmica)</li>
+                  <li>— Formação integral</li>
+                  <li>— Diretrizes e regras de transparência</li>
+                  <li>— Publicação e reconhecimento</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* ✍️ Para o Autor */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-extrabold text-[#182333] flex items-center gap-2 border-b border-slate-200 pb-2">
+                <span>✍️</span> Para o Autor — Sua Voz em Evidência
+              </h3>
+              <p className="text-xs font-semibold text-slate-600">
+                Transforme o que aprendeu em conhecimento compartilhado:
+              </p>
+              <ul className="space-y-2 text-sm text-slate-700">
+                <li className="flex items-start gap-2">
+                  <span>📝</span>
+                  <span><strong>Artigo de Blog</strong> — visibilidade e portfólio</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span>🔬</span>
+                  <span><strong>Artigo Científico / Pré-print</strong> — reconhecimento com DOI</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span>📖</span>
+                  <span><strong>Livro ou Obra Completa</strong> — proteção na Biblioteca Nacional</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span>💰</span>
+                  <span><strong>Publicação Monetizada</strong> — dentro do próprio ecossistema</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 🛠️ Para o Profissional */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-extrabold text-[#182333] flex items-center gap-2 border-b border-slate-200 pb-2">
+                <span>🛠️</span> Para o Profissional — Ferramentas de Destaque
+              </h3>
+              <p className="text-xs font-semibold text-slate-600">
+                Construa e fortaleça sua presença com produtos prontos:
+              </p>
+              <ul className="space-y-2 text-sm text-slate-700">
+                <li className="flex items-start gap-2">
+                  <span>📄</span>
+                  <span><strong>Landing Pages</strong> — domínio e hospedagem inclusos</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span>🔗</span>
+                  <span><strong>Biolinks</strong> — organização profissional de links</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span>📱</span>
+                  <span><strong>Aplicativos</strong> — soluções digitais</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span>📊</span>
+                  <span><strong>Dashboards</strong> — acompanhamento de dados</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span>📚</span>
+                  <span><strong>Livros Físicos</strong> — publicação impressa</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 🏢 Para Empresas e Instituições */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-extrabold text-[#182333] flex items-center gap-2 border-b border-slate-200 pb-2">
+                <span>🏢</span> Para Empresas e Instituições
+              </h3>
+              <ul className="space-y-1.5 text-sm text-slate-700">
+                <li className="flex items-start gap-2">• <span>Treinamento corporativo personalizado</span></li>
+                <li className="flex items-start gap-2">• <span>Capacitação de equipes</span></li>
+                <li className="flex items-start gap-2">• <span>Desenvolvimento de lideranças</span></li>
+                <li className="flex items-start gap-2">• <span>Validação de certificados emitidos</span></li>
+              </ul>
+            </div>
+
+            {/* 📚 Conteúdo Disponível para Todos */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-extrabold text-[#182333] flex items-center gap-2 border-b border-slate-200 pb-2">
+                <span>📚</span> Conteúdo Disponível para Todos
+              </h3>
+              <ul className="space-y-1.5 text-sm text-slate-700">
+                <li className="flex items-start gap-2">• <span>Blog com publicações autorais</span></li>
+                <li className="flex items-start gap-2">• <span>Biblioteca de referência</span></li>
+                <li className="flex items-start gap-2">• <span>Acervo de livros</span></li>
+                <li className="flex items-start gap-2">• <span>Materiais complementares</span></li>
+                <li className="flex items-start gap-2">• <span>Newsletter com novidades</span></li>
+              </ul>
+            </div>
+
+            {/* ⚙️ Gestão e Estrutura */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-extrabold text-[#182333] flex items-center gap-2 border-b border-slate-200 pb-2">
+                <span>⚙️</span> Gestão e Estrutura
+              </h3>
+              <p className="text-xs font-semibold text-slate-600">
+                A equipe da ESDHUBEM cuida de tudo com transparência:
+              </p>
+              <ul className="space-y-1 text-xs text-slate-700">
+                <li className="flex items-start gap-2">• <span>Administração de alunos e acessos</span></li>
+                <li className="flex items-start gap-2">• <span>Organização de cursos e conteúdos</span></li>
+                <li className="flex items-start gap-2">• <span>Emissão e registro de certificados</span></li>
+                <li className="flex items-start gap-2">• <span>Gestão de produtos e publicações</span></li>
+                <li className="flex items-start gap-2">• <span>Processamento de pagamentos</span></li>
+                <li className="flex items-start gap-2">• <span>Secretaria e atendimento</span></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 👥 Quem Faz Parte do Ecossistema (Tabela) */}
+          <div className="pt-6 space-y-4">
+            <h3 className="text-xl font-bold text-[#182333] flex items-center gap-2">
+              <span>👥</span> Quem Faz Parte do Ecossistema
+            </h3>
+            
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse border-y border-slate-200 text-sm">
+                <thead>
+                  <tr className="border-b border-slate-300 bg-slate-100/60 text-slate-900 font-bold">
+                    <th className="py-3 px-4 w-1/3">Perfil</th>
+                    <th className="py-3 px-4">O que faz</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200 text-slate-700">
+                  <tr className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3 px-4 font-semibold text-[#182333]">🎓 Aluno</td>
+                    <td className="py-3 px-4">Faz cursos, estuda e recebe certificados</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3 px-4 font-semibold text-[#182333]">✍️ Autor</td>
+                    <td className="py-3 px-4">Escreve, publica e compartilha conhecimento</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3 px-4 font-semibold text-[#182333]">💼 Profissional</td>
+                    <td className="py-3 px-4">Adquire ferramentas para fortalecer sua atuação</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3 px-4 font-semibold text-[#182333]">🏢 Empresa</td>
+                    <td className="py-3 px-4">Contrata capacitação e valida certificados</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3 px-4 font-semibold text-[#182333]">🔐 Administrador</td>
+                    <td className="py-3 px-4">Gerencia, mantém e evolui todo o espaço</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* 💡 Frase Institucional Final */}
+          <div className="pt-4 border-t border-slate-200 space-y-1.5">
+            <p className="text-base sm:text-lg font-black text-[#182333]">
+              💡 ESDHUBEM — Aprenda. Escreva. Publique. Construa sua autoridade.
+            </p>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+              Um ecossistema onde o conhecimento circula, a autoria é protegida e cada passo é reconhecido.
+            </p>
+          </div>
+        </section>
+
         {/* Card 1: Missão & Propósito */}
         <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6">
           <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
