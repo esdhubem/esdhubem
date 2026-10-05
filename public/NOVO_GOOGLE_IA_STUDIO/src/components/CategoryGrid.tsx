@@ -113,7 +113,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
             </h3>
             
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-              Aqui na nossa escola temos várias formas de ensino. Escolha a modalidade ideal para o seu momento de aprendizado, complementação acadêmica ou evolução profissional.
+              Escolha a modalidade ideal para o seu momento de aprendizado, complementação acadêmica ou evolução profissional.
             </p>
           </div>
 

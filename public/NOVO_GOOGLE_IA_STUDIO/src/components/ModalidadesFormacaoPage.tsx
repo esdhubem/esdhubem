@@ -177,7 +177,7 @@ export const ModalidadesFormacaoPage: React.FC<ModalidadesFormacaoPageProps> = (
           </p>
 
           <p className="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-normal">
-            Aqui na nossa escola temos várias formas de ensino. Escolha a modalidade ideal para o seu momento de aprendizado, complementação acadêmica ou evolução profissional.
+            Escolha a modalidade ideal para o seu momento de aprendizado, complementação acadêmica ou evolução profissional.
           </p>
         </div>
       </header>
