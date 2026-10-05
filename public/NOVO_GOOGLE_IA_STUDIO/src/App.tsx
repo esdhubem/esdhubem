@@ -509,21 +509,6 @@ export default function App() {
             onCategoryChange={setSelectedCategory}
           />
 
-          {/* 4. A Jornada Perfeita para o Seu Sucesso (The 4 Methodology Pillars) */}
-          <MethodologySection
-            onSelectPillar={(pillarType) => {
-              const slugMap: Record<string, string> = {
-                'freepremium': 'cursos-freepremium',
-                'capacitacao': 'cursos-capacitacao',
-                'horas-complementares': 'horas-complementares',
-                'formacao-livre': 'formacao-livre'
-              };
-              const targetSlug = slugMap[pillarType] || 'cursos-freepremium';
-              handleNavigate(`categoria:${targetSlug}`);
-            }}
-            onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
-            onNavigate={handleNavigate}
-          />
 
           <section className="py-10 bg-[#F8FAFC]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
