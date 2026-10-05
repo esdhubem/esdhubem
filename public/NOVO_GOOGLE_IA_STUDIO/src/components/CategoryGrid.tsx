@@ -400,90 +400,125 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
       </section>
       <section className="py-12 sm:py-16 bg-white" id="explorar-categorias">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-          <div>
-            <div className="flex items-center gap-2 text-[#243042] text-xs sm:text-sm font-bold uppercase tracking-wider mb-1.5">
-              <Filter className="w-4 h-4 text-amber-500" />
-              <span>Navegue por Áreas de Conhecimento</span>
+          {/* Section Header */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <div className="flex items-center gap-2 text-[#243042] text-xs sm:text-sm font-bold uppercase tracking-wider mb-1.5">
+                <Filter className="w-4 h-4 text-amber-500" />
+                <span>Navegue por Áreas de Conhecimento</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Áreas de Desenvolvimento ESDHUBEM
+              </h2>
+              <p className="mt-1 text-sm text-slate-600 max-w-xl">
+                Escolha uma das áreas abaixo para explorar nossos cursos livres, treinamentos e formações.
+              </p>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Conheça as Categorias de Cursos
-            </h2>
-            <p className="mt-1 text-sm text-slate-600 max-w-xl">
-              Selecione uma área para filtrar treinamentos certificados, videoaulas e materiais didáticos.
-            </p>
+
+            <div className="flex flex-wrap items-center gap-2">
+              {selectedCategory && (
+                <button
+                  onClick={() => onSelectCategory(null)}
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 px-3.5 py-1.5 rounded-full transition-colors self-start sm:self-auto cursor-pointer shadow-xs"
+                >
+                  <span>Filtro ativo:</span>
+                  <span className="text-[#243042] font-bold underline">{selectedCategory}</span>
+                  <span className="text-slate-400 ml-1">✕</span>
+                </button>
+              )}
+            </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            {selectedCategory && (
-              <button
-                onClick={() => onSelectCategory(null)}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 px-3.5 py-1.5 rounded-full transition-colors self-start sm:self-auto cursor-pointer shadow-xs"
-              >
-                <span>Filtro ativo:</span>
-                <span className="text-[#243042] font-bold underline">{selectedCategory}</span>
-                <span className="text-slate-400 ml-1">✕</span>
-              </button>
-            )}
-          </div>
-        </div>
+          {/* 4 Macro Areas Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+            {[
+              {
+                id: 'desenvolvimento-pessoal',
+                emoji: '🧠',
+                title: 'Desenvolvimento Pessoal',
+                description: 'Autoconhecimento, consciência, relações, bem-estar e desenvolvimento pessoal.',
+                filterKey: 'Desenvolvimento Pessoal',
+                badgeText: 'Pessoal',
+                badgeClass: 'bg-purple-50 text-purple-700 border-purple-200'
+              },
+              {
+                id: 'desenvolvimento-profissional',
+                emoji: '💼',
+                title: 'Desenvolvimento Profissional',
+                description: 'Carreira, competências, capacitação e conhecimentos para atuação profissional.',
+                filterKey: 'Desenvolvimento Profissional',
+                badgeText: 'Profissional',
+                badgeClass: 'bg-blue-50 text-blue-700 border-blue-200'
+              },
+              {
+                id: 'desenvolvimento-empresarial',
+                emoji: '🏢',
+                title: 'Desenvolvimento Empresarial',
+                description: 'Empresas, gestão, equipes, liderança e treinamento corporativo.',
+                filterKey: 'Desenvolvimento Empresarial',
+                badgeText: 'Empresarial',
+                badgeClass: 'bg-amber-50 text-amber-700 border-amber-200'
+              },
+              {
+                id: 'desenvolvimento-bem-estar-integrativo',
+                emoji: '🩺',
+                title: 'Desenvolvimento em Bem-estar Integrativo',
+                description: 'Saúde, bem-estar, práticas integrativas e aprofundamento profissional na área da saúde.',
+                filterKey: 'Desenvolvimento em Bem-estar Integrativo',
+                badgeText: 'Bem-estar Integrativo',
+                badgeClass: 'bg-emerald-50 text-emerald-700 border-emerald-200'
+              }
+            ].map((area) => {
+              const isSelected = selectedCategory?.toLowerCase() === area.filterKey.toLowerCase();
 
-        {/* 17 Categories Grid (Styled exactly like the user's screenshot) */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
-          {categories.map((cat) => {
-            // Clean up title for matching
-            const flatTitle = cat.title.replace('\n', ' ');
-            const isSelected = selectedCategory?.toLowerCase() === flatTitle.toLowerCase();
-
-            return (
-              <button
-                key={cat.id}
-                onClick={() => {
-                  if (isSelected) {
-                    onSelectCategory(null);
-                  } else {
-                    onSelectCategory(flatTitle);
-                    if (cat.id !== 'livros' && cat.id !== 'treinamentos-palestras-corporativas') {
+              return (
+                <div
+                  key={area.id}
+                  onClick={() => {
+                    if (isSelected) {
+                      onSelectCategory(null);
+                    } else {
+                      onSelectCategory(area.filterKey);
                       const catalogEl = document.getElementById('catalogo-cursos');
                       if (catalogEl) {
                         catalogEl.scrollIntoView({ behavior: 'smooth' });
                       }
                     }
-                  }
-                }}
-                className={`group relative p-4 sm:p-5 rounded-2xl text-center transition-all duration-200 flex flex-col items-center justify-between min-h-[175px] sm:min-h-[190px] border cursor-pointer ${
-                  isSelected
-                    ? 'bg-slate-50 border-2 border-[#243042] shadow-lg -translate-y-0.5 ring-2 ring-[#FFC72C]/50'
-                    : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-lg hover:-translate-y-0.5'
-                }`}
-                id={`cat-card-${cat.id}`}
-              >
-                {/* Circular Dark Navy Badge with Yellow Icon (As in user screenshot) */}
-                <div className="w-14 h-14 rounded-full bg-[#182333] flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform shrink-0">
-                  {renderCategoryIcon(cat.iconName, 'w-6 h-6 text-[#FBBF24]')}
-                </div>
+                  }}
+                  className={`group relative p-6 rounded-2xl transition-all duration-200 flex flex-col justify-between cursor-pointer border ${
+                    isSelected
+                      ? 'bg-slate-50 border-2 border-[#182333] shadow-xl ring-2 ring-[#FFC72C]/60 scale-[1.02]'
+                      : 'bg-white border-slate-200/90 hover:border-amber-400 hover:shadow-xl hover:-translate-y-1'
+                  }`}
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-3xl">{area.emoji}</span>
+                      <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${area.badgeClass}`}>
+                        {area.badgeText}
+                      </span>
+                    </div>
 
-                {/* Centered Category Title */}
-                <div className="flex-1 flex flex-col justify-center w-full">
-                  <h3 className="text-sm sm:text-base font-extrabold text-slate-900 leading-snug group-hover:text-[#243042] transition-colors">
-                    {cat.title}
-                  </h3>
-                  <span className="text-xs text-slate-500 font-medium mt-1 block">
-                    Cursos
-                  </span>
-                </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-black text-[#182333] group-hover:text-amber-600 transition-colors leading-snug">
+                        {area.title}
+                      </h3>
+                      <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                        {area.description}
+                      </p>
+                    </div>
+                  </div>
 
-                {/* Selected Indicator Pill */}
-                {isSelected && (
-                  <span className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-[#FFC72C] ring-2 ring-white" />
-                )}
-              </button>
-            );
-          })}
+                  <div className="pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-800 group-hover:text-amber-600 transition-colors">
+                    <span>{isSelected ? 'Filtro Ativo (Limpar)' : 'Explorar Cursos'}</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-amber-500" />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
-  </div>
-);
+      </section>
+    </div>
+  );
 };

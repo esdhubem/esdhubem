@@ -54,7 +54,15 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
 
     const matchesCategory =
       !selectedCategory ||
-      course.category.toLowerCase() === selectedCategory.toLowerCase();
+      course.category.toLowerCase() === selectedCategory.toLowerCase() ||
+      (selectedCategory.toLowerCase() === 'desenvolvimento pessoal' &&
+        ['pessoal', 'humano', 'relacional', 'consciência', 'ético', 'financeiro', 'tecnológico', 'ambiental'].some(c => course.category.toLowerCase().includes(c))) ||
+      (selectedCategory.toLowerCase() === 'desenvolvimento profissional' &&
+        ['profissional', 'carreira', 'capacitação', 'formação livre', 'horas complementares'].some(c => course.category.toLowerCase().includes(c))) ||
+      (selectedCategory.toLowerCase() === 'desenvolvimento empresarial' &&
+        ['empresarial', 'empresas', 'corporativas', 'corporativo', 'treinamentos e palestras corporativas', 'landing pages', 'aplicativos'].some(c => course.category.toLowerCase().includes(c))) ||
+      (selectedCategory.toLowerCase() === 'desenvolvimento em bem-estar integrativo' &&
+        ['práticas integrativas', 'coach integrativo', 'pedagogia integrativa', 'saúde', 'bem-estar', 'aprofundamento na área da saúde'].some(c => course.category.toLowerCase().includes(c)));
 
     return matchesPillar && matchesSearch && matchesCategory;
   });
