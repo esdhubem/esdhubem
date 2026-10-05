@@ -43,7 +43,8 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg lg:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl">
-              Aprenda. Conquiste seu certificado! Se quiser, escreva e vá mais além.
+              Aprenda. Conquiste seu certificado! <br />
+              Se quiser, escreva e vá mais além.
             </p>
           </div>
         </div>
