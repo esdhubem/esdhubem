@@ -93,7 +93,8 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
       <section className="py-12 sm:py-16 bg-[#FFC72C] border-b border-amber-400/40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
           <h2 className="text-xl sm:text-2xl lg:text-3xl text-slate-900 leading-relaxed font-extrabold tracking-tight max-w-4xl mx-auto">
-            Capacitação e formação para o desenvolvimento pessoal, profissional e empresarial.
+            Capacitação e formação para o desenvolvimento <br className="hidden sm:inline" />
+            pessoal, profissional, empresarial e bem-estar.
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-slate-900 leading-relaxed font-bold max-w-3xl mx-auto">
             Aprenda com vídeo-aulas. Mapas Mentais. Receba seu certificado.
