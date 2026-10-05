@@ -173,7 +173,8 @@ export const ModalidadesFormacaoPage: React.FC<ModalidadesFormacaoPageProps> = (
           </h1>
 
           <p className="text-[#FFC72C] text-lg sm:text-2xl font-bold leading-relaxed">
-            Aqui nós temos diversas Modalidades de Cursos Livres!
+            <span className="block">Aqui nós temos diversas</span>
+            <span className="block">Modalidades de Cursos Livres!</span>
           </p>
 
           <p className="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-normal">

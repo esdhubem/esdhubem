@@ -109,7 +109,8 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
             </div>
             
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#182333] tracking-tight">
-              Aqui nós temos diversas Modalidades de Cursos Livres!
+              <span className="block">Aqui nós temos diversas</span>
+              <span className="block">Modalidades de Cursos Livres!</span>
             </h3>
             
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
