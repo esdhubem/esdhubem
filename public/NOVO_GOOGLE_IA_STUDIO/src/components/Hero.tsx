@@ -35,7 +35,8 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* Main Title */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.2] max-w-4xl">
-              Cursos Livres para quem quer aprender e se desenvolver
+              Cursos Livres para Desenvolvimento <br className="hidden sm:inline" />
+              <span className="text-[#FFC72C]">Pessoal, Profissional, Empresarial e Bem-Estar</span>
             </h1>
           </div>
         </div>
