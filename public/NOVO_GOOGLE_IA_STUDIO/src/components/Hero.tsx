@@ -37,16 +37,6 @@ export const Hero: React.FC<HeroProps> = ({
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.2] max-w-4xl">
               Cursos Livres para quem quer aprender e se desenvolver
             </h1>
-
-            {/* Subtitle */}
-            <div className="space-y-2 max-w-3xl">
-              <p className="text-base sm:text-lg lg:text-xl text-[#FFC72C] font-semibold leading-relaxed">
-                Capacitação e formação para o desenvolvimento pessoal, profissional e empresarial.
-              </p>
-              <p className="text-sm sm:text-base lg:text-lg text-slate-200 font-medium leading-relaxed">
-                Aprenda com vídeo-aulas. Mapas Mentais. Receba seu certificado.
-              </p>
-            </div>
           </div>
         </div>
       </div>

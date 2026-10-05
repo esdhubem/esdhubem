@@ -92,12 +92,11 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
       {/* Faixa Institucional com fundo amarelo e letra maior */}
       <section className="py-12 sm:py-16 bg-[#FFC72C] border-b border-amber-400/40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <p className="text-xl sm:text-2xl lg:text-3xl text-slate-900 leading-relaxed font-extrabold tracking-tight max-w-4xl mx-auto">
-            Aqui os cursos livres são de capacitação, formação, treinamento e desenvolvimento.
-          </p>
-          <p className="text-base sm:text-lg lg:text-xl text-slate-900 leading-relaxed font-bold max-w-2xl mx-auto">
-            Estude no seu ritmo e escolha <br />
-            a modalidade que melhor atende aos seus objetivos.
+          <h2 className="text-xl sm:text-2xl lg:text-3xl text-slate-900 leading-relaxed font-extrabold tracking-tight max-w-4xl mx-auto">
+            Capacitação e formação para o desenvolvimento pessoal, profissional e empresarial.
+          </h2>
+          <p className="text-base sm:text-lg lg:text-xl text-slate-900 leading-relaxed font-bold max-w-3xl mx-auto">
+            Aprenda com vídeo-aulas. Mapas Mentais. Receba seu certificado.
           </p>
         </div>
       </section>
