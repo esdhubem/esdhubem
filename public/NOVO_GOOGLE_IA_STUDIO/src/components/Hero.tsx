@@ -30,22 +30,23 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-bold tracking-wide shadow-lg">
               <Sparkles className="w-4 h-4 text-[#FFC72C]" />
-              <span>CURSOS E TREINAMENTOS</span>
+              <span>ESDHUBEM • CURSOS LIVRES</span>
             </div>
 
             {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] flex flex-col items-center">
-              <span>ESDHUBEM</span>
-              <span className="text-[#FFC72C] text-3xl sm:text-4xl lg:text-5xl whitespace-normal sm:whitespace-nowrap mt-2">
-                Cursos Livres.
-              </span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.2] max-w-4xl">
+              Cursos Livres para quem quer aprender e se desenvolver
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg lg:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl">
-              Aprenda. Conquiste seu certificado! <br />
-              Se quiser, escreva e vá mais além.
-            </p>
+            <div className="space-y-2 max-w-3xl">
+              <p className="text-base sm:text-lg lg:text-xl text-[#FFC72C] font-semibold leading-relaxed">
+                Cursos de capacitação, formação e desenvolvimento pessoal, profissional e empresarial.
+              </p>
+              <p className="text-sm sm:text-base lg:text-lg text-slate-200 font-medium leading-relaxed">
+                Aprenda com vídeo-aulas. Mapas Mentais. Receba seu certificado.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -85,13 +86,13 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
             </div>
 
-            {/* 4. Possibilidade de autoria */}
+            {/* 4. Mapas Mentais & Vídeo-aulas */}
             <div className="flex items-center justify-center lg:justify-center gap-4 sm:border-l border-slate-200 sm:pl-6 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0">
               <div className="w-14 h-14 rounded-2xl bg-purple-50 border border-purple-200/80 flex items-center justify-center text-purple-600 shrink-0 shadow-sm">
-                <PenTool className="w-6 h-6" />
+                <Sparkles className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-base sm:text-lg font-extrabold text-[#182333]">Possibilidade de autoria</h4>
+                <h4 className="text-base sm:text-lg font-extrabold text-[#182333]">Mapas Mentais</h4>
               </div>
             </div>
 
