@@ -95,8 +95,9 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
           <p className="text-xl sm:text-2xl lg:text-3xl text-slate-900 leading-relaxed font-extrabold tracking-tight max-w-4xl mx-auto">
             Aqui os cursos livres são de capacitação, formação, treinamento e desenvolvimento.
           </p>
-          <p className="text-base sm:text-lg lg:text-xl text-slate-900 leading-relaxed font-bold max-w-3xl mx-auto">
-            Estude no seu ritmo e escolha a modalidade que melhor atende aos seus objetivos.
+          <p className="text-base sm:text-lg lg:text-xl text-slate-900 leading-relaxed font-bold max-w-2xl mx-auto">
+            Estude no seu ritmo e escolha <br />
+            a modalidade que melhor atende aos seus objetivos.
           </p>
         </div>
       </section>
