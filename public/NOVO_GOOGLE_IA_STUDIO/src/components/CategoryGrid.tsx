@@ -406,7 +406,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                 <span>Navegue por Áreas de Conhecimento</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Áreas de Desenvolvimento ESDHUBEM
+                Conheça Nossas Áreas de Desenvolvimento ESDHUBEM
               </h2>
               <p className="mt-1 text-sm text-slate-600 max-w-xl">
                 Escolha uma das áreas abaixo para explorar nossos cursos livres, treinamentos e formações.

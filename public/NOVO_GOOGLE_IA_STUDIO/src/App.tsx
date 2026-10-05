@@ -510,8 +510,13 @@ export default function App() {
           />
 
 
-          <section className="py-10 bg-[#F8FAFC]">
+          <section className="py-12 bg-[#F8FAFC]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="mb-8">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#182333] tracking-tight">
+                  Mais do que Cursos: Conhecimento que Cresce com Você
+                </h2>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <CorporateBanner onNavigate={() => handleNavigate('categoria:treinamentos-palestras-corporativas')} />
                 <BookstoreBanner onNavigate={() => handleNavigate('livraria')} />

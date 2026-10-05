@@ -78,7 +78,7 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
             <span>Grade de Cursos Livres e Produtos da ESDHUBEM</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Produtos mais procurados  ESDHUBEM
+            Veja Os Produtos mais procurados ESDHUBEM
           </h2>
           <p className="mt-2 text-slate-600 text-sm sm:text-base leading-relaxed">
             Conheça os nossos cursos livres e produtos mais procurados para rentabilizar e potencializar seu desenvolvimento humano e profissional. Conheça o Ranking automático baseado nas pesquisas dos alunos
