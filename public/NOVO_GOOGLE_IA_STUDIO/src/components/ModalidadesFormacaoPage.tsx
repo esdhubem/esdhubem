@@ -173,7 +173,7 @@ export const ModalidadesFormacaoPage: React.FC<ModalidadesFormacaoPageProps> = (
           </h1>
 
           <p className="text-[#FFC72C] text-lg sm:text-2xl font-bold leading-relaxed">
-            Conheça os Cursos Livres da ESDHUBEM!
+            Conheça as Modalidades de Cursos Livres da ESDHUBEM!
           </p>
 
           <p className="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-normal">
