@@ -104,47 +104,47 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
             </div>
           </div>
 
-          {/* Grid de Pilares do Ecossistema em Quadros */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+          {/* Grid de Pilares do Ecossistema em Quadros com tipografia ampla e legível */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
             {/* 🎓 Quadro 1: Para o Aluno */}
-            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all p-6 flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center text-xl font-bold">
+            <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition-all p-7 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center text-2xl font-bold shrink-0">
                       🎓
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider block">Área do Aluno</span>
-                      <h3 className="text-base font-extrabold text-[#182333] leading-tight">
+                      <span className="text-xs sm:text-sm font-bold text-blue-600 uppercase tracking-wider block">Área do Aluno</span>
+                      <h3 className="text-xl sm:text-2xl font-black text-[#182333] leading-tight">
                         Para o Aluno
                       </h3>
                     </div>
                   </div>
-                  <span className="text-[11px] font-bold bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full border border-blue-200">
-                    Aprendizado
+                  <span className="text-xs sm:text-sm font-bold bg-blue-50 text-blue-700 px-3 py-1 rounded-full border border-blue-200">
+                    Aprendizado Completo
                   </span>
                 </div>
 
-                <p className="text-xs font-semibold text-slate-700">
+                <p className="text-base sm:text-lg font-bold text-[#182333]">
                   Aprendizado Completo e Estruturado:
                 </p>
 
-                <ul className="space-y-1.5 text-xs text-slate-600">
-                  <li className="flex items-start gap-2">• <span>Cadastro e acesso personalizado</span></li>
-                  <li className="flex items-start gap-2">• <span>Sala de aula virtual</span></li>
-                  <li className="flex items-start gap-2">• <span>Videoaulas e materiais didáticos</span></li>
-                  <li className="flex items-start gap-2">• <span>Mapas mentais e recursos de estudo</span></li>
-                  <li className="flex items-start gap-2">• <span>Acompanhamento do percurso</span></li>
-                  <li className="flex items-start gap-2">• <span>Emissão de certificados</span></li>
-                  <li className="flex items-start gap-2">• <span>Validação pública de certificados</span></li>
+                <ul className="space-y-2.5 text-base sm:text-lg text-slate-700 leading-relaxed">
+                  <li className="flex items-start gap-2.5">• <span>Cadastro e acesso personalizado</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Sala de aula virtual</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Videoaulas e materiais didáticos</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Mapas mentais e recursos de estudo</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Acompanhamento do percurso</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Emissão de certificados</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Validação pública de certificados</span></li>
                 </ul>
 
-                <div className="pt-3 border-t border-slate-100">
-                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                <div className="pt-4 border-t border-slate-100 space-y-2">
+                  <h4 className="text-sm sm:text-base font-bold uppercase tracking-wider text-slate-900">
                     Catálogo de Formação:
                   </h4>
-                  <ul className="space-y-1 text-xs text-slate-600 pl-1">
+                  <ul className="space-y-2 text-base sm:text-lg text-slate-700 pl-2 leading-relaxed">
                     <li>— Cursos livres</li>
                     <li>— Capacitação prática</li>
                     <li>— Horas complementares (validação acadêmica)</li>
@@ -157,56 +157,56 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
             </div>
 
             {/* ✍️ Quadro 2: Para o Autor */}
-            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all p-6 flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center text-xl font-bold">
+            <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition-all p-7 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center text-2xl font-bold shrink-0">
                       ✍️
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-purple-600 uppercase tracking-wider block">Área de Autoria</span>
-                      <h3 className="text-base font-extrabold text-[#182333] leading-tight">
+                      <span className="text-xs sm:text-sm font-bold text-purple-600 uppercase tracking-wider block">Área de Autoria</span>
+                      <h3 className="text-xl sm:text-2xl font-black text-[#182333] leading-tight">
                         Para o Autor
                       </h3>
                     </div>
                   </div>
-                  <span className="text-[11px] font-bold bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full border border-purple-200">
-                    Sua Voz
+                  <span className="text-xs sm:text-sm font-bold bg-purple-50 text-purple-700 px-3 py-1 rounded-full border border-purple-200">
+                    Sua Voz em Evidência
                   </span>
                 </div>
 
-                <p className="text-xs font-semibold text-slate-700">
+                <p className="text-base sm:text-lg font-bold text-[#182333]">
                   Transforme o que aprendeu em conhecimento compartilhado:
                 </p>
 
-                <ul className="space-y-2.5 text-xs text-slate-600 pt-1">
-                  <li className="flex items-start gap-2 p-2 rounded-xl bg-slate-50 border border-slate-100">
-                    <span className="text-base">📝</span>
+                <ul className="space-y-3 text-base sm:text-lg text-slate-700 pt-1 leading-relaxed">
+                  <li className="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50/80 border border-slate-200/80">
+                    <span className="text-xl shrink-0">📝</span>
                     <div>
-                      <strong className="text-slate-900 block font-semibold">Artigo de Blog</strong>
-                      <span>visibilidade e portfólio</span>
+                      <strong className="text-slate-900 block font-bold">Artigo de Blog</strong>
+                      <span className="text-slate-700">visibilidade e portfólio</span>
                     </div>
                   </li>
-                  <li className="flex items-start gap-2 p-2 rounded-xl bg-slate-50 border border-slate-100">
-                    <span className="text-base">🔬</span>
+                  <li className="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50/80 border border-slate-200/80">
+                    <span className="text-xl shrink-0">🔬</span>
                     <div>
-                      <strong className="text-slate-900 block font-semibold">Artigo Científico / Pré-print</strong>
-                      <span>reconhecimento com registro DOI</span>
+                      <strong className="text-slate-900 block font-bold">Artigo Científico / Pré-print</strong>
+                      <span className="text-slate-700">reconhecimento com registro DOI</span>
                     </div>
                   </li>
-                  <li className="flex items-start gap-2 p-2 rounded-xl bg-slate-50 border border-slate-100">
-                    <span className="text-base">📖</span>
+                  <li className="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50/80 border border-slate-200/80">
+                    <span className="text-xl shrink-0">📖</span>
                     <div>
-                      <strong className="text-slate-900 block font-semibold">Livro ou Obra Completa</strong>
-                      <span>proteção na Biblioteca Nacional</span>
+                      <strong className="text-slate-900 block font-bold">Livro ou Obra Completa</strong>
+                      <span className="text-slate-700">proteção na Biblioteca Nacional</span>
                     </div>
                   </li>
-                  <li className="flex items-start gap-2 p-2 rounded-xl bg-slate-50 border border-slate-100">
-                    <span className="text-base">💰</span>
+                  <li className="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50/80 border border-slate-200/80">
+                    <span className="text-xl shrink-0">💰</span>
                     <div>
-                      <strong className="text-slate-900 block font-semibold">Publicação Monetizada</strong>
-                      <span>dentro do próprio ecossistema</span>
+                      <strong className="text-slate-900 block font-bold">Publicação Monetizada</strong>
+                      <span className="text-slate-700">dentro do próprio ecossistema</span>
                     </div>
                   </li>
                 </ul>
@@ -214,58 +214,58 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
             </div>
 
             {/* 🛠️ Quadro 3: Para o Profissional */}
-            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all p-6 flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl font-bold">
+            <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition-all p-7 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold shrink-0">
                       🛠️
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider block">Presença Digital</span>
-                      <h3 className="text-base font-extrabold text-[#182333] leading-tight">
+                      <span className="text-xs sm:text-sm font-bold text-emerald-600 uppercase tracking-wider block">Presença Digital</span>
+                      <h3 className="text-xl sm:text-2xl font-black text-[#182333] leading-tight">
                         Para o Profissional
                       </h3>
                     </div>
                   </div>
-                  <span className="text-[11px] font-bold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-200">
-                    Destaque
+                  <span className="text-xs sm:text-sm font-bold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200">
+                    Ferramentas de Destaque
                   </span>
                 </div>
 
-                <p className="text-xs font-semibold text-slate-700">
+                <p className="text-base sm:text-lg font-bold text-[#182333]">
                   Construa e fortaleça sua presença com produtos prontos:
                 </p>
 
-                <ul className="space-y-2 text-xs text-slate-600 pt-1">
-                  <li className="flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50">
-                    <span className="text-sm">📄</span>
+                <ul className="space-y-3 text-base sm:text-lg text-slate-700 pt-1 leading-relaxed">
+                  <li className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors">
+                    <span className="text-xl shrink-0">📄</span>
                     <div>
-                      <strong className="text-slate-900 font-semibold">Landing Pages:</strong> domínio e hospedagem inclusos
+                      <strong className="text-slate-900 font-bold">Landing Pages:</strong> domínio e hospedagem inclusos
                     </div>
                   </li>
-                  <li className="flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50">
-                    <span className="text-sm">🔗</span>
+                  <li className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors">
+                    <span className="text-xl shrink-0">🔗</span>
                     <div>
-                      <strong className="text-slate-900 font-semibold">Biolinks:</strong> organização profissional de links
+                      <strong className="text-slate-900 font-bold">Biolinks:</strong> organização profissional de links
                     </div>
                   </li>
-                  <li className="flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50">
-                    <span className="text-sm">📱</span>
+                  <li className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors">
+                    <span className="text-xl shrink-0">📱</span>
                     <div>
-                      <strong className="text-slate-900 font-semibold">Aplicativos:</strong> soluções digitais
+                      <strong className="text-slate-900 font-bold">Aplicativos:</strong> soluções digitais
                     </div>
                   </li>
-                  <li className="flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50">
-                    <span className="text-sm">📊</span>
+                  <li className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors">
+                    <span className="text-xl shrink-0">📊</span>
                     <div>
-                      <strong className="text-slate-900 font-semibold">Dashboards:</strong> acompanhamento de dados
+                      <strong className="text-slate-900 font-bold">Dashboards:</strong> acompanhamento de dados
                     </div>
                   </li>
-                  <li className="flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50">
-                    <span className="text-sm">📚</span>
+                  <li className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors">
+                    <span className="text-xl shrink-0">📚</span>
                     <div>
-                      <strong className="text-slate-900 font-semibold">Livros Físicos:</strong> publicação impressa
+                      <strong className="text-slate-900 font-bold">Livros Físicos:</strong> publicação impressa
                     </div>
                   </li>
                 </ul>
@@ -273,103 +273,103 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
             </div>
 
             {/* 🏢 Quadro 4: Para Empresas e Instituições */}
-            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all p-6 flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center text-xl font-bold">
+            <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition-all p-7 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center text-2xl font-bold shrink-0">
                       🏢
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-amber-600 uppercase tracking-wider block">B2B & Corporativo</span>
-                      <h3 className="text-base font-extrabold text-[#182333] leading-tight">
+                      <span className="text-xs sm:text-sm font-bold text-amber-600 uppercase tracking-wider block">B2B & Corporativo</span>
+                      <h3 className="text-xl sm:text-2xl font-black text-[#182333] leading-tight">
                         Para Empresas e Instituições
                       </h3>
                     </div>
                   </div>
-                  <span className="text-[11px] font-bold bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full border border-amber-200">
+                  <span className="text-xs sm:text-sm font-bold bg-amber-50 text-amber-700 px-3 py-1 rounded-full border border-amber-200">
                     Soluções B2B
                   </span>
                 </div>
 
-                <p className="text-xs font-semibold text-slate-700">
+                <p className="text-base sm:text-lg font-bold text-[#182333]">
                   Capacitação Estratégica Organizacional:
                 </p>
 
-                <ul className="space-y-2 text-xs text-slate-600 pt-1">
-                  <li className="flex items-start gap-2">• <span>Treinamento corporativo personalizado</span></li>
-                  <li className="flex items-start gap-2">• <span>Capacitação de equipes</span></li>
-                  <li className="flex items-start gap-2">• <span>Desenvolvimento de lideranças</span></li>
-                  <li className="flex items-start gap-2">• <span>Validação de certificados emitidos</span></li>
+                <ul className="space-y-3 text-base sm:text-lg text-slate-700 pt-1 leading-relaxed">
+                  <li className="flex items-start gap-2.5">• <span>Treinamento corporativo personalizado</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Capacitação de equipes</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Desenvolvimento de lideranças</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Validação de certificados emitidos</span></li>
                 </ul>
               </div>
             </div>
 
             {/* 📚 Quadro 5: Conteúdo Disponível para Todos */}
-            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all p-6 flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center text-xl font-bold">
+            <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition-all p-7 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-700 flex items-center justify-center text-2xl font-bold shrink-0">
                       📚
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-rose-600 uppercase tracking-wider block">Acesso Aberto</span>
-                      <h3 className="text-base font-extrabold text-[#182333] leading-tight">
+                      <span className="text-xs sm:text-sm font-bold text-rose-600 uppercase tracking-wider block">Acesso Aberto</span>
+                      <h3 className="text-xl sm:text-2xl font-black text-[#182333] leading-tight">
                         Conteúdo Disponível
                       </h3>
                     </div>
                   </div>
-                  <span className="text-[11px] font-bold bg-rose-50 text-rose-700 px-2 py-0.5 rounded-full border border-rose-200">
+                  <span className="text-xs sm:text-sm font-bold bg-rose-50 text-rose-700 px-3 py-1 rounded-full border border-rose-200">
                     Para Todos
                   </span>
                 </div>
 
-                <p className="text-xs font-semibold text-slate-700">
+                <p className="text-base sm:text-lg font-bold text-[#182333]">
                   Acervo, Artigos e Conhecimento Compartilhado:
                 </p>
 
-                <ul className="space-y-2 text-xs text-slate-600 pt-1">
-                  <li className="flex items-start gap-2">• <span>Blog com publicações autorais</span></li>
-                  <li className="flex items-start gap-2">• <span>Biblioteca de referência</span></li>
-                  <li className="flex items-start gap-2">• <span>Acervo de livros</span></li>
-                  <li className="flex items-start gap-2">• <span>Materiais complementares</span></li>
-                  <li className="flex items-start gap-2">• <span>Newsletter com novidades</span></li>
+                <ul className="space-y-3 text-base sm:text-lg text-slate-700 pt-1 leading-relaxed">
+                  <li className="flex items-start gap-2.5">• <span>Blog com publicações autorais</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Biblioteca de referência</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Acervo de livros</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Materiais complementares</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Newsletter com novidades</span></li>
                 </ul>
               </div>
             </div>
 
             {/* ⚙️ Quadro 6: Gestão e Estrutura */}
-            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all p-6 flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-xl font-bold">
+            <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition-all p-7 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center text-2xl font-bold shrink-0">
                       ⚙️
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider block">Institucional</span>
-                      <h3 className="text-base font-extrabold text-[#182333] leading-tight">
+                      <span className="text-xs sm:text-sm font-bold text-slate-600 uppercase tracking-wider block">Institucional</span>
+                      <h3 className="text-xl sm:text-2xl font-black text-[#182333] leading-tight">
                         Gestão e Estrutura
                       </h3>
                     </div>
                   </div>
-                  <span className="text-[11px] font-bold bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full border border-slate-200">
+                  <span className="text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">
                     Transparência
                   </span>
                 </div>
 
-                <p className="text-xs font-semibold text-slate-700">
+                <p className="text-base sm:text-lg font-bold text-[#182333]">
                   A equipe da ESDHUBEM cuida de tudo com transparência:
                 </p>
 
-                <ul className="space-y-1.5 text-xs text-slate-600 pt-1">
-                  <li className="flex items-start gap-2">• <span>Administração de alunos e acessos</span></li>
-                  <li className="flex items-start gap-2">• <span>Organização de cursos e conteúdos</span></li>
-                  <li className="flex items-start gap-2">• <span>Emissão e registro de certificados</span></li>
-                  <li className="flex items-start gap-2">• <span>Gestão de produtos e publicações</span></li>
-                  <li className="flex items-start gap-2">• <span>Processamento de pagamentos</span></li>
-                  <li className="flex items-start gap-2">• <span>Secretaria e atendimento</span></li>
+                <ul className="space-y-2.5 text-base sm:text-lg text-slate-700 pt-1 leading-relaxed">
+                  <li className="flex items-start gap-2.5">• <span>Administração de alunos e acessos</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Organização de cursos e conteúdos</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Emissão e registro de certificados</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Gestão de produtos e publicações</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Processamento de pagamentos</span></li>
+                  <li className="flex items-start gap-2.5">• <span>Secretaria e atendimento</span></li>
                 </ul>
               </div>
             </div>
@@ -377,38 +377,38 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
 
           {/* 👥 Quem Faz Parte do Ecossistema (Tabela) */}
           <div className="pt-6 space-y-4">
-            <h3 className="text-xl font-bold text-[#182333] flex items-center gap-2">
+            <h3 className="text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-2">
               <span>👥</span> Quem Faz Parte do Ecossistema
             </h3>
             
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse border-y border-slate-200 text-sm">
+            <div className="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <table className="w-full text-left border-collapse text-base sm:text-lg">
                 <thead>
-                  <tr className="border-b border-slate-300 bg-slate-100/60 text-slate-900 font-bold">
-                    <th className="py-3 px-4 w-1/3">Perfil</th>
-                    <th className="py-3 px-4">O que faz</th>
+                  <tr className="border-b border-slate-200 bg-slate-50 text-slate-900 font-bold">
+                    <th className="py-4 px-6 w-1/3">Perfil</th>
+                    <th className="py-4 px-6">O que faz</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-200 text-slate-700">
+                <tbody className="divide-y divide-slate-100 text-slate-700">
                   <tr className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-3 px-4 font-semibold text-[#182333]">🎓 Aluno</td>
-                    <td className="py-3 px-4">Faz cursos, estuda e recebe certificados</td>
+                    <td className="py-4 px-6 font-bold text-[#182333]">🎓 Aluno</td>
+                    <td className="py-4 px-6">Faz cursos, estuda e recebe certificados</td>
                   </tr>
                   <tr className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-3 px-4 font-semibold text-[#182333]">✍️ Autor</td>
-                    <td className="py-3 px-4">Escreve, publica e compartilha conhecimento</td>
+                    <td className="py-4 px-6 font-bold text-[#182333]">✍️ Autor</td>
+                    <td className="py-4 px-6">Escreve, publica e compartilha conhecimento</td>
                   </tr>
                   <tr className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-3 px-4 font-semibold text-[#182333]">💼 Profissional</td>
-                    <td className="py-3 px-4">Adquire ferramentas para fortalecer sua atuação</td>
+                    <td className="py-4 px-6 font-bold text-[#182333]">💼 Profissional</td>
+                    <td className="py-4 px-6">Adquire ferramentas para fortalecer sua atuação</td>
                   </tr>
                   <tr className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-3 px-4 font-semibold text-[#182333]">🏢 Empresa</td>
-                    <td className="py-3 px-4">Contrata capacitação e valida certificados</td>
+                    <td className="py-4 px-6 font-bold text-[#182333]">🏢 Empresa</td>
+                    <td className="py-4 px-6">Contrata capacitação e valida certificados</td>
                   </tr>
                   <tr className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-3 px-4 font-semibold text-[#182333]">🔐 Administrador</td>
-                    <td className="py-3 px-4">Gerencia, mantém e evolui todo o espaço</td>
+                    <td className="py-4 px-6 font-bold text-[#182333]">🔐 Administrador</td>
+                    <td className="py-4 px-6">Gerencia, mantém e evolui todo o espaço</td>
                   </tr>
                 </tbody>
               </table>
@@ -416,11 +416,11 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
           </div>
 
           {/* 💡 Frase Institucional Final */}
-          <div className="pt-4 border-t border-slate-200 space-y-1.5">
-            <p className="text-base sm:text-lg font-black text-[#182333]">
+          <div className="pt-6 border-t border-slate-200 space-y-2">
+            <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#182333]">
               💡 ESDHUBEM — Aprenda. Escreva. Publique. Construa sua autoridade.
             </p>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+            <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
               Um ecossistema onde o conhecimento circula, a autoria é protegida e cada passo é reconhecido.
             </p>
           </div>
