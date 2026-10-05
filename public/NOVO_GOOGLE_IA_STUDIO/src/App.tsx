@@ -5,6 +5,8 @@ import { CategoryGrid } from './components/CategoryGrid';
 import { MethodologySection } from './components/MethodologySection';
 import { CorporateBanner } from './components/CorporateBanner';
 import { BookstoreBanner } from './components/BookstoreBanner';
+import { PublicationBanner } from './components/PublicationBanner';
+import { DigitalPresenceBanner } from './components/DigitalPresenceBanner';
 import { LivrariaPage } from './components/LivrariaPage';
 import { CourseCatalog } from './components/CourseCatalog';
 import { CertificateValidatorModal } from './components/CertificateValidatorModal';
@@ -523,11 +525,13 @@ export default function App() {
             onNavigate={handleNavigate}
           />
 
-          <section className="py-8 bg-[#F8FAFC]">
+          <section className="py-10 bg-[#F8FAFC]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <CorporateBanner onNavigate={() => handleNavigate('categoria:treinamentos-palestras-corporativas')} />
                 <BookstoreBanner onNavigate={() => handleNavigate('livraria')} />
+                <PublicationBanner onNavigate={() => handleNavigate('diretrizes-publicacao-parcerias')} />
+                <DigitalPresenceBanner onNavigate={() => handleNavigate('categoria:landing-pages-biolinks')} />
               </div>
             </div>
           </section>
