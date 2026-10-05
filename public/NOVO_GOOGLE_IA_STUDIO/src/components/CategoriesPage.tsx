@@ -612,7 +612,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
               Categorias e Modalidades dos Cursos <br className="hidden sm:inline" />
-              <span className="text-[#FFC72C]">Desenvolvimento & Bem-Estar</span>
+              <span className="text-[#FFC72C]">& Produtos Digitais.</span>
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
