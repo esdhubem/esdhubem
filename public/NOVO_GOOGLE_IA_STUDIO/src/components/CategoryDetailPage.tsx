@@ -825,17 +825,17 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
           <div className="bg-linear-to-r from-[#182333] via-[#243042] to-[#182333] border border-emerald-500/40 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
             <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
               <div className="flex-1 space-y-4 text-left">
-                <div className="flex items-center gap-3.5">
+                <div className="flex items-start sm:items-center gap-3.5">
                   <div className="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center font-bold shadow-lg shrink-0">
                     <LayoutTemplate className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-lg sm:text-xl font-extrabold text-white">
-                      Domínio & Hospedagem Grátis
-                    </h4>
-                    <p className="text-xs sm:text-sm text-emerald-400 font-semibold">
-                      Por 1 Ano Completo
+                    <p className="text-xs sm:text-sm text-slate-300 font-medium">
+                      Na compra das nossas Landing Pages & Biolinks você ganha:
                     </p>
+                    <h4 className="text-lg sm:text-xl font-black text-emerald-400 tracking-tight">
+                      Domínio & Hospedagem Grátis por 1 ano!
+                    </h4>
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
