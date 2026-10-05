@@ -29,7 +29,8 @@ import {
   HeartPulse,
   PenTool,
   ArrowRight,
-  ClipboardList
+  ClipboardList,
+  CheckCircle2
 } from 'lucide-react';
 import { Course } from '../types';
 
@@ -94,167 +95,257 @@ const renderIcon = (iconName: string, className: string = 'w-6 h-6') => {
   }
 };
 
-// 1. All Areas of Knowledge (Áreas de Conhecimento)
-const KNOWLEDGE_AREAS = [
+export interface CategoryCardData {
+  id: string;
+  title: string;
+  badge: string;
+  iconName: string;
+  accentColor: string;
+  summary: string;
+  skills: string[];
+}
+
+export interface MacroAreaData {
+  id: string;
+  number: string;
+  emoji: string;
+  title: string;
+  description: string;
+  accentColor: string;
+  bannerGradient: string;
+  borderAccent: string;
+  categories: CategoryCardData[];
+}
+
+// 4 Macro Areas Structure
+const MACRO_AREAS: MacroAreaData[] = [
   {
-    id: 'desenvolvimento-pessoal',
+    id: 'pessoal',
+    number: '1',
+    emoji: '🧠',
     title: 'Desenvolvimento Pessoal',
-    badge: '24 Cursos',
-    iconName: 'Sparkles',
+    description: 'Conteúdos relacionados à pessoa, consciência, comportamento, relações e desenvolvimento da vida pessoal.',
     accentColor: 'from-amber-500 to-orange-600',
-    summary: 'Autoconhecimento, inteligência emocional, foco, hábitos saudáveis e transformação individual.',
-    skills: ['Inteligência Emocional', 'Autodisciplina', 'Comunicação Empática'],
-    group: 'humano'
+    bannerGradient: 'from-amber-500/15 via-orange-500/5 to-transparent',
+    borderAccent: 'border-amber-400/40',
+    categories: [
+      {
+        id: 'desenvolvimento-pessoal',
+        title: 'Desenvolvimento Pessoal',
+        badge: '24 Cursos',
+        iconName: 'Sparkles',
+        accentColor: 'from-amber-500 to-orange-600',
+        summary: 'Autoconhecimento, inteligência emocional, foco, hábitos saudáveis e transformação individual.',
+        skills: ['Autoconhecimento', 'Inteligência Emocional', 'Autodisciplina']
+      },
+      {
+        id: 'desenvolvimento-humano',
+        title: 'Desenvolvimento Humano',
+        badge: '18 Cursos',
+        iconName: 'HeartHandshake',
+        accentColor: 'from-emerald-600 to-teal-700',
+        summary: 'Estudos aprofundados sobre ciclos da vida, relações humanas, maturidade e potencial realizador.',
+        skills: ['Psicologia Relacional', 'Comportamento Humano', 'Antropologia Prática']
+      },
+      {
+        id: 'desenvolvimento-da-consciencia',
+        title: 'Desenvolvimento da Consciência',
+        badge: '14 Cursos',
+        iconName: 'Brain',
+        accentColor: 'from-indigo-500 to-purple-700',
+        summary: 'Práticas meditativas, presença plena, espiritualidade laica, filosofia aplicada e autorreflexão.',
+        skills: ['Mindfulness', 'Filosofia Prática', 'Auto-observação']
+      },
+      {
+        id: 'desenvolvimento-etico',
+        title: 'Desenvolvimento Ético',
+        badge: '12 Cursos',
+        iconName: 'Scale',
+        accentColor: 'from-purple-600 to-violet-800',
+        summary: 'Fundamentos de ética aplicada, responsabilidade civil, conduta profissional e integridade.',
+        skills: ['Ética Aplicada', 'Compliance Moral', 'Tomada de Decisão']
+      },
+      {
+        id: 'desenvolvimento-relacional',
+        title: 'Desenvolvimento Relacional',
+        badge: '16 Cursos',
+        iconName: 'Users',
+        accentColor: 'from-rose-500 to-pink-600',
+        summary: 'Dinâmicas familiares, vínculos afetivos, convivência pacífica e comunicação interpessoal não violenta.',
+        skills: ['CNV Aplicada', 'Mediação Familiar', 'Escuta Ativa']
+      },
+      {
+        id: 'desenvolvimento-financeiro',
+        title: 'Desenvolvimento Financeiro',
+        badge: '15 Cursos',
+        iconName: 'CircleDollarSign',
+        accentColor: 'from-amber-600 to-yellow-600',
+        summary: 'Planejamento patrimonial, mentalidade de prosperidade, controle orçamentário e finanças comportamentais.',
+        skills: ['Finanças Comportamentais', 'Orçamento Inteligente', 'Planejamento Pessoal']
+      },
+      {
+        id: 'desenvolvimento-ambiental',
+        title: 'Desenvolvimento Ambiental',
+        badge: '10 Cursos',
+        iconName: 'Leaf',
+        accentColor: 'from-green-600 to-emerald-700',
+        summary: 'Sustentabilidade prática, consumo consciente, ecologia pessoal e conexão responsável com o planeta.',
+        skills: ['Sustentabilidade Cotidiana', 'Eco-eficiência', 'Consumo Consciente']
+      }
+    ]
   },
   {
-    id: 'desenvolvimento-humano',
-    title: 'Desenvolvimento Humano',
-    badge: '18 Cursos',
-    iconName: 'HeartHandshake',
-    accentColor: 'from-emerald-600 to-teal-700',
-    summary: 'Estudos aprofundados sobre ciclos da vida, relações humanas, maturidade e potencial realizador.',
-    skills: ['Psicologia Relacional', 'Comportamento Humano', 'Antropologia Prática'],
-    group: 'humano'
-  },
-  {
-    id: 'desenvolvimento-profissional',
+    id: 'profissional',
+    number: '2',
+    emoji: '💼',
     title: 'Desenvolvimento Profissional',
-    badge: '32 Cursos',
-    iconName: 'Briefcase',
+    description: 'Auxilia o indivíduo a se preparar, atuar, evoluir ou se reposicionar profissionalmente.',
     accentColor: 'from-blue-600 to-indigo-700',
-    summary: 'Habilidades de liderança, comunicação corporativa, gestão estratégica e ascensão na carreira.',
-    skills: ['Liderança 360°', 'Comunicação Assertiva', 'Gestão de Projetos'],
-    group: 'carreira'
+    bannerGradient: 'from-blue-500/15 via-indigo-500/5 to-transparent',
+    borderAccent: 'border-blue-400/40',
+    categories: [
+      {
+        id: 'desenvolvimento-profissional',
+        title: 'Desenvolvimento Profissional',
+        badge: '32 Cursos',
+        iconName: 'Briefcase',
+        accentColor: 'from-blue-600 to-indigo-700',
+        summary: 'Habilidades de liderança, comunicação corporativa, gestão estratégica e ascensão na carreira.',
+        skills: ['Liderança 360°', 'Comunicação Assertiva', 'Gestão de Projetos']
+      },
+      {
+        id: 'desenvolvimento-tecnologico-ia',
+        title: 'Desenvolvimento Tecnológico e IA',
+        badge: '17 Cursos',
+        iconName: 'Cpu',
+        accentColor: 'from-violet-600 to-indigo-600',
+        summary: 'Inteligência Artificial ética, produtividade com ferramentas digitais, automação e futuro do trabalho.',
+        skills: ['Engenharia de Prompts', 'Automação sem Código', 'IA para Negócios']
+      },
+      {
+        id: 'workshop-orientacao-carreira',
+        title: 'Orientação de Carreira & Futuro',
+        badge: '6 Cursos',
+        iconName: 'Compass',
+        accentColor: 'from-amber-600 to-orange-700',
+        summary: 'Workshops intensivos para diagnóstico de carreira, transição profissional e preparação para as tendências de mercado.',
+        skills: ['Diagnóstico de Perfil', 'Transição de Carreira', 'Portfólio & Posicionamento']
+      },
+      {
+        id: 'pedagogia-integrativa',
+        title: 'Pedagogia Integrativa',
+        badge: '13 Cursos',
+        iconName: 'BookOpenCheck',
+        accentColor: 'from-orange-600 to-amber-700',
+        summary: 'Didáticas contemporâneas, educação emocional para professores, mediação de aprendizagem e inclusão.',
+        skills: ['Didática Ativa', 'Educação Emocional', 'Mediação de Aprendizagem']
+      },
+      {
+        id: 'formacao-livre',
+        title: 'Formação Livre',
+        badge: '19 Cursos',
+        iconName: 'GraduationCap',
+        accentColor: 'from-cyan-600 to-blue-700',
+        summary: 'Jornadas completas de aprendizado contínuo para quem quer dominar uma área do início ao fim com teoria e prática.',
+        skills: ['Jornadas Completas', 'Teoria & Prática', 'Qualificação Livre']
+      },
+      {
+        id: 'aprofundamento-profissional-especifico',
+        title: 'Aprofundamento em Áreas Específicas',
+        badge: '15 Cursos',
+        iconName: 'Target',
+        accentColor: 'from-indigo-600 to-sky-700',
+        summary: 'Cursos técnicos e temáticos para especialização prática, atualização contínua e excelência no mercado.',
+        skills: ['Especialização Prática', 'Atualização Técnica', 'Excelência Profissional']
+      }
+    ]
   },
   {
-    id: 'desenvolvimento-etico',
-    title: 'Desenvolvimento Ético',
-    badge: '12 Cursos',
-    iconName: 'Scale',
-    accentColor: 'from-purple-600 to-violet-800',
-    summary: 'Fundamentos de ética aplicada, responsabilidade civil, conduta profissional e integridade.',
-    skills: ['Ética Corporativa', 'Compliance Moral', 'Tomada de Decisão'],
-    group: 'humano'
+    id: 'empresarial',
+    number: '3',
+    emoji: '🏢',
+    title: 'Desenvolvimento Empresarial',
+    description: 'Aqui o público principal é empresas, gestores, equipes e organizações.',
+    accentColor: 'from-slate-700 to-slate-900',
+    bannerGradient: 'from-slate-600/15 via-slate-800/5 to-transparent',
+    borderAccent: 'border-slate-400/40',
+    categories: [
+      {
+        id: 'desenvolvimento-nas-empresas',
+        title: 'Desenvolvimento nas Empresas',
+        badge: '16 Cursos',
+        iconName: 'Building2',
+        accentColor: 'from-slate-700 to-slate-900',
+        summary: 'Capacitação corporativa, cultura organizacional, liderança humanizada e eficiência de equipes.',
+        skills: ['Gestão de Equipes', 'Liderança Empresarial', 'Cultura Organizacional']
+      },
+      {
+        id: 'treinamentos-palestras-corporativas',
+        title: 'Treinamentos e Palestras Corporativas',
+        badge: '12 Programas',
+        iconName: 'Users',
+        accentColor: 'from-purple-600 to-violet-700',
+        summary: 'Programas in-company sob medida, palestras motivacionais e técnicas para produtividade e alta performance.',
+        skills: ['Treinamento In-Company', 'Palestras Corporativas', 'Produtividade Organizacional']
+      },
+      {
+        id: 'formacao-empresarial',
+        title: 'Formação Empresarial',
+        badge: '14 Cursos',
+        iconName: 'Award',
+        accentColor: 'from-yellow-600 to-amber-800',
+        summary: 'Gestão de negócios, liderança executiva, empreendedorismo, produtividade organizacional e desenvolvimento comercial.',
+        skills: ['Empreendedorismo', 'Gestão & Liderança', 'Desenvolvimento de Negócios']
+      }
+    ]
   },
   {
-    id: 'desenvolvimento-relacional',
-    title: 'Desenvolvimento Relacional',
-    badge: '16 Cursos',
-    iconName: 'Users',
-    accentColor: 'from-rose-500 to-pink-600',
-    summary: 'Dinâmicas familiares, vínculos afetivos, convivência pacífica e comunicação interpessoal não violenta.',
-    skills: ['CNV Aplicada', 'Mediação Familiar', 'Escuta Ativa'],
-    group: 'humano'
-  },
-  {
-    id: 'desenvolvimento-financeiro',
-    title: 'Desenvolvimento Financeiro',
-    badge: '15 Cursos',
-    iconName: 'CircleDollarSign',
-    accentColor: 'from-amber-600 to-yellow-600',
-    summary: 'Planejamento patrimonial, mentalidade de prosperidade, controle orçamentário e finanças comportamentais.',
-    skills: ['Finanças Comportamentais', 'Orçamento Inteligente', 'Planejamento Pessoal'],
-    group: 'carreira'
-  },
-  {
-    id: 'desenvolvimento-tecnologico-ia',
-    title: 'Desenvolvimento Tecnológico e IA',
-    badge: '17 Cursos',
-    iconName: 'Cpu',
-    accentColor: 'from-violet-600 to-indigo-600',
-    summary: 'Inteligência Artificial ética, produtividade com ferramentas digitais, automação e futuro do trabalho.',
-    skills: ['Engenharia de Prompts', 'Automação sem Código', 'IA para Negócios'],
-    group: 'carreira'
-  },
-  {
-    id: 'desenvolvimento-da-consciencia',
-    title: 'Desenvolvimento da Consciência',
-    badge: '14 Cursos',
-    iconName: 'Brain',
-    accentColor: 'from-indigo-500 to-purple-700',
-    summary: 'Práticas meditativas, presença plena, espiritualidade laica, filosofia aplicada e autorreflexão.',
-    skills: ['Mindfulness', 'Filosofia Prática', 'Auto-observação'],
-    group: 'humano'
-  },
-  {
-    id: 'desenvolvimento-ambiental',
-    title: 'Desenvolvimento Ambiental',
-    badge: '10 Cursos',
-    iconName: 'Leaf',
-    accentColor: 'from-green-600 to-emerald-700',
-    summary: 'Sustentabilidade prática, consumo consciente, ecologia pessoal e conexão responsável com o planeta.',
-    skills: ['Sustentabilidade Cotidiana', 'Eco-eficiência', 'Consumo Consciente'],
-    group: 'humano'
-  },
-  {
-    id: 'praticas-integrativas',
-    title: 'Práticas Integrativas',
-    badge: '21 Cursos',
-    iconName: 'SunMedium',
-    accentColor: 'from-teal-500 to-emerald-600',
-    summary: 'Terapias complementares, abordagens holísticas da saúde, equilíbrio bioenergético e bem-estar.',
-    skills: ['PICS / SUS', 'Abordagem Holística', 'Equilíbrio Energético'],
-    group: 'praticas'
-  },
-  {
-    id: 'coach-integrativo',
-    title: 'Coach Integrativo',
-    badge: '11 Cursos',
-    iconName: 'Target',
-    accentColor: 'from-emerald-700 to-teal-800',
-    summary: 'Metodologias de desenvolvimento integral, estabelecimento de metas, superação de bloqueios e alinhamento de vida.',
-    skills: ['Metas Humanizadas', 'Perguntas Poderosas', 'Plano de Ação'],
-    group: 'praticas'
-  },
-  {
-    id: 'pedagogia-integrativa',
-    title: 'Pedagogia Integrativa',
-    badge: '13 Cursos',
-    iconName: 'BookOpenCheck',
-    accentColor: 'from-orange-600 to-amber-700',
-    summary: 'Didáticas contemporâneas, educação emocional para professores, mediação de aprendizagem e inclusão.',
-    skills: ['Didática Ativa', 'Educação Emocional', 'Mediação de Aprendizagem'],
-    group: 'praticas'
-  },
-  {
-    id: 'aprofundamento-profissional-saude',
-    title: 'Aprofundamento na Área da Saúde',
-    badge: '8 Cursos',
-    iconName: 'HeartPulse',
-    accentColor: 'from-blue-600 to-teal-700',
-    summary: 'Cursos exclusivos para graduados em Biomedicina, Enfermagem, Nutrição, Psicologia, Fisioterapia e áreas afins.',
-    skills: ['Atualização Técnica', 'Boas Práticas Clínicas', 'Evidências Científicas'],
-    group: 'praticas'
-  },
-  {
-    id: 'workshop-orientacao-carreira',
-    title: 'Orientação de Carreira & Futuro',
-    badge: '6 Cursos',
-    iconName: 'Compass',
-    accentColor: 'from-amber-600 to-orange-700',
-    summary: 'Workshops intensivos para diagnóstico de carreira, transição profissional e preparação para as tendências de mercado.',
-    skills: ['Diagnóstico de Perfil', 'Transição de Carreira', 'Portfólio & Posicionamento'],
-    group: 'carreira'
-  },
-  {
-    id: 'formacao-empresarial',
-    title: 'Formação Empresarial',
-    badge: '14 Cursos',
-    iconName: 'Award',
-    accentColor: 'from-yellow-600 to-amber-800',
-    summary: 'Gestão de pequenos negócios, governança, modelos operacionais, inovação e posicionamento comercial.',
-    skills: ['Gestão de Negócios', 'Estratégia Operacional', 'Inovação Comercial'],
-    group: 'carreira'
-  },
-  {
-    id: 'desenvolvimento-nas-empresas',
-    title: 'Desenvolvimento nas Empresas',
-    badge: '16 Cursos',
-    iconName: 'Building2',
-    accentColor: 'from-slate-600 to-slate-800',
-    summary: 'Capacitação corporativa, cultura organizacional, liderança humanizada e eficiência de equipes.',
-    skills: ['Cultura Organizacional', 'Liderança Humanizada', 'Eficiência de Equipes'],
-    group: 'carreira'
+    id: 'saude',
+    number: '4',
+    emoji: '🩺',
+    title: 'Desenvolvimento em Saúde e Bem-Estar Integrativo',
+    description: 'Saúde, práticas integrativas e bem-estar.',
+    accentColor: 'from-teal-600 to-emerald-700',
+    bannerGradient: 'from-teal-500/15 via-emerald-500/5 to-transparent',
+    borderAccent: 'border-teal-400/40',
+    categories: [
+      {
+        id: 'praticas-integrativas',
+        title: 'Práticas Integrativas',
+        badge: '21 Cursos',
+        iconName: 'SunMedium',
+        accentColor: 'from-teal-500 to-emerald-600',
+        summary: 'Terapias complementares, abordagens integrativas de saúde, equilíbrio bioenergético e bem-estar.',
+        skills: ['PICS / SUS', 'Abordagem Holística', 'Equilíbrio Energético']
+      },
+      {
+        id: 'coach-integrativo',
+        title: 'Coach Integrativo',
+        badge: '11 Cursos',
+        iconName: 'Target',
+        accentColor: 'from-emerald-700 to-teal-800',
+        summary: 'Metodologias de desenvolvimento integral, estabelecimento de metas, superação de bloqueios e alinhamento de vida.',
+        skills: ['Metas Humanizadas', 'Perguntas Poderosas', 'Plano de Ação']
+      },
+      {
+        id: 'aprofundamento-profissional-saude',
+        title: 'Aprofundamento na Área da Saúde',
+        badge: '8 Cursos',
+        iconName: 'HeartPulse',
+        accentColor: 'from-blue-600 to-teal-700',
+        summary: 'Cursos exclusivos para graduados em Biomedicina, Enfermagem, Nutrição, Psicologia, Fisioterapia e áreas afins.',
+        skills: ['Atualização Técnica', 'Boas Práticas Clínicas', 'Evidências Científicas']
+      },
+      {
+        id: 'terapias-holisticas',
+        title: 'Terapias Holísticas',
+        badge: '14 Cursos',
+        iconName: 'Sparkles',
+        accentColor: 'from-teal-600 to-cyan-700',
+        summary: 'Autocuidado, terapias complementares, qualidade de vida e desenvolvimento integral aplicado à saúde.',
+        skills: ['Autocuidado', 'Qualidade de Vida', 'Saúde Integral', 'Terapias Holísticas']
+      }
+    ]
   }
 ];
 
@@ -393,49 +484,77 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
   onNavigate
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedGroup, setSelectedGroup] = useState<string>('todos');
+  const [selectedAreaId, setSelectedAreaId] = useState<string>('todas');
 
-  // Filter groups for Knowledge Areas
-  const groups = [
-    { id: 'todos', label: `Todas as Áreas (${KNOWLEDGE_AREAS.length})` },
-    { id: 'humano', label: 'Desenvolvimento Humano & Emocional' },
-    { id: 'carreira', label: 'Profissional, Liderança & Negócios' },
-    { id: 'praticas', label: 'Práticas Integrativas & Saúde' }
+  // Filter pills
+  const areaFilterButtons = [
+    { id: 'todas', label: 'Todas as 4 Áreas' },
+    { id: 'pessoal', label: '🧠 1. Desenvolvimento Pessoal' },
+    { id: 'profissional', label: '💼 2. Desenvolvimento Profissional' },
+    { id: 'empresarial', label: '🏢 3. Desenvolvimento Empresarial' },
+    { id: 'saude', label: '🩺 4. Saúde & Bem-Estar' }
   ];
 
-  // Filtered knowledge areas
-  const filteredKnowledgeAreas = useMemo(() => {
-    return KNOWLEDGE_AREAS.filter((cat) => {
-      const matchesSearch =
-        cat.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        cat.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        cat.summary.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        cat.skills.some((s) => s.toLowerCase().includes(searchTerm.toLowerCase()));
+  // Total count of categories across all macro areas
+  const totalCategoriesCount = useMemo(() => {
+    return MACRO_AREAS.reduce((acc, area) => acc + area.categories.length, 0);
+  }, []);
 
-      const matchesGroup = selectedGroup === 'todos' || cat.group === selectedGroup;
-      return matchesSearch && matchesGroup;
-    });
-  }, [searchTerm, selectedGroup]);
+  // Filtered Macro Areas according to search and selected tab
+  const filteredMacroAreas = useMemo(() => {
+    return MACRO_AREAS.map((area) => {
+      // If tab filter is active and doesn't match this area
+      if (selectedAreaId !== 'todas' && area.id !== selectedAreaId) {
+        return { ...area, categories: [] };
+      }
+
+      if (!searchTerm) {
+        return area;
+      }
+
+      const term = searchTerm.toLowerCase();
+      const areaMatches =
+        area.title.toLowerCase().includes(term) ||
+        area.description.toLowerCase().includes(term);
+
+      const matchingCategories = area.categories.filter((cat) => {
+        return (
+          areaMatches ||
+          cat.title.toLowerCase().includes(term) ||
+          cat.id.toLowerCase().includes(term) ||
+          cat.summary.toLowerCase().includes(term) ||
+          cat.skills.some((s) => s.toLowerCase().includes(term))
+        );
+      });
+
+      return {
+        ...area,
+        categories: matchingCategories
+      };
+    }).filter((area) => area.categories.length > 0);
+  }, [searchTerm, selectedAreaId]);
 
   // Filtered modalities
   const filteredModalities = useMemo(() => {
     if (!searchTerm) return MODALITIES_DATA;
+    const term = searchTerm.toLowerCase();
     return MODALITIES_DATA.filter(
       (m) =>
-        m.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        m.badge.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        m.summary.toLowerCase().includes(searchTerm.toLowerCase())
+        m.title.toLowerCase().includes(term) ||
+        m.badge.toLowerCase().includes(term) ||
+        m.summary.toLowerCase().includes(term)
     );
   }, [searchTerm]);
 
   // Filtered products
   const filteredProducts = useMemo(() => {
     if (!searchTerm) return PRODUCTS_DATA;
+    const term = searchTerm.toLowerCase();
     return PRODUCTS_DATA.filter(
       (p) =>
-        p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        p.badge.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        p.summary.toLowerCase().includes(searchTerm.toLowerCase())
+        p.title.toLowerCase().includes(term) ||
+        p.badge.toLowerCase().includes(term) ||
+        p.summary.toLowerCase().includes(term)
     );
   }, [searchTerm]);
 
@@ -471,7 +590,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </button>
             <span>/</span>
             <span className="text-[#FFC72C] font-semibold">
-              Categorias & Modalidades de Formação
+              Categorias e Modalidades dos Cursos
             </span>
           </div>
 
@@ -497,7 +616,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Conheça nossas áreas de conhecimento temáticas, modalidades de formação e soluções digitais integradas.
+              Explore nossas categorias estruturadas em 4 grandes áreas de desenvolvimento, modalidades de formação continuada e soluções digitais integradas.
             </p>
 
             {/* Live Search Bar */}
@@ -508,7 +627,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
                   type="text"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Pesquisar áreas, modalidades ou temas..."
+                  placeholder="Pesquisar categorias, temas ou modalidades..."
                   className="w-full bg-white text-slate-900 placeholder-slate-400 pl-11 pr-4 py-3.5 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#FFC72C] shadow-lg"
                   id="categories-search-input"
                 />
@@ -527,23 +646,23 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
           {/* Platform Metric Badges */}
           <div className="grid grid-cols-2 gap-3.5 w-full md:w-auto shrink-0">
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
-              <div className="text-3xl font-black text-[#FFC72C]">16</div>
-              <div className="text-xs text-slate-300 font-medium mt-1">Áreas do Saber</div>
+              <div className="text-3xl font-black text-[#FFC72C]">4</div>
+              <div className="text-xs text-slate-300 font-medium mt-1">Grandes Áreas</div>
             </div>
 
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
-              <div className="text-3xl font-black text-white">8</div>
+              <div className="text-3xl font-black text-white">{totalCategoriesCount}</div>
+              <div className="text-xs text-slate-300 font-medium mt-1">Categorias</div>
+            </div>
+
+            <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
+              <div className="text-3xl font-black text-emerald-400">8</div>
               <div className="text-xs text-slate-300 font-medium mt-1">Modalidades</div>
             </div>
 
             <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
-              <div className="text-3xl font-black text-emerald-400">100%</div>
-              <div className="text-xs text-slate-300 font-medium mt-1">Horas Válidas*</div>
-            </div>
-
-            <div className="bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg">
-              <div className="text-3xl font-black text-amber-300">4.9/5</div>
-              <div className="text-xs text-slate-300 font-medium mt-1">Avaliação dos Alunos</div>
+              <div className="text-3xl font-black text-amber-300">100%</div>
+              <div className="text-xs text-slate-300 font-medium mt-1">Cursos Livres Válidos</div>
             </div>
           </div>
         </div>
@@ -553,98 +672,135 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* ========================================================================= */}
-        {/* SESSÃO 1: Percorra as Áreas de Conhecimento da ESDHUBEM                  */}
+        {/* SESSÃO 1: Categorias Organizadas nas 4 Áreas de Desenvolvimento           */}
         {/* ========================================================================= */}
-        <section className="space-y-6">
+        <section className="space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-0.5 rounded-full border border-amber-200 mb-2">
                 <BookOpen className="w-3.5 h-3.5" />
-                <span>Navegue por Áreas de Conhecimento</span>
+                <span>Estrutura por Áreas de Desenvolvimento</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-[#182333] tracking-tight">
-                Percorra as Áreas de Conhecimento da ESDHUBEM
+                Categorias Organizadas por Área
               </h2>
             </div>
             <span className="text-xs font-semibold text-slate-500 shrink-0">
-              Exibindo {filteredKnowledgeAreas.length} de {KNOWLEDGE_AREAS.length} áreas
+              {filteredMacroAreas.reduce((acc, a) => acc + a.categories.length, 0)} categorias exibidas
             </span>
           </div>
 
-          {/* Filter Pills */}
+          {/* Area Filter Buttons */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-            {groups.map((grp) => (
+            {areaFilterButtons.map((btn) => (
               <button
-                key={grp.id}
-                onClick={() => setSelectedGroup(grp.id)}
+                key={btn.id}
+                onClick={() => setSelectedAreaId(btn.id)}
                 className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer border ${
-                  selectedGroup === grp.id
+                  selectedAreaId === btn.id
                     ? 'bg-[#243042] text-[#FFC72C] border-[#243042] shadow-sm'
                     : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                 }`}
               >
-                {grp.label}
+                {btn.label}
               </button>
             ))}
           </div>
 
-          {/* Knowledge Areas Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filteredKnowledgeAreas.map((cat) => (
+          {/* 4 Macro Areas List */}
+          <div className="space-y-12">
+            {filteredMacroAreas.map((area) => (
               <div
-                key={cat.id}
-                onClick={() => {
-                  if (onNavigateToCategoryDetail) {
-                    onNavigateToCategoryDetail(cat.id);
-                  }
-                }}
-                className="bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-                id={`cat-card-${cat.id}`}
+                key={area.id}
+                id={`macro-area-${area.id}`}
+                className="bg-white rounded-3xl border border-slate-200/90 shadow-xs overflow-hidden"
               >
-                <div className="space-y-3">
-                  {/* Top row with Icon and Badge */}
-                  <div className="flex items-center justify-between">
-                    <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center text-white bg-gradient-to-br ${cat.accentColor} shadow-md group-hover:scale-105 transition-transform`}
-                    >
-                      {renderIcon(cat.iconName, 'w-6 h-6')}
+                {/* Area Header Card */}
+                <div className={`p-6 sm:p-8 bg-gradient-to-r ${area.bannerGradient} border-b border-slate-200/80`}>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl sm:text-3xl">{area.emoji}</span>
+                        <h3 className="text-xl sm:text-2xl font-black text-[#182333] tracking-tight">
+                          {area.number}. {area.title}
+                        </h3>
+                      </div>
+                      <p className="text-sm text-slate-600 max-w-3xl leading-relaxed">
+                        {area.description}
+                      </p>
                     </div>
 
-                    <span className="text-[11px] font-bold bg-[#182333]/5 text-[#243042] px-2.5 py-1 rounded-full border border-slate-200">
-                      {cat.badge}
-                    </span>
-                  </div>
-
-                  {/* Category Title */}
-                  <h3 className="font-extrabold text-[#182333] text-base sm:text-lg leading-tight group-hover:text-amber-600 transition-colors">
-                    {cat.title}
-                  </h3>
-
-                  {/* Summary Description */}
-                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
-                    {cat.summary}
-                  </p>
-
-                  {/* Skills Tags */}
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {cat.skills.map((skill, sIdx) => (
-                      <span
-                        key={sIdx}
-                        className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium"
-                      >
-                        {skill}
+                    <div className="shrink-0 flex items-center gap-2">
+                      <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-xs">
+                        <Layers className="w-3.5 h-3.5 text-[#243042]" />
+                        {area.categories.length} {area.categories.length === 1 ? 'Categoria' : 'Categorias'}
                       </span>
-                    ))}
+                    </div>
                   </div>
                 </div>
 
-                {/* Bottom Action Footer */}
-                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="font-bold text-[#243042] group-hover:text-amber-600 flex items-center gap-1">
-                    Ver Detalhes & Cursos
-                  </span>
-                  <div className="w-7 h-7 rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#243042] group-hover:text-[#FFC72C] flex items-center justify-center transition-all shadow-xs">
-                    <ChevronRight className="w-4 h-4" />
+                {/* Categories Grid inside this Area */}
+                <div className="p-6 sm:p-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {area.categories.map((cat) => (
+                      <div
+                        key={cat.id}
+                        onClick={() => {
+                          if (onNavigateToCategoryDetail) {
+                            onNavigateToCategoryDetail(cat.id);
+                          }
+                        }}
+                        className="bg-[#FAFBFD] hover:bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
+                        id={`cat-card-${cat.id}`}
+                      >
+                        <div className="space-y-3">
+                          {/* Top row with Icon and Badge */}
+                          <div className="flex items-center justify-between">
+                            <div
+                              className={`w-12 h-12 rounded-xl flex items-center justify-center text-white bg-gradient-to-br ${cat.accentColor} shadow-md group-hover:scale-105 transition-transform`}
+                            >
+                              {renderIcon(cat.iconName, 'w-6 h-6')}
+                            </div>
+
+                            <span className="text-[11px] font-bold bg-[#182333]/5 text-[#243042] px-2.5 py-1 rounded-full border border-slate-200">
+                              {cat.badge}
+                            </span>
+                          </div>
+
+                          {/* Category Title */}
+                          <h4 className="font-extrabold text-[#182333] text-base leading-tight group-hover:text-amber-600 transition-colors">
+                            {cat.title}
+                          </h4>
+
+                          {/* Summary Description */}
+                          <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
+                            {cat.summary}
+                          </p>
+
+                          {/* Skills Tags */}
+                          <div className="flex flex-wrap gap-1.5 pt-1">
+                            {cat.skills.map((skill, sIdx) => (
+                              <span
+                                key={sIdx}
+                                className="text-[10px] bg-white border border-slate-200/80 text-slate-600 px-2 py-0.5 rounded font-medium"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Bottom Action Footer */}
+                        <div className="pt-4 mt-4 border-t border-slate-200/60 flex items-center justify-between text-xs">
+                          <span className="font-bold text-[#243042] group-hover:text-amber-600 flex items-center gap-1">
+                            Ver Detalhes & Cursos
+                          </span>
+                          <div className="w-7 h-7 rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#243042] group-hover:text-[#FFC72C] flex items-center justify-center transition-all shadow-xs">
+                            <ChevronRight className="w-4 h-4" />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -671,7 +827,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </span>
           </div>
 
-          {/* Modalities Cards in the same exact Category Card visual pattern */}
+          {/* Modalities Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {filteredModalities.map((mod) => (
               <div
@@ -750,7 +906,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </span>
           </div>
 
-          {/* Products Grid in the same exact Category Card visual pattern */}
+          {/* Products Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {filteredProducts.map((prod) => (
               <div
