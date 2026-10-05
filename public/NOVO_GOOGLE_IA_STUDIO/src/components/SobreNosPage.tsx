@@ -427,22 +427,22 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
         </section>
 
         {/* Card 1: Missão & Propósito */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6">
+        <div className="bg-white rounded-3xl p-7 sm:p-10 border border-slate-200/90 shadow-sm space-y-8">
           <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
             <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
               <Sparkles className="w-6 h-6 text-[#FFC72C] fill-[#FFC72C]" />
             </div>
             <div>
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
+              <span className="text-xs sm:text-sm font-bold text-amber-600 uppercase tracking-wider block">
                 Propósito Institucional
               </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+              <h2 className="text-2xl sm:text-3xl font-black text-[#182333]">
                 Nossa Missão & Propósito
               </h2>
             </div>
           </div>
 
-          <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
             <p>
               A <strong className="text-slate-900 font-semibold">ESDHUBEM</strong> nasceu com o compromisso de democratizar o acesso à educação socioemocional, ao autoconhecimento e às práticas integrativas com rigor didático, empatia e ética.
             </p>
@@ -455,33 +455,33 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
           </div>
 
           {/* Destaques em Caixas */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-            <div className="p-5 rounded-2xl bg-amber-50/50 border border-amber-200/80 space-y-1.5">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
-                <Compass className="w-4 h-4 text-amber-600" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+            <div className="p-6 sm:p-7 rounded-2xl bg-amber-50/60 border border-amber-200/80 space-y-3">
+              <span className="text-base sm:text-lg font-bold uppercase tracking-wider text-amber-900 flex items-center gap-2">
+                <Compass className="w-5 h-5 text-amber-600 shrink-0" />
                 Estudo & Autonomia
               </span>
-              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                 Conteúdos completos e estruturados para permitir que cada estudante aprenda no seu ritmo, com liberdade intelectual e método.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-blue-50/50 border border-blue-200/80 space-y-1.5">
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-900 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-blue-600" />
+            <div className="p-6 sm:p-7 rounded-2xl bg-blue-50/60 border border-blue-200/80 space-y-3">
+              <span className="text-base sm:text-lg font-bold uppercase tracking-wider text-blue-900 flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-blue-600 shrink-0" />
                 Evolução Contínua
               </span>
-              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                 Desenvolvimento integrado de inteligência socioemocional, pensamento crítico, liderança e habilidades tecnológicas.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-emerald-50/50 border border-emerald-200/80 space-y-1.5">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-900 flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-6 sm:p-7 rounded-2xl bg-emerald-50/60 border border-emerald-200/80 space-y-3">
+              <span className="text-base sm:text-lg font-bold uppercase tracking-wider text-emerald-900 flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
                 Prática com Impacto
               </span>
-              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                 Ferramentas práticas para aplicação imediata no mercado de trabalho, em consultórios, empresas e na vida pessoal.
               </p>
             </div>
@@ -489,66 +489,66 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
         </div>
 
         {/* Card 2: Pilares do Nosso Modelo Educacional */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6">
+        <div className="bg-white rounded-3xl p-7 sm:p-10 border border-slate-200/90 shadow-sm space-y-8">
           <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
             <div className="w-12 h-12 rounded-2xl bg-[#182333] flex items-center justify-center text-[#FFC72C] shrink-0">
               <GraduationCap className="w-6 h-6" />
             </div>
             <div>
-              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+              <span className="text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wider block">
                 Metodologia & Transparência
               </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+              <h2 className="text-2xl sm:text-3xl font-black text-[#182333]">
                 Diferenciais da Nossa Escola
               </h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-xl bg-cyan-100 text-cyan-800 flex items-center justify-center font-bold text-xs">
+            <div className="p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="w-9 h-9 rounded-xl bg-cyan-100 text-cyan-800 flex items-center justify-center font-bold text-sm shrink-0">
                   01
                 </span>
-                <h3 className="font-bold text-slate-900 text-base">Cursos Freepremium & Cursos Pagos</h3>
+                <h3 className="font-bold text-[#182333] text-lg sm:text-xl">Cursos Freepremium & Cursos Pagos</h3>
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                 Disponibilizamos cursos no modelo Freepremium — onde você assiste a todas as videoaulas e acessa o material didático gratuitamente (com taxa administrativa simbólica cobrada apenas se desejar a emissão e validação formal do certificado oficial em PDF) — além de cursos e formações avançadas pagas.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs">
+            <div className="p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="w-9 h-9 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm shrink-0">
                   02
                 </span>
-                <h3 className="font-bold text-slate-900 text-base">Certificados Válidos em Todo o Brasil</h3>
+                <h3 className="font-bold text-[#182333] text-lg sm:text-xl">Certificados Válidos em Todo o Brasil</h3>
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                 Carga horária legítima com amparo na Lei nº 9.394/96 e Decreto Presidencial nº 5.154/04. Todos os certificados contam com QR Code e código alfanumérico para autenticação pública instantânea.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs">
+            <div className="p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm shrink-0">
                   03
                 </span>
-                <h3 className="font-bold text-slate-900 text-base">Escala de Autoria & Registro</h3>
+                <h3 className="font-bold text-[#182333] text-lg sm:text-xl">Escala de Autoria & Registro</h3>
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                 Reconhecemos o esforço intelectual: alunos que escrevem artigos e manuscritos de conclusão podem ser publicados no Blog da escola ou no nosso repositório de artigos ou na nossa livraria.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-xs">
+            <div className="p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="w-9 h-9 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-sm shrink-0">
                   04
                 </span>
-                <h3 className="font-bold text-slate-900 text-base">Saberes Integrativos & Humanistas</h3>
+                <h3 className="font-bold text-[#182333] text-lg sm:text-xl">Saberes Integrativos & Humanistas</h3>
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                 Valorizamos a sabedoria ancestral e integrativa dentro da perspectiva das Ciências Humanas e Sociais, integrando saúde, autoconhecimento, liderança e ética relacional.
               </p>
             </div>
@@ -556,55 +556,55 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
         </div>
 
         {/* Card 3: Identificação Institucional & Coordenação Pedagógica */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6">
+        <div className="bg-white rounded-3xl p-7 sm:p-10 border border-slate-200/90 shadow-sm space-y-8">
           <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
             <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
               <Building className="w-6 h-6 text-[#FFC72C]" />
             </div>
             <div>
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
+              <span className="text-xs sm:text-sm font-bold text-amber-600 uppercase tracking-wider block">
                 Dados Legais e Acadêmicos
               </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+              <h2 className="text-2xl sm:text-3xl font-black text-[#182333]">
                 Identificação Institucional & Coordenação Pedagógica
               </h2>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-700">
-            <div className="space-y-3 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
-              <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-slate-500 mb-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base sm:text-lg text-slate-700">
+            <div className="space-y-4 p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200/80 leading-relaxed">
+              <h4 className="font-bold text-[#182333] text-base sm:text-lg uppercase tracking-wider mb-2">
                 Dados Corporativos
               </h4>
               <p>
-                <strong className="text-slate-900">Razão Social:</strong> ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar
+                <strong className="text-slate-900 font-bold">Razão Social:</strong> ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar
               </p>
               <p>
-                <strong className="text-slate-900">CNPJ:</strong> 61.928.778/0001-50
+                <strong className="text-slate-900 font-bold">CNPJ:</strong> 61.928.778/0001-50
               </p>
               <p>
-                <strong className="text-slate-900">Sede:</strong> São Paulo - SP - Brasil
+                <strong className="text-slate-900 font-bold">Sede:</strong> São Paulo - SP - Brasil
               </p>
               <p>
-                <strong className="text-slate-900">Amparo Legal:</strong> Cursos Livres amparados pelo Decreto Presidencial nº 5.154/04 e Lei de Diretrizes e Bases da Educação nº 9.394/96.
+                <strong className="text-slate-900 font-bold">Amparo Legal:</strong> Cursos Livres amparados pelo Decreto Presidencial nº 5.154/04 e Lei de Diretrizes e Bases da Educação nº 9.394/96.
               </p>
             </div>
 
-            <div className="space-y-3 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
-              <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-slate-500 mb-2">
+            <div className="space-y-4 p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200/80 leading-relaxed">
+              <h4 className="font-bold text-[#182333] text-base sm:text-lg uppercase tracking-wider mb-2">
                 Coordenação & Autoria Acadêmica
               </h4>
               <p>
-                <strong className="text-slate-900">Coordenação Pedagógica:</strong> Profª. Silviane Silvério (Biomédica, Especialista em Práticas Integrativas & Desenvolvimento Humano)
+                <strong className="text-slate-900 font-bold">Coordenação Pedagógica:</strong> Profª. Silviane Silvério (Biomédica, Especialista em Práticas Integrativas & Desenvolvimento Humano)
               </p>
-              <div className="flex flex-wrap items-center gap-3 pt-1 text-xs">
+              <div className="flex flex-wrap items-center gap-3 pt-2 text-base sm:text-lg">
                 <a
                   href="https://lattes.cnpq.br/7481458793724724"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 font-bold hover:underline"
                 >
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <ExternalLink className="w-4 h-4" />
                   <span>Currículo Lattes iD</span>
                 </a>
                 <span className="text-slate-300">•</span>
@@ -614,17 +614,17 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 text-emerald-700 hover:text-emerald-900 font-bold hover:underline"
                 >
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <ExternalLink className="w-4 h-4" />
                   <span>Registro ORCID iD</span>
                 </a>
               </div>
-              <div className="pt-2 border-t border-slate-200/80 space-y-1">
+              <div className="pt-3 border-t border-slate-200 space-y-2">
                 <p className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5 text-slate-400" />
+                  <Mail className="w-4 h-4 text-slate-400 shrink-0" />
                   <span><strong>E-mail:</strong> esdhubem@proton.me</span>
                 </p>
                 <p className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-slate-400" />
+                  <Phone className="w-4 h-4 text-slate-400 shrink-0" />
                   <span><strong>WhatsApp:</strong> (11) 960319637</span>
                 </p>
               </div>
@@ -633,16 +633,16 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
         </div>
 
         {/* Card 4: Perguntas Frequentes (FAQ) */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-6">
+        <div className="bg-white rounded-3xl p-7 sm:p-10 border border-slate-200/90 shadow-sm space-y-8">
           <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
             <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
-              <HelpCircle className="w-6 h-6" />
+              <HelpCircle className="w-6 h-6 text-amber-600" />
             </div>
             <div>
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
+              <span className="text-xs sm:text-sm font-bold text-amber-600 uppercase tracking-wider block">
                 Dúvidas Rápidas
               </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+              <h2 className="text-2xl sm:text-3xl font-black text-[#182333]">
                 Perguntas Frequentes (FAQ)
               </h2>
             </div>
@@ -660,9 +660,9 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
                   <button
                     type="button"
                     onClick={() => toggleFaq(idx)}
-                    className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 bg-slate-50/70 hover:bg-slate-100/80 transition-colors cursor-pointer"
+                    className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 bg-slate-50/70 hover:bg-slate-100/80 transition-colors cursor-pointer"
                   >
-                    <span className="font-bold text-slate-800 text-sm sm:text-base">
+                    <span className="font-bold text-slate-800 text-base sm:text-lg">
                       {faq.question}
                     </span>
                     <ChevronDown
@@ -673,7 +673,7 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
                   </button>
 
                   {isOpen && (
-                    <div className="p-4 sm:p-5 bg-white text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                    <div className="p-5 sm:p-6 bg-white text-slate-700 text-base sm:text-lg leading-relaxed border-t border-slate-100">
                       {faq.answer}
                     </div>
                   )}
