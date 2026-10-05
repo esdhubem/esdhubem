@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Lock, Award, GraduationCap, Heart } from 'lucide-react';
+import { Sparkles, BookOpen, Award, GraduationCap, PenTool } from 'lucide-react';
 
 interface HeroProps {
   onSelectCategory: (category: string) => void;
@@ -54,25 +54,23 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-y-8 lg:gap-4">
             
-            {/* 1. Seu texto é sempre seu */}
+            {/* 1. Cursos livres */}
             <div className="flex items-center justify-center lg:justify-start gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200/80 flex items-center justify-center text-emerald-600 shrink-0 shadow-sm">
-                <Lock className="w-6 h-6" />
+              <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-amber-600 shrink-0 shadow-sm">
+                <BookOpen className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-sm sm:text-base font-extrabold text-[#182333]">Seu texto é sempre seu</h4>
-                <p className="text-xs text-slate-500 leading-tight">Proteção à autoria garantida</p>
+                <h4 className="text-base sm:text-lg font-extrabold text-[#182333]">Cursos livres</h4>
               </div>
             </div>
 
-            {/* 2. 4 Níveis de reconhecimento */}
+            {/* 2. Certificado */}
             <div className="flex items-center justify-center lg:justify-center gap-4 sm:border-l border-slate-200 sm:pl-6 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0">
-              <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-amber-600 shrink-0 shadow-sm">
+              <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200/80 flex items-center justify-center text-emerald-600 shrink-0 shadow-sm">
                 <Award className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-sm sm:text-base font-extrabold text-[#182333]">4 Níveis de reconhecimento</h4>
-                <p className="text-xs text-slate-500 leading-tight font-medium">Bronze → Prata → Ouro → Diamante</p>
+                <h4 className="text-base sm:text-lg font-extrabold text-[#182333]">Certificado</h4>
               </div>
             </div>
 
@@ -82,19 +80,17 @@ export const Hero: React.FC<HeroProps> = ({
                 <GraduationCap className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-sm sm:text-base font-extrabold text-[#182333]">Horas complementares</h4>
-                <p className="text-xs text-slate-500 leading-tight">Válidas com base legal</p>
+                <h4 className="text-base sm:text-lg font-extrabold text-[#182333]">Horas complementares</h4>
               </div>
             </div>
 
-            {/* 4. Desenvolvimento integral */}
+            {/* 4. Possibilidade de autoria */}
             <div className="flex items-center justify-center lg:justify-center gap-4 sm:border-l border-slate-200 sm:pl-6 lg:pl-4 pt-6 sm:pt-0 border-t sm:border-t-0">
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200/80 flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
-                <Heart className="w-6 h-6 fill-blue-500/20" />
+              <div className="w-14 h-14 rounded-2xl bg-purple-50 border border-purple-200/80 flex items-center justify-center text-purple-600 shrink-0 shadow-sm">
+                <PenTool className="w-6 h-6" />
               </div>
               <div>
-                <h4 className="text-sm sm:text-base font-extrabold text-[#182333]">Desenvolvimento integral</h4>
-                <p className="text-xs text-slate-500 leading-tight">Conhecimento, escrita e bem-estar</p>
+                <h4 className="text-base sm:text-lg font-extrabold text-[#182333]">Possibilidade de autoria</h4>
               </div>
             </div>
 
