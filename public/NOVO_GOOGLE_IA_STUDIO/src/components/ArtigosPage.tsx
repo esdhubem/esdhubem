@@ -130,7 +130,10 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
               O que é este Espaço de Artigos, Estudos e Pesquisa?
             </h2>
             <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-              Este repositório reúne os <strong>Manuscritos de Conclusão de Curso (MCC)</strong> e as produções intelectuais escritas por nossos alunos como forma de obtenção de certificação do tipo ouro. Aqui buscamos refletir uma comunidade engajada em melhorar a qualidade da sua escrita, produção intelectual e publicação.
+              Este repositório reúne os <strong>Manuscritos de Conclusão de Curso (MCC)</strong> e as produções intelectuais escritas por nossos alunos como forma de obtenção de certificação do tipo ouro.
+            </p>
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+              Aqui buscamos refletir uma comunidade engajada em melhorar a qualidade da sua escrita, produção intelectual e publicação.
             </p>
             <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
               Todos os trabalhos selecionados são preservados digitalmente e contam com atribuição de <strong>DOI (Digital Object Identifier)</strong> internacional por meio do ecossistema <strong>Zenodo / CERN</strong>, garantindo autoria perene e circulação global.

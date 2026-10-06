@@ -264,7 +264,7 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
                               Investimento
                             </span>
                             <span className="text-base font-black text-slate-900">
-                              R$ {course.price.toFixed(2).replace('.', ',')}
+                              {course.priceValue ? `R$ ${course.priceValue.toFixed(2).replace('.', ',')}` : (course.priceNote || 'Consulte')}
                             </span>
                           </div>
                         )}

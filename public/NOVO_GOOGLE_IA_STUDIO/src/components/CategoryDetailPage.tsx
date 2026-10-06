@@ -185,9 +185,9 @@ const CATEGORY_META: Record<
   'landing-pages-biolinks': {
     heroTag: 'Desenvolvimento Web & Soluções Digitais',
     description:
-      'Soluções de alta conversão para profissionais e empresas. Criação de Landing Pages personalizadas, Biolinks interativos, hospedagem e estrutura técnica completa.',
+      'Soluções de alta conversão para coaches integrativos, terapeutas e profissionais do bem-estar. Criação de Landing Pages personalizadas, Biolinks interativos, hospedagem e estrutura técnica completa.',
     targetPublic:
-      'Consultores, técnicos e profissionais liberais que buscam presença digital forte e atração de clientes.',
+      'Coaches integrativos, terapeutas, instrutores de mindfulness e especialistas em desenvolvimento humano que buscam presença digital forte e acolhedora.',
     skillsSummary: [
       'Design Responsivo & Alta Conversão',
       'Integração com WhatsApp & Formulários',
