@@ -36,6 +36,19 @@ targets.forEach(({ html, assets }) => {
     console.log(`Copied index.html to ${html}`);
   }
   if (fs.existsSync(distAssets)) {
+    if (fs.existsSync(assets)) {
+      // Remover bundles e estilos antigos para forçar atualização e não servir versões defasadas
+      fs.readdirSync(assets).forEach(file => {
+        if ((file.startsWith('index-') && (file.endsWith('.js') || file.endsWith('.css'))) || file.startsWith('assets')) {
+          const filePath = path.join(assets, file);
+          if (fs.lstatSync(filePath).isDirectory()) {
+            fs.rmSync(filePath, { recursive: true, force: true });
+          } else {
+            fs.unlinkSync(filePath);
+          }
+        }
+      });
+    }
     copyFolderSync(distAssets, assets);
     console.log(`Copied assets to ${assets}`);
   }
