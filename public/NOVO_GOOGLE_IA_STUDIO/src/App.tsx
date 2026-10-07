@@ -789,6 +789,10 @@ export default function App() {
                 onOpenValidator={() => setIsValidatorOpen(true)}
                 onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
                 onNavigate={handleNavigate}
+                onSelectCourse={(newCourse) => {
+                  setSelectedCourse(newCourse);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
               />
             );
           })()}

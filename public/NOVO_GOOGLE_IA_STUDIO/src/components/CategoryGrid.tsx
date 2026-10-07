@@ -156,7 +156,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                 id: 'desenvolvimento-empresarial',
                 emoji: '🏢',
                 title: 'Desenvolvimento Empresarial',
-                description: 'Empresas, gestão, equipes, liderança e treinamento corporativo.',
+                description: 'Palestras in-company, bem-estar nas empresas, descomplica MEI/ME e ferramentas de gestão prática.',
                 filterKey: 'Desenvolvimento Empresarial',
                 badgeText: 'Empresarial',
                 badgeClass: 'bg-amber-50 text-amber-700 border-amber-200'
