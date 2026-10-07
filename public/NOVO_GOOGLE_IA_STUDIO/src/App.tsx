@@ -377,6 +377,9 @@ export default function App() {
     }
 
     if (sectionId === 'curso-detalhe') {
+      if (!selectedCourse) {
+        setSelectedCourse(COURSES_DATA.find(c => c.id === 'fp-assertiva') || COURSES_DATA[0]);
+      }
       setCurrentPage('curso-detalhe');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
@@ -766,24 +769,29 @@ export default function App() {
         </main>
       )}
 
-      {currentPage === 'curso-detalhe' && selectedCourse && (
+      {currentPage === 'curso-detalhe' && (
         <main className="flex-1">
-          <CourseDetailPage
-            course={selectedCourse}
-            onBackToHome={() => {
-              setCurrentPage('home');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            onEnroll={() => {
-              setActivePortalCourseId(selectedCourse.id);
-              setCurrentPage('sala-de-aula');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-              showNotification(`Inscrição confirmada! Bem-vindo(a) à Sala de Aula de ${selectedCourse.title}.`);
-            }}
-            onOpenValidator={() => setIsValidatorOpen(true)}
-            onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
-            onNavigate={handleNavigate}
-          />
+          {(() => {
+            const courseToRender = selectedCourse || COURSES_DATA.find(c => c.id === 'fp-assertiva') || COURSES_DATA[0];
+            return (
+              <CourseDetailPage
+                course={courseToRender}
+                onBackToHome={() => {
+                  setCurrentPage('home');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                onEnroll={() => {
+                  setActivePortalCourseId(courseToRender.id);
+                  setCurrentPage('sala-de-aula');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  showNotification(`Inscrição confirmada! Bem-vindo(a) à Sala de Aula de ${courseToRender.title}.`);
+                }}
+                onOpenValidator={() => setIsValidatorOpen(true)}
+                onOpenCertificatePreview={() => setIsCertificatePreviewOpen(true)}
+                onNavigate={handleNavigate}
+              />
+            );
+          })()}
         </main>
       )}
 

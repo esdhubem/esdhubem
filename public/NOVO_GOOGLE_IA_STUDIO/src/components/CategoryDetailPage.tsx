@@ -769,7 +769,11 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
 
             <div className="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto">
               <button
-                onClick={onNavigateToCourseDetail}
+                onClick={() => {
+                  const assertiva = COURSES_DATA.find(c => c.id === 'fp-assertiva') || COURSES_DATA[0];
+                  onSelectCourse(assertiva);
+                  onNavigateToCourseDetail();
+                }}
                 className="bg-[#FFC72C] hover:bg-[#F5B014] text-[#243042] font-bold text-xs py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
                 id="btn-ver-assertiva-categoria"
               >
@@ -922,7 +926,13 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                 className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col group"
               >
                 {/* Course Image & Badges */}
-                <div className="relative h-44 overflow-hidden bg-slate-900">
+                <div
+                  onClick={() => {
+                    onSelectCourse(course);
+                    onNavigateToCourseDetail();
+                  }}
+                  className="relative h-44 overflow-hidden bg-slate-900 cursor-pointer"
+                >
                   <img
                     src={course.image}
                     alt={course.title}
@@ -963,7 +973,13 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                     <div className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">
                       {course.category}
                     </div>
-                    <h4 className="text-base font-bold text-slate-900 leading-snug group-hover:text-[#243042] transition-colors line-clamp-2">
+                    <h4
+                      onClick={() => {
+                        onSelectCourse(course);
+                        onNavigateToCourseDetail();
+                      }}
+                      className="text-base font-bold text-slate-900 leading-snug group-hover:text-[#243042] transition-colors line-clamp-2 cursor-pointer"
+                    >
                       {course.title}
                     </h4>
                     <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
@@ -1012,9 +1028,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                       <button
                         onClick={() => {
                           onSelectCourse(course);
-                          if (course.id === 'fp-assertiva') {
-                            onNavigateToCourseDetail();
-                          }
+                          onNavigateToCourseDetail();
                         }}
                         className="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-2 rounded-xl transition-colors text-center cursor-pointer"
                       >
@@ -1023,15 +1037,12 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
 
                       <button
                         onClick={() => {
-                          if (course.id === 'fp-assertiva') {
-                            onNavigateToCourseDetail();
-                          } else {
-                            onNavigateToPortal(course.id);
-                          }
+                          onSelectCourse(course);
+                          onNavigateToCourseDetail();
                         }}
                         className="w-full bg-[#243042] hover:bg-[#182333] text-white text-xs font-bold py-2 rounded-xl transition-all text-center flex items-center justify-center gap-1 cursor-pointer shadow-xs"
                       >
-                        <span>Acessar</span>
+                        <span>Página do Curso</span>
                         <ChevronRight className="w-3.5 h-3.5" />
                       </button>
                     </div>

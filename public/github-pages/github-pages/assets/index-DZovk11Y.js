@@ -13886,34 +13886,6 @@ var ShoppingCart = createLucideIcon("shopping-cart", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var Signal = createLucideIcon("signal", [
-	["path", {
-		d: "M2 20h.01",
-		key: "4haj6o"
-	}],
-	["path", {
-		d: "M7 20v-4",
-		key: "j294jx"
-	}],
-	["path", {
-		d: "M12 20v-8",
-		key: "i3yub9"
-	}],
-	["path", {
-		d: "M17 20V8",
-		key: "1tkaf5"
-	}],
-	["path", {
-		d: "M22 4v16",
-		key: "sih9yq"
-	}]
-]);
-/**
-* @license lucide-react v0.546.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
 var Smartphone = createLucideIcon("smartphone", [["rect", {
 	width: "14",
 	height: "20",
@@ -16411,6 +16383,167 @@ var COURSES_DATA = [
 		priceNote: "Gratuito para assistir • Certificado oficial incluso"
 	},
 	{
+		id: "curso-gnose-de-si",
+		title: "Gnose de Si: O Mapa Interior para Decisões Lúcidas",
+		subtitle: "Aprenda a ler suas próprias emoções, padrões repetitivos e valores para agir com autonomia autêntica no cotidiano.",
+		category: "Desenvolvimento Pessoal",
+		pillar: "freepremium",
+		hours: 40,
+		rating: 5,
+		studentsCount: 1240,
+		image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
+		tag: "Autonomia & Clareza",
+		badge: "Destaque • 40h",
+		description: "Uma imersão profunda e prática na arte do autoconhecimento aplicado. Entenda as raízes dos seus comportamentos, desmonte autossabotagens e estabeleça uma bússola interna confiável para tomar decisões sem medo e sem culpa.",
+		modulesCount: 4,
+		syllabus: [
+			"Módulo 1: O Espelho Interior: Identificando Padrões e Gatilhos Emocionais",
+			"Módulo 2: A Gnose Prática: Da Teoria do Autoconhecimento à Ação Cotidiana",
+			"Módulo 3: Clareza em Tempos de Crise: Tomando Decisões com Discernimento",
+			"Módulo 4: Autonomia Emocional e Emancipação Pessoal"
+		],
+		targetAudience: "Pessoas em busca de clareza existencial, reconstrução de caminhos e autonomia emocional.",
+		priceNote: "Acesso Livre • Certificado Opcional Registrado"
+	},
+	{
+		id: "curso-bussola-escuridao",
+		title: "Bússola na Escuridão: Primeiros Socorros Emocionais em Momentos de Crise",
+		subtitle: "Ferramentas práticas de regulação do sistema nervoso, clareza mental e centramento quando a vida parece caótica.",
+		category: "Desenvolvimento Pessoal",
+		pillar: "freepremium",
+		hours: 30,
+		rating: 4.9,
+		studentsCount: 2150,
+		image: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80",
+		tag: "Acolhimento & Resiliência",
+		badge: "30h Expressas",
+		description: "Módulos curtos, diretos e acolhedores projetados para quem está atravessando fases difíceis, perdas ou transições turbulentas. Aprenda a reencontrar seu eixo, acalmar o corpo e enxergar a próxima ação viável com lucidez.",
+		modulesCount: 4,
+		syllabus: [
+			"Módulo 1: Estabilização Inicial: Primeiros Socorros para Crises e Sobrecarga",
+			"Módulo 2: O Corpo como Bússola: Respiração, Sono e Descompressão Nervosa",
+			"Módulo 3: Reorganizando o Caos: Priorização e Filtros Mentais em Momentos Críticos",
+			"Módulo 4: Reconstrução de Rumo: Saindo da Paralisia e Retomando a Vida"
+		],
+		targetAudience: "Estudantes, profissionais sob esgotamento e qualquer pessoa em momentos de travessia e incerteza.",
+		priceNote: "Acesso Livre • Certificado Opcional Registrado"
+	},
+	{
+		id: "curso-vibracao-liberdade",
+		title: "Autonomia, Flexibilidade & Desapego: A Arte da Emancipação Pessoal",
+		subtitle: "Aprenda a se desvincular de expectativas externas, acolher mudanças dinâmicas e construir caminhos próprios com leveza.",
+		category: "Desenvolvimento Pessoal",
+		pillar: "freepremium",
+		hours: 40,
+		rating: 4.9,
+		studentsCount: 1680,
+		image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80",
+		tag: "Liberdade & Autoria",
+		badge: "40h de Certificação",
+		description: "Inspirado na energia arquetípica da renovação e da flexibilidade. Desenvolva adaptabilidade diante das transformações do mundo contemporâneo, liberte-se de amarras invisíveis e viva com autenticidade humilde e vigorosa.",
+		modulesCount: 4,
+		syllabus: [
+			"Módulo 1: Desmontando Roteiros Alheios: O Desafio da Autonomia Real",
+			"Módulo 2: A Mente Flexível: Como Navegar pela Incerteza sem Rigidez",
+			"Módulo 3: Desapego Ativo: Deixando Ir o que Pesa para Criar Espaço para o Novo",
+			"Módulo 4: A Arte de Viver com Autenticidade e Coragem"
+		],
+		targetAudience: "Quem busca reconstruir caminhos de vida, empreender com essência própria e desfrutar de liberdade interior.",
+		priceNote: "Acesso Livre • Certificado Opcional Registrado"
+	},
+	{
+		id: "curso-fitoterapia-cotidiana",
+		title: "Fitoterapia Prática & Plantas Medicinais no Cuidado Diário",
+		subtitle: "Uso seguro, fundamentado e consciente de infusões, tinturas e ervas medicinais para equilíbrio físico e mental.",
+		category: "Práticas Integrativas",
+		pillar: "freepremium",
+		hours: 40,
+		rating: 5,
+		studentsCount: 2940,
+		image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+		tag: "Saúde Integrativa",
+		badge: "Plantas Medicinais • 40h",
+		description: "Aprenda com base biomédica e sabedoria tradicional como utilizar as principais plantas medicinais brasileiras com total segurança, identificando princípios ativos, formas corretas de preparo, dosagens e possíveis contraindicações.",
+		modulesCount: 4,
+		syllabus: [
+			"Módulo 1: Princípios da Fitoterapia: Da Botânica à Farmacologia Básica",
+			"Módulo 2: Formas de Preparo: Infusões, Decocções, Macerações e Tinturas",
+			"Módulo 3: Ervas para Ansiedade, Sono, Digestão e Fortalecimento da Imunidade",
+			"Módulo 4: Segurança Terapêutica: Interações Medicamentosas e Uso Responsável"
+		],
+		targetAudience: "Terapeutas integrativos, estudantes de saúde e entusiastas do cuidado natural fundamentado.",
+		priceNote: "Acesso Livre • Certificado Opcional Registrado"
+	},
+	{
+		id: "curso-iridologia-integrativa",
+		title: "Introdução à Iridologia & Leitura dos Sinais Constitucionais",
+		subtitle: "Compreensão integrativa da íris como mapa constitucional de vitalidade, predisposições e equilíbrio do organismo.",
+		category: "Práticas Integrativas",
+		pillar: "freepremium",
+		hours: 40,
+		rating: 4.8,
+		studentsCount: 1420,
+		image: "https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=800&q=80",
+		tag: "Iridologia Holística",
+		badge: "40h de Certificação",
+		description: "Conheça a história, fundamentos e mapas da iridologia contemporânea. Entenda como a leitura dos padrões da íris oferece pistas preciosas sobre a constituição orgânica, níveis de toxemia e tendências do indivíduo.",
+		modulesCount: 4,
+		syllabus: [
+			"Módulo 1: Fundamentos Históricos e Científicos da Iridologia",
+			"Módulo 2: O Mapa Iridológico: Topografia e Correspondências Anatômicas",
+			"Módulo 3: Sinais Constitucionais, Lacunas e Zonas Pupilar e Ciliar",
+			"Módulo 4: Prática de Observação Ética e Orientações de Bem-Estar Integrativo"
+		],
+		targetAudience: "Profissionais de saúde integrativa, terapeutas holísticos e estudantes de terapias complementares.",
+		priceNote: "Acesso Livre • Certificado Opcional Registrado"
+	},
+	{
+		id: "curso-leitura-artigo-sem-sofrer",
+		title: "Como Ler um Artigo Científico sem Sofrer: Do Título às Conclusões",
+		subtitle: "Desmistifique termos acadêmicos, tabelas e gráficos estatísticos para discernir evidências científicas de ruído com confiança.",
+		category: "Desenvolvimento Humano",
+		pillar: "horas-complementares",
+		hours: 30,
+		rating: 5,
+		studentsCount: 3200,
+		image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80",
+		tag: "Letramento Científico",
+		badge: "Mais Vendido • 30h",
+		description: "Ministrado com didática leve e acolhedora para desmistificar a leitura de artigos científicos indexados (PubMed, Scielo). Aprenda onde focar, o que significa p-valor, como identificar vieses e como citar fontes corretamente no padrão ABNT.",
+		modulesCount: 4,
+		syllabus: [
+			"Módulo 1: A Anatomia de um Artigo Científico: IMRaD sem Mistérios",
+			"Módulo 2: Onde os Olhos Devem Ir Primeiro: Resumo, Gráficos e Conclusão",
+			"Módulo 3: Métodos e Estatística para Não-Estatísticos: O Básico que Você Precisa Saber",
+			"Módulo 4: Discernindo Evidência de Sensacionalismo e Como Citar em Trabalhos"
+		],
+		targetAudience: "Universitários de todas as áreas, pesquisadores iniciantes e profissionais que buscam embasamento sólido.",
+		priceNote: "Acesso Livre • Certificado Opcional Registrado"
+	},
+	{
+		id: "curso-cnv-relacionamentos",
+		title: "Comunicação Não-Violenta & Resolução Ética de Desavenças",
+		subtitle: "Transforme diálogos defensivos em pontes de cooperação e entendimento nas relações familiares e de trabalho.",
+		category: "Desenvolvimento Relacional",
+		pillar: "freepremium",
+		hours: 40,
+		rating: 4.9,
+		studentsCount: 2540,
+		image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80",
+		tag: "Relações Saudáveis",
+		badge: "40h • Certificado Válido",
+		description: "Aprenda os princípios profundos de Marshall Rosenberg traduzidos para as dinâmicas reais do dia a dia brasileiro: como falar sem acusar, como escutar sem se sentir ofendido e como transformar atritos em conexões verdadeiras.",
+		modulesCount: 4,
+		syllabus: [
+			"Módulo 1: O Que Bloqueia a Empatia: Julgamentos Moralizantes e Comparações",
+			"Módulo 2: Os 4 Passos da CNV Aplicados: Fatos Claros, Emoções Reais, Necessidades Centrais e Pedidos Precisos",
+			"Módulo 3: Autoempatia: Curando o Diálogo Interno Autocrítico",
+			"Módulo 4: Prática de Mediação em Situações Reais de Família e Trabalho"
+		],
+		targetAudience: "Líderes, casais, pais, educadores e qualquer pessoa que queira viver relacionamentos mais leves e harmoniosos.",
+		priceNote: "Acesso Livre • Certificado Opcional Registrado"
+	},
+	{
 		id: "lp-coach-integrativo",
 		title: "Landing Page para Coach Integrativo e Mentores",
 		subtitle: "Modelo de página de alta conversão para apresentar sua metodologia, pacotes de mentoria e atrair coachees pelo WhatsApp.",
@@ -18436,10 +18569,47 @@ var StudentPortalPage = ({ onBackToHome, onOpenValidator, initialCourseId = "hc-
 var prof_silviane_default = "/esdhubem/assets/prof-silviane-Bh_EjhYz.png";
 //#endregion
 //#region src/components/CourseDetailPage.tsx
+var HOURS_OPTIONS = [
+	{
+		hours: 20,
+		price: 39.9,
+		label: "20 Horas",
+		badge: "Essencial"
+	},
+	{
+		hours: 40,
+		price: 49.9,
+		label: "40 Horas",
+		badge: "Mais Procurado",
+		isPopular: true
+	},
+	{
+		hours: 60,
+		price: 59.9,
+		label: "60 Horas",
+		badge: "Aprofundado"
+	},
+	{
+		hours: 80,
+		price: 69.9,
+		label: "80 Horas",
+		badge: "Completo"
+	},
+	{
+		hours: 120,
+		price: 89.9,
+		label: "120 Horas",
+		badge: "Máxima Carga"
+	}
+];
 var CourseDetailPage = ({ course, onBackToHome, onEnroll, onOpenValidator, onOpenCertificatePreview, onNavigate }) => {
 	const [activeTab, setActiveTab] = (0, import_react.useState)("sobre");
-	const [expandedModules, setExpandedModules] = (0, import_react.useState)([0]);
+	const [expandedModules, setExpandedModules] = (0, import_react.useState)([0, 1]);
 	const [copied, setCopied] = (0, import_react.useState)(false);
+	const [enrollmentMode, setEnrollmentMode] = (0, import_react.useState)("certificado");
+	const [selectedHours, setSelectedHours] = (0, import_react.useState)(course?.hours || 40);
+	const [certificateViewMode, setCertificateViewMode] = (0, import_react.useState)("frente");
+	const [expandedFaq, setExpandedFaq] = (0, import_react.useState)(0);
 	const handleCopyLink = () => {
 		const courseId = course?.id || "fp-assertiva";
 		const url = `${window.location.href.split("?")[0]}?curso=${courseId}`;
@@ -18452,29 +18622,60 @@ var CourseDetailPage = ({ course, onBackToHome, onEnroll, onOpenValidator, onOpe
 		else setExpandedModules([...expandedModules, index]);
 	};
 	const title = course?.title || "Comunicação Assertiva com a Liderança";
-	const subtitle = course?.subtitle || "Aprenda a expressar suas ideias com firmeza, clareza e respeito no ambiente corporativo.";
-	const category = course?.category || "Cursos Freepremium";
+	const subtitle = course?.subtitle || "Aprenda a expressar suas ideias com firmeza, clareza e respeito no ambiente corporativo, desenvolvendo uma presença executiva transformadora.";
+	const category = course?.category || "Desenvolvimento Profissional & Liderança";
 	const image = course?.image || "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80";
-	const hours = course?.hours || 40;
+	course?.hours;
 	const rating = course?.rating || 4.9;
 	const studentsCount = course?.studentsCount || 3800;
-	const badge = course?.badge || "Curso Destaque";
-	const syllabus = course?.syllabus || [
-		"Módulo 1: Fundamentos da Comunicação Assertiva",
-		"Módulo 2: Postura e Comportamento",
-		"Módulo 3: Aplicando no Ambiente Corporativo"
+	const badge = course?.badge || "Curso com Início Imediato";
+	const isDigitalService = category === "Landing Pages & Biolinks";
+	const syllabus = course?.syllabus && course.syllabus.length > 0 ? course.syllabus : [
+		"Módulo 1: Fundamentos da Comunicação Assertiva e Neurobiologia do Diálogo",
+		"Módulo 2: Postura Consciente, Linguagem Corporal e Autogestão Emocional",
+		"Módulo 3: Aplicação Prática no Ambiente Corporativo e Gestão de Conflitos",
+		"Módulo 4: Avaliação Final e Emissão do Certificado Registrado"
 	];
+	const getModuleTopics = (modName, index) => {
+		if (course?.id === "fp-assertiva") {
+			if (index === 0) return [
+				"Diferenças práticas entre passividade, agressividade, passivo-agressividade e assertividade",
+				"Os 4 passos da Comunicação Não-Violenta (CNV): Fatos, Sentimentos, Necessidades e Pedidos",
+				"A neurociência da calma: controlando o sequestro da amígdala em conversas difíceis",
+				"Escuta ativa estruturada: como validar o interlocutor sem renunciar à sua posição"
+			];
+			if (index === 1) return [
+				"Comunicação não-verbal: congruência de postura, contato visual, tom de voz e respiração",
+				"A arte de dizer \"Não\" de maneira profissional, firme e sem gerar ressentimentos",
+				"Autogestão de limites sob pressão e cobranças de alta intensidade",
+				"Como estruturar argumentos técnicos com clareza, concisão e autoridade ética"
+			];
+			if (index === 2) return [
+				"Técnicas de mediação e desarmamento de conversas tensas em reuniões de liderança",
+				"Dar e receber feedbacks construtivos sem ativar reações defensivas na equipe",
+				"Comunicação escrita assertiva: redação de e-mails, relatórios e mensagens em canais corporativos",
+				"Plano de Ação Individual de Assertividade para os próximos 30 dias"
+			];
+			return ["Orientações gerais para a avaliação de fixação de conhecimento", "Critérios acadêmicos para aprovação e emissão do certificado registrado"];
+		}
+		return [
+			`Fundamentos essenciais e contextualização contemporânea do ${modName.replace(/Módulo \d+:\s*/, "")}`,
+			"Estudo de casos reais, ferramentas de aplicação imediata e exercícios reflexivos",
+			"Material complementar de leitura em PDF e referências bibliográficas recomendadas"
+		];
+	};
+	const selectedPricing = HOURS_OPTIONS.find((opt) => opt.hours === selectedHours) || HOURS_OPTIONS[1];
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800 pb-20",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#182333] border-b border-slate-700/60 py-3 text-xs",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex flex-col sm:flex-row sm:items-center justify-between gap-3",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-2 text-sm text-slate-400",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-2 text-slate-400",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: onBackToHome,
@@ -18482,135 +18683,185 @@ var CourseDetailPage = ({ course, onBackToHome, onEnroll, onOpenValidator, onOpe
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Início" })]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "/" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									onClick: () => {
+										if (onNavigate) onNavigate("categorias");
+									},
+									className: "hover:text-[#FFC72C] transition-colors",
+									children: "Cursos"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "/" }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-[#FFC72C] font-semibold truncate",
+									className: "text-[#FFC72C] font-semibold truncate max-w-xs sm:max-w-md",
 									children: title
 								})
 							]
-						})
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "flex items-center gap-2 text-[11px] text-slate-300",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+								className: "inline-flex items-center gap-1 text-emerald-400 font-semibold",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-3.5 h-3.5" }), "Inscrições Abertas • Início Imediato"]
+							})
+						})]
 					})
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden shadow-lg border-b border-slate-700/60",
+				className: "bg-[#1e293b] text-white relative overflow-hidden shadow-lg border-b border-slate-700/60",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "max-w-7xl mx-auto py-10 md:py-16 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between relative z-10 gap-8",
+					className: "max-w-7xl mx-auto py-10 md:py-14 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between relative z-10 gap-8",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "w-full md:w-2/3 flex flex-col items-start",
+						className: "w-full md:w-2/3 flex flex-col items-start space-y-4",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex items-center gap-2 mb-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "bg-[#FFC72C] text-slate-950 text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider shadow-sm",
-									children: category
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									className: "bg-white/10 text-slate-200 text-xs font-medium px-3 py-1 rounded-full flex items-center gap-1.5",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 text-[#FFC72C]" }), badge]
-								})]
+								className: "flex flex-wrap items-center gap-2",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "bg-[#FFC72C] text-[#182333] text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider shadow-sm",
+										children: category
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "bg-white/10 text-slate-200 text-xs font-medium px-3 py-1 rounded-full flex items-center gap-1.5 border border-white/10",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 text-[#FFC72C]" }), badge]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "bg-emerald-500/20 text-emerald-300 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 border border-emerald-500/30",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-3.5 h-3.5" }), "Certificado Válido no Brasil"]
+									})
+								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-								className: "text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight text-white tracking-tight",
+								className: "text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white tracking-tight",
 								children: title
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-slate-300 text-sm md:text-base max-w-2xl mb-6 leading-relaxed",
+								className: "text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl",
 								children: subtitle
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-slate-200",
-								children: category === "Landing Pages & Biolinks" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+								className: "flex flex-wrap items-center gap-3 text-xs text-slate-200 pt-2",
+								children: !isDigitalService ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Prazo de Entrega: ", /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("strong", { children: [hours, " horas"] })] })]
+										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg border border-white/5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Carga Horária: ", /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("strong", { children: [selectedHours, " Horas"] })] })]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutTemplate, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Domínio & Hospedagem 1 Ano Grátis" })]
+										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg border border-white/5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "100% Online Assíncrono" })]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg text-amber-300",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "w-4 h-4 fill-amber-300 text-amber-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-bold text-white",
-											children: rating
-										})]
+										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg border border-white/5 text-amber-300",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "w-4 h-4 fill-amber-300 text-amber-300" }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-bold text-white",
+												children: rating.toFixed(1)
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "text-slate-400",
+												children: [
+													"(",
+													studentsCount,
+													"+ alunos)"
+												]
+											})
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg border border-white/5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Com Amparo Legal (LDB 9.394/96)" })]
 									})
 								] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Carga Horária: ", /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("strong", { children: [hours, " horas"] })] })]
+										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg border border-white/5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Prazo de Entrega: ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "48 horas" })] })]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GraduationCap, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Com Certificado Oficial" })]
+										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg border border-white/5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutTemplate, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Domínio & Hospedagem 1 Ano Grátis" })]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg text-amber-300",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "w-4 h-4 fill-amber-300 text-amber-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-bold text-white",
-											children: rating
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg text-slate-300",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-4 h-4 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
-											"+",
-											studentsCount,
-											" alunos"
-										] })]
+										className: "flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg border border-white/5 text-amber-300",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "w-4 h-4 fill-amber-300 text-amber-300" }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-bold text-white",
+												children: "5.0"
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-slate-400",
+												children: "(Clientes Satisfeitos)"
+											})
+										]
 									})
 								] })
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "flex flex-wrap items-center gap-3 pt-3",
+								children: !isDigitalService ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									onClick: onEnroll,
+									className: "bg-[#FFC72C] hover:bg-[#F5B014] text-[#182333] font-black text-sm px-6 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center gap-2 cursor-pointer group",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Quero Assistir Grátis" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									onClick: () => {
+										setActiveTab("certificacao");
+										const el = document.getElementById("seletor-matricula-sidebar");
+										if (el) el.scrollIntoView({ behavior: "smooth" });
+									},
+									className: "bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-5 py-3.5 rounded-xl transition-all flex items-center gap-2 border border-white/15 cursor-pointer",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Opções com Certificado" })]
+								})] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+									href: "https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20solicitar%20a%20criação%20da%20minha%20página%20profissional.",
+									target: "_blank",
+									rel: "noreferrer",
+									className: "bg-[#FFC72C] hover:bg-[#F5B014] text-[#182333] font-black text-sm px-6 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center gap-2 cursor-pointer group",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Solicitar via WhatsApp" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
+								})
 							})
 						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "w-full md:w-1/3 flex flex-col items-center md:items-end gap-4",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 max-w-sm w-full group",
+							className: "relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 max-w-sm w-full group bg-slate-900",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 									src: image,
 									alt: title,
-									className: "w-full h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500",
+									className: "w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-500",
 									referrerPolicy: "no-referrer"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-[#182333] via-[#182333]/30 to-transparent" }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "bg-[#182333]/90 backdrop-blur-xs px-2.5 py-1 rounded-md font-semibold text-[#FFC72C]",
-										children: "ESDHUBEM Oficial"
-									})
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "bg-[#182333]/90 backdrop-blur-xs px-2.5 py-1 rounded-md font-semibold text-[#FFC72C] border border-amber-400/20",
+										children: "ESDHUBEM • Educação Integral"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "bg-emerald-600/90 text-white px-2 py-0.5 rounded text-[10px] font-bold",
+										children: "Online"
+									})]
 								})
 							]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2.5 rounded-xl shadow-sm backdrop-blur-xs max-w-sm w-full justify-center",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-[11px] font-semibold text-slate-400 uppercase tracking-wider",
-								children: "Compartilhar:"
+							className: "flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2.5 rounded-xl shadow-sm backdrop-blur-xs max-w-sm w-full justify-between",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+								className: "text-[11px] font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-1.5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Share2, { className: "w-3.5 h-3.5" }), "Divulgar:"]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-2",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-										className: "w-8 h-8 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center text-slate-200 hover:text-white transition-colors",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, { className: "w-4 h-4" })
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-										className: "w-8 h-8 rounded-full bg-white/10 hover:bg-sky-500 flex items-center justify-center text-slate-200 hover:text-white transition-colors",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Twitter, { className: "w-4 h-4" })
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-										className: "w-8 h-8 rounded-full bg-white/10 hover:bg-blue-700 flex items-center justify-center text-slate-200 hover:text-white transition-colors",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Linkedin, { className: "w-4 h-4" })
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-										onClick: handleCopyLink,
-										className: "w-8 h-8 rounded-full bg-white/10 hover:bg-[#FFC72C] flex items-center justify-center text-slate-200 hover:text-[#182333] transition-colors relative",
-										title: "Copiar Link",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4" }), copied && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white text-[#182333] text-[10px] px-2 py-1 rounded font-bold whitespace-nowrap shadow-xl z-50",
-											children: "Link Copiado!"
-										})]
-									})
-								]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+									href: `https://api.whatsapp.com/send?text=${encodeURIComponent(`Conheça o curso ${title} na ESDHUBEM: ${window.location.href}`)}`,
+									target: "_blank",
+									rel: "noreferrer",
+									className: "w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 flex items-center justify-center text-white transition-colors text-xs font-bold",
+									title: "Compartilhar no WhatsApp",
+									children: "W"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									onClick: handleCopyLink,
+									className: "px-2.5 py-1 rounded-lg bg-white/10 hover:bg-[#FFC72C] hover:text-[#182333] text-slate-200 text-xs font-bold transition-all flex items-center gap-1 cursor-pointer",
+									title: "Copiar Link da Página",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: copied ? "Copiado!" : "Copiar Link" })]
+								})]
 							})]
 						})]
 					})]
@@ -18620,603 +18871,1084 @@ var CourseDetailPage = ({ course, onBackToHome, onEnroll, onOpenValidator, onOpe
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-white border-b border-slate-200 sticky top-0 z-20 shadow-sm",
+				className: "bg-white border-b border-slate-200 sticky top-0 z-20 shadow-xs",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2",
+					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex flex-wrap items-center justify-center sm:justify-start gap-x-6 gap-y-2",
+						className: "flex items-center gap-x-2 sm:gap-x-6 overflow-x-auto py-2 scrollbar-none",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => setActiveTab("sobre"),
-								className: `whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${activeTab === "sobre" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300"}`,
-								children: "Descrição"
+								className: `whitespace-nowrap py-2.5 px-3 text-xs sm:text-sm font-bold border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${activeTab === "sobre" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-800"}`,
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Sobre o Curso" })]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => setActiveTab("conteudo"),
-								className: `whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${activeTab === "conteudo" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300"}`,
-								children: category === "Landing Pages & Biolinks" ? "O que está incluso" : "Conteúdo"
+								className: `whitespace-nowrap py-2.5 px-3 text-xs sm:text-sm font-bold border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${activeTab === "conteudo" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-800"}`,
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conteúdo Programático" })]
 							}),
-							category !== "Landing Pages & Biolinks" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							!isDigitalService && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									onClick: () => setActiveTab("certificacao"),
+									className: `whitespace-nowrap py-2.5 px-3 text-xs sm:text-sm font-bold border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${activeTab === "certificacao" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-800"}`,
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4 text-amber-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Certificado & Amostra" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									onClick: () => setActiveTab("metodologia"),
+									className: `whitespace-nowrap py-2.5 px-3 text-xs sm:text-sm font-bold border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${activeTab === "metodologia" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-800"}`,
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Zap, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Como Funciona" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: () => setActiveTab("publico"),
-									className: `whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${activeTab === "publico" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300"}`,
-									children: "Público-Alvo"
+									className: `whitespace-nowrap py-2.5 px-3 text-xs sm:text-sm font-bold border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${activeTab === "publico" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-800"}`,
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Público-Alvo" })]
 								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-									onClick: () => setActiveTab("competencias"),
-									className: `whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${activeTab === "competencias" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300"}`,
-									children: "Competências Desenvolvidas"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: () => setActiveTab("legislacao"),
-									className: `whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${activeTab === "legislacao" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300"}`,
-									children: "Legislação"
+									className: `whitespace-nowrap py-2.5 px-3 text-xs sm:text-sm font-bold border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${activeTab === "legislacao" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-800"}`,
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileCheck, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Validade Legal" })]
 								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-									onClick: () => setActiveTab("autenticidade"),
-									className: `whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${activeTab === "autenticidade" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300"}`,
-									children: "Autenticidade"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-									onClick: () => setActiveTab("formato"),
-									className: `whitespace-nowrap py-2.5 text-sm font-bold border-b-2 transition-colors cursor-pointer ${activeTab === "formato" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300"}`,
-									children: "Formato"
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									onClick: () => setActiveTab("faq"),
+									className: `whitespace-nowrap py-2.5 px-3 text-xs sm:text-sm font-bold border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${activeTab === "faq" ? "border-[#182333] text-[#182333]" : "border-transparent text-slate-500 hover:text-slate-800"}`,
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Dúvidas Frequentes" })]
 								})
 							] })
 						]
 					})
 				})
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex flex-col lg:flex-row gap-8 items-start",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-full lg:w-2/3",
+						className: "w-full lg:w-2/3 space-y-6",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "bg-white border border-slate-200 shadow-sm rounded-2xl p-6 sm:p-10 min-h-[500px]",
+							className: "bg-white border border-slate-200 shadow-sm rounded-2xl p-6 sm:p-10",
 							children: [
 								activeTab === "sobre" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-										className: "text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, { className: "w-4 h-4" })
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Sobre o Curso" })]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "prose prose-slate max-w-none text-slate-600 leading-relaxed text-sm sm:text-base",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Este curso oferece uma visão completa e aprofundada sobre como planejar, estruturar e aplicar técnicas práticas e contemporâneas. Através de metodologias fundamentadas, você compreenderá o que o mercado moderno espera de um profissional capacitado para dialogar com clareza e autoridade." }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: course?.description || "Você aprenderá desde o gerenciamento de demandas corporativas até a condução estratégica de resultados no seu ambiente de trabalho." })]
-									})]
-								}),
-								activeTab === "conteudo" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center justify-between",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-											className: "text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: "w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
-												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" })
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: category === "Landing Pages & Biolinks" ? "Itens do Pacote" : "O que você vai aprender" })]
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "text-xs text-slate-500 font-semibold bg-slate-100 px-3 py-1 rounded-full",
-											children: [syllabus.length, " Módulos"]
-										})]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "space-y-3",
-										children: syllabus.map((mod, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "border border-slate-200 rounded-xl overflow-hidden shadow-2xs",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												onClick: () => toggleModule(index),
-												className: "bg-slate-50 hover:bg-slate-100 px-5 py-4 flex justify-between items-center cursor-pointer transition select-none",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-													className: "flex items-center gap-3",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-														className: "w-7 h-7 rounded-lg bg-[#243042] text-[#FFC72C] text-xs font-black flex items-center justify-center",
-														children: index + 1
-													}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-														className: "font-bold text-sm sm:text-base text-[#182333]",
-														children: mod
-													})]
-												}), expandedModules.includes(index) ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronUp, { className: "w-5 h-5 text-slate-500" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: "w-5 h-5 text-slate-500" })]
-											}), expandedModules.includes(index) && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												className: "p-5 bg-white border-t border-slate-200 text-xs sm:text-sm text-slate-600 leading-relaxed",
-												children: [category === "Landing Pages & Biolinks" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-													className: "mb-2 text-slate-500",
-													children: "Incluso no serviço padrão contratado"
-												}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-													className: "mb-2 text-slate-500",
-													children: "Videoaula explicativa + Material complementar em PDF"
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-													className: "space-y-2",
-													children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-														className: "flex items-center gap-2",
-														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-1.5 h-1.5 rounded-full bg-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: category === "Landing Pages & Biolinks" ? "Garantia de Qualidade" : "Acesso Imediato" })]
-													})
-												})]
-											})]
-										}, index))
-									})]
-								}),
-								activeTab === "publico" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-										className: "text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-4 h-4" })
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Público-Alvo" })]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "bg-slate-50 border border-slate-200 p-6 rounded-xl",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-slate-600 leading-relaxed text-sm sm:text-base",
-											children: "Estudantes universitários em busca de horas complementares averbadas, recém-formados, analistas, supervisores, gestores de equipe e profissionais de todas as áreas (Saúde, Negócios, Educação, Audiovisual e Tecnologia) que desejam desenvolver uma postura técnica e assertiva."
-										})
-									})]
-								}),
-								activeTab === "competencias" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-										className: "text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, { className: "w-4 h-4" })
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Competências Desenvolvidas" })]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-										className: "space-y-4 text-sm sm:text-base text-slate-700 bg-white border border-slate-200 p-6 rounded-xl shadow-sm",
-										children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex items-start gap-3",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-6 h-6 text-emerald-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Capacidade de autorregulação e maturidade socioemocional." }) })]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex items-start gap-3",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-6 h-6 text-emerald-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Comunicação empática em momentos de tensão interpessoal." }) })]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex items-start gap-3",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-6 h-6 text-emerald-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Ferramentas práticas de aplicação imediata no ambiente profissional e pessoal." }) })]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex items-start gap-3",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-6 h-6 text-emerald-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Pensamento crítico, humanista e ético embasado cientificamente." }) })]
-											})
-										]
-									})]
-								}),
-								activeTab === "legislacao" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300",
+									className: "space-y-8 animate-in fade-in duration-300",
 									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-											className: "text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+											className: "text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-3",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: "w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
-												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileCheck, { className: "w-4 h-4" })
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Validade Oficial e Legislação" })]
-										}),
-										(category.toLowerCase().includes("saúde") || category.toLowerCase().includes("saude") || category.toLowerCase().includes("aprofundamento")) && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-amber-50 border-2 border-amber-300 p-6 rounded-2xl space-y-3",
+												className: "w-9 h-9 rounded-xl bg-[#182333] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, { className: "w-5 h-5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Apresentação e Objetivos do Curso" })]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-3 text-slate-600 leading-relaxed text-sm sm:text-base",
+											children: course?.description || "O curso foi concebido com base em princípios práticos de desenvolvimento humano, fornecendo instrumentos metodológicos e ferramentas aplicáveis para quem deseja construir autoridade, segurança pessoal e eficácia nas relações."
+										})] }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-													className: "flex items-center gap-2.5 text-amber-950 font-bold text-base",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "⚠️" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", { children: "AVISO IMPORTANTE — NÃO É PÓS-GRADUAÇÃO" })]
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-													className: "text-xs sm:text-sm text-slate-700 leading-relaxed",
+													className: "p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2",
 													children: [
-														"Este curso ",
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "não constitui programa de Pós-Graduação Lato Sensu nem Stricto Sensu" }),
-														". Trata-se de curso livre de ",
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Aprofundamento Profissional" }),
-														", destinado a atualização e desenvolvimento contínuo, conforme legislação vigente (Decreto nº 5.154/2004)."
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4" })
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+															className: "font-bold text-sm text-[#182333]",
+															children: "Aplicação Imediata"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-xs text-slate-600 leading-relaxed",
+															children: "Ferramentas objetivas que você pode aplicar no dia seguinte à aula na sua rotina profissional e pessoal."
+														})
 													]
 												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-													className: "space-y-1.5 text-xs text-slate-700",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2",
 													children: [
-														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-															className: "flex items-start gap-1.5",
-															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-emerald-600 font-bold",
-																children: "✅"
-															}), " Exige comprovação de formação superior para participação;"]
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4" })
 														}),
-														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-															className: "flex items-start gap-1.5",
-															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-emerald-600 font-bold",
-																children: "✅"
-															}), " Foca em atualização prática e troca de experiência;"]
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+															className: "font-bold text-sm text-[#182333]",
+															children: "Certificação com Registro Nacional"
 														}),
-														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-															className: "flex items-start gap-1.5",
-															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-emerald-600 font-bold",
-																children: "✅"
-															}), " Emite certificado de Aperfeiçoamento Profissional;"]
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-xs text-slate-600 leading-relaxed",
+															children: "Certificado oficial com QR Code de autenticidade, amparado pela Lei nº 9.394/96 e aceito em todo o Brasil."
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-xs",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-4 h-4" })
 														}),
-														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-															className: "flex items-start gap-1.5",
-															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-rose-600 font-bold",
-																children: "❌"
-															}), " Não confere título de especialista reconhecido pelo MEC;"]
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+															className: "font-bold text-sm text-[#182333]",
+															children: "Flexibilidade Total (EAD)"
 														}),
-														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-															className: "flex items-start gap-1.5",
-															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-rose-600 font-bold",
-																children: "❌"
-															}), " Não equivale a diploma de pós-graduação."]
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-xs text-slate-600 leading-relaxed",
+															children: "Estude pelo computador, tablet ou celular, no horário que for mais conveniente, sem prazos de encerramento."
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-xs",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-4 h-4" })
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+															className: "font-bold text-sm text-[#182333]",
+															children: "Docência e Rigor Científico"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-xs text-slate-600 leading-relaxed",
+															children: "Conteúdo estruturado pela Profa. Silviane Silvério, biomédica e especialista com ampla vivência em saúde integrativa."
 														})
 													]
 												})
 											]
 										}),
-										(category.toLowerCase().includes("horas") || category.toLowerCase().includes("complementares")) && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-blue-50 border-2 border-blue-300 p-6 rounded-2xl space-y-3",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-[#182333] text-white p-6 sm:p-8 rounded-2xl space-y-4",
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-													className: "flex items-center gap-2.5 text-blue-950 font-bold text-base",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "📋" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", { children: "AVISO — VALIDADE DE HORAS COMPLEMENTARES" })]
+													className: "flex items-center gap-2 text-[#FFC72C] text-xs font-black uppercase tracking-wider",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Por que escolher a ESDHUBEM?" })]
 												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-													className: "text-xs sm:text-sm text-slate-700 leading-relaxed",
-													children: [
-														"Os certificados emitidos pela ESDHUBEM têm base legal nos termos do ",
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Decreto nº 5.154/2004" }),
-														" e são válidos como comprovação de carga horária complementar."
-													]
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-													className: "text-xs sm:text-sm text-slate-700",
-													children: [
-														"No entanto, ",
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "cada instituição de ensino estabelece suas próprias regras" }),
-														" quanto à aceitação de atividades complementares. Recomendamos que você:"
-													]
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-													className: "space-y-1 text-xs text-slate-700",
-													children: [
-														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-															className: "flex items-start gap-1.5",
-															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-emerald-600 font-bold",
-																children: "✅"
-															}), " Consulte previamente a secretaria acadêmica de sua faculdade;"]
-														}),
-														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-															className: "flex items-start gap-1.5",
-															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-emerald-600 font-bold",
-																children: "✅"
-															}), " Verifique os critérios específicos do seu curso;"]
-														}),
-														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-															className: "flex items-start gap-1.5",
-															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-emerald-600 font-bold",
-																children: "✅"
-															}), " Confirme documentos exigidos e prazos."]
-														})
-													]
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+													className: "text-lg sm:text-xl font-bold",
+													children: "Educação que respeita o seu tempo e valoriza sua história"
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-													className: "text-xs text-slate-500 italic pt-1 border-t border-blue-200",
-													children: "A ESDHUBEM fornece toda a documentação necessária — cabe à instituição de destino a decisão final de aceite."
+													className: "text-xs sm:text-sm text-slate-300 leading-relaxed",
+													children: "Diferente de plataformas com conteúdo raso ou meramente decorativo, os cursos da ESDHUBEM unem embasamento científico, humanização integrativa e aplicabilidade prática. Você ganha clareza conceitual para tomar decisões e construir uma trajetória ética e próspera."
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "pt-2 flex flex-wrap gap-4 text-xs font-semibold",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+															className: "flex items-center gap-1.5 text-emerald-400",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5" }), " Sem mensalidades"]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+															className: "flex items-center gap-1.5 text-emerald-400",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5" }), " Acesso imediato à Sala de Aula"]
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+															className: "flex items-center gap-1.5 text-emerald-400",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5" }), " Suporte pedagógico direto"]
+														})
+													]
 												})
 											]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "bg-slate-50 border border-slate-200 p-6 rounded-xl",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-												className: "text-sm sm:text-base text-slate-700 leading-relaxed text-justify",
-												children: [
-													"Certificado de Curso Livre emitido pela ",
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar (CNPJ 61.928.778/0001-50)" }),
-													" em total conformidade com a ",
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/96)" }),
-													" e o ",
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Decreto Presidencial nº 5.154/2004" }),
-													". Não é diploma de graduação, pós-graduação formal stricto sensu ou ensino técnico."
-												]
-											})
 										})
 									]
 								}),
-								activeTab === "autenticidade" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-										className: "text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(QrCode, { className: "w-4 h-4" })
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Autenticidade e Consulta Pública" })]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "border border-slate-200 p-6 rounded-xl bg-slate-50 flex flex-col md:flex-row gap-6 items-center md:items-start",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "bg-white p-4 rounded-xl shadow-sm border border-slate-200 shrink-0",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(QrCode, { className: "w-20 h-20 text-[#182333]" })
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex-1",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-												className: "text-lg font-bold text-[#182333] mb-2",
-												children: "Verificação Instantânea"
+								activeTab === "conteudo" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-6 animate-in fade-in duration-300",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-100",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+												className: "text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-3",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "w-9 h-9 rounded-xl bg-[#182333] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5" })
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Grade Curricular e Conteúdo Programático" })]
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-												className: "text-sm sm:text-base text-slate-600 leading-relaxed",
-												children: "Inclui autenticidade via QR Code e código alfanumérico com consulta pública instantânea para faculdades, empresas e conselhos de classe."
+												className: "text-xs sm:text-sm text-slate-500 mt-1",
+												children: "Clique nos módulos abaixo para visualizar os tópicos e detalhamento das aulas."
+											})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "self-start sm:self-center bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-full",
+												children: [syllabus.length, " Módulos Estruturados"]
 											})]
-										})]
-									})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "space-y-3.5",
+											children: syllabus.map((modTitle, index) => {
+												const isExpanded = expandedModules.includes(index);
+												const topics = getModuleTopics(modTitle, index);
+												return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "border border-slate-200 rounded-xl overflow-hidden shadow-2xs transition-all bg-white",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+														type: "button",
+														onClick: () => toggleModule(index),
+														className: "w-full text-left bg-slate-50/80 hover:bg-slate-100 px-5 py-4 flex justify-between items-center transition cursor-pointer select-none",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+															className: "flex items-center gap-3.5",
+															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "w-8 h-8 rounded-lg bg-[#182333] text-[#FFC72C] text-xs font-black flex items-center justify-center shrink-0",
+																children: index + 1
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+																className: "font-bold text-sm sm:text-base text-[#182333]",
+																children: modTitle
+															}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+																className: "text-[11px] text-slate-500",
+																children: [topics.length, " Aulas / Tópicos de Estudo"]
+															})] })]
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-7 h-7 rounded-full bg-white flex items-center justify-center border border-slate-200 text-slate-500 shrink-0",
+															children: isExpanded ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronUp, { className: "w-4 h-4" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: "w-4 h-4" })
+														})]
+													}), isExpanded && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "p-5 bg-white border-t border-slate-200 text-xs sm:text-sm space-y-3",
+														children: [
+															/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+																className: "text-slate-500 font-medium",
+																children: "Tópicos abordados neste módulo:"
+															}),
+															/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+																className: "space-y-2",
+																children: topics.map((topic, tIdx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+																	className: "flex items-start gap-2.5 text-slate-700",
+																	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+																		className: "w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]",
+																		children: tIdx + 1
+																	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "leading-relaxed",
+																		children: topic
+																	})]
+																}, tIdx))
+															}),
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																className: "pt-3 mt-3 border-t border-slate-100 flex flex-wrap items-center justify-between text-xs text-slate-500 gap-2",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+																	className: "flex items-center gap-1",
+																	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileText, { className: "w-3.5 h-3.5 text-[#182333]" }), "Apostila Digital em PDF inclusa"]
+																}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+																	className: "flex items-center gap-1 text-emerald-700 font-semibold",
+																	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5" }), "Exercícios Práticos de Fixação"]
+																})]
+															})
+														]
+													})]
+												}, index);
+											})
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "p-4 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-between gap-4",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-3",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "w-9 h-9 rounded-lg bg-[#FFC72C] text-[#182333] flex items-center justify-center shrink-0 font-bold",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-5 h-5" })
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+													className: "font-bold text-xs sm:text-sm text-[#182333]",
+													children: "Avaliação de Fixação Final"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													className: "text-[11px] text-slate-600",
+													children: "Questionário objetivo online de 10 questões (média mínima 6.0 para emitir certificado)."
+												})] })]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												onClick: onEnroll,
+												className: "shrink-0 px-4 py-2 bg-[#182333] hover:bg-slate-900 text-white font-bold text-xs rounded-xl transition cursor-pointer",
+												children: "Acessar Aulas"
+											})]
+										})
+									]
 								}),
-								activeTab === "formato" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-										className: "text-xl sm:text-2xl font-bold text-[#182333] flex items-center gap-3",
+								activeTab === "certificacao" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-8 animate-in fade-in duration-300",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+											className: "text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "w-9 h-9 rounded-xl bg-[#182333] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-5 h-5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Certificado Registrado com Validade Nacional" })]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+											className: "mt-2 text-slate-600 text-sm sm:text-base leading-relaxed",
+											children: [
+												"O certificado emitido pela ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "ESDHUBEM - Escola de Desenvolvimento Humano e Bem-estar (CNPJ 61.928.778/0001-50)" }),
+												" possui amparo integral na ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Lei nº 9.394/96" }),
+												" e no ",
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Decreto Presidencial nº 5.154/04" }),
+												"."
+											]
+										})] }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-bold text-base text-[#182333]",
+												children: "Para que serve este Certificado Oficial?"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "grid grid-cols-1 sm:grid-cols-2 gap-3.5",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center font-bold shrink-0",
+															children: "🎓"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+															className: "font-bold text-xs sm:text-sm text-[#182333]",
+															children: "Horas Complementares (AACCs)"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-[11px] text-slate-600 mt-0.5 leading-relaxed",
+															children: "Aceito por faculdades e universidades para abatimento de horas complementares obrigatórias de graduação."
+														})] })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold shrink-0",
+															children: "⚖️"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+															className: "font-bold text-xs sm:text-sm text-[#182333]",
+															children: "Prova de Títulos em Concursos"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-[11px] text-slate-600 mt-0.5 leading-relaxed",
+															children: "Pode pontuar em provas de títulos de concursos públicos municipais, estaduais e federais (conforme edital)."
+														})] })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold shrink-0",
+															children: "📈"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+															className: "font-bold text-xs sm:text-sm text-[#182333]",
+															children: "Promoção e Plano de Cargos"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-[11px] text-slate-600 mt-0.5 leading-relaxed",
+															children: "Comprove aperfeiçoamento contínuo para progressão na carreira, promoção salarial e avaliações anuais de desempenho."
+														})] })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-3",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center font-bold shrink-0",
+															children: "💼"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+															className: "font-bold text-xs sm:text-sm text-[#182333]",
+															children: "Enriquecimento do Currículo"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-[11px] text-slate-600 mt-0.5 leading-relaxed",
+															children: "Destaque-se em processos seletivos e inclua a certificação no seu LinkedIn e no Currículo Lattes."
+														})] })]
+													})
+												]
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-slate-900 text-white p-6 sm:p-8 rounded-2xl space-y-6 border border-slate-700",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex flex-col sm:flex-row sm:items-center justify-between gap-4",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-xs font-black text-[#FFC72C] uppercase tracking-wider",
+														children: "Amostra Oficial Registrada"
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+														className: "text-lg sm:text-xl font-bold mt-1",
+														children: "Veja como é o Certificado da ESDHUBEM"
+													})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "flex items-center bg-slate-800 p-1 rounded-xl border border-slate-700 shrink-0",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+															type: "button",
+															onClick: () => setCertificateViewMode("frente"),
+															className: `px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer ${certificateViewMode === "frente" ? "bg-[#FFC72C] text-[#182333]" : "text-slate-400 hover:text-white"}`,
+															children: "Frente (Diploma)"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+															type: "button",
+															onClick: () => setCertificateViewMode("verso"),
+															className: `px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer ${certificateViewMode === "verso" ? "bg-[#FFC72C] text-[#182333]" : "text-slate-400 hover:text-white"}`,
+															children: "Verso (Grade & Registro)"
+														})]
+													})]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "bg-white text-slate-900 p-6 sm:p-8 rounded-xl shadow-2xl border-4 border-amber-300/80 relative overflow-hidden font-serif",
+													children: certificateViewMode === "frente" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "space-y-4 text-center",
+														children: [
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																className: "flex items-center justify-between border-b-2 border-slate-200 pb-3",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																	className: "text-left",
+																	children: [
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																			className: "text-[10px] font-sans font-black text-slate-500 uppercase tracking-widest block",
+																			children: "República Federativa do Brasil"
+																		}),
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+																			className: "text-sm sm:text-base font-sans font-black text-[#182333] tracking-tight",
+																			children: "ESDHUBEM — EDUCAÇÃO INTEGRAL"
+																		}),
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																			className: "text-[9px] font-sans text-slate-400 block",
+																			children: "CNPJ: 61.928.778/0001-50 • Registro Nacional de Cursos Livres"
+																		})
+																	]
+																}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+																	className: "w-12 h-12 rounded-full border-2 border-amber-500 bg-amber-50 flex items-center justify-center text-amber-700 shrink-0 shadow-inner",
+																	children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-7 h-7" })
+																})]
+															}),
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																className: "py-4",
+																children: [
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "text-xs uppercase tracking-widest font-sans font-bold text-amber-600 block mb-1",
+																		children: "CERTIFICADO DE CONCLUSÃO E APROVEITAMENTO"
+																	}),
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+																		className: "text-xs sm:text-sm font-sans text-slate-600",
+																		children: "Certificamos que o(a) aluno(a)"
+																	}),
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+																		className: "text-xl sm:text-2xl font-bold text-[#182333] my-2 underline decoration-amber-400 decoration-2 underline-offset-4",
+																		children: "[NOME DO ESTUDANTE CADASTRADO]"
+																	}),
+																	/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+																		className: "text-xs sm:text-sm text-slate-700 max-w-xl mx-auto leading-relaxed",
+																		children: [
+																			"concluiu com êxito e satisfatório aproveitamento o curso livre de",
+																			" ",
+																			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: title }),
+																			", cumprindo a carga horária total de",
+																			" ",
+																			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("strong", { children: [selectedHours, " horas"] }),
+																			", em conformidade com as diretrizes pedagógicas e a legislação vigente."
+																		]
+																	})
+																]
+															}),
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																className: "pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																	className: "flex items-center gap-2",
+																	children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+																		className: "w-12 h-12 bg-slate-100 border border-slate-300 rounded flex items-center justify-center p-1",
+																		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(QrCode, { className: "w-9 h-9 text-[#182333]" })
+																	}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																		className: "text-left text-[10px] text-slate-500",
+																		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																			className: "font-bold text-[#182333] block",
+																			children: "Validação Digital Instantânea"
+																		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Código: ESDH-2026-VAL-9842" })]
+																	})]
+																}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																	className: "text-center sm:text-right border-t sm:border-t-0 pt-2 sm:pt-0",
+																	children: [
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+																			className: "font-script text-sm font-bold text-slate-800 italic",
+																			children: "Silviane Silvério"
+																		}),
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																			className: "text-[10px] text-slate-500 font-bold block",
+																			children: "Profª. Dra. Silviane Silvério"
+																		}),
+																		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																			className: "text-[9px] text-slate-400",
+																			children: "Coordenação Pedagógica ESDHUBEM"
+																		})
+																	]
+																})]
+															})
+														]
+													}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "space-y-4 font-sans text-xs text-left",
+														children: [
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																className: "flex items-center justify-between border-b pb-2",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "font-black text-[#182333] uppercase text-[11px]",
+																	children: "Verso Oficial do Certificado — Registro e Grade Curricular"
+																}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "text-[10px] text-slate-500",
+																	children: "Livro: 14 • Folha: 89 • Reg: #2026-8819"
+																})]
+															}),
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																className: "space-y-2",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "font-bold text-[#182333] block text-[11px] uppercase",
+																	children: "Conteúdo Programático Discriminado:"
+																}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+																	className: "grid grid-cols-1 sm:grid-cols-2 gap-2 text-[10px] text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-200",
+																	children: syllabus.map((s, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																		className: "flex items-start gap-1.5",
+																		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3 h-3 text-emerald-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: s })]
+																	}, idx))
+																})]
+															}),
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+																className: "p-3 bg-amber-50 rounded-lg border border-amber-200 text-[10px] text-slate-700 space-y-1",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+																	className: "block text-amber-950 font-bold",
+																	children: "Amparo Legal da Certificação:"
+																}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Curso Livre amparado pela Lei de Diretrizes e Bases da Educação Nacional nº 9.394/1996 (art. 42), Decreto Presidencial nº 5.154/2004 e Deliberação CEE 14/1997. Válido em todo o território nacional como capacitação profissional, aperfeiçoamento e horas complementares universitárias." })]
+															})
+														]
+													})
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex flex-wrap items-center justify-between gap-3 pt-2",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+														type: "button",
+														onClick: () => {
+															if (onOpenCertificatePreview) onOpenCertificatePreview();
+															else if (onNavigate) onNavigate("regras-certificacao-merito");
+														},
+														className: "px-4 py-2.5 bg-[#FFC72C] hover:bg-amber-300 text-[#182333] font-bold text-xs rounded-xl flex items-center gap-2 cursor-pointer transition shadow-md",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eye, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Abrir Visualizador Completo do Certificado" })]
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+														type: "button",
+														onClick: onOpenValidator,
+														className: "px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-xl flex items-center gap-2 cursor-pointer transition border border-white/20",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(QrCode, { className: "w-4 h-4 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Testar Validador Público de QR Code" })]
+													})]
+												})
+											]
+										})
+									]
+								}),
+								activeTab === "metodologia" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-8 animate-in fade-in duration-300",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+											className: "text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "w-9 h-9 rounded-xl bg-[#182333] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Zap, { className: "w-5 h-5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Como Funciona o Curso: Passo a Passo" })]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-2 text-slate-600 text-sm sm:text-base leading-relaxed",
+											children: "Nossa metodologia EAD foi desenvolvida para você aprender com autonomia e tranquilidade, sem burocracia ou pressões desnecessárias."
+										})] }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs space-y-2",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-full bg-[#182333] text-[#FFC72C] flex items-center justify-center font-black text-sm",
+															children: "1"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+															className: "font-bold text-sm text-[#182333]",
+															children: "Inscrição Instantânea"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-xs text-slate-600 leading-relaxed",
+															children: "Faça sua matrícula grátis em menos de 1 minuto. Não pedimos dados desnecessários nem cartão de crédito para assistir às aulas."
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs space-y-2",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-full bg-[#182333] text-[#FFC72C] flex items-center justify-center font-black text-sm",
+															children: "2"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+															className: "font-bold text-sm text-[#182333]",
+															children: "Acesso Imediato à Sala de Aula"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-xs text-slate-600 leading-relaxed",
+															children: "Acesse todo o acervo didático, videoaulas, textos fundamentados e apostilas em PDF pelo celular, tablet ou computador."
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs space-y-2",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-full bg-[#182333] text-[#FFC72C] flex items-center justify-center font-black text-sm",
+															children: "3"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+															className: "font-bold text-sm text-[#182333]",
+															children: "Estude no Seu Próprio Ritmo"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-xs text-slate-600 leading-relaxed",
+															children: "Você define seus horários. As aulas ficam disponíveis 24 horas por dia, 7 dias por semana, sem prazo limite para conclusão."
+														})
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs space-y-2",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "w-8 h-8 rounded-full bg-[#182333] text-[#FFC72C] flex items-center justify-center font-black text-sm",
+															children: "4"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+															className: "font-bold text-sm text-[#182333]",
+															children: "Avaliação Online e Certificado"
+														}),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+															className: "text-xs text-slate-600 leading-relaxed",
+															children: "Após concluir os módulos, realize o teste objetivo online de fixação. Atingindo nota 6.0 ou superior, seu certificado é liberado na hora!"
+														})
+													]
+												})
+											]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "p-5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "space-y-1",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+													className: "font-bold text-sm text-[#182333]",
+													children: "E se eu não passar na avaliação?"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													className: "text-xs text-slate-600",
+													children: "Não se preocupe: você pode revisar os conteúdos e refazer a avaliação sem qualquer custo adicional."
+												})]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												onClick: onEnroll,
+												className: "shrink-0 px-4 py-2.5 bg-[#FFC72C] hover:bg-amber-300 text-[#182333] font-bold text-xs rounded-xl transition cursor-pointer",
+												children: "Começar Agora"
+											})]
+										})
+									]
+								}),
+								activeTab === "publico" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-8 animate-in fade-in duration-300",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+											className: "text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "w-9 h-9 rounded-xl bg-[#182333] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-5 h-5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Público-Alvo e Competências" })]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-2 text-slate-600 text-sm sm:text-base leading-relaxed",
+											children: "Este curso é aberto a qualquer pessoa interessada em desenvolvimento humano, clareza relacional e capacitação ética."
+										})] }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-4",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-bold text-sm text-[#182333] uppercase tracking-wider",
+												children: "Quem mais se beneficia desta formação:"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-2.5",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Estudantes Universitários:" }), " que necessitam comprovar horas complementares curriculares obrigatórias."] })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-2.5",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Líderes, Gestores e Supervisores:" }), " buscando aprimorar a escuta ativa e conduzir reuniões sem conflito tóxico."] })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-2.5",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Terapeutas e Profissionais do Bem-Estar:" }), " coaches, psicólogos, educadores e facilitadores de grupos."] })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-2.5",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Profissionais em Transição de Carreira:" }), " que buscam enriquecer o currículo com soft skills valorizadas pelo mercado."] })]
+													})
+												]
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-4 pt-4 border-t border-slate-100",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-bold text-sm text-[#182333] uppercase tracking-wider",
+												children: "Competências desenvolvidas:"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+												className: "grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+														className: "flex items-center gap-2 p-3 bg-white border border-slate-200 rounded-lg shadow-2xs",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, { className: "w-4 h-4 text-[#182333]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Autogestão e inteligência emocional em crises" })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+														className: "flex items-center gap-2 p-3 bg-white border border-slate-200 rounded-lg shadow-2xs",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Target, { className: "w-4 h-4 text-[#182333]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Firmeza com elegância e diplomacia relacional" })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+														className: "flex items-center gap-2 p-3 bg-white border border-slate-200 rounded-lg shadow-2xs",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-4 h-4 text-[#182333]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Mediação pacífica e produtiva de controvérsias" })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+														className: "flex items-center gap-2 p-3 bg-white border border-slate-200 rounded-lg shadow-2xs",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4 text-[#182333]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Postura técnica e liderança humanizada" })]
+													})
+												]
+											})]
+										})
+									]
+								}),
+								activeTab === "legislacao" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-6 animate-in fade-in duration-300",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+											className: "text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "w-9 h-9 rounded-xl bg-[#182333] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileCheck, { className: "w-5 h-5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Amparo Legal e Reconhecimento dos Cursos Livres" })]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-2 text-slate-600 text-sm sm:text-base leading-relaxed",
+											children: "Conheça os dispositivos legais da República Federativa do Brasil que asseguram a validade dos cursos oferecidos pela ESDHUBEM."
+										})] }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50 p-6 rounded-2xl border border-slate-200",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "border-b border-slate-200 pb-3",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+														className: "font-bold text-[#182333] text-sm mb-1",
+														children: "1. Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/1996)"
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+														className: "text-slate-600",
+														children: "Os cursos livres constituem modalidade legítima de educação profissional básica e continuada (art. 42), destinados a proporcionar aos trabalhadores e cidadãos conhecimentos que lhes permitam profissionalizar-se, qualificar-se e atualizar-se para o trabalho e a vida cidadã."
+													})]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "border-b border-slate-200 pb-3",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+														className: "font-bold text-[#182333] text-sm mb-1",
+														children: "2. Decreto Presidencial nº 5.154/2004"
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+														className: "text-slate-600",
+														children: "Regulamenta os artigos 39 a 41 da LDB, disciplinando a oferta de cursos de formação inicial e continuada de trabalhadores, com livre organização curricular e sem necessidade de prévia autorização do MEC para funcionamento."
+													})]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+													className: "font-bold text-[#182333] text-sm mb-1",
+													children: "3. Deliberação CEE 14/1997 e Parecer CNE/CES 263/2006"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													className: "text-slate-600",
+													children: "Assegura a autonomia das instituições universitárias para reconhecer e averbar certificados de cursos livres como Atividades Acadêmicas Complementares (AACCs)."
+												})] })
+											]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "p-4 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-950 space-y-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2 font-bold",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-4 h-4 text-blue-700" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Transparência Pedagógica ESDHUBEM:" })]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+												className: "leading-relaxed",
+												children: [
+													"Nossos cursos são classificados como ",
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Cursos Livres de Capacitação, Atualização e Formação Continuada" }),
+													". Eles ",
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "não" }),
+													" equivalem a cursos de graduação, licenciatura ou pós-graduação formal stricto sensu, não emitindo diplomas privativos de faculdades regulares."
+												]
+											})]
+										})
+									]
+								}),
+								activeTab === "faq" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-6 animate-in fade-in duration-300",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+										className: "text-xl sm:text-2xl font-black text-[#182333] flex items-center gap-3",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "w-8 h-8 rounded-lg bg-[#243042] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutTemplate, { className: "w-4 h-4" })
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Formato e Carga Horária" })]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "border border-slate-200 bg-white p-6 rounded-xl text-center shadow-sm",
-											children: [
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-10 h-10 text-[#FFC72C] mx-auto mb-3" }),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-													className: "font-bold text-[#182333] text-lg mb-1",
-													children: "Carga Horária"
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-													className: "text-base text-slate-600 font-semibold",
-													children: "40 horas expressas"
-												})
-											]
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "border border-slate-200 bg-white p-6 rounded-xl text-center shadow-sm",
-											children: [
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-10 h-10 text-[#FFC72C] mx-auto mb-3" }),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-													className: "font-bold text-[#182333] text-lg mb-1",
-													children: "Formato"
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-													className: "text-base text-slate-600 font-semibold",
-													children: "100% Online Assíncrono"
-												})
-											]
-										})]
+											className: "w-9 h-9 rounded-xl bg-[#182333] text-[#FFC72C] flex items-center justify-center text-sm shadow-xs",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleQuestionMark, { className: "w-5 h-5" })
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Perguntas Frequentes sobre o Curso" })]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-2 text-slate-600 text-sm sm:text-base leading-relaxed",
+										children: "Tire suas dúvidas rápidas sobre acesso, metodologia, horas e certificação."
+									})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "space-y-3",
+										children: [
+											{
+												q: "O curso é realmente gratuito para assistir?",
+												a: "Sim! Na ESDHUBEM, adotamos o modelo Freepremium Educacional. Você pode se matricular, acessar a Sala de Aula virtual, assistir a todas as videoaulas e ler o material didático sem custo nenhum."
+											},
+											{
+												q: "O certificado é aceito na minha faculdade para horas complementares?",
+												a: "Sim! Nossos certificados possuem amparo na Lei nº 9.394/96 e no Decreto nº 5.154/04. Eles contêm carga horária expressa, conteúdo programático no verso, CNPJ institucional e QR Code de verificação digital, atendendo às exigências da grande maioria das faculdades brasileiras."
+											},
+											{
+												q: "Como funciona a escolha da carga horária do certificado?",
+												a: "Você pode escolher a carga horária que melhor atende à sua necessidade curricular (ex: 20h, 40h, 60h, 80h ou 120h). O conteúdo programático é calibrado para refletir a profundidade das horas escolhidas."
+											},
+											{
+												q: "Posso usar o certificado em concursos públicos?",
+												a: "Sim, desde que o edital específico do concurso preveja pontuação para cursos livres de aperfeiçoamento na etapa de Prova de Títulos."
+											},
+											{
+												q: "Em quanto tempo recebo o certificado?",
+												a: "Assim que você concluir os módulos e atingir a nota mínima de 6.0 no teste online, seu Certificado Oficial Digital em PDF de alta resolução com QR Code é liberado imediatamente para download e impressão."
+											},
+											{
+												q: "Existe algum prazo limite para terminar o curso?",
+												a: "Não. O acesso às aulas é vitalício para os módulos gravados. Você pode estudar no seu tempo, de acordo com sua rotina de trabalho ou estudos."
+											}
+										].map((faqItem, fIdx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "border border-slate-200 rounded-xl overflow-hidden bg-white shadow-2xs",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+												type: "button",
+												onClick: () => setExpandedFaq(expandedFaq === fIdx ? null : fIdx),
+												className: "w-full text-left px-5 py-4 flex items-center justify-between gap-3 bg-slate-50/60 hover:bg-slate-100 transition cursor-pointer select-none",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "font-bold text-xs sm:text-sm text-[#182333]",
+													children: faqItem.q
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "w-6 h-6 rounded-full bg-white flex items-center justify-center border border-slate-200 text-slate-500 shrink-0",
+													children: expandedFaq === fIdx ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronUp, { className: "w-4 h-4" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: "w-4 h-4" })
+												})]
+											}), expandedFaq === fIdx && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "p-5 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white",
+												children: faqItem.a
+											})]
+										}, fIdx))
 									})]
 								})
 							]
 						})
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "w-full lg:w-1/3 space-y-6",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "bg-white border border-slate-200 shadow-md rounded-2xl overflow-hidden",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "p-6 flex flex-col items-center text-center",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								id: "seletor-matricula-sidebar",
+								className: "bg-white border-2 border-slate-200 shadow-xl rounded-2xl overflow-hidden sticky top-20",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+											src: image,
+											alt: title,
+											className: "w-full h-44 object-cover",
+											referrerPolicy: "no-referrer"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "absolute bottom-3 left-4 flex gap-2",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "bg-[#182333]/90 backdrop-blur-xs text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-md border border-amber-400/20",
+												children: isDigitalService ? "Serviço Digital" : "Matrículas Abertas"
+											})
+										})
+									]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "p-6 space-y-6",
+									children: !isDigitalService ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "grid grid-cols-2 p-1 bg-slate-100 rounded-xl border border-slate-200 text-xs font-bold",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												type: "button",
+												onClick: () => setEnrollmentMode("gratis"),
+												className: `py-2.5 rounded-lg transition-all cursor-pointer text-center ${enrollmentMode === "gratis" ? "bg-white text-[#182333] shadow-sm" : "text-slate-500 hover:text-slate-900"}`,
+												children: "Acesso Livre (Grátis)"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												type: "button",
+												onClick: () => setEnrollmentMode("certificado"),
+												className: `py-2.5 rounded-lg transition-all cursor-pointer text-center ${enrollmentMode === "certificado" ? "bg-[#182333] text-[#FFC72C] shadow-sm" : "text-slate-500 hover:text-slate-900"}`,
+												children: "Com Certificado Oficial"
+											})]
+										}),
+										enrollmentMode === "gratis" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-4",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "border-b border-slate-100 pb-4",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex items-baseline gap-2",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-3xl font-black text-emerald-700",
+														children: "R$ 0,00"
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-xs text-slate-500 font-semibold",
+														children: "100% Gratuito"
+													})]
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													className: "text-xs text-slate-600 mt-1",
+													children: "Acesso completo a todas as aulas teóricas e materiais de estudo. Você só paga taxa se optar por emitir o certificado oficial após a conclusão."
+												})]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+												type: "button",
+												onClick: onEnroll,
+												className: "w-full bg-[#182333] hover:bg-slate-900 active:scale-95 transition-all text-[#FFC72C] font-extrabold text-sm py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 cursor-pointer group",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Matricular Grátis Agora" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
+											})]
+										}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-4",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+													className: "block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider",
+													children: "Escolha a Carga Horária do Certificado:"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "grid grid-cols-1 gap-2",
+													children: HOURS_OPTIONS.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+														type: "button",
+														onClick: () => setSelectedHours(opt.hours),
+														className: `w-full p-2.5 rounded-xl border text-left flex items-center justify-between transition cursor-pointer ${selectedHours === opt.hours ? "border-[#182333] bg-[#182333]/5 ring-2 ring-[#182333]" : "border-slate-200 hover:border-slate-300 bg-white"}`,
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+															className: "flex items-center gap-2",
+															children: [
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+																	className: `w-4 h-4 rounded-full border flex items-center justify-center ${selectedHours === opt.hours ? "border-[#182333] bg-[#182333]" : "border-slate-300"}`,
+																	children: selectedHours === opt.hours && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-[#FFC72C]" })
+																}),
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "text-xs font-bold text-[#182333]",
+																	children: opt.label
+																}),
+																opt.isPopular && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "bg-[#FFC72C] text-[#182333] text-[10px] font-black px-2 py-0.5 rounded-full uppercase",
+																	children: opt.badge
+																})
+															]
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+															className: "text-xs font-black text-[#182333]",
+															children: ["R$ ", opt.price.toFixed(2).replace(".", ",")]
+														})]
+													}, opt.hours))
+												})] }),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "p-3 bg-amber-50 rounded-xl border border-amber-200 flex items-baseline justify-between",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-[10px] uppercase font-bold text-slate-500 block",
+														children: "Investimento Único:"
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+														className: "text-2xl font-black text-[#182333]",
+														children: ["R$ ", selectedPricing.price.toFixed(2).replace(".", ",")]
+													})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-[11px] text-emerald-700 font-bold",
+														children: "Sem Mensalidades"
+													})]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+													type: "button",
+													onClick: () => {
+														onEnroll();
+													},
+													className: "w-full bg-[#FFC72C] hover:bg-[#F5B014] active:scale-95 transition-all text-[#182333] font-black text-sm py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 cursor-pointer group",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
+														"Garantir Certificado de ",
+														selectedHours,
+														"h"
+													] })]
+												})
+											]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "space-y-2.5 pt-2 border-t border-slate-100 text-xs text-slate-600",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex items-center gap-2",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Válido em todo o Brasil (Lei nº 9.394/96)" })]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex items-center gap-2",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "QR Code para validação pública instantânea" })]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex items-center gap-2",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Acesso imediato à Sala de Aula virtual" })]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex items-center gap-2",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Avaliação online com direito a refazer" })]
+												})
+											]
+										})
+									] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "space-y-4",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "border-b border-slate-100 pb-4",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "text-2xl font-black text-[#182333]",
+													children: course?.priceNote || "A partir de R$ 397"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "block text-xs text-emerald-700 font-semibold mt-1",
+													children: "Entrega expressa em até 48 horas"
+												})]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+												href: "https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20solicitar%20a%20criação%20da%20minha%20página%20profissional.",
+												target: "_blank",
+												rel: "noreferrer",
+												className: "w-full bg-[#FFC72C] hover:bg-[#F5B014] active:scale-95 transition-all text-[#182333] font-extrabold text-sm py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 cursor-pointer group",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Contratar via WhatsApp" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+												className: "text-xs text-slate-600 space-y-2 pt-2",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+														className: "flex items-center gap-2",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "1 Ano de Domínio e Hospedagem inclusos" })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+														className: "flex items-center gap-2",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Design Responsivo otimizado para celulares" })]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+														className: "flex items-center gap-2",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-4 h-4 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Botão direto para o seu WhatsApp" })]
+													})
+												]
+											})
+										]
+									})
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-white border border-slate-200 shadow-sm rounded-2xl p-6 text-center space-y-4",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "relative mb-4",
+										className: "relative inline-block",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "w-16 h-16 rounded-full overflow-hidden bg-slate-200 shrink-0 border-2 border-white shadow-md",
+											className: "w-20 h-20 rounded-full overflow-hidden bg-slate-200 mx-auto border-3 border-[#FFC72C] shadow-md",
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 												src: prof_silviane_default,
 												alt: "Professora Silviane Silvério",
 												className: "w-full h-full object-cover"
 											})
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "absolute bottom-0 right-0 bg-[#FFC72C] text-slate-950 p-1 rounded-full shadow-xs",
-											title: "Docente Certificada ESDHUBEM",
+											className: "absolute bottom-0 right-0 bg-[#182333] text-[#FFC72C] p-1.5 rounded-full shadow-xs",
+											title: "Docente Certificada",
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-4 h-4" })
 										})]
 									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										className: "text-base font-bold text-[#182333] mb-1",
-										children: "Professora Silviane Silvério"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "text-xs text-slate-500 leading-relaxed max-w-xs",
-										children: "Graduada em Biomedicina, Pós-graduada em Práticas Integrativas e Complementares. Especialista em Desenvolvimento Humano e Comunicação Assertiva."
-									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+											className: "font-extrabold text-[#182333] text-base",
+											children: "Profª. Silviane Silvério"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-xs text-slate-500 font-semibold block mt-0.5",
+											children: "Biomédica • Coordenação Pedagógica ESDHUBEM"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-xs text-slate-600 mt-2 leading-relaxed",
+											children: "Pós-graduada em Práticas Integrativas em Saúde, especialista em Desenvolvimento Humano, Gestão de Conflitos e Educação Socioemocional."
+										})
+									] }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 										href: "https://lattes.cnpq.br/7481458793724724",
 										target: "_blank",
 										rel: "noreferrer",
-										className: "mt-4 inline-flex items-center gap-2 text-[#243042] hover:text-[#FFC72C] hover:bg-[#243042] bg-slate-100 px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all",
-										title: "Acessar Currículo Lattes no CNPq",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "CURRÍCULO LATTES" })]
+										className: "inline-flex items-center gap-1.5 text-[#182333] hover:text-amber-600 bg-slate-100 hover:bg-slate-200 px-4 py-2 rounded-xl text-xs font-bold transition-all",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Currículo Lattes (CNPq)" })]
 									})
 								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "bg-slate-50 border border-slate-200 rounded-2xl p-5 text-center space-y-2 text-xs text-slate-600",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center justify-center gap-1.5 font-bold text-[#182333]",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-4 h-4 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Instituição Registrada e Segura" })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-[11px] text-slate-500",
+									children: [
+										"ESDHUBEM — Escola de Desenvolvimento Humano e Bem-estar",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
+										"CNPJ: 61.928.778/0001-50 • São Paulo/SP"
+									]
+								})]
 							})
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "bg-white border border-slate-200 shadow-xl rounded-2xl overflow-hidden sticky top-24",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "relative",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-										src: image,
-										alt: title,
-										className: "w-full h-48 object-cover",
-										referrerPolicy: "no-referrer"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent" }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "absolute bottom-3 left-4 flex gap-2",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "bg-[#243042]/90 backdrop-blur-xs text-[#FFC72C] text-xs font-bold px-2.5 py-1 rounded-md",
-											children: course?.pillar === "horas-complementares" ? "Horas Complementares" : "Freepremium Oficial"
-										})
-									})
-								]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "p-6 space-y-6",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "flex items-baseline justify-between border-b border-slate-100 pb-4",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "text-3xl font-black text-[#182333]",
-											children: category === "Landing Pages & Biolinks" ? course?.priceNote || "A partir de R$ 397" : "Acesso Livre"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "block text-[11px] text-emerald-700 font-semibold",
-											children: category === "Landing Pages & Biolinks" ? "Pagamento Único" : "Início Imediato"
-										})] })
-									}),
-									category === "Landing Pages & Biolinks" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-										href: "https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20solicitar%20a%20criação%20da%20minha%20página.",
-										target: "_blank",
-										rel: "noreferrer",
-										className: "w-full bg-[#FFC72C] hover:bg-[#F5B014] active:scale-95 transition-all text-[#243042] font-extrabold text-sm py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 cursor-pointer group",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Adquira Já (WhatsApp)" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-									}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-										onClick: onEnroll,
-										className: "w-full bg-[#243042] hover:bg-[#182333] active:scale-95 transition-all text-[#FFC72C] font-extrabold text-sm py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 cursor-pointer group",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Acessar Curso Agora" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-									}),
-									category !== "Landing Pages & Biolinks" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "p-4 rounded-xl bg-slate-900 text-white border border-slate-700/80 space-y-2",
-										children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												className: "flex items-center gap-2 text-[#FFC72C] font-bold text-xs",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Certificado Oficial por Mérito Acadêmico" })]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-												className: "text-[11px] text-slate-300 leading-relaxed",
-												children: "Conheça os 4 níveis de certificação (Bronze, Prata, Ouro e Diamante) amparados pela Lei nº 9.394/96."
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-												type: "button",
-												onClick: () => {
-													if (onNavigate) onNavigate("regras-certificacao-merito");
-													else if (onOpenCertificatePreview) onOpenCertificatePreview();
-													window.scrollTo({
-														top: 0,
-														behavior: "smooth"
-													});
-												},
-												className: "w-full py-2 px-3 bg-[#FFC72C] hover:bg-amber-300 text-slate-950 font-extrabold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Regras de Certificação" })]
-											})
-										]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-										className: "text-xs text-slate-600 space-y-3.5",
-										children: category === "Landing Pages & Biolinks" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex justify-between items-center border-b border-slate-100 pb-2.5",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													className: "flex items-center gap-2 text-slate-500",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-4 h-4 text-slate-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Prazo de Entrega" })]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													className: "font-bold text-[#182333]",
-													children: [
-														"Até ",
-														hours,
-														" horas"
-													]
-												})]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex justify-between items-center border-b border-slate-100 pb-2.5",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													className: "flex items-center gap-2 text-slate-500",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-4 h-4 text-slate-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Suporte e Atualizações" })]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													className: "font-bold text-[#182333]",
-													children: "3 meses grátis"
-												})]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex justify-between items-center pb-1",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													className: "flex items-center gap-2 text-slate-500",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutTemplate, { className: "w-4 h-4 text-slate-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Domínio & Hospedagem" })]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													className: "font-bold text-[#182333]",
-													children: "1 Ano Incluso"
-												})]
-											})
-										] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex justify-between items-center border-b border-slate-100 pb-2.5",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													className: "flex items-center gap-2 text-slate-500",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Signal, { className: "w-4 h-4 text-slate-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Nível" })]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													className: "font-bold text-[#182333]",
-													children: "Iniciante ao Intermediário"
-												})]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex justify-between items-center border-b border-slate-100 pb-2.5",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													className: "flex items-center gap-2 text-slate-500",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-4 h-4 text-slate-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Carga Horária" })]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													className: "font-bold text-[#182333]",
-													children: [hours, " horas expressas"]
-												})]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex justify-between items-center border-b border-slate-100 pb-2.5",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													className: "flex items-center gap-2 text-slate-500",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-4 h-4 text-slate-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Formato" })]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													className: "font-bold text-[#182333]",
-													children: "100% Online Assíncrono"
-												})]
-											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-												className: "flex justify-between items-center pb-1",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-													className: "flex items-center gap-2 text-slate-500",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4 text-slate-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Certificado" })]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													className: "font-bold text-[#182333]",
-													children: "Oficial com QR Code"
-												})]
-											})
-										] })
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "pt-4 border-t border-slate-100 flex flex-col items-center gap-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "text-[11px] font-bold text-slate-400 uppercase tracking-wider",
-											children: "Compartilhar este curso"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center gap-2.5",
-											children: [
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-													className: "w-9 h-9 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-slate-500 transition-colors",
-													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Facebook, { className: "w-4 h-4" })
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-													className: "w-9 h-9 rounded-full bg-slate-100 hover:bg-sky-500 hover:text-white flex items-center justify-center text-slate-500 transition-colors",
-													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Twitter, { className: "w-4 h-4" })
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-													className: "w-9 h-9 rounded-full bg-slate-100 hover:bg-blue-700 hover:text-white flex items-center justify-center text-slate-500 transition-colors",
-													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Linkedin, { className: "w-4 h-4" })
-												}),
-												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-													onClick: handleCopyLink,
-													className: "w-9 h-9 rounded-full bg-slate-100 hover:bg-[#FFC72C] flex items-center justify-center text-slate-500 hover:text-[#182333] transition-colors relative",
-													title: "Copiar Link",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4" }), copied && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-														className: "absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#182333] text-white text-[10px] px-2 py-1 rounded font-bold whitespace-nowrap shadow-xl z-50",
-														children: "Copiado!"
-													})]
-												})
-											]
-										})]
-									})
-								]
-							})]
-						})]
+						]
 					})]
 				})
 			})
@@ -21044,7 +21776,10 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-							onClick: onNavigateToCourseDetail,
+							onClick: () => {
+								onSelectCourse(COURSES_DATA.find((c) => c.id === "fp-assertiva") || COURSES_DATA[0]);
+								onNavigateToCourseDetail();
+							},
 							className: "bg-[#FFC72C] hover:bg-[#F5B014] text-[#243042] font-bold text-xs py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer",
 							id: "btn-ver-assertiva-categoria",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Página Completa do Curso" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4" })]
@@ -21194,7 +21929,11 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 					children: relatedCourses.map((course) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col group",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "relative h-44 overflow-hidden bg-slate-900",
+							onClick: () => {
+								onSelectCourse(course);
+								onNavigateToCourseDetail();
+							},
+							className: "relative h-44 overflow-hidden bg-slate-900 cursor-pointer",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 									src: course.image,
@@ -21250,7 +21989,11 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 											children: course.category
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "text-base font-bold text-slate-900 leading-snug group-hover:text-[#243042] transition-colors line-clamp-2",
+											onClick: () => {
+												onSelectCourse(course);
+												onNavigateToCourseDetail();
+											},
+											className: "text-base font-bold text-slate-900 leading-snug group-hover:text-[#243042] transition-colors line-clamp-2 cursor-pointer",
 											children: course.title
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -21302,17 +22045,17 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 											onClick: () => {
 												onSelectCourse(course);
-												if (course.id === "fp-assertiva") onNavigateToCourseDetail();
+												onNavigateToCourseDetail();
 											},
 											className: "w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-2 rounded-xl transition-colors text-center cursor-pointer",
 											children: "Ver Detalhes"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 											onClick: () => {
-												if (course.id === "fp-assertiva") onNavigateToCourseDetail();
-												else onNavigateToPortal(course.id);
+												onSelectCourse(course);
+												onNavigateToCourseDetail();
 											},
 											className: "w-full bg-[#243042] hover:bg-[#182333] text-white text-xs font-bold py-2 rounded-xl transition-all text-center flex items-center justify-center gap-1 cursor-pointer shadow-xs",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Acessar" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-3.5 h-3.5" })]
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Página do Curso" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-3.5 h-3.5" })]
 										})]
 									})]
 								})
@@ -35116,6 +35859,7 @@ function App() {
 			return;
 		}
 		if (sectionId === "curso-detalhe") {
+			if (!selectedCourse) setSelectedCourse(COURSES_DATA.find((c) => c.id === "fp-assertiva") || COURSES_DATA[0]);
 			setCurrentPage("curso-detalhe");
 			window.scrollTo({
 				top: 0,
@@ -35555,30 +36299,33 @@ function App() {
 					}
 				})
 			}),
-			currentPage === "curso-detalhe" && selectedCourse && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+			currentPage === "curso-detalhe" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
 				className: "flex-1",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CourseDetailPage, {
-					course: selectedCourse,
-					onBackToHome: () => {
-						setCurrentPage("home");
-						window.scrollTo({
-							top: 0,
-							behavior: "smooth"
-						});
-					},
-					onEnroll: () => {
-						setActivePortalCourseId(selectedCourse.id);
-						setCurrentPage("sala-de-aula");
-						window.scrollTo({
-							top: 0,
-							behavior: "smooth"
-						});
-						showNotification(`Inscrição confirmada! Bem-vindo(a) à Sala de Aula de ${selectedCourse.title}.`);
-					},
-					onOpenValidator: () => setIsValidatorOpen(true),
-					onOpenCertificatePreview: () => setIsCertificatePreviewOpen(true),
-					onNavigate: handleNavigate
-				})
+				children: (() => {
+					const courseToRender = selectedCourse || COURSES_DATA.find((c) => c.id === "fp-assertiva") || COURSES_DATA[0];
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CourseDetailPage, {
+						course: courseToRender,
+						onBackToHome: () => {
+							setCurrentPage("home");
+							window.scrollTo({
+								top: 0,
+								behavior: "smooth"
+							});
+						},
+						onEnroll: () => {
+							setActivePortalCourseId(courseToRender.id);
+							setCurrentPage("sala-de-aula");
+							window.scrollTo({
+								top: 0,
+								behavior: "smooth"
+							});
+							showNotification(`Inscrição confirmada! Bem-vindo(a) à Sala de Aula de ${courseToRender.title}.`);
+						},
+						onOpenValidator: () => setIsValidatorOpen(true),
+						onOpenCertificatePreview: () => setIsCertificatePreviewOpen(true),
+						onNavigate: handleNavigate
+					});
+				})()
 			}),
 			currentPage === "sala-de-aula" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
 				className: "flex-1",
