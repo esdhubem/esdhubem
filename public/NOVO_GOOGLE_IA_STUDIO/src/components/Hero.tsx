@@ -13,21 +13,19 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section id="inicio" className="bg-white">
       {/* Banner Section */}
-      <div className="relative w-full min-h-[500px] sm:min-h-[540px] md:min-h-[580px] lg:min-h-[620px] flex flex-col items-center justify-start overflow-hidden bg-[#001458]">
-        {/* Background Image */}
+      <div className="relative w-full min-h-[380px] sm:min-h-[430px] md:min-h-[480px] lg:min-h-[520px] flex flex-col items-center justify-start overflow-hidden bg-[#010927]">
+        {/* Background Image - 100% nitidez sem película de gradiente embaçando */}
         <div className="absolute inset-0 z-0">
           <img
             src={bannerImg}
             alt="ESDHUBEM • Desenvolvimento • Bem-Estar"
             className="w-full h-full object-cover object-bottom"
           />
-          {/* Subtle dark gradient overlay on top to guarantee 100% crisp readability while keeping the luminous network sphere below fully vibrant */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#001044]/85 via-[#001458]/40 to-transparent pointer-events-none" />
         </div>
 
         {/* Content over image aligned to the top */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-48 sm:pb-56 md:pb-64">
-          <div className="tracking-tight leading-tight flex flex-col items-center text-center space-y-2 sm:space-y-3">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center pt-6 sm:pt-8 md:pt-10 pb-36 sm:pb-44 md:pb-52">
+          <div className="tracking-tight leading-tight flex flex-col items-center text-center space-y-2 sm:space-y-2.5">
             {/* Linha 1: ESDHUBEM em cima sozinho */}
             <span className="text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-black text-cyan-400 tracking-widest uppercase drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]">
               ESDHUBEM
