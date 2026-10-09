@@ -1,6 +1,8 @@
 import React from 'react';
 import { Sparkles, BookOpen, Award, GraduationCap, PenTool } from 'lucide-react';
 
+import bannerImg from '../assets/banner_network_innovation.jpg';
+
 interface HeroProps {
   onSelectCategory: (category: string) => void;
 }
@@ -11,37 +13,40 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section id="inicio" className="bg-white">
       {/* Banner Section */}
-      <div className="relative w-full h-[500px] sm:h-[600px] flex items-center">
+      <div className="relative w-full min-h-[500px] sm:min-h-[540px] md:min-h-[580px] lg:min-h-[620px] flex flex-col items-center justify-start overflow-hidden bg-[#001458]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2000&q=80"
-            alt="Pessoas em desenvolvimento humano"
-            className="w-full h-full object-cover object-center"
-            referrerPolicy="no-referrer"
+            src={bannerImg}
+            alt="ESDHUBEM • Desenvolvimento • Bem-Estar"
+            className="w-full h-full object-cover object-bottom"
           />
-          {/* Overlay to make text readable */}
-          <div className="absolute inset-0 bg-[#182333]/70" />
+          {/* Subtle dark gradient overlay on top to guarantee 100% crisp readability while keeping the luminous network sphere below fully vibrant */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#001044]/85 via-[#001458]/40 to-transparent pointer-events-none" />
         </div>
 
-        {/* Content over image */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center mb-16 sm:mb-24">
-          <div className="max-w-5xl space-y-4 sm:space-y-5 flex flex-col items-center">
-            {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-bold tracking-wide shadow-lg">
-              <Sparkles className="w-4 h-4 text-[#FFC72C]" />
-              <span>ESDHUBEM • CURSOS LIVRES</span>
-            </div>
+        {/* Content over image aligned to the top */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-48 sm:pb-56 md:pb-64">
+          <div className="tracking-tight leading-tight flex flex-col items-center text-center space-y-2 sm:space-y-3">
+            {/* Linha 1: ESDHUBEM em cima sozinho */}
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-black text-cyan-400 tracking-widest uppercase drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]">
+              ESDHUBEM
+            </span>
 
-            {/* Main Title */}
-            <h1 className="tracking-tight leading-tight flex flex-col items-center">
-              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-extrabold text-white whitespace-normal sm:whitespace-nowrap">
-                Cursos Livres para Desenvolvimento
-              </span>
-              <span className="text-lg sm:text-2xl md:text-3xl lg:text-[30px] font-black text-[#FFC72C] whitespace-normal sm:whitespace-nowrap mt-1.5 sm:mt-2">
-                Pessoal, Profissional, Empresarial e Bem-Estar
-              </span>
+            {/* Linha 2: Desenvolvimento • Bem-Estar */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-black text-white leading-tight drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)]">
+              Desenvolvimento • Bem-Estar
             </h1>
+
+            {/* Linha 3: Cursos Livres em Mapas Mentais */}
+            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-[34px] font-extrabold text-[#FFC72C] leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]">
+              Cursos Livres em Mapas Mentais
+            </h2>
+
+            {/* Linha 4: A Tecnologia do Escrever e do Mapear */}
+            <p className="text-sm sm:text-lg md:text-xl lg:text-[24px] font-bold text-white tracking-wide leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
+              A Tecnologia do Escrever e do Mapear
+            </p>
           </div>
         </div>
       </div>

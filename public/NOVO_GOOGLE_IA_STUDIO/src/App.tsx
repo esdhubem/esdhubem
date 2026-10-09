@@ -14,6 +14,7 @@ import { CertificatePreviewModal } from './components/CertificatePreviewModal';
 import { Footer } from './components/Footer';
 import { StudentPortalPage } from './components/StudentPortalPage';
 import { CourseDetailPage } from './components/CourseDetailPage';
+import { CourseDetailLaunchPage } from './components/CourseDetailLaunchPage';
 import { CategoriesPage } from './components/CategoriesPage';
 import { CategoryDetailPage } from './components/CategoryDetailPage';
 import { LegalInfoPage } from './components/LegalInfoPage';
@@ -72,6 +73,7 @@ export default function App() {
   const [isValidatorOpen, setIsValidatorOpen] = useState(false);
   const [isCertificatePreviewOpen, setIsCertificatePreviewOpen] = useState(false);
   const [savedCourseIds, setSavedCourseIds] = useState<string[]>(['fp-1', 'hc-1']); // Initial saved items matching the "2" indicator
+  const [coursePageVersion, setCoursePageVersion] = useState<'lancamento' | 'padrao'>('lancamento');
   const [notification, setNotification] = useState<string | null>(null);
 
   useEffect(() => {
@@ -201,6 +203,12 @@ export default function App() {
 
     if (pagina === 'livraria' || pagina === 'livros') {
       setCurrentPage('livraria');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'sala-de-aula' || pagina === 'aula') {
+      setCurrentPage('sala-de-aula');
       window.scrollTo({ top: 0, behavior: 'instant' });
       return;
     }
@@ -774,7 +782,7 @@ export default function App() {
           {(() => {
             const courseToRender = selectedCourse || COURSES_DATA.find(c => c.id === 'fp-assertiva') || COURSES_DATA[0];
             return (
-              <CourseDetailPage
+              <CourseDetailLaunchPage
                 course={courseToRender}
                 onBackToHome={() => {
                   setCurrentPage('home');

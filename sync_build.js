@@ -32,7 +32,11 @@ const targets = [
 targets.forEach(({ html, assets }) => {
   if (fs.existsSync(distIndex)) {
     fs.mkdirSync(path.dirname(html), { recursive: true });
-    fs.copyFileSync(distIndex, html);
+    let content = fs.readFileSync(distIndex, 'utf8');
+    if (!html.includes('github-pages')) {
+      content = content.replace(/\/esdhubem\/assets\//g, './assets/').replace(/\/esdhubem\//g, './');
+    }
+    fs.writeFileSync(html, content, 'utf8');
     console.log(`Copied index.html to ${html}`);
   }
   if (fs.existsSync(distAssets)) {

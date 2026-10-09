@@ -12,7 +12,9 @@ import {
   CheckCircle,
   PlayCircle,
   ShieldCheck,
-  Search
+  Search,
+  ShoppingCart,
+  PenTool
 } from 'lucide-react';
 
 interface CourseCatalogProps {
@@ -146,137 +148,50 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredCourses.map((course) => {
-              const isSaved = savedCourseIds.includes(course.id);
-
               return (
                 <div
                   key={course.id}
-                  className="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col overflow-hidden"
+                  className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-violet-300 transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative"
                   id={`course-card-${course.id}`}
+                  onClick={() => onSelectCourse(course)}
                 >
-                  {/* Thumbnail Image */}
-                  <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+                  {/* Foto Limpa e Ampla sem poluição nem textos por cima */}
+                  <div className="relative h-52 w-full overflow-hidden bg-slate-100">
                     <img
                       src={course.image}
                       alt={course.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-
-                    {/* Pillar Badge */}
-                    <div className="absolute top-3 left-3">
-                      <span
-                        className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-xs ${
-                          course.pillar === 'freepremium'
-                            ? 'bg-emerald-600 text-white'
-                            : course.pillar === 'horas-complementares'
-                            ? 'bg-[#FFC72C] text-slate-900 font-extrabold'
-                            : 'bg-[#182333] text-white'
-                        }`}
-                      >
-                        {course.pillar === 'freepremium'
-                          ? 'Freepremium'
-                          : course.pillar === 'horas-complementares'
-                          ? 'Horas Complementares'
-                          : 'Formação Livre'}
-                      </span>
-                    </div>
-
-                    {/* Bookmark / Favorite Heart */}
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onToggleSaveCourse(course.id);
-                      }}
-                      className={`absolute top-3 right-3 p-2 rounded-full backdrop-blur-md transition-all ${
-                        isSaved
-                          ? 'bg-rose-500 text-white shadow-md'
-                          : 'bg-white/80 text-slate-600 hover:bg-white hover:text-rose-500'
-                      }`}
-                      title={isSaved ? 'Remover dos favoritos' : 'Salvar nos favoritos'}
-                    >
-                      <Heart
-                        className={`w-4 h-4 ${isSaved ? 'fill-white' : ''}`}
-                      />
-                    </button>
-
-                    {/* Category Label at bottom of image */}
-                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
-                      <span className="bg-[#182333]/80 backdrop-blur-xs px-2 py-0.5 rounded font-medium truncate max-w-[70%]">
-                        {course.category}
-                      </span>
-                      <span className="flex items-center gap-1 font-bold bg-[#FFC72C] text-slate-950 px-2 py-0.5 rounded shadow-xs">
-                        <Star className="w-3 h-3 fill-slate-950" />
-                        {course.rating.toFixed(1)}
-                      </span>
-                    </div>
                   </div>
 
-                  {/* Card Body */}
-                  <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                    <div>
-                      <h3 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-[#243042] transition-colors line-clamp-2">
+                  {/* Ícone Circular Flutuante Centralizado na Divisa da Foto */}
+                  <div className="w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[186px] z-10 text-blue-600 group-hover:scale-110 group-hover:shadow-lg transition-transform">
+                    <PenTool className="w-4 h-4 text-blue-600" />
+                  </div>
+
+                  {/* Corpo do Cartão: Título Arejado e Espaço em Branco */}
+                  <div className="pt-8 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-4">
+                    <div className="w-full">
+                      <h3 className="font-extrabold text-slate-800 text-sm sm:text-base leading-snug group-hover:text-blue-600 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
                         {course.title}
                       </h3>
-                      <p className="mt-2 text-xs text-slate-600 line-clamp-2 leading-relaxed">
-                        {course.subtitle}
-                      </p>
                     </div>
 
-                    {/* Course Metadata */}
-                    <div className="space-y-3 pt-3 border-t border-slate-100 text-xs">
-                      <div className="flex items-center justify-between text-slate-500">
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5 text-slate-400" />
-                          <span>{course.hours}h de carga horária</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="w-3.5 h-3.5 text-slate-400" />
-                          <span>{course.studentsCount} alunos</span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-1.5 text-emerald-700 font-semibold text-[11px]">
-                        <CheckCircle className="w-3.5 h-3.5" />
-                        <span>Certificado com Registro Digital</span>
-                      </div>
-                    </div>
-
-                    {/* Price & Action Button */}
-                    <div className="pt-2 flex items-center justify-between gap-3">
-                      <div>
-                        {course.pillar === 'freepremium' ? (
-                          <div>
-                            <span className="text-[10px] text-emerald-600 font-bold uppercase block">
-                              Aulas 100% Grátis
-                            </span>
-                            <span className="text-sm font-black text-slate-900">
-                              Certificado Opcional
-                            </span>
-                          </div>
-                        ) : (
-                          <div>
-                            <span className="text-[10px] text-slate-400 uppercase block font-medium">
-                              Investimento
-                            </span>
-                            <span className="text-base font-black text-slate-900">
-                              {course.priceValue ? `R$ ${course.priceValue.toFixed(2).replace('.', ',')}` : (course.priceNote || 'Consulte')}
-                            </span>
-                          </div>
-                        )}
-                      </div>
-
+                    {/* Botão Pílula Centralizado e Elegante */}
+                    <div className="pt-2 w-full flex justify-center">
                       <button
                         type="button"
-                        onClick={() => onSelectCourse(course)}
-                        className="inline-flex items-center gap-1 bg-[#FFC72C] hover:bg-[#ffcf47] text-[#182333] font-black text-xs px-4 py-2.5 rounded-xl transition-all shadow-xs hover:shadow-md cursor-pointer group-hover:translate-x-0.5"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onSelectCourse(course);
+                        }}
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm tracking-wide shadow-md shadow-blue-600/25 hover:shadow-lg transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
                       >
-                        <span>Acessar</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
+                        <ShoppingCart className="w-3.5 h-3.5" />
+                        <span>Comprar Curso</span>
                       </button>
                     </div>
                   </div>

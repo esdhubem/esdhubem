@@ -1,4 +1,8 @@
 import { CategoryItem, Course, MethodologyPillar, CertificateVerification } from '../types';
+import cardComunicacaoImg from '../assets/card_comunicacao_futurista.jpg';
+import cardConscienciaImg from '../assets/card_consciencia_futurista.jpg';
+import cardFitoterapiaImg from '../assets/card_fitoterapia_futurista.jpg';
+import cardCosmicHeroImg from '../assets/cosmic_science_hero.jpg';
 
 export const CATEGORIES_DATA: CategoryItem[] = [
   {
@@ -240,7 +244,7 @@ export const COURSES_DATA: Course[] = [
     hours: 40,
     rating: 4.9,
     studentsCount: 3800,
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80',
+    image: cardComunicacaoImg,
     tag: 'Aulas 100% Gratuitas',
     badge: 'Curso Destaque • 40h',
     description: 'Ministrado pela Professora Silviane Silvério (Biomédica e Pós-graduada em Práticas Integrativas). Conteúdo completo sobre fundamentos da comunicação assertiva, postura, comportamento e aplicação corporativa.',
@@ -262,7 +266,7 @@ export const COURSES_DATA: Course[] = [
     hours: 40,
     rating: 5.0,
     studentsCount: 1240,
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80',
+    image: cardConscienciaImg,
     tag: 'Autonomia & Clareza',
     badge: 'Destaque • 40h',
     description: 'Uma imersão profunda e prática na arte do autoconhecimento aplicado. Entenda as raízes dos seus comportamentos, desmonte autossabotagens e estabeleça uma bússola interna confiável para tomar decisões sem medo e sem culpa.',
@@ -285,7 +289,7 @@ export const COURSES_DATA: Course[] = [
     hours: 30,
     rating: 4.9,
     studentsCount: 2150,
-    image: 'https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80',
+    image: cardCosmicHeroImg,
     tag: 'Acolhimento & Resiliência',
     badge: '30h Expressas',
     description: 'Módulos curtos, diretos e acolhedores projetados para quem está atravessando fases difíceis, perdas ou transições turbulentas. Aprenda a reencontrar seu eixo, acalmar o corpo e enxergar a próxima ação viável com lucidez.',
@@ -331,7 +335,7 @@ export const COURSES_DATA: Course[] = [
     hours: 40,
     rating: 5.0,
     studentsCount: 2940,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: cardFitoterapiaImg,
     tag: 'Saúde Integrativa',
     badge: 'Plantas Medicinais • 40h',
     description: 'Aprenda com base biomédica e sabedoria tradicional como utilizar as principais plantas medicinais brasileiras com total segurança, identificando princípios ativos, formas corretas de preparo, dosagens e possíveis contraindicações.',

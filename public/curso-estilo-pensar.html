@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atendente e Balconista de Farmácia | Demonstração Estilo Visual Pensar Cursos</title>
+  <meta name="description" content="Curso de Atendente e Balconista de Farmácia - Demonstração visual com a identidade, paleta de cores e tipografia inspirada na Pensar Cursos.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans (Tipografia limpa e moderna idêntica à referência) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#7c3aed',
+              600: '#5925dc', // O roxo vibrante característico da Pensar Cursos
+              700: '#4d1ec9',
+              800: '#3c14a4',
+              900: '#2c0d7d',
+            },
+            cta: {
+              green: '#00b843', // O verde elétrico do "Matricule-se Grátis" e "Selo MEC"
+              greenHover: '#009f39',
+            },
+            surface: {
+              bg: '#f8fafd',   // Fundo cinza-azulado ultraleve
+              card: '#ffffff',
+              border: '#e8edf5',
+              hover: '#f1f5fa'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8fafd;
+      color: #1e293b;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Gradiente da Hero inspirado na Pensar Cursos */
+    .hero-gradient {
+      background: linear-gradient(135deg, #491bb8 0%, #5925dc 45%, #6e2fe6 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Linhas e marca d'água geométrica da Hero */
+    .hero-pattern {
+      background-image: radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 45%),
+                        radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.08) 0%, transparent 35%);
+    }
+
+    .graduation-watermark {
+      position: absolute;
+      right: -40px;
+      bottom: -60px;
+      font-size: 320px;
+      color: rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+      transform: rotate(-12deg);
+      user-select: none;
+    }
+
+    /* Estilo dos módulos numerados */
+    .module-item {
+      transition: all 0.2s ease-in-out;
+    }
+    .module-item:hover {
+      background-color: #f1f5fa;
+      border-color: #cbd5e1;
+      transform: translateY(-1px);
+    }
+
+    /* Badge circular com o número */
+    .badge-number {
+      background-color: #5925dc;
+      color: white;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* Bullet personalizado em tom roxo */
+    .bullet-purple {
+      width: 7px;
+      height: 7px;
+      background-color: #5925dc;
+      border-radius: 9999px;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    /* Barra de controle de demonstração fixa no topo */
+    .demo-bar {
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 0.82rem;
+    }
+
+    /* Efeito de pulso suave no botão verde */
+    .btn-green-pulse {
+      background-color: #00b843;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px 0 rgba(0, 184, 67, 0.39);
+    }
+    .btn-green-pulse:hover {
+      background-color: #009f39;
+      box-shadow: 0 6px 20px 0 rgba(0, 184, 67, 0.5);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafd] text-[#1e293b]">
+
+  <!-- BARRA DE CONTROLE / DEMONSTRAÇÃO VISUAL -->
+  <aside aria-label="Painel de Demonstração" class="demo-bar py-2.5 px-4 sticky top-0 z-[60] border-b border-slate-700/60 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-violet-600 text-white text-xs font-bold">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </span>
+        <span class="font-semibold text-white tracking-tight">Protótipo de Design Inspirado na Pensar Cursos</span>
+        <span class="hidden sm:inline-block bg-violet-500/30 text-violet-300 text-[11px] px-2 py-0.5 rounded-full border border-violet-400/30">
+          Paleta Roxo Real & Verde MEC
+        </span>
+      </div>
+
+      <!-- Alternador de Cursos para teste -->
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-xs text-slate-400">Ver como fica com outro curso:</span>
+        <button id="btnCourseFarmacia" onclick="switchCourse('farmacia')" class="px-2.5 py-1 rounded bg-violet-600 text-white font-medium text-xs hover:bg-violet-500 transition shadow-sm">
+          💊 Farmácia (Foto de Referência)
+        </button>
+        <button id="btnCourseAssertiva" onclick="switchCourse('assertiva')" class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-medium text-xs hover:bg-slate-700 hover:text-white transition border border-slate-700">
+          🗣️ Comunicação Assertiva (ESDHUBEM)
+        </button>
+        <button id="btnCourseFitoterapia" onclick="switchCourse('fitoterapia')" class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-medium text-xs hover:bg-slate-700 hover:text-white transition border border-slate-700">
+          🌿 Fitoterapia Prática (ESDHUBEM)
+        </button>
+        <button id="btnCourseIA" onclick="switchCourse('ia_inovacao')" class="px-2.5 py-1 rounded bg-slate-800 text-cyan-300 font-medium text-xs hover:bg-slate-700 hover:text-white transition border border-cyan-800">
+          🌐 IA & Inovação (Nova Imagem)
+        </button>
+        <button onclick="toggleHeroBackground()" class="px-2.5 py-1 rounded bg-sky-950 text-sky-300 font-medium text-xs hover:bg-sky-900 transition border border-sky-700/60">
+          <i class="fa-solid fa-image mr-1"></i> Fundo Banner
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVBAR ESTILO PENSAR CURSOS -->
+  <header class="bg-white sticky top-[41px] z-50 border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <div class="flex items-center gap-8">
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition">
+            <i class="fa-solid fa-graduation-cap text-xl"></i>
+          </div>
+          <div>
+            <div class="flex items-baseline">
+              <span class="text-2xl font-black text-brand-600 tracking-tight" id="navBrandName">Pensar</span>
+              <span class="text-2xl font-black text-[#1e293b] tracking-tight ml-1" id="navBrandSecond">Cursos</span>
+            </div>
+            <p class="text-[10px] text-slate-400 font-medium -mt-1 tracking-wider uppercase" id="navBrandTag">Educação e Qualificação</p>
+          </div>
+        </a>
+
+        <!-- LINKS DE NAVEGAÇÃO DESKTOP -->
+        <nav class="hidden lg:flex items-center gap-6 text-[15px] font-semibold text-slate-600">
+          <a href="#inicio" class="text-brand-600 hover:text-brand-700 transition">Página Inicial</a>
+          <a href="#cursos" class="hover:text-brand-600 transition">Cursos</a>
+          <a href="#trilhas" class="hover:text-brand-600 transition">Trilhas</a>
+          <a href="#blog" class="hover:text-brand-600 transition">Blog</a>
+          <a href="#certificado" class="hover:text-brand-600 transition">Certificado</a>
+          <a href="#tecnicos" class="hover:text-brand-600 transition">Cursos Técnicos</a>
+          <a href="#pos" class="hover:text-brand-600 transition">Pós-Graduação</a>
+        </nav>
+      </div>
+
+      <!-- BADGES E AÇÕES DIREITA -->
+      <div class="flex items-center gap-3">
+        <!-- Selo MEC Idêntico à Referência -->
+        <div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#00b843] text-white text-xs font-bold tracking-wide shadow-sm">
+          <i class="fa-solid fa-circle-check text-sm"></i>
+          <span>Selo MEC</span>
+        </div>
+
+        <!-- Botão Área do Aluno -->
+        <a href="#aluno" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-bold tracking-wide transition shadow-sm hover:shadow">
+          <i class="fa-solid fa-right-to-bracket text-xs"></i>
+          <span>Área do Aluno</span>
+        </a>
+
+        <!-- Botão Dark Mode Toggle (Decorativo como na referência) -->
+        <button class="w-10 h-10 rounded-xl border border-slate-200 text-slate-500 hover:text-brand-600 hover:bg-slate-50 flex items-center justify-center transition">
+          <i class="fa-regular fa-sun text-base"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION PRINCIPAL (GRADIENTE ROXO REAL IDÊNTICO À IMAGEM) -->
+  <section class="hero-gradient text-white py-12 lg:py-16 relative">
+    <div class="hero-pattern absolute inset-0 pointer-events-none"></div>
+    <i class="fa-solid fa-graduation-cap graduation-watermark"></i>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- COLUNA DA ESQUERDA: VÍDEO INTRODUTÓRIO (16:9 CARD) -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 bg-slate-900 group aspect-video">
+            <!-- Imagem de fundo do player simulando o vídeo do instrutor da foto -->
+            <img id="courseVideoThumbnail" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" 
+                 alt="Prévia do vídeo" 
+                 class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-500">
+            
+            <!-- Overlay escuro com controles estilo YouTube -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30 flex flex-col justify-between p-4">
+              <!-- Top bar do player -->
+              <div class="flex items-center justify-between text-white text-xs drop-shadow">
+                <div class="flex items-center gap-2">
+                  <div class="w-7 h-7 rounded-full bg-brand-600 flex items-center justify-center text-[10px] font-bold">
+                    <i class="fa-solid fa-book-medical"></i>
+                  </div>
+                  <span class="font-bold truncate max-w-[200px]" id="videoPlayerTitle">Curso de Atendente de Farmácia</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm opacity-90">
+                  <i class="fa-regular fa-bookmark cursor-pointer hover:text-brand-300"></i>
+                  <i class="fa-solid fa-gear cursor-pointer hover:text-brand-300"></i>
+                </div>
+              </div>
+
+              <!-- Botão Central de Play Pulsante -->
+              <div class="flex items-center justify-center">
+                <button onclick="playDemoVideo()" class="w-16 h-16 rounded-full bg-red-600 hover:bg-red-500 text-white flex items-center justify-center shadow-xl transform group-hover:scale-110 transition duration-300">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </button>
+              </div>
+
+              <!-- Barra de progresso e controles inferiores -->
+              <div class="space-y-1.5 text-[11px] text-white">
+                <div class="w-full bg-white/30 h-1 rounded-full overflow-hidden">
+                  <div class="bg-red-600 h-full w-1/5"></div>
+                </div>
+                <div class="flex items-center justify-between opacity-90">
+                  <span>0:05 / 0:42</span>
+                  <div class="flex items-center gap-3">
+                    <span class="bg-white/20 px-1.5 py-0.5 rounded text-[10px] uppercase font-mono">CC</span>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <i class="fa-solid fa-expand"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-center text-xs text-purple-200 mt-2 font-medium">
+            <i class="fa-solid fa-circle-play mr-1"></i> Assista à aula inaugural gratuita de apresentação
+          </p>
+        </div>
+
+        <!-- COLUNA DA DIREITA: INFORMAÇÕES DO CURSO E AÇÕES -->
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-4">
+          
+          <!-- Breadcrumb suave -->
+          <nav class="flex items-center gap-2 text-xs text-purple-200 font-medium">
+            <a href="#" class="hover:text-white transition">Home</a>
+            <i class="fa-solid fa-chevron-right text-[9px] opacity-70"></i>
+            <a href="#" class="hover:text-white transition">Cursos</a>
+            <i class="fa-solid fa-chevron-right text-[9px] opacity-70"></i>
+            <span class="text-white font-semibold" id="breadcrumbCourseName">Atendente e Balconista de Farmácia</span>
+          </nav>
+
+          <!-- Título Principal Grande e Impactante -->
+          <h1 id="courseMainTitle" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+            Atendente e Balconista de Farmácia
+          </h1>
+
+          <!-- Descrição Clara e Convidativa -->
+          <p id="courseMainSubtitle" class="text-base sm:text-lg text-purple-100 font-normal leading-relaxed max-w-2xl">
+            O curso de Atendente e Balconista de Farmácia ensina atendimento humanizado, leitura de receitas médicas e gestão da loja, com carga horária de 70 horas e certificado válido em todo o Brasil.
+          </p>
+
+          <!-- Metadados em Linha (Videoaulas, Estrelas, Alunos) -->
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
+            
+            <!-- Badge Videoaulas -->
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-white text-xs font-semibold border border-white/20">
+              <i class="fa-solid fa-circle-play text-purple-300"></i>
+              <span>Videoaulas</span>
+            </div>
+
+            <!-- Estrelas de Avaliação -->
+            <div class="flex items-center gap-1.5 text-xs text-white font-semibold">
+              <div class="flex text-amber-400 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <span class="font-bold text-sm">4.8</span>
+              <span class="text-purple-200 font-normal" id="courseReviewsCount">(100 avaliações)</span>
+            </div>
+
+            <!-- Total de Alunos -->
+            <div class="flex items-center gap-1.5 text-xs text-purple-100 font-medium">
+              <i class="fa-solid fa-users text-purple-300"></i>
+              <span id="courseStudentsCount"><strong class="text-white">95.403</strong> Alunos no Curso</span>
+            </div>
+
+          </div>
+
+          <!-- BOTOES DE CTA -->
+          <div class="flex flex-wrap items-center gap-4 pt-3">
+            <!-- Botão Principal: Verde Vibrante com Selo/Chapéu -->
+            <a href="#matricula" class="btn-green-pulse inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-white font-extrabold text-base tracking-wide uppercase">
+              <i class="fa-solid fa-graduation-cap text-lg"></i>
+              <span>Matricule-se grátis</span>
+            </a>
+
+            <!-- Botão Secundário: Compartilhar -->
+            <button onclick="shareCourse()" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm backdrop-blur-md border border-white/20 transition">
+              <i class="fa-solid fa-share-nodes"></i>
+              <span>Compartilhar</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NAVEGAÇÃO DE ÂNCORAS / ABAS RÁPIDAS -->
+  <div class="bg-white border-b border-slate-200 sticky top-[121px] z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center space-x-6 sm:space-x-8 overflow-x-auto py-3 text-sm font-bold text-slate-600 no-scrollbar">
+        <a href="#modulos" class="text-brand-600 border-b-2 border-brand-600 pb-2 whitespace-nowrap">
+          <i class="fa-solid fa-layer-group mr-1.5"></i> Módulos do curso
+        </a>
+        <a href="#o-que-aprender" class="hover:text-brand-600 transition pb-2 whitespace-nowrap">
+          <i class="fa-solid fa-check-double mr-1.5"></i> O que vai aprender
+        </a>
+        <a href="#publico" class="hover:text-brand-600 transition pb-2 whitespace-nowrap">
+          <i class="fa-solid fa-user-check mr-1.5"></i> Para quem é
+        </a>
+        <a href="#mercado" class="hover:text-brand-600 transition pb-2 whitespace-nowrap">
+          <i class="fa-solid fa-money-bill-wave mr-1.5"></i> Mercado & Salário
+        </a>
+        <a href="#certificado-info" class="hover:text-brand-600 transition pb-2 whitespace-nowrap">
+          <i class="fa-solid fa-award mr-1.5"></i> Onde usar o certificado
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL EM CONTAINER BRANCO IMPECÁVEL -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+
+    <!-- SEÇÃO 1: MÓDULOS DO CURSO (GRID DE 2 COLUNAS IDÊNTICO À FOTO 1) -->
+    <section id="modulos" class="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-600 tracking-tight">
+            Módulos do curso
+          </h2>
+          <p class="text-sm text-slate-500 mt-1">
+            Estrutura curricular completa dividida em etapas didáticas para facilitar o seu aprendizado.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-violet-50 text-brand-600 border border-violet-100" id="modulesBadgeCount">
+            18 Módulos Disponíveis
+          </span>
+        </div>
+      </div>
+
+      <!-- GRID COM 2 COLUNAS DE MÓDULOS NUMERADOS -->
+      <div id="modulesContainer" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+        
+        <!-- MÓDULO 1 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">1</div>
+          <span class="text-sm font-semibold text-slate-700">Anatomia</span>
+        </div>
+
+        <!-- MÓDULO 2 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">2</div>
+          <span class="text-sm font-semibold text-slate-700">Farmacocinética</span>
+        </div>
+
+        <!-- MÓDULO 3 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">3</div>
+          <span class="text-sm font-semibold text-slate-700">Interações medicamentosas</span>
+        </div>
+
+        <!-- MÓDULO 4 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">4</div>
+          <span class="text-sm font-semibold text-slate-700">Física e farmacêuticas</span>
+        </div>
+
+        <!-- MÓDULO 5 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">5</div>
+          <span class="text-sm font-semibold text-slate-700">Organização de medicamentos</span>
+        </div>
+
+        <!-- MÓDULO 6 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">6</div>
+          <span class="text-sm font-semibold text-slate-700">Recebimento</span>
+        </div>
+
+        <!-- MÓDULO 7 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">7</div>
+          <span class="text-sm font-semibold text-slate-700">Interpretações de receitas</span>
+        </div>
+
+        <!-- MÓDULO 8 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">8</div>
+          <span class="text-sm font-semibold text-slate-700">Noções de medicamentos</span>
+        </div>
+
+        <!-- MÓDULO 9 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">9</div>
+          <span class="text-sm font-semibold text-slate-700">Introdução aos fundamentos da gestão</span>
+        </div>
+
+        <!-- MÓDULO 10 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">10</div>
+          <span class="text-sm font-semibold text-slate-700">Psicologia do consumo</span>
+        </div>
+
+        <!-- MÓDULO 11 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">11</div>
+          <span class="text-sm font-semibold text-slate-700">Ciclo de produção-consumo e marketing promocional</span>
+        </div>
+
+        <!-- MÓDULO 12 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">12</div>
+          <span class="text-sm font-semibold text-slate-700">Gerenciamento de categorias</span>
+        </div>
+
+        <!-- MÓDULO 13 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">13</div>
+          <span class="text-sm font-semibold text-slate-700">Mix de produtos e serviços</span>
+        </div>
+
+        <!-- MÓDULO 14 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">14</div>
+          <span class="text-sm font-semibold text-slate-700">Gestão de estoque</span>
+        </div>
+
+        <!-- MÓDULO 15 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">15</div>
+          <span class="text-sm font-semibold text-slate-700">Atendimento ao consumidor</span>
+        </div>
+
+        <!-- MÓDULO 16 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">16</div>
+          <span class="text-sm font-semibold text-slate-700">Atenção farmacêutica e serviços farmacêuticos</span>
+        </div>
+
+        <!-- MÓDULO 17 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">17</div>
+          <span class="text-sm font-semibold text-slate-700">Formação de preço</span>
+        </div>
+
+        <!-- MÓDULO 18 -->
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">18</div>
+          <span class="text-sm font-semibold text-slate-700">Gestão tributária e análise de margem</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOX DE DESTAQUE / AVISO LILÁS CLARO (IDÊNTICO À FOTO 4) -->
+    <div class="rounded-2xl p-6 sm:p-8 bg-[#f5f0fe] border border-[#d8cbf9] shadow-xs">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+          <i class="fa-solid fa-graduation-cap text-lg"></i>
+        </div>
+        <p class="text-base sm:text-lg font-bold text-slate-800 leading-relaxed">
+          O curso é 100% online, com aulas em vídeo e material em texto. No final, você faz a avaliação e, com a aprovação, conquista a oportunidade de investir no seu certificado, um passo importante para valorizar seu currículo e impulsionar sua carreira profissional.
+        </p>
+      </div>
+    </div>
+
+    <!-- SEÇÃO 2: O QUE VOCÊ VAI APRENDER (IDÊNTICO À FOTO 4) -->
+    <section id="o-que-aprender" class="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] mb-4">
+        O que você vai aprender
+      </h2>
+      <p id="learningIntroText" class="text-slate-600 text-base leading-relaxed mb-6">
+        O curso junta as duas exigências do balcão: entender o medicamento e fazer a loja vender. Uma parte trata do produto, a outra do negócio e do cliente.
+      </p>
+
+      <ul id="learningList" class="space-y-3.5">
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Relacionar a anatomia do corpo com o caminho que o medicamento percorre, da absorção à eliminação.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Reconhecer interações entre medicamentos e avisar o cliente antes de fechar a venda.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Interpretar a receita e identificar com segurança o que foi prescrito.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Receber e conferir a mercadoria e organizar o medicamento na prateleira e no estoque.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Atender no balcão entendendo o que motiva a compra e o que o cliente espera ouvir.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Prestar atenção farmacêutica e apresentar os serviços oferecidos dentro da farmácia.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Definir mix de produtos, organizar categorias e usar ação promocional para girar o estoque.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Formar preço e acompanhar margem e carga tributária de cada item vendido.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SEÇÃO 3: PARA QUEM É ESTE CURSO (IDÊNTICO À FOTO 3) -->
+    <section id="publico" class="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] mb-4">
+        Para quem é este curso
+      </h2>
+      <p id="targetIntroText" class="text-slate-600 text-base leading-relaxed mb-6">
+        O balcão de farmácia é uma das portas de entrada mais procuradas do varejo, e também um lugar onde muita gente fica anos sem qualificação declarada. O curso atende os dois casos.
+      </p>
+
+      <ul id="targetList" class="space-y-3.5 mb-8">
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Para você que já trabalha em farmácia ou drogaria e quer sair do improviso na hora de orientar o cliente.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Para você que quer entrar como atendente ou balconista e precisa de uma qualificação para chegar à entrevista.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Para você que veio de outro comércio, como supermercado ou loja, e quer migrar para o setor de saúde.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Para você que já atende bem e quer crescer para a parte de compras, estoque e gestão da loja.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            Para você que tem uma farmácia pequena e cuida de preço, margem e giro sozinho.
+          </span>
+        </li>
+      </ul>
+
+      <!-- Box de Pré-requisitos -->
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
+        <i class="fa-solid fa-circle-info text-brand-600 text-lg"></i>
+        <p class="text-sm font-medium text-slate-700">
+          <strong>Pré-requisitos:</strong> nenhum. Não há exigência de escolaridade mínima, idade ou experiência anterior.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: O QUE FAZ E QUANTO GANHA (IDÊNTICO À FOTO 3 E 5) -->
+    <section id="mercado" class="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+      <h2 id="careerTitle" class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] mb-4">
+        O que faz e quanto ganha um atendente de farmácia
+      </h2>
+      <p id="careerIntroText" class="text-slate-600 text-base leading-relaxed mb-4">
+        O atendente de farmácia recebe o cliente, escuta o que ele procura, lê a receita, separa o medicamento e entrega a orientação de uso sob a supervisão do farmacêutico. Fora do balcão, ele repõe prateleira, confere validade, organiza estoque e participa das ações de promoção da loja. Com experiência, assume compras, vitrine e liderança de turno.
+      </p>
+
+      <!-- DADOS SALARIAIS / CAGED -->
+      <div class="my-6 p-5 rounded-2xl bg-gradient-to-r from-violet-50 to-indigo-50 border border-violet-100">
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-chart-line text-brand-600 text-xl mt-1"></i>
+          <div>
+            <h4 class="font-bold text-slate-800 text-base mb-1">Média Salarial no Brasil (Dados Oficiais CAGED / Salario.com.br)</h4>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Segundo o <strong>Salario.com.br</strong>, com dados oficiais do CAGED, a remuneração do atendente de farmácia e balconista no Brasil fica entre <strong>R$ 1.867,99 de piso médio</strong> e <strong>R$ 2.111,79 de teto</strong>, com média de <strong>R$ 1.888,47</strong>.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="bg-white p-3 rounded-xl border border-violet-100 shadow-2xs text-center">
+                <span class="text-xs text-slate-400 font-medium">Piso Médio</span>
+                <p class="text-lg font-extrabold text-slate-700">R$ 1.867,99</p>
+              </div>
+              <div class="bg-white p-3 rounded-xl border-2 border-brand-500 shadow-sm text-center">
+                <span class="text-xs text-brand-600 font-bold">Média Salarial</span>
+                <p class="text-lg font-black text-brand-600">R$ 1.888,47</p>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-violet-100 shadow-2xs text-center">
+                <span class="text-xs text-slate-400 font-medium">Teto Salarial</span>
+                <p class="text-lg font-extrabold text-slate-700">R$ 2.111,79</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-lg font-bold text-slate-800 mt-6 mb-3">Onde você pode trabalhar:</h3>
+      <ul id="marketWorkplacesList" class="space-y-2.5 mb-6">
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base">Drogaria de bairro e rede de farmácias.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base">Farmácia de manipulação.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base">Farmácia dentro de supermercado e de shopping.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base">Farmácia de hospital e de clínica.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base">Distribuidora de medicamentos e de produtos de higiene.</span>
+        </li>
+      </ul>
+
+      <p class="text-slate-600 text-sm leading-relaxed italic bg-slate-50 p-4 rounded-xl border border-slate-200/60">
+        "Em vaga de entrada, a qualificação declarada é o que a triagem olha antes da experiência. Para quem já atua, é ela que sustenta pedido de promoção, mudança de função e faixa salarial maior."
+      </p>
+    </section>
+
+    <!-- SEÇÃO 5: ONDE ESTE CERTIFICADO É USADO (IDÊNTICO À FOTO 5) -->
+    <section id="certificado-info" class="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] mb-4">
+        Onde este certificado é usado
+      </h2>
+      <p class="text-slate-600 text-base leading-relaxed mb-6">
+        Farmácia é um setor que contrata o ano inteiro e cobra responsabilidade de quem fica no balcão. O certificado mostra que você estudou o que a função exige:
+      </p>
+
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            <strong>No currículo:</strong> em vagas de atendente de farmácia, balconista, repositor de drogaria e apoio a estoque de medicamentos.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            <strong>Horas complementares ou atividade extracurricular:</strong> na graduação, respeitando o regulamento de cada faculdade.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            <strong>Em concurso público e prova de títulos:</strong> quando o edital aceitar <a href="#" class="text-brand-600 font-bold underline hover:text-brand-700">certificado de curso livre</a>. Confira sempre o que o edital do seu concurso exige.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">
+            <strong>Progressão de carreira e promoção:</strong> comprove sua busca contínua por atualização e conhecimentos técnicos com seu empregador.
+          </span>
+        </li>
+      </ul>
+
+      <!-- CTA FINAL DA PÁGINA -->
+      <div id="matricula" class="mt-10 p-8 rounded-2xl bg-gradient-to-r from-brand-700 via-brand-600 to-indigo-700 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="space-y-2 text-center md:text-left">
+          <h3 class="text-2xl font-black">Pronto para dar o próximo passo na sua carreira?</h3>
+          <p class="text-purple-100 text-sm max-w-xl">
+            Acesse as videoaulas agora mesmo de graça e estude no seu ritmo, quando e onde quiser.
+          </p>
+        </div>
+        <a href="#matricula" class="btn-green-pulse px-8 py-4 rounded-xl text-white font-extrabold text-base tracking-wide uppercase shrink-0">
+          <i class="fa-solid fa-graduation-cap mr-2"></i> Começar Agora Grátis
+        </a>
+      </div>
+    </section>
+
+    <!-- PALETA DE CORES PARA ANÁLISE / FEEDBACK -->
+    <section class="bg-slate-900 rounded-2xl p-6 sm:p-8 text-white border border-slate-800 shadow-lg">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Paleta de Cores Extraída da Referência</h3>
+          <p class="text-xs text-slate-400">Códigos hexadecimais para aplicar no seu site ESDHUBEM</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <!-- Cor 1 -->
+        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+          <div class="w-full h-12 rounded-lg bg-[#5925dc] mb-2 shadow-inner"></div>
+          <span class="text-xs font-bold text-white block">Roxo Primário</span>
+          <code class="text-[11px] text-violet-300 font-mono">#5925dc</code>
+          <span class="text-[10px] text-slate-400 block mt-0.5">Badges, links, ícones</span>
+        </div>
+
+        <!-- Cor 2 -->
+        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+          <div class="w-full h-12 rounded-lg bg-[#491bb8] mb-2 shadow-inner"></div>
+          <span class="text-xs font-bold text-white block">Roxo Escuro Hero</span>
+          <code class="text-[11px] text-violet-300 font-mono">#491bb8</code>
+          <span class="text-[10px] text-slate-400 block mt-0.5">Gradiente superior</span>
+        </div>
+
+        <!-- Cor 3 -->
+        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+          <div class="w-full h-12 rounded-lg bg-[#00b843] mb-2 shadow-inner"></div>
+          <span class="text-xs font-bold text-white block">Verde Ação / MEC</span>
+          <code class="text-[11px] text-emerald-300 font-mono">#00b843</code>
+          <span class="text-[10px] text-slate-400 block mt-0.5">Selo MEC e botões CTA</span>
+        </div>
+
+        <!-- Cor 4 -->
+        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+          <div class="w-full h-12 rounded-lg bg-[#f5f0fe] border border-slate-600 mb-2"></div>
+          <span class="text-xs font-bold text-white block">Lilás Suave Box</span>
+          <code class="text-[11px] text-purple-200 font-mono">#f5f0fe</code>
+          <span class="text-[10px] text-slate-400 block mt-0.5">Alertas e destaques</span>
+        </div>
+
+        <!-- Cor 5 -->
+        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+          <div class="w-full h-12 rounded-lg bg-[#f8fafd] border border-slate-600 mb-2"></div>
+          <span class="text-xs font-bold text-white block">Fundo da Página</span>
+          <code class="text-[11px] text-slate-300 font-mono">#f8fafd</code>
+          <span class="text-[10px] text-slate-400 block mt-0.5">Limpo e sem cansar a vista</span>
+        </div>
+
+        <!-- Cor 6 -->
+        <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+          <div class="w-full h-12 rounded-lg bg-[#1e293b] mb-2 shadow-inner"></div>
+          <span class="text-xs font-bold text-white block">Tipografia Escura</span>
+          <code class="text-[11px] text-slate-300 font-mono">#1e293b</code>
+          <span class="text-[10px] text-slate-400 block mt-0.5">Plus Jakarta Sans</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER MODERNO LIMPO -->
+  <footer class="bg-white border-t border-slate-200/80 py-12 mt-16 text-slate-500 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <p class="font-bold text-slate-800">
+          ESDHUBEM • Escola de Desenvolvimento Humano e Bem-Estar
+        </p>
+      </div>
+      <p class="text-xs text-slate-400">
+        Demonstração de design inspirada nas melhores práticas de clareza e usabilidade ead.
+      </p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT PARA TROCAR CURSOS DINAMICAMENTE E TESTAR O DESIGN -->
+  <script>
+    const COURSES_DEMO = {
+      farmacia: {
+        brandName: "Pensar",
+        brandSecond: "Cursos",
+        brandTag: "Educação e Qualificação",
+        breadcrumb: "Atendente e Balconista de Farmácia",
+        title: "Atendente e Balconista de Farmácia",
+        subtitle: "O curso de Atendente e Balconista de Farmácia ensina atendimento humanizado, leitura de receitas médicas e gestão da loja, com carga horária de 70 horas.",
+        reviews: "(100 avaliações)",
+        students: "95.403",
+        videoTitle: "Curso de Atendente de Farmácia",
+        videoThumb: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+        modulesBadge: "18 Módulos Disponíveis",
+        modules: [
+          { num: 1, title: "Anatomia" },
+          { num: 2, title: "Farmacocinética" },
+          { num: 3, title: "Interações medicamentosas" },
+          { num: 4, title: "Física e farmacêuticas" },
+          { num: 5, title: "Organização de medicamentos" },
+          { num: 6, title: "Recebimento" },
+          { num: 7, title: "Interpretações de receitas" },
+          { num: 8, title: "Noções de medicamentos" },
+          { num: 9, title: "Introdução aos fundamentos da gestão" },
+          { num: 10, title: "Psicologia do consumo" },
+          { num: 11, title: "Ciclo de produção-consumo e marketing promocional" },
+          { num: 12, title: "Gerenciamento de categorias" },
+          { num: 13, title: "Mix de produtos e serviços" },
+          { num: 14, title: "Gestão de estoque" },
+          { num: 15, title: "Atendimento ao consumidor" },
+          { num: 16, title: "Atenção farmacêutica e serviços farmacêuticos" },
+          { num: 17, title: "Formação de preço" },
+          { num: 18, title: "Gestão tributária e análise de margem" }
+        ],
+        learningIntro: "O curso junta as duas exigências do balcão: entender o medicamento e fazer a loja vender. Uma parte trata do produto, a outra do negócio e do cliente.",
+        learningItems: [
+          "Relacionar a anatomia do corpo com o caminho que o medicamento percorre, da absorção à eliminação.",
+          "Reconhecer interações entre medicamentos e avisar o cliente antes de fechar a venda.",
+          "Interpretar a receita e identificar com segurança o que foi prescrito.",
+          "Receber e conferir a mercadoria e organizar o medicamento na prateleira e no estoque.",
+          "Atender no balcão entendendo o que motiva a compra e o que o cliente espera ouvir.",
+          "Prestar atenção farmacêutica e apresentar os serviços oferecidos dentro da farmácia.",
+          "Definir mix de produtos, organizar categorias e usar ação promocional para girar o estoque.",
+          "Formar preço e acompanhar margem e carga tributária de cada item vendido."
+        ],
+        targetIntro: "O balcão de farmácia é uma das portas de entrada mais procuradas do varejo, e também um lugar onde muita gente fica anos sem qualificação declarada. O curso atende os dois casos.",
+        targetItems: [
+          "Para você que já trabalha em farmácia ou drogaria e quer sair do improviso na hora de orientar o cliente.",
+          "Para você que quer entrar como atendente ou balconista e precisa de uma qualificação para chegar à entrevista.",
+          "Para você que veio de outro comércio, como supermercado ou loja, e quer migrar para o setor de saúde.",
+          "Para você que já atende bem e quer crescer para a parte de compras, estoque e gestão da loja.",
+          "Para você que tem uma farmácia pequena e cuida de preço, margem e giro sozinho."
+        ],
+        careerTitle: "O que faz e quanto ganha um atendente de farmácia",
+        careerIntro: "O atendente de farmácia recebe o cliente, escuta o que ele procura, lê a receita, separa o medicamento e entrega a orientação de uso sob a supervisão do farmacêutico. Fora do balcão, ele repõe prateleira, confere validade, organiza estoque e participa das ações de promoção da loja."
+      },
+      assertiva: {
+        brandName: "ESD",
+        brandSecond: "HUBEM",
+        brandTag: "Desenvolvimento Humano & Bem-Estar",
+        breadcrumb: "Comunicação Assertiva com a Liderança",
+        title: "Comunicação Assertiva com a Liderança",
+        subtitle: "Aprenda a expressar suas ideias com firmeza, clareza e respeito no ambiente corporativo, desenvolvendo uma presença executiva transformadora e respeitada.",
+        reviews: "(482 avaliações)",
+        students: "14.280",
+        videoTitle: "Comunicação Assertiva • Profª Silviane Silvério",
+        videoThumb: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
+        modulesBadge: "8 Módulos de Alta Performance",
+        modules: [
+          { num: 1, title: "Fundamentos da Comunicação Assertiva" },
+          { num: 2, title: "Diferenças entre Passividade, Agressividade e Assertividade" },
+          { num: 3, title: "Linguagem Corporal e Postura Profissional" },
+          { num: 4, title: "Como Dizer 'Não' com Firmeza e Elegância" },
+          { num: 5, title: "Técnicas de Alinhamento com Chefias e Diretores" },
+          { num: 6, title: "Gestão Emocional em Reuniões Decisivas" },
+          { num: 7, title: "Como Dar e Receber Feedbacks Difíceis" },
+          { num: 8, title: "Plano Prático de Presença Executiva e Oratória" }
+        ],
+        learningIntro: "Domine a habilidade comportamental mais valorizada por empresas de alto desempenho no Brasil e no mundo.",
+        learningItems: [
+          "Eliminar o medo de falar em reuniões com superiores e lideranças diretas.",
+          "Defender suas ideias e pontos de vista com argumentos lógicos e sem tensão emocional.",
+          "Aprender a colocar limites saudáveis no trabalho sem parecer rude ou descompromissado.",
+          "Negociar prazos e demandas de forma profissional e baseada em prioridades reais.",
+          "Apresentar projetos e relatórios capturando a atenção imediata da mesa diretora."
+        ],
+        targetIntro: "Profissionais que sentem que entregam ótimos resultados técnicos, mas são ignorados ou travam na hora de falar com superiores.",
+        targetItems: [
+          "Para profissionais em cargos operacionais que desejam ser promovidos a cargos de liderança.",
+          "Para quem tem dificuldade em dizer 'não' e acaba sobrecarregado com tarefas alheias.",
+          "Para líderes que precisam conduzir equipes sem perder a autoridade nem a empatia.",
+          "Para estudantes universitários se preparando para processos seletivos e dinâmicas."
+        ],
+        careerTitle: "O impacto da assertividade na remuneração executiva",
+        careerIntro: "Estudos de liderança demonstram que profissionais assertivos são promovidos até 3 vezes mais rápido do que colegas que mantêm postura passiva ou agressiva no trabalho."
+      },
+      fitoterapia: {
+        brandName: "ESD",
+        brandSecond: "HUBEM",
+        brandTag: "Desenvolvimento Humano & Bem-Estar",
+        breadcrumb: "Fitoterapia Prática & Plantas Medicinais",
+        title: "Fitoterapia Prática & Plantas Medicinais",
+        subtitle: "Uso seguro, fundamentado e consciente de infusões, tinturas e ervas medicinais para equilíbrio físico, saúde integral e bem-estar cotidiano.",
+        reviews: "(312 avaliações)",
+        students: "8.950",
+        videoTitle: "Fitoterapia no Cotidiano • Aulas Práticas",
+        videoThumb: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+        modulesBadge: "10 Módulos Integrativos",
+        modules: [
+          { num: 1, title: "História e Princípios da Botânica Médica" },
+          { num: 2, title: "Farmacologia Básica dos Fitoquímicos" },
+          { num: 3, title: "Preparo de Chás: Infusão vs. Decocção" },
+          { num: 4, title: "Extrações Alcoólicas e Criação de Tinturas" },
+          { num: 5, title: "Ervas para Sistema Digestivo e Fígado" },
+          { num: 6, title: "Fitoterapia para Ansiedade e Sono Reparador" },
+          { num: 7, title: "Fortalecimento do Sistema Imunológico" },
+          { num: 8, title: "Interações com Medicamentos Alopáticos" },
+          { num: 9, title: "Cultivo e Secagem de Ervas em Casa" },
+          { num: 10, title: "Ética e Legislação das Práticas Integrativas" }
+        ],
+        learningIntro: "Aprenda a aplicar o poder medicinal das plantas com rigor científico e segurança biomédica comprovada.",
+        learningItems: [
+          "Diferenciar corretamente os tipos de preparo: infusão, decocção e maceração.",
+          "Conhecer as dosagens ideais e o tempo seguro de uso de cada espécie.",
+          "Identificar possíveis contraindicações para gestantes, hipertensos e crianças.",
+          "Formular sinergias de ervas para estresse, queixas digestivas e baixa imunidade."
+        ],
+        targetIntro: "Para quem deseja resgatar a sabedoria natural das plantas medicinais com base científica e responsabilidade.",
+        targetItems: [
+          "Terapeutas integrativos, naturólogos e profissionais de saúde.",
+          "Entusiastas do autocuidado e mães de família que querem cuidar do lar de forma natural.",
+          "Profissionais de farmácia que buscam aprofundar seu conhecimento em fitoterápicos."
+        ],
+        careerTitle: "O mercado em expansão das Práticas Integrativas (PICS)",
+        careerIntro: "O mercado de terapias naturais e saúde integrativa cresce mais de 15% ao ano no Brasil, impulsionado pela busca por longevidade e prevenção ativa."
+      },
+      ia_inovacao: {
+        brandName: "ESD",
+        brandSecond: "HUBEM",
+        brandTag: "Inteligência, Ciência & Inovação",
+        breadcrumb: "Inteligência Artificial, Análise de Dados & Inovação",
+        title: "Inteligência Artificial, Análise de Dados & Inovação Prática",
+        subtitle: "Aprenda a conectar ideias, fluxos de dados e novas ferramentas de IA para otimizar processos, acelerar tomadas de decisão e liderar projetos de transformação.",
+        reviews: "(528 avaliações)",
+        students: "24.600",
+        videoTitle: "IA, Dados & Inovação • Aula Inaugural",
+        videoThumb: "./images/banner_network_innovation.jpg",
+        modulesBadge: "8 Módulos de Vanguarda",
+        modules: [
+          { num: 1, title: "Fundamentos de IA e Ecossistemas Conectados" },
+          { num: 2, title: "De Ideias à Execução: Estruturação de Prompts e Fluxos" },
+          { num: 3, title: "Análise de Dados Prática sem Programação Complexa" },
+          { num: 4, title: "Automação de Processos e Produtividade com Agentes" },
+          { num: 5, title: "Inovação Humanizada: Ética, Segurança e Privacidade" },
+          { num: 6, title: "Conexões Interdisciplinares: IA na Saúde, Gestão e Educação" },
+          { num: 7, title: "Ferramentas Geradoras: Imagens, Texto e Dashboards" },
+          { num: 8, title: "Projeto Final de Inovação e Portfólio Aplicado" }
+        ],
+        learningIntro: "Conecte ciência, tecnologia e pensamento estratégico para liderar a nova era digital com confiança e profundidade.",
+        learningItems: [
+          "Compreender os princípios de redes neurais, inteligência generativa e ecossistemas de dados.",
+          "Aplicar ferramentas inteligentes para resolver problemas reais de gestão e comunicação.",
+          "Criar fluxos de trabalho que integram dados e decisões estratégicas com velocidade.",
+          "Desenvolver visão crítica para discernir soluções tecnológicas de alto valor de simples modismos."
+        ],
+        targetIntro: "Profissionais, estudantes e líderes que desejam dominar tecnologia sem perder a essência humana.",
+        targetItems: [
+          "Profissionais de todas as áreas buscando atualização e vantagem competitiva no mercado.",
+          "Líderes de projetos e empreendedores querendo automatizar rotinas e otimizar tempo.",
+          "Educadores e pesquisadores interessados em inovação metodológica e análise de dados.",
+          "Entusiastas que querem passar de usuários passivos a criadores ativos de soluções digitais."
+        ],
+        careerTitle: "O mercado em disparada de Habilidades em IA e Inovação",
+        careerIntro: "Profissionais com domínio prático de ferramentas de IA e análise de dados registram valorização salarial média superior a 35% nos principais setores produtivos."
+      }
+    };
+
+    let heroImageApplied = false;
+    function toggleHeroBackground() {
+      const heroSection = document.querySelector('.hero-gradient');
+      if (!heroSection) return;
+      heroImageApplied = !heroImageApplied;
+      if (heroImageApplied) {
+        heroSection.style.backgroundImage = "linear-gradient(rgba(3, 9, 30, 0.75), rgba(3, 9, 30, 0.85)), url('./images/banner_network_innovation.jpg')";
+        heroSection.style.backgroundSize = "cover";
+        heroSection.style.backgroundPosition = "center left";
+        alert('🖼️ Imagem de Inovação & Rede aplicada como plano de fundo da Hero!');
+      } else {
+        heroSection.style.backgroundImage = "";
+        alert('Voltou ao gradiente original roxo!');
+      }
+    }
+
+    function switchCourse(key) {
+      const data = COURSES_DEMO[key];
+      if (!data) return;
+
+      // Update active button state
+      ['btnCourseFarmacia', 'btnCourseAssertiva', 'btnCourseFitoterapia', 'btnCourseIA'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) {
+          btn.className = "px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-medium text-xs hover:bg-slate-700 hover:text-white transition border border-slate-700";
+        }
+      });
+      const activeBtn = key === 'farmacia' ? 'btnCourseFarmacia' : key === 'assertiva' ? 'btnCourseAssertiva' : key === 'fitoterapia' ? 'btnCourseFitoterapia' : 'btnCourseIA';
+      const activeEl = document.getElementById(activeBtn);
+      if (activeEl) {
+        activeEl.className = "px-2.5 py-1 rounded bg-violet-600 text-white font-medium text-xs hover:bg-violet-500 transition shadow-sm";
+      }
+
+      // Update Brand Text
+      document.getElementById('navBrandName').textContent = data.brandName;
+      document.getElementById('navBrandSecond').textContent = data.brandSecond;
+      document.getElementById('navBrandTag').textContent = data.brandTag;
+
+      // Update Hero Content
+      document.getElementById('breadcrumbCourseName').textContent = data.breadcrumb;
+      document.getElementById('courseMainTitle').textContent = data.title;
+      document.getElementById('courseMainSubtitle').textContent = data.subtitle;
+      document.getElementById('courseReviewsCount').textContent = data.reviews;
+      document.getElementById('courseStudentsCount').innerHTML = `<strong class="text-white">${data.students}</strong> Alunos no Curso`;
+      document.getElementById('videoPlayerTitle').textContent = data.videoTitle;
+      document.getElementById('courseVideoThumbnail').src = data.videoThumb;
+
+      // Update Modules
+      document.getElementById('modulesBadgeCount').textContent = data.modulesBadge;
+      const modulesContainer = document.getElementById('modulesContainer');
+      modulesContainer.innerHTML = data.modules.map(m => `
+        <div class="module-item flex items-center gap-3.5 p-3.5 rounded-xl border border-slate-200/70 bg-[#f8fafd] cursor-pointer">
+          <div class="badge-number">${m.num}</div>
+          <span class="text-sm font-semibold text-slate-700">${m.title}</span>
+        </div>
+      `).join('');
+
+      // Update Learning Content
+      document.getElementById('learningIntroText').textContent = data.learningIntro;
+      document.getElementById('learningList').innerHTML = data.learningItems.map(item => `
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">${item}</span>
+        </li>
+      `).join('');
+
+      // Update Target Audience
+      document.getElementById('targetIntroText').textContent = data.targetIntro;
+      document.getElementById('targetList').innerHTML = data.targetItems.map(item => `
+        <li class="flex items-start gap-3">
+          <span class="bullet-purple"></span>
+          <span class="text-slate-700 text-base leading-relaxed">${item}</span>
+        </li>
+      `).join('');
+
+      // Update Career Section
+      document.getElementById('careerTitle').textContent = data.careerTitle;
+      document.getElementById('careerIntroText').textContent = data.careerIntro;
+
+      // Smooth scroll preview notice
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function shareCourse() {
+      if (navigator.share) {
+        navigator.share({
+          title: document.getElementById('courseMainTitle').textContent,
+          url: window.location.href
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Link da página copiado com sucesso para a área de transferência!');
+      }
+    }
+
+    function playDemoVideo() {
+      alert('Iniciando prévia da aula com a introdução do curso!');
+    }
+  </script>
+</body>
+</html>
