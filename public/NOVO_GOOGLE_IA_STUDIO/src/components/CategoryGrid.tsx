@@ -15,6 +15,7 @@ import {
   Cpu,
   Target,
   BookOpenCheck,
+  BookOpen,
   Building2,
   Award,
   ArrowRight,

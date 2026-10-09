@@ -11642,7 +11642,7 @@ var BookOpenCheck = createLucideIcon("book-open-check", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var BookOpen$1 = createLucideIcon("book-open", [["path", {
+var BookOpen = createLucideIcon("book-open", [["path", {
 	d: "M12 7v14",
 	key: "1akyts"
 }], ["path", {
@@ -14540,7 +14540,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 										"livraria"
 									].includes(currentPage) || currentPage.startsWith("categoria:") ? "text-white font-bold bg-blue-600/30 border-b-2 border-blue-400" : "text-white/80 hover:text-white hover:bg-white/5"}`,
 									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5 text-cyan-400" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-cyan-400" }),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Produtos & Soluções" }),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											className: "text-[10px] bg-cyan-500/20 text-cyan-300 font-bold px-1.5 py-0.2 rounded-full",
@@ -14598,7 +14598,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 												onClick: () => onNavigate("livraria"),
 												className: `w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${currentPage === "livraria" ? "bg-blue-600/20 text-blue-300 font-bold" : "text-slate-200 hover:text-white hover:bg-blue-900/30"}`,
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-sky-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-sky-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 													className: "font-semibold text-xs",
 													children: "Livraria"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -14660,7 +14660,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 												onClick: () => onNavigate("diretrizes-pedagogicas"),
 												className: `w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${currentPage === "diretrizes-pedagogicas" ? "bg-blue-600/20 text-blue-300 font-bold" : "text-slate-200 hover:text-white hover:bg-blue-900/30"}`,
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-blue-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-blue-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 													className: "font-semibold text-xs",
 													children: "Diretrizes Pedagógicas"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -14764,7 +14764,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 												onClick: () => onNavigate("livraria"),
 												className: "w-full text-left px-3 py-2.5 rounded-xl text-slate-200 hover:text-white hover:bg-blue-900/30 transition-all flex items-center gap-2.5 cursor-pointer",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-sky-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-sky-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 													className: "font-semibold text-xs",
 													children: "Livros"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -15038,7 +15038,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 									setMobileMenuOpen(false);
 								},
 								className: "w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-sky-300 flex items-center gap-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-sky-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Livros (Obras Diamante)" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-sky-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Livros (Obras Diamante)" })]
 							})
 						]
 					}),
@@ -15141,7 +15141,7 @@ var Hero = ({ onSelectCategory }) => {
 							className: "flex items-center justify-center lg:justify-start gap-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-amber-600 shrink-0 shadow-sm",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6" })
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6" })
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 								className: "text-base sm:text-lg font-extrabold text-[#182333]",
 								children: "Cursos livres"
@@ -15726,7 +15726,7 @@ var LivrariaPage = ({ onBackToHome }) => {
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Loja Oficial" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Loja Oficial" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 								className: "text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4",
@@ -15886,7 +15886,7 @@ var CourseCatalog = ({ courses, activePillar, onPillarChange, onNavigate, onSele
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "inline-flex items-center gap-2 text-[#243042] text-xs font-bold uppercase tracking-wider mb-2",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-amber-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Grade de Cursos Livres e Produtos da ESDHUBEM" })]
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-amber-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Grade de Cursos Livres e Produtos da ESDHUBEM" })]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight",
@@ -15942,7 +15942,7 @@ var CourseCatalog = ({ courses, activePillar, onPillarChange, onNavigate, onSele
 				filteredCourses.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "text-center py-16 bg-white rounded-3xl border border-slate-200 p-8 shadow-xs",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-12 h-12 text-slate-300 mx-auto mb-3" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-12 h-12 text-slate-300 mx-auto mb-3" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 							className: "text-lg font-bold text-slate-800",
 							children: "Nenhum curso encontrado para os filtros selecionados"
@@ -17739,7 +17739,7 @@ var StudentPortalPage = ({ onBackToHome, onOpenValidator, initialCourseId = "hc-
 								className: "flex items-center gap-3 justify-center sm:justify-start",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-[#FFC72C]",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" })
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" })
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "text-xs text-slate-400 uppercase font-semibold",
 									children: "Meus Cursos"
@@ -17975,7 +17975,7 @@ var StudentPortalPage = ({ onBackToHome, onOpenValidator, initialCourseId = "hc-
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 											onClick: () => setActiveBottomTab("anotacoes"),
 											className: `pb-2 border-b-2 transition-all cursor-pointer whitespace-nowrap flex items-center gap-2 ${activeBottomTab === "anotacoes" ? "border-[#243042] text-[#243042]" : "border-transparent text-slate-500 hover:text-slate-800"}`,
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Minhas Anotações" })]
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Minhas Anotações" })]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 											onClick: () => setActiveBottomTab("certificado"),
@@ -18696,7 +18696,7 @@ var CourseDetailLaunchPage = ({ course, onBackToHome, onEnroll, onOpenValidator,
 									{
 										id: "sobre",
 										label: "Sobre o Curso",
-										icon: BookOpen$1
+										icon: BookOpen
 									},
 									{
 										id: "conteudo",
@@ -19617,7 +19617,7 @@ var renderIcon = (iconName, className = "w-6 h-6") => {
 		case "LayoutDashboard": return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutDashboard, { className });
 		case "HeartPulse": return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, { className });
 		case "PenTool": return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PenTool, { className });
-		default: return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className });
+		default: return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className });
 	}
 };
 var MACRO_AREAS = [
@@ -20345,7 +20345,7 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 								className: "flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-0.5 rounded-full border border-amber-200 mb-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Estrutura por Áreas de Desenvolvimento" })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Estrutura por Áreas de Desenvolvimento" })]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 									className: "text-2xl sm:text-3xl font-black text-[#011049] tracking-tight",
 									children: "Categorias Organizadas por Área"
@@ -20458,7 +20458,7 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 															children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 																type: "button",
 																className: "w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0",
-																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
 															})
 														})]
 													})
@@ -20531,7 +20531,7 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 												type: "button",
 												className: "w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
 											})
 										})]
 									})
@@ -24457,7 +24457,7 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses, onN
 						className: "fontes my-10 p-6 rounded-2xl bg-slate-50/80 border border-slate-200",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 							className: "text-lg font-bold text-slate-900 mb-3 flex items-center gap-2",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Fontes e referências" })]
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Fontes e referências" })]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 							className: "space-y-2.5 text-xs sm:text-sm text-slate-700",
 							children: post.sources.map((src, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
@@ -25120,7 +25120,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório Aberto de Manuscritos de Estudos e Pesquisa" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório Aberto de Manuscritos de Estudos e Pesquisa" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 								className: "text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight uppercase",
@@ -25185,7 +25185,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-900 text-xs font-bold uppercase tracking-wider",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5 text-amber-700" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Coleção Oficial ESDHUBEM" })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-amber-700" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Coleção Oficial ESDHUBEM" })]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 									className: "text-2xl sm:text-3xl font-black text-slate-900 tracking-tight",
@@ -25626,7 +25626,7 @@ var ArtigoDetailPage = ({ article, onBackToArticles, onBackToHome }) => {
 							className: "bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-2 text-slate-900 font-extrabold text-lg border-b border-slate-100 pb-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Resumo (Português)" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Resumo (Português)" })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "text-slate-700 text-sm sm:text-base leading-relaxed text-justify",
 								children: article.abstractPt
@@ -25636,7 +25636,7 @@ var ArtigoDetailPage = ({ article, onBackToArticles, onBackToHome }) => {
 							className: "bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-2 text-slate-900 font-extrabold text-lg border-b border-slate-100 pb-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Abstract (English)" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Abstract (English)" })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "text-slate-700 text-sm sm:text-base leading-relaxed text-justify italic font-serif",
 								children: article.abstractEn
@@ -25996,7 +25996,7 @@ var CorpoDocentePage = ({ onBackToHome, onNavigateToCourseCatalog }) => {
 												className: "p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 													className: "text-xs font-bold text-slate-900 block flex items-center gap-1.5",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-amber-600" }), "Responsabilidade Acadêmica"]
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-amber-600" }), "Responsabilidade Acadêmica"]
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 													className: "text-xs text-slate-600",
 													children: "Supervisão de conteúdos ementários, validação de apostilas e regência das videoaulas de Desenvolvimento Pessoal."
@@ -26305,7 +26305,7 @@ var DireitosAlunoPage = ({ onBackToHome, onOpenValidator, onOpenCertificatePrevi
 					className: "space-y-6",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 						className: "text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6 text-[#243042]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Nossas 3 Modalidades de Capacitação" })]
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6 text-[#243042]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Nossas 3 Modalidades de Capacitação" })]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "text-xs sm:text-sm text-slate-500 mt-1",
 						children: "Como a ESDHUBEM estrutura suas metodologias para atender alunos universitários e profissionais."
@@ -27030,7 +27030,7 @@ var SecretariaDocumentacaoPage = ({ onBackToHome, onOpenValidator, onOpenCertifi
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											className: "w-10 h-10 rounded-xl bg-[#243042] text-[#FFC72C] flex items-center justify-center font-bold",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5" })
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5" })
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 											className: "text-base font-bold text-slate-900",
@@ -27387,7 +27387,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 							className: "flex items-center gap-3",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5" })
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5" })
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 								className: "font-extrabold text-[#182333] text-2xl sm:text-3xl tracking-tight",
 								children: "Por que criamos as Diretrizes de Publicação e a Escala de Autoria?"
@@ -28178,7 +28178,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 								onNavigateToArticles && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: onNavigateToArticles,
 									className: "px-5 py-3 bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos Publicados" })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos Publicados" })]
 								}),
 								onOpenCertificatePreview && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: onOpenCertificatePreview,
@@ -28239,7 +28239,7 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onNavigate }) => {
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/20 text-[#FFC72C] text-xs font-bold uppercase tracking-wider border border-amber-400/30",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ESDHUBEM" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ESDHUBEM" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 								className: "text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight",
@@ -29110,7 +29110,7 @@ var DiretrizesProtecaoAutoriaPage = ({ onBackToHome, onNavigate }) => {
 								className: "border-b border-slate-100 pb-4",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 									className: "text-xl sm:text-2xl font-extrabold text-slate-900 flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Funcionamento da Publicação" })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Funcionamento da Publicação" })]
 								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
@@ -30392,7 +30392,7 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 					}), onNavigateToArticles && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						onClick: onNavigateToArticles,
 						className: "inline-flex items-center gap-1.5 text-xs text-cyan-300 hover:text-white bg-cyan-950/60 border border-cyan-500/40 px-3.5 py-1.5 rounded-full transition-all cursor-pointer",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos & Anais Acadêmicos" })]
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos & Anais Acadêmicos" })]
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "space-y-4",
@@ -31794,7 +31794,7 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 								type: "button",
 								onClick: onNavigateToArticles,
 								className: "bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black px-6 py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md cursor-pointer",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório de Artigos" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório de Artigos" })]
 							})]
 						})]
 					})
@@ -32727,7 +32727,7 @@ var SobreNosPage = ({ onBackToHome, onOpenValidator, onNavigateToCourses, onNavi
 									onNavigateToCourses && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 										onClick: onNavigateToCourses,
 										className: "inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-6 py-3.5 rounded-full border border-white/20 transition-all cursor-pointer",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Catálogo de Cursos" })]
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Catálogo de Cursos" })]
 									}),
 									onNavigateToPedagogy && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 										onClick: onNavigateToPedagogy,
@@ -33321,7 +33321,7 @@ var GeradorAbntPage = ({ onBackToHome, onNavigateToArticles }) => {
 							{
 								id: "livro",
 								label: "Livro",
-								icon: BookOpen$1
+								icon: BookOpen
 							},
 							{
 								id: "capitulo",
@@ -34464,7 +34464,7 @@ var PerguntasFrequentesPage = ({ onBackToHome, onNavigate }) => {
 							className: "border-b border-slate-200 pb-3 flex items-center gap-3",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-600 flex items-center justify-center shrink-0",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5" })
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5" })
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 								className: "text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight",
 								children: "Sobre Revistas Científicas e Periódicos"
@@ -34746,7 +34746,7 @@ var CartaAbertaPage = ({ onBackToHome, onNavigate }) => {
 								className: "flex items-center gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6" })
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6" })
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 									className: "text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight",
 									children: "📖 Sobre Disponibilização para Venda"
@@ -35040,7 +35040,7 @@ var ModalidadesFormacaoPage = ({ onBackToHome, onNavigate, onOpenValidator }) =>
 								dotColor: "bg-rose-500 text-rose-100",
 								borderHover: "hover:border-rose-400",
 								tagBg: "bg-rose-50 text-rose-700 border-rose-200",
-								icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6 text-rose-600" }),
+								icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6 text-rose-600" }),
 								descricao: "Jornadas completas de aprendizado para quem quer dominar uma área do início ao fim. Diferente de um curso rápido, a formação livre oferece uma visão ampla e profunda, combinando teoria consistente, prática orientada e estudos de caso reais.",
 								publico: "Pessoas em transição de carreira, iniciantes que querem uma base sólida antes de atuar ou qualquer pessoa que deseja um mergulho profundo e transformador em um tema."
 							},
@@ -35166,7 +35166,7 @@ var ModalidadesFormacaoPage = ({ onBackToHome, onNavigate, onOpenValidator }) =>
 							children: [onNavigate && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => onNavigate("categorias"),
 								className: "px-5 py-3 bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Todos os Cursos" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Todos os Cursos" })]
 							}), onNavigate && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => onNavigate("regras-certificacao-merito"),
 								className: "px-5 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer border border-slate-600 shadow-md hover:scale-105",
