@@ -13,18 +13,9 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section id="inicio" className="bg-white">
       {/* Banner Section */}
-      <div className="relative w-full min-h-[380px] sm:min-h-[430px] md:min-h-[480px] lg:min-h-[520px] flex flex-col items-center justify-start overflow-hidden bg-[#011049]">
-        {/* Background Image - 100% nitidez sem película de gradiente embaçando */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={bannerImg}
-            alt="ESDHUBEM • Desenvolvimento • Bem-Estar"
-            className="w-full h-full object-cover object-bottom"
-          />
-        </div>
-
-        {/* Content over image aligned to the top */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center pt-6 sm:pt-8 md:pt-10 pb-36 sm:pb-44 md:pb-52">
+      <div className="relative w-full flex flex-col items-center justify-start overflow-hidden bg-[#011049]">
+        {/* Content - Área de texto dedicada no topo */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center pt-8 sm:pt-10 md:pt-12 pb-2 sm:pb-3">
           <div className="tracking-tight leading-tight flex flex-col items-center text-center space-y-2 sm:space-y-2.5">
             {/* Linha 1: ESDHUBEM em cima sozinho */}
             <span className="text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-black text-cyan-400 tracking-widest uppercase drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]">
@@ -46,6 +37,15 @@ export const Hero: React.FC<HeroProps> = ({
               A Tecnologia do Escrever e do Mapear
             </p>
           </div>
+        </div>
+
+        {/* Background Image / Ilustração Central da Rede de Mapas Mentais sem sobreposição */}
+        <div className="relative z-0 w-full flex justify-center items-end overflow-hidden -mt-2 sm:-mt-4 md:-mt-6">
+          <img
+            src={bannerImg}
+            alt="ESDHUBEM • Desenvolvimento • Bem-Estar"
+            className="w-full max-w-6xl md:max-w-7xl h-auto object-contain object-bottom pointer-events-none select-none"
+          />
         </div>
       </div>
 
