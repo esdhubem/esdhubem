@@ -168,14 +168,14 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
                   </div>
 
                   {/* Ícone Circular Flutuante Centralizado na Divisa da Foto */}
-                  <div className="w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[186px] z-10 text-blue-600 group-hover:scale-110 group-hover:shadow-lg transition-transform">
-                    <PenTool className="w-4 h-4 text-blue-600" />
+                  <div className="w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[186px] z-10 text-emerald-600 group-hover:scale-110 group-hover:shadow-lg transition-transform">
+                    <PenTool className="w-4 h-4 text-emerald-600" />
                   </div>
 
                   {/* Corpo do Cartão: Título Arejado e Espaço em Branco */}
                   <div className="pt-8 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-4">
                     <div className="w-full">
-                      <h3 className="font-extrabold text-slate-800 text-sm sm:text-base leading-snug group-hover:text-blue-600 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
+                      <h3 className="font-extrabold text-slate-800 text-sm sm:text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
                         {course.title}
                       </h3>
                     </div>
@@ -188,9 +188,9 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
                           e.stopPropagation();
                           onSelectCourse(course);
                         }}
-                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm tracking-wide shadow-md shadow-blue-600/25 hover:shadow-lg transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
                       >
-                        <ShoppingCart className="w-3.5 h-3.5" />
+                        <ShoppingCart className="w-3.5 h-3.5 text-emerald-100" />
                         <span>Comprar Curso</span>
                       </button>
                     </div>
