@@ -34,8 +34,8 @@ export const DireitosAlunoPage: React.FC<DireitosAlunoPageProps> = ({
 }) => {
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800">
-      {/* Header Banner */}
-      <div className="bg-[#182333] text-white border-b border-slate-700/80">
+      {/* Header Banner com Azul Profundo Navy #011049 */}
+      <div className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white border-b border-blue-900/80 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
           <div className="flex items-center gap-2 text-xs text-slate-400 mb-3">
             <button

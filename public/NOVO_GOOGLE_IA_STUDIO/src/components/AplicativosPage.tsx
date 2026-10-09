@@ -84,8 +84,8 @@ export const AplicativosPage: React.FC<AplicativosPageProps> = ({ onBackToHome }
 
   return (
     <div className="bg-[#F8FAFC] min-h-screen pb-20">
-      {/* Top Banner / Hero */}
-      <div className="bg-[#182333] pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white">
+      {/* Top Banner / Hero com Azul Profundo Navy #011049 */}
+      <div className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-blue-900/60 shadow-lg">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"

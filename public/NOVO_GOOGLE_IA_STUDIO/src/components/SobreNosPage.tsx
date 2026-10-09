@@ -41,8 +41,8 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800">
-      {/* Header Banner */}
-      <div className="bg-[#182333] text-white border-b border-slate-700/80 relative overflow-hidden">
+      {/* Header Banner com Azul Profundo Navy #011049 */}
+      <div className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white border-b border-blue-900/80 relative overflow-hidden shadow-lg">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,199,44,0.1),transparent_50%)] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 relative z-10">

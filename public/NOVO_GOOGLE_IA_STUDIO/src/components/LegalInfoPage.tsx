@@ -43,9 +43,9 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800 font-sans">
       {/* Breadcrumb Navigation */}
-      <div className="bg-[#182333] border-b border-slate-700/60 py-3">
+      <div className="bg-[#011049] border-b border-blue-900/60 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-sm text-slate-400">
+          <div className="flex items-center gap-2 text-sm text-slate-300">
             <button
               onClick={onBackToHome}
               className="hover:text-[#FFC72C] transition-colors flex items-center gap-1 cursor-pointer"
@@ -66,8 +66,8 @@ export const LegalInfoPage: React.FC<LegalInfoPageProps> = ({
         </div>
       </div>
 
-      {/* Header Hero */}
-      <header className="bg-[#243042] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60">
+      {/* Header Hero com Azul Profundo Navy #011049 */}
+      <header className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg">
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider">

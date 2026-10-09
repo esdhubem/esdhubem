@@ -314,9 +314,9 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800" id="pagina-categoria-detalhe">
       {/* Breadcrumb Navigation */}
-      <div className="bg-[#182333] border-b border-slate-700/60 py-3">
+      <div className="bg-[#011049] border-b border-blue-900/60 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-sm text-slate-400">
+          <div className="flex items-center gap-2 text-sm text-slate-300">
             <button
               onClick={onBackToHome}
               className="hover:text-[#FFC72C] transition-colors flex items-center gap-1 cursor-pointer"
@@ -384,10 +384,10 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
       </div>
 
       {/* 2. Hero Section for the Selected Category */}
-      <header className="bg-[#243042] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60">
+      <header className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg">
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center gap-8">
           <div className="max-w-3xl flex flex-col items-center text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider border border-white/10">
               <Building2 className="w-3.5 h-3.5" />
               <span>{meta.heroTag}</span>
             </div>
@@ -404,7 +404,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </p>
 
             {/* Target Audience Pill */}
-            <div className="bg-[#182333]/80 border border-slate-700 rounded-xl p-3.5 text-xs text-slate-300 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-2.5 max-w-2xl mx-auto">
+            <div className="bg-[#011049]/90 border border-blue-900/80 rounded-xl p-3.5 text-xs text-slate-300 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-2.5 max-w-2xl mx-auto backdrop-blur-sm">
               <Users className="w-4 h-4 text-[#FFC72C] shrink-0" />
               <div>
                 <strong className="text-white block sm:inline mr-1">Público-alvo principal:</strong>

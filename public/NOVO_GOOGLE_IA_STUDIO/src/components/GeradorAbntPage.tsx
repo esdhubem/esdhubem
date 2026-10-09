@@ -570,8 +570,8 @@ export const GeradorAbntPage: React.FC<GeradorAbntPageProps> = ({ onBackToHome, 
 
   return (
     <div className="bg-[#F8FAFC] min-h-screen pb-24 text-slate-800">
-      {/* Top Banner / Header */}
-      <div className="bg-[#182333] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-slate-700/60">
+      {/* Top Banner / Header com Azul Profundo Navy #011049 */}
+      <div className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-blue-900/60 shadow-lg">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#FFC72C 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
         </div>

@@ -42,7 +42,7 @@ export const PolicyDetailPage: React.FC<PolicyDetailPageProps> = ({
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800">
       {/* Breadcrumb Navigation */}
-      <div className="bg-[#182333] border-b border-slate-700/60 py-3">
+      <div className="bg-[#011049] border-b border-blue-900/60 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           <div className="flex items-center gap-2 text-sm text-slate-400">
             <button

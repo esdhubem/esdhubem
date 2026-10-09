@@ -38,8 +38,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 }) => {
   return (
     <div className="bg-[#F8FAFC] min-h-screen text-slate-800 flex flex-col">
-      {/* Hero Header */}
-      <div className="bg-[#182333] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-slate-700/60 shadow-lg">
+      {/* Hero Header com Azul Profundo Navy #011049 */}
+      <div className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-blue-900/60 shadow-lg">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div

@@ -182,8 +182,8 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
         </div>
       </nav>
 
-      {/* 2. Hero Section - Soft, Elegant, Highly Readable */}
-      <header className="bg-gradient-to-b from-[#182333] to-[#1e2b3e] text-white py-12 md:py-16 border-b border-slate-700/60 shadow-xs">
+      {/* 2. Hero Section - Soft, Elegant, Highly Readable com Azul Profundo Navy #011049 */}
+      <header className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white py-12 md:py-16 border-b border-blue-900/60 shadow-lg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             

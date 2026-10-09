@@ -11642,7 +11642,7 @@ var BookOpenCheck = createLucideIcon("book-open-check", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var BookOpen = createLucideIcon("book-open", [["path", {
+var BookOpen$1 = createLucideIcon("book-open", [["path", {
 	d: "M12 7v14",
 	key: "1akyts"
 }], ["path", {
@@ -14407,7 +14407,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 		onNavigate("catalogo-cursos");
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
-		className: "sticky top-0 z-50 bg-[#0A1128] text-white shadow-xl border-b border-blue-500/20 transition-all",
+		className: "sticky top-0 z-50 bg-[#011049] text-white shadow-md transition-all",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "border-b border-white/10",
@@ -14519,7 +14519,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "hidden lg:block bg-[#070D1F] border-b border-blue-900/40 shadow-md",
+				className: "hidden lg:block bg-[#011049]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "max-w-[1600px] mx-auto px-4 lg:px-6",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
@@ -14540,7 +14540,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 										"livraria"
 									].includes(currentPage) || currentPage.startsWith("categoria:") ? "text-white font-bold bg-blue-600/30 border-b-2 border-blue-400" : "text-white/80 hover:text-white hover:bg-white/5"}`,
 									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-cyan-400" }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5 text-cyan-400" }),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Produtos & Soluções" }),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											className: "text-[10px] bg-cyan-500/20 text-cyan-300 font-bold px-1.5 py-0.2 rounded-full",
@@ -14598,7 +14598,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 												onClick: () => onNavigate("livraria"),
 												className: `w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${currentPage === "livraria" ? "bg-blue-600/20 text-blue-300 font-bold" : "text-slate-200 hover:text-white hover:bg-blue-900/30"}`,
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-sky-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-sky-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 													className: "font-semibold text-xs",
 													children: "Livraria"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -14660,7 +14660,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 												onClick: () => onNavigate("diretrizes-pedagogicas"),
 												className: `w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${currentPage === "diretrizes-pedagogicas" ? "bg-blue-600/20 text-blue-300 font-bold" : "text-slate-200 hover:text-white hover:bg-blue-900/30"}`,
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-blue-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-blue-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 													className: "font-semibold text-xs",
 													children: "Diretrizes Pedagógicas"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -14764,7 +14764,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 												onClick: () => onNavigate("livraria"),
 												className: "w-full text-left px-3 py-2.5 rounded-xl text-slate-200 hover:text-white hover:bg-blue-900/30 transition-all flex items-center gap-2.5 cursor-pointer",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-sky-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-sky-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 													className: "font-semibold text-xs",
 													children: "Livros"
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -14865,7 +14865,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "lg:hidden px-4 pb-3 pt-2 bg-[#0A1128] border-b border-blue-500/15",
+				className: "lg:hidden px-4 pb-3 pt-2 bg-[#011049]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
 					onSubmit: handleSearchSubmit,
 					className: "relative w-full",
@@ -14882,7 +14882,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 				})
 			}),
 			mobileMenuOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "lg:hidden bg-[#0A1128] border-t border-blue-500/20 px-4 py-4 space-y-4 shadow-2xl text-white",
+				className: "lg:hidden bg-[#011049] border-t border-blue-500/20 px-4 py-4 space-y-4 shadow-2xl text-white",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						onClick: () => {
@@ -15038,7 +15038,7 @@ var Header = ({ onSearch, searchTerm, onNavigate, onOpenValidator, onOpenAbout, 
 									setMobileMenuOpen(false);
 								},
 								className: "w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-sky-300 flex items-center gap-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-sky-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Livros (Obras Diamante)" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-sky-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Livros (Obras Diamante)" })]
 							})
 						]
 					}),
@@ -15098,16 +15098,9 @@ var Hero = ({ onSelectCategory }) => {
 		id: "inicio",
 		className: "bg-white",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "relative w-full min-h-[380px] sm:min-h-[430px] md:min-h-[480px] lg:min-h-[520px] flex flex-col items-center justify-start overflow-hidden bg-[#010927]",
+			className: "relative w-full flex flex-col items-center justify-start overflow-hidden bg-[#011049]",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "absolute inset-0 z-0",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					src: banner_network_innovation_default,
-					alt: "ESDHUBEM • Desenvolvimento • Bem-Estar",
-					className: "w-full h-full object-cover object-bottom"
-				})
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center pt-6 sm:pt-8 md:pt-10 pb-36 sm:pb-44 md:pb-52",
+				className: "relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center pt-8 sm:pt-10 md:pt-12 pb-2 sm:pb-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "tracking-tight leading-tight flex flex-col items-center text-center space-y-2 sm:space-y-2.5",
 					children: [
@@ -15129,6 +15122,13 @@ var Hero = ({ onSelectCategory }) => {
 						})
 					]
 				})
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "relative z-0 w-full flex justify-center items-end overflow-hidden -mt-2 sm:-mt-4 md:-mt-6",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					src: banner_network_innovation_default,
+					alt: "ESDHUBEM • Desenvolvimento • Bem-Estar",
+					className: "w-full max-w-6xl md:max-w-7xl h-auto object-contain object-bottom pointer-events-none select-none"
+				})
 			})]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "bg-white border-b border-slate-200 shadow-sm relative z-20",
@@ -15141,7 +15141,7 @@ var Hero = ({ onSelectCategory }) => {
 							className: "flex items-center justify-center lg:justify-start gap-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-center text-amber-600 shrink-0 shadow-sm",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6" })
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6" })
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 								className: "text-base sm:text-lg font-extrabold text-[#182333]",
 								children: "Cursos livres"
@@ -15188,7 +15188,7 @@ var Hero = ({ onSelectCategory }) => {
 var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigateToCategoriesPage, onNavigateToCategoryDetail, onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-			className: "py-12 sm:py-16 bg-[#FFC72C] border-b border-amber-400/40",
+			className: "py-12 sm:py-16 bg-[#b7d6f7] border-b border-blue-200/80 shadow-xs",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
@@ -15240,43 +15240,47 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 						})
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6",
+					className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6",
 					children: [
 						{
 							id: "desenvolvimento-pessoal",
 							emoji: "🧠",
 							title: "Desenvolvimento Pessoal",
-							description: "Autoconhecimento, consciência, relações, bem-estar e desenvolvimento pessoal.",
+							description: "Autoconhecimento, inteligência emocional, relações e finanças comportamentais.",
 							filterKey: "Desenvolvimento Pessoal",
 							badgeText: "Pessoal",
-							badgeClass: "bg-purple-50 text-purple-700 border-purple-200"
+							badgeClass: "bg-purple-50 text-purple-700 border-purple-200",
+							image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80"
 						},
 						{
 							id: "desenvolvimento-profissional",
 							emoji: "💼",
 							title: "Desenvolvimento Profissional",
-							description: "Carreira, competências, capacitação e conhecimentos para atuação profissional.",
+							description: "Carreira, competências, liderança, capacitação e preparação para o mercado.",
 							filterKey: "Desenvolvimento Profissional",
 							badgeText: "Profissional",
-							badgeClass: "bg-blue-50 text-blue-700 border-blue-200"
+							badgeClass: "bg-blue-50 text-blue-700 border-blue-200",
+							image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
 						},
 						{
-							id: "desenvolvimento-empresarial",
-							emoji: "🏢",
-							title: "Desenvolvimento Empresarial",
-							description: "Palestras in-company, bem-estar nas empresas, descomplica MEI/ME e ferramentas de gestão prática.",
-							filterKey: "Desenvolvimento Empresarial",
-							badgeText: "Empresarial",
-							badgeClass: "bg-amber-50 text-amber-700 border-amber-200"
+							id: "desenvolvimento-consciencial",
+							emoji: "✨",
+							title: "Desenvolvimento Consciencial",
+							description: "Desenvolvimento humano, expansão da consciência, ética aplicada e consciência ambiental.",
+							filterKey: "Desenvolvimento Consciencial",
+							badgeText: "Consciência",
+							badgeClass: "bg-indigo-50 text-indigo-700 border-indigo-200",
+							image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
 						},
 						{
 							id: "desenvolvimento-bem-estar-integrativo",
 							emoji: "🩺",
 							title: "Desenvolvimento em Bem-estar Integrativo",
-							description: "Saúde, bem-estar, práticas integrativas e aprofundamento profissional na área da saúde.",
+							description: "Saúde, bem-estar, práticas integrativas e aprofundamento na área da saúde.",
 							filterKey: "Desenvolvimento em Bem-estar Integrativo",
 							badgeText: "Bem-estar Integrativo",
-							badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200"
+							badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200",
+							image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
 						}
 					].map((area) => {
 						const isSelected = selectedCategory?.toLowerCase() === area.filterKey.toLowerCase();
@@ -15289,29 +15293,47 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 									if (catalogEl) catalogEl.scrollIntoView({ behavior: "smooth" });
 								}
 							},
-							className: `group relative p-6 rounded-2xl transition-all duration-200 flex flex-col justify-between cursor-pointer border ${isSelected ? "bg-slate-50 border-2 border-[#182333] shadow-xl ring-2 ring-[#FFC72C]/60 scale-[1.02]" : "bg-white border-slate-200/90 hover:border-amber-400 hover:shadow-xl hover:-translate-y-1"}`,
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "space-y-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center justify-between",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "text-3xl",
-										children: area.emoji
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: `text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${area.badgeClass}`,
-										children: area.badgeText
+							className: `group bg-white rounded-2xl border transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative ${isSelected ? "border-2 border-emerald-600 shadow-xl ring-2 ring-emerald-500/30 scale-[1.02]" : "border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-300 hover:-translate-y-1"}`,
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative h-44 w-full overflow-hidden bg-slate-100",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+										src: area.image,
+										alt: area.title,
+										className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "absolute top-3 right-3 z-10",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: `text-[10px] font-extrabold px-2.5 py-1 rounded-full border backdrop-blur-md bg-white/90 shadow-xs ${area.badgeClass}`,
+											children: area.badgeText
+										})
 									})]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									className: "text-lg sm:text-xl font-black text-[#182333] group-hover:text-amber-600 transition-colors leading-snug",
-									children: area.title
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal",
-									children: area.description
-								})] })]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-800 group-hover:text-amber-600 transition-colors",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: isSelected ? "Filtro Ativo (Limpar)" : "Explorar Cursos" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform text-amber-500" })]
-							})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[154px] z-10 text-xl group-hover:scale-110 group-hover:shadow-lg transition-transform",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: area.emoji })
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "w-full space-y-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+											className: "font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
+											children: area.title
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-xs text-slate-600 line-clamp-3 leading-relaxed",
+											children: area.description
+										})]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "pt-2 w-full flex justify-center",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+											type: "button",
+											className: "inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0 w-full max-w-[200px]",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
+										})
+									})]
+								})
+							]
 						}, area.id);
 					})
 				})]
@@ -15346,381 +15368,150 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 							})
 						]
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								onClick: () => {
-									if (onNavigate) onNavigate("modalidades-formacao");
-									window.scrollTo({
-										top: 0,
-										behavior: "smooth"
-									});
-								},
-								className: "bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-3",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-between",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-2xl",
-												children: "🟢"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[11px] font-bold bg-emerald-50 text-emerald-700 px-2.5 py-0.5 rounded-full border border-emerald-200",
-												children: "Descoberta"
-											})]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "font-extrabold text-[#182333] text-base group-hover:text-emerald-600 transition-colors",
-											children: "Cursos Freepremium"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 leading-relaxed line-clamp-3",
-											children: "Aprenda sem barreiras. Assista a todas as videoaulas de forma 100% gratuita para testar o conteúdo, fazer os testes de múltipla escolha e conhecer nossa metodologia. Você só paga taxa de certificado Bronze se quiser o documento oficial."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5",
-												children: "Público-alvo:"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "line-clamp-2",
-												children: "Estudantes e profissionais que buscam conhecimento rápido sem custo inicial."
-											})]
+							{
+								id: "freepremium",
+								emoji: "🟢",
+								badgeText: "Descoberta",
+								badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200",
+								title: "Cursos Freepremium",
+								target: "Estudantes e profissionais que buscam conhecimento rápido sem custo inicial.",
+								image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+								destination: "modalidades-formacao"
+							},
+							{
+								id: "capacitacao",
+								emoji: "🔵",
+								badgeText: "Ação Prática",
+								badgeClass: "bg-blue-50 text-blue-700 border-blue-200",
+								title: "Cursos de Capacitação",
+								target: "Profissionais que precisam atualizar competências e resolver demandas da rotina.",
+								image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+								destination: "modalidades-formacao"
+							},
+							{
+								id: "horas-complementares",
+								emoji: "🟡",
+								badgeText: "Validação Acadêmica",
+								badgeClass: "bg-amber-50 text-amber-700 border-amber-200",
+								title: "Horas Complementares",
+								target: "Universitários de graduação e pós-graduação que precisam comprovar horas extracurriculares.",
+								image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+								destination: "modalidades-formacao"
+							},
+							{
+								id: "formacao-integral",
+								emoji: "🟠",
+								badgeText: "Trilha Completa",
+								badgeClass: "bg-orange-50 text-orange-700 border-orange-200",
+								title: "Formação Integral",
+								target: "Pessoas que buscam desenvolvimento consistente com método, profundidade e rigor pedagógico.",
+								image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+								destination: "modalidades-formacao"
+							},
+							{
+								id: "treinamentos-corporativos",
+								emoji: "🟣",
+								badgeText: "Desempenho Profissional",
+								badgeClass: "bg-purple-50 text-purple-700 border-purple-200",
+								title: "Treinamentos Corporativos",
+								target: "Gestores de RH, líderes de equipe e diretores de empresas e terceiro setor.",
+								image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+								destination: "categoria:treinamentos-palestras-corporativas"
+							},
+							{
+								id: "autoria-destaque",
+								emoji: "✒️",
+								badgeText: "Desenvolvimento da Escrita",
+								badgeClass: "bg-indigo-50 text-indigo-700 border-indigo-200",
+								title: "Autoria e Destaque",
+								target: "Estudantes, pesquisadores, terapeutas e profissionais que desejam publicar com destaque.",
+								image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
+								destination: "regras-certificacao-merito"
+							},
+							{
+								id: "aprofundamento-saude",
+								emoji: "💙",
+								badgeText: "Área da Saúde",
+								badgeClass: "bg-sky-50 text-sky-700 border-sky-200",
+								title: "Aprofundamento na Saúde",
+								target: "Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos e terapeutas graduados.",
+								image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+								destination: "categoria:aprofundamento-profissional-saude"
+							},
+							{
+								id: "orientacao-carreira-futuro",
+								emoji: "💡",
+								badgeText: "Evolução & Futuro",
+								badgeClass: "bg-teal-50 text-teal-700 border-teal-200",
+								title: "Orientação de Carreira & Futuro",
+								target: "Profissionais em transição, recém-formados e quem busca novos rumos na carreira.",
+								image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+								destination: "categoria:orientacao-carreira-futuro"
+							}
+						].map((mod) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							onClick: () => {
+								if (mod.destination.startsWith("categoria:")) {
+									const slug = mod.destination.replace("categoria:", "");
+									if (onNavigateToCategoryDetail) onNavigateToCategoryDetail(slug);
+									else if (onNavigate) onNavigate(mod.destination);
+								} else if (onNavigate) onNavigate(mod.destination);
+								window.scrollTo({
+									top: 0,
+									behavior: "smooth"
+								});
+							},
+							className: "group bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1",
+							id: `home-mod-card-${mod.id}`,
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative h-40 w-full overflow-hidden bg-slate-100",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+										src: mod.image,
+										alt: mod.title,
+										className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "absolute top-3 right-3 z-10",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: `text-[10px] font-extrabold px-2.5 py-1 rounded-full border backdrop-blur-md bg-white/95 shadow-xs ${mod.badgeClass}`,
+											children: mod.badgeText
 										})
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								onClick: () => {
-									if (onNavigate) onNavigate("modalidades-formacao");
-									window.scrollTo({
-										top: 0,
-										behavior: "smooth"
-									});
-								},
-								className: "bg-white rounded-2xl border border-slate-200/90 hover:border-blue-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-3",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-between",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-2xl",
-												children: "🔵"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[11px] font-bold bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full border border-blue-200",
-												children: "Ação Prática"
-											})]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "font-extrabold text-[#182333] text-base group-hover:text-blue-600 transition-colors",
-											children: "Cursos de Capacitação"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 leading-relaxed line-clamp-3",
-											children: "Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no \"saber fazer\": protocolos, técnicas e metodologias que geram resultado real."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600",
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[138px] z-10 text-xl group-hover:scale-110 group-hover:shadow-lg transition-transform",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: mod.emoji })
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "w-full space-y-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+											className: "font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
+											children: mod.title
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "bg-slate-50 border border-slate-200/80 rounded-xl p-3 text-left",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5",
+												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-extrabold mb-1",
 												children: "Público-alvo:"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "line-clamp-2",
-												children: "Profissionais que precisam atualizar competências e resolver demandas da rotina."
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: "text-xs text-slate-600 line-clamp-3 leading-relaxed",
+												children: mod.target
 											})]
+										})]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "pt-2 w-full flex justify-center",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+											type: "button",
+											className: "inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0 w-full",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
 										})
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-blue-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								onClick: () => {
-									if (onNavigate) onNavigate("modalidades-formacao");
-									window.scrollTo({
-										top: 0,
-										behavior: "smooth"
-									});
-								},
-								className: "bg-white rounded-2xl border border-slate-200/90 hover:border-amber-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-3",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-between",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-2xl",
-												children: "🟡"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[11px] font-bold bg-amber-50 text-amber-700 px-2.5 py-0.5 rounded-full border border-amber-200",
-												children: "Validação Acadêmica"
-											})]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "font-extrabold text-[#182333] text-base group-hover:text-amber-600 transition-colors",
-											children: "Horas Complementares"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 leading-relaxed line-clamp-3",
-											children: "Cumpra as Atividades Complementares (AACC) da sua faculdade com segurança. Certificados com carga horária legítima, amparo legal e código de verificação para aprovação sem surpresas na sua instituição de ensino superior."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5",
-												children: "Público-alvo:"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "line-clamp-2",
-												children: "Universitários de graduação e pós-graduação que precisam comprovar horas extracurriculares."
-											})]
-										})
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-amber-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								onClick: () => {
-									if (onNavigate) onNavigate("modalidades-formacao");
-									window.scrollTo({
-										top: 0,
-										behavior: "smooth"
-									});
-								},
-								className: "bg-white rounded-2xl border border-slate-200/90 hover:border-orange-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-3",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-between",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-2xl",
-												children: "🟠"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[11px] font-bold bg-orange-50 text-orange-700 px-2.5 py-0.5 rounded-full border border-orange-200",
-												children: "Trilha Completa"
-											})]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "font-extrabold text-[#182333] text-base group-hover:text-orange-600 transition-colors",
-											children: "Formação Integral"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 leading-relaxed line-clamp-3",
-											children: "Percursos formativos completos que integram teoria, prática, ética e desenvolvimento pessoal. Trilha sequencial para quem busca transformação profunda e visão holística da sua área de atuação."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5",
-												children: "Público-alvo:"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "line-clamp-2",
-												children: "Pessoas que buscam desenvolvimento consistente com método, profundidade e rigor pedagógico."
-											})]
-										})
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-orange-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								onClick: () => {
-									if (onNavigate) onNavigate("categoria:treinamentos-palestras-corporativas");
-									else if (onNavigateToCategoryDetail) onNavigateToCategoryDetail("treinamentos-palestras-corporativas");
-									window.scrollTo({
-										top: 0,
-										behavior: "smooth"
-									});
-								},
-								className: "bg-white rounded-2xl border border-slate-200/90 hover:border-purple-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-3",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-between",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-2xl",
-												children: "🟣"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[11px] font-bold bg-purple-50 text-purple-700 px-2.5 py-0.5 rounded-full border border-purple-200",
-												children: "Desempenho Profissional"
-											})]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "font-extrabold text-[#182333] text-base group-hover:text-purple-600 transition-colors",
-											children: "Treinamentos Corporativos"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 leading-relaxed line-clamp-3",
-											children: "Programas desenvolvidos sob medida para equipes, empresas e instituições. Foco em alinhar processos, capacitar colaboradores, melhorar o clima organizacional e desenvolver lideranças ativas."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5",
-												children: "Público-alvo:"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "line-clamp-2",
-												children: "Gestores de RH, líderes de equipe e diretores de empresas e terceiro setor."
-											})]
-										})
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								onClick: () => {
-									if (onNavigate) onNavigate("regras-certificacao-merito");
-									window.scrollTo({
-										top: 0,
-										behavior: "smooth"
-									});
-								},
-								className: "bg-white rounded-2xl border border-slate-200/90 hover:border-indigo-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-3",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-between",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-2xl",
-												children: "🟣"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[11px] font-bold bg-indigo-50 text-indigo-700 px-2.5 py-0.5 rounded-full border border-indigo-200",
-												children: "Desenvolvimento da Escrita"
-											})]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "font-extrabold text-[#182333] text-base group-hover:text-indigo-600 transition-colors",
-											children: "Autoria e Destaque"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 leading-relaxed line-clamp-3",
-											children: "Aprenda a estruturar, escrever e publicar do texto prático ao livro, com reconhecimento Prata, Ouro ou Diamante. Transforme seu aprendizado em conhecimento compartilhado e credibilidade."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5",
-												children: "Público-alvo:"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "line-clamp-2",
-												children: "Estudantes, pesquisadores, terapeutas e profissionais que desejam publicar."
-											})]
-										})
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-indigo-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								onClick: () => {
-									if (onNavigate) onNavigate("categoria:aprofundamento-profissional-saude");
-									else if (onNavigateToCategoryDetail) onNavigateToCategoryDetail("aprofundamento-profissional-saude");
-									window.scrollTo({
-										top: 0,
-										behavior: "smooth"
-									});
-								},
-								className: "bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-3",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-between",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-2xl",
-												children: "💙"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[11px] font-bold bg-sky-50 text-sky-700 px-2.5 py-0.5 rounded-full border border-sky-200",
-												children: "Área da Saúde"
-											})]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "font-extrabold text-[#182333] text-base group-hover:text-sky-600 transition-colors",
-											children: "Aprofundamento na Saúde"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 leading-relaxed line-clamp-3",
-											children: "Cursos exclusivos para graduados em saúde. Espaço de atualização e desenvolvimento técnico fundamentado (não se tratam de pós-graduação). Exige comprovação de nível superior."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5",
-												children: "Público-alvo:"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "line-clamp-2",
-												children: "Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos e terapeutas graduados."
-											})]
-										})
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-sky-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								onClick: () => {
-									if (onNavigate) onNavigate("categoria:orientacao-carreira-futuro");
-									else if (onNavigateToCategoryDetail) onNavigateToCategoryDetail("orientacao-carreira-futuro");
-									window.scrollTo({
-										top: 0,
-										behavior: "smooth"
-									});
-								},
-								className: "bg-white rounded-2xl border border-slate-200/90 hover:border-teal-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-3",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-between",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-2xl",
-												children: "💡"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[11px] font-bold bg-teal-50 text-teal-700 px-2.5 py-0.5 rounded-full border border-teal-200",
-												children: "Evolução & Futuro"
-											})]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "font-extrabold text-[#182333] text-base group-hover:text-teal-600 transition-colors",
-											children: "Orientação de Carreira & Futuro"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 leading-relaxed line-clamp-3",
-											children: "Workshops e imersões focados em transição profissional, posicionamento de mercado, planejamento de carreira e desenvolvimento de competências para o futuro do trabalho."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5",
-												children: "Público-alvo:"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "line-clamp-2",
-												children: "Profissionais em transição, recém-formados e quem busca novos rumos na carreira."
-											})]
-										})
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-teal-600",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4 group-hover:translate-x-1 transition-transform" })]
-								})]
-							})
-						]
+									})]
+								})
+							]
+						}, mod.id))
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "text-center pt-2",
@@ -15749,7 +15540,7 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 //#region src/components/CorporateBanner.tsx
 var CorporateBanner = ({ onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "relative overflow-hidden rounded-3xl shadow-xl flex flex-col items-center cursor-pointer group h-full",
+		className: "relative overflow-hidden rounded-3xl shadow-2xl border border-cyan-400/30 flex flex-col items-center cursor-pointer group h-full hover:border-cyan-300 hover:shadow-cyan-900/30 hover:-translate-y-1 transition-all duration-300",
 		onClick: onNavigate,
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "absolute inset-0 z-0",
@@ -15757,28 +15548,28 @@ var CorporateBanner = ({ onNavigate }) => {
 				src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
 				alt: "Treinamento Corporativo",
 				className: "w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#182333]/90 via-[#182333]/80 to-[#182333]/40" })]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#061e47]/95 via-[#093576]/85 to-[#0e4da4]/50" })]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative z-10 p-8 sm:p-10 flex-1 text-left flex flex-col justify-center w-full",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4 w-fit",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Building2, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Para o Setor Corporativo" })]
+					className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/20 backdrop-blur-md border border-cyan-400/40 text-cyan-200 text-xs font-bold tracking-wide mb-4 w-fit",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Building2, { className: "w-4 h-4 text-cyan-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Para o Setor Corporativo" })]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 					className: "text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4",
 					children: ["Treinamento em ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-[#FFC72C]",
+						className: "text-[#B8D4F2]",
 						children: "Empresas"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-slate-300 text-sm sm:text-base max-w-lg mb-8 leading-relaxed",
+					className: "text-blue-100 text-sm sm:text-base max-w-lg mb-8 leading-relaxed",
 					children: "Capacite sua equipe com cursos especializados e trilhas de desenvolvimento focadas em resultados reais e aumento de produtividade."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "inline-flex items-center gap-2 text-white font-bold group-hover:text-[#FFC72C] transition-colors mt-auto",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conheça as Soluções" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-5 h-5 transform group-hover:translate-x-1 transition-transform" })]
+					className: "inline-flex items-center gap-2 text-[#FFC72C] font-black group-hover:text-[#ffdf79] transition-colors mt-auto",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conheça as Soluções" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" })]
 				})
 			]
 		})]
@@ -15788,7 +15579,7 @@ var CorporateBanner = ({ onNavigate }) => {
 //#region src/components/BookstoreBanner.tsx
 var BookstoreBanner = ({ onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "relative overflow-hidden rounded-3xl shadow-xl flex flex-col items-center cursor-pointer group h-full",
+		className: "relative overflow-hidden rounded-3xl shadow-2xl border border-cyan-400/30 flex flex-col items-center cursor-pointer group h-full hover:border-cyan-300 hover:shadow-cyan-900/30 hover:-translate-y-1 transition-all duration-300",
 		onClick: onNavigate,
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "absolute inset-0 z-0",
@@ -15796,28 +15587,28 @@ var BookstoreBanner = ({ onNavigate }) => {
 				src: "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=1200&q=80",
 				alt: "Livraria e Materiais",
 				className: "w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#182333]/90 via-[#182333]/80 to-[#182333]/40" })]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#061e47]/95 via-[#093576]/85 to-[#0e4da4]/50" })]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative z-10 p-8 sm:p-10 flex-1 text-left flex flex-col justify-center w-full",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4 w-fit",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Library, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Livros, Apostilas e eBooks" })]
+					className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/20 backdrop-blur-md border border-cyan-400/40 text-cyan-200 text-xs font-bold tracking-wide mb-4 w-fit",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Library, { className: "w-4 h-4 text-cyan-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Livros, Apostilas e eBooks" })]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 					className: "text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4",
 					children: ["Nossa ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-[#FFC72C]",
+						className: "text-[#B8D4F2]",
 						children: "Livraria"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-slate-300 text-sm sm:text-base max-w-sm mb-8 leading-relaxed",
+					className: "text-blue-100 text-sm sm:text-base max-w-sm mb-8 leading-relaxed",
 					children: "Materiais complementares exclusivos de alto nível para acelerar o seu aprendizado e transformar sua carreira."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "inline-flex items-center gap-2 text-white font-bold group-hover:text-[#FFC72C] transition-colors mt-auto",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Acessar a Livraria" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-5 h-5 transform group-hover:translate-x-1 transition-transform" })]
+					className: "inline-flex items-center gap-2 text-[#FFC72C] font-black group-hover:text-[#ffdf79] transition-colors mt-auto",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Acessar a Livraria" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" })]
 				})
 			]
 		})]
@@ -15827,7 +15618,7 @@ var BookstoreBanner = ({ onNavigate }) => {
 //#region src/components/PublicationBanner.tsx
 var PublicationBanner = ({ onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "relative overflow-hidden rounded-3xl shadow-xl flex flex-col items-center cursor-pointer group h-full",
+		className: "relative overflow-hidden rounded-3xl shadow-2xl border border-cyan-400/30 flex flex-col items-center cursor-pointer group h-full hover:border-cyan-300 hover:shadow-cyan-900/30 hover:-translate-y-1 transition-all duration-300",
 		onClick: onNavigate,
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "absolute inset-0 z-0",
@@ -15835,32 +15626,32 @@ var PublicationBanner = ({ onNavigate }) => {
 				src: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
 				alt: "Publicação e Produção Autoral",
 				className: "w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#182333]/95 via-[#182333]/85 to-[#182333]/50" })]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#061e47]/95 via-[#093576]/85 to-[#0e4da4]/50" })]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative z-10 p-8 sm:p-10 flex-1 text-left flex flex-col justify-center w-full",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4 w-fit",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PenTool, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Produção Autoral & Artigos" })]
+					className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/20 backdrop-blur-md border border-cyan-400/40 text-cyan-200 text-xs font-bold tracking-wide mb-4 w-fit",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PenTool, { className: "w-4 h-4 text-cyan-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Produção Autoral & Artigos" })]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 					className: "text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-2",
 					children: ["Transforme seu conhecimento em ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-[#FFC72C]",
+						className: "text-[#B8D4F2]",
 						children: "publicação"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-emerald-400 font-bold text-sm sm:text-base mb-3 leading-snug",
+					className: "text-cyan-300 font-bold text-sm sm:text-base mb-3 leading-snug",
 					children: "Escreva um artigo ou livro e publique sua produção autoral na ESDHUBEM."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-slate-300 text-xs sm:text-sm max-w-lg mb-8 leading-relaxed font-normal",
+					className: "text-blue-100 text-xs sm:text-sm max-w-lg mb-8 leading-relaxed font-normal",
 					children: "Depois de concluir seu curso, você pode transformar aquilo que aprendeu em uma produção própria e fazer seu conhecimento circular."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "inline-flex items-center gap-2 text-white font-bold group-hover:text-[#FFC72C] transition-colors mt-auto",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conheça as possibilidades" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-5 h-5 transform group-hover:translate-x-1 transition-transform" })]
+					className: "inline-flex items-center gap-2 text-[#FFC72C] font-black group-hover:text-[#ffdf79] transition-colors mt-auto",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conheça as possibilidades" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" })]
 				})
 			]
 		})]
@@ -15870,7 +15661,7 @@ var PublicationBanner = ({ onNavigate }) => {
 //#region src/components/DigitalPresenceBanner.tsx
 var DigitalPresenceBanner = ({ onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "relative overflow-hidden rounded-3xl shadow-xl flex flex-col items-center cursor-pointer group h-full",
+		className: "relative overflow-hidden rounded-3xl shadow-2xl border border-cyan-400/30 flex flex-col items-center cursor-pointer group h-full hover:border-cyan-300 hover:shadow-cyan-900/30 hover:-translate-y-1 transition-all duration-300",
 		onClick: onNavigate,
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "absolute inset-0 z-0",
@@ -15878,32 +15669,32 @@ var DigitalPresenceBanner = ({ onNavigate }) => {
 				src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
 				alt: "Produtos Digitais e Presença Profissional",
 				className: "w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#182333]/95 via-[#182333]/85 to-[#182333]/50" })]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#061e47]/95 via-[#093576]/85 to-[#0e4da4]/50" })]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative z-10 p-8 sm:p-10 flex-1 text-left flex flex-col justify-center w-full",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4 w-fit",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Rocket, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Soluções & Ferramentas Digitais" })]
+					className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/20 backdrop-blur-md border border-cyan-400/40 text-cyan-200 text-xs font-bold tracking-wide mb-4 w-fit",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Rocket, { className: "w-4 h-4 text-cyan-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Soluções & Ferramentas Digitais" })]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 					className: "text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-2",
 					children: ["Eleve sua ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-[#FFC72C]",
+						className: "text-[#B8D4F2]",
 						children: "presença profissional"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-emerald-400 font-bold text-sm sm:text-base mb-3 leading-snug",
+					className: "text-cyan-300 font-bold text-sm sm:text-base mb-3 leading-snug",
 					children: "Adquira produtos digitais para apresentar seu trabalho e ampliar sua presença profissional."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-slate-300 text-xs sm:text-sm max-w-lg mb-8 leading-relaxed font-normal",
+					className: "text-blue-100 text-xs sm:text-sm max-w-lg mb-8 leading-relaxed font-normal",
 					children: "Landing pages, biolinks, aplicativos e dashboards desenvolvidos para profissionais que querem apresentar seus serviços, organizar sua presença digital e alcançar novos públicos."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "inline-flex items-center gap-2 text-white font-bold group-hover:text-[#FFC72C] transition-colors mt-auto",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conheça nossos produtos" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-5 h-5 transform group-hover:translate-x-1 transition-transform" })]
+					className: "inline-flex items-center gap-2 text-[#FFC72C] font-black group-hover:text-[#ffdf79] transition-colors mt-auto",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conheça nossos produtos" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" })]
 				})
 			]
 		})]
@@ -15915,7 +15706,7 @@ var LivrariaPage = ({ onBackToHome }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "bg-[#F8FAFC] min-h-screen pb-16",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "bg-[#182333] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden",
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden border-b border-blue-900/60 shadow-lg",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "absolute inset-0 opacity-5",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -15935,7 +15726,7 @@ var LivrariaPage = ({ onBackToHome }) => {
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Loja Oficial" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Loja Oficial" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 								className: "text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4",
@@ -16053,12 +15844,12 @@ var CourseCatalog = ({ courses, activePillar, onPillarChange, onNavigate, onSele
 		const matchesSearch = !searchTerm || course.title.toLowerCase().includes(searchTerm.toLowerCase()) || course.subtitle.toLowerCase().includes(searchTerm.toLowerCase()) || course.category.toLowerCase().includes(searchTerm.toLowerCase());
 		const matchesCategory = !selectedCategory || course.category.toLowerCase() === selectedCategory.toLowerCase() || selectedCategory.toLowerCase() === "desenvolvimento pessoal" && [
 			"pessoal",
-			"humano",
 			"relacional",
+			"financeiro"
+		].some((c) => course.category.toLowerCase().includes(c)) || (selectedCategory.toLowerCase() === "desenvolvimento consciencial" || selectedCategory.toLowerCase() === "desenvolvimento da consciência" || selectedCategory.toLowerCase() === "consciência") && [
+			"humano",
 			"consciência",
 			"ético",
-			"financeiro",
-			"tecnológico",
 			"ambiental"
 		].some((c) => course.category.toLowerCase().includes(c)) || selectedCategory.toLowerCase() === "desenvolvimento profissional" && [
 			"profissional",
@@ -16095,7 +15886,7 @@ var CourseCatalog = ({ courses, activePillar, onPillarChange, onNavigate, onSele
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "inline-flex items-center gap-2 text-[#243042] text-xs font-bold uppercase tracking-wider mb-2",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-amber-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Grade de Cursos Livres e Produtos da ESDHUBEM" })]
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-amber-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Grade de Cursos Livres e Produtos da ESDHUBEM" })]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight",
@@ -16151,7 +15942,7 @@ var CourseCatalog = ({ courses, activePillar, onPillarChange, onNavigate, onSele
 				filteredCourses.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "text-center py-16 bg-white rounded-3xl border border-slate-200 p-8 shadow-xs",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-12 h-12 text-slate-300 mx-auto mb-3" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-12 h-12 text-slate-300 mx-auto mb-3" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 							className: "text-lg font-bold text-slate-800",
 							children: "Nenhum curso encontrado para os filtros selecionados"
@@ -16188,15 +15979,15 @@ var CourseCatalog = ({ courses, activePillar, onPillarChange, onNavigate, onSele
 									})
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[186px] z-10 text-blue-600 group-hover:scale-110 group-hover:shadow-lg transition-transform",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PenTool, { className: "w-4 h-4 text-blue-600" })
+									className: "w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[186px] z-10 text-emerald-600 group-hover:scale-110 group-hover:shadow-lg transition-transform",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PenTool, { className: "w-4 h-4 text-emerald-600" })
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "pt-8 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-4",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										className: "w-full",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-											className: "font-extrabold text-slate-800 text-sm sm:text-base leading-snug group-hover:text-blue-600 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
+											className: "font-extrabold text-slate-800 text-sm sm:text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
 											children: course.title
 										})
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -16207,8 +15998,8 @@ var CourseCatalog = ({ courses, activePillar, onPillarChange, onNavigate, onSele
 												e.stopPropagation();
 												onSelectCourse(course);
 											},
-											className: "inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm tracking-wide shadow-md shadow-blue-600/25 hover:shadow-lg transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShoppingCart, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Comprar Curso" })]
+											className: "inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShoppingCart, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Comprar Curso" })]
 										})
 									})]
 								})
@@ -17322,27 +17113,27 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 		});
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", {
-		className: "bg-[#111827] text-slate-300 pt-12 pb-8 border-t border-slate-800 relative",
+		className: "bg-[#011049] text-slate-300 pt-12 pb-8 border-t border-blue-900/40 relative",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#182333] via-[#243042] to-[#1e293b] text-white p-6 sm:p-10 shadow-xl border border-slate-700/60 flex flex-col md:flex-row items-center justify-between gap-8",
+					className: "relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#0d4494] via-[#0a3576] to-[#072458] text-white p-6 sm:p-10 shadow-2xl border border-cyan-400/40 flex flex-col md:flex-row items-center justify-between gap-8",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "w-full md:w-5/12 relative rounded-2xl overflow-hidden shadow-lg h-56 sm:h-64 shrink-0 bg-slate-900",
+						className: "w-full md:w-5/12 relative rounded-2xl overflow-hidden shadow-lg h-56 sm:h-64 shrink-0 bg-[#061c44]",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 								src: newsletter_default,
 								alt: "Atendimento humanizado e mentoria ESDHUBEM",
 								className: "w-full h-full object-cover"
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-[#011049]/80 to-transparent" }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "absolute top-3 left-3 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] font-medium px-2.5 py-1 rounded-md border border-white/20",
+								className: "absolute top-3 left-3 bg-[#011049]/90 backdrop-blur-xs text-white text-[11px] font-medium px-2.5 py-1 rounded-md border border-cyan-400/30",
 								children: "Imagem ilustrativa"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "absolute bottom-3 left-3 right-3 text-xs text-slate-200",
+								className: "absolute bottom-3 left-3 right-3 text-xs text-blue-100 font-medium",
 								children: "Mentoria e desenvolvimento contínuo para sua carreira e bem-estar."
 							})
 						]
@@ -17350,8 +17141,8 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 						className: "w-full md:w-7/12 space-y-4",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-semibold",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 fill-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Comunidade ESDHUBEM" })]
+								className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-200 text-xs font-bold tracking-wide",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 fill-cyan-300 text-cyan-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Comunidade ESDHUBEM" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 								className: "text-xl sm:text-2xl font-bold text-white",
@@ -17395,10 +17186,10 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 					className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-slate-800 text-xs sm:text-sm",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "rounded-2xl p-5 bg-slate-900/80 border border-amber-500/30 shadow-lg space-y-4 flex flex-col justify-between",
+							className: "rounded-2xl p-5 bg-gradient-to-br from-[#0e4da4] to-[#072459] border border-cyan-400/40 shadow-xl shadow-blue-950/50 space-y-4 flex flex-col justify-between hover:border-cyan-300 hover:shadow-cyan-900/30 transition-all",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "mb-5 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-white/5 flex items-center justify-center p-1 border border-amber-400/40 shadow-md",
+									className: "mb-5 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-white/10 flex items-center justify-center p-1 border border-cyan-300/40 shadow-md",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 										src: esdhubem_logo_default,
 										alt: "ESDHUBEM Logo",
@@ -17406,87 +17197,87 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 									})
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-									className: "text-amber-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2 h-2 rounded-full bg-amber-400 animate-pulse" }), "Contato & Escola"]
+									className: "text-white font-black text-sm sm:text-base tracking-wider uppercase flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(56,189,248,0.8)] animate-pulse" }), "Contato & Escola"]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-white font-semibold text-xs mt-1",
+									className: "text-cyan-200 font-bold text-xs mt-1",
 									children: "ESDHUBEM — Educação Integral"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "mt-4 space-y-2.5 text-slate-300 text-xs",
+									className: "mt-4 space-y-2.5 text-blue-100 text-xs",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 											href: "https://wa.me/5511960319837",
 											target: "_blank",
 											rel: "noreferrer",
-											className: "flex items-center gap-2.5 hover:text-amber-300 transition-colors group",
+											className: "flex items-center gap-2.5 hover:text-cyan-300 transition-colors group",
 											id: "footer-contact-phone",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: "w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 group-hover:bg-amber-500/20 transition-colors",
+												className: "w-7 h-7 rounded-lg bg-white/15 border border-cyan-300/30 flex items-center justify-center text-cyan-300 shrink-0 group-hover:bg-cyan-500/30 transition-colors",
 												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, { className: "w-3.5 h-3.5" })
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "font-semibold text-white group-hover:text-amber-300 transition-colors",
+												className: "font-bold text-white group-hover:text-cyan-300 transition-colors",
 												children: "(11) 96031-9837"
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 											href: "mailto:esdhubem@proton.me",
-											className: "flex items-center gap-2.5 hover:text-amber-300 transition-colors group",
+											className: "flex items-center gap-2.5 hover:text-cyan-300 transition-colors group",
 											id: "footer-contact-email",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: "w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 group-hover:bg-amber-500/20 transition-colors",
+												className: "w-7 h-7 rounded-lg bg-white/15 border border-cyan-300/30 flex items-center justify-center text-cyan-300 shrink-0 group-hover:bg-cyan-500/30 transition-colors",
 												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "w-3.5 h-3.5" })
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "break-all text-slate-200 group-hover:text-amber-300 transition-colors",
+												className: "break-all text-blue-100 group-hover:text-cyan-300 transition-colors font-medium",
 												children: "esdhubem@proton.me"
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center gap-2.5 text-slate-300",
+											className: "flex items-center gap-2.5 text-blue-100 font-medium",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: "w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 shrink-0",
+												className: "w-7 h-7 rounded-lg bg-white/15 border border-cyan-300/30 flex items-center justify-center text-cyan-300 shrink-0",
 												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-3.5 h-3.5" })
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Atend.: 9h–17h • Seg–Sex" })]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center gap-2.5 text-slate-300",
+											className: "flex items-center gap-2.5 text-blue-100 font-medium",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: "w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 shrink-0",
+												className: "w-7 h-7 rounded-lg bg-white/15 border border-cyan-300/30 flex items-center justify-center text-cyan-300 shrink-0",
 												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, { className: "w-3.5 h-3.5" })
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "São Paulo / SP — Brasil" })]
 										})
 									]
 								})
 							] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "pt-4 border-t border-amber-500/20 mt-2",
+								className: "pt-4 border-t border-cyan-300/20 mt-2",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h5", {
-									className: "text-amber-300 font-bold text-[11px] uppercase tracking-wider mb-2",
+									className: "text-cyan-200 font-bold text-[11px] uppercase tracking-wider mb-2",
 									children: "Métodos de Pagamento"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "flex flex-wrap gap-1.5",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-emerald-500/30 text-emerald-300 text-[11px] font-semibold",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(QrCode, { className: "w-3 h-3 text-emerald-400" }), "Pix"]
+											className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/15 border border-emerald-400/40 text-emerald-300 text-[11px] font-bold",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(QrCode, { className: "w-3 h-3 text-emerald-300" }), "Pix"]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-blue-500/30 text-blue-300 text-[11px] font-semibold",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CreditCard, { className: "w-3 h-3 text-blue-400" }), "Cartão"]
+											className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/15 border border-cyan-400/40 text-cyan-200 text-[11px] font-bold",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CreditCard, { className: "w-3 h-3 text-cyan-300" }), "Cartão"]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-amber-500/30 text-amber-300 text-[11px] font-semibold",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bookmark, { className: "w-3 h-3 text-amber-400" }), "Boleto"]
+											className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/15 border border-amber-400/40 text-amber-300 text-[11px] font-bold",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bookmark, { className: "w-3 h-3 text-amber-300" }), "Boleto"]
 										})
 									]
 								})]
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "rounded-2xl p-5 bg-slate-900/80 border border-emerald-500/30 shadow-lg space-y-4",
+							className: "rounded-2xl p-5 bg-gradient-to-br from-[#0e4da4] to-[#072459] border border-cyan-400/40 shadow-xl shadow-blue-950/50 space-y-4 hover:border-cyan-300 hover:shadow-cyan-900/30 transition-all",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-								className: "text-emerald-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2 h-2 rounded-full bg-emerald-400" }), "Navegação Principal"]
+								className: "text-white font-black text-sm sm:text-base tracking-wider uppercase flex items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]" }), "Navegação Principal"]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 								className: "space-y-2 text-xs",
 								children: [
@@ -17590,10 +17381,10 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "rounded-2xl p-5 bg-slate-900/80 border border-sky-500/30 shadow-lg space-y-4",
+							className: "rounded-2xl p-5 bg-gradient-to-br from-[#0e4da4] to-[#072459] border border-cyan-400/40 shadow-xl shadow-blue-950/50 space-y-4 hover:border-cyan-300 hover:shadow-cyan-900/30 transition-all",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-								className: "text-sky-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2 h-2 rounded-full bg-sky-400" }), "Certificação & Aprendizagem"]
+								className: "text-white font-black text-sm sm:text-base tracking-wider uppercase flex items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(56,189,248,0.8)]" }), "Certificação & Aprendizagem"]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 								className: "space-y-2 text-xs",
 								children: [
@@ -17681,11 +17472,11 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "rounded-2xl p-5 bg-slate-900/80 border border-purple-500/30 shadow-lg space-y-4",
+							className: "rounded-2xl p-5 bg-gradient-to-br from-[#0e4da4] to-[#072459] border border-cyan-400/40 shadow-xl shadow-blue-950/50 space-y-4 hover:border-cyan-300 hover:shadow-cyan-900/30 transition-all",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", {
-									className: "text-purple-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2 h-2 rounded-full bg-purple-400" }), "Legal & Transparência"]
+									className: "text-white font-black text-sm sm:text-base tracking-wider uppercase flex items-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-pink-400 shadow-[0_0_8px_rgba(244,114,182,0.8)]" }), "Legal & Transparência"]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 									className: "space-y-2 text-xs",
@@ -17772,11 +17563,11 @@ var Footer = ({ onSelectCategory, onOpenValidator, onOpenAbout, onNavigate, onOp
 						})
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "pt-8 mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 text-center sm:text-left",
+					className: "pt-8 mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-blue-200/80 text-center sm:text-left",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "© 2026 ESDHUBEM — Escola de Desenvolvimento Humano e Bem-Estar. Todos os direitos reservados." }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						onClick: scrollToTop,
-						className: "flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 shrink-0",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Voltar ao topo" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUp, { className: "w-3.5 h-3.5" })]
+						className: "flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-cyan-400/30 text-white shrink-0 shadow-sm",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Voltar ao topo" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUp, { className: "w-3.5 h-3.5 text-cyan-300" })]
 					})]
 				})]
 			}),
@@ -17948,7 +17739,7 @@ var StudentPortalPage = ({ onBackToHome, onOpenValidator, initialCourseId = "hc-
 								className: "flex items-center gap-3 justify-center sm:justify-start",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-[#FFC72C]",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" })
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" })
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "text-xs text-slate-400 uppercase font-semibold",
 									children: "Meus Cursos"
@@ -18184,7 +17975,7 @@ var StudentPortalPage = ({ onBackToHome, onOpenValidator, initialCourseId = "hc-
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 											onClick: () => setActiveBottomTab("anotacoes"),
 											className: `pb-2 border-b-2 transition-all cursor-pointer whitespace-nowrap flex items-center gap-2 ${activeBottomTab === "anotacoes" ? "border-[#243042] text-[#243042]" : "border-transparent text-slate-500 hover:text-slate-800"}`,
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Minhas Anotações" })]
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Minhas Anotações" })]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 											onClick: () => setActiveBottomTab("certificado"),
@@ -18905,7 +18696,7 @@ var CourseDetailLaunchPage = ({ course, onBackToHome, onEnroll, onOpenValidator,
 									{
 										id: "sobre",
 										label: "Sobre o Curso",
-										icon: BookOpen
+										icon: BookOpen$1
 									},
 									{
 										id: "conteudo",
@@ -19826,7 +19617,7 @@ var renderIcon = (iconName, className = "w-6 h-6") => {
 		case "LayoutDashboard": return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutDashboard, { className });
 		case "HeartPulse": return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, { className });
 		case "PenTool": return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PenTool, { className });
-		default: return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className });
+		default: return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className });
 	}
 };
 var MACRO_AREAS = [
@@ -19835,7 +19626,7 @@ var MACRO_AREAS = [
 		number: "1",
 		emoji: "🧠",
 		title: "Desenvolvimento Pessoal",
-		description: "Conteúdos relacionados à pessoa, consciência, comportamento, relações e desenvolvimento da vida pessoal.",
+		description: "Conteúdos relacionados à pessoa, comportamento, inteligência emocional, relações e finanças pessoais.",
 		accentColor: "from-amber-500 to-orange-600",
 		bannerGradient: "from-amber-500/15 via-orange-500/5 to-transparent",
 		borderAccent: "border-amber-400/40",
@@ -19851,46 +19642,8 @@ var MACRO_AREAS = [
 					"Autoconhecimento",
 					"Inteligência Emocional",
 					"Autodisciplina"
-				]
-			},
-			{
-				id: "desenvolvimento-humano",
-				title: "Desenvolvimento Humano",
-				badge: "18 Cursos",
-				iconName: "HeartHandshake",
-				accentColor: "from-emerald-600 to-teal-700",
-				summary: "Estudos aprofundados sobre ciclos da vida, relações humanas, maturidade e potencial realizador.",
-				skills: [
-					"Psicologia Relacional",
-					"Comportamento Humano",
-					"Antropologia Prática"
-				]
-			},
-			{
-				id: "desenvolvimento-da-consciencia",
-				title: "Desenvolvimento da Consciência",
-				badge: "14 Cursos",
-				iconName: "Brain",
-				accentColor: "from-indigo-500 to-purple-700",
-				summary: "Práticas meditativas, presença plena, espiritualidade laica, filosofia aplicada e autorreflexão.",
-				skills: [
-					"Mindfulness",
-					"Filosofia Prática",
-					"Auto-observação"
-				]
-			},
-			{
-				id: "desenvolvimento-etico",
-				title: "Desenvolvimento Ético",
-				badge: "12 Cursos",
-				iconName: "Scale",
-				accentColor: "from-purple-600 to-violet-800",
-				summary: "Fundamentos de ética aplicada, responsabilidade civil, conduta profissional e integridade.",
-				skills: [
-					"Ética Aplicada",
-					"Compliance Moral",
-					"Tomada de Decisão"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "desenvolvimento-relacional",
@@ -19903,7 +19656,8 @@ var MACRO_AREAS = [
 					"CNV Aplicada",
 					"Mediação Familiar",
 					"Escuta Ativa"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "desenvolvimento-financeiro",
@@ -19916,7 +19670,62 @@ var MACRO_AREAS = [
 					"Finanças Comportamentais",
 					"Orçamento Inteligente",
 					"Planejamento Pessoal"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80"
+			}
+		]
+	},
+	{
+		id: "consciencial",
+		number: "2",
+		emoji: "✨",
+		title: "Desenvolvimento Consciencial",
+		description: "Expansão da consciência, desenvolvimento humano integral, ética aplicada, lucidez e consciência socioambiental.",
+		accentColor: "from-indigo-600 to-purple-700",
+		bannerGradient: "from-indigo-500/15 via-purple-500/5 to-transparent",
+		borderAccent: "border-indigo-400/40",
+		categories: [
+			{
+				id: "desenvolvimento-humano",
+				title: "Desenvolvimento Humano",
+				badge: "18 Cursos",
+				iconName: "HeartHandshake",
+				accentColor: "from-emerald-600 to-teal-700",
+				summary: "Estudos aprofundados sobre ciclos da vida, relações humanas, maturidade e potencial realizador.",
+				skills: [
+					"Psicologia Relacional",
+					"Comportamento Humano",
+					"Antropologia Prática"
+				],
+				image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80"
+			},
+			{
+				id: "desenvolvimento-da-consciencia",
+				title: "Desenvolvimento da Consciência",
+				badge: "14 Cursos",
+				iconName: "Brain",
+				accentColor: "from-indigo-500 to-purple-700",
+				summary: "Práticas meditativas, presença plena, espiritualidade laica, filosofia aplicada e autorreflexão.",
+				skills: [
+					"Mindfulness",
+					"Filosofia Prática",
+					"Auto-observação"
+				],
+				image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
+			},
+			{
+				id: "desenvolvimento-etico",
+				title: "Desenvolvimento Ético",
+				badge: "12 Cursos",
+				iconName: "Scale",
+				accentColor: "from-purple-600 to-violet-800",
+				summary: "Fundamentos de ética aplicada, responsabilidade civil, conduta profissional e integridade.",
+				skills: [
+					"Ética Aplicada",
+					"Compliance Moral",
+					"Tomada de Decisão"
+				],
+				image: "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "desenvolvimento-ambiental",
@@ -19929,16 +19738,17 @@ var MACRO_AREAS = [
 					"Sustentabilidade Cotidiana",
 					"Eco-eficiência",
 					"Consumo Consciente"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80"
 			}
 		]
 	},
 	{
 		id: "profissional",
-		number: "2",
+		number: "3",
 		emoji: "💼",
 		title: "Desenvolvimento Profissional",
-		description: "Auxilia o indivíduo a se preparar, atuar, evoluir ou se reposicionar profissionalmente.",
+		description: "Auxilia o indivíduo a se preparar, atuar, evoluir ou se reposicionar profissionalmente no mercado contemporâneo.",
 		accentColor: "from-blue-600 to-indigo-700",
 		bannerGradient: "from-blue-500/15 via-indigo-500/5 to-transparent",
 		borderAccent: "border-blue-400/40",
@@ -19954,7 +19764,8 @@ var MACRO_AREAS = [
 					"Liderança 360°",
 					"Comunicação Assertiva",
 					"Gestão de Projetos"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "desenvolvimento-tecnologico-ia",
@@ -19967,7 +19778,8 @@ var MACRO_AREAS = [
 					"Engenharia de Prompts",
 					"Automação sem Código",
 					"IA para Negócios"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "workshop-orientacao-carreira",
@@ -19980,7 +19792,8 @@ var MACRO_AREAS = [
 					"Diagnóstico de Perfil",
 					"Transição de Carreira",
 					"Portfólio & Posicionamento"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "pedagogia-integrativa",
@@ -19993,7 +19806,8 @@ var MACRO_AREAS = [
 					"Didática Ativa",
 					"Educação Emocional",
 					"Mediação de Aprendizagem"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "formacao-livre",
@@ -20006,7 +19820,8 @@ var MACRO_AREAS = [
 					"Jornadas Completas",
 					"Teoria & Prática",
 					"Qualificação Livre"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "aprofundamento-profissional-especifico",
@@ -20019,16 +19834,17 @@ var MACRO_AREAS = [
 					"Especialização Prática",
 					"Atualização Técnica",
 					"Excelência Profissional"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80"
 			}
 		]
 	},
 	{
 		id: "empresarial",
-		number: "3",
+		number: "4",
 		emoji: "🏢",
 		title: "Desenvolvimento Empresarial",
-		description: "Aqui o público principal é empresas, gestores, equipes e organizações.",
+		description: "Capacitação in-company, desenvolvimento de gestores, liderança executiva e fortalecimento institucional.",
 		accentColor: "from-slate-700 to-slate-900",
 		bannerGradient: "from-slate-600/15 via-slate-800/5 to-transparent",
 		borderAccent: "border-slate-400/40",
@@ -20044,7 +19860,8 @@ var MACRO_AREAS = [
 					"Gestão de Equipes",
 					"Liderança Empresarial",
 					"Cultura Organizacional"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "treinamentos-palestras-corporativas",
@@ -20057,7 +19874,8 @@ var MACRO_AREAS = [
 					"Treinamento In-Company",
 					"Palestras Corporativas",
 					"Produtividade Organizacional"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "formacao-empresarial",
@@ -20070,16 +19888,17 @@ var MACRO_AREAS = [
 					"Empreendedorismo",
 					"Gestão & Liderança",
 					"Desenvolvimento de Negócios"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80"
 			}
 		]
 	},
 	{
 		id: "saude",
-		number: "4",
+		number: "5",
 		emoji: "🩺",
 		title: "Desenvolvimento em Saúde e Bem-Estar Integrativo",
-		description: "Saúde, práticas integrativas e bem-estar.",
+		description: "Saúde integrativa, terapias holísticas, qualidade de vida e aperfeiçoamento para profissionais da saúde.",
 		accentColor: "from-teal-600 to-emerald-700",
 		bannerGradient: "from-teal-500/15 via-emerald-500/5 to-transparent",
 		borderAccent: "border-teal-400/40",
@@ -20095,7 +19914,8 @@ var MACRO_AREAS = [
 					"PICS / SUS",
 					"Abordagem Holística",
 					"Equilíbrio Energético"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "coach-integrativo",
@@ -20108,7 +19928,8 @@ var MACRO_AREAS = [
 					"Metas Humanizadas",
 					"Perguntas Poderosas",
 					"Plano de Ação"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "aprofundamento-profissional-saude",
@@ -20121,7 +19942,8 @@ var MACRO_AREAS = [
 					"Atualização Técnica",
 					"Boas Práticas Clínicas",
 					"Evidências Científicas"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
 			},
 			{
 				id: "terapias-holisticas",
@@ -20135,7 +19957,8 @@ var MACRO_AREAS = [
 					"Qualidade de Vida",
 					"Saúde Integral",
 					"Terapias Holísticas"
-				]
+				],
+				image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80"
 			}
 		]
 	}
@@ -20154,7 +19977,8 @@ var MODALITIES_DATA = [
 			"Testes de Fixação",
 			"Certificado Opcional"
 		],
-		destination: "modalidades-formacao"
+		destination: "modalidades-formacao",
+		image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
 	},
 	{
 		id: "capacitacao",
@@ -20169,7 +19993,8 @@ var MODALITIES_DATA = [
 			"Protocolos Profissionais",
 			"Aplicação Direta"
 		],
-		destination: "modalidades-formacao"
+		destination: "modalidades-formacao",
+		image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
 	},
 	{
 		id: "horas-complementares",
@@ -20184,7 +20009,8 @@ var MODALITIES_DATA = [
 			"Decreto nº 5.154/04",
 			"Cargas 20h a 120h"
 		],
-		destination: "modalidades-formacao"
+		destination: "modalidades-formacao",
+		image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
 	},
 	{
 		id: "formacao-livre",
@@ -20199,7 +20025,8 @@ var MODALITIES_DATA = [
 			"Teoria + Prática Orientada",
 			"Transição de Carreira"
 		],
-		destination: "modalidades-formacao"
+		destination: "modalidades-formacao",
+		image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
 	},
 	{
 		id: "treinamentos-corporativos",
@@ -20214,7 +20041,8 @@ var MODALITIES_DATA = [
 			"Capacitação de Equipes",
 			"Métricas de Resultado"
 		],
-		destination: "modalidades-formacao"
+		destination: "modalidades-formacao",
+		image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
 	},
 	{
 		id: "autoria-destaque",
@@ -20229,7 +20057,8 @@ var MODALITIES_DATA = [
 			"Registro DOI",
 			"Selos Prata, Ouro, Diamante"
 		],
-		destination: "regras-certificacao-merito"
+		destination: "regras-certificacao-merito",
+		image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80"
 	},
 	{
 		id: "aprofundamento-saude",
@@ -20244,7 +20073,8 @@ var MODALITIES_DATA = [
 			"Atualização Técnica",
 			"Prática Fundamentada"
 		],
-		destination: "modalidades-formacao"
+		destination: "modalidades-formacao",
+		image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
 	},
 	{
 		id: "workshop-orientacao-carreira-mod",
@@ -20259,7 +20089,8 @@ var MODALITIES_DATA = [
 			"Mobilidade Funcional",
 			"Planejamento de Futuro"
 		],
-		destination: "modalidades-formacao"
+		destination: "modalidades-formacao",
+		image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
 	}
 ];
 var PRODUCTS_DATA = [
@@ -20315,23 +20146,27 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 	const areaFilterButtons = [
 		{
 			id: "todas",
-			label: "Todas as 4 Áreas"
+			label: "Todas as 5 Áreas"
 		},
 		{
 			id: "pessoal",
 			label: "🧠 1. Desenvolvimento Pessoal"
 		},
 		{
+			id: "consciencial",
+			label: "✨ 2. Desenvolvimento Consciencial"
+		},
+		{
 			id: "profissional",
-			label: "💼 2. Desenvolvimento Profissional"
+			label: "💼 3. Desenvolvimento Profissional"
 		},
 		{
 			id: "empresarial",
-			label: "🏢 3. Desenvolvimento Empresarial"
+			label: "🏢 4. Desenvolvimento Empresarial"
 		},
 		{
 			id: "saude",
-			label: "🩺 4. Saúde & Bem-Estar"
+			label: "🩺 5. Saúde & Bem-Estar"
 		}
 	];
 	const totalCategoriesCount = (0, import_react.useMemo)(() => {
@@ -20381,11 +20216,11 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800 font-sans pb-24",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -20405,14 +20240,14 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-14 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "max-w-2xl space-y-4",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider",
+								className: "inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider border border-white/10",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layers, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Catálogo Acadêmico & Soluções" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
@@ -20427,8 +20262,8 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-slate-300 text-sm sm:text-base leading-relaxed",
-								children: "Explore nossas categorias estruturadas em 4 grandes áreas de desenvolvimento, modalidades de formação continuada e soluções digitais integradas."
+								className: "text-slate-200 text-sm sm:text-base leading-relaxed",
+								children: "Explore nossas categorias estruturadas em 5 grandes áreas de desenvolvimento, modalidades de formação continuada e soluções digitais integradas."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "pt-2 max-w-lg",
@@ -20457,17 +20292,17 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 						className: "grid grid-cols-2 gap-3.5 w-full md:w-auto shrink-0",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg",
+								className: "bg-[#011049]/90 border border-blue-900/80 p-4 rounded-2xl text-center shadow-lg backdrop-blur-sm",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "text-3xl font-black text-[#FFC72C]",
-									children: "4"
+									children: "5"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "text-xs text-slate-300 font-medium mt-1",
 									children: "Grandes Áreas"
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg",
+								className: "bg-[#011049]/90 border border-blue-900/80 p-4 rounded-2xl text-center shadow-lg backdrop-blur-sm",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "text-3xl font-black text-white",
 									children: totalCategoriesCount
@@ -20477,7 +20312,7 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg",
+								className: "bg-[#011049]/90 border border-blue-900/80 p-4 rounded-2xl text-center shadow-lg backdrop-blur-sm",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "text-3xl font-black text-emerald-400",
 									children: "8"
@@ -20487,7 +20322,7 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "bg-[#182333]/90 border border-slate-700/80 p-4 rounded-2xl text-center shadow-lg",
+								className: "bg-[#011049]/90 border border-blue-900/80 p-4 rounded-2xl text-center shadow-lg backdrop-blur-sm",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "text-3xl font-black text-amber-300",
 									children: "100%"
@@ -20510,9 +20345,9 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 								className: "flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-0.5 rounded-full border border-amber-200 mb-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Estrutura por Áreas de Desenvolvimento" })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Estrutura por Áreas de Desenvolvimento" })]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-									className: "text-2xl sm:text-3xl font-black text-[#182333] tracking-tight",
+									className: "text-2xl sm:text-3xl font-black text-[#011049] tracking-tight",
 									children: "Categorias Organizadas por Área"
 								})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 									className: "text-xs font-semibold text-slate-500 shrink-0",
@@ -20523,7 +20358,7 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 								className: "flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none",
 								children: areaFilterButtons.map((btn) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 									onClick: () => setSelectedAreaId(btn.id),
-									className: `px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer border ${selectedAreaId === btn.id ? "bg-[#243042] text-[#FFC72C] border-[#243042] shadow-sm" : "bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50"}`,
+									className: `px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer border ${selectedAreaId === btn.id ? "bg-[#011049] text-[#FFC72C] border-[#011049] shadow-sm" : "bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50"}`,
 									children: btn.label
 								}, btn.id))
 							}),
@@ -20544,7 +20379,7 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 														className: "text-2xl sm:text-3xl",
 														children: area.emoji
 													}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-														className: "text-xl sm:text-2xl font-black text-[#182333] tracking-tight",
+														className: "text-xl sm:text-2xl font-black text-[#011049] tracking-tight",
 														children: [
 															area.number,
 															". ",
@@ -20560,7 +20395,7 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 												children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 													className: "inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-xs",
 													children: [
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layers, { className: "w-3.5 h-3.5 text-[#243042]" }),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Layers, { className: "w-3.5 h-3.5 text-[#011049]" }),
 														area.categories.length,
 														" ",
 														area.categories.length === 1 ? "Categoria" : "Categorias"
@@ -20571,52 +20406,63 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										className: "p-6 sm:p-8",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5",
+											className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6",
 											children: area.categories.map((cat) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 												onClick: () => {
 													if (onNavigateToCategoryDetail) onNavigateToCategoryDetail(cat.id);
 												},
-												className: "bg-[#FAFBFD] hover:bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
+												className: "group bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1",
 												id: `cat-card-${cat.id}`,
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-													className: "space-y-3",
-													children: [
-														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-															className: "flex items-center justify-between",
-															children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-																className: `w-12 h-12 rounded-xl flex items-center justify-center text-white bg-gradient-to-br ${cat.accentColor} shadow-md group-hover:scale-105 transition-transform`,
-																children: renderIcon(cat.iconName, "w-6 h-6")
-															}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-[11px] font-bold bg-[#182333]/5 text-[#243042] px-2.5 py-1 rounded-full border border-slate-200",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "relative h-44 w-full overflow-hidden bg-slate-100",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+															src: cat.image,
+															alt: cat.title,
+															className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "absolute top-3 right-3 z-10",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																className: "text-[10px] font-extrabold px-2.5 py-1 rounded-full border backdrop-blur-md bg-white/95 text-slate-800 shadow-xs",
 																children: cat.badge
-															})]
-														}),
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-															className: "font-extrabold text-[#182333] text-base leading-tight group-hover:text-amber-600 transition-colors",
-															children: cat.title
-														}),
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-															className: "text-xs text-slate-600 leading-relaxed line-clamp-2",
-															children: cat.summary
-														}),
-														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-															className: "flex flex-wrap gap-1.5 pt-1",
-															children: cat.skills.map((skill, sIdx) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-																className: "text-[10px] bg-white border border-slate-200/80 text-slate-600 px-2 py-0.5 rounded font-medium",
-																children: skill
-															}, sIdx))
-														})
-													]
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-													className: "pt-4 mt-4 border-t border-slate-200/60 flex items-center justify-between text-xs",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-														className: "font-bold text-[#243042] group-hover:text-amber-600 flex items-center gap-1",
-														children: "Ver Detalhes & Cursos"
-													}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-														className: "w-7 h-7 rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#243042] group-hover:text-[#FFC72C] flex items-center justify-center transition-all shadow-xs",
-														children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-4 h-4" })
-													})]
-												})]
+															})
+														})]
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+														className: "w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[154px] z-10 text-xl group-hover:scale-110 group-hover:shadow-lg transition-transform text-[#011049]",
+														children: renderIcon(cat.iconName, "w-5 h-5 text-[#011049]")
+													}),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+															className: "w-full space-y-2",
+															children: [
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+																	className: "font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
+																	children: cat.title
+																}),
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+																	className: "text-xs text-slate-600 line-clamp-2 leading-relaxed",
+																	children: cat.summary
+																}),
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+																	className: "flex flex-wrap justify-center gap-1.5 pt-1",
+																	children: cat.skills.map((skill, sIdx) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																		className: "text-[10px] bg-slate-50 border border-slate-200/80 text-slate-600 px-2 py-0.5 rounded font-medium",
+																		children: skill
+																	}, sIdx))
+																})
+															]
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: "pt-2 w-full flex justify-center",
+															children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+																type: "button",
+																className: "w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
+															})
+														})]
+													})
+												]
 											}, cat.id))
 										})
 									})]
@@ -20632,57 +20478,64 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 								className: "inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-0.5 rounded-full border border-blue-200 mb-2",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ClipboardList, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Formatos & Metodologias" })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-								className: "text-2xl sm:text-3xl font-black text-[#182333] tracking-tight",
+								className: "text-2xl sm:text-3xl font-black text-[#011049] tracking-tight",
 								children: "Conheça as Modalidades de Curso"
 							})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "text-xs font-semibold text-slate-500 shrink-0",
 								children: "8 Modalidades de Aprendizado"
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5",
+							className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6",
 							children: filteredModalities.map((mod) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								onClick: () => handleCardClick(mod.destination),
-								className: "bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group",
+								className: "group bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1",
 								id: `mod-card-${mod.id}`,
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "space-y-3",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-between",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: `w-12 h-12 rounded-xl flex items-center justify-center text-white bg-gradient-to-br ${mod.accentColor} shadow-md group-hover:scale-105 transition-transform`,
-												children: renderIcon(mod.iconName, "w-6 h-6")
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[11px] font-bold bg-[#182333]/5 text-[#243042] px-2.5 py-1 rounded-full border border-slate-200",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "relative h-40 w-full overflow-hidden bg-slate-100",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+											src: mod.image,
+											alt: mod.title,
+											className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "absolute top-3 right-3 z-10",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "text-[10px] font-extrabold px-2.5 py-1 rounded-full border backdrop-blur-md bg-white/95 text-slate-800 shadow-xs",
 												children: mod.badge
+											})
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[138px] z-10 text-xl group-hover:scale-110 group-hover:shadow-lg transition-transform text-[#011049]",
+										children: renderIcon(mod.iconName, "w-5 h-5 text-[#011049]")
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "w-full space-y-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+												className: "font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
+												children: mod.title
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "bg-slate-50 border border-slate-200/80 rounded-xl p-3 text-left w-full",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+													className: "text-slate-800 block text-[10px] uppercase tracking-wider font-extrabold mb-1",
+													children: "Público-alvo:"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+													className: "text-xs text-slate-600 line-clamp-3 leading-relaxed",
+													children: mod.target
+												})]
 											})]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-											className: "font-extrabold text-[#182333] text-base sm:text-lg leading-tight group-hover:text-blue-600 transition-colors",
-											children: mod.title
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 leading-relaxed line-clamp-3",
-											children: mod.summary
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "flex flex-wrap gap-1.5 pt-1",
-											children: mod.chips.map((chip, cIdx) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium",
-												children: chip
-											}, cIdx))
-										})
-									]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "font-bold text-[#243042] group-hover:text-blue-600 flex items-center gap-1",
-										children: "Ver Modalidade"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "w-7 h-7 rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#243042] group-hover:text-[#FFC72C] flex items-center justify-center transition-all shadow-xs",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-4 h-4" })
-									})]
-								})]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "pt-2 w-full flex justify-center",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+												type: "button",
+												className: "w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
+											})
+										})]
+									})
+								]
 							}, mod.id))
 						})]
 					}),
@@ -20926,11 +20779,11 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 		id: "pagina-categoria-detalhe",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -21004,7 +20857,7 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center gap-8",
 					children: [
@@ -21012,7 +20865,7 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 							className: "max-w-3xl flex flex-col items-center text-center space-y-4",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider",
+									className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-bold uppercase tracking-wider border border-white/10",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Building2, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: meta.heroTag })]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
@@ -21030,7 +20883,7 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 									children: meta.description
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "bg-[#182333]/80 border border-slate-700 rounded-xl p-3.5 text-xs text-slate-300 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-2.5 max-w-2xl mx-auto",
+									className: "bg-[#011049]/90 border border-blue-900/80 rounded-xl p-3.5 text-xs text-slate-300 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-2.5 max-w-2xl mx-auto backdrop-blur-sm",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "w-4 h-4 text-[#FFC72C] shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 										className: "text-white block sm:inline mr-1",
 										children: "Público-alvo principal:"
@@ -22250,11 +22103,11 @@ var LegalInfoPage = ({ onBackToHome, onOpenValidator, onOpenCertificatePreview, 
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800 font-sans",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -22274,7 +22127,7 @@ var LegalInfoPage = ({ onBackToHome, onOpenValidator, onOpenCertificatePreview, 
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -22901,11 +22754,11 @@ var PoliticasPage = ({ onBackToHome, onNavigateToPolicy, onNavigate, onOpenValid
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -22925,7 +22778,7 @@ var PoliticasPage = ({ onBackToHome, onNavigateToPolicy, onNavigate, onOpenValid
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center text-center gap-4",
 					children: [
@@ -23236,7 +23089,7 @@ var PolicyDetailPage = ({ policyId, onBackToPolicies, onBackToHome }) => {
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "max-w-4xl mx-auto px-4 sm:px-6 flex items-center justify-between",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -24604,7 +24457,7 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses, onN
 						className: "fontes my-10 p-6 rounded-2xl bg-slate-50/80 border border-slate-200",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 							className: "text-lg font-bold text-slate-900 mb-3 flex items-center gap-2",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Fontes e referências" })]
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Fontes e referências" })]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 							className: "space-y-2.5 text-xs sm:text-sm text-slate-700",
 							children: post.sources.map((src, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
@@ -24850,7 +24703,7 @@ var AplicativosPage = ({ onBackToHome }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "bg-[#F8FAFC] min-h-screen pb-20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "bg-[#182333] pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white",
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-blue-900/60 shadow-lg",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "absolute inset-0 opacity-10",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -25267,7 +25120,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório Aberto de Manuscritos de Estudos e Pesquisa" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório Aberto de Manuscritos de Estudos e Pesquisa" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
 								className: "text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight uppercase",
@@ -25332,7 +25185,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-900 text-xs font-bold uppercase tracking-wider",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-amber-700" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Coleção Oficial ESDHUBEM" })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5 text-amber-700" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Coleção Oficial ESDHUBEM" })]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 									className: "text-2xl sm:text-3xl font-black text-slate-900 tracking-tight",
@@ -25773,7 +25626,7 @@ var ArtigoDetailPage = ({ article, onBackToArticles, onBackToHome }) => {
 							className: "bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-2 text-slate-900 font-extrabold text-lg border-b border-slate-100 pb-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Resumo (Português)" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5 text-emerald-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Resumo (Português)" })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "text-slate-700 text-sm sm:text-base leading-relaxed text-justify",
 								children: article.abstractPt
@@ -25783,7 +25636,7 @@ var ArtigoDetailPage = ({ article, onBackToArticles, onBackToHome }) => {
 							className: "bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center gap-2 text-slate-900 font-extrabold text-lg border-b border-slate-100 pb-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Abstract (English)" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Abstract (English)" })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "text-slate-700 text-sm sm:text-base leading-relaxed text-justify italic font-serif",
 								children: article.abstractEn
@@ -26017,7 +25870,7 @@ var CorpoDocentePage = ({ onBackToHome, onNavigateToCourseCatalog }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "bg-[#182333] text-white border-b border-slate-700/80",
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white border-b border-blue-900/80 shadow-lg",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14",
 				children: [
@@ -26143,7 +25996,7 @@ var CorpoDocentePage = ({ onBackToHome, onNavigateToCourseCatalog }) => {
 												className: "p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 													className: "text-xs font-bold text-slate-900 block flex items-center gap-1.5",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-amber-600" }), "Responsabilidade Acadêmica"]
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-amber-600" }), "Responsabilidade Acadêmica"]
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 													className: "text-xs text-slate-600",
 													children: "Supervisão de conteúdos ementários, validação de apostilas e regência das videoaulas de Desenvolvimento Pessoal."
@@ -26337,7 +26190,7 @@ var DireitosAlunoPage = ({ onBackToHome, onOpenValidator, onOpenCertificatePrevi
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "bg-[#182333] text-white border-b border-slate-700/80",
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white border-b border-blue-900/80 shadow-lg",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14",
 				children: [
@@ -26452,7 +26305,7 @@ var DireitosAlunoPage = ({ onBackToHome, onOpenValidator, onOpenCertificatePrevi
 					className: "space-y-6",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 						className: "text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6 text-[#243042]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Nossas 3 Modalidades de Capacitação" })]
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6 text-[#243042]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Nossas 3 Modalidades de Capacitação" })]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "text-xs sm:text-sm text-slate-500 mt-1",
 						children: "Como a ESDHUBEM estrutura suas metodologias para atender alunos universitários e profissionais."
@@ -26648,7 +26501,7 @@ var PoliticaPagamentoPage = ({ onBackToHome }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "bg-[#182333] text-white border-b border-slate-700/80",
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white border-b border-blue-900/80 shadow-lg",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14",
 				children: [
@@ -26855,11 +26708,11 @@ var SecretariaDocumentacaoPage = ({ onBackToHome, onOpenValidator, onOpenCertifi
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800 font-sans pb-20",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -26884,7 +26737,7 @@ var SecretariaDocumentacaoPage = ({ onBackToHome, onOpenValidator, onOpenCertifi
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -27177,7 +27030,7 @@ var SecretariaDocumentacaoPage = ({ onBackToHome, onOpenValidator, onOpenCertifi
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											className: "w-10 h-10 rounded-xl bg-[#243042] text-[#FFC72C] flex items-center justify-center font-bold",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5" })
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5" })
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 											className: "text-base font-bold text-slate-900",
@@ -27422,11 +27275,11 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800 font-sans pb-20",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -27451,7 +27304,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -27534,7 +27387,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 							className: "flex items-center gap-3",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5" })
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5" })
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 								className: "font-extrabold text-[#182333] text-2xl sm:text-3xl tracking-tight",
 								children: "Por que criamos as Diretrizes de Publicação e a Escala de Autoria?"
@@ -28325,7 +28178,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 								onNavigateToArticles && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: onNavigateToArticles,
 									className: "px-5 py-3 bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos Publicados" })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos Publicados" })]
 								}),
 								onOpenCertificatePreview && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: onOpenCertificatePreview,
@@ -28354,11 +28207,11 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onNavigate }) => {
 		className: "min-h-screen bg-[#FDFDFD] text-slate-800 font-sans pb-24",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -28378,7 +28231,7 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onNavigate }) => {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-5xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -28386,7 +28239,7 @@ var DiretrizesPedagogicasPage = ({ onBackToHome, onNavigate }) => {
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/20 text-[#FFC72C] text-xs font-bold uppercase tracking-wider border border-amber-400/30",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ESDHUBEM" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ESDHUBEM" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 								className: "text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight",
@@ -28861,11 +28714,11 @@ var DiretrizesProtecaoAutoriaPage = ({ onBackToHome, onNavigate }) => {
 		className: "min-h-screen bg-slate-50 text-slate-800 font-sans pb-20",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -28885,7 +28738,7 @@ var DiretrizesProtecaoAutoriaPage = ({ onBackToHome, onNavigate }) => {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-5xl mx-auto relative z-10 text-center space-y-4",
 					children: [
@@ -29257,7 +29110,7 @@ var DiretrizesProtecaoAutoriaPage = ({ onBackToHome, onNavigate }) => {
 								className: "border-b border-slate-100 pb-4",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 									className: "text-xl sm:text-2xl font-extrabold text-slate-900 flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Funcionamento da Publicação" })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Funcionamento da Publicação" })]
 								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
@@ -30083,7 +29936,7 @@ var PodcastsPage = ({ onBackToHome, onNavigateToCourses }) => {
 				onEnded: () => setIsPlaying(false)
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "bg-[#182333] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-slate-700/60 shadow-lg",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-blue-900/60 shadow-lg",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "absolute inset-0 opacity-10 pointer-events-none",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -30518,7 +30371,7 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "bg-[#F8FAFC] min-h-screen text-slate-800 flex flex-col",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "bg-[#182333] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-slate-700/60 shadow-lg",
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-blue-900/60 shadow-lg",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "absolute inset-0 opacity-10 pointer-events-none",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -30539,7 +30392,7 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 					}), onNavigateToArticles && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						onClick: onNavigateToArticles,
 						className: "inline-flex items-center gap-1.5 text-xs text-cyan-300 hover:text-white bg-cyan-950/60 border border-cyan-500/40 px-3.5 py-1.5 rounded-full transition-all cursor-pointer",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos & Anais Acadêmicos" })]
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Artigos & Anais Acadêmicos" })]
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "space-y-4",
@@ -31941,7 +31794,7 @@ var DiretrizesPublicacaoParceriasPage = ({ onBackToHome, onNavigateToArticles, o
 								type: "button",
 								onClick: onNavigateToArticles,
 								className: "bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black px-6 py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md cursor-pointer",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório de Artigos" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4 text-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório de Artigos" })]
 							})]
 						})]
 					})
@@ -31960,7 +31813,7 @@ var SobreNosPage = ({ onBackToHome, onOpenValidator, onNavigateToCourses, onNavi
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "bg-[#182333] text-white border-b border-slate-700/80 relative overflow-hidden",
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white border-b border-blue-900/80 relative overflow-hidden shadow-lg",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,199,44,0.1),transparent_50%)] pointer-events-none" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 relative z-10",
 				children: [
@@ -32874,7 +32727,7 @@ var SobreNosPage = ({ onBackToHome, onOpenValidator, onNavigateToCourses, onNavi
 									onNavigateToCourses && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 										onClick: onNavigateToCourses,
 										className: "inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-6 py-3.5 rounded-full border border-white/20 transition-all cursor-pointer",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Catálogo de Cursos" })]
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Catálogo de Cursos" })]
 									}),
 									onNavigateToPedagogy && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 										onClick: onNavigateToPedagogy,
@@ -33390,7 +33243,7 @@ var GeradorAbntPage = ({ onBackToHome, onNavigateToArticles }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "bg-[#F8FAFC] min-h-screen pb-24 text-slate-800",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "bg-[#182333] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-slate-700/60",
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-blue-900/60 shadow-lg",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "absolute inset-0 opacity-10 pointer-events-none",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -33468,7 +33321,7 @@ var GeradorAbntPage = ({ onBackToHome, onNavigateToArticles }) => {
 							{
 								id: "livro",
 								label: "Livro",
-								icon: BookOpen
+								icon: BookOpen$1
 							},
 							{
 								id: "capitulo",
@@ -34342,11 +34195,11 @@ var PerguntasFrequentesPage = ({ onBackToHome, onNavigate }) => {
 		className: "min-h-screen bg-[#FDFDFD] text-slate-800 font-sans pb-24",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -34366,7 +34219,7 @@ var PerguntasFrequentesPage = ({ onBackToHome, onNavigate }) => {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: "bg-[#243042] text-white py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-4xl mx-auto space-y-4 text-left",
 					children: [
@@ -34611,7 +34464,7 @@ var PerguntasFrequentesPage = ({ onBackToHome, onNavigate }) => {
 							className: "border-b border-slate-200 pb-3 flex items-center gap-3",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-600 flex items-center justify-center shrink-0",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5" })
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-5 h-5" })
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 								className: "text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight",
 								children: "Sobre Revistas Científicas e Periódicos"
@@ -34813,11 +34666,11 @@ var CartaAbertaPage = ({ onBackToHome, onNavigate }) => {
 		className: "min-h-screen bg-[#FDFDFD] text-slate-800 font-sans pb-24",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -34837,7 +34690,7 @@ var CartaAbertaPage = ({ onBackToHome, onNavigate }) => {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: "bg-[#243042] text-white py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-4xl mx-auto space-y-4 text-left",
 					children: [
@@ -34893,7 +34746,7 @@ var CartaAbertaPage = ({ onBackToHome, onNavigate }) => {
 								className: "flex items-center gap-3",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6" })
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6" })
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 									className: "text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight",
 									children: "📖 Sobre Disponibilização para Venda"
@@ -35083,11 +34936,11 @@ var ModalidadesFormacaoPage = ({ onBackToHome, onNavigate, onOpenValidator }) =>
 		className: "min-h-screen bg-[#F8FAFC] text-slate-800 font-sans pb-24",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "bg-[#182333] border-b border-slate-700/60 py-3",
+				className: "bg-[#011049] border-b border-blue-900/60 py-3",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-center gap-2 text-sm text-slate-400",
+						className: "flex items-center gap-2 text-sm text-slate-300",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: onBackToHome,
@@ -35112,7 +34965,7 @@ var ModalidadesFormacaoPage = ({ onBackToHome, onNavigate, onOpenValidator }) =>
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: "bg-[#243042] text-white relative overflow-hidden py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-700/60",
+				className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white relative overflow-hidden py-14 px-4 sm:px-6 lg:px-8 border-b border-blue-900/60 shadow-lg",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-4xl mx-auto text-center space-y-4 relative z-10",
 					children: [
@@ -35187,7 +35040,7 @@ var ModalidadesFormacaoPage = ({ onBackToHome, onNavigate, onOpenValidator }) =>
 								dotColor: "bg-rose-500 text-rose-100",
 								borderHover: "hover:border-rose-400",
 								tagBg: "bg-rose-50 text-rose-700 border-rose-200",
-								icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6 text-rose-600" }),
+								icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-6 h-6 text-rose-600" }),
 								descricao: "Jornadas completas de aprendizado para quem quer dominar uma área do início ao fim. Diferente de um curso rápido, a formação livre oferece uma visão ampla e profunda, combinando teoria consistente, prática orientada e estudos de caso reais.",
 								publico: "Pessoas em transição de carreira, iniciantes que querem uma base sólida antes de atuar ou qualquer pessoa que deseja um mergulho profundo e transformador em um tema."
 							},
@@ -35313,7 +35166,7 @@ var ModalidadesFormacaoPage = ({ onBackToHome, onNavigate, onOpenValidator }) =>
 							children: [onNavigate && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => onNavigate("categorias"),
 								className: "px-5 py-3 bg-[#FFC72C] hover:bg-[#F5B014] text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Todos os Cursos" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen$1, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Todos os Cursos" })]
 							}), onNavigate && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								onClick: () => onNavigate("regras-certificacao-merito"),
 								className: "px-5 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 cursor-pointer border border-slate-600 shadow-md hover:scale-105",

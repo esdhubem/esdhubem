@@ -131,44 +131,48 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
             </div>
           </div>
 
-          {/* 4 Macro Areas Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          {/* 4 Macro Areas Grid com Imagem, Ícone Flutuante e Botão Conhecer Cursos */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 id: 'desenvolvimento-pessoal',
                 emoji: '🧠',
                 title: 'Desenvolvimento Pessoal',
-                description: 'Autoconhecimento, consciência, relações, bem-estar e desenvolvimento pessoal.',
+                description: 'Autoconhecimento, inteligência emocional, relações e finanças comportamentais.',
                 filterKey: 'Desenvolvimento Pessoal',
                 badgeText: 'Pessoal',
-                badgeClass: 'bg-purple-50 text-purple-700 border-purple-200'
+                badgeClass: 'bg-purple-50 text-purple-700 border-purple-200',
+                image: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80'
               },
               {
                 id: 'desenvolvimento-profissional',
                 emoji: '💼',
                 title: 'Desenvolvimento Profissional',
-                description: 'Carreira, competências, capacitação e conhecimentos para atuação profissional.',
+                description: 'Carreira, competências, liderança, capacitação e preparação para o mercado.',
                 filterKey: 'Desenvolvimento Profissional',
                 badgeText: 'Profissional',
-                badgeClass: 'bg-blue-50 text-blue-700 border-blue-200'
+                badgeClass: 'bg-blue-50 text-blue-700 border-blue-200',
+                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80'
               },
               {
-                id: 'desenvolvimento-empresarial',
-                emoji: '🏢',
-                title: 'Desenvolvimento Empresarial',
-                description: 'Palestras in-company, bem-estar nas empresas, descomplica MEI/ME e ferramentas de gestão prática.',
-                filterKey: 'Desenvolvimento Empresarial',
-                badgeText: 'Empresarial',
-                badgeClass: 'bg-amber-50 text-amber-700 border-amber-200'
+                id: 'desenvolvimento-consciencial',
+                emoji: '✨',
+                title: 'Desenvolvimento Consciencial',
+                description: 'Desenvolvimento humano, expansão da consciência, ética aplicada e consciência ambiental.',
+                filterKey: 'Desenvolvimento Consciencial',
+                badgeText: 'Consciência',
+                badgeClass: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+                image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80'
               },
               {
                 id: 'desenvolvimento-bem-estar-integrativo',
                 emoji: '🩺',
                 title: 'Desenvolvimento em Bem-estar Integrativo',
-                description: 'Saúde, bem-estar, práticas integrativas e aprofundamento profissional na área da saúde.',
+                description: 'Saúde, bem-estar, práticas integrativas e aprofundamento na área da saúde.',
                 filterKey: 'Desenvolvimento em Bem-estar Integrativo',
                 badgeText: 'Bem-estar Integrativo',
-                badgeClass: 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                badgeClass: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+                image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80'
               }
             ].map((area) => {
               const isSelected = selectedCategory?.toLowerCase() === area.filterKey.toLowerCase();
@@ -187,33 +191,52 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                       }
                     }
                   }}
-                  className={`group relative p-6 rounded-2xl transition-all duration-200 flex flex-col justify-between cursor-pointer border ${
+                  className={`group bg-white rounded-2xl border transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative ${
                     isSelected
-                      ? 'bg-slate-50 border-2 border-[#182333] shadow-xl ring-2 ring-[#FFC72C]/60 scale-[1.02]'
-                      : 'bg-white border-slate-200/90 hover:border-amber-400 hover:shadow-xl hover:-translate-y-1'
+                      ? 'border-2 border-emerald-600 shadow-xl ring-2 ring-emerald-500/30 scale-[1.02]'
+                      : 'border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-300 hover:-translate-y-1'
                   }`}
                 >
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-3xl">{area.emoji}</span>
-                      <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${area.badgeClass}`}>
+                  {/* Foto Ilustrativa no Topo */}
+                  <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={area.image}
+                      alt={area.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 right-3 z-10">
+                      <span className={`text-[10px] font-extrabold px-2.5 py-1 rounded-full border backdrop-blur-md bg-white/90 shadow-xs ${area.badgeClass}`}>
                         {area.badgeText}
                       </span>
                     </div>
+                  </div>
 
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-black text-[#182333] group-hover:text-amber-600 transition-colors leading-snug">
+                  {/* Ícone Circular Flutuante Centralizado na Divisa da Foto */}
+                  <div className="w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[154px] z-10 text-xl group-hover:scale-110 group-hover:shadow-lg transition-transform">
+                    <span>{area.emoji}</span>
+                  </div>
+
+                  {/* Corpo do Cartão: Título, Descrição e Botão Conhecer Cursos */}
+                  <div className="pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3">
+                    <div className="w-full space-y-2">
+                      <h3 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
                         {area.title}
                       </h3>
-                      <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
                         {area.description}
                       </p>
                     </div>
-                  </div>
 
-                  <div className="pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-800 group-hover:text-amber-600 transition-colors">
-                    <span>{isSelected ? 'Filtro Ativo (Limpar)' : 'Explorar Cursos'}</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-amber-500" />
+                    {/* Botão Pílula Conhecer Cursos */}
+                    <div className="pt-2 w-full flex justify-center">
+                      <button
+                        type="button"
+                        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0 w-full max-w-[200px]"
+                      >
+                        <BookOpen className="w-3.5 h-3.5 text-emerald-100" />
+                        <span>Conhecer Cursos</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               );
@@ -241,266 +264,155 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
             </p>
           </div>
 
-          {/* 8 Modalities Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-            {/* 1. Freepremium */}
-            <div 
-              onClick={() => {
-                if (onNavigate) onNavigate('modalidades-formacao');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl">🟢</span>
-                  <span className="text-[11px] font-bold bg-emerald-50 text-emerald-700 px-2.5 py-0.5 rounded-full border border-emerald-200">
-                    Descoberta
-                  </span>
+          {/* 8 Modalities Cards Grid com Imagem, Ícone Flutuante, Apenas Público-Alvo e Botão Conhecer Cursos */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            {[
+              {
+                id: 'freepremium',
+                emoji: '🟢',
+                badgeText: 'Descoberta',
+                badgeClass: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+                title: 'Cursos Freepremium',
+                target: 'Estudantes e profissionais que buscam conhecimento rápido sem custo inicial.',
+                image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80',
+                destination: 'modalidades-formacao'
+              },
+              {
+                id: 'capacitacao',
+                emoji: '🔵',
+                badgeText: 'Ação Prática',
+                badgeClass: 'bg-blue-50 text-blue-700 border-blue-200',
+                title: 'Cursos de Capacitação',
+                target: 'Profissionais que precisam atualizar competências e resolver demandas da rotina.',
+                image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
+                destination: 'modalidades-formacao'
+              },
+              {
+                id: 'horas-complementares',
+                emoji: '🟡',
+                badgeText: 'Validação Acadêmica',
+                badgeClass: 'bg-amber-50 text-amber-700 border-amber-200',
+                title: 'Horas Complementares',
+                target: 'Universitários de graduação e pós-graduação que precisam comprovar horas extracurriculares.',
+                image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
+                destination: 'modalidades-formacao'
+              },
+              {
+                id: 'formacao-integral',
+                emoji: '🟠',
+                badgeText: 'Trilha Completa',
+                badgeClass: 'bg-orange-50 text-orange-700 border-orange-200',
+                title: 'Formação Integral',
+                target: 'Pessoas que buscam desenvolvimento consistente com método, profundidade e rigor pedagógico.',
+                image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80',
+                destination: 'modalidades-formacao'
+              },
+              {
+                id: 'treinamentos-corporativos',
+                emoji: '🟣',
+                badgeText: 'Desempenho Profissional',
+                badgeClass: 'bg-purple-50 text-purple-700 border-purple-200',
+                title: 'Treinamentos Corporativos',
+                target: 'Gestores de RH, líderes de equipe e diretores de empresas e terceiro setor.',
+                image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80',
+                destination: 'categoria:treinamentos-palestras-corporativas'
+              },
+              {
+                id: 'autoria-destaque',
+                emoji: '✒️',
+                badgeText: 'Desenvolvimento da Escrita',
+                badgeClass: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+                title: 'Autoria e Destaque',
+                target: 'Estudantes, pesquisadores, terapeutas e profissionais que desejam publicar com destaque.',
+                image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80',
+                destination: 'regras-certificacao-merito'
+              },
+              {
+                id: 'aprofundamento-saude',
+                emoji: '💙',
+                badgeText: 'Área da Saúde',
+                badgeClass: 'bg-sky-50 text-sky-700 border-sky-200',
+                title: 'Aprofundamento na Saúde',
+                target: 'Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos e terapeutas graduados.',
+                image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+                destination: 'categoria:aprofundamento-profissional-saude'
+              },
+              {
+                id: 'orientacao-carreira-futuro',
+                emoji: '💡',
+                badgeText: 'Evolução & Futuro',
+                badgeClass: 'bg-teal-50 text-teal-700 border-teal-200',
+                title: 'Orientação de Carreira & Futuro',
+                target: 'Profissionais em transição, recém-formados e quem busca novos rumos na carreira.',
+                image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
+                destination: 'categoria:orientacao-carreira-futuro'
+              }
+            ].map((mod) => (
+              <div
+                key={mod.id}
+                onClick={() => {
+                  if (mod.destination.startsWith('categoria:')) {
+                    const slug = mod.destination.replace('categoria:', '');
+                    if (onNavigateToCategoryDetail) onNavigateToCategoryDetail(slug);
+                    else if (onNavigate) onNavigate(mod.destination);
+                  } else if (onNavigate) {
+                    onNavigate(mod.destination);
+                  }
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="group bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1"
+                id={`home-mod-card-${mod.id}`}
+              >
+                {/* Foto Ilustrativa no Topo */}
+                <div className="relative h-40 w-full overflow-hidden bg-slate-100">
+                  <img
+                    src={mod.image}
+                    alt={mod.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className={`text-[10px] font-extrabold px-2.5 py-1 rounded-full border backdrop-blur-md bg-white/95 shadow-xs ${mod.badgeClass}`}>
+                      {mod.badgeText}
+                    </span>
+                  </div>
                 </div>
-                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-emerald-600 transition-colors">
-                  Cursos Freepremium
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                  Aprenda sem barreiras. Assista a todas as videoaulas de forma 100% gratuita para testar o conteúdo, fazer os testes de múltipla escolha e conhecer nossa metodologia. Você só paga taxa de certificado Bronze se quiser o documento oficial.
-                </p>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
-                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
-                  <span className="line-clamp-2">Estudantes e profissionais que buscam conhecimento rápido sem custo inicial.</span>
-                </div>
-              </div>
-              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-600">
-                <span>Ver Detalhes</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
 
-            {/* 2. Capacitação */}
-            <div 
-              onClick={() => {
-                if (onNavigate) onNavigate('modalidades-formacao');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="bg-white rounded-2xl border border-slate-200/90 hover:border-blue-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl">🔵</span>
-                  <span className="text-[11px] font-bold bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full border border-blue-200">
-                    Ação Prática
-                  </span>
+                {/* Ícone Circular Flutuante Centralizado na Divisa da Foto */}
+                <div className="w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[138px] z-10 text-xl group-hover:scale-110 group-hover:shadow-lg transition-transform">
+                  <span>{mod.emoji}</span>
                 </div>
-                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-blue-600 transition-colors">
-                  Cursos de Capacitação
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                  Cursos práticos e objetivos, desenhados para quem já atua no mercado e precisa de ferramentas aplicáveis imediatamente. Foco no "saber fazer": protocolos, técnicas e metodologias que geram resultado real.
-                </p>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
-                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
-                  <span className="line-clamp-2">Profissionais que precisam atualizar competências e resolver demandas da rotina.</span>
-                </div>
-              </div>
-              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-blue-600">
-                <span>Ver Detalhes</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
 
-            {/* 3. Horas Complementares */}
-            <div 
-              onClick={() => {
-                if (onNavigate) onNavigate('modalidades-formacao');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="bg-white rounded-2xl border border-slate-200/90 hover:border-amber-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl">🟡</span>
-                  <span className="text-[11px] font-bold bg-amber-50 text-amber-700 px-2.5 py-0.5 rounded-full border border-amber-200">
-                    Validação Acadêmica
-                  </span>
-                </div>
-                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-amber-600 transition-colors">
-                  Horas Complementares
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                  Cumpra as Atividades Complementares (AACC) da sua faculdade com segurança. Certificados com carga horária legítima, amparo legal e código de verificação para aprovação sem surpresas na sua instituição de ensino superior.
-                </p>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
-                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
-                  <span className="line-clamp-2">Universitários de graduação e pós-graduação que precisam comprovar horas extracurriculares.</span>
-                </div>
-              </div>
-              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-amber-600">
-                <span>Ver Detalhes</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
+                {/* Corpo do Cartão: Título, Apenas Público-Alvo e Botão Conhecer Cursos */}
+                <div className="pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3">
+                  <div className="w-full space-y-3">
+                    <h4 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
+                      {mod.title}
+                    </h4>
 
-            {/* 4. Formação Integral */}
-            <div 
-              onClick={() => {
-                if (onNavigate) onNavigate('modalidades-formacao');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="bg-white rounded-2xl border border-slate-200/90 hover:border-orange-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl">🟠</span>
-                  <span className="text-[11px] font-bold bg-orange-50 text-orange-700 px-2.5 py-0.5 rounded-full border border-orange-200">
-                    Trilha Completa
-                  </span>
-                </div>
-                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-orange-600 transition-colors">
-                  Formação Integral
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                  Percursos formativos completos que integram teoria, prática, ética e desenvolvimento pessoal. Trilha sequencial para quem busca transformação profunda e visão holística da sua área de atuação.
-                </p>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
-                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
-                  <span className="line-clamp-2">Pessoas que buscam desenvolvimento consistente com método, profundidade e rigor pedagógico.</span>
-                </div>
-              </div>
-              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-orange-600">
-                <span>Ver Detalhes</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
+                    {/* Caixa de Público-Alvo Exclusiva */}
+                    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3 text-left">
+                      <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-extrabold mb-1">
+                        Público-alvo:
+                      </strong>
+                      <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
+                        {mod.target}
+                      </p>
+                    </div>
+                  </div>
 
-            {/* 5. Treinamentos Corporativos */}
-            <div 
-              onClick={() => {
-                if (onNavigate) onNavigate('categoria:treinamentos-palestras-corporativas');
-                else if (onNavigateToCategoryDetail) onNavigateToCategoryDetail('treinamentos-palestras-corporativas');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="bg-white rounded-2xl border border-slate-200/90 hover:border-purple-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl">🟣</span>
-                  <span className="text-[11px] font-bold bg-purple-50 text-purple-700 px-2.5 py-0.5 rounded-full border border-purple-200">
-                    Desempenho Profissional
-                  </span>
-                </div>
-                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-purple-600 transition-colors">
-                  Treinamentos Corporativos
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                  Programas desenvolvidos sob medida para equipes, empresas e instituições. Foco em alinhar processos, capacitar colaboradores, melhorar o clima organizacional e desenvolver lideranças ativas.
-                </p>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
-                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
-                  <span className="line-clamp-2">Gestores de RH, líderes de equipe e diretores de empresas e terceiro setor.</span>
+                  {/* Botão Pílula Conhecer Cursos */}
+                  <div className="pt-2 w-full flex justify-center">
+                    <button
+                      type="button"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0 w-full"
+                    >
+                      <BookOpen className="w-3.5 h-3.5 text-emerald-100" />
+                      <span>Conhecer Cursos</span>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-600">
-                <span>Ver Detalhes</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
-
-            {/* 6. Autoria e Destaque */}
-            <div 
-              onClick={() => {
-                if (onNavigate) onNavigate('regras-certificacao-merito');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="bg-white rounded-2xl border border-slate-200/90 hover:border-indigo-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl">🟣</span>
-                  <span className="text-[11px] font-bold bg-indigo-50 text-indigo-700 px-2.5 py-0.5 rounded-full border border-indigo-200">
-                    Desenvolvimento da Escrita
-                  </span>
-                </div>
-                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-indigo-600 transition-colors">
-                  Autoria e Destaque
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                  Aprenda a estruturar, escrever e publicar do texto prático ao livro, com reconhecimento Prata, Ouro ou Diamante. Transforme seu aprendizado em conhecimento compartilhado e credibilidade.
-                </p>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
-                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
-                  <span className="line-clamp-2">Estudantes, pesquisadores, terapeutas e profissionais que desejam publicar.</span>
-                </div>
-              </div>
-              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-indigo-600">
-                <span>Ver Detalhes</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
-
-            {/* 7. Aprofundamento Profissional — Área da Saúde */}
-            <div 
-              onClick={() => {
-                if (onNavigate) onNavigate('categoria:aprofundamento-profissional-saude');
-                else if (onNavigateToCategoryDetail) onNavigateToCategoryDetail('aprofundamento-profissional-saude');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl">💙</span>
-                  <span className="text-[11px] font-bold bg-sky-50 text-sky-700 px-2.5 py-0.5 rounded-full border border-sky-200">
-                    Área da Saúde
-                  </span>
-                </div>
-                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-sky-600 transition-colors">
-                  Aprofundamento na Saúde
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                  Cursos exclusivos para graduados em saúde. Espaço de atualização e desenvolvimento técnico fundamentado (não se tratam de pós-graduação). Exige comprovação de nível superior.
-                </p>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
-                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
-                  <span className="line-clamp-2">Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos e terapeutas graduados.</span>
-                </div>
-              </div>
-              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-sky-600">
-                <span>Ver Detalhes</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
-
-            {/* 8. Workshop de Orientação de Carreira */}
-            <div 
-              onClick={() => {
-                if (onNavigate) onNavigate('categoria:orientacao-carreira-futuro');
-                else if (onNavigateToCategoryDetail) onNavigateToCategoryDetail('orientacao-carreira-futuro');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="bg-white rounded-2xl border border-slate-200/90 hover:border-teal-400 hover:shadow-lg transition-all duration-200 p-5 flex flex-col justify-between cursor-pointer group"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl">💡</span>
-                  <span className="text-[11px] font-bold bg-teal-50 text-teal-700 px-2.5 py-0.5 rounded-full border border-teal-200">
-                    Evolução & Futuro
-                  </span>
-                </div>
-                <h4 className="font-extrabold text-[#182333] text-base group-hover:text-teal-600 transition-colors">
-                  Orientação de Carreira & Futuro
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                  Workshops e imersões focados em transição profissional, posicionamento de mercado, planejamento de carreira e desenvolvimento de competências para o futuro do trabalho.
-                </p>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5 text-[11px] text-slate-600">
-                  <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-bold mb-0.5">Público-alvo:</strong>
-                  <span className="line-clamp-2">Profissionais em transição, recém-formados e quem busca novos rumos na carreira.</span>
-                </div>
-              </div>
-              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-teal-600">
-                <span>Ver Detalhes</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Action to Full Modalities Page */}

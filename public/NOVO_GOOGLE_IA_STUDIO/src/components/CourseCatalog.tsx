@@ -58,7 +58,9 @@ export const CourseCatalog: React.FC<CourseCatalogProps> = ({
       !selectedCategory ||
       course.category.toLowerCase() === selectedCategory.toLowerCase() ||
       (selectedCategory.toLowerCase() === 'desenvolvimento pessoal' &&
-        ['pessoal', 'humano', 'relacional', 'consciência', 'ético', 'financeiro', 'tecnológico', 'ambiental'].some(c => course.category.toLowerCase().includes(c))) ||
+        ['pessoal', 'relacional', 'financeiro'].some(c => course.category.toLowerCase().includes(c))) ||
+      ((selectedCategory.toLowerCase() === 'desenvolvimento consciencial' || selectedCategory.toLowerCase() === 'desenvolvimento da consciência' || selectedCategory.toLowerCase() === 'consciência') &&
+        ['humano', 'consciência', 'ético', 'ambiental'].some(c => course.category.toLowerCase().includes(c))) ||
       (selectedCategory.toLowerCase() === 'desenvolvimento profissional' &&
         ['profissional', 'carreira', 'capacitação', 'formação livre', 'horas complementares'].some(c => course.category.toLowerCase().includes(c))) ||
       (selectedCategory.toLowerCase() === 'desenvolvimento empresarial' &&
