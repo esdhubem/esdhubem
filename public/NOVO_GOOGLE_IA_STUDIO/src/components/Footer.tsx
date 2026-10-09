@@ -55,7 +55,7 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="bg-[#111827] text-slate-300 pt-12 pb-8 border-t border-slate-800 relative">
+    <footer className="bg-[#011049] text-slate-300 pt-12 pb-8 border-t border-blue-900/40 relative">
       {/* Banner / Pre-Footer "Imagem ilustrativa" with supportive counseling/learning vibe */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#182333] via-[#243042] to-[#1e293b] text-white p-6 sm:p-10 shadow-xl border border-slate-700/60 flex flex-col md:flex-row items-center justify-between gap-8">

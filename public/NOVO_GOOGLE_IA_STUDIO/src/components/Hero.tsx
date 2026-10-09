@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section id="inicio" className="bg-white">
       {/* Banner Section */}
-      <div className="relative w-full min-h-[380px] sm:min-h-[430px] md:min-h-[480px] lg:min-h-[520px] flex flex-col items-center justify-start overflow-hidden bg-[#010927]">
+      <div className="relative w-full min-h-[380px] sm:min-h-[430px] md:min-h-[480px] lg:min-h-[520px] flex flex-col items-center justify-start overflow-hidden bg-[#011049]">
         {/* Background Image - 100% nitidez sem película de gradiente embaçando */}
         <div className="absolute inset-0 z-0">
           <img

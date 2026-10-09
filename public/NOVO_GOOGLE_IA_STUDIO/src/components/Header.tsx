@@ -55,7 +55,7 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0A1128] text-white shadow-xl border-b border-blue-500/20 transition-all">
+    <header className="sticky top-0 z-50 bg-[#011049] text-white shadow-md transition-all">
       {/* Top Bar: Logo, Search and User Actions */}
       <div className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,7 +168,7 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Unified Navigation Bar with Dropdown Submenus */}
-      <div className="hidden lg:block bg-[#070D1F] border-b border-blue-900/40 shadow-md">
+      <div className="hidden lg:block bg-[#011049]">
         <div className="max-w-[1600px] mx-auto px-4 lg:px-6">
           <nav className="flex items-center justify-center gap-1.5 xl:gap-2.5 h-12 text-xs xl:text-sm font-medium">
             {/* 1. Início */}
@@ -549,7 +549,7 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Mobile Search bar (visible only on lg/md) */}
-      <div className="lg:hidden px-4 pb-3 pt-2 bg-[#0A1128] border-b border-blue-500/15">
+      <div className="lg:hidden px-4 pb-3 pt-2 bg-[#011049]">
         <form onSubmit={handleSearchSubmit} className="relative w-full">
           <input
             type="text"
@@ -567,7 +567,7 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0A1128] border-t border-blue-500/20 px-4 py-4 space-y-4 shadow-2xl text-white">
+        <div className="lg:hidden bg-[#011049] border-t border-blue-500/20 px-4 py-4 space-y-4 shadow-2xl text-white">
           {/* Standalone Destaque Validar no Mobile */}
           <button
             onClick={() => { onOpenValidator(); setMobileMenuOpen(false); }}
