@@ -58,27 +58,27 @@ export const Footer: React.FC<FooterProps> = ({
     <footer className="bg-[#011049] text-slate-300 pt-12 pb-8 border-t border-blue-900/40 relative">
       {/* Banner / Pre-Footer "Imagem ilustrativa" with supportive counseling/learning vibe */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#182333] via-[#243042] to-[#1e293b] text-white p-6 sm:p-10 shadow-xl border border-slate-700/60 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#0d4494] via-[#0a3576] to-[#072458] text-white p-6 sm:p-10 shadow-2xl border border-cyan-400/40 flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Visual with "Imagem ilustrativa" tag */}
-          <div className="w-full md:w-5/12 relative rounded-2xl overflow-hidden shadow-lg h-56 sm:h-64 shrink-0 bg-slate-900">
+          <div className="w-full md:w-5/12 relative rounded-2xl overflow-hidden shadow-lg h-56 sm:h-64 shrink-0 bg-[#061c44]">
             <img
               src={newsletterImg}
               alt="Atendimento humanizado e mentoria ESDHUBEM"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-            <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] font-medium px-2.5 py-1 rounded-md border border-white/20">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#011049]/80 to-transparent" />
+            <div className="absolute top-3 left-3 bg-[#011049]/90 backdrop-blur-xs text-white text-[11px] font-medium px-2.5 py-1 rounded-md border border-cyan-400/30">
               Imagem ilustrativa
             </div>
-            <div className="absolute bottom-3 left-3 right-3 text-xs text-slate-200">
+            <div className="absolute bottom-3 left-3 right-3 text-xs text-blue-100 font-medium">
               Mentoria e desenvolvimento contínuo para sua carreira e bem-estar.
             </div>
           </div>
 
           {/* Newsletter Box inside the pre-footer */}
           <div className="w-full md:w-7/12 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#FFC72C] text-xs font-semibold">
-              <Sparkles className="w-3.5 h-3.5 fill-[#FFC72C]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-200 text-xs font-bold tracking-wide">
+              <Sparkles className="w-3.5 h-3.5 fill-cyan-300 text-cyan-300" />
               <span>Comunidade ESDHUBEM</span>
             </div>
 
@@ -125,55 +125,55 @@ export const Footer: React.FC<FooterProps> = ({
       {/* Main Footer Links Grid - 4 Distinctly Colored Columns */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-slate-800 text-xs sm:text-sm">
-          {/* Coluna 1 — CONTATO & ESCOLA (Accent: Amber / Ouro) */}
-          <div className="rounded-2xl p-5 bg-slate-900/80 border border-amber-500/30 shadow-lg space-y-4 flex flex-col justify-between">
+          {/* Coluna 1 — CONTATO & ESCOLA (Accent: Luminous Cyan / Royal Blue) */}
+          <div className="rounded-2xl p-5 bg-gradient-to-br from-[#0e4da4] to-[#072459] border border-cyan-400/40 shadow-xl shadow-blue-950/50 space-y-4 flex flex-col justify-between hover:border-cyan-300 hover:shadow-cyan-900/30 transition-all">
             <div>
-              <div className="mb-5 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-white/5 flex items-center justify-center p-1 border border-amber-400/40 shadow-md">
+              <div className="mb-5 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-white/10 flex items-center justify-center p-1 border border-cyan-300/40 shadow-md">
                 <img src={esdhubemLogo} alt="ESDHUBEM Logo" className="w-full h-full object-cover rounded-full" />
               </div>
               
-              <h4 className="text-amber-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+              <h4 className="text-white font-black text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(56,189,248,0.8)] animate-pulse"></span>
                 Contato & Escola
               </h4>
-              <p className="text-white font-semibold text-xs mt-1">
+              <p className="text-cyan-200 font-bold text-xs mt-1">
                 ESDHUBEM — Educação Integral
               </p>
 
-              <div className="mt-4 space-y-2.5 text-slate-300 text-xs">
+              <div className="mt-4 space-y-2.5 text-blue-100 text-xs">
                 <a
                   href="https://wa.me/5511960319837"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2.5 hover:text-amber-300 transition-colors group"
+                  className="flex items-center gap-2.5 hover:text-cyan-300 transition-colors group"
                   id="footer-contact-phone"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 group-hover:bg-amber-500/20 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-white/15 border border-cyan-300/30 flex items-center justify-center text-cyan-300 shrink-0 group-hover:bg-cyan-500/30 transition-colors">
                     <Phone className="w-3.5 h-3.5" />
                   </div>
-                  <span className="font-semibold text-white group-hover:text-amber-300 transition-colors">(11) 96031-9837</span>
+                  <span className="font-bold text-white group-hover:text-cyan-300 transition-colors">(11) 96031-9837</span>
                 </a>
 
                 <a
                   href="mailto:esdhubem@proton.me"
-                  className="flex items-center gap-2.5 hover:text-amber-300 transition-colors group"
+                  className="flex items-center gap-2.5 hover:text-cyan-300 transition-colors group"
                   id="footer-contact-email"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 group-hover:bg-amber-500/20 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-white/15 border border-cyan-300/30 flex items-center justify-center text-cyan-300 shrink-0 group-hover:bg-cyan-500/30 transition-colors">
                     <Mail className="w-3.5 h-3.5" />
                   </div>
-                  <span className="break-all text-slate-200 group-hover:text-amber-300 transition-colors">esdhubem@proton.me</span>
+                  <span className="break-all text-blue-100 group-hover:text-cyan-300 transition-colors font-medium">esdhubem@proton.me</span>
                 </a>
 
-                <div className="flex items-center gap-2.5 text-slate-300">
-                  <div className="w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 shrink-0">
+                <div className="flex items-center gap-2.5 text-blue-100 font-medium">
+                  <div className="w-7 h-7 rounded-lg bg-white/15 border border-cyan-300/30 flex items-center justify-center text-cyan-300 shrink-0">
                     <Clock className="w-3.5 h-3.5" />
                   </div>
                   <span>Atend.: 9h–17h • Seg–Sex</span>
                 </div>
 
-                <div className="flex items-center gap-2.5 text-slate-300">
-                  <div className="w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 shrink-0">
+                <div className="flex items-center gap-2.5 text-blue-100 font-medium">
+                  <div className="w-7 h-7 rounded-lg bg-white/15 border border-cyan-300/30 flex items-center justify-center text-cyan-300 shrink-0">
                     <MapPin className="w-3.5 h-3.5" />
                   </div>
                   <span>São Paulo / SP — Brasil</span>
@@ -182,21 +182,21 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
 
             {/* Métodos de Pagamento */}
-            <div className="pt-4 border-t border-amber-500/20 mt-2">
-              <h5 className="text-amber-300 font-bold text-[11px] uppercase tracking-wider mb-2">
+            <div className="pt-4 border-t border-cyan-300/20 mt-2">
+              <h5 className="text-cyan-200 font-bold text-[11px] uppercase tracking-wider mb-2">
                 Métodos de Pagamento
               </h5>
               <div className="flex flex-wrap gap-1.5">
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-emerald-500/30 text-emerald-300 text-[11px] font-semibold">
-                  <QrCode className="w-3 h-3 text-emerald-400" />
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/15 border border-emerald-400/40 text-emerald-300 text-[11px] font-bold">
+                  <QrCode className="w-3 h-3 text-emerald-300" />
                   Pix
                 </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-blue-500/30 text-blue-300 text-[11px] font-semibold">
-                  <CreditCard className="w-3 h-3 text-blue-400" />
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/15 border border-cyan-400/40 text-cyan-200 text-[11px] font-bold">
+                  <CreditCard className="w-3 h-3 text-cyan-300" />
                   Cartão
                 </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-amber-500/30 text-amber-300 text-[11px] font-semibold">
-                  <Bookmark className="w-3 h-3 text-amber-400" />
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/15 border border-amber-400/40 text-amber-300 text-[11px] font-bold">
+                  <Bookmark className="w-3 h-3 text-amber-300" />
                   Boleto
                 </span>
               </div>
@@ -204,9 +204,9 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           {/* Coluna 2 — NAVEGAÇÃO PRINCIPAL (Accent: Esmeralda / Verde) */}
-          <div className="rounded-2xl p-5 bg-slate-900/80 border border-emerald-500/30 shadow-lg space-y-4">
-            <h4 className="text-emerald-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <div className="rounded-2xl p-5 bg-gradient-to-br from-[#0e4da4] to-[#072459] border border-cyan-400/40 shadow-xl shadow-blue-950/50 space-y-4 hover:border-cyan-300 hover:shadow-cyan-900/30 transition-all">
+            <h4 className="text-white font-black text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
               Navegação Principal
             </h4>
             <ul className="space-y-2 text-xs">
@@ -322,9 +322,9 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           {/* Coluna 3 — CERTIFICAÇÃO & APRENDIZAGEM (Accent: Azul / Ciano) */}
-          <div className="rounded-2xl p-5 bg-slate-900/80 border border-sky-500/30 shadow-lg space-y-4">
-            <h4 className="text-sky-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-sky-400"></span>
+          <div className="rounded-2xl p-5 bg-gradient-to-br from-[#0e4da4] to-[#072459] border border-cyan-400/40 shadow-xl shadow-blue-950/50 space-y-4 hover:border-cyan-300 hover:shadow-cyan-900/30 transition-all">
+            <h4 className="text-white font-black text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(56,189,248,0.8)]"></span>
               Certificação & Aprendizagem
             </h4>
             <ul className="space-y-2 text-xs">
@@ -421,10 +421,10 @@ export const Footer: React.FC<FooterProps> = ({
             </ul>
           </div>
 
-          {/* Coluna 4 — LEGAL & TRANSPARÊNCIA (Accent: Púrpura / Violeta) */}
-          <div className="rounded-2xl p-5 bg-slate-900/80 border border-purple-500/30 shadow-lg space-y-4">
-            <h4 className="text-purple-400 font-extrabold text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-purple-400"></span>
+          {/* Coluna 4 — LEGAL & TRANSPARÊNCIA (Accent: Púrpura / Rosa) */}
+          <div className="rounded-2xl p-5 bg-gradient-to-br from-[#0e4da4] to-[#072459] border border-cyan-400/40 shadow-xl shadow-blue-950/50 space-y-4 hover:border-cyan-300 hover:shadow-cyan-900/30 transition-all">
+            <h4 className="text-white font-black text-sm sm:text-base tracking-wider uppercase flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-pink-400 shadow-[0_0_8px_rgba(244,114,182,0.8)]"></span>
               Legal & Transparência
             </h4>
             <ul className="space-y-2 text-xs">
@@ -517,14 +517,14 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Bottom Copyright & Back to Top */}
-        <div className="pt-8 mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 text-center sm:text-left">
+        <div className="pt-8 mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-blue-200/80 text-center sm:text-left">
           <p>© 2026 ESDHUBEM — Escola de Desenvolvimento Humano e Bem-Estar. Todos os direitos reservados.</p>
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 shrink-0"
+            className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-cyan-400/30 text-white shrink-0 shadow-sm"
           >
             <span>Voltar ao topo</span>
-            <ArrowUp className="w-3.5 h-3.5" />
+            <ArrowUp className="w-3.5 h-3.5 text-cyan-300" />
           </button>
         </div>
       </div>
