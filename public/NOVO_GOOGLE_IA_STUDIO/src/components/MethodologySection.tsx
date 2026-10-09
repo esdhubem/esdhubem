@@ -10,8 +10,8 @@ interface MethodologySectionProps {
 export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelectPillar, onOpenCertificatePreview, onNavigate }) => {
   return (
     <section className="bg-white" id="metodologia-jornada">
-      {/* Vibrant Golden Yellow Header Banner */}
-      <div className="bg-[#FFC72C] py-14 sm:py-18 px-4 sm:px-6 lg:px-8 border-y border-amber-400/40">
+      {/* Vibrant Header Banner */}
+      <div className="bg-[#b7d6f7] py-14 sm:py-18 px-4 sm:px-6 lg:px-8 border-y border-blue-200/80 shadow-xs">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 tracking-tight mb-4 leading-tight">
             Aqui oferecemos uma oportunidade <br />
