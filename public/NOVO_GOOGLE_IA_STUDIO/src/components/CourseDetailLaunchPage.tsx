@@ -35,7 +35,8 @@ import {
   Globe,
   DollarSign,
   Send,
-  AlertCircle
+  AlertCircle,
+  Play
 } from 'lucide-react';
 import { Course } from '../types';
 import { COURSES_DATA } from '../data/coursesData';
@@ -204,16 +205,14 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
 }) => {
   const [activeTab, setActiveTab] = useState<
     'quadro' | 'triade' | 'sobre' | 'conteudo' | 'certificacao' | 'comparativo' | 'legislacao' | 'faq'
-  >('quadro');
+  >('sobre');
   const [expandedModules, setExpandedModules] = useState<number[]>([0, 1]);
   const [copied, setCopied] = useState(false);
-  const [enrollmentMode, setEnrollmentMode] = useState<'gratis' | 'nivel'>('nivel');
   const [selectedLevelId, setSelectedLevelId] = useState<CourseLevelId>('prata');
   const [certificateViewMode, setCertificateViewMode] = useState<'frente' | 'verso'>('frente');
   const [expandedFaq, setExpandedFaq] = useState<number | null>(0);
 
   const selectedLevel = COURSE_LEVELS.find(lvl => lvl.id === selectedLevelId) || COURSE_LEVELS[1];
-  const totalSavings = selectedLevel.regularPrice - selectedLevel.launchPrice;
 
   const handleCopyLink = () => {
     const courseId = course?.id || 'fp-assertiva';
@@ -293,42 +292,6 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
   return (
     <div className="bg-[#F8FAFC] min-h-screen py-8 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Banner de Lançamento / Turma Fundadora */}
-        <div className="mb-6 bg-gradient-to-r from-[#182333] via-[#24354D] to-[#182333] text-white rounded-2xl p-4 sm:p-5 shadow-xl border border-amber-400/30 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center shrink-0">
-              <Flame className="w-6 h-6 text-[#FFC72C] animate-pulse" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="bg-[#FFC72C] text-[#182333] text-[10px] font-black uppercase px-2 py-0.5 rounded-full tracking-wider">
-                  Condição Especial de Lançamento
-                </span>
-                <span className="text-xs text-amber-200 hidden sm:inline">
-                  • Turma Fundadora ESDHUBEM
-                </span>
-              </div>
-              <h4 className="text-base sm:text-lg font-bold text-white mt-0.5">
-                Certificação por Mérito & Produção Intelectual (Bronze • Prata • Ouro • Diamante)
-              </h4>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 shrink-0">
-            <span className="text-xs text-slate-300">Economize até <strong>70%</strong> no lançamento</span>
-            <button
-              onClick={() => {
-                const el = document.getElementById('checkout-widget');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="bg-[#FFC72C] hover:bg-[#F5B014] text-[#182333] font-bold text-xs px-4 py-2.5 rounded-xl transition shadow cursor-pointer flex items-center gap-1.5"
-            >
-              <span>Escolher Nível</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </div>
-
         {/* Top Navigation Bar */}
         <div className="flex items-center justify-between mb-6">
           <button
@@ -436,7 +399,7 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
 
             {/* Tab: Tabela de Níveis Completa */}
             {activeTab === 'quadro' && (
-              <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
+              <div id="quadro-niveis-detalhado" className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
                 <div className="border-b border-slate-100 pb-4">
                   <div className="flex items-center gap-2 text-amber-600 font-bold text-xs uppercase tracking-wider mb-1">
                     <Award className="w-4 h-4" />
@@ -510,18 +473,19 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
 
                         <button
                           type="button"
-                          onClick={() => {
+                          onClick={(e) => {
+                            e.stopPropagation();
                             setSelectedLevelId(lvl.id);
-                            const el = document.getElementById('checkout-widget');
-                            if (el) el.scrollIntoView({ behavior: 'smooth' });
+                            onEnroll();
                           }}
-                          className={`mt-4 w-full py-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${
-                            isSelected
-                              ? 'bg-[#182333] text-[#FFC72C]'
-                              : 'bg-white border border-slate-300 text-slate-700 hover:bg-slate-100'
+                          className={`mt-4 w-full py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${
+                            lvl.isPopular
+                              ? 'bg-[#FFC72C] hover:bg-[#F5B014] text-[#182333] shadow-md'
+                              : 'bg-[#182333] hover:bg-slate-900 text-white shadow-sm'
                           }`}
                         >
-                          <span>{isSelected ? '✓ Nível Selecionado' : 'Selecionar este Nível'}</span>
+                          <Award className="w-3.5 h-3.5" />
+                          <span>Inscrever-se no Nível {lvl.name} • R$ {lvl.launchPrice.toFixed(2).replace('.', ',')}</span>
                         </button>
                       </div>
                     );
@@ -927,198 +891,80 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
 
           </div>
 
-          {/* Checkout & Selection Column (Right - 1 Col) */}
+          {/* Course Summary & Enrollment Card (Right - 1 Col) */}
           <div className="space-y-6">
             
-            <div id="checkout-widget" className="bg-white rounded-2xl border-2 border-[#182333] p-5 sm:p-6 shadow-xl relative overflow-hidden">
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-5">
               
-              {/* Badge Top */}
-              <div className="absolute top-0 right-0 bg-[#FFC72C] text-[#182333] text-[10px] font-black uppercase px-3 py-1 rounded-bl-xl tracking-wider">
-                Turma de Lançamento
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Acesso às Aulas</span>
+                  <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">
+                    100% Gratuito
+                  </span>
+                </div>
+                <h3 className="text-base font-bold text-[#182333]">
+                  Aprenda com Metodologia Prática
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Assista a todas as vídeo-aulas livremente e no seu tempo. A certificação e a mentoria para publicação de artigos e livros são opcionais por mérito acadêmico.
+                </p>
               </div>
 
-              {/* Mode Tabs */}
-              <div className="flex bg-slate-100 p-1 rounded-xl mb-5 mt-2">
-                <button
-                  type="button"
-                  onClick={() => setEnrollmentMode('gratis')}
-                  className={`flex-1 py-2 text-xs font-bold rounded-lg transition cursor-pointer ${
-                    enrollmentMode === 'gratis'
-                      ? 'bg-white text-[#182333] shadow-sm'
-                      : 'text-slate-600 hover:text-[#182333]'
-                  }`}
-                >
-                  Acesso Gratuito
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setEnrollmentMode('nivel')}
-                  className={`flex-1 py-2 text-xs font-bold rounded-lg transition cursor-pointer ${
-                    enrollmentMode === 'nivel'
-                      ? 'bg-[#182333] text-[#FFC72C] shadow-sm'
-                      : 'text-slate-600 hover:text-[#182333]'
-                  }`}
-                >
-                  Certificado & Níveis
-                </button>
+              {/* Botão Principal: Entrar na Sala Grátis */}
+              <button
+                type="button"
+                onClick={onEnroll}
+                className="w-full bg-[#182333] hover:bg-slate-900 text-[#FFC72C] font-bold text-sm py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Play className="w-4 h-4 fill-current" />
+                <span>Entrar na Sala de Aula Grátis</span>
+              </button>
+
+              {/* Destaques do Curso */}
+              <div className="pt-4 border-t border-slate-100 space-y-2.5 text-xs text-slate-600">
+                <div className="flex items-center gap-2.5">
+                  <Clock className="w-4 h-4 text-blue-600 shrink-0" />
+                  <span>Carga horária averbada: <strong>20h a 120h</strong></span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <BrainCircuit className="w-4 h-4 text-amber-500 shrink-0" />
+                  <span>Método pedagógico: <strong>Tríade de Fixação Ativa</strong></span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Award className="w-4 h-4 text-purple-600 shrink-0" />
+                  <span>Certificação por Mérito: <strong>4 Níveis opcionais</strong></span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Validade jurídica: <strong>Lei nº 9.394/96 (LDB)</strong></span>
+                </div>
               </div>
 
-              {enrollmentMode === 'gratis' ? (
-                <div className="space-y-4">
-                  <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                    <span className="text-xs font-bold text-[#182333] block mb-1">
-                      Você terá acesso livre às aulas:
-                    </span>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      Assista ao conteúdo sem custo. Ao finalizar, se desejar emitir o certificado com carga horária ou publicar artigos, basta escolher o seu nível e enviar sua Tríade.
-                    </p>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={onEnroll}
-                    className="w-full bg-[#182333] hover:bg-slate-900 text-[#FFC72C] font-bold text-sm py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <span>Entrar na Sala de Aula Grátis</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              ) : (
-                <div className="space-y-4">
-                  
-                  {/* Unified Level Selector */}
-                  <div>
-                    <label className="block text-xs font-black text-[#182333] mb-2 uppercase tracking-wide flex items-center justify-between">
-                      <span>Selecione o seu Nível:</span>
-                      <span className="text-[10px] text-amber-700 font-bold">Valores Promocionais</span>
-                    </label>
-
-                    <div className="space-y-2">
-                      {COURSE_LEVELS.map(lvl => {
-                        const isSelected = selectedLevelId === lvl.id;
-                        return (
-                          <button
-                            key={lvl.id}
-                            type="button"
-                            onClick={() => setSelectedLevelId(lvl.id)}
-                            className={`w-full p-3 rounded-xl border text-left transition cursor-pointer ${
-                              isSelected
-                                ? 'border-[#182333] bg-[#182333]/5 ring-2 ring-[#182333] shadow-sm'
-                                : 'border-slate-200 hover:border-slate-300 bg-white'
-                            }`}
-                          >
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-2.5">
-                                <div className={`w-4 h-4 rounded-full border flex items-center justify-center ${
-                                  isSelected ? 'border-[#182333] bg-[#182333]' : 'border-slate-300'
-                                }`}>
-                                  {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-[#FFC72C]" />}
-                                </div>
-                                <div>
-                                  <div className="flex items-center gap-1.5">
-                                    <span className="text-base">{lvl.iconEmoji}</span>
-                                    <span className="text-xs font-black text-[#182333]">{lvl.name}</span>
-                                    {lvl.isPopular && (
-                                      <span className="bg-[#FFC72C] text-[#182333] text-[9px] font-black px-1.5 py-0.2 rounded">
-                                        Popular
-                                      </span>
-                                    )}
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="text-right">
-                                <span className="text-[10px] text-slate-400 line-through mr-1.5">
-                                  R$ {lvl.regularPrice.toFixed(2).replace('.', ',')}
-                                </span>
-                                <span className="text-xs font-extrabold text-[#182333]">
-                                  R$ {lvl.launchPrice.toFixed(2).replace('.', ',')}
-                                </span>
-                              </div>
-                            </div>
-
-                            <div className="mt-1.5 pl-6 text-[11px] text-slate-600 flex items-center justify-between border-t border-slate-100 pt-1">
-                              <span className="font-bold text-blue-700">{lvl.hoursLabel}</span>
-                              <span className="text-slate-500 truncate max-w-[170px]">{lvl.badge}</span>
-                            </div>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Summary of Selected Level */}
-                  <div className="p-4 bg-gradient-to-br from-slate-50 to-amber-50/40 rounded-xl border border-slate-200 space-y-2 text-xs">
-                    <div className="flex justify-between items-center text-slate-500">
-                      <span>Valor Regular de Mercado:</span>
-                      <span className="line-through font-medium">
-                        R$ {selectedLevel.regularPrice.toFixed(2).replace('.', ',')}
-                      </span>
-                    </div>
-
-                    <div className="flex justify-between items-baseline pt-1 border-t border-slate-200">
-                      <div>
-                        <span className="text-[11px] font-bold text-slate-700 block">
-                          Total {selectedLevel.name}:
-                        </span>
-                        <span className="text-2xl font-black text-[#182333]">
-                          R$ {selectedLevel.launchPrice.toFixed(2).replace('.', ',')}
-                        </span>
-                      </div>
-                      <span className="text-emerald-700 font-bold bg-emerald-100/70 px-2 py-0.5 rounded text-[11px]">
-                        Economia de R$ {totalSavings.toFixed(2).replace('.', ',')}
-                      </span>
-                    </div>
-
-                    <div className="pt-2 border-t border-slate-200 text-[11px] text-slate-600 space-y-1">
-                      <div className="font-semibold text-slate-800">
-                        ✓ Carga Horária: <strong>{selectedLevel.hoursLabel}</strong>
-                      </div>
-                      <div className="text-slate-500">
-                        ✓ {selectedLevel.tagline}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* CTA Button */}
-                  <button
-                    type="button"
-                    onClick={onEnroll}
-                    className="w-full bg-[#FFC72C] hover:bg-[#F5B014] text-[#182333] font-black text-sm py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <Award className="w-4 h-4" />
-                    <span>
-                      Garantir Inscrição • {selectedLevel.name} ({selectedLevel.hoursLabel})
-                    </span>
-                  </button>
-
-                  <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-[11px] text-slate-600 space-y-1.5">
-                    <div className="flex items-center gap-1.5 font-bold text-[#182333]">
-                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      <span>Avaliação Humana da Tríade inclusa</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      <span>Depósito no OSF e Zenodo 100% gratuitos</span>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-slate-500">
-                      <Info className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                      <span>Emolumentos FBN/CBL (Livro) recolhidos pelo autor</span>
-                    </div>
-                  </div>
-
-                </div>
-              )}
-
+              {/* Ação Secundária: Ver o Quadro Detalhado de Níveis */}
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('quadro');
+                  setTimeout(() => {
+                    const el = document.getElementById('quadro-niveis-detalhado');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }, 50);
+                }}
+                className="w-full py-2.5 rounded-xl border border-amber-300 bg-amber-50/70 hover:bg-amber-100 text-[#182333] font-bold text-xs transition flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <Award className="w-4 h-4 text-amber-600" />
+                <span>Ver Tabela de Níveis & Certificação ↓</span>
+              </button>
             </div>
 
             {/* Support / Help Box */}
             <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-3">
               <h4 className="text-xs font-bold text-[#182333] uppercase tracking-wide">
-                Dúvidas sobre o seu Nível?
+                Dúvidas Pedagógicas?
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Fale diretamente com a nossa secretaria pedagógica pelo WhatsApp para esclarecer dúvidas sobre os Níveis ou a Tríade.
+                Fale diretamente com a nossa secretaria pedagógica pelo WhatsApp para esclarecer dúvidas sobre os Níveis ou a metodologia.
               </p>
               <a
                 href="https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20tirar%20dúvidas%20sobre%20os%20Níveis%20da%20ESDHUBEM."
