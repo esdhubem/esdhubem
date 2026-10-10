@@ -155,6 +155,7 @@
     --color-indigo-50: oklch(96.2% .018 272.314);
     --color-indigo-100: oklch(93% .034 272.788);
     --color-indigo-200: oklch(87% .065 274.039);
+    --color-indigo-300: oklch(78.5% .115 274.713);
     --color-indigo-400: oklch(67.3% .182 276.935);
     --color-indigo-500: oklch(58.5% .233 277.117);
     --color-indigo-600: oklch(51.1% .262 276.966);
@@ -2353,6 +2354,16 @@
 
   .border-indigo-200 {
     border-color: var(--color-indigo-200);
+  }
+
+  .border-indigo-400\/30 {
+    border-color: #7d87ff4d;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-indigo-400\/30 {
+      border-color: color-mix(in oklab, var(--color-indigo-400) 30%, transparent);
+    }
   }
 
   .border-indigo-400\/40 {
@@ -5276,6 +5287,10 @@
 
   .text-indigo-100 {
     color: var(--color-indigo-100);
+  }
+
+  .text-indigo-300 {
+    color: var(--color-indigo-300);
   }
 
   .text-indigo-600 {

@@ -15205,6 +15205,18 @@ var Hero = ({ onSelectCategory }) => {
 	});
 };
 //#endregion
+//#region src/assets/cat_pessoal_tech.jpg
+var cat_pessoal_tech_default = new URL("cat_pessoal_tech-CuvVdNUY.jpg", import.meta.url).href;
+//#endregion
+//#region src/assets/cat_prof_tech.jpg
+var cat_prof_tech_default = new URL("cat_prof_tech-EOOJnuSg.jpg", import.meta.url).href;
+//#endregion
+//#region src/assets/cat_consciencia_tech.jpg
+var cat_consciencia_tech_default = new URL("cat_consciencia_tech-BT-99Fw-.jpg", import.meta.url).href;
+//#endregion
+//#region src/assets/cat_bemestar_tech.jpg
+var cat_bemestar_tech_default = new URL("cat_bemestar_tech-Y7Tav0iK.jpg", import.meta.url).href;
+//#endregion
 //#region src/components/CategoryGrid.tsx
 var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigateToCategoriesPage, onNavigateToCategoryDetail, onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
@@ -15270,8 +15282,8 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 							description: "Autoconhecimento, inteligência emocional, relações e finanças comportamentais.",
 							filterKey: "Desenvolvimento Pessoal",
 							badgeText: "Pessoal",
-							badgeClass: "bg-purple-50 text-purple-700 border-purple-200",
-							image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80"
+							badgeClass: "bg-cyan-500/10 text-cyan-300 border-cyan-400/30",
+							image: cat_pessoal_tech_default
 						},
 						{
 							id: "desenvolvimento-profissional",
@@ -15280,8 +15292,8 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 							description: "Carreira, competências, liderança, capacitação e preparação para o mercado.",
 							filterKey: "Desenvolvimento Profissional",
 							badgeText: "Profissional",
-							badgeClass: "bg-blue-50 text-blue-700 border-blue-200",
-							image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+							badgeClass: "bg-blue-500/10 text-blue-300 border-blue-400/30",
+							image: cat_prof_tech_default
 						},
 						{
 							id: "desenvolvimento-consciencial",
@@ -15290,8 +15302,8 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 							description: "Desenvolvimento humano, expansão da consciência, ética aplicada e consciência ambiental.",
 							filterKey: "Desenvolvimento Consciencial",
 							badgeText: "Consciência",
-							badgeClass: "bg-indigo-50 text-indigo-700 border-indigo-200",
-							image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
+							badgeClass: "bg-indigo-500/10 text-indigo-300 border-indigo-400/30",
+							image: cat_consciencia_tech_default
 						},
 						{
 							id: "desenvolvimento-bem-estar-integrativo",
@@ -15300,8 +15312,8 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 							description: "Saúde, bem-estar, práticas integrativas e aprofundamento na área da saúde.",
 							filterKey: "Desenvolvimento em Bem-estar Integrativo",
 							badgeText: "Bem-estar Integrativo",
-							badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200",
-							image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+							badgeClass: "bg-emerald-500/10 text-emerald-300 border-emerald-400/30",
+							image: cat_bemestar_tech_default
 						}
 					].map((area) => {
 						const isSelected = selectedCategory?.toLowerCase() === area.filterKey.toLowerCase();
