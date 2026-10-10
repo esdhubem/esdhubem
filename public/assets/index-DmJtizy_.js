@@ -21475,7 +21475,7 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 			currentCategory.id === "desenvolvimento-nas-empresas" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "bg-linear-to-r from-[#243042] to-[#182333] border border-amber-400/30 rounded-2xl p-6 text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-6",
+					className: "bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] border border-blue-900/60 rounded-2xl p-6 text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-6",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "space-y-2 max-w-2xl",
 						children: [
@@ -21532,38 +21532,38 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "grid grid-cols-1 md:grid-cols-2 gap-5",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "bg-[#182333] border border-emerald-500/30 rounded-2xl p-6 text-white shadow-md space-y-2 hover:border-emerald-500/60 transition-all",
+						className: "bg-white border border-slate-200/90 rounded-2xl p-6 text-slate-800 shadow-sm hover:shadow-md hover:border-emerald-500/40 transition-all space-y-2",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center gap-3",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-xl",
+								className: "w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center text-xl shadow-2xs",
 								children: "🌐"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "text-base sm:text-lg font-bold text-white",
+								className: "text-base sm:text-lg font-bold text-slate-900",
 								children: "Páginas e Sites para Divulgação"
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-xs sm:text-sm text-slate-300 leading-relaxed",
+							className: "text-xs sm:text-sm text-slate-600 leading-relaxed",
 							children: "Páginas e sites prontos para você comprar e divulgar seu trabalho profissional, produtos ou serviços com alta conversão."
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "bg-[#182333] border border-[#FFC72C]/30 rounded-2xl p-6 text-white shadow-md space-y-2 hover:border-[#FFC72C]/60 transition-all",
+						className: "bg-white border border-slate-200/90 rounded-2xl p-6 text-slate-800 shadow-sm hover:shadow-md hover:border-amber-400/50 transition-all space-y-2",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center gap-3",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "w-10 h-10 rounded-xl bg-[#FFC72C]/20 text-[#FFC72C] border border-[#FFC72C]/30 flex items-center justify-center text-xl",
+								className: "w-10 h-10 rounded-xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center text-xl shadow-2xs",
 								children: "📱"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "text-base sm:text-lg font-bold text-white",
+								className: "text-base sm:text-lg font-bold text-slate-900",
 								children: "Biolinks para Redes Sociais"
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-xs sm:text-sm text-slate-300 leading-relaxed",
+							className: "text-xs sm:text-sm text-slate-600 leading-relaxed",
 							children: "Biolinks interativos para organizar todos os seus contatos e links importantes de forma profissional nas redes sociais."
 						})]
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "bg-linear-to-r from-[#182333] via-[#243042] to-[#182333] border border-emerald-500/40 rounded-2xl p-6 sm:p-8 text-white shadow-xl",
+					className: "bg-gradient-to-r from-emerald-50 via-teal-50/40 to-white border border-emerald-300/80 rounded-2xl p-6 sm:p-8 text-slate-900 shadow-sm",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex flex-col md:flex-row gap-8 items-center justify-between",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -21571,44 +21571,35 @@ var CategoryDetailPage = ({ categorySlug = "desenvolvimento-nas-empresas", onBac
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-start sm:items-center gap-3.5",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center font-bold shadow-lg shrink-0",
+									className: "w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-md shrink-0",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LayoutTemplate, { className: "w-6 h-6" })
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-xs sm:text-sm text-slate-300 font-medium",
+									className: "text-xs sm:text-sm text-emerald-800 font-bold uppercase tracking-wider",
 									children: "Na compra das nossas Landing Pages & Biolinks você ganha:"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-									className: "text-lg sm:text-xl font-black text-emerald-400 tracking-tight",
+									className: "text-lg sm:text-2xl font-black text-slate-900 tracking-tight",
 									children: "Domínio & Hospedagem Grátis por 1 ano!"
 								})] })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-xs sm:text-sm text-slate-300 leading-relaxed",
+								className: "text-xs sm:text-sm text-slate-600 leading-relaxed",
 								children: "Seu próximo cliente precisa encontrar você. Escolha um dos modelos abaixo, e nós cuidamos de toda a parte técnica, design e publicação para você focar no seu negócio."
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "w-full md:w-auto md:border-l md:border-slate-700/80 md:pl-8 flex flex-col justify-center",
+							className: "w-full md:w-auto md:border-l md:border-emerald-200 md:pl-8 flex flex-col justify-center",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-								className: "space-y-3 text-xs sm:text-sm text-slate-200",
+								className: "space-y-3 text-xs sm:text-sm text-slate-800",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										className: "flex items-center gap-2.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-medium",
-											children: "Design de alta conversão (Focado em Vendas)"
-										})]
+										className: "flex items-center gap-2.5 font-semibold",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Design de alta conversão (Focado em Vendas)" })]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										className: "flex items-center gap-2.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-medium",
-											children: "Integração Direta com WhatsApp"
-										})]
+										className: "flex items-center gap-2.5 font-semibold",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Integração Direta com WhatsApp" })]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-										className: "flex items-center gap-2.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-medium",
-											children: "Pronto em 48 horas (Após briefing)"
-										})]
+										className: "flex items-center gap-2.5 font-semibold",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Pronto em 48 horas (Após briefing)" })]
 									})
 								]
 							})

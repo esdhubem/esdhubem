@@ -739,7 +739,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
       {/* 4. Highlighted Banner for Comunicação Assertiva (if in empresas) */}
       {currentCategory.id === 'desenvolvimento-nas-empresas' && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <div className="bg-linear-to-r from-[#243042] to-[#182333] border border-amber-400/30 rounded-2xl p-6 text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] border border-blue-900/60 rounded-2xl p-6 text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FFC72C] text-[#243042] text-[11px] font-black uppercase">
                 <Sparkles className="w-3 h-3" />
@@ -796,70 +796,70 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-6">
           {/* Top 2 Cards: Páginas e Sites para Divulgação & Biolinks para Redes Sociais */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className="bg-[#182333] border border-emerald-500/30 rounded-2xl p-6 text-white shadow-md space-y-2 hover:border-emerald-500/60 transition-all">
+            <div className="bg-white border border-slate-200/90 rounded-2xl p-6 text-slate-800 shadow-sm hover:shadow-md hover:border-emerald-500/40 transition-all space-y-2">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-xl">
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center text-xl shadow-2xs">
                   🌐
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-white">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900">
                   Páginas e Sites para Divulgação
                 </h3>
               </div>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Páginas e sites prontos para você comprar e divulgar seu trabalho profissional, produtos ou serviços com alta conversão.
               </p>
             </div>
 
-            <div className="bg-[#182333] border border-[#FFC72C]/30 rounded-2xl p-6 text-white shadow-md space-y-2 hover:border-[#FFC72C]/60 transition-all">
+            <div className="bg-white border border-slate-200/90 rounded-2xl p-6 text-slate-800 shadow-sm hover:shadow-md hover:border-amber-400/50 transition-all space-y-2">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#FFC72C]/20 text-[#FFC72C] border border-[#FFC72C]/30 flex items-center justify-center text-xl">
+                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center text-xl shadow-2xs">
                   📱
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-white">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900">
                   Biolinks para Redes Sociais
                 </h3>
               </div>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Biolinks interativos para organizar todos os seus contatos e links importantes de forma profissional nas redes sociais.
               </p>
             </div>
           </div>
 
           {/* Banner: Domínio & Hospedagem Grátis Por 1 Ano Completo */}
-          <div className="bg-linear-to-r from-[#182333] via-[#243042] to-[#182333] border border-emerald-500/40 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
+          <div className="bg-gradient-to-r from-emerald-50 via-teal-50/40 to-white border border-emerald-300/80 rounded-2xl p-6 sm:p-8 text-slate-900 shadow-sm">
             <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
               <div className="flex-1 space-y-4 text-left">
                 <div className="flex items-start sm:items-center gap-3.5">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center font-bold shadow-lg shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-md shrink-0">
                     <LayoutTemplate className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-xs sm:text-sm text-slate-300 font-medium">
+                    <p className="text-xs sm:text-sm text-emerald-800 font-bold uppercase tracking-wider">
                       Na compra das nossas Landing Pages & Biolinks você ganha:
                     </p>
-                    <h4 className="text-lg sm:text-xl font-black text-emerald-400 tracking-tight">
+                    <h4 className="text-lg sm:text-2xl font-black text-slate-900 tracking-tight">
                       Domínio & Hospedagem Grátis por 1 ano!
                     </h4>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   Seu próximo cliente precisa encontrar você. Escolha um dos modelos abaixo, e nós cuidamos de toda a parte técnica, design e publicação para você focar no seu negócio.
                 </p>
               </div>
 
-              <div className="w-full md:w-auto md:border-l md:border-slate-700/80 md:pl-8 flex flex-col justify-center">
-                <ul className="space-y-3 text-xs sm:text-sm text-slate-200">
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span className="font-medium">Design de alta conversão (Focado em Vendas)</span>
+              <div className="w-full md:w-auto md:border-l md:border-emerald-200 md:pl-8 flex flex-col justify-center">
+                <ul className="space-y-3 text-xs sm:text-sm text-slate-800">
+                  <li className="flex items-center gap-2.5 font-semibold">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Design de alta conversão (Focado em Vendas)</span>
                   </li>
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span className="font-medium">Integração Direta com WhatsApp</span>
+                  <li className="flex items-center gap-2.5 font-semibold">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Integração Direta com WhatsApp</span>
                   </li>
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span className="font-medium">Pronto em 48 horas (Após briefing)</span>
+                  <li className="flex items-center gap-2.5 font-semibold">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Pronto em 48 horas (Após briefing)</span>
                   </li>
                 </ul>
               </div>
