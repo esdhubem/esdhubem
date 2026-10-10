@@ -5537,6 +5537,10 @@
     text-decoration-line: underline;
   }
 
+  .underline-offset-4 {
+    text-underline-offset: 4px;
+  }
+
   .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -5785,6 +5789,10 @@
 
   .ring-\[\#243042\]\/10 {
     --tw-ring-color: oklab(30.6644% -.00741088 -.0358329 / .1);
+  }
+
+  .ring-\[\#FFC72C\]\/30 {
+    --tw-ring-color: oklab(85.6611% .00996548 .165197 / .3);
   }
 
   .ring-\[\#FFC72C\]\/40 {
@@ -7081,6 +7089,10 @@
 
     .sm\:flex-row {
       flex-direction: row;
+    }
+
+    .sm\:flex-nowrap {
+      flex-wrap: nowrap;
     }
 
     .sm\:items-center {

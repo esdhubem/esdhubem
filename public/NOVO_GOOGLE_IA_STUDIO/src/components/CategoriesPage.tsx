@@ -527,9 +527,8 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedAreaId, setSelectedAreaId] = useState<string>('todas');
 
-  // Filter pills
+  // Filter pills (5 Macro Areas)
   const areaFilterButtons = [
-    { id: 'todas', label: 'Todas as 5 Áreas' },
     { id: 'pessoal', label: '🧠 1. Desenvolvimento Pessoal' },
     { id: 'consciencial', label: '✨ 2. Desenvolvimento Consciencial' },
     { id: 'saude', label: '🩺 3. Saúde & Bem-Estar Integrativo' },
@@ -732,21 +731,35 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
             </span>
           </div>
 
-          {/* Area Filter Buttons */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-            {areaFilterButtons.map((btn) => (
+          {/* Area Filter Buttons - 5 Categorias em Linha Horizontal */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none flex-wrap sm:flex-nowrap">
+            {areaFilterButtons.map((btn) => {
+              const isSelected = selectedAreaId === btn.id;
+              return (
+                <button
+                  key={btn.id}
+                  onClick={() => setSelectedAreaId(isSelected ? 'todas' : btn.id)}
+                  title={isSelected ? 'Clique para desmarcar e ver todas as 5 áreas' : `Filtrar por ${btn.label}`}
+                  className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer border ${
+                    isSelected
+                      ? 'bg-[#011049] text-[#FFC72C] border-[#011049] shadow-md ring-2 ring-[#FFC72C]/30'
+                      : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50 shadow-2xs'
+                  }`}
+                >
+                  {btn.label}
+                </button>
+              );
+            })}
+
+            {selectedAreaId !== 'todas' && (
               <button
-                key={btn.id}
-                onClick={() => setSelectedAreaId(btn.id)}
-                className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer border ${
-                  selectedAreaId === btn.id
-                    ? 'bg-[#011049] text-[#FFC72C] border-[#011049] shadow-sm'
-                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
-                }`}
+                onClick={() => setSelectedAreaId('todas')}
+                className="text-xs font-bold text-slate-500 hover:text-slate-900 underline underline-offset-4 px-2 py-1 cursor-pointer transition-colors whitespace-nowrap"
+                title="Mostrar todas as 5 áreas"
               >
-                {btn.label}
+                ✕ Ver todas as 5
               </button>
-            ))}
+            )}
           </div>
 
           {/* 5 Macro Areas List */}
