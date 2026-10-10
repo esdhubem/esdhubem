@@ -3,6 +3,7 @@ import cardComunicacaoImg from '../assets/card_comunicacao_futurista.jpg';
 import cardConscienciaImg from '../assets/card_consciencia_futurista.jpg';
 import cardFitoterapiaImg from '../assets/card_fitoterapia_futurista.jpg';
 import cardCosmicHeroImg from '../assets/cosmic_science_hero.jpg';
+import cardMindmapImg from '../assets/banner_mindmap_hero.jpg';
 
 export const CATEGORIES_DATA: CategoryItem[] = [
   {
@@ -235,6 +236,29 @@ export const METHODOLOGY_PILLARS: MethodologyPillar[] = [
 
 export const COURSES_DATA: Course[] = [
   // 1. FREEPREMIUM COURSES
+  {
+    id: 'fp-mapas-mentais',
+    title: 'O que é Mapa Mental e Como Usar?',
+    subtitle: 'O curso norteador da metodologia pedagógica da ESDHUBEM. Aprenda a pensar visualmente, conectar ideias e dominar a tecnologia do escrever e do mapear.',
+    category: 'Desenvolvimento Pessoal',
+    pillar: 'freepremium',
+    hours: 20,
+    rating: 5.0,
+    studentsCount: 5200,
+    image: cardMindmapImg,
+    tag: 'Curso Metodológico Principal • Freepremium',
+    badge: '100% Gratuito no Odysee • Base Pedagógica',
+    description: 'Curso fundamental que norteia toda a metodologia de ensino e avaliação da ESDHUBEM. Descubra como a neurociência explica o raciocínio radial do cérebro, como estruturar mapas mentais do zero para acelerar o aprendizado e como aplicar a Tríade Pedagógica da escola em seus estudos e na sua vida profissional.',
+    modulesCount: 4,
+    syllabus: [
+      'Módulo 1: Neurociência da Aprendizagem e o Pensamento Radial',
+      'Módulo 2: Princípios Práticos do Mapeamento Mental (Estrutura, Cores e Conexões)',
+      'Módulo 3: Passo a Passo: Construindo seu Primeiro Mapa Mental de Alta Retenção',
+      'Módulo 4: A Metodologia ESDHUBEM: Mapear, Escrever à Mão e Gravar Áudio de Síntese'
+    ],
+    targetAudience: 'Estudantes, profissionais, educadores e qualquer pessoa que deseje aprender mais rápido, organizar ideias com clareza e dominar a metodologia oficial da ESDHUBEM.',
+    priceNote: 'Aulas 100% Gratuitas • Certificação Oficial Opcional',
+  },
   {
     id: 'fp-assertiva',
     title: 'Comunicação Assertiva com a Liderança',

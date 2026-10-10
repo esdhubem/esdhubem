@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { MindMapCoursePromoBanner } from './components/MindMapCoursePromoBanner';
 import { CategoryGrid } from './components/CategoryGrid';
 import { MethodologySection } from './components/MethodologySection';
 import { CorporateBanner } from './components/CorporateBanner';
@@ -474,6 +475,21 @@ export default function App() {
                 const el = document.getElementById('catalogo-cursos');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }
+            }}
+          />
+
+          {/* Banner Publicitário: Curso Principal & Metodologia Pedagógica (Freepremium) */}
+          <MindMapCoursePromoBanner
+            onSelectCourse={() => {
+              const course = COURSES_DATA.find((c) => c.id === 'fp-mapas-mentais');
+              if (course) {
+                setSelectedCourse(course);
+                setCurrentPage('curso-detalhe');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+            onNavigatePedagogy={() => {
+              handleNavigate('diretrizes-pedagogicas');
             }}
           />
 

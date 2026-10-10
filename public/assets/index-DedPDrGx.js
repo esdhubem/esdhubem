@@ -15205,6 +15205,182 @@ var Hero = ({ onSelectCategory }) => {
 	});
 };
 //#endregion
+//#region src/components/MindMapCoursePromoBanner.tsx
+var MindMapCoursePromoBanner = ({ onSelectCourse, onNavigatePedagogy }) => {
+	const odyseeWatchUrl = "https://odysee.com/@esdhubem:a/mapas-mentais:4?lid=56adb18446e756be8f3d80c8dda78b83024bd5c7";
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "py-8 sm:py-12 bg-[#F8FAFC]",
+		id: "banner-curso-mapa-mental",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#011049] via-[#041957] to-[#011049] border border-cyan-400/40 shadow-2xl shadow-blue-950/40 text-white",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/3 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "relative z-10 p-6 sm:p-8 lg:p-12",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "lg:col-span-7 flex flex-col space-y-5",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex flex-wrap items-center gap-2.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 text-xs sm:text-sm font-black tracking-wide shadow-sm shadow-emerald-500/20",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 text-emerald-300 animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "CURSO FREEPREMIUM • 100% GRATUITO" })]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-400/40 text-cyan-200 text-xs font-bold tracking-wide",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, { className: "w-3.5 h-3.5 text-cyan-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Metodologia Central da ESDHUBEM" })]
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs sm:text-sm uppercase font-extrabold tracking-widest text-[#FFC72C] mb-1",
+										children: "Curso Principal & Fundamento Pedagógico"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+										className: "text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-black tracking-tight leading-tight text-white drop-shadow-md",
+										children: ["O que é Mapa Mental e ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-cyan-300 underline decoration-cyan-400/40 underline-offset-4",
+											children: "Como Usar?"
+										})]
+									})] }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										className: "text-sm sm:text-base text-slate-200 leading-relaxed max-w-2xl",
+										children: [
+											"Este é o curso que ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-white font-bold",
+												children: "norteia toda a metodologia pedagógica da ESDHUBEM"
+											}),
+											". Aprenda a arte de pensar visualmente, conectar ideias em alta velocidade e dominar a tecnologia do escrever e do mapear que aplicamos em todas as nossas formações."
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "p-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xs flex flex-col",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "text-[#FFC72C] font-black text-xs uppercase tracking-wider mb-1 flex items-center gap-1",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, { className: "w-3.5 h-3.5" }), "Neurociência"]
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "text-xs text-slate-300 leading-snug",
+													children: "Fixação profunda através do raciocínio radial do cérebro."
+												})]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "p-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xs flex flex-col",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "text-cyan-300 font-black text-xs uppercase tracking-wider mb-1 flex items-center gap-1",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Compass, { className: "w-3.5 h-3.5" }), "Tríade da Escola"]
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "text-xs text-slate-300 leading-snug",
+													children: "Base prática da avaliação por mapa, texto à mão e áudio."
+												})]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "p-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xs flex flex-col",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "text-emerald-300 font-black text-xs uppercase tracking-wider mb-1 flex items-center gap-1",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5" }), "Freepremium"]
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "text-xs text-slate-300 leading-snug",
+													children: "Aulas abertas sem travas. Só pague o certificado se desejar."
+												})]
+											})
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex flex-wrap items-center gap-3 pt-2",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+												href: odyseeWatchUrl,
+												target: "_blank",
+												rel: "noopener noreferrer",
+												className: "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-black text-sm tracking-wide shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all cursor-pointer hover:-translate-y-0.5",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-4 h-4 fill-current text-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Assistir Aulas Grátis no Odysee" })]
+											}),
+											onSelectCourse && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+												type: "button",
+												onClick: onSelectCourse,
+												className: "inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 text-white font-bold text-sm border border-white/20 hover:border-cyan-400/50 transition-all cursor-pointer",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-cyan-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Grade do Curso" })]
+											}),
+											onNavigatePedagogy && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+												type: "button",
+												onClick: onNavigatePedagogy,
+												className: "inline-flex items-center justify-center gap-1.5 px-4 py-3.5 rounded-full text-slate-300 hover:text-cyan-200 text-xs sm:text-sm font-semibold hover:underline cursor-pointer",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Entenda a Metodologia" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-3.5 h-3.5" })]
+											})
+										]
+									})
+								]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "lg:col-span-5 flex flex-col",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative rounded-2xl overflow-hidden border border-cyan-400/40 shadow-2xl bg-black/60 backdrop-blur-md",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "px-4 py-2.5 bg-[#031338]/90 border-b border-white/10 flex items-center justify-between",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-2",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-rose-500" }),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-amber-500" }),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-emerald-500" }),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-[11px] font-bold text-slate-300 ml-2 truncate",
+														children: "Videoaula Oficial • ESDHUBEM"
+													})
+												]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "text-[10px] font-extrabold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center gap-1",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-3 h-3 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Odysee HD" })]
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "relative w-full aspect-video bg-slate-950",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
+												id: "banner-odysee-iframe",
+												title: "O que é mapa mental e como usar - ESDHUBEM",
+												style: {
+													width: "100%",
+													height: "100%",
+													border: "none"
+												},
+												src: "https://odysee.com/$/embed/@esdhubem:a/mapas-mentais:4",
+												allowFullScreen: true
+											})
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "px-4 py-3 bg-[#020d2a]/95 border-t border-white/10 flex items-center justify-between text-xs",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-1.5 text-slate-300 font-medium",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-3.5 h-3.5 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Playlist completa liberada" })]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+												href: odyseeWatchUrl,
+												target: "_blank",
+												rel: "noopener noreferrer",
+												className: "inline-flex items-center gap-1 text-[#FFC72C] hover:text-[#ffdf79] font-bold transition-colors",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Abrir no Odysee" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3 h-3" })]
+											})]
+										})
+									]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-center text-[11px] text-cyan-200/70 mt-2.5",
+									children: "Assista direto acima ou abra a playlist completa sem necessidade de login."
+								})]
+							})]
+						})
+					})
+				]
+			})
+		})
+	});
+};
+//#endregion
 //#region src/assets/cat_pessoal_tech.jpg
 var cat_pessoal_tech_default = new URL("cat_pessoal_tech-CuvVdNUY.jpg", import.meta.url).href;
 //#endregion
@@ -16229,6 +16405,29 @@ var CATEGORIES_DATA = [
 	}
 ];
 var COURSES_DATA = [
+	{
+		id: "fp-mapas-mentais",
+		title: "O que é Mapa Mental e Como Usar?",
+		subtitle: "O curso norteador da metodologia pedagógica da ESDHUBEM. Aprenda a pensar visualmente, conectar ideias e dominar a tecnologia do escrever e do mapear.",
+		category: "Desenvolvimento Pessoal",
+		pillar: "freepremium",
+		hours: 20,
+		rating: 5,
+		studentsCount: 5200,
+		image: banner_mindmap_hero_default,
+		tag: "Curso Metodológico Principal • Freepremium",
+		badge: "100% Gratuito no Odysee • Base Pedagógica",
+		description: "Curso fundamental que norteia toda a metodologia de ensino e avaliação da ESDHUBEM. Descubra como a neurociência explica o raciocínio radial do cérebro, como estruturar mapas mentais do zero para acelerar o aprendizado e como aplicar a Tríade Pedagógica da escola em seus estudos e na sua vida profissional.",
+		modulesCount: 4,
+		syllabus: [
+			"Módulo 1: Neurociência da Aprendizagem e o Pensamento Radial",
+			"Módulo 2: Princípios Práticos do Mapeamento Mental (Estrutura, Cores e Conexões)",
+			"Módulo 3: Passo a Passo: Construindo seu Primeiro Mapa Mental de Alta Retenção",
+			"Módulo 4: A Metodologia ESDHUBEM: Mapear, Escrever à Mão e Gravar Áudio de Síntese"
+		],
+		targetAudience: "Estudantes, profissionais, educadores e qualquer pessoa que deseje aprender mais rápido, organizar ideias com clareza e dominar a metodologia oficial da ESDHUBEM.",
+		priceNote: "Aulas 100% Gratuitas • Certificação Oficial Opcional"
+	},
 	{
 		id: "fp-assertiva",
 		title: "Comunicação Assertiva com a Liderança",
@@ -35698,6 +35897,22 @@ function App() {
 							if (el) el.scrollIntoView({ behavior: "smooth" });
 						}
 					} }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MindMapCoursePromoBanner, {
+						onSelectCourse: () => {
+							const course = COURSES_DATA.find((c) => c.id === "fp-mapas-mentais");
+							if (course) {
+								setSelectedCourse(course);
+								setCurrentPage("curso-detalhe");
+								window.scrollTo({
+									top: 0,
+									behavior: "smooth"
+								});
+							}
+						},
+						onNavigatePedagogy: () => {
+							handleNavigate("diretrizes-pedagogicas");
+						}
+					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CategoryGrid, {
 						categories: CATEGORIES_DATA,
 						selectedCategory,
