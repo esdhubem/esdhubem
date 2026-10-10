@@ -112,7 +112,7 @@ export const MindMapCoursePromoBanner: React.FC<MindMapCoursePromoBannerProps> =
 
                 {/* Botões de Ação */}
                 <div className="flex flex-wrap items-center gap-3 pt-2">
-                  {/* Botão Primário: Assistir no Odysee */}
+                  {/* Botão Primário: Assistir Aulas */}
                   <a
                     href={odyseeWatchUrl}
                     target="_blank"
@@ -120,7 +120,7 @@ export const MindMapCoursePromoBanner: React.FC<MindMapCoursePromoBannerProps> =
                     className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-black text-sm tracking-wide shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all cursor-pointer hover:-translate-y-0.5"
                   >
                     <Play className="w-4 h-4 fill-current text-slate-950" />
-                    <span>Assistir Aulas Grátis no Odysee</span>
+                    <span>Assistir Aulas Grátis</span>
                   </a>
 
                   {/* Botão Secundário: Detalhes do Curso */}
@@ -180,11 +180,11 @@ export const MindMapCoursePromoBanner: React.FC<MindMapCoursePromoBannerProps> =
 
                     <span className="text-[10px] font-extrabold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center gap-1">
                       <Tv className="w-3 h-3 text-emerald-400" />
-                      <span>Odysee HD</span>
+                      <span>Vídeo Oficial HD</span>
                     </span>
                   </div>
 
-                  {/* Iframe Interativo do Odysee */}
+                  {/* Iframe Interativo */}
                   <div className="relative w-full aspect-video bg-slate-950">
                     <iframe
                       id="banner-odysee-iframe"
@@ -208,7 +208,7 @@ export const MindMapCoursePromoBanner: React.FC<MindMapCoursePromoBannerProps> =
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-[#FFC72C] hover:text-[#ffdf79] font-bold transition-colors"
                     >
-                      <span>Abrir no Odysee</span>
+                      <span>Abrir Playlist Completa</span>
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>

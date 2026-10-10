@@ -15300,7 +15300,7 @@ var MindMapCoursePromoBanner = ({ onSelectCourse, onNavigatePedagogy, onNavigate
 												target: "_blank",
 												rel: "noopener noreferrer",
 												className: "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-black text-sm tracking-wide shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all cursor-pointer hover:-translate-y-0.5",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-4 h-4 fill-current text-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Assistir Aulas Grátis no Odysee" })]
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-4 h-4 fill-current text-slate-950" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Assistir Aulas Grátis" })]
 											}),
 											onSelectCourse && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 												type: "button",
@@ -15347,7 +15347,7 @@ var MindMapCoursePromoBanner = ({ onSelectCourse, onNavigatePedagogy, onNavigate
 												]
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 												className: "text-[10px] font-extrabold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center gap-1",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-3 h-3 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Odysee HD" })]
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-3 h-3 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Vídeo Oficial HD" })]
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -15374,7 +15374,7 @@ var MindMapCoursePromoBanner = ({ onSelectCourse, onNavigatePedagogy, onNavigate
 												target: "_blank",
 												rel: "noopener noreferrer",
 												className: "inline-flex items-center gap-1 text-[#FFC72C] hover:text-[#ffdf79] font-bold transition-colors",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Abrir no Odysee" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3 h-3" })]
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Abrir Playlist Completa" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3 h-3" })]
 											})]
 										})
 									]
@@ -15451,7 +15451,7 @@ var WelcomeVideoSection = () => {
 								className: "flex items-center gap-2",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 									className: "text-[11px] font-black text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-0.5 rounded-full flex items-center gap-1",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-3 h-3 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Odysee HD" })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-3 h-3 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Vídeo Oficial" })]
 								})
 							})]
 						}),
@@ -15469,22 +15469,12 @@ var WelcomeVideoSection = () => {
 								allowFullScreen: true
 							})
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "px-5 py-3.5 bg-slate-900 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex items-center gap-2 text-slate-300 font-medium text-center sm:text-left",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Assista diretamente acima ou acesse pelo canal oficial da ESDHUBEM" })]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								href: "https://odysee.com/@esdhubem:a/Bem-vindo-a-ESDHUBEM:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ&lid=56adb18446e756be8f3d80c8dda78b83024bd5c7",
-								target: "_blank",
-								rel: "noopener noreferrer",
-								className: "inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#FFC72C] hover:bg-[#ffdf79] text-[#011049] font-black transition-all shadow-sm hover:scale-105 shrink-0",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-3.5 h-3.5 fill-current" }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Assistir no Odysee" }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3 h-3" })
-								]
-							})]
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "px-5 py-3.5 bg-[#011049] border-t border-white/10 flex items-center justify-center text-center",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "inline-flex items-center gap-2.5 text-white font-black text-sm sm:text-base tracking-wide",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-4 h-4 text-[#FFC72C] fill-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Assista o vídeo" })]
+							})
 						})
 					]
 				}),
@@ -16540,7 +16530,7 @@ var COURSES_DATA = [
 		studentsCount: 5200,
 		image: banner_mindmap_hero_default,
 		tag: "Curso Metodológico Principal • Freepremium",
-		badge: "100% Gratuito no Odysee • Base Pedagógica",
+		badge: "100% Gratuito • Base Pedagógica",
 		description: "Curso fundamental que norteia toda a metodologia de ensino e avaliação da ESDHUBEM. Descubra como a neurociência explica o raciocínio radial do cérebro, como estruturar mapas mentais do zero para acelerar o aprendizado e como aplicar a Tríade Pedagógica da escola em seus estudos e na sua vida profissional.",
 		modulesCount: 4,
 		syllabus: [

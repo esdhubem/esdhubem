@@ -247,7 +247,7 @@ export const COURSES_DATA: Course[] = [
     studentsCount: 5200,
     image: cardMindmapImg,
     tag: 'Curso Metodológico Principal • Freepremium',
-    badge: '100% Gratuito no Odysee • Base Pedagógica',
+    badge: '100% Gratuito • Base Pedagógica',
     description: 'Curso fundamental que norteia toda a metodologia de ensino e avaliação da ESDHUBEM. Descubra como a neurociência explica o raciocínio radial do cérebro, como estruturar mapas mentais do zero para acelerar o aprendizado e como aplicar a Tríade Pedagógica da escola em seus estudos e na sua vida profissional.',
     modulesCount: 4,
     syllabus: [

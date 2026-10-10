@@ -6509,10 +6509,6 @@
       background-color: #ffcf47;
     }
 
-    .hover\:bg-\[\#ffdf79\]:hover {
-      background-color: #ffdf79;
-    }
-
     .hover\:bg-amber-50:hover {
       background-color: var(--color-amber-50);
     }

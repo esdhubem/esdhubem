@@ -44,7 +44,7 @@ export const WelcomeVideoSection: React.FC = () => {
             <div className="flex items-center gap-2">
               <span className="text-[11px] font-black text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                 <Tv className="w-3 h-3 text-emerald-400" />
-                <span>Odysee HD</span>
+                <span>Vídeo Oficial</span>
               </span>
             </div>
           </div>
@@ -60,25 +60,13 @@ export const WelcomeVideoSection: React.FC = () => {
             ></iframe>
           </div>
 
-          {/* Rodapé Informativo do Player */}
-          <div className="px-5 py-3.5 bg-slate-900 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-            <div className="flex items-center gap-2 text-slate-300 font-medium text-center sm:text-left">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Assista diretamente acima ou acesse pelo canal oficial da ESDHUBEM</span>
+          {/* Rodapé Informativo do Player - Apenas a frase solicitada */}
+          <div className="px-5 py-3.5 bg-[#011049] border-t border-white/10 flex items-center justify-center text-center">
+            <div className="inline-flex items-center gap-2.5 text-white font-black text-sm sm:text-base tracking-wide">
+              <Play className="w-4 h-4 text-[#FFC72C] fill-[#FFC72C]" />
+              <span>Assista o vídeo</span>
             </div>
-
-            <a
-              href={watchUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#FFC72C] hover:bg-[#ffdf79] text-[#011049] font-black transition-all shadow-sm hover:scale-105 shrink-0"
-            >
-              <Play className="w-3.5 h-3.5 fill-current" />
-              <span>Assistir no Odysee</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
           </div>
-
         </div>
 
         {/* 3 Pilares Rápidos de Apresentação */}
