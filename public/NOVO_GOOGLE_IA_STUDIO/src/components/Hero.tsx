@@ -22,15 +22,15 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Coluna Esquerda: Conteúdo Tipográfico e Chamadas */}
-            <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 sm:space-y-5">
+            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 sm:space-y-5">
               {/* Badge Superior */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 text-xs sm:text-sm font-black uppercase tracking-widest shadow-[0_0_20px_rgba(6,182,212,0.3)]">
                 <Sparkles className="w-3.5 h-3.5 text-cyan-300 animate-pulse" />
                 <span>ESDHUBEM • Inovação Educacional</span>
               </div>
 
-              {/* Título Principal */}
-              <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-white leading-tight tracking-tight drop-shadow-[0_2px_16px_rgba(0,0,0,0.85)]">
+              {/* Título Principal em Linha Única */}
+              <h1 className="text-xl min-[380px]:text-2xl sm:text-3xl md:text-[34px] lg:text-[36px] xl:text-[42px] font-black text-white leading-tight tracking-tight drop-shadow-[0_2px_16px_rgba(0,0,0,0.85)] whitespace-nowrap">
                 Desenvolvimento <span className="text-cyan-400">•</span> Bem-Estar
               </h1>
 
@@ -51,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Coluna Direita: Mapa Mental Tecnológico Iluminado sem corte */}
-            <div className="lg:col-span-6 flex justify-center items-center relative">
+            <div className="lg:col-span-5 flex justify-center items-center relative">
               <div className="relative w-full max-w-lg lg:max-w-none rounded-2xl overflow-hidden border border-cyan-400/30 shadow-[0_0_50px_rgba(6,182,212,0.3)] bg-[#011049]/80 backdrop-blur-xs group">
                 <img
                   src={bannerImg}
