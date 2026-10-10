@@ -18866,13 +18866,15 @@ var COURSE_LEVELS = [
 	}
 ];
 var CourseDetailLaunchPage = ({ course, onBackToHome, onEnroll, onOpenValidator, onOpenCertificatePreview, onNavigate, onSelectCourse }) => {
-	const [activeTab, setActiveTab] = (0, import_react.useState)("sobre");
+	const [activeTab, setActiveTab] = (0, import_react.useState)("quadro");
 	const [expandedModules, setExpandedModules] = (0, import_react.useState)([0, 1]);
 	const [copied, setCopied] = (0, import_react.useState)(false);
+	const [enrollmentMode, setEnrollmentMode] = (0, import_react.useState)("nivel");
 	const [selectedLevelId, setSelectedLevelId] = (0, import_react.useState)("prata");
 	const [certificateViewMode, setCertificateViewMode] = (0, import_react.useState)("frente");
 	const [expandedFaq, setExpandedFaq] = (0, import_react.useState)(0);
 	const selectedLevel = COURSE_LEVELS.find((lvl) => lvl.id === selectedLevelId) || COURSE_LEVELS[1];
+	const totalSavings = selectedLevel.regularPrice - selectedLevel.launchPrice;
 	const handleCopyLink = () => {
 		const courseId = course?.id || "fp-assertiva";
 		const url = `${window.location.href.split("?")[0]}?curso=${courseId}`;
@@ -19137,11 +19139,13 @@ var CourseDetailLaunchPage = ({ course, onBackToHome, onEnroll, onOpenValidator,
 													onClick: (e) => {
 														e.stopPropagation();
 														setSelectedLevelId(lvl.id);
-														onEnroll();
+														const el = document.getElementById("checkout-widget");
+														if (el) el.scrollIntoView({ behavior: "smooth" });
+														else onEnroll();
 													},
 													className: `mt-4 w-full py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${lvl.isPopular ? "bg-[#FFC72C] hover:bg-[#F5B014] text-[#182333] shadow-md" : "bg-[#182333] hover:bg-slate-900 text-white shadow-sm"}`,
 													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
-														"Inscrever-se no Nível ",
+														"Selecionar Nível ",
 														lvl.name,
 														" • R$ ",
 														lvl.launchPrice.toFixed(2).replace(".", ",")
@@ -19701,69 +19705,177 @@ var CourseDetailLaunchPage = ({ course, onBackToHome, onEnroll, onOpenValidator,
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "space-y-6",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-5",
+						id: "checkout-widget",
+						className: "bg-white rounded-2xl border-2 border-[#182333] p-5 sm:p-6 shadow-xl relative overflow-hidden",
 						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "absolute top-0 right-0 bg-[#FFC72C] text-[#182333] text-[10px] font-black uppercase px-3 py-1 rounded-bl-xl tracking-wider",
+								children: "Turma de Lançamento"
+							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "space-y-2",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center justify-between",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "text-xs font-bold text-slate-500 uppercase tracking-wider",
-											children: "Acesso às Aulas"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "bg-emerald-100 text-emerald-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase",
-											children: "100% Gratuito"
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										className: "text-base font-bold text-[#182333]",
-										children: "Aprenda com Metodologia Prática"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "flex bg-slate-100 p-1 rounded-xl mb-5 mt-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									type: "button",
+									onClick: () => setEnrollmentMode("gratis"),
+									className: `flex-1 py-2 text-xs font-bold rounded-lg transition cursor-pointer ${enrollmentMode === "gratis" ? "bg-white text-[#182333] shadow-sm" : "text-slate-600 hover:text-[#182333]"}`,
+									children: "Acesso Gratuito"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									type: "button",
+									onClick: () => setEnrollmentMode("nivel"),
+									className: `flex-1 py-2 text-xs font-bold rounded-lg transition cursor-pointer ${enrollmentMode === "nivel" ? "bg-[#182333] text-[#FFC72C] shadow-sm" : "text-slate-600 hover:text-[#182333]"}`,
+									children: "Certificado & Níveis"
+								})]
+							}),
+							enrollmentMode === "gratis" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "p-4 bg-slate-50 rounded-xl border border-slate-200",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-xs font-bold text-[#182333] block mb-1",
+										children: "Você terá acesso livre às aulas:"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 										className: "text-xs text-slate-600 leading-relaxed",
-										children: "Assista a todas as vídeo-aulas livremente e no seu tempo. A certificação e a mentoria para publicação de artigos e livros são opcionais por mérito acadêmico."
-									})
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-								type: "button",
-								onClick: onEnroll,
-								className: "w-full bg-[#182333] hover:bg-slate-900 text-[#FFC72C] font-bold text-sm py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-4 h-4 fill-current" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Entrar na Sala de Aula Grátis" })]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "pt-4 border-t border-slate-100 space-y-2.5 text-xs text-slate-600",
+										children: "Assista ao conteúdo sem custo. Ao finalizar, se desejar emitir o certificado com carga horária ou publicar artigos, basta escolher o seu nível e enviar sua Tríade."
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									type: "button",
+									onClick: onEnroll,
+									className: "w-full bg-[#182333] hover:bg-slate-900 text-[#FFC72C] font-bold text-sm py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Entrar na Sala de Aula Grátis" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4" })]
+								})]
+							}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4",
 								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
+										className: "block text-xs font-black text-[#182333] mb-2 uppercase tracking-wide flex items-center justify-between",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Selecione o seu Nível:" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-[10px] text-amber-700 font-bold",
+											children: "Valores Promocionais"
+										})]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "space-y-2",
+										children: COURSE_LEVELS.map((lvl) => {
+											const isSelected = selectedLevelId === lvl.id;
+											return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+												type: "button",
+												onClick: () => setSelectedLevelId(lvl.id),
+												className: `w-full p-3 rounded-xl border text-left transition cursor-pointer ${isSelected ? "border-[#182333] bg-[#182333]/5 ring-2 ring-[#182333] shadow-sm" : "border-slate-200 hover:border-slate-300 bg-white"}`,
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "flex items-center justify-between",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "flex items-center gap-2.5",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+															className: `w-4 h-4 rounded-full border flex items-center justify-center ${isSelected ? "border-[#182333] bg-[#182333]" : "border-slate-300"}`,
+															children: isSelected && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-1.5 h-1.5 rounded-full bg-[#FFC72C]" })
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+															className: "flex items-center gap-1.5",
+															children: [
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "text-base",
+																	children: lvl.iconEmoji
+																}),
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "text-xs font-black text-[#182333]",
+																	children: lvl.name
+																}),
+																lvl.isPopular && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "bg-[#FFC72C] text-[#182333] text-[9px] font-black px-1.5 py-0.2 rounded",
+																	children: "Popular"
+																})
+															]
+														}) })]
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "text-right",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+															className: "text-[10px] text-slate-400 line-through mr-1.5",
+															children: ["R$ ", lvl.regularPrice.toFixed(2).replace(".", ",")]
+														}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+															className: "text-xs font-extrabold text-[#182333]",
+															children: ["R$ ", lvl.launchPrice.toFixed(2).replace(".", ",")]
+														})]
+													})]
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "mt-1.5 pl-6 text-[11px] text-slate-600 flex items-center justify-between border-t border-slate-100 pt-1",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "font-bold text-blue-700",
+														children: lvl.hoursLabel
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-slate-500 truncate max-w-[170px]",
+														children: lvl.badge
+													})]
+												})]
+											}, lvl.id);
+										})
+									})] }),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-4 h-4 text-blue-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Carga horária averbada: ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "20h a 120h" })] })]
+										className: "p-4 bg-gradient-to-br from-slate-50 to-amber-50/40 rounded-xl border border-slate-200 space-y-2 text-xs",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex justify-between items-center text-slate-500",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Valor Regular de Mercado:" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "line-through font-medium",
+													children: ["R$ ", selectedLevel.regularPrice.toFixed(2).replace(".", ",")]
+												})]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex justify-between items-baseline pt-1 border-t border-slate-200",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "text-[11px] font-bold text-slate-700 block",
+													children: [
+														"Total ",
+														selectedLevel.name,
+														":"
+													]
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "text-2xl font-black text-[#182333]",
+													children: ["R$ ", selectedLevel.launchPrice.toFixed(2).replace(".", ",")]
+												})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "text-emerald-700 font-bold bg-emerald-100/70 px-2 py-0.5 rounded text-[11px]",
+													children: ["Economia de R$ ", totalSavings.toFixed(2).replace(".", ",")]
+												})]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "pt-2 border-t border-slate-200 text-[11px] text-slate-600 space-y-1",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "font-semibold text-slate-800",
+													children: ["✓ Carga Horária: ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: selectedLevel.hoursLabel })]
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "text-slate-500",
+													children: ["✓ ", selectedLevel.tagline]
+												})]
+											})
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										type: "button",
+										onClick: onEnroll,
+										className: "w-full bg-[#FFC72C] hover:bg-[#F5B014] text-[#182333] font-black text-sm py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
+											"Garantir Inscrição • ",
+											selectedLevel.name,
+											" (",
+											selectedLevel.hoursLabel,
+											")"
+										] })]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, { className: "w-4 h-4 text-amber-500 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Método pedagógico: ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Tríade de Fixação Ativa" })] })]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4 text-purple-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Certificação por Mérito: ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "4 Níveis opcionais" })] })]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-4 h-4 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Validade jurídica: ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Lei nº 9.394/96 (LDB)" })] })]
+										className: "p-3 bg-slate-50 rounded-xl border border-slate-200 text-[11px] text-slate-600 space-y-1.5",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-1.5 font-bold text-[#182333]",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Avaliação Humana da Tríade inclusa" })]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-1.5",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5 text-emerald-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Depósito no OSF e Zenodo 100% gratuitos" })]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-1.5 text-slate-500",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Info, { className: "w-3.5 h-3.5 text-amber-600 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Emolumentos FBN/CBL (Livro) recolhidos pelo autor" })]
+											})
+										]
 									})
 								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-								type: "button",
-								onClick: () => {
-									setActiveTab("quadro");
-									setTimeout(() => {
-										const el = document.getElementById("quadro-niveis-detalhado");
-										if (el) el.scrollIntoView({ behavior: "smooth" });
-									}, 50);
-								},
-								className: "w-full py-2.5 rounded-xl border border-amber-300 bg-amber-50/70 hover:bg-amber-100 text-[#182333] font-bold text-xs transition flex items-center justify-center gap-1.5 cursor-pointer",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-4 h-4 text-amber-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Tabela de Níveis & Certificação ↓" })]
 							})
 						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -19771,11 +19883,11 @@ var CourseDetailLaunchPage = ({ course, onBackToHome, onEnroll, onOpenValidator,
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 								className: "text-xs font-bold text-[#182333] uppercase tracking-wide",
-								children: "Dúvidas Pedagógicas?"
+								children: "Dúvidas sobre o seu Nível?"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "text-xs text-slate-600 leading-relaxed",
-								children: "Fale diretamente com a nossa secretaria pedagógica pelo WhatsApp para esclarecer dúvidas sobre os Níveis ou a metodologia."
+								children: "Fale diretamente com a nossa secretaria pedagógica pelo WhatsApp para esclarecer dúvidas sobre os Níveis ou a Tríade."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 								href: "https://wa.me/5511960319637?text=Olá!%20Gostaria%20de%20tirar%20dúvidas%20sobre%20os%20Níveis%20da%20ESDHUBEM.",
