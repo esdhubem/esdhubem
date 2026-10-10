@@ -15528,6 +15528,66 @@ var WelcomeVideoSection = () => {
 };
 //#endregion
 //#region src/components/CategoryGrid.tsx
+var getModalityTheme$1 = (id) => {
+	switch (id) {
+		case "freepremium": return {
+			box: "bg-emerald-50/90 border-emerald-300/80 border-l-4 border-l-emerald-600",
+			label: "text-emerald-950",
+			dot: "bg-emerald-600",
+			text: "text-slate-800"
+		};
+		case "capacitacao": return {
+			box: "bg-blue-50/90 border-blue-300/80 border-l-4 border-l-blue-600",
+			label: "text-blue-950",
+			dot: "bg-blue-600",
+			text: "text-slate-800"
+		};
+		case "horas-complementares": return {
+			box: "bg-amber-50/90 border-amber-300/80 border-l-4 border-l-amber-500",
+			label: "text-amber-950",
+			dot: "bg-amber-500",
+			text: "text-slate-800"
+		};
+		case "formacao-integral":
+		case "formacao-livre": return {
+			box: "bg-orange-50/90 border-orange-300/80 border-l-4 border-l-orange-500",
+			label: "text-orange-950",
+			dot: "bg-orange-500",
+			text: "text-slate-800"
+		};
+		case "treinamentos-corporativos": return {
+			box: "bg-purple-50/90 border-purple-300/80 border-l-4 border-l-purple-600",
+			label: "text-purple-950",
+			dot: "bg-purple-600",
+			text: "text-slate-800"
+		};
+		case "autoria-destaque": return {
+			box: "bg-indigo-50/90 border-indigo-300/80 border-l-4 border-l-indigo-600",
+			label: "text-indigo-950",
+			dot: "bg-indigo-600",
+			text: "text-slate-800"
+		};
+		case "aprofundamento-saude": return {
+			box: "bg-sky-50/90 border-sky-300/80 border-l-4 border-l-sky-600",
+			label: "text-sky-950",
+			dot: "bg-sky-600",
+			text: "text-slate-800"
+		};
+		case "orientacao-carreira-futuro":
+		case "workshop-orientacao-carreira-mod": return {
+			box: "bg-teal-50/90 border-teal-300/80 border-l-4 border-l-teal-600",
+			label: "text-teal-950",
+			dot: "bg-teal-600",
+			text: "text-slate-800"
+		};
+		default: return {
+			box: "bg-blue-50/90 border-blue-300/80 border-l-4 border-l-blue-600",
+			label: "text-blue-950",
+			dot: "bg-blue-600",
+			text: "text-slate-800"
+		};
+	}
+};
 var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigateToCategoriesPage, onNavigateToCategoryDetail, onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
@@ -15833,16 +15893,19 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 										className: "font-extrabold text-slate-900 text-base leading-snug group-hover:text-blue-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
 										children: mod.title
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "bg-slate-50 border border-slate-200/80 rounded-xl p-3 text-left",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-											className: "text-slate-800 block text-[10px] uppercase tracking-wider font-extrabold mb-1",
-											children: "Público-alvo:"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-600 line-clamp-3 leading-relaxed",
-											children: mod.target
-										})]
-									})]
+									}), (() => {
+										const theme = getModalityTheme$1(mod.id);
+										return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: `${theme.box} border rounded-xl p-3 text-left shadow-xs transition-colors`,
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("strong", {
+												className: `${theme.label} block text-[10px] uppercase tracking-wider font-black mb-1 flex items-center gap-1.5`,
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `w-1.5 h-1.5 rounded-full ${theme.dot}` }), "Público-alvo:"]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+												className: `text-xs ${theme.text} line-clamp-3 leading-relaxed font-medium`,
+												children: mod.target
+											})]
+										});
+									})()]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "pt-2 w-full flex justify-center",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
@@ -20452,6 +20515,66 @@ var PRODUCTS_DATA = [
 		btnLabel: "Conhecer Aplicativos"
 	}
 ];
+var getModalityTheme = (id) => {
+	switch (id) {
+		case "freepremium": return {
+			box: "bg-emerald-50/90 border-emerald-300/80 border-l-4 border-l-emerald-600",
+			label: "text-emerald-950",
+			dot: "bg-emerald-600",
+			text: "text-slate-800"
+		};
+		case "capacitacao": return {
+			box: "bg-blue-50/90 border-blue-300/80 border-l-4 border-l-blue-600",
+			label: "text-blue-950",
+			dot: "bg-blue-600",
+			text: "text-slate-800"
+		};
+		case "horas-complementares": return {
+			box: "bg-amber-50/90 border-amber-300/80 border-l-4 border-l-amber-500",
+			label: "text-amber-950",
+			dot: "bg-amber-500",
+			text: "text-slate-800"
+		};
+		case "formacao-integral":
+		case "formacao-livre": return {
+			box: "bg-orange-50/90 border-orange-300/80 border-l-4 border-l-orange-500",
+			label: "text-orange-950",
+			dot: "bg-orange-500",
+			text: "text-slate-800"
+		};
+		case "treinamentos-corporativos": return {
+			box: "bg-purple-50/90 border-purple-300/80 border-l-4 border-l-purple-600",
+			label: "text-purple-950",
+			dot: "bg-purple-600",
+			text: "text-slate-800"
+		};
+		case "autoria-destaque": return {
+			box: "bg-indigo-50/90 border-indigo-300/80 border-l-4 border-l-indigo-600",
+			label: "text-indigo-950",
+			dot: "bg-indigo-600",
+			text: "text-slate-800"
+		};
+		case "aprofundamento-saude": return {
+			box: "bg-sky-50/90 border-sky-300/80 border-l-4 border-l-sky-600",
+			label: "text-sky-950",
+			dot: "bg-sky-600",
+			text: "text-slate-800"
+		};
+		case "orientacao-carreira-futuro":
+		case "workshop-orientacao-carreira-mod": return {
+			box: "bg-teal-50/90 border-teal-300/80 border-l-4 border-l-teal-600",
+			label: "text-teal-950",
+			dot: "bg-teal-600",
+			text: "text-slate-800"
+		};
+		default: return {
+			box: "bg-blue-50/90 border-blue-300/80 border-l-4 border-l-blue-600",
+			label: "text-blue-950",
+			dot: "bg-blue-600",
+			text: "text-slate-800"
+		};
+	}
+};
 var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) => {
 	const [searchTerm, setSearchTerm] = (0, import_react.useState)("");
 	const [selectedAreaId, setSelectedAreaId] = (0, import_react.useState)("todas");
@@ -20833,16 +20956,19 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 												className: "font-extrabold text-slate-900 text-base leading-snug group-hover:text-blue-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
 												children: mod.title
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												className: "bg-slate-50 border border-slate-200/80 rounded-xl p-3 text-left w-full",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-													className: "text-slate-800 block text-[10px] uppercase tracking-wider font-extrabold mb-1",
-													children: "Público-alvo:"
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-													className: "text-xs text-slate-600 line-clamp-3 leading-relaxed",
-													children: mod.target
-												})]
-											})]
+											}), (() => {
+												const theme = getModalityTheme(mod.id);
+												return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: `${theme.box} border rounded-xl p-3 text-left w-full shadow-xs transition-colors`,
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("strong", {
+														className: `${theme.label} block text-[10px] uppercase tracking-wider font-black mb-1 flex items-center gap-1.5`,
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `w-1.5 h-1.5 rounded-full ${theme.dot}` }), "Público-alvo:"]
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+														className: `text-xs ${theme.text} line-clamp-3 leading-relaxed font-medium`,
+														children: mod.target
+													})]
+												});
+											})()]
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 											className: "pt-2 w-full flex justify-center",
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {

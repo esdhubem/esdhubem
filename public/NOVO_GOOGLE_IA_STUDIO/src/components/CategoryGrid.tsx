@@ -86,6 +86,76 @@ const renderCategoryIcon = (iconName: string, className: string = 'w-6 h-6') => 
   }
 };
 
+const getModalityTheme = (id: string) => {
+  switch (id) {
+    case 'freepremium':
+      return {
+        box: 'bg-emerald-50/90 border-emerald-300/80 border-l-4 border-l-emerald-600',
+        label: 'text-emerald-950',
+        dot: 'bg-emerald-600',
+        text: 'text-slate-800'
+      };
+    case 'capacitacao':
+      return {
+        box: 'bg-blue-50/90 border-blue-300/80 border-l-4 border-l-blue-600',
+        label: 'text-blue-950',
+        dot: 'bg-blue-600',
+        text: 'text-slate-800'
+      };
+    case 'horas-complementares':
+      return {
+        box: 'bg-amber-50/90 border-amber-300/80 border-l-4 border-l-amber-500',
+        label: 'text-amber-950',
+        dot: 'bg-amber-500',
+        text: 'text-slate-800'
+      };
+    case 'formacao-integral':
+    case 'formacao-livre':
+      return {
+        box: 'bg-orange-50/90 border-orange-300/80 border-l-4 border-l-orange-500',
+        label: 'text-orange-950',
+        dot: 'bg-orange-500',
+        text: 'text-slate-800'
+      };
+    case 'treinamentos-corporativos':
+      return {
+        box: 'bg-purple-50/90 border-purple-300/80 border-l-4 border-l-purple-600',
+        label: 'text-purple-950',
+        dot: 'bg-purple-600',
+        text: 'text-slate-800'
+      };
+    case 'autoria-destaque':
+      return {
+        box: 'bg-indigo-50/90 border-indigo-300/80 border-l-4 border-l-indigo-600',
+        label: 'text-indigo-950',
+        dot: 'bg-indigo-600',
+        text: 'text-slate-800'
+      };
+    case 'aprofundamento-saude':
+      return {
+        box: 'bg-sky-50/90 border-sky-300/80 border-l-4 border-l-sky-600',
+        label: 'text-sky-950',
+        dot: 'bg-sky-600',
+        text: 'text-slate-800'
+      };
+    case 'orientacao-carreira-futuro':
+    case 'workshop-orientacao-carreira-mod':
+      return {
+        box: 'bg-teal-50/90 border-teal-300/80 border-l-4 border-l-teal-600',
+        label: 'text-teal-950',
+        dot: 'bg-teal-600',
+        text: 'text-slate-800'
+      };
+    default:
+      return {
+        box: 'bg-blue-50/90 border-blue-300/80 border-l-4 border-l-blue-600',
+        label: 'text-blue-950',
+        dot: 'bg-blue-600',
+        text: 'text-slate-800'
+      };
+  }
+};
+
 export const CategoryGrid: React.FC<CategoryGridProps> = ({
   categories,
   selectedCategory,
@@ -401,15 +471,21 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                       {mod.title}
                     </h4>
 
-                    {/* Caixa de Público-Alvo Exclusiva */}
-                    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3 text-left">
-                      <strong className="text-slate-800 block text-[10px] uppercase tracking-wider font-extrabold mb-1">
-                        Público-alvo:
-                      </strong>
-                      <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
-                        {mod.target}
-                      </p>
-                    </div>
+                    {/* Caixa de Público-Alvo com Contraste Harmonizado */}
+                    {(() => {
+                      const theme = getModalityTheme(mod.id);
+                      return (
+                        <div className={`${theme.box} border rounded-xl p-3 text-left shadow-xs transition-colors`}>
+                          <strong className={`${theme.label} block text-[10px] uppercase tracking-wider font-black mb-1 flex items-center gap-1.5`}>
+                            <span className={`w-1.5 h-1.5 rounded-full ${theme.dot}`}></span>
+                            Público-alvo:
+                          </strong>
+                          <p className={`text-xs ${theme.text} line-clamp-3 leading-relaxed font-medium`}>
+                            {mod.target}
+                          </p>
+                        </div>
+                      );
+                    })()}
                   </div>
 
                   {/* Botão Pílula Conhecer Cursos com Sombra Flutuante */}
