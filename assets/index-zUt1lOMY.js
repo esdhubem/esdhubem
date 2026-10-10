@@ -19777,8 +19777,77 @@ var MACRO_AREAS = [
 		]
 	},
 	{
-		id: "profissional",
+		id: "saude",
 		number: "3",
+		emoji: "🩺",
+		title: "Desenvolvimento em Saúde e Bem-Estar Integrativo",
+		description: "Saúde integrativa, terapias holísticas, qualidade de vida e aperfeiçoamento para profissionais da saúde.",
+		accentColor: "from-teal-600 to-emerald-700",
+		bannerGradient: "from-teal-500/15 via-emerald-500/5 to-transparent",
+		borderAccent: "border-teal-400/40",
+		categories: [
+			{
+				id: "praticas-integrativas",
+				title: "Práticas Integrativas",
+				badge: "21 Cursos",
+				iconName: "SunMedium",
+				accentColor: "from-teal-500 to-emerald-600",
+				summary: "Terapias complementares, abordagens integrativas de saúde, equilíbrio bioenergético e bem-estar.",
+				skills: [
+					"PICS / SUS",
+					"Abordagem Holística",
+					"Equilíbrio Energético"
+				],
+				image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+			},
+			{
+				id: "coach-integrativo",
+				title: "Coach Integrativo",
+				badge: "11 Cursos",
+				iconName: "Target",
+				accentColor: "from-emerald-700 to-teal-800",
+				summary: "Metodologias de desenvolvimento integral, estabelecimento de metas, superação de bloqueios e alinhamento de vida.",
+				skills: [
+					"Metas Humanizadas",
+					"Perguntas Poderosas",
+					"Plano de Ação"
+				],
+				image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80"
+			},
+			{
+				id: "aprofundamento-profissional-saude",
+				title: "Aprofundamento na Área da Saúde",
+				badge: "8 Cursos",
+				iconName: "HeartPulse",
+				accentColor: "from-blue-600 to-teal-700",
+				summary: "Cursos exclusivos para graduados em Biomedicina, Enfermagem, Nutrição, Psicologia, Fisioterapia e áreas afins.",
+				skills: [
+					"Atualização Técnica",
+					"Boas Práticas Clínicas",
+					"Evidências Científicas"
+				],
+				image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+			},
+			{
+				id: "terapias-holisticas",
+				title: "Terapias Holísticas",
+				badge: "14 Cursos",
+				iconName: "Sparkles",
+				accentColor: "from-teal-600 to-cyan-700",
+				summary: "Autocuidado, terapias complementares, qualidade de vida e desenvolvimento integral aplicado à saúde.",
+				skills: [
+					"Autocuidado",
+					"Qualidade de Vida",
+					"Saúde Integral",
+					"Terapias Holísticas"
+				],
+				image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80"
+			}
+		]
+	},
+	{
+		id: "profissional",
+		number: "4",
 		emoji: "💼",
 		title: "Desenvolvimento Profissional",
 		description: "Auxilia o indivíduo a se preparar, atuar, evoluir ou se reposicionar profissionalmente no mercado contemporâneo.",
@@ -19874,7 +19943,7 @@ var MACRO_AREAS = [
 	},
 	{
 		id: "empresarial",
-		number: "4",
+		number: "5",
 		emoji: "🏢",
 		title: "Desenvolvimento Empresarial",
 		description: "Capacitação in-company, desenvolvimento de gestores, liderança executiva e fortalecimento institucional.",
@@ -19923,75 +19992,6 @@ var MACRO_AREAS = [
 					"Desenvolvimento de Negócios"
 				],
 				image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80"
-			}
-		]
-	},
-	{
-		id: "saude",
-		number: "5",
-		emoji: "🩺",
-		title: "Desenvolvimento em Saúde e Bem-Estar Integrativo",
-		description: "Saúde integrativa, terapias holísticas, qualidade de vida e aperfeiçoamento para profissionais da saúde.",
-		accentColor: "from-teal-600 to-emerald-700",
-		bannerGradient: "from-teal-500/15 via-emerald-500/5 to-transparent",
-		borderAccent: "border-teal-400/40",
-		categories: [
-			{
-				id: "praticas-integrativas",
-				title: "Práticas Integrativas",
-				badge: "21 Cursos",
-				iconName: "SunMedium",
-				accentColor: "from-teal-500 to-emerald-600",
-				summary: "Terapias complementares, abordagens integrativas de saúde, equilíbrio bioenergético e bem-estar.",
-				skills: [
-					"PICS / SUS",
-					"Abordagem Holística",
-					"Equilíbrio Energético"
-				],
-				image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
-			},
-			{
-				id: "coach-integrativo",
-				title: "Coach Integrativo",
-				badge: "11 Cursos",
-				iconName: "Target",
-				accentColor: "from-emerald-700 to-teal-800",
-				summary: "Metodologias de desenvolvimento integral, estabelecimento de metas, superação de bloqueios e alinhamento de vida.",
-				skills: [
-					"Metas Humanizadas",
-					"Perguntas Poderosas",
-					"Plano de Ação"
-				],
-				image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80"
-			},
-			{
-				id: "aprofundamento-profissional-saude",
-				title: "Aprofundamento na Área da Saúde",
-				badge: "8 Cursos",
-				iconName: "HeartPulse",
-				accentColor: "from-blue-600 to-teal-700",
-				summary: "Cursos exclusivos para graduados em Biomedicina, Enfermagem, Nutrição, Psicologia, Fisioterapia e áreas afins.",
-				skills: [
-					"Atualização Técnica",
-					"Boas Práticas Clínicas",
-					"Evidências Científicas"
-				],
-				image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
-			},
-			{
-				id: "terapias-holisticas",
-				title: "Terapias Holísticas",
-				badge: "14 Cursos",
-				iconName: "Sparkles",
-				accentColor: "from-teal-600 to-cyan-700",
-				summary: "Autocuidado, terapias complementares, qualidade de vida e desenvolvimento integral aplicado à saúde.",
-				skills: [
-					"Autocuidado",
-					"Qualidade de Vida",
-					"Saúde Integral",
-					"Terapias Holísticas"
-				],
-				image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80"
 			}
 		]
 	}
@@ -20190,16 +20190,16 @@ var CategoriesPage = ({ onBackToHome, onNavigateToCategoryDetail, onNavigate }) 
 			label: "✨ 2. Desenvolvimento Consciencial"
 		},
 		{
+			id: "saude",
+			label: "🩺 3. Saúde & Bem-Estar Integrativo"
+		},
+		{
 			id: "profissional",
-			label: "💼 3. Desenvolvimento Profissional"
+			label: "💼 4. Desenvolvimento Profissional"
 		},
 		{
 			id: "empresarial",
-			label: "🏢 4. Desenvolvimento Empresarial"
-		},
-		{
-			id: "saude",
-			label: "🩺 5. Saúde & Bem-Estar"
+			label: "🏢 5. Desenvolvimento Empresarial"
 		}
 	];
 	const totalCategoriesCount = (0, import_react.useMemo)(() => {
