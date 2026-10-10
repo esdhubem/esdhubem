@@ -9,18 +9,21 @@ import {
   Tv,
   BrainCircuit,
   Compass,
-  ArrowRight
+  ArrowRight,
+  ClipboardList
 } from 'lucide-react';
 import bannerImg from '../assets/banner_mindmap_hero.jpg';
 
 interface MindMapCoursePromoBannerProps {
   onSelectCourse?: () => void;
   onNavigatePedagogy?: () => void;
+  onNavigateModalities?: () => void;
 }
 
 export const MindMapCoursePromoBanner: React.FC<MindMapCoursePromoBannerProps> = ({
   onSelectCourse,
   onNavigatePedagogy,
+  onNavigateModalities,
 }) => {
   const odyseeWatchUrl =
     'https://odysee.com/@esdhubem:a/mapas-mentais:4?lid=56adb18446e756be8f3d80c8dda78b83024bd5c7';
@@ -141,6 +144,19 @@ export const MindMapCoursePromoBanner: React.FC<MindMapCoursePromoBannerProps> =
                     >
                       <span>Entenda a Metodologia</span>
                       <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  )}
+
+                  {/* Botão Quaternário: Guia das Modalidades de Formação */}
+                  {onNavigateModalities && (
+                    <button
+                      type="button"
+                      onClick={onNavigateModalities}
+                      className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-[#011049] hover:bg-[#061e47] active:scale-95 text-[#FFC72C] font-black text-xs sm:text-sm border border-cyan-400/40 shadow-lg shadow-[#011049]/40 hover:shadow-cyan-400/20 hover:scale-105 transition-all cursor-pointer"
+                    >
+                      <ClipboardList className="w-4 h-4 text-[#FFC72C]" />
+                      <span>Ver Guia das Modalidades</span>
+                      <ArrowRight className="w-4 h-4" />
                     </button>
                   )}
                 </div>

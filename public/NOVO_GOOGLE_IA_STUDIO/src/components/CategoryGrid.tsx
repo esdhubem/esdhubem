@@ -422,21 +422,6 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
               </div>
             ))}
           </div>
-
-          {/* Action to Full Modalities Page com a cor do menu de cima (#011049) */}
-          <div className="text-center pt-2">
-            <button
-              onClick={() => {
-                if (onNavigate) onNavigate('modalidades-formacao');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#011049] hover:bg-[#061e47] border border-blue-400/35 text-[#FFC72C] font-black text-xs sm:text-sm rounded-xl transition-all shadow-lg shadow-[#011049]/35 hover:shadow-xl hover:scale-105 cursor-pointer"
-            >
-              <ClipboardList className="w-4 h-4 text-[#FFC72C]" />
-              <span>Ver Guia Completo das Modalidades de Formação</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
         </div>
       </section>
     </div>

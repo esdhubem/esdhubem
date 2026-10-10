@@ -15206,7 +15206,7 @@ var Hero = ({ onSelectCategory }) => {
 };
 //#endregion
 //#region src/components/MindMapCoursePromoBanner.tsx
-var MindMapCoursePromoBanner = ({ onSelectCourse, onNavigatePedagogy }) => {
+var MindMapCoursePromoBanner = ({ onSelectCourse, onNavigatePedagogy, onNavigateModalities }) => {
 	const odyseeWatchUrl = "https://odysee.com/@esdhubem:a/mapas-mentais:4?lid=56adb18446e756be8f3d80c8dda78b83024bd5c7";
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		className: "py-8 sm:py-12 bg-[#F8FAFC]",
@@ -15313,6 +15313,16 @@ var MindMapCoursePromoBanner = ({ onSelectCourse, onNavigatePedagogy }) => {
 												onClick: onNavigatePedagogy,
 												className: "inline-flex items-center justify-center gap-1.5 px-4 py-3.5 rounded-full text-slate-300 hover:text-cyan-200 text-xs sm:text-sm font-semibold hover:underline cursor-pointer",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Entenda a Metodologia" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-3.5 h-3.5" })]
+											}),
+											onNavigateModalities && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+												type: "button",
+												onClick: onNavigateModalities,
+												className: "inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-[#011049] hover:bg-[#061e47] active:scale-95 text-[#FFC72C] font-black text-xs sm:text-sm border border-cyan-400/40 shadow-lg shadow-[#011049]/40 hover:shadow-cyan-400/20 hover:scale-105 transition-all cursor-pointer",
+												children: [
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ClipboardList, { className: "w-4 h-4 text-[#FFC72C]" }),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Guia das Modalidades" }),
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4" })
+												]
 											})
 										]
 									})
@@ -15553,194 +15563,173 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 			id: "modalidades-formacao-home",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "text-center max-w-3xl mx-auto mb-12 space-y-3",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "text-center max-w-3xl mx-auto mb-12 space-y-3",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold uppercase tracking-wider",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ClipboardList, { className: "w-3.5 h-3.5 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Modalidades de Formação" })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
+							className: "text-2xl sm:text-3xl lg:text-4xl font-black text-[#182333] tracking-tight",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "block",
+								children: "Aqui nós temos diversas"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "block",
+								children: "Modalidades de Cursos Livres!"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-sm sm:text-base text-slate-600 leading-relaxed font-normal",
+							children: "Escolha a modalidade ideal para o seu momento de aprendizado, complementação acadêmica ou evolução profissional."
+						})
+					]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10",
+					children: [
+						{
+							id: "freepremium",
+							emoji: "🟢",
+							badgeText: "Descoberta",
+							badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200",
+							title: "Cursos Freepremium",
+							target: "Estudantes e profissionais que buscam conhecimento rápido sem custo inicial.",
+							image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+							destination: "modalidades-formacao"
+						},
+						{
+							id: "capacitacao",
+							emoji: "🔵",
+							badgeText: "Ação Prática",
+							badgeClass: "bg-blue-50 text-blue-700 border-blue-200",
+							title: "Cursos de Capacitação",
+							target: "Profissionais que precisam atualizar competências e resolver demandas da rotina.",
+							image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+							destination: "modalidades-formacao"
+						},
+						{
+							id: "horas-complementares",
+							emoji: "🟡",
+							badgeText: "Validação Acadêmica",
+							badgeClass: "bg-amber-50 text-amber-700 border-amber-200",
+							title: "Horas Complementares",
+							target: "Universitários de graduação e pós-graduação que precisam comprovar horas extracurriculares.",
+							image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+							destination: "modalidades-formacao"
+						},
+						{
+							id: "formacao-integral",
+							emoji: "🟠",
+							badgeText: "Trilha Completa",
+							badgeClass: "bg-orange-50 text-orange-700 border-orange-200",
+							title: "Formação Integral",
+							target: "Pessoas que buscam desenvolvimento consistente com método, profundidade e rigor pedagógico.",
+							image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+							destination: "modalidades-formacao"
+						},
+						{
+							id: "treinamentos-corporativos",
+							emoji: "🟣",
+							badgeText: "Desempenho Profissional",
+							badgeClass: "bg-purple-50 text-purple-700 border-purple-200",
+							title: "Treinamentos Corporativos",
+							target: "Gestores de RH, líderes de equipe e diretores de empresas e terceiro setor.",
+							image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+							destination: "categoria:treinamentos-palestras-corporativas"
+						},
+						{
+							id: "autoria-destaque",
+							emoji: "✒️",
+							badgeText: "Desenvolvimento da Escrita",
+							badgeClass: "bg-indigo-50 text-indigo-700 border-indigo-200",
+							title: "Autoria e Destaque",
+							target: "Estudantes, pesquisadores, terapeutas e profissionais que desejam publicar com destaque.",
+							image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
+							destination: "regras-certificacao-merito"
+						},
+						{
+							id: "aprofundamento-saude",
+							emoji: "💙",
+							badgeText: "Área da Saúde",
+							badgeClass: "bg-sky-50 text-sky-700 border-sky-200",
+							title: "Aprofundamento na Saúde",
+							target: "Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos e terapeutas graduados.",
+							image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+							destination: "categoria:aprofundamento-profissional-saude"
+						},
+						{
+							id: "orientacao-carreira-futuro",
+							emoji: "💡",
+							badgeText: "Evolução & Futuro",
+							badgeClass: "bg-teal-50 text-teal-700 border-teal-200",
+							title: "Orientação de Carreira & Futuro",
+							target: "Profissionais em transição, recém-formados e quem busca novos rumos na carreira.",
+							image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+							destination: "categoria:orientacao-carreira-futuro"
+						}
+					].map((mod) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						onClick: () => {
+							if (mod.destination.startsWith("categoria:")) {
+								const slug = mod.destination.replace("categoria:", "");
+								if (onNavigateToCategoryDetail) onNavigateToCategoryDetail(slug);
+								else if (onNavigate) onNavigate(mod.destination);
+							} else if (onNavigate) onNavigate(mod.destination);
+							window.scrollTo({
+								top: 0,
+								behavior: "smooth"
+							});
+						},
+						className: "group bg-white rounded-2xl border border-slate-200/90 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1",
+						id: `home-mod-card-${mod.id}`,
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold uppercase tracking-wider",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ClipboardList, { className: "w-3.5 h-3.5 text-blue-600" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Modalidades de Formação" })]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-								className: "text-2xl sm:text-3xl lg:text-4xl font-black text-[#182333] tracking-tight",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "block",
-									children: "Aqui nós temos diversas"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "block",
-									children: "Modalidades de Cursos Livres!"
+								className: "relative h-40 w-full overflow-hidden bg-slate-100",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: mod.image,
+									alt: mod.title,
+									className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "absolute top-3 right-3 z-10",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: `text-[10px] font-extrabold px-2.5 py-1 rounded-full border backdrop-blur-md bg-white/95 shadow-xs ${mod.badgeClass}`,
+										children: mod.badgeText
+									})
 								})]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-sm sm:text-base text-slate-600 leading-relaxed font-normal",
-								children: "Escolha a modalidade ideal para o seu momento de aprendizado, complementação acadêmica ou evolução profissional."
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[138px] z-10 text-xl group-hover:scale-110 group-hover:shadow-lg transition-transform",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: mod.emoji })
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "w-full space-y-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+										className: "font-extrabold text-slate-900 text-base leading-snug group-hover:text-blue-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
+										children: mod.title
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "bg-slate-50 border border-slate-200/80 rounded-xl p-3 text-left",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+											className: "text-slate-800 block text-[10px] uppercase tracking-wider font-extrabold mb-1",
+											children: "Público-alvo:"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-xs text-slate-600 line-clamp-3 leading-relaxed",
+											children: mod.target
+										})]
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "pt-2 w-full flex justify-center",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										type: "button",
+										className: "inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs tracking-wide shadow-[0_10px_20px_-3px_rgba(5,150,105,0.45)] hover:shadow-[0_16px_28px_-3px_rgba(5,150,105,0.6)] border border-emerald-400/60 transition-all duration-300 cursor-pointer -translate-y-0.5 hover:-translate-y-1.5 active:translate-y-0 w-full",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
+									})
+								})]
 							})
 						]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10",
-						children: [
-							{
-								id: "freepremium",
-								emoji: "🟢",
-								badgeText: "Descoberta",
-								badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200",
-								title: "Cursos Freepremium",
-								target: "Estudantes e profissionais que buscam conhecimento rápido sem custo inicial.",
-								image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
-								destination: "modalidades-formacao"
-							},
-							{
-								id: "capacitacao",
-								emoji: "🔵",
-								badgeText: "Ação Prática",
-								badgeClass: "bg-blue-50 text-blue-700 border-blue-200",
-								title: "Cursos de Capacitação",
-								target: "Profissionais que precisam atualizar competências e resolver demandas da rotina.",
-								image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-								destination: "modalidades-formacao"
-							},
-							{
-								id: "horas-complementares",
-								emoji: "🟡",
-								badgeText: "Validação Acadêmica",
-								badgeClass: "bg-amber-50 text-amber-700 border-amber-200",
-								title: "Horas Complementares",
-								target: "Universitários de graduação e pós-graduação que precisam comprovar horas extracurriculares.",
-								image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
-								destination: "modalidades-formacao"
-							},
-							{
-								id: "formacao-integral",
-								emoji: "🟠",
-								badgeText: "Trilha Completa",
-								badgeClass: "bg-orange-50 text-orange-700 border-orange-200",
-								title: "Formação Integral",
-								target: "Pessoas que buscam desenvolvimento consistente com método, profundidade e rigor pedagógico.",
-								image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
-								destination: "modalidades-formacao"
-							},
-							{
-								id: "treinamentos-corporativos",
-								emoji: "🟣",
-								badgeText: "Desempenho Profissional",
-								badgeClass: "bg-purple-50 text-purple-700 border-purple-200",
-								title: "Treinamentos Corporativos",
-								target: "Gestores de RH, líderes de equipe e diretores de empresas e terceiro setor.",
-								image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
-								destination: "categoria:treinamentos-palestras-corporativas"
-							},
-							{
-								id: "autoria-destaque",
-								emoji: "✒️",
-								badgeText: "Desenvolvimento da Escrita",
-								badgeClass: "bg-indigo-50 text-indigo-700 border-indigo-200",
-								title: "Autoria e Destaque",
-								target: "Estudantes, pesquisadores, terapeutas e profissionais que desejam publicar com destaque.",
-								image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
-								destination: "regras-certificacao-merito"
-							},
-							{
-								id: "aprofundamento-saude",
-								emoji: "💙",
-								badgeText: "Área da Saúde",
-								badgeClass: "bg-sky-50 text-sky-700 border-sky-200",
-								title: "Aprofundamento na Saúde",
-								target: "Enfermeiros, médicos, fisioterapeutas, nutricionistas, psicólogos e terapeutas graduados.",
-								image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-								destination: "categoria:aprofundamento-profissional-saude"
-							},
-							{
-								id: "orientacao-carreira-futuro",
-								emoji: "💡",
-								badgeText: "Evolução & Futuro",
-								badgeClass: "bg-teal-50 text-teal-700 border-teal-200",
-								title: "Orientação de Carreira & Futuro",
-								target: "Profissionais em transição, recém-formados e quem busca novos rumos na carreira.",
-								image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
-								destination: "categoria:orientacao-carreira-futuro"
-							}
-						].map((mod) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							onClick: () => {
-								if (mod.destination.startsWith("categoria:")) {
-									const slug = mod.destination.replace("categoria:", "");
-									if (onNavigateToCategoryDetail) onNavigateToCategoryDetail(slug);
-									else if (onNavigate) onNavigate(mod.destination);
-								} else if (onNavigate) onNavigate(mod.destination);
-								window.scrollTo({
-									top: 0,
-									behavior: "smooth"
-								});
-							},
-							className: "group bg-white rounded-2xl border border-slate-200/90 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1",
-							id: `home-mod-card-${mod.id}`,
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "relative h-40 w-full overflow-hidden bg-slate-100",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-										src: mod.image,
-										alt: mod.title,
-										className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "absolute top-3 right-3 z-10",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: `text-[10px] font-extrabold px-2.5 py-1 rounded-full border backdrop-blur-md bg-white/95 shadow-xs ${mod.badgeClass}`,
-											children: mod.badgeText
-										})
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "w-11 h-11 rounded-full bg-white shadow-md border-2 border-white flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[138px] z-10 text-xl group-hover:scale-110 group-hover:shadow-lg transition-transform",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: mod.emoji })
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "w-full space-y-3",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-											className: "font-extrabold text-slate-900 text-base leading-snug group-hover:text-blue-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center",
-											children: mod.title
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "bg-slate-50 border border-slate-200/80 rounded-xl p-3 text-left",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-												className: "text-slate-800 block text-[10px] uppercase tracking-wider font-extrabold mb-1",
-												children: "Público-alvo:"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-												className: "text-xs text-slate-600 line-clamp-3 leading-relaxed",
-												children: mod.target
-											})]
-										})]
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "pt-2 w-full flex justify-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-											type: "button",
-											className: "inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs tracking-wide shadow-[0_10px_20px_-3px_rgba(5,150,105,0.45)] hover:shadow-[0_16px_28px_-3px_rgba(5,150,105,0.6)] border border-emerald-400/60 transition-all duration-300 cursor-pointer -translate-y-0.5 hover:-translate-y-1.5 active:translate-y-0 w-full",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-3.5 h-3.5 text-emerald-100" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Conhecer Cursos" })]
-										})
-									})]
-								})
-							]
-						}, mod.id))
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "text-center pt-2",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-							onClick: () => {
-								if (onNavigate) onNavigate("modalidades-formacao");
-								window.scrollTo({
-									top: 0,
-									behavior: "smooth"
-								});
-							},
-							className: "inline-flex items-center gap-2 px-7 py-3.5 bg-[#011049] hover:bg-[#061e47] border border-blue-400/35 text-[#FFC72C] font-black text-xs sm:text-sm rounded-xl transition-all shadow-lg shadow-[#011049]/35 hover:shadow-xl hover:scale-105 cursor-pointer",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ClipboardList, { className: "w-4 h-4 text-[#FFC72C]" }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Guia Completo das Modalidades de Formação" }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "w-4 h-4" })
-							]
-						})
-					})
-				]
+					}, mod.id))
+				})]
 			})
 		})
 	] });
@@ -35897,22 +35886,6 @@ function App() {
 							if (el) el.scrollIntoView({ behavior: "smooth" });
 						}
 					} }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MindMapCoursePromoBanner, {
-						onSelectCourse: () => {
-							const course = COURSES_DATA.find((c) => c.id === "fp-mapas-mentais");
-							if (course) {
-								setSelectedCourse(course);
-								setCurrentPage("curso-detalhe");
-								window.scrollTo({
-									top: 0,
-									behavior: "smooth"
-								});
-							}
-						},
-						onNavigatePedagogy: () => {
-							handleNavigate("diretrizes-pedagogicas");
-						}
-					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CategoryGrid, {
 						categories: CATEGORIES_DATA,
 						selectedCategory,
@@ -35932,6 +35905,25 @@ function App() {
 							});
 						},
 						onNavigate: handleNavigate
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MindMapCoursePromoBanner, {
+						onSelectCourse: () => {
+							const course = COURSES_DATA.find((c) => c.id === "fp-mapas-mentais");
+							if (course) {
+								setSelectedCourse(course);
+								setCurrentPage("curso-detalhe");
+								window.scrollTo({
+									top: 0,
+									behavior: "smooth"
+								});
+							}
+						},
+						onNavigatePedagogy: () => {
+							handleNavigate("diretrizes-pedagogicas");
+						},
+						onNavigateModalities: () => {
+							handleNavigate("modalidades-formacao");
+						}
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CourseCatalog, {
 						courses: COURSES_DATA,

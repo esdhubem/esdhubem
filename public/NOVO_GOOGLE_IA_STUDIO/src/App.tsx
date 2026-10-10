@@ -478,21 +478,6 @@ export default function App() {
             }}
           />
 
-          {/* Banner Publicitário: Curso Principal & Metodologia Pedagógica (Freepremium) */}
-          <MindMapCoursePromoBanner
-            onSelectCourse={() => {
-              const course = COURSES_DATA.find((c) => c.id === 'fp-mapas-mentais');
-              if (course) {
-                setSelectedCourse(course);
-                setCurrentPage('curso-detalhe');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }
-            }}
-            onNavigatePedagogy={() => {
-              handleNavigate('diretrizes-pedagogicas');
-            }}
-          />
-
           {/* 2. Explorar Categorias (The 17 exact categories) */}
           <CategoryGrid
             categories={CATEGORIES_DATA}
@@ -515,6 +500,24 @@ export default function App() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onNavigate={handleNavigate}
+          />
+
+          {/* Banner Publicitário no lugar do botão: Curso Principal & Metodologia Pedagógica (Freepremium) */}
+          <MindMapCoursePromoBanner
+            onSelectCourse={() => {
+              const course = COURSES_DATA.find((c) => c.id === 'fp-mapas-mentais');
+              if (course) {
+                setSelectedCourse(course);
+                setCurrentPage('curso-detalhe');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+            onNavigatePedagogy={() => {
+              handleNavigate('diretrizes-pedagogicas');
+            }}
+            onNavigateModalities={() => {
+              handleNavigate('modalidades-formacao');
+            }}
           />
 
           {/* 3. Cursos Freepremium, Horas Complementares e Formações Profissionais (Movido para perto das categorias) */}
