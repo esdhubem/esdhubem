@@ -194,8 +194,8 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                   }}
                   className={`group bg-white rounded-2xl border transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative ${
                     isSelected
-                      ? 'border-2 border-emerald-600 shadow-xl ring-2 ring-emerald-500/30 scale-[1.02]'
-                      : 'border-slate-200/90 shadow-sm hover:shadow-xl hover:border-emerald-300 hover:-translate-y-1'
+                      ? 'border-2 border-blue-600 shadow-xl ring-4 ring-blue-500/20 scale-[1.02]'
+                      : 'border-slate-200/90 shadow-sm hover:shadow-xl hover:border-blue-400 hover:-translate-y-1'
                   }`}
                 >
                   {/* Foto Ilustrativa no Topo */}
@@ -220,7 +220,9 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                   {/* Corpo do Cartão: Título, Descrição e Botão Conhecer Cursos */}
                   <div className="pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3">
                     <div className="w-full space-y-2">
-                      <h3 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
+                      <h3 className={`font-extrabold text-base leading-snug transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center ${
+                        isSelected ? 'text-blue-700 font-black' : 'text-slate-900 group-hover:text-blue-700'
+                      }`}>
                         {area.title}
                       </h3>
                       <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
@@ -228,11 +230,11 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                       </p>
                     </div>
 
-                    {/* Botão Pílula Conhecer Cursos */}
+                    {/* Botão Pílula Conhecer Cursos com Sombra Flutuante */}
                     <div className="pt-2 w-full flex justify-center">
                       <button
                         type="button"
-                        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0 w-full max-w-[200px]"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs tracking-wide shadow-[0_10px_20px_-3px_rgba(5,150,105,0.45)] hover:shadow-[0_16px_28px_-3px_rgba(5,150,105,0.6)] border border-emerald-400/60 transition-all duration-300 cursor-pointer -translate-y-0.5 hover:-translate-y-1.5 active:translate-y-0 w-full max-w-[200px]"
                       >
                         <BookOpen className="w-3.5 h-3.5 text-emerald-100" />
                         <span>Conhecer Cursos</span>
@@ -361,7 +363,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                   }
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="group bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1"
+                className="group bg-white rounded-2xl border border-slate-200/90 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1"
                 id={`home-mod-card-${mod.id}`}
               >
                 {/* Foto Ilustrativa no Topo */}
@@ -386,7 +388,7 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                 {/* Corpo do Cartão: Título, Apenas Público-Alvo e Botão Conhecer Cursos */}
                 <div className="pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3">
                   <div className="w-full space-y-3">
-                    <h4 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
+                    <h4 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-blue-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
                       {mod.title}
                     </h4>
 
@@ -401,11 +403,11 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
                     </div>
                   </div>
 
-                  {/* Botão Pílula Conhecer Cursos */}
+                  {/* Botão Pílula Conhecer Cursos com Sombra Flutuante */}
                   <div className="pt-2 w-full flex justify-center">
                     <button
                       type="button"
-                      className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0 w-full"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs tracking-wide shadow-[0_10px_20px_-3px_rgba(5,150,105,0.45)] hover:shadow-[0_16px_28px_-3px_rgba(5,150,105,0.6)] border border-emerald-400/60 transition-all duration-300 cursor-pointer -translate-y-0.5 hover:-translate-y-1.5 active:translate-y-0 w-full"
                     >
                       <BookOpen className="w-3.5 h-3.5 text-emerald-100" />
                       <span>Conhecer Cursos</span>
@@ -416,14 +418,14 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
             ))}
           </div>
 
-          {/* Action to Full Modalities Page */}
+          {/* Action to Full Modalities Page com a cor do menu de cima (#011049) */}
           <div className="text-center pt-2">
             <button
               onClick={() => {
                 if (onNavigate) onNavigate('modalidades-formacao');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#182333] hover:bg-[#243042] text-[#FFC72C] font-bold text-xs sm:text-sm rounded-xl transition-all shadow-md cursor-pointer hover:scale-105"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#011049] hover:bg-[#061e47] border border-blue-400/35 text-[#FFC72C] font-black text-xs sm:text-sm rounded-xl transition-all shadow-lg shadow-[#011049]/35 hover:shadow-xl hover:scale-105 cursor-pointer"
             >
               <ClipboardList className="w-4 h-4 text-[#FFC72C]" />
               <span>Ver Guia Completo das Modalidades de Formação</span>

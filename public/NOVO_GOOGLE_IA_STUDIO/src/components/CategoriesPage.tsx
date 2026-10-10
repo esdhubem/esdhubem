@@ -792,7 +792,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
                             onNavigateToCategoryDetail(cat.id);
                           }
                         }}
-                        className="group bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1"
+                        className="group bg-white rounded-2xl border border-slate-200/90 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1"
                         id={`cat-card-${cat.id}`}
                       >
                         {/* Foto Ilustrativa no Topo */}
@@ -817,7 +817,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
                         {/* Corpo do Cartão: Título, Descrição, Tags e Botão Conhecer Cursos */}
                         <div className="pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3">
                           <div className="w-full space-y-2">
-                            <h4 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
+                            <h4 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-blue-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
                               {cat.title}
                             </h4>
 
@@ -838,11 +838,11 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
                             </div>
                           </div>
 
-                          {/* Botão Pílula Conhecer Cursos */}
+                          {/* Botão Pílula Conhecer Cursos com Sombra Flutuante */}
                           <div className="pt-2 w-full flex justify-center">
                             <button
                               type="button"
-                              className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+                              className="w-full inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs tracking-wide shadow-[0_10px_20px_-3px_rgba(5,150,105,0.45)] hover:shadow-[0_16px_28px_-3px_rgba(5,150,105,0.6)] border border-emerald-400/60 transition-all duration-300 cursor-pointer -translate-y-0.5 hover:-translate-y-1.5 active:translate-y-0"
                             >
                               <BookOpen className="w-3.5 h-3.5 text-emerald-100" />
                               <span>Conhecer Cursos</span>
@@ -883,7 +883,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
               <div
                 key={mod.id}
                 onClick={() => handleCardClick(mod.destination)}
-                className="group bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-400 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1"
+                className="group bg-white rounded-2xl border border-slate-200/90 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden text-center cursor-pointer relative hover:-translate-y-1"
                 id={`mod-card-${mod.id}`}
               >
                 {/* Foto Ilustrativa no Topo */}
@@ -908,7 +908,7 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
                 {/* Corpo do Cartão: Título, Apenas Público-Alvo e Botão Conhecer Cursos */}
                 <div className="pt-7 px-4 pb-5 flex-1 flex flex-col justify-between items-center space-y-3">
                   <div className="w-full space-y-3">
-                    <h3 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
+                    <h3 className="font-extrabold text-slate-900 text-base leading-snug group-hover:text-blue-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center">
                       {mod.title}
                     </h3>
 
@@ -923,11 +923,11 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
                     </div>
                   </div>
 
-                  {/* Botão Pílula Conhecer Cursos */}
+                  {/* Botão Pílula Conhecer Cursos com Sombra Flutuante */}
                   <div className="pt-2 w-full flex justify-center">
                     <button
                       type="button"
-                      className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-extrabold text-xs tracking-wide shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 border border-emerald-400/50 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs tracking-wide shadow-[0_10px_20px_-3px_rgba(5,150,105,0.45)] hover:shadow-[0_16px_28px_-3px_rgba(5,150,105,0.6)] border border-emerald-400/60 transition-all duration-300 cursor-pointer -translate-y-0.5 hover:-translate-y-1.5 active:translate-y-0"
                     >
                       <BookOpen className="w-3.5 h-3.5 text-emerald-100" />
                       <span>Conhecer Cursos</span>

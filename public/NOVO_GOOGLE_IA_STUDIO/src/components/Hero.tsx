@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sparkles, BookOpen, Award, GraduationCap, PenTool } from 'lucide-react';
 
-import bannerImg from '../assets/banner_network_innovation.jpg';
+import bannerImg from '../assets/banner_mindmap_hero.jpg';
 
 interface HeroProps {
   onSelectCategory: (category: string) => void;
@@ -12,40 +12,57 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section id="inicio" className="bg-white">
-      {/* Banner Section */}
-      <div className="relative w-full flex flex-col items-center justify-start overflow-hidden bg-[#011049]">
-        {/* Content - Área de texto dedicada no topo */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center pt-8 sm:pt-10 md:pt-12 pb-2 sm:pb-3">
-          <div className="tracking-tight leading-tight flex flex-col items-center text-center space-y-2 sm:space-y-2.5">
-            {/* Linha 1: ESDHUBEM em cima sozinho */}
-            <span className="text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-black text-cyan-400 tracking-widest uppercase drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]">
-              ESDHUBEM
-            </span>
+      {/* Banner Section com Gradiente e Iluminação Tecnológica */}
+      <div className="relative w-full overflow-hidden bg-gradient-to-b from-[#011049] via-[#041754] to-[#011049]">
+        {/* Glows de fundo cibernéticos */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none -z-0"></div>
 
-            {/* Linha 2: Desenvolvimento • Bem-Estar */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-black text-white leading-tight drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)]">
-              Desenvolvimento • Bem-Estar
-            </h1>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* Coluna Esquerda: Conteúdo Tipográfico e Chamadas */}
+            <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 sm:space-y-5">
+              {/* Badge Superior */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 text-xs sm:text-sm font-black uppercase tracking-widest shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                <Sparkles className="w-3.5 h-3.5 text-cyan-300 animate-pulse" />
+                <span>ESDHUBEM • Inovação Educacional</span>
+              </div>
 
-            {/* Linha 3: Cursos Livres em Mapas Mentais */}
-            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-[34px] font-extrabold text-[#FFC72C] leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]">
-              Cursos Livres em Mapas Mentais
-            </h2>
+              {/* Título Principal */}
+              <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-white leading-tight tracking-tight drop-shadow-[0_2px_16px_rgba(0,0,0,0.85)]">
+                Desenvolvimento <span className="text-cyan-400">•</span> Bem-Estar
+              </h1>
 
-            {/* Linha 4: A Tecnologia do Escrever e do Mapear */}
-            <p className="text-sm sm:text-lg md:text-xl lg:text-[24px] font-bold text-white tracking-wide leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
-              A Tecnologia do Escrever e do Mapear
-            </p>
+              {/* Subtítulo Dourado */}
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#FFC72C] leading-snug drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]">
+                Cursos Livres em Mapas Mentais
+              </h2>
+
+              {/* Slogan */}
+              <p className="text-base sm:text-lg lg:text-xl font-bold text-slate-100 tracking-wide leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+                A Tecnologia do Escrever e do Mapear
+              </p>
+
+              {/* Linha explicativa metodológica */}
+              <p className="text-xs sm:text-sm text-cyan-100/80 max-w-lg leading-relaxed pt-1">
+                Capacitação com metodologia visual, fixação de conteúdo em alta velocidade e certificados reconhecidos em todo o território nacional.
+              </p>
+            </div>
+
+            {/* Coluna Direita: Mapa Mental Tecnológico Iluminado sem corte */}
+            <div className="lg:col-span-6 flex justify-center items-center relative">
+              <div className="relative w-full max-w-lg lg:max-w-none rounded-2xl overflow-hidden border border-cyan-400/30 shadow-[0_0_50px_rgba(6,182,212,0.3)] bg-[#011049]/80 backdrop-blur-xs group">
+                <img
+                  src={bannerImg}
+                  alt="Mapa Mental Tecnológico ESDHUBEM"
+                  className="w-full h-auto object-cover object-center select-none pointer-events-none group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#011049]/40 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+
           </div>
-        </div>
-
-        {/* Background Image / Ilustração Central da Rede de Mapas Mentais sem sobreposição */}
-        <div className="relative z-0 w-full flex justify-center items-end overflow-hidden -mt-2 sm:-mt-4 md:-mt-6">
-          <img
-            src={bannerImg}
-            alt="ESDHUBEM • Desenvolvimento • Bem-Estar"
-            className="w-full max-w-6xl md:max-w-7xl h-auto object-contain object-bottom pointer-events-none select-none"
-          />
         </div>
       </div>
 
