@@ -18,8 +18,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onBackToHome, onNavigateToPo
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      {/* Header Imersivo */}
-      <div className="bg-[#182333] pt-24 pb-16 relative overflow-hidden">
+      {/* Header Imersivo com Gradiente Azul Tecnológico #011049 */}
+      <div className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-16 relative overflow-hidden border-b border-blue-900/60 shadow-lg">
+        {/* Glows de fundo cibernéticos */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none -z-0"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 -right-20 w-72 h-72 bg-[#FFC72C] rounded-full blur-[100px]" />
           <div className="absolute bottom-0 -left-20 w-72 h-72 bg-blue-500 rounded-full blur-[100px]" />
@@ -29,16 +32,16 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onBackToHome, onNavigateToPo
           <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
             <button
               onClick={onBackToHome}
-              className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full cursor-pointer"
+              className="inline-flex items-center gap-2 text-slate-300 hover:text-[#FFC72C] transition-colors text-sm font-medium bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full cursor-pointer border border-white/10"
             >
-              <ArrowLeft className="w-4 h-4" />
-              Voltar para a Home
+              <ArrowLeft className="w-4 h-4 text-[#FFC72C]" />
+              <span>Voltar para a Home</span>
             </button>
             <a
               href="https://praticasdebemestarsocial.github.io/esdhubem/feed.xml"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-amber-300 hover:text-amber-200 transition-colors text-sm font-bold bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 px-4 py-2 rounded-full cursor-pointer"
+              className="inline-flex items-center gap-2 text-[#FFC72C] hover:text-amber-300 transition-colors text-sm font-bold bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 border border-[#FFC72C]/30 px-4 py-2 rounded-full cursor-pointer shadow-sm"
               title="Assinar Feed RSS do Blog ESDHUBEM"
             >
               <Rss className="w-4 h-4 text-[#FFC72C]" />
@@ -46,10 +49,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onBackToHome, onNavigateToPo
             </a>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
             Blog <span className="text-[#FFC72C]">ESDHUBEM</span>
           </h1>
-          <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+          <p className="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
             Artigos, reflexões e conteúdos exclusivos sobre desenvolvimento humano, bem-estar e gestão.
           </p>
 
@@ -74,7 +77,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onBackToHome, onNavigateToPo
         {filteredPosts.length === 0 ? (
           <div className="text-center py-20 bg-white rounded-3xl border border-slate-200 shadow-sm">
             <Search className="w-12 h-12 text-slate-300 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-[#182333] mb-2">Nenhum artigo encontrado</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-2">Nenhum artigo encontrado</h3>
             <p className="text-slate-500">Tente buscar por outras palavras-chave.</p>
           </div>
         ) : (
@@ -87,14 +90,14 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onBackToHome, onNavigateToPo
               >
                 {/* Imagem do Card */}
                 <div className="relative h-56 overflow-hidden">
-                  <div className="absolute inset-0 bg-[#182333]/20 group-hover:bg-transparent transition-colors z-10" />
+                  <div className="absolute inset-0 bg-[#011049]/20 group-hover:bg-transparent transition-colors z-10" />
                   <img 
                     src={post.imageUrl} 
                     alt={post.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="bg-[#FFC72C] text-[#182333] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                    <span className="bg-[#FFC72C] text-[#011049] text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
                       {post.category}
                     </span>
                   </div>
@@ -113,7 +116,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onBackToHome, onNavigateToPo
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#182333] mb-1.5 group-hover:text-[#FFC72C] transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-slate-900 mb-1.5 group-hover:text-amber-600 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   {post.subtitle && (
@@ -131,7 +134,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onBackToHome, onNavigateToPo
                       <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
                         <User className="w-4 h-4 text-slate-500" />
                       </div>
-                      <span className="text-sm font-semibold text-[#182333]">{post.author}</span>
+                      <span className="text-sm font-semibold text-slate-900">{post.author}</span>
                     </div>
                     <button className="text-[#FFC72C] hover:text-amber-500 font-bold text-sm flex items-center gap-1 transition-colors">
                       Ler Artigo <ChevronRight className="w-4 h-4" />

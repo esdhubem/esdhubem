@@ -24132,54 +24132,59 @@ var BlogPage = ({ onBackToHome, onNavigateToPost }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "min-h-screen bg-[#F8FAFC]",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "bg-[#182333] pt-24 pb-16 relative overflow-hidden",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "absolute inset-0 opacity-10",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 -right-20 w-72 h-72 bg-[#FFC72C] rounded-full blur-[100px]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-0 -left-20 w-72 h-72 bg-blue-500 rounded-full blur-[100px]" })]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex flex-wrap items-center justify-center gap-3 mb-6",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-							onClick: onBackToHome,
-							className: "inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full cursor-pointer",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-4 h-4" }), "Voltar para a Home"]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-							href: "https://praticasdebemestarsocial.github.io/esdhubem/feed.xml",
-							target: "_blank",
-							rel: "noopener noreferrer",
-							className: "inline-flex items-center gap-2 text-amber-300 hover:text-amber-200 transition-colors text-sm font-bold bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 px-4 py-2 rounded-full cursor-pointer",
-							title: "Assinar Feed RSS do Blog ESDHUBEM",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Rss, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Feed RSS" })]
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-						className: "text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight",
-						children: ["Blog ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-[#FFC72C]",
-							children: "ESDHUBEM"
-						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-10",
-						children: "Artigos, reflexões e conteúdos exclusivos sobre desenvolvimento humano, bem-estar e gestão."
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "max-w-xl mx-auto relative group",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "h-5 w-5 text-slate-400 group-focus-within:text-[#FFC72C] transition-colors" })
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-							type: "text",
-							className: "block w-full pl-11 pr-4 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-[#FFC72C] focus:bg-white/15 transition-all shadow-lg backdrop-blur-md",
-							placeholder: "Buscar artigos por título ou tema...",
-							value: searchTerm,
-							onChange: (e) => setSearchTerm(e.target.value)
-						})]
-					})
-				]
-			})]
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-16 relative overflow-hidden border-b border-blue-900/60 shadow-lg",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-0" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none -z-0" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "absolute inset-0 opacity-10",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 -right-20 w-72 h-72 bg-[#FFC72C] rounded-full blur-[100px]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-0 -left-20 w-72 h-72 bg-blue-500 rounded-full blur-[100px]" })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-wrap items-center justify-center gap-3 mb-6",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								onClick: onBackToHome,
+								className: "inline-flex items-center gap-2 text-slate-300 hover:text-[#FFC72C] transition-colors text-sm font-medium bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full cursor-pointer border border-white/10",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Voltar para a Home" })]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+								href: "https://praticasdebemestarsocial.github.io/esdhubem/feed.xml",
+								target: "_blank",
+								rel: "noopener noreferrer",
+								className: "inline-flex items-center gap-2 text-[#FFC72C] hover:text-amber-300 transition-colors text-sm font-bold bg-[#FFC72C]/10 hover:bg-[#FFC72C]/20 border border-[#FFC72C]/30 px-4 py-2 rounded-full cursor-pointer shadow-sm",
+								title: "Assinar Feed RSS do Blog ESDHUBEM",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Rss, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Feed RSS" })]
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+							className: "text-4xl md:text-5xl font-black text-white mb-4 tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]",
+							children: ["Blog ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[#FFC72C]",
+								children: "ESDHUBEM"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed",
+							children: "Artigos, reflexões e conteúdos exclusivos sobre desenvolvimento humano, bem-estar e gestão."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "max-w-xl mx-auto relative group",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "h-5 w-5 text-slate-400 group-focus-within:text-[#FFC72C] transition-colors" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								type: "text",
+								className: "block w-full pl-11 pr-4 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-[#FFC72C] focus:bg-white/15 transition-all shadow-lg backdrop-blur-md",
+								placeholder: "Buscar artigos por título ou tema...",
+								value: searchTerm,
+								onChange: (e) => setSearchTerm(e.target.value)
+							})]
+						})
+					]
+				})
+			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16",
 			children: filteredPosts.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -24187,7 +24192,7 @@ var BlogPage = ({ onBackToHome, onNavigateToPost }) => {
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "w-12 h-12 text-slate-300 mx-auto mb-4" }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-						className: "text-xl font-bold text-[#182333] mb-2",
+						className: "text-xl font-bold text-slate-900 mb-2",
 						children: "Nenhum artigo encontrado"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -24203,7 +24208,7 @@ var BlogPage = ({ onBackToHome, onNavigateToPost }) => {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "relative h-56 overflow-hidden",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[#182333]/20 group-hover:bg-transparent transition-colors z-10" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-[#011049]/20 group-hover:bg-transparent transition-colors z-10" }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 								src: post.imageUrl,
 								alt: post.title,
@@ -24212,7 +24217,7 @@ var BlogPage = ({ onBackToHome, onNavigateToPost }) => {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "absolute top-4 left-4 z-20",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "bg-[#FFC72C] text-[#182333] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm",
+									className: "bg-[#FFC72C] text-[#011049] text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm",
 									children: post.category
 								})
 							})
@@ -24231,7 +24236,7 @@ var BlogPage = ({ onBackToHome, onNavigateToPost }) => {
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "text-xl font-bold text-[#182333] mb-1.5 group-hover:text-[#FFC72C] transition-colors line-clamp-2",
+								className: "text-xl font-bold text-slate-900 mb-1.5 group-hover:text-amber-600 transition-colors line-clamp-2",
 								children: post.title
 							}),
 							post.subtitle && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -24250,7 +24255,7 @@ var BlogPage = ({ onBackToHome, onNavigateToPost }) => {
 										className: "w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(User, { className: "w-4 h-4 text-slate-500" })
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "text-sm font-semibold text-[#182333]",
+										className: "text-sm font-semibold text-slate-900",
 										children: post.author
 									})]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
@@ -24339,7 +24344,7 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses, onN
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "min-h-screen bg-[#F8FAFC]",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "bg-[#182333] border-b border-slate-700/80 sticky top-0 z-30 shadow-md",
+			className: "bg-[#011049] border-b border-blue-900/60 sticky top-0 z-30 shadow-md",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
@@ -24596,7 +24601,7 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses, onN
 						})]
 					}),
 					post.cta && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-10 p-8 rounded-3xl bg-gradient-to-br from-[#182333] via-[#1E293B] to-[#0F172A] text-white shadow-xl border border-slate-700 text-center relative overflow-hidden",
+						className: "mt-10 p-8 rounded-3xl bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white shadow-xl border border-blue-900/60 text-center relative overflow-hidden",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "relative z-10 space-y-4 max-w-2xl mx-auto",
 							children: [
@@ -24625,7 +24630,7 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses, onN
 											} else if (onNavigateToCourses) onNavigateToCourses();
 											else onBackToHome();
 										},
-										className: "inline-flex items-center gap-2 bg-[#FFC72C] hover:bg-[#ffcf47] text-[#182333] font-black text-sm sm:text-base px-6 py-3 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer",
+										className: "inline-flex items-center gap-2 bg-[#FFC72C] hover:bg-[#ffcf47] text-[#011049] font-black text-sm sm:text-base px-6 py-3 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: post.cta.buttonText })
 									})
 								})
@@ -24661,7 +24666,7 @@ var BlogPostPage = ({ post, onBackToBlog, onBackToHome, onNavigateToCourses, onN
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: handleCopyLink,
 									"aria-label": "Copiar link do artigo",
-									className: "w-9 h-9 rounded-full bg-slate-100 hover:bg-[#182333] hover:text-white text-slate-600 flex items-center justify-center transition-colors cursor-pointer relative",
+									className: "w-9 h-9 rounded-full bg-slate-100 hover:bg-[#011049] hover:text-white text-slate-600 flex items-center justify-center transition-colors cursor-pointer relative",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "w-4 h-4" }), copied && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "absolute -top-8 bg-slate-900 text-white text-[10px] px-2 py-0.5 rounded shadow whitespace-nowrap",
 										children: "Copiado!"
@@ -25133,80 +25138,85 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "bg-[#F8FAFC] min-h-screen pb-20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "bg-[#182333] pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "absolute inset-0 opacity-10",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "absolute inset-0",
-					style: { backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }
-				})
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "max-w-7xl mx-auto relative z-10",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-					onClick: onBackToHome,
-					className: "inline-flex items-center gap-2 text-slate-300 hover:text-white mb-8 transition-colors text-sm font-semibold cursor-pointer",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Voltar para o Início" })]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "max-w-3xl",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório Aberto de Manuscritos de Estudos e Pesquisa" })]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-								className: "text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight uppercase",
-								children: ["REPOSITÓRIO ARTIGOS DOS ALUNOS ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-[#FFC72C]",
-									children: "ESDHUBEM"
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								className: "text-slate-300 text-base sm:text-lg leading-relaxed",
-								children: [
-									"Acesse a coleção oficial de manuscritos de conclusão de curso, artigos, pesquisas e de estudos publicados pela coordenação pedagógica e por alunos da ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "ESDHUBEM" }),
-									", preservados digitalmente com atribuição de ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "DOI no Zenodo / CERN" }),
-									"."
-								]
-							})
-						]
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-blue-900/60 shadow-lg",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-0" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none -z-0" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "absolute inset-0 opacity-10",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "absolute inset-0",
+						style: { backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "max-w-7xl mx-auto relative z-10",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						onClick: onBackToHome,
+						className: "inline-flex items-center gap-2 text-slate-300 hover:text-[#FFC72C] mb-8 transition-colors text-sm font-semibold cursor-pointer",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowLeft, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Voltar para o Início" })]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "bg-white/10 backdrop-blur-md border border-white/15 p-6 rounded-3xl w-full lg:w-auto shrink-0 shadow-2xl flex flex-col gap-3",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex items-center gap-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-5 h-5" })
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-xs text-slate-300 font-medium",
-									children: "Indexação Oficial"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-sm font-bold text-white",
-									children: "Zenodo (CERN / Suíça)"
-								})] })]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-full h-px bg-white/10" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex items-center gap-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "w-10 h-10 rounded-xl bg-[#FFC72C]/20 flex items-center justify-center text-[#FFC72C] font-bold",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-5 h-5" })
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-xs text-slate-300 font-medium",
-									children: "Atribuição de Registro"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-sm font-bold text-white",
-									children: "DOI Criptográfico Único"
-								})] })]
-							})
-						]
+						className: "flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "max-w-3xl",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/15 backdrop-blur-md border border-cyan-400/30 text-cyan-300 text-xs font-bold tracking-wide mb-4 shadow-[0_0_15px_rgba(6,182,212,0.2)]",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-4 h-4 text-cyan-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Repositório Aberto de Manuscritos de Estudos e Pesquisa" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+									className: "text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight uppercase drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]",
+									children: ["REPOSITÓRIO ARTIGOS DOS ALUNOS ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[#FFC72C]",
+										children: "ESDHUBEM"
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "text-slate-200 text-base sm:text-lg leading-relaxed",
+									children: [
+										"Acesse a coleção oficial de manuscritos de conclusão de curso, artigos, pesquisas e de estudos publicados pela coordenação pedagógica e por alunos da ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "ESDHUBEM" }),
+										", preservados digitalmente com atribuição de ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "DOI no Zenodo / CERN" }),
+										"."
+									]
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-[#011049]/90 border border-blue-900/80 p-6 rounded-3xl w-full lg:w-auto shrink-0 shadow-2xl flex flex-col gap-3 backdrop-blur-sm",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-5 h-5" })
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs text-slate-300 font-medium",
+										children: "Indexação Oficial"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-sm font-bold text-white",
+										children: "Zenodo (CERN / Suíça)"
+									})] })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-full h-px bg-blue-900/60" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "w-10 h-10 rounded-xl bg-[#FFC72C]/20 flex items-center justify-center text-[#FFC72C] font-bold",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-5 h-5" })
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs text-slate-300 font-medium",
+										children: "Atribuição de Registro"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-sm font-bold text-white",
+										children: "DOI Criptográfico Único"
+									})] })]
+								})
+							]
+						})]
 					})]
-				})]
-			})]
+				})
+			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-20 space-y-8",
 			children: [
@@ -25356,7 +25366,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 						className: "flex flex-wrap items-center gap-2 w-full md:w-auto",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 							onClick: () => setSelectedCategory(null),
-							className: `px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${selectedCategory === null ? "bg-[#243042] text-white shadow-md" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`,
+							className: `px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${selectedCategory === null ? "bg-[#011049] text-white shadow-md border border-blue-900/60" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`,
 							children: [
 								"Todos (",
 								ACADEMIC_ARTICLES.length,
@@ -25431,8 +25441,8 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 								className: "flex items-center gap-2 shrink-0 w-full md:w-auto justify-end border-t md:border-t-0 pt-4 md:pt-0 border-slate-100",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									onClick: () => onSelectArticle(article),
-									className: "px-4 py-2.5 rounded-xl bg-[#243042] hover:bg-[#182333] text-white font-bold text-xs transition-colors flex items-center gap-1.5 cursor-pointer",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-3.5 h-3.5" })]
+									className: "px-4 py-2.5 rounded-xl bg-[#011049] hover:bg-[#061e47] border border-blue-900/60 hover:border-[#FFC72C]/50 text-white font-bold text-xs transition-colors flex items-center gap-1.5 cursor-pointer shadow-xs",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Detalhes" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-3.5 h-3.5 text-[#FFC72C]" })]
 								})
 							})]
 						}, article.id))
@@ -25459,7 +25469,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 								className: "p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "w-7 h-7 rounded-full bg-[#182333] text-white text-xs font-bold flex items-center justify-center",
+										className: "w-7 h-7 rounded-full bg-[#011049] text-[#FFC72C] border border-blue-900/60 text-xs font-bold flex items-center justify-center",
 										children: "1"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
@@ -25476,7 +25486,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 								className: "p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "w-7 h-7 rounded-full bg-[#182333] text-white text-xs font-bold flex items-center justify-center",
+										className: "w-7 h-7 rounded-full bg-[#011049] text-[#FFC72C] border border-blue-900/60 text-xs font-bold flex items-center justify-center",
 										children: "2"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
@@ -25493,7 +25503,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 								className: "p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "w-7 h-7 rounded-full bg-[#182333] text-white text-xs font-bold flex items-center justify-center",
+										className: "w-7 h-7 rounded-full bg-[#011049] text-[#FFC72C] border border-blue-900/60 text-xs font-bold flex items-center justify-center",
 										children: "3"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
@@ -25510,7 +25520,7 @@ var ArtigosPage = ({ onBackToHome, onSelectArticle, onNavigate }) => {
 								className: "p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "w-7 h-7 rounded-full bg-[#182333] text-white text-xs font-bold flex items-center justify-center",
+										className: "w-7 h-7 rounded-full bg-[#011049] text-[#FFC72C] border border-blue-900/60 text-xs font-bold flex items-center justify-center",
 										children: "4"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
@@ -25544,86 +25554,91 @@ var ArtigoDetailPage = ({ article, onBackToArticles, onBackToHome }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "bg-[#F8FAFC] min-h-screen pb-20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "bg-[#182333] text-white pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "absolute inset-0 opacity-5",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "absolute inset-0",
-					style: { backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }
+			className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden border-b border-blue-900/60 shadow-lg",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-0" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none -z-0" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "absolute inset-0 opacity-5",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "absolute inset-0",
+						style: { backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "max-w-6xl mx-auto relative z-10",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-2 text-xs sm:text-sm text-slate-300 mb-6 flex-wrap",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								onClick: onBackToHome,
+								className: "hover:text-white transition-colors cursor-pointer",
+								children: "Início"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "/" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								onClick: onBackToArticles,
+								className: "hover:text-white transition-colors cursor-pointer text-[#FFC72C] font-semibold",
+								children: "Repositório Acadêmico"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "/" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-slate-400 truncate max-w-xs",
+								children: article.title
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-4",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex flex-wrap items-center gap-2",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold flex items-center gap-1.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Acesso Aberto (Open Access)" })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "px-3 py-1 rounded-full bg-amber-500/20 text-[#FFC72C] border border-amber-500/30 text-xs font-bold flex items-center gap-1.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["DOI Verificado: ", article.doi] })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "px-3 py-1 rounded-full bg-white/10 text-slate-200 border border-white/15 text-xs font-medium",
+										children: article.category
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+								className: "text-2xl sm:text-4xl font-black text-white leading-tight tracking-tight",
+								children: article.title
+							}),
+							article.subtitle && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-slate-300 text-base sm:text-lg leading-relaxed max-w-4xl",
+								children: article.subtitle
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "pt-4 border-t border-white/10 flex flex-wrap items-center gap-y-3 gap-x-6 text-xs sm:text-sm text-slate-300",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(User, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "font-bold text-white",
+											children: article.authors.join(", ")
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Building, { className: "w-4 h-4 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: article.institution })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-2",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calendar, { className: "w-4 h-4 text-cyan-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Publicado em: ", article.publicationDate] })]
+									})
+								]
+							})
+						]
+					})]
 				})
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "max-w-6xl mx-auto relative z-10",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex items-center gap-2 text-xs sm:text-sm text-slate-300 mb-6 flex-wrap",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-							onClick: onBackToHome,
-							className: "hover:text-white transition-colors cursor-pointer",
-							children: "Início"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "/" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-							onClick: onBackToArticles,
-							className: "hover:text-white transition-colors cursor-pointer text-[#FFC72C] font-semibold",
-							children: "Repositório Acadêmico"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "/" }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-slate-400 truncate max-w-xs",
-							children: article.title
-						})
-					]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "space-y-4",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex flex-wrap items-center gap-2",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									className: "px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold flex items-center gap-1.5",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Acesso Aberto (Open Access)" })]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									className: "px-3 py-1 rounded-full bg-amber-500/20 text-[#FFC72C] border border-amber-500/30 text-xs font-bold flex items-center gap-1.5",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["DOI Verificado: ", article.doi] })]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "px-3 py-1 rounded-full bg-white/10 text-slate-200 border border-white/15 text-xs font-medium",
-									children: article.category
-								})
-							]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-							className: "text-2xl sm:text-4xl font-black text-white leading-tight tracking-tight",
-							children: article.title
-						}),
-						article.subtitle && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-slate-300 text-base sm:text-lg leading-relaxed max-w-4xl",
-							children: article.subtitle
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "pt-4 border-t border-white/10 flex flex-wrap items-center gap-y-3 gap-x-6 text-xs sm:text-sm text-slate-300",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(User, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "font-bold text-white",
-										children: article.authors.join(", ")
-									})]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Building, { className: "w-4 h-4 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: article.institution })]
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calendar, { className: "w-4 h-4 text-cyan-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["Publicado em: ", article.publicationDate] })]
-								})
-							]
-						})
-					]
-				})]
-			})]
+			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 space-y-8",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -25646,7 +25661,7 @@ var ArtigoDetailPage = ({ article, onBackToArticles, onBackToHome }) => {
 						href: article.zenodoUrl,
 						target: "_blank",
 						rel: "noreferrer",
-						className: "flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-[#243042] hover:bg-[#182333] text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer border border-slate-700 hover:border-slate-600",
+						className: "flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-[#011049] hover:bg-[#061e47] text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer border border-blue-900/60 hover:border-[#FFC72C]/50",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-4 h-4 text-[#FFC72C]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ver Registro no Zenodo" })]
 					})
 				})]
@@ -25867,7 +25882,7 @@ var ArtigoDetailPage = ({ article, onBackToArticles, onBackToHome }) => {
 							]
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "bg-gradient-to-br from-[#182333] to-[#243042] text-white rounded-3xl p-6 space-y-4 shadow-xl border border-slate-700",
+						className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white rounded-3xl p-6 space-y-4 shadow-xl border border-blue-900/60",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "w-10 h-10 rounded-xl bg-[#FFC72C]/20 flex items-center justify-center text-[#FFC72C]",

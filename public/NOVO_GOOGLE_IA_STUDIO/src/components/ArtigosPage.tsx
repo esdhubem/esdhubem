@@ -56,8 +56,12 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
 
   return (
     <div className="bg-[#F8FAFC] min-h-screen pb-20">
-      {/* Top Banner / Hero */}
-      <div className="bg-[#182333] pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white">
+      {/* Top Banner / Hero com Gradiente Azul Tecnológico #011049 */}
+      <div className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-white border-b border-blue-900/60 shadow-lg">
+        {/* Glows de fundo cibernéticos */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none -z-0"></div>
+
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -71,28 +75,28 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
         <div className="max-w-7xl mx-auto relative z-10">
           <button
             onClick={onBackToHome}
-            className="inline-flex items-center gap-2 text-slate-300 hover:text-white mb-8 transition-colors text-sm font-semibold cursor-pointer"
+            className="inline-flex items-center gap-2 text-slate-300 hover:text-[#FFC72C] mb-8 transition-colors text-sm font-semibold cursor-pointer"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-4 h-4 text-[#FFC72C]" />
             <span>Voltar para o Início</span>
           </button>
 
           <div className="flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FFC72C] text-xs font-bold tracking-wide mb-4">
-                <BookOpen className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/15 backdrop-blur-md border border-cyan-400/30 text-cyan-300 text-xs font-bold tracking-wide mb-4 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
+                <BookOpen className="w-4 h-4 text-cyan-300" />
                 <span>Repositório Aberto de Manuscritos de Estudos e Pesquisa</span>
               </div>
-              <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight uppercase">
+              <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight uppercase drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
                 REPOSITÓRIO ARTIGOS DOS ALUNOS <span className="text-[#FFC72C]">ESDHUBEM</span>
               </h1>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
                 Acesse a coleção oficial de manuscritos de conclusão de curso, artigos, pesquisas e de estudos publicados pela coordenação pedagógica e por alunos da <strong>ESDHUBEM</strong>, preservados digitalmente com atribuição de <strong>DOI no Zenodo / CERN</strong>.
               </p>
             </div>
 
             {/* Quick Stat Badge */}
-            <div className="bg-white/10 backdrop-blur-md border border-white/15 p-6 rounded-3xl w-full lg:w-auto shrink-0 shadow-2xl flex flex-col gap-3">
+            <div className="bg-[#011049]/90 border border-blue-900/80 p-6 rounded-3xl w-full lg:w-auto shrink-0 shadow-2xl flex flex-col gap-3 backdrop-blur-sm">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">
                   <ShieldCheck className="w-5 h-5" />
@@ -102,7 +106,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
                   <p className="text-sm font-bold text-white">Zenodo (CERN / Suíça)</p>
                 </div>
               </div>
-              <div className="w-full h-px bg-white/10" />
+              <div className="w-full h-px bg-blue-900/60" />
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-[#FFC72C]/20 flex items-center justify-center text-[#FFC72C] font-bold">
                   <Award className="w-5 h-5" />
@@ -243,7 +247,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
               onClick={() => setSelectedCategory(null)}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 selectedCategory === null
-                  ? 'bg-[#243042] text-white shadow-md'
+                  ? 'bg-[#011049] text-white shadow-md border border-blue-900/60'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -322,10 +326,10 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
                 <div className="flex items-center gap-2 shrink-0 w-full md:w-auto justify-end border-t md:border-t-0 pt-4 md:pt-0 border-slate-100">
                   <button
                     onClick={() => onSelectArticle(article)}
-                    className="px-4 py-2.5 rounded-xl bg-[#243042] hover:bg-[#182333] text-white font-bold text-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+                    className="px-4 py-2.5 rounded-xl bg-[#011049] hover:bg-[#061e47] border border-blue-900/60 hover:border-[#FFC72C]/50 text-white font-bold text-xs transition-colors flex items-center gap-1.5 cursor-pointer shadow-xs"
                   >
                     <span>Ver Detalhes</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
+                    <ChevronRight className="w-3.5 h-3.5 text-[#FFC72C]" />
                   </button>
                 </div>
               </div>
@@ -351,7 +355,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-              <div className="w-7 h-7 rounded-full bg-[#182333] text-white text-xs font-bold flex items-center justify-center">
+              <div className="w-7 h-7 rounded-full bg-[#011049] text-[#FFC72C] border border-blue-900/60 text-xs font-bold flex items-center justify-center">
                 1
               </div>
               <h4 className="font-bold text-sm text-slate-900">Escreva seu Artigo</h4>
@@ -361,7 +365,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
             </div>
 
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-              <div className="w-7 h-7 rounded-full bg-[#182333] text-white text-xs font-bold flex items-center justify-center">
+              <div className="w-7 h-7 rounded-full bg-[#011049] text-[#FFC72C] border border-blue-900/60 text-xs font-bold flex items-center justify-center">
                 2
               </div>
               <h4 className="font-bold text-sm text-slate-900">Deposite no Zenodo</h4>
@@ -371,7 +375,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
             </div>
 
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-              <div className="w-7 h-7 rounded-full bg-[#182333] text-white text-xs font-bold flex items-center justify-center">
+              <div className="w-7 h-7 rounded-full bg-[#011049] text-[#FFC72C] border border-blue-900/60 text-xs font-bold flex items-center justify-center">
                 3
               </div>
               <h4 className="font-bold text-sm text-slate-900">Gerador de DOI</h4>
@@ -381,7 +385,7 @@ export const ArtigosPage: React.FC<ArtigosPageProps> = ({
             </div>
 
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-              <div className="w-7 h-7 rounded-full bg-[#182333] text-white text-xs font-bold flex items-center justify-center">
+              <div className="w-7 h-7 rounded-full bg-[#011049] text-[#FFC72C] border border-blue-900/60 text-xs font-bold flex items-center justify-center">
                 4
               </div>
               <h4 className="font-bold text-sm text-slate-900">Submeta na ESDHUBEM</h4>

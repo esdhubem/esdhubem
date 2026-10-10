@@ -41,8 +41,11 @@ export const ArtigoDetailPage: React.FC<ArtigoDetailPageProps> = ({
 
   return (
     <div className="bg-[#F8FAFC] min-h-screen pb-20">
-      {/* Header Banner - Academic Repository Style */}
-      <div className="bg-[#182333] text-white pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Header Banner - Academic Repository Style com Gradiente Azul Tecnológico #011049 */}
+      <div className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden border-b border-blue-900/60 shadow-lg">
+        {/* Glows de fundo cibernéticos */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none -z-0"></div>
         {/* Background Subtle Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -137,7 +140,7 @@ export const ArtigoDetailPage: React.FC<ArtigoDetailPageProps> = ({
               href={article.zenodoUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-[#243042] hover:bg-[#182333] text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer border border-slate-700 hover:border-slate-600"
+              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-[#011049] hover:bg-[#061e47] text-white font-bold text-xs sm:text-sm transition-all shadow-md cursor-pointer border border-blue-900/60 hover:border-[#FFC72C]/50"
             >
               <ExternalLink className="w-4 h-4 text-[#FFC72C]" />
               <span>Ver Registro no Zenodo</span>
@@ -341,7 +344,7 @@ export const ArtigoDetailPage: React.FC<ArtigoDetailPageProps> = ({
             </div>
 
             {/* Call to Action for ESDHUBEM Students */}
-            <div className="bg-gradient-to-br from-[#182333] to-[#243042] text-white rounded-3xl p-6 space-y-4 shadow-xl border border-slate-700">
+            <div className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white rounded-3xl p-6 space-y-4 shadow-xl border border-blue-900/60">
               <div className="w-10 h-10 rounded-xl bg-[#FFC72C]/20 flex items-center justify-center text-[#FFC72C]">
                 <Award className="w-5 h-5" />
               </div>

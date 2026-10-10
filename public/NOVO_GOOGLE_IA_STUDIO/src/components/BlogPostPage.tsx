@@ -114,8 +114,8 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      {/* Barra de Navegação Superior Fixa/Topo */}
-      <div className="bg-[#182333] border-b border-slate-700/80 sticky top-0 z-30 shadow-md">
+      {/* Barra de Navegação Superior Fixa/Topo com Azul Profundo ESDHUBEM #011049 */}
+      <div className="bg-[#011049] border-b border-blue-900/60 sticky top-0 z-30 shadow-md">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
           <button
             onClick={onBackToBlog}
@@ -374,9 +374,9 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
             </nav>
           )}
 
-          {/* CTA Opcional do Artigo */}
+          {/* CTA Opcional do Artigo com Gradiente Azul Tecnológico #011049 */}
           {post.cta && (
-            <div className="mt-10 p-8 rounded-3xl bg-gradient-to-br from-[#182333] via-[#1E293B] to-[#0F172A] text-white shadow-xl border border-slate-700 text-center relative overflow-hidden">
+            <div className="mt-10 p-8 rounded-3xl bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white shadow-xl border border-blue-900/60 text-center relative overflow-hidden">
               <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
                 <span className="inline-block bg-[#FFC72C]/20 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                   Matrícula Aberta • Acesso Imediato
@@ -399,7 +399,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
                         onBackToHome();
                       }
                     }}
-                    className="inline-flex items-center gap-2 bg-[#FFC72C] hover:bg-[#ffcf47] text-[#182333] font-black text-sm sm:text-base px-6 py-3 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                    className="inline-flex items-center gap-2 bg-[#FFC72C] hover:bg-[#ffcf47] text-[#011049] font-black text-sm sm:text-base px-6 py-3 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer"
                   >
                     <span>{post.cta.buttonText}</span>
                   </button>
@@ -438,7 +438,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
               <button 
                 onClick={handleCopyLink}
                 aria-label="Copiar link do artigo"
-                className="w-9 h-9 rounded-full bg-slate-100 hover:bg-[#182333] hover:text-white text-slate-600 flex items-center justify-center transition-colors cursor-pointer relative"
+                className="w-9 h-9 rounded-full bg-slate-100 hover:bg-[#011049] hover:text-white text-slate-600 flex items-center justify-center transition-colors cursor-pointer relative"
               >
                 <Copy className="w-4 h-4" />
                 {copied && (
