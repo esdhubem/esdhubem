@@ -555,6 +555,10 @@
     position: relative;
   }
 
+  .static {
+    position: static;
+  }
+
   .sticky {
     position: sticky;
   }
@@ -2361,6 +2365,16 @@
     }
   }
 
+  .border-emerald-500\/40 {
+    border-color: #00bb7f66;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-emerald-500\/40 {
+      border-color: color-mix(in oklab, var(--color-emerald-500) 40%, transparent);
+    }
+  }
+
   .border-emerald-500\/80 {
     border-color: #00bb7fcc;
   }
@@ -2933,6 +2947,10 @@
     .bg-amber-900\/30 {
       background-color: color-mix(in oklab, var(--color-amber-900) 30%, transparent);
     }
+  }
+
+  .bg-black {
+    background-color: var(--color-black);
   }
 
   .bg-black\/10 {
@@ -3788,6 +3806,11 @@
 
   .from-\[\#FFC72C\] {
     --tw-gradient-from: #ffc72c;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+
+  .from-\[\#e8f2fc\] {
+    --tw-gradient-from: #e8f2fc;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
@@ -5819,6 +5842,16 @@
     }
   }
 
+  .shadow-blue-950\/15 {
+    --tw-shadow-color: #16245626;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .shadow-blue-950\/15 {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-blue-950) 15%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+
   .shadow-blue-950\/40 {
     --tw-shadow-color: #16245666;
   }
@@ -6474,6 +6507,10 @@
 
     .hover\:bg-\[\#ffcf47\]:hover {
       background-color: #ffcf47;
+    }
+
+    .hover\:bg-\[\#ffdf79\]:hover {
+      background-color: #ffdf79;
     }
 
     .hover\:bg-amber-50:hover {
@@ -7137,6 +7174,10 @@
   @media (min-width: 40rem) {
     .sm\:col-span-2 {
       grid-column: span 2 / span 2;
+    }
+
+    .sm\:mb-10 {
+      margin-bottom: calc(var(--spacing) * 10);
     }
 
     .sm\:block {

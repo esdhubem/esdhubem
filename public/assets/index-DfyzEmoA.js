@@ -15403,6 +15403,140 @@ var cat_consciencia_tech_default = new URL("cat_consciencia_tech-BT-99Fw-.jpg", 
 //#region src/assets/cat_bemestar_tech.jpg
 var cat_bemestar_tech_default = new URL("cat_bemestar_tech-Y7Tav0iK.jpg", import.meta.url).href;
 //#endregion
+//#region src/components/WelcomeVideoSection.tsx
+var WelcomeVideoSection = () => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "py-10 sm:py-14 bg-gradient-to-b from-[#e8f2fc] via-white to-white border-b border-slate-200",
+		id: "apresentacao-esdhubem",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "text-center max-w-3xl mx-auto mb-8 sm:mb-10",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-900 text-xs sm:text-sm font-extrabold tracking-wide uppercase shadow-2xs mb-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 text-blue-700 animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Vídeo de Boas-Vindas & Apresentação" })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
+							className: "text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight leading-tight",
+							children: ["Conheça a Proposta da ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-[#011049]",
+								children: "ESDHUBEM"
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-2 text-sm sm:text-base text-slate-600 leading-relaxed",
+							children: "Um vídeo breve para você ficar por dentro da nossa escola, entender o método de ensino em mapas mentais e descobrir como potencializar seu aprendizado."
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "relative rounded-3xl overflow-hidden bg-slate-950 border border-slate-300/80 shadow-2xl shadow-blue-950/15",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "px-4 py-3 bg-[#011049] border-b border-white/10 flex items-center justify-between",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-2",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-rose-500" }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-amber-500" }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "w-2.5 h-2.5 rounded-full bg-emerald-500" }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-xs font-bold text-white ml-2 truncate",
+										children: "Apresentação Oficial • Bem-vindo à ESDHUBEM"
+									})
+								]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "flex items-center gap-2",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "text-[11px] font-black text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-0.5 rounded-full flex items-center gap-1",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tv, { className: "w-3 h-3 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Odysee HD" })]
+								})
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "relative w-full aspect-video bg-black",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("iframe", {
+								id: "welcome-odysee-iframe",
+								title: "Bem-vindo à ESDHUBEM - Apresentação da Escola",
+								style: {
+									width: "100%",
+									height: "100%",
+									border: "none"
+								},
+								src: "https://odysee.com/$/embed/@esdhubem:a/Bem-vindo-a-ESDHUBEM:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ",
+								allowFullScreen: true
+							})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "px-5 py-3.5 bg-slate-900 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-2 text-slate-300 font-medium text-center sm:text-left",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Assista diretamente acima ou acesse pelo canal oficial da ESDHUBEM" })]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+								href: "https://odysee.com/@esdhubem:a/Bem-vindo-a-ESDHUBEM:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ&lid=56adb18446e756be8f3d80c8dda78b83024bd5c7",
+								target: "_blank",
+								rel: "noopener noreferrer",
+								className: "inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#FFC72C] hover:bg-[#ffdf79] text-[#011049] font-black transition-all shadow-sm hover:scale-105 shrink-0",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "w-3.5 h-3.5 fill-current" }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Assistir no Odysee" }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, { className: "w-3 h-3" })
+								]
+							})]
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-start gap-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700 shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, { className: "w-5 h-5" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+								className: "text-xs font-black uppercase text-slate-800 tracking-wider",
+								children: "Método Visual"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs text-slate-600 mt-0.5 leading-snug",
+								children: "Mapas mentais que aceleram a fixação e o entendimento profundo."
+							})] })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-start gap-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GraduationCap, { className: "w-5 h-5" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+								className: "text-xs font-black uppercase text-slate-800 tracking-wider",
+								children: "Certificação Válida"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs text-slate-600 mt-0.5 leading-snug",
+								children: "Cursos livres com amparo legal para currículo e horas complementares."
+							})] })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-start gap-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 shrink-0",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-5 h-5" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+								className: "text-xs font-black uppercase text-slate-800 tracking-wider",
+								children: "Estude no seu Tempo"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs text-slate-600 mt-0.5 leading-snug",
+								children: "Acesso flexível em qualquer dispositivo, sem travas ou prazos rígidos."
+							})] })]
+						})
+					]
+				})
+			]
+		})
+	});
+};
+//#endregion
 //#region src/components/CategoryGrid.tsx
 var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigateToCategoriesPage, onNavigateToCategoryDetail, onNavigate }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
@@ -15420,6 +15554,7 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 				})
 			})
 		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(WelcomeVideoSection, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "py-14 sm:py-18 bg-white border-b border-slate-200",
 			id: "explorar-categorias",
@@ -36568,6 +36703,59 @@ function App() {
 	});
 }
 //#endregion
+//#region src/components/ErrorBoundary.tsx
+var ErrorBoundary = class extends import_react.Component {
+	constructor(..._args) {
+		super(..._args);
+		this.state = {
+			hasError: false,
+			error: null
+		};
+	}
+	static getDerivedStateFromError(error) {
+		return {
+			hasError: true,
+			error
+		};
+	}
+	componentDidCatch(error, errorInfo) {
+		console.error("ErrorBoundary capturou um erro:", error, errorInfo);
+	}
+	render() {
+		if (this.state.hasError) return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "min-h-screen bg-[#F8FAFC] flex items-center justify-center p-6 text-center",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "max-w-md bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-4",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mx-auto text-2xl font-black",
+						children: "⚠️"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "text-xl font-black text-slate-900",
+						children: "Atualização em andamento"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-sm text-slate-600 leading-relaxed",
+						children: "O portal foi atualizado com novos conteúdos. Se a página não recarregar automaticamente, clique no botão abaixo para carregar a versão mais recente."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+						onClick: () => {
+							window.location.reload();
+						},
+						className: "w-full py-3 px-6 bg-[#011049] hover:bg-[#061e47] text-[#FFC72C] font-black rounded-xl text-sm transition-all cursor-pointer shadow-md",
+						children: "Recarregar Página"
+					})
+				]
+			})
+		});
+		return this.props.children;
+	}
+};
+//#endregion
 //#region src/main.tsx
-(0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(App, {}) }));
+if (typeof window !== "undefined" && "serviceWorker" in navigator) navigator.serviceWorker.getRegistrations().then((registrations) => {
+	for (const registration of registrations) registration.unregister();
+}).catch(() => {});
+(0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ErrorBoundary, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(App, {}) }) }));
 //#endregion

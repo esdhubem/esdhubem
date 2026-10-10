@@ -30,6 +30,7 @@ import catPessoalImg from '../assets/cat_pessoal_tech.jpg';
 import catProfImg from '../assets/cat_prof_tech.jpg';
 import catConscienciaImg from '../assets/cat_consciencia_tech.jpg';
 import catBemEstarImg from '../assets/cat_bemestar_tech.jpg';
+import { WelcomeVideoSection } from './WelcomeVideoSection';
 
 interface CategoryGridProps {
   categories: CategoryItem[];
@@ -104,6 +105,9 @@ export const CategoryGrid: React.FC<CategoryGridProps> = ({
           </h2>
         </div>
       </section>
+
+      {/* Vídeo de Apresentação e Boas-Vindas da Escola (Exatamente onde indicado pela seta vermelha) */}
+      <WelcomeVideoSection />
 
       {/* Seção Áreas de Conhecimento / Desenvolvimento (Posicionada logo abaixo da faixa amarela) */}
       <section className="py-14 sm:py-18 bg-white border-b border-slate-200" id="explorar-categorias">
