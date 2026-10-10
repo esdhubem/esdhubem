@@ -15227,7 +15227,7 @@ var CategoryGrid = ({ categories, selectedCategory, onSelectCategory, onNavigate
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 					className: "text-2xl sm:text-3xl lg:text-4xl text-slate-900 leading-snug font-black tracking-tight max-w-4xl mx-auto",
 					children: [
-						"Aprenda com Videoaulas. Mapas Mentais. ",
+						"Aprenda com Videoaulas & Mapas Mentais. ",
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", { className: "hidden sm:inline" }),
 						"Receba seu certificado com inovação!"
 					]
