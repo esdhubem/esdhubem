@@ -972,48 +972,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
         </div>
 
-        {/* Card 4: 🤝 Abertura para Parcerias Institucionais */}
-        <div className="bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] rounded-3xl p-6 sm:p-8 lg:p-10 text-white shadow-2xl border border-blue-900/60 space-y-6">
-          <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
-            <div className="space-y-4 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold">
-                <Handshake className="w-4 h-4 text-[#FFC72C]" />
-                <span>COOPERAÇÃO ACADÊMICA & REDE DE PESQUISA</span>
-              </div>
-
-              <h2 className="text-2xl sm:text-3xl font-black text-white">
-                🤝 Abertura para Parcerias Institucionais
-              </h2>
-
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                A <strong className="text-white font-semibold">ESDHUBEM</strong> está de portas abertas para construir parcerias com revistas científicas, núcleos universitários de extensão e ecossistemas de publicação aberta. Acreditamos que democratizar o acesso à informação e dar voz às pesquisas dos nossos alunos é o caminho mais rápido para acelerar novas descobertas e transformar a sociedade.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-3 shrink-0 w-full sm:w-auto">
-              <a
-                href="https://wa.me/5511960319637?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20parcerias%20institucionais%20e%20publica%C3%A7%C3%A3o%20cient%C3%ADfica%20com%20a%20ESDHUBEM"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold px-6 py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md cursor-pointer"
-              >
-                <MessageCircle className="w-4 h-4 fill-white" />
-                <span>Propor Parceria Institucional</span>
-              </a>
-
-              {onNavigateToArticles && (
-                <button
-                  type="button"
-                  onClick={onNavigateToArticles}
-                  className="bg-[#FFC72C] hover:bg-[#ffcf4b] text-slate-950 font-black px-6 py-3 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md cursor-pointer"
-                >
-                  <BookOpen className="w-4 h-4 text-slate-950" />
-                  <span>Repositório de Artigos</span>
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
