@@ -968,8 +968,8 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                 </div>
 
                 {/* Course Card Content — Padrão Elegante e Direto da Página Inicial */}
-                <div className="pt-6 px-4 pb-5 flex-1 flex flex-col justify-between items-center text-center space-y-3">
-                  <div className="w-full space-y-2">
+                <div className="pt-6 px-4 pb-5 flex-1 flex flex-col justify-between items-center text-center space-y-4">
+                  <div className="w-full space-y-1.5">
                     <div className="text-[10px] font-bold text-blue-700 uppercase tracking-wider">
                       {course.category}
                     </div>
@@ -982,9 +982,6 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                     >
                       {course.title}
                     </h4>
-                    <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
-                      {course.subtitle}
-                    </p>
                   </div>
 
                   {/* Botão Pílula Verde Padrão Página Inicial */}
