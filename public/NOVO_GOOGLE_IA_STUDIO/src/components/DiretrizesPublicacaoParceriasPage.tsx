@@ -508,7 +508,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Ouro é destinado ao estudante que entrega a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> um Manuscrito de Conclusão de Curso estruturado ou artigo de investigação científica com registro DOI.
+                  O nível Ouro é destinado ao estudante que entrega a <strong>Tríade de Fixação Ativa</strong> do curso, mas o texto será um <strong>Manuscrito de Conclusão de Curso</strong> estruturado ou artigo de investigação científica com registro <strong>DOI</strong>.
                 </p>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
