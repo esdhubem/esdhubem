@@ -180,7 +180,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Bronze: Aproveitamento Básico</h3>
-                      <span className="text-sm text-amber-800 font-semibold">Tríade de Fixação Ativa & Retenção do Conteúdo</span>
+                      <span className="text-sm text-amber-800 font-semibold">Tríade de Fixação & Verbete Enciclopédico na Wiki</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
@@ -196,7 +196,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                 {/* Quadro Único Explicativo Completo */}
                 <div className="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    Focado na consolidação prática do aprendizado através da <strong>metodologia pedagógica de Fixação Ativa</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a tríade de fixação:
+                    Focado na consolidação prática do aprendizado através da <strong>metodologia pedagógica de Fixação Ativa</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a tríade de fixação para publicação na <strong>Wiki da Escola</strong>:
                   </p>
                   
                   <div className="space-y-2.5 pt-2 border-t border-amber-200/60">
@@ -208,11 +208,11 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-amber-800 font-bold shrink-0 text-base">✍️</span>
-                        <span><strong>Texto Síntese (Mínimo de 500 palavras):</strong> Redação reflexiva de síntese autoral com suas próprias palavras para fixação profunda.</span>
+                        <span><strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto formal e informativo conceituando o tema central (significado, histórico e aplicação prática).</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-amber-800 font-bold shrink-0 text-base">🎙️</span>
-                        <span><strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando com clareza o aprendizado (Técnica Feynman de retenção).</span>
+                        <span><strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando oralmente o conceito com clareza (Técnica Feynman de retenção).</span>
                       </li>
                     </ul>
                   </div>
@@ -220,7 +220,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                   <div className="pt-3 border-t border-amber-200/60 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white/95 p-3.5 rounded-xl border border-amber-200 text-slate-800 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Sistema interno da escola (Painel EAD do Aluno).</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Wiki Oficial da ESDHUBEM com registro de autoria no OSF (Open Science Framework).</span>
                     </div>
                     <div className="bg-white/95 p-3.5 rounded-xl border border-amber-200 text-slate-800 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
@@ -256,14 +256,14 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    O aluno desenvolve um artigo de blog aprofundado e estratégico de <strong>1.200 a 2.500 palavras</strong> — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições de busca orgânica do <strong>Google (SEO)</strong>. O artigo é publicado no Blog Oficial da ESDHUBEM com autoria e perfil do estudante.
+                    O aluno desenvolve um artigo de blog aprofundado e estratégico de <strong>1.200 a 2.500 palavras</strong> — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições de busca orgânica do <strong>Google (SEO)</strong>. O artigo é publicado no Blog Oficial e Wiki da ESDHUBEM com autoria e perfil do estudante.
                   </p>
 
                   <div className="space-y-2.5 pt-2 border-t border-slate-200">
                     <strong className="block text-sm font-bold text-slate-900 uppercase tracking-wide">📌 Requisitos & Benefícios de Autoridade:</strong>
                     <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
                       <li>Elaboração de um artigo de <strong>1.200 a 2.500 palavras</strong> com estrutura escaneável (subtítulos H2/H3, estudo de caso ou aplicação prática) e boas práticas de SEO.</li>
-                      <li>Revisão, orientação e validação da equipe editorial e pedagógica da escola.</li>
+                      <li>Comprovante de registro de autoria prévio no <strong>OSF (Open Science Framework)</strong>.</li>
                       <li><strong>Benefício de Portfólio:</strong> Página pública indexável no Google com link de autor, biografia e selo digital para impulsionar o currículo Lattes, LinkedIn e autoridade profissional.</li>
                     </ul>
                   </div>
@@ -271,7 +271,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                   <div className="pt-3 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white p-3.5 rounded-xl border border-slate-200 text-slate-800 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-slate-700 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Blog Oficial da ESDHUBEM (com link público de autor para portfólio indexável no Google).</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Blog Oficial e Wiki da ESDHUBEM com link público de autor e registro OSF.</span>
                     </div>
                     <div className="bg-white p-3.5 rounded-xl border border-slate-200 text-slate-800 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-slate-700 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
@@ -307,14 +307,14 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    Destinado a trabalhos acadêmicos densos. Aqui entram os Trabalhos de Conclusão de Curso (TCCs) estruturados ou artigos científicos submetidos a plataformas públicas de Preprint (como Zenodo, OSF Preprints ou SciELO Preprints), garantindo um registro <strong>DOI (Digital Object Identifier)</strong> universal.
+                    Destinado a trabalhos acadêmicos densos. Aqui entram os Trabalhos de Conclusão de Curso (TCCs) estruturados ou artigos científicos submetidos a plataformas de repositório aberto como Zenodo (CERN) ou OSF, garantindo um registro <strong>DOI (Digital Object Identifier)</strong> universal e persistente.
                   </p>
 
                   <div className="space-y-2.5 pt-2 border-t border-amber-200">
                     <strong className="block text-sm font-bold text-amber-950 uppercase tracking-wide">📌 Requisitos & Registro DOI:</strong>
                     <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
-                      <li>Envio de TCC estruturado com ementa acadêmica <strong>OU</strong> submissão de artigo em servidor de Preprint.</li>
-                      <li>Indexação do artigo na página oficial de Anais Científicos da ESDHUBEM.</li>
+                      <li>Envio de TCC estruturado com ementa acadêmica <strong>OU</strong> artigo de investigação com metodologia.</li>
+                      <li>Depósito e indexação com atribuição de código DOI no repositório Zenodo / OSF.</li>
                       <li><strong>Registro DOI:</strong> Atribuição de um código DOI permanente para citação direta no Currículo Lattes.</li>
                     </ul>
                   </div>
@@ -322,7 +322,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                   <div className="pt-3 border-t border-amber-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white p-3.5 rounded-xl border border-amber-200 text-amber-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Página de Artigos da Escola / Repositórios (Zenodo, OSF, SciELO) com registro DOI.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Portal de Artigos da Escola & Repositório Zenodo/OSF com registro DOI.</span>
                     </div>
                     <div className="bg-white p-3.5 rounded-xl border border-amber-200 text-amber-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
@@ -366,7 +366,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
                       <li>Produção de livro autoral com mínimo de 50 páginas de conteúdo desenvolvido e estruturado.</li>
                       <li>Orientação e preparação editorial da obra para autopublicação ou registro.</li>
-                      <li><strong>Registro de Direitos Autorais:</strong> Registro formal da obra amparado pela Lei nº 9.610/1998.</li>
+                      <li><strong>Registro de Direitos Autorais:</strong> Registro formal da obra na Fundação Biblioteca Nacional (EDA/FBN) e no OSF amparado pela Lei nº 9.610/1998.</li>
                       <li><strong>Chancela Diamante:</strong> Impressão de honraria máxima no certificado do aluno com QR Code de validação e destaque no Mural de Livros da ESDHUBEM.</li>
                     </ul>
                   </div>
@@ -374,7 +374,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                   <div className="pt-3 border-t border-cyan-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white p-3.5 rounded-xl border border-cyan-200 text-cyan-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-cyan-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Mural de Livros / Livraria Digital da ESDHUBEM + Registro Formal de Direitos Autorais.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Mural de Livros / Livraria Digital da ESDHUBEM + Registro EDA na Biblioteca Nacional e OSF.</span>
                     </div>
                     <div className="bg-white p-3.5 rounded-xl border border-cyan-200 text-cyan-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-cyan-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>

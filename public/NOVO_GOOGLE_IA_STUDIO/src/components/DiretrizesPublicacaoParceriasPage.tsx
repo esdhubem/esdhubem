@@ -116,35 +116,54 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
 
             {/* Fluxo do Percurso */}
-            <div className="p-5 rounded-2xl bg-slate-900 text-white space-y-3 shadow-md border-l-4 border-[#FFC72C]">
-              <span className="text-xs uppercase tracking-wider text-[#FFC72C] font-bold block">
-                O percurso segue esta sequência:
-              </span>
-              <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-slate-200 leading-relaxed">
-                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Conclusão do curso</span>
-                <span className="text-[#FFC72C]">→</span>
-                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Comunicação da modalidade</span>
-                <span className="text-[#FFC72C]">→</span>
-                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Questionário de aprendizagem</span>
-                <span className="text-[#FFC72C]">→</span>
-                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Certificado correspondente</span>
-                <span className="text-[#FFC72C]">→</span>
-                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Produção</span>
-                <span className="text-[#FFC72C]">→</span>
-                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Análise</span>
-                <span className="text-[#FFC72C]">→</span>
-                <span className="bg-white/10 px-2.5 py-1 rounded-lg text-white font-semibold">Pagamento da taxa específica</span>
-                <span className="text-[#FFC72C]">→</span>
-                <span className="bg-[#FFC72C] text-slate-950 font-bold px-2.5 py-1 rounded-lg shadow-xs">Emissão do certificado de autoria</span>
+            <div className="p-6 rounded-2xl bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] text-white space-y-4 shadow-xl border border-blue-900/60 border-l-4 border-l-[#FFC72C]">
+              <div className="flex items-center justify-between gap-2 flex-wrap">
+                <span className="text-xs uppercase tracking-wider text-[#FFC72C] font-black block flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#FFC72C]" />
+                  <span>O percurso segue esta sequência:</span>
+                </span>
+                <span className="text-[11px] text-blue-200 bg-blue-950/70 border border-blue-800/80 px-2.5 py-0.5 rounded-full font-medium">
+                  Fluxo Integrado de Autoria & Proteção
+                </span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-slate-100 leading-relaxed">
+                <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
+                  Conclusão do curso
+                </span>
+                <span className="text-[#FFC72C] font-bold text-base">→</span>
+                <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
+                  Comunicação da modalidade
+                </span>
+                <span className="text-[#FFC72C] font-bold text-base">→</span>
+                <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
+                  Produção do trabalho
+                </span>
+                <span className="text-[#FFC72C] font-bold text-base">→</span>
+                <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
+                  Registro de autoria (OSF / Zenodo / BN)
+                </span>
+                <span className="text-[#FFC72C] font-bold text-base">→</span>
+                <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
+                  Análise & Curadoria pedagógica
+                </span>
+                <span className="text-[#FFC72C] font-bold text-base">→</span>
+                <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
+                  Publicação (Wiki / Blog / Repositório / Mural)
+                </span>
+                <span className="text-[#FFC72C] font-bold text-base">→</span>
+                <span className="bg-[#FFC72C] text-slate-950 font-black px-3 py-1.5 rounded-xl shadow-md border border-amber-300">
+                  Emissão do certificado de autoria
+                </span>
               </div>
             </div>
 
             <div className="space-y-3 text-slate-700 text-sm sm:text-base leading-relaxed pt-2">
               <p>
-                O <strong className="text-amber-900 font-bold">Certificado Bronze</strong> está relacionado à conclusão do curso e não depende da produção posterior de um artigo, manuscrito ou livro.
+                O <strong className="text-amber-900 font-bold">Certificado Bronze</strong> valida a fixação ativa do aprendizado através do <strong>Verbete Enciclopédico</strong> publicado na Wiki ESDHUBEM e registrado no <strong>OSF (Open Science Framework)</strong>.
               </p>
               <p>
-                Os certificados <strong className="text-slate-800 font-semibold">Prata</strong>, <strong className="text-amber-600 font-semibold">Ouro</strong> e <strong className="text-cyan-700 font-semibold">Diamante</strong> estão vinculados às respectivas produções e serão emitidos após a entrega e aprovação do trabalho, além do pagamento da taxa correspondente à modalidade escolhida.
+                Os certificados <strong className="text-slate-800 font-semibold">Prata</strong>, <strong className="text-amber-600 font-semibold">Ouro</strong> e <strong className="text-cyan-700 font-semibold">Diamante</strong> estão vinculados às respectivas produções avançadas (Artigo de Blog no OSF, Manuscrito com DOI no Zenodo e Livro na Biblioteca Nacional/OSF) e serão emitidos após a entrega, validação do registro e aprovação da comissão editorial.
               </p>
             </div>
           </div>
@@ -167,28 +186,41 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <span className="text-3xl">🥉</span>
                   <div>
                     <h4 className="text-lg sm:text-xl font-bold text-amber-950">
-                      BRONZE — APRENDER E COMPREENDER
+                      BRONZE — APRENDER E CONCEITUAR (FIXAÇÃO ATIVA)
                     </h4>
-                    <span className="text-xs font-semibold text-amber-800">Conclusão do curso</span>
+                    <span className="text-xs font-semibold text-amber-800">Tríade de Fixação & Verbete Enciclopédico na Wiki</span>
                   </div>
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Bronze é destinado ao estudante que deseja concluir o curso, demonstrar sua aprendizagem e receber o certificado correspondente.
+                  O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Fixação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete Enciclopédico</strong> para a Wiki oficial da escola (conceito claro, informativo, objetivo, histórico e com aplicação prática).
                 </p>
 
-                <div className="bg-white border border-amber-200/80 rounded-xl p-4 space-y-2">
-                  <span className="font-bold text-xs uppercase tracking-wider text-amber-900 block">Requisitos:</span>
-                  <ul className="text-xs sm:text-sm text-slate-700 space-y-1.5 list-disc list-inside">
-                    <li>Conclusão do material previsto no curso;</li>
-                    <li>Acompanhamento das atividades estabelecidas;</li>
-                    <li>Realização do questionário de aprendizagem;</li>
-                    <li>Cumprimento dos demais requisitos específicos do curso.</li>
+                <div className="bg-white border border-amber-200/80 rounded-xl p-4 space-y-2.5">
+                  <span className="font-bold text-xs uppercase tracking-wider text-amber-900 block">Requisitos da Tríade de Fixação:</span>
+                  <ul className="text-xs sm:text-sm text-slate-700 space-y-2 list-none">
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-800 font-bold shrink-0">🧠</span>
+                      <span><strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (à mão ou digital) estruturando os conceitos centrais e conexões pedagógicas da aula.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-800 font-bold shrink-0">✍️</span>
+                      <span><strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão explicando o significado, o contexto histórico e a aplicação do tema.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-800 font-bold shrink-0">🎙️</span>
+                      <span><strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando o conceito oralmente com clareza (Técnica Feynman de retenção).</span>
+                    </li>
                   </ul>
+
+                  <div className="pt-2 border-t border-amber-100 flex flex-wrap gap-2 text-xs">
+                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Wiki Oficial ESDHUBEM (Enciclopédia Temática)</span>
+                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">🛡️ Registro de Autoria: OSF (Open Science Framework)</span>
+                  </div>
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 font-medium italic">
-                  * O estudante não precisa produzir um artigo ou livro para receber o Certificado Bronze.
+                  * O trabalho chega às mãos da coordenação com comprovante de registro no OSF, resguardando integralmente a anterioridade e a autoria do aluno.
                 </p>
               </div>
 
@@ -200,16 +232,16 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <h4 className="text-lg sm:text-xl font-bold text-slate-900">
                       PRATA — EXPRESSAR E COMUNICAR
                     </h4>
-                    <span className="text-xs font-semibold text-slate-600">Artigo para o Blog da ESDHUBEM</span>
+                    <span className="text-xs font-semibold text-slate-600">Artigo para o Blog & Wiki da ESDHUBEM (1.200 a 2.500 palavras)</span>
                   </div>
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Prata é destinado ao estudante que deseja transformar o conhecimento desenvolvido no curso em um artigo autoral para publicação no espaço de artigos da ESDHUBEM.
+                  O Prata é destinado ao estudante que deseja transformar o conhecimento desenvolvido no curso em um artigo autoral aprofundado para publicação no Blog Oficial e Wiki da ESDHUBEM, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
                 </p>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  Após a escolha dessa modalidade e o pagamento da taxa correspondente, o estudante receberá um vídeo com orientações detalhadas para a elaboração do artigo.
+                  Após a escolha dessa modalidade, o estudante receberá orientações detalhadas para a elaboração do artigo e seu registro de autoria no <strong>OSF (Open Science Framework)</strong>.
                 </p>
 
                 <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2">
@@ -217,16 +249,16 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     As orientações poderão incluir:
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-700">
-                    <div>• Estrutura do artigo</div>
+                    <div>• Estrutura do artigo (1.200 a 2.500 palavras)</div>
                     <div>• Definição do tema e do público</div>
-                    <div>• Título e subtítulos</div>
-                    <div>• Organização das informações</div>
+                    <div>• Título, subtítulos H2/H3 e escaneabilidade</div>
+                    <div>• Organização das informações e casos práticos</div>
                     <div>• Linguagem clara e acessível</div>
                     <div>• Técnicas de redação para a internet</div>
-                    <div>• Princípios de SEO</div>
-                    <div>• Estratégias de comunicação</div>
-                    <div>• Direitos autorais</div>
-                    <div>• Utilização responsável de fontes</div>
+                    <div>• Princípios de SEO para busca orgânica</div>
+                    <div>• Registro de autoria prévio no OSF</div>
+                    <div>• Direitos autorais e Lei 9.610/98</div>
+                    <div>• Utilização responsável de fontes e bibliografia</div>
                     <div>• Revisão e preparação para publicação</div>
                   </div>
                 </div>
@@ -234,10 +266,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <div className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed bg-amber-50/50 p-4 rounded-xl border border-amber-200/50">
                   <p>O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM.</p>
                   <p>
-                    A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca. Não representa garantia de posicionamento ou ranqueamento no Google.
+                    A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional e acadêmico.
                   </p>
                   <p className="font-semibold text-slate-800">
-                    Após a aprovação, o artigo poderá ser publicado no Blog da ESDHUBEM, acompanhado da identificação do autor, conforme os critérios da escola.
+                    Após a aprovação, o artigo será publicado no Blog Oficial e Wiki da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
                   </p>
                 </div>
               </div>
@@ -607,7 +639,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs pt-1">
               <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
                 <thead>
-                  <tr className="bg-slate-900 text-white">
+                  <tr className="bg-[#011049] text-white">
                     <th className="py-3 px-4 font-bold uppercase tracking-wider">Nível</th>
                     <th className="py-3 px-4 font-bold uppercase tracking-wider">O estudante faz</th>
                     <th className="py-3 px-4 font-bold uppercase tracking-wider">Produção / requisito</th>
@@ -618,30 +650,30 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
                   <tr className="hover:bg-amber-50/30">
                     <td className="py-3.5 px-4 font-bold text-amber-950 whitespace-nowrap">🥉 Bronze</td>
-                    <td className="py-3.5 px-4">Conclui o curso e responde ao questionário</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Questionário de aprendizagem</td>
-                    <td className="py-3.5 px-4">Certificado Bronze</td>
+                    <td className="py-3.5 px-4">Conclui o curso e entrega a Tríade de Fixação Ativa</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Enciclopédico (500-800 palavras) + Mapa Mental + Áudio 1 min com registro no OSF</td>
+                    <td className="py-3.5 px-4">Publicação na Wiki ESDHUBEM + Certificado com Selo Bronze</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Bronze</td>
                   </tr>
                   <tr className="hover:bg-slate-50">
                     <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
-                    <td className="py-3.5 px-4">Produz um artigo para o blog e envia para aprovação</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Artigo para o Blog ESDHUBEM</td>
-                    <td className="py-3.5 px-4">Publicação no Blog Esdhubem + Certificado Prata</td>
+                    <td className="py-3.5 px-4">Elabora artigo de blog e submete com registro no OSF</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Artigo aprofundado (1.200 a 2.500 palavras, SEO e autoridade) + Registro OSF</td>
+                    <td className="py-3.5 px-4">Publicação no Blog & Wiki ESDHUBEM + Certificado com Selo Prata</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
                   </tr>
                   <tr className="hover:bg-amber-50/30">
                     <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
-                    <td className="py-3.5 px-4">Produz um manuscrito e realiza o depósito e envia para aprovação</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Manuscrito de Conclusão de Curso + depósito no Zenodo + DOI</td>
-                    <td className="py-3.5 px-4">Publicação no Repositório da ESDHUBEM + Certificado Ouro</td>
+                    <td className="py-3.5 px-4">Produz manuscrito/TCC estruturado e realiza depósito no Zenodo</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Manuscrito de Conclusão / Artigo Científico + Depósito Zenodo + DOI Permanente</td>
+                    <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com citação do DOI</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
                   </tr>
                   <tr className="hover:bg-cyan-50/30">
                     <td className="py-3.5 px-4 font-bold text-cyan-900 whitespace-nowrap">💎 Diamante</td>
-                    <td className="py-3.5 px-4">Produz um livro e realiza o registro de direitos autorais e envia para aprovação</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Livro com mínimo de 50 páginas + registro de direitos autorais</td>
-                    <td className="py-3.5 px-4">Mural de Livros + Certificado Diamante</td>
+                    <td className="py-3.5 px-4">Produz livro autoral completo e realiza registro de direitos autorais</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Livro com mínimo de 50 páginas + Registro EDA na Biblioteca Nacional e OSF</td>
+                    <td className="py-3.5 px-4">Mural de Livros / Livraria Digital + Certificado Diamante de Honraria Máxima</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Diamante</td>
                   </tr>
                 </tbody>
@@ -772,7 +804,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* UM PERCURSO DE AUTORIA */}
-          <div className="bg-gradient-to-r from-slate-900 to-[#182333] text-white p-6 sm:p-8 rounded-2xl space-y-4 shadow-lg text-center">
+          <div className="bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] text-white p-6 sm:p-8 rounded-2xl space-y-4 shadow-xl border border-blue-900/60 text-center">
             <h4 className="text-lg sm:text-xl font-black uppercase tracking-wider text-[#FFC72C]">
               Um Percurso de Autoria
             </h4>
@@ -886,7 +918,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
         </div>
 
         {/* Card 4: 🤝 Abertura para Parcerias Institucionais */}
-        <div className="bg-gradient-to-r from-slate-900 to-[#1e293b] rounded-3xl p-6 sm:p-8 lg:p-10 text-white shadow-xl border border-slate-700/80 space-y-6">
+        <div className="bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] rounded-3xl p-6 sm:p-8 lg:p-10 text-white shadow-2xl border border-blue-900/60 space-y-6">
           <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
             <div className="space-y-4 max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/40 text-[#FFC72C] text-xs font-bold">
