@@ -97,6 +97,40 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
         {/* Bloco Principal: Diretrizes de Publicação - Da aprendizagem à autoria */}
         <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-10">
           
+          {/* Tutorial Vídeo - Parte 1: Boas-Vindas */}
+          <div className="space-y-3 pb-8 border-b border-slate-200">
+            <div className="flex items-center justify-between gap-3 flex-wrap">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
+                <span className="text-sm">🎬</span>
+                <span>Tutorial ESDHUBEM • Parte 1: Boas-Vindas</span>
+              </div>
+              <a
+                href="https://odysee.com/@esdhubem:a/Diretrizes-de-Publica%C3%A7%C3%A3o-Parte-1-:f"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
+              >
+                <span>Assistir no Odysee</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
+              <iframe
+                id="odysee-iframe-parte-1"
+                className="w-full h-full border-0 absolute inset-0"
+                src="https://odysee.com/$/embed/@esdhubem:a/Diretrizes-de-Publica%C3%A7%C3%A3o-Parte-1-:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                allowFullScreen
+                title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 1: Boas-vindas)"
+                loading="lazy"
+              />
+            </div>
+            <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+              <span>Vídeo 1: Introdução e boas-vindas ao percurso de autoria e publicação da ESDHUBEM</span>
+            </p>
+          </div>
+
           {/* Introdução e Sequência do Percurso */}
           <div className="space-y-6 pb-8 border-b border-slate-200">
             <div className="space-y-2">
