@@ -524,19 +524,55 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <p className="text-xs text-slate-600">
                     A obra poderá assumir diferentes formatos, conforme a finalidade e o público-alvo:
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs text-slate-700 pt-1">
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Livros de desenvolvimento pessoal</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Ensaios</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Obras acadêmicas ou didáticas</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Manuais técnicos</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Guias profissionais</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Livros de referência</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Biografias e autobiografias</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Memórias</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Livros-reportagem</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Obras sobre espiritualidade e religião</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Outras formas de não ficção</div>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 font-medium">• Obras de ficção adulta (compatíveis com os princípios da escola)</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs pt-1">
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Livros de desenvolvimento pessoal</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Ensaios</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Obras acadêmicas ou didáticas</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Manuais técnicos</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Guias profissionais</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Livros de referência</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Biografias e autobiografias</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Memórias</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Livros-reportagem</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Obras sobre espiritualidade e religião</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Outras formas de não ficção</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-100/90 to-sky-100/90 border-2 border-cyan-400 text-cyan-950 font-bold shadow-xs hover:border-cyan-500 hover:shadow-sm transition-all flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
+                      <span>Obras de ficção adulta (compatíveis com os princípios da escola)</span>
+                    </div>
                   </div>
                 </div>
 
