@@ -161,15 +161,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </span>
               </div>
             </div>
-
-            <div className="space-y-3 text-slate-700 text-sm sm:text-base leading-relaxed pt-2">
-              <p>
-                O <strong className="text-amber-900 font-bold">Certificado Bronze</strong> valida a fixação ativa do aprendizado através do <strong>Verbete Enciclopédico</strong> publicado na Wiki ESDHUBEM e registrado no <strong>OSF (Open Science Framework)</strong>.
-              </p>
-              <p>
-                Os certificados <strong className="text-slate-800 font-semibold">Prata</strong>, <strong className="text-amber-600 font-semibold">Ouro</strong> e <strong className="text-cyan-700 font-semibold">Diamante</strong> estão vinculados às respectivas produções avançadas (Artigo de Blog no OSF, Manuscrito com DOI no Zenodo e Livro na Biblioteca Nacional/OSF) e serão emitidos após a entrega, validação do registro e aprovação da comissão editorial.
-              </p>
-            </div>
           </div>
 
           {/* OS QUATRO PERCURSOS */}
