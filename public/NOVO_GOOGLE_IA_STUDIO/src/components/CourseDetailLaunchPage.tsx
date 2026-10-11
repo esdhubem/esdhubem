@@ -367,7 +367,7 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
             </div>
 
             {/* Navigation Tabs */}
-            <div className="bg-white rounded-xl border border-slate-200 p-1.5 shadow-sm flex flex-wrap gap-1">
+            <div className="bg-gradient-to-r from-[#0d4494] via-[#0a3576] to-[#072458] rounded-2xl border border-cyan-400/30 p-2 shadow-lg flex flex-wrap gap-1.5">
               {[
                 { id: 'sobre', label: 'Sobre o Curso', icon: BookOpen },
                 { id: 'conteudo', label: 'Ementa & Aulas', icon: Tv },
@@ -384,12 +384,12 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id as any)}
-                    className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-bold transition cursor-pointer ${
+                    className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-[#182333] text-[#FFC72C] shadow-sm'
+                        ? 'bg-[#FFC72C] text-[#072458] shadow-md ring-2 ring-[#FFC72C]/40'
                         : tab.highlight
-                        ? 'text-amber-800 bg-amber-50 hover:bg-amber-100'
-                        : 'text-slate-600 hover:text-[#182333] hover:bg-slate-100'
+                        ? 'text-amber-300 bg-amber-400/15 border border-amber-300/30 hover:bg-amber-400/25'
+                        : 'text-blue-100 hover:text-white hover:bg-white/10'
                     }`}
                   >
                     <Icon className="w-3.5 h-3.5" />
