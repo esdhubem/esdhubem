@@ -20,7 +20,11 @@ import {
   MessageCircle,
   Landmark,
   ChevronRight,
-  Info
+  Info,
+  Clock,
+  AlertTriangle,
+  Check,
+  Cpu
 } from 'lucide-react';
 
 interface DiretrizesPublicacaoParceriasPageProps {
@@ -958,6 +962,634 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </p>
               <p className="text-[11px] text-slate-500 italic">
                 * Em repositórios externos (Zenodo/CERN), a exclusão segue as normas da plataforma terceira.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* ======================================================== */}
+        {/* Áreas de Atenção e Aprofundamento Necessário */}
+        {/* ======================================================== */}
+        <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm relative overflow-hidden space-y-12">
+          {/* Header */}
+          <div className="border-b border-slate-100 pb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-900 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+              <FileText className="w-3.5 h-3.5 text-amber-600" />
+              Diretrizes de Publicação
+            </div>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-[#011049] flex items-center gap-3">
+              <span>📑</span> Áreas de Atenção e Aprofundamento Necessário
+            </h2>
+            <p className="text-slate-600 text-sm md:text-base mt-2 max-w-4xl">
+              Consolidação de normas operacionais, prazos institucionais de referência, critérios de avaliação formativa, integridade de autoria, passo a passo técnico e orientações editoriais para todos os níveis de produção.
+            </p>
+          </div>
+
+          {/* 1. Prazos de Análise e Devolutiva */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-900 font-bold flex items-center justify-center text-sm">1</span>
+              <h3 className="text-xl font-bold text-[#011049]">Prazos de Análise e Devolutiva</h3>
+            </div>
+            <p className="text-sm text-slate-600">
+              Com base em práticas adotadas por instituições de ensino e periódicos acadêmicos, estabelecemos os seguintes prazos de referência:
+            </p>
+
+            <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-slate-50 border-b border-slate-200 text-[#011049]">
+                  <tr>
+                    <th className="py-3 px-4 font-bold">Etapa</th>
+                    <th className="py-3 px-4 font-bold w-52">Prazo Estimado</th>
+                    <th className="py-3 px-4 font-bold">Observação</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 text-slate-700">
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-3 px-4 font-semibold text-slate-900">Análise inicial do trabalho enviado</td>
+                    <td className="py-3 px-4 font-medium text-blue-700">até 10 dias úteis</td>
+                    <td className="py-3 px-4 text-xs text-slate-600">Contados a partir do recebimento completo do material</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-3 px-4 font-semibold text-slate-900">Devolutiva com ajustes ou aprovação</td>
+                    <td className="py-3 px-4 font-medium text-blue-700">até 15 dias úteis</td>
+                    <td className="py-3 px-4 text-xs text-slate-600">Prazo pode ser reduzido conforme disponibilidade; ajustes solicitados reiniciam a contagem</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-3 px-4 font-semibold text-slate-900">Reenvio após ajustes e nova análise</td>
+                    <td className="py-3 px-4 font-medium text-blue-700">até 7 dias úteis</td>
+                    <td className="py-3 px-4 text-xs text-slate-600">Aplica-se à segunda avaliação</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-3 px-4 font-semibold text-slate-900">Emissão de certificado após aprovação</td>
+                    <td className="py-3 px-4 font-medium text-emerald-700 font-semibold">até 5 dias úteis</td>
+                    <td className="py-3 px-4 text-xs text-slate-600">Após confirmação do cumprimento de todos os requisitos</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-3 px-4 font-semibold text-slate-900">Registro OSF / Zenodo / DOI</td>
+                    <td className="py-3 px-4 font-medium text-blue-700">até 10 dias úteis</td>
+                    <td className="py-3 px-4 text-xs text-slate-600">Após orientação e envio do arquivo final</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-3 px-4 font-semibold text-slate-900">Registro de obra no EDA/FBN (Diamante)</td>
+                    <td className="py-3 px-4 font-medium text-purple-700">Conforme prazos da Fundação Biblioteca Nacional</td>
+                    <td className="py-3 px-4 text-xs text-slate-600">Procedimento de responsabilidade pessoal do autor</td>
+                  </tr>
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-3 px-4 font-semibold text-slate-900">Remoção de conteúdo publicado</td>
+                    <td className="py-3 px-4 font-medium text-rose-700">até 15 dias úteis</td>
+                    <td className="py-3 px-4 text-xs text-slate-600">Após solicitação formal</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs text-slate-600 flex items-start gap-3">
+              <Info className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
+              <p>
+                <strong>Nota institucional:</strong> Estes são prazos de referência, não constituem obrigação contratual, podendo ser ajustados conforme volume de demandas. Sempre que houver previsão de atraso, o estudante será comunicado.
+              </p>
+            </div>
+          </div>
+
+          {/* 2. Critérios de Avaliação, Publicação e Direito de Retirada */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-900 font-bold flex items-center justify-center text-sm">2</span>
+              <h3 className="text-xl font-bold text-[#011049]">Critérios de Avaliação, Publicação e Direito de Retirada</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* O que define aprovação */}
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+                <h4 className="font-bold text-[#011049] text-base flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+                  O que define aprovação
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  A aprovação se dá pelo cumprimento integral dos requisitos específicos de cada nível, com entrega do trabalho desenvolvido de acordo com as orientações recebidas e em comum acordo entre autor e escola. A avaliação verifica:
+                </p>
+                <ul className="text-xs text-slate-700 space-y-2 pl-1">
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span><strong>Aderência ao tema</strong> e aos eixos temáticos</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span><strong>Cumprimento da extensão mínima</strong> e estrutura definida</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span><strong>Clareza, coerência e organização</strong> das ideias</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span><strong>Uso responsável de fontes</strong> e direitos autorais</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span><strong>Adequação às normas de escrita</strong> e citação quando aplicável</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Publicação é opcional & Retirada */}
+              <div className="space-y-4">
+                <div className="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-5 space-y-2">
+                  <h4 className="font-bold text-emerald-950 text-sm flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-emerald-700" />
+                    Publicação é opcional
+                  </h4>
+                  <p className="text-xs text-emerald-900 leading-relaxed">
+                    Caso o estudante não deseje a publicação do seu trabalho no site da ESDHUBEM, sua escolha será integralmente respeitada. O certificado será emitido normalmente, e o trabalho será mantido em registro privado, sem divulgação pública. A publicação é um benefício adicional — não uma exigência.
+                  </p>
+                </div>
+
+                <div className="bg-amber-50/60 border border-amber-200 rounded-2xl p-5 space-y-2">
+                  <h4 className="font-bold text-amber-950 text-sm flex items-center gap-2">
+                    <Clock className="w-4 h-4 text-amber-700" />
+                    Direito de retirada a qualquer momento
+                  </h4>
+                  <p className="text-xs text-amber-900 leading-relaxed">
+                    Mesmo após a publicação, o autor pode solicitar a retirada do conteúdo a qualquer instante, pelo e-mail: <a href="mailto:esdhubem@proton.me" className="font-bold underline text-amber-950 hover:text-amber-800">esdhubem@proton.me</a>. O prazo para remoção das páginas e dos índices públicos é de até <strong>15 dias úteis</strong>. Em repositórios externos (Zenodo, OSF), a exclusão segue as regras próprias de cada plataforma.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Quem avalia & Sobre revisão por pares */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+              <div className="border border-slate-200 rounded-2xl p-5 bg-white space-y-2">
+                <h4 className="font-bold text-[#011049] text-sm flex items-center gap-2">
+                  <GraduationCap className="w-4 h-4 text-blue-600" />
+                  Quem avalia
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  A avaliação é realizada pelo corpo docente da ESDHUBEM e docentes auxiliares contratados, conforme os critérios próprios de cada nível de certificação.
+                </p>
+              </div>
+
+              <div className="border border-slate-200 rounded-2xl p-5 bg-white space-y-2">
+                <h4 className="font-bold text-[#011049] text-sm flex items-center gap-2">
+                  <Info className="w-4 h-4 text-indigo-600" />
+                  Sobre revisão por pares e banca
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  A ESDHUBEM não realiza revisão por pares nem dispõe de serviços de revistas científicas. Não há composição de banca examinadora. A avaliação tem caráter formativo e orientador, focada no desenvolvimento do autor e no cumprimento das diretrizes estabelecidas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 3. Estrutura e Formato por Nível de Produção */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-900 font-bold flex items-center justify-center text-sm">3</span>
+              <h3 className="text-xl font-bold text-[#011049]">Estrutura e Formato por Nível de Produção</h3>
+            </div>
+
+            <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-slate-50 border-b border-slate-200 text-[#011049]">
+                  <tr>
+                    <th className="py-3 px-4 font-bold w-1/5">Elemento</th>
+                    <th className="py-3 px-4 font-bold w-2/5">Estrutura Mínima</th>
+                    <th className="py-3 px-4 font-bold w-1/4">Normas de Estilo</th>
+                    <th className="py-3 px-4 font-bold">Extensão</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 text-slate-700 align-top">
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-4 px-4 font-bold text-amber-900 bg-amber-50/30">
+                      📝 Verbete Enciclopédico (Bronze)
+                    </td>
+                    <td className="py-4 px-4 text-xs text-slate-700 leading-relaxed">
+                      <ul className="space-y-1">
+                        <li>• Título claro e preciso</li>
+                        <li>• Definição direta do tema</li>
+                        <li>• Contexto histórico e conceitual</li>
+                        <li>• Aplicação prática ou relevância atual</li>
+                        <li>• Ligação com os eixos temáticos</li>
+                        <li>• Sem referências extensas — informações integradas ao texto</li>
+                      </ul>
+                    </td>
+                    <td className="py-4 px-4 text-xs text-slate-600 leading-relaxed">
+                      <ul className="space-y-1">
+                        <li>• Linguagem objetiva e informativa</li>
+                        <li>• Tom neutro e educativo</li>
+                        <li>• Parágrafos curtos</li>
+                        <li>• Sem jargões desnecessários</li>
+                        <li>• Sem citações longas</li>
+                      </ul>
+                    </td>
+                    <td className="py-4 px-4 font-bold text-slate-900 text-xs whitespace-nowrap">
+                      500 a 800 palavras
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-4 px-4 font-bold text-slate-800 bg-slate-100/50">
+                      ✍️ Artigo de Blog &amp; Wiki (Prata)
+                    </td>
+                    <td className="py-4 px-4 text-xs text-slate-700 leading-relaxed">
+                      <ul className="space-y-1">
+                        <li>• Título + subtítulo chamativo</li>
+                        <li>• Introdução (contexto e objetivo)</li>
+                        <li>• Desenvolvimento dividido em seções (H2/H3)</li>
+                        <li>• Exemplos práticos ou relatos</li>
+                        <li>• Conclusão com fechamento</li>
+                        <li>• Referências quando aplicável</li>
+                      </ul>
+                    </td>
+                    <td className="py-4 px-4 text-xs text-slate-600 leading-relaxed">
+                      <ul className="space-y-1">
+                        <li>• Linguagem acessível e fluida</li>
+                        <li>• Escaneabilidade: parágrafos curtos, destaques, listas</li>
+                        <li>• Princípios de clareza e encontrabilidade (SEO)</li>
+                        <li>• Transição suave entre seções</li>
+                        <li>• Normas ABNT para referências</li>
+                      </ul>
+                    </td>
+                    <td className="py-4 px-4 font-bold text-slate-900 text-xs whitespace-nowrap">
+                      1.200 a 2.500 palavras
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-4 px-4 font-bold text-yellow-900 bg-yellow-50/30">
+                      🔬 Manuscrito / Artigo de Investigação (Ouro)
+                    </td>
+                    <td className="py-4 px-4 text-xs text-slate-700 leading-relaxed">
+                      <ul className="space-y-1">
+                        <li>• Título</li>
+                        <li>• Resumo + palavras-chave</li>
+                        <li>• Introdução (problema, objetivos)</li>
+                        <li>• Fundamentação teórica</li>
+                        <li>• Metodologia</li>
+                        <li>• Desenvolvimento e discussão</li>
+                        <li>• Conclusão</li>
+                        <li>• Referências bibliográficas completas</li>
+                      </ul>
+                    </td>
+                    <td className="py-4 px-4 text-xs text-slate-600 leading-relaxed">
+                      <ul className="space-y-1">
+                        <li>• Linguagem formal e analítica</li>
+                        <li>• Normas ABNT integral</li>
+                        <li>• Citações no texto e lista de referências</li>
+                        <li>• Estrutura lógica e sequencial</li>
+                        <li>• Distinção clara entre ideias do autor e ideias de outros autores</li>
+                      </ul>
+                    </td>
+                    <td className="py-4 px-4 font-bold text-slate-900 text-xs">
+                      Conforme orientação recebida
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-slate-50/50">
+                    <td className="py-4 px-4 font-bold text-cyan-950 bg-cyan-50/30">
+                      📘 Livro Autoral (Diamante)
+                    </td>
+                    <td className="py-4 px-4 text-xs text-slate-700 leading-relaxed">
+                      <ul className="space-y-1">
+                        <li>• Folha de rosto</li>
+                        <li>• Sumário detalhado</li>
+                        <li>• Introdução geral</li>
+                        <li>• Capítulos sequenciais com unidade temática</li>
+                        <li>• Considerações finais</li>
+                        <li>• Referências / bibliografia</li>
+                        <li>• Elementos opcionais: dedicatória, agradecimentos, apêndices</li>
+                      </ul>
+                    </td>
+                    <td className="py-4 px-4 text-xs text-slate-600 leading-relaxed">
+                      <ul className="space-y-1">
+                        <li>• Formato consistente ao longo da obra</li>
+                        <li>• Normas ABNT para referências e citações</li>
+                        <li>• Padronização de títulos, subtítulos e corpo de texto</li>
+                        <li>• Versão final em PDF formatado</li>
+                      </ul>
+                    </td>
+                    <td className="py-4 px-4 font-bold text-slate-900 text-xs">
+                      Mínimo de 50 páginas de conteúdo efetivo
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* 4. Registro no OSF — Passo a Passo Prático */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-900 font-bold flex items-center justify-center text-sm">4</span>
+              <h3 className="text-xl font-bold text-[#011049]">Registro no OSF — Passo a Passo Prático</h3>
+            </div>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              O <strong>Open Science Framework (OSF)</strong> é uma plataforma gratuita que registra e preserva a autoria e a data de criação do seu trabalho, garantindo reconhecimento e proteção de anterioridade. Siga os passos:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                <span className="text-xs font-black text-blue-700 uppercase tracking-wider">Etapa 1: Acesso &amp; Criação</span>
+                <ul className="text-xs text-slate-700 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-blue-600 shrink-0">1.</span>
+                    <span>Acesse: <a href="https://osf.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold underline">osf.io</a></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-blue-600 shrink-0">2.</span>
+                    <span>Clique em <strong>Sign Up</strong> e crie sua conta com e-mail preferencial</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-blue-600 shrink-0">3.</span>
+                    <span>Confirme seu endereço de e-mail clicando no link recebido</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                <span className="text-xs font-black text-blue-700 uppercase tracking-wider">Etapa 2: Projeto &amp; Upload</span>
+                <ul className="text-xs text-slate-700 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-blue-600 shrink-0">4.</span>
+                    <span>Faça login e clique em <strong>Create New Project</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-blue-600 shrink-0">5.</span>
+                    <span>Dê um título ao projeto (mesmo título do seu trabalho) e descrição breve</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-blue-600 shrink-0">6.</span>
+                    <span>Salve o projeto → clique em <strong>Files</strong> → <strong>Upload File</strong></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                <span className="text-xs font-black text-blue-700 uppercase tracking-wider">Etapa 3: Publicação &amp; Envio</span>
+                <ul className="text-xs text-slate-700 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-blue-600 shrink-0">7.</span>
+                    <span>Selecione o arquivo final do seu trabalho (formato PDF recomendado)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-blue-600 shrink-0">8.</span>
+                    <span>Após o envio, clique em <strong>Make Public</strong> — isso torna o registro acessível e datado</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-blue-600 shrink-0">9.</span>
+                    <span>Copie o link público da página do projeto e envie para a ESDHUBEM junto com seu trabalho</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="p-4 bg-amber-50 border border-amber-200 rounded-2xl text-xs text-amber-900 flex items-start gap-3">
+              <Sparkles className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+              <p>
+                💡 <strong>O link público é o seu comprovante de registro:</strong> Guarde-o e envie junto com a entrega do trabalho. O registro é gratuito e imediato.
+              </p>
+            </div>
+          </div>
+
+          {/* 5. Uso de Inteligência Artificial — Declaração e Limites */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-900 font-bold flex items-center justify-center text-sm">5</span>
+              <h3 className="text-xl font-bold text-[#011049]">Uso de Inteligência Artificial — Declaração e Limites</h3>
+            </div>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              A ferramenta de Inteligência Artificial é vista como apoio à produção, nunca como substituta do pensamento e da criação humana. A responsabilidade sobre todo o conteúdo publicado é sempre do autor.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Em quais etapas pode ser usada */}
+              <div className="bg-emerald-50/40 border border-emerald-200 rounded-2xl p-5 space-y-3">
+                <h4 className="font-bold text-emerald-950 text-sm flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  Em quais etapas pode ser usada?
+                </h4>
+                <ul className="text-xs text-emerald-900 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Organização de ideias e estruturação de esboços</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Revisão textual e sugestões de redação</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Verificação de coerência e clareza</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Sugestões de referências e fontes (sempre conferir!)</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* O que NÃO pode ser feito */}
+              <div className="bg-rose-50/40 border border-rose-200 rounded-2xl p-5 space-y-3">
+                <h4 className="font-bold text-rose-950 text-sm flex items-center gap-2">
+                  <AlertTriangle className="w-4 h-4 text-rose-600" />
+                  O que NÃO pode ser feito sem verificação integral?
+                </h4>
+                <ul className="text-xs text-rose-900 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-600 font-bold">•</span>
+                    <span>Apresentar conteúdos gerados sem leitura, confirmação e edição</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-600 font-bold">•</span>
+                    <span>Usar dados, citações ou referências sem verificação na fonte original</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-600 font-bold">•</span>
+                    <span>Transferir a autoria para a ferramenta ou omitir sua participação</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Modelos de Declaração de Uso de IA */}
+            <div className="space-y-3 pt-2">
+              <h4 className="font-bold text-[#011049] text-base">Modelo de Declaração de Uso de IA</h4>
+              <p className="text-xs text-slate-600">
+                Insira no final do trabalho (antes das referências) um texto conforme o exemplo que melhor se aplica:
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
+                <div className="border border-slate-200 rounded-2xl p-5 bg-slate-50 space-y-2">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-700">
+                    <Check className="w-4 h-4" />
+                    ✅ Exemplo 1 — Uso parcial:
+                  </div>
+                  <p className="text-xs text-slate-700 italic bg-white p-3 rounded-xl border border-slate-200 leading-relaxed">
+                    &quot;Declaro que utilizei ferramenta de Inteligência Artificial para apoio na organização de ideias e revisão de redação. Todo o conteúdo foi lido, verificado e desenvolvido por mim. A versão final é de minha autoria e responsabilidade integral.&quot;
+                  </p>
+                </div>
+
+                <div className="border border-slate-200 rounded-2xl p-5 bg-slate-50 space-y-2">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-blue-700">
+                    <Check className="w-4 h-4" />
+                    ✅ Exemplo 2 — Uso estrutural:
+                  </div>
+                  <p className="text-xs text-slate-700 italic bg-white p-3 rounded-xl border border-slate-200 leading-relaxed">
+                    &quot;Declaro que utilizei ferramenta de Inteligência Artificial para elaboração de esboço e estruturação de seções. O desenvolvimento, análise e redação final foram realizados por mim. Assumo total responsabilidade pelo texto apresentado.&quot;
+                  </p>
+                </div>
+
+                <div className="border border-slate-200 rounded-2xl p-5 bg-slate-50 space-y-2">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700">
+                    <Check className="w-4 h-4" />
+                    ✅ Exemplo 3 — Não utilizei:
+                  </div>
+                  <p className="text-xs text-slate-700 italic bg-white p-3 rounded-xl border border-slate-200 leading-relaxed">
+                    &quot;Declaro que não utilizei ferramentas de Inteligência Artificial na elaboração deste trabalho.&quot;
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 bg-amber-50/70 border border-amber-200 rounded-xl text-xs text-amber-950 flex items-start gap-3">
+                <AlertTriangle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                <p>
+                  ⚠️ <strong>A não declaração quando houver uso de IA pode impedir ou cancelar a publicação.</strong> Se tiver dúvida sobre como declarar, entre em contato antes do envio.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 6. Sobre Horas Complementares e Alinhamento Temático */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-900 font-bold flex items-center justify-center text-sm">6</span>
+              <h3 className="text-xl font-bold text-[#011049]">Sobre Horas Complementares e Alinhamento Temático</h3>
+            </div>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Os eixos temáticos definidos pela ESDHUBEM foram estruturados com base nas áreas de conhecimento da CAPES, visando manter uniformidade, coerência e um norteamento conceitual comum aos trabalhos. Este alinhamento temático não significa certificação ou validação oficial pela CAPES nem confere status de instituição de ensino superior à ESDHUBEM — trata-se de referência organizacional.
+            </p>
+
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+              <h4 className="font-bold text-[#011049] text-base flex items-center gap-2">
+                <Landmark className="w-5 h-5 text-blue-700" />
+                Validação de horas complementares
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                O reconhecimento de horas complementares é competência de cada instituição de ensino onde o estudante estiver matriculado. Recomendamos:
+              </p>
+              <ul className="text-xs text-slate-700 space-y-2 pl-1">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span>Consultar previamente a secretaria ou coordenação do seu curso sobre os requisitos, documentos aceitos e critérios de validação</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span>Se necessário, solicitar à ESDHUBEM carta de apresentação, declaração de participação ou detalhamento da carga horária para entrega à sua instituição</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 font-bold">•</span>
+                  <span>Cada instituição possui suas próprias regras — a ESDHUBEM fornece os documentos comprobatórios, mas a decisão de validação cabe exclusivamente à instituição de origem do estudante</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 7. Livro Autoral — Formato e Contagem de Páginas */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-900 font-bold flex items-center justify-center text-sm">7</span>
+              <h3 className="text-xl font-bold text-[#011049]">Livro Autoral — Formato e Contagem de Páginas</h3>
+            </div>
+
+            {/* Extensão mínima */}
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+              <h4 className="font-bold text-[#011049] text-base flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-indigo-700" />
+                Extensão mínima
+              </h4>
+              <p className="text-xs text-slate-700 leading-relaxed">
+                O trabalho deve conter no mínimo 50 páginas de conteúdo efetivo. Não são contabilizadas neste mínimo:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-xs text-slate-600 pt-1">
+                <div className="flex items-center gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200">
+                  <span className="text-slate-400">•</span> Capa e contracapa
+                </div>
+                <div className="flex items-center gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200">
+                  <span className="text-slate-400">•</span> Folha de rosto
+                </div>
+                <div className="flex items-center gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200">
+                  <span className="text-slate-400">•</span> Sumário
+                </div>
+                <div className="flex items-center gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200">
+                  <span className="text-slate-400">•</span> Dedicatória, agradecimentos, epígrafe
+                </div>
+                <div className="flex items-center gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200">
+                  <span className="text-slate-400">•</span> Lista de tabelas, figuras ou abreviações
+                </div>
+                <div className="flex items-center gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200">
+                  <span className="text-slate-400">•</span> Referências bibliográficas
+                </div>
+                <div className="flex items-center gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200 sm:col-span-2 md:col-span-1">
+                  <span className="text-slate-400">•</span> Apêndices e anexos
+                </div>
+              </div>
+            </div>
+
+            {/* Orientações de formatação sugeridas */}
+            <div className="space-y-3">
+              <h4 className="font-bold text-[#011049] text-base">Orientações de formatação sugeridas</h4>
+              <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+                <table className="w-full text-left text-sm">
+                  <thead className="bg-slate-50 border-b border-slate-200 text-[#011049]">
+                    <tr>
+                      <th className="py-3 px-4 font-bold w-1/3">Aspecto</th>
+                      <th className="py-3 px-4 font-bold">Recomendação</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 text-slate-700 text-xs">
+                    <tr className="hover:bg-slate-50/50">
+                      <td className="py-3 px-4 font-semibold text-slate-900">Formato de página</td>
+                      <td className="py-3 px-4">A4 (210 × 297 mm)</td>
+                    </tr>
+                    <tr className="hover:bg-slate-50/50">
+                      <td className="py-3 px-4 font-semibold text-slate-900">Margens</td>
+                      <td className="py-3 px-4">3 cm (superior e esquerda) / 2 cm (inferior e direita)</td>
+                    </tr>
+                    <tr className="hover:bg-slate-50/50">
+                      <td className="py-3 px-4 font-semibold text-slate-900">Fonte</td>
+                      <td className="py-3 px-4">Times New Roman ou Arial, tamanho 12</td>
+                    </tr>
+                    <tr className="hover:bg-slate-50/50">
+                      <td className="py-3 px-4 font-semibold text-slate-900">Espaçamento entre linhas</td>
+                      <td className="py-3 px-4">1,5</td>
+                    </tr>
+                    <tr className="hover:bg-slate-50/50">
+                      <td className="py-3 px-4 font-semibold text-slate-900">Parágrafo</td>
+                      <td className="py-3 px-4">Recuo de 1,25 cm na primeira linha</td>
+                    </tr>
+                    <tr className="hover:bg-slate-50/50">
+                      <td className="py-3 px-4 font-semibold text-slate-900">Numeração de páginas</td>
+                      <td className="py-3 px-4">Canto superior direito, a partir da primeira página de conteúdo</td>
+                    </tr>
+                    <tr className="hover:bg-slate-50/50">
+                      <td className="py-3 px-4 font-semibold text-slate-900">Títulos de capítulo</td>
+                      <td className="py-3 px-4">Iniciando em página nova, em destaque</td>
+                    </tr>
+                    <tr className="hover:bg-slate-50/50">
+                      <td className="py-3 px-4 font-semibold text-slate-900">Arquivo final</td>
+                      <td className="py-3 px-4 font-medium text-blue-700">PDF, pronto para publicação e eventual impressão</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-xs text-slate-600 space-y-2">
+              <p className="leading-relaxed">
+                A qualidade do conteúdo prevalece sobre a quantidade de páginas. O texto deve apresentar coerência, desenvolvimento completo das ideias e proposta autoral definida.
+              </p>
+              <p className="leading-relaxed">
+                Após aprovação, o autor orienta-se sobre o registro oficial junto à Fundação Biblioteca Nacional (EDA/FBN), procedimento pessoal e intransferível.
               </p>
             </div>
           </div>
