@@ -79,13 +79,13 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
               <span className="text-[#FFC72C]">Escala de Autoria</span>
             </h1>
 
-            <p className="text-[#FFC72C] text-base sm:text-lg font-semibold leading-relaxed">
+            <p className="text-white text-base sm:text-lg font-normal leading-relaxed text-slate-100">
               Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando Selos de Autoria (Bronze, Prata, Ouro e Diamante) através da publicação de artigos de blog, manuscritos com registro DOI ou Livros na Biblioteca Nacional.
             </p>
           </div>
 
           {/* Quick Stat Box */}
-          <div className="bg-[#182333] border border-slate-700 p-6 rounded-2xl shadow-xl max-w-sm w-full space-y-4 shrink-0">
+          <div className="bg-[#011049]/90 border border-blue-800/80 p-6 rounded-2xl shadow-xl max-w-sm w-full space-y-4 shrink-0 backdrop-blur-xs">
             <div className="text-xs font-bold text-[#FFC72C] uppercase tracking-wider flex items-center gap-2">
               <Award className="w-4 h-4 text-[#FFC72C]" />
               <span>4 Categorias de Mérito</span>
@@ -106,7 +106,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
               </div>
             </div>
 
-            <p className="text-[11px] text-slate-400 leading-tight pt-1">
+            <p className="text-[11px] text-blue-200/80 leading-tight pt-1">
               ✓ Cada nível concede uma insígnia exclusiva impressa no certificado e cadastrada no registro público de validação.
             </p>
           </div>
@@ -136,7 +136,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
               </div>
             </div>
 
-            <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed font-normal">
+            <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed font-normal text-justify">
               <p>
                 A <strong className="text-[#011049] font-bold">ESDHUBEM</strong> instituiu estas diretrizes e a Escala de Autoria para oferecer um caminho claro, seguro e valorizado para quem deseja ir além da simples conclusão de um curso.
               </p>
