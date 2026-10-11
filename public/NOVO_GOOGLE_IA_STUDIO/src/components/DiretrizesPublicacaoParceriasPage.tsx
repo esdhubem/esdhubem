@@ -395,7 +395,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> um artigo autoral aprofundado para publicação no Blog Oficial da ESDHUBEM, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
+                  O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade de Fixação Ativa</strong> do curso, mas aqui o texto é maior e se trata de um artigo autoral aprofundado para publicação no <strong>Blog Oficial da ESDHUBEM</strong>, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
                 </p>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
