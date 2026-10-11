@@ -188,7 +188,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Fixação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete Enciclopédico</strong> para a Wiki oficial da escola (conceito claro, informativo, objetivo, histórico e com aplicação prática).
+                  O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Fixação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete</strong> com conceito claro, informativo, objetivo, histórico e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola.
                 </p>
 
                 <div className="bg-white border border-amber-200/80 rounded-xl p-4 space-y-2.5">
@@ -209,8 +209,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </ul>
 
                   <div className="pt-2 border-t border-amber-100 flex flex-wrap gap-2 text-xs">
-                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Wiki Oficial ESDHUBEM (Enciclopédia Temática)</span>
                     <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">🛡️ Registro de Autoria: OSF (Open Science Framework)</span>
+                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Wiki Oficial ESDHUBEM (Enciclopédia Temática)</span>
                   </div>
                 </div>
 
