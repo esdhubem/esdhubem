@@ -163,7 +163,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs sm:text-sm">
                 <thead>
-                  <tr className="bg-[#182333] text-white border-b border-slate-700">
+                  <tr className="bg-[#011049] text-white border-b border-blue-900/60">
                     <th className="py-4 px-6 font-bold uppercase tracking-wider">Categoria / Selo</th>
                     <th className="py-4 px-6 font-bold uppercase tracking-wider">Requisito Principal</th>
                     <th className="py-4 px-6 font-bold uppercase tracking-wider">Destino da Publicação</th>
@@ -181,7 +181,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                       </div>
                     </td>
                     <td className="py-4 px-6">
-                      Responder às perguntas de múltipla escolha dos questionários de fixação.
+                      Entrega da Tríade de Fixação Ativa: 1 Mapa Mental visual estruturado, 1 texto síntese de no mínimo 500 palavras e 1 áudio explicativo de 1 minuto.
                     </td>
                     <td className="py-4 px-6">
                       Sistema interno da escola (Painel EAD do Aluno).
@@ -203,7 +203,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                       </div>
                     </td>
                     <td className="py-4 px-6">
-                      Escrever um artigo curto e prático assinado pelo aluno.
+                      Escrever um artigo de blog aprofundado (1.200 a 2.500 palavras) com foco em autoridade temática e ranqueamento no SEO do Google, assinado pelo aluno.
                     </td>
                     <td className="py-4 px-6">
                       Blog Oficial da ESDHUBEM (com link público de autor para portfólio).
@@ -282,62 +282,83 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             {/* TIER 1: BRONZE */}
-            <div className="bg-white rounded-3xl border-2 border-amber-700/30 p-6 sm:p-8 shadow-sm space-y-4 relative overflow-hidden">
+            <div className="bg-white rounded-3xl border-2 border-amber-700/30 p-6 sm:p-8 shadow-sm space-y-5 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 bg-amber-800 text-amber-100 text-xs font-bold px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider">
                 Selo 🥉 Bronze
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-amber-100 border border-amber-300 flex items-center justify-center text-2xl shrink-0">
-                  🥉
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-2xl bg-amber-100 border border-amber-300 flex items-center justify-center text-2xl shrink-0">
+                    🥉
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900">Nível Bronze: Aproveitamento Básico</h3>
+                    <span className="text-xs text-amber-800 font-semibold">Tríade de Fixação Ativa & Retenção do Conteúdo</span>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900">Nível Bronze: Aproveitamento Básico</h3>
-                  <span className="text-xs text-amber-800 font-semibold">Fixação e Retenção do Conteúdo</span>
+
+                {/* Quadro Único Explicativo Completo */}
+                <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-xs sm:text-sm space-y-3.5 text-slate-800">
+                  <p className="leading-relaxed text-slate-700 font-normal">
+                    Focado na consolidação prática do aprendizado através da <strong>metodologia pedagógica de Fixação Ativa</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a tríade de fixação:
+                  </p>
+                  
+                  <div className="space-y-2 pt-1 border-t border-amber-200/60">
+                    <strong className="block text-amber-950 font-bold text-xs uppercase tracking-wider">📌 Entregáveis Obrigatórios:</strong>
+                    <ul className="space-y-2 text-xs text-slate-700 pl-1">
+                      <li className="flex items-start gap-2">
+                        <span className="text-amber-800 font-bold shrink-0">🧠</span>
+                        <span><strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (à mão ou digital) estruturando os conceitos centrais e conexões pedagógicas do tema.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-amber-800 font-bold shrink-0">✍️</span>
+                        <span><strong>Texto Síntese (Mínimo de 500 palavras):</strong> Redação reflexiva de síntese autoral com suas próprias palavras para fixação profunda.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-amber-800 font-bold shrink-0">🎙️</span>
+                        <span><strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando com clareza o aprendizado (Técnica Feynman de retenção).</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="pt-2 border-t border-amber-200/60 text-xs text-amber-950 font-medium flex items-center gap-2">
+                    <span>📜</span>
+                    <span><strong>Certificado Emitido:</strong> Certificado Oficial com chancela de Conclusão e Selo Bronze validado pedagogicamente pela coordenação.</span>
+                  </div>
                 </div>
-              </div>
-
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Focado na retenção e absorção do conhecimento ministrado nas videoaulas. O aluno assiste às aulas completas e valida seu aprendizado respondendo aos questionários automáticos de múltipla escolha da plataforma EAD.
-              </p>
-
-              <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 text-xs space-y-2 text-amber-900">
-                <strong>📌 Requisitos & Entregáveis:</strong>
-                <ul className="list-disc pl-4 space-y-1">
-                  <li>Visualização de 100% dos módulos do curso.</li>
-                  <li>Aprovação nos questionários com nota mínima 7.0.</li>
-                  <li><strong>Certificado Emitido:</strong> Certificado Padrão com chancela de Conclusão e Selo Bronze.</li>
-                </ul>
               </div>
             </div>
 
             {/* TIER 2: PRATA */}
-            <div className="bg-white rounded-3xl border-2 border-slate-300 p-6 sm:p-8 shadow-sm space-y-4 relative overflow-hidden">
+            <div className="bg-white rounded-3xl border-2 border-slate-300 p-6 sm:p-8 shadow-sm space-y-5 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 bg-slate-700 text-slate-100 text-xs font-bold px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider">
                 Selo 🥈 Prata
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-slate-100 border border-slate-300 flex items-center justify-center text-2xl shrink-0">
-                  🥈
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-100 border border-slate-300 flex items-center justify-center text-2xl shrink-0">
+                    🥈
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900">Nível Prata: Produção de Conteúdo</h3>
+                    <span className="text-xs text-slate-600 font-semibold">Artigo de Blog & Autoridade Profissional</span>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900">Nível Prata: Produção de Conteúdo</h3>
-                  <span className="text-xs text-slate-600 font-semibold">Divulgação Prática & Portfólio</span>
+
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  O aluno desenvolve um artigo de blog aprofundado e estratégico de <strong>1.200 a 2.500 palavras</strong> — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições de busca orgânica do <strong>Google (SEO)</strong>. O artigo é publicado no Blog Oficial da ESDHUBEM com autoria e perfil do estudante.
+                </p>
+
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2 text-slate-800">
+                  <strong>📌 Requisitos & Benefícios de Autoridade:</strong>
+                  <ul className="list-disc pl-4 space-y-1.5">
+                    <li>Elaboração de um artigo de <strong>1.200 a 2.500 palavras</strong> com estrutura escaneável (subtítulos H2/H3, estudo de caso ou aplicação prática) e boas práticas de SEO.</li>
+                    <li>Revisão, orientação e validação da equipe editorial e pedagógica da escola.</li>
+                    <li><strong>Benefício de Portfólio:</strong> Página pública indexável no Google com link de autor, biografia e selo digital para impulsionar o currículo Lattes, LinkedIn e autoridade profissional no mercado.</li>
+                  </ul>
                 </div>
-              </div>
-
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                O aluno desenvolve um artigo curto e prático (entre 500 a 1.200 palavras) aplicando os conceitos aprendidos no seu contexto profissional. O texto é publicado no Blog Oficial da ESDHUBEM com a autoria completa do estudante.
-              </p>
-
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2 text-slate-800">
-                <strong>📌 Requisitos & Benefícios:</strong>
-                <ul className="list-disc pl-4 space-y-1">
-                  <li>Elaboração de um artigo prático ou estudo de caso de autoria própria.</li>
-                  <li>Aprovação pela equipe editorial da escola.</li>
-                  <li><strong>Benefício:</strong> O aluno ganha uma página pública no blog com seu nome para utilizar no LinkedIn e currículo, movimentando seu portfólio profissional.</li>
-                </ul>
               </div>
             </div>
 
@@ -406,7 +427,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
         </section>
 
         {/* SECTION 3: FLUXO DE SUBMISSÃO PARA O ALUNO */}
-        <section className="bg-[#182333] text-white rounded-3xl p-6 sm:p-10 shadow-xl space-y-8">
+        <section className="bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white rounded-3xl p-6 sm:p-10 shadow-xl space-y-8 border border-blue-900/60 relative overflow-hidden">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-[#FFC72C] text-xs font-bold uppercase tracking-wider">
               Passo a Passo de Upgrade
@@ -414,50 +435,50 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             <h2 className="text-2xl sm:text-3xl font-black text-white">
               Como Submeter seu Trabalho e Elevar seu Selo
             </h2>
-            <p className="text-xs sm:text-sm text-slate-300">
+            <p className="text-xs sm:text-sm text-blue-100/90">
               Siga o fluxo simplificado da nossa comissão acadêmica para validar seu artigo ou TCC:
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-700 space-y-3">
-              <span className="w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center">
+            <div className="p-5 rounded-2xl bg-[#011049]/90 border border-blue-800/80 hover:border-cyan-400/50 hover:bg-[#061e47] transition-all shadow-md backdrop-blur-xs space-y-3 group">
+              <span className="w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center group-hover:scale-105 transition-transform">
                 1
               </span>
               <h4 className="font-bold text-white text-base">Escreva seu Trabalho</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Desenvolva seu artigo prático, TCC ou artigo de pesquisa com base nas orientações do seu curso na ESDHUBEM.
+              <p className="text-xs text-blue-100/80 leading-relaxed">
+                Desenvolva seu mapa mental e síntese (Bronze), artigo de blog de 1.200 a 2.500 palavras (Prata), TCC/artigo científico (Ouro) ou livro autoral (Diamante).
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-700 space-y-3">
-              <span className="w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center">
+            <div className="p-5 rounded-2xl bg-[#011049]/90 border border-blue-800/80 hover:border-cyan-400/50 hover:bg-[#061e47] transition-all shadow-md backdrop-blur-xs space-y-3 group">
+              <span className="w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center group-hover:scale-105 transition-transform">
                 2
               </span>
               <h4 className="font-bold text-white text-base">Envie para Avaliação</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Submeta o documento (PDF ou DOCX) através do e-mail da coordenação ou suporte acadêmico via WhatsApp.
+              <p className="text-xs text-blue-100/80 leading-relaxed">
+                Submeta os arquivos (PDF, DOCX, imagem do mapa mental ou áudio) através do e-mail da coordenação ou suporte acadêmico via WhatsApp.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-700 space-y-3">
-              <span className="w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center">
+            <div className="p-5 rounded-2xl bg-[#011049]/90 border border-blue-800/80 hover:border-cyan-400/50 hover:bg-[#061e47] transition-all shadow-md backdrop-blur-xs space-y-3 group">
+              <span className="w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center group-hover:scale-105 transition-transform">
                 3
               </span>
               <h4 className="font-bold text-white text-base">Revisão Editorial</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Nossa equipe de docentes e pareceristas revisa o trabalho e orienta as adequações ou indexação DOI.
+              <p className="text-xs text-blue-100/80 leading-relaxed">
+                Nossa equipe de docentes e pareceristas revisa a produção acadêmica e orienta as adequações ou indexação DOI.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-700 space-y-3">
-              <span className="w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center">
+            <div className="p-5 rounded-2xl bg-[#011049]/90 border border-blue-800/80 hover:border-cyan-400/50 hover:bg-[#061e47] transition-all shadow-md backdrop-blur-xs space-y-3 group">
+              <span className="w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center group-hover:scale-105 transition-transform">
                 4
               </span>
               <h4 className="font-bold text-white text-base">Emissão do Selo</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                O seu certificado é atualizado no sistema com o Selo de Mérito (Prata, Ouro ou Diamante) e link de validação pública.
+              <p className="text-xs text-blue-100/80 leading-relaxed">
+                O seu certificado é atualizado no sistema com o Selo de Mérito correspondente (Bronze, Prata, Ouro ou Diamante) e link de validação pública.
               </p>
             </div>
 
@@ -669,13 +690,13 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
         </section>
 
         {/* SECTION 4: CALL TO ACTION BANNER */}
-        <section className="p-6 sm:p-8 rounded-3xl bg-[#182333] border border-slate-700/80 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-white relative overflow-hidden">
+        <section className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] border border-blue-900/60 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-white relative overflow-hidden">
           <div className="space-y-1 text-center md:text-left relative z-10">
             <h3 className="text-lg sm:text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
               <Sparkles className="w-5 h-5 text-[#FFC72C]" />
               Pronto para transformar seu estudo em uma publicação real?
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300">
+            <p className="text-xs sm:text-sm text-blue-100/90">
               Explore nossos artigos científicos já publicados ou submeta seu trabalho para a coordenação acadêmica.
             </p>
           </div>

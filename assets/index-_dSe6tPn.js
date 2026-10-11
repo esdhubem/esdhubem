@@ -27883,7 +27883,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
 									className: "w-full text-left text-xs sm:text-sm",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
-										className: "bg-[#182333] text-white border-b border-slate-700",
+										className: "bg-[#011049] text-white border-b border-blue-900/60",
 										children: [
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
 												className: "py-4 px-6 font-bold uppercase tracking-wider",
@@ -27923,7 +27923,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
 														className: "py-4 px-6",
-														children: "Responder às perguntas de múltipla escolha dos questionários de fixação."
+														children: "Entrega da Tríade de Fixação Ativa: 1 Mapa Mental visual estruturado, 1 texto síntese de no mínimo 500 palavras e 1 áudio explicativo de 1 minuto."
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
 														className: "py-4 px-6",
@@ -27956,7 +27956,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
 														className: "py-4 px-6",
-														children: "Escrever um artigo curto e prático assinado pelo aluno."
+														children: "Escrever um artigo de blog aprofundado (1.200 a 2.500 palavras) com foco em autoridade temática e ranqueamento no SEO do Google, assinado pelo aluno."
 													}),
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
 														className: "py-4 px-6",
@@ -28073,13 +28073,13 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 							className: "grid grid-cols-1 md:grid-cols-2 gap-8",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "bg-white rounded-3xl border-2 border-amber-700/30 p-6 sm:p-8 shadow-sm space-y-4 relative overflow-hidden",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "absolute top-0 right-0 bg-amber-800 text-amber-100 text-xs font-bold px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider",
-											children: "Selo 🥉 Bronze"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "bg-white rounded-3xl border-2 border-amber-700/30 p-6 sm:p-8 shadow-sm space-y-5 relative overflow-hidden flex flex-col justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "absolute top-0 right-0 bg-amber-800 text-amber-100 text-xs font-bold px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider",
+										children: "Selo 🥉 Bronze"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "space-y-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "flex items-center gap-3",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 												className: "w-12 h-12 rounded-2xl bg-amber-100 border border-amber-300 flex items-center justify-center text-2xl shrink-0",
@@ -28089,62 +28089,107 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 												children: "Nível Bronze: Aproveitamento Básico"
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 												className: "text-xs text-amber-800 font-semibold",
-												children: "Fixação e Retenção do Conteúdo"
+												children: "Tríade de Fixação Ativa & Retenção do Conteúdo"
 											})] })]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs sm:text-sm text-slate-600 leading-relaxed",
-											children: "Focado na retenção e absorção do conhecimento ministrado nas videoaulas. O aluno assiste às aulas completas e valida seu aprendizado respondendo aos questionários automáticos de múltipla escolha da plataforma EAD."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "p-4 rounded-2xl bg-amber-50/60 border border-amber-200 text-xs space-y-2 text-amber-900",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "📌 Requisitos & Entregáveis:" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-												className: "list-disc pl-4 space-y-1",
-												children: [
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Visualização de 100% dos módulos do curso." }),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Aprovação nos questionários com nota mínima 7.0." }),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Certificado Emitido:" }), " Certificado Padrão com chancela de Conclusão e Selo Bronze."] })
-												]
-											})]
-										})
-									]
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-xs sm:text-sm space-y-3.5 text-slate-800",
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+													className: "leading-relaxed text-slate-700 font-normal",
+													children: [
+														"Focado na consolidação prática do aprendizado através da ",
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "metodologia pedagógica de Fixação Ativa" }),
+														" da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a tríade de fixação:"
+													]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "space-y-2 pt-1 border-t border-amber-200/60",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+														className: "block text-amber-950 font-bold text-xs uppercase tracking-wider",
+														children: "📌 Entregáveis Obrigatórios:"
+													}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+														className: "space-y-2 text-xs text-slate-700 pl-1",
+														children: [
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+																className: "flex items-start gap-2",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "text-amber-800 font-bold shrink-0",
+																	children: "🧠"
+																}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Mapa Mental do Conteúdo:" }), " Diagrama visual desenhado (à mão ou digital) estruturando os conceitos centrais e conexões pedagógicas do tema."] })]
+															}),
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+																className: "flex items-start gap-2",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "text-amber-800 font-bold shrink-0",
+																	children: "✍️"
+																}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Texto Síntese (Mínimo de 500 palavras):" }), " Redação reflexiva de síntese autoral com suas próprias palavras para fixação profunda."] })]
+															}),
+															/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+																className: "flex items-start gap-2",
+																children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+																	className: "text-amber-800 font-bold shrink-0",
+																	children: "🎙️"
+																}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Áudio Explicativo de 1 Minuto:" }), " Gravação de voz de 60 segundos sintetizando com clareza o aprendizado (Técnica Feynman de retenção)."] })]
+															})
+														]
+													})]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+													className: "pt-2 border-t border-amber-200/60 text-xs text-amber-950 font-medium flex items-center gap-2",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "📜" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Certificado Emitido:" }), " Certificado Oficial com chancela de Conclusão e Selo Bronze validado pedagogicamente pela coordenação."] })]
+												})
+											]
+										})]
+									})]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "bg-white rounded-3xl border-2 border-slate-300 p-6 sm:p-8 shadow-sm space-y-4 relative overflow-hidden",
-									children: [
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "absolute top-0 right-0 bg-slate-700 text-slate-100 text-xs font-bold px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider",
-											children: "Selo 🥈 Prata"
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center gap-3",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: "w-12 h-12 rounded-2xl bg-slate-100 border border-slate-300 flex items-center justify-center text-2xl shrink-0",
-												children: "🥈"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-												className: "text-xl font-bold text-slate-900",
-												children: "Nível Prata: Produção de Conteúdo"
-											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "text-xs text-slate-600 font-semibold",
-												children: "Divulgação Prática & Portfólio"
-											})] })]
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs sm:text-sm text-slate-600 leading-relaxed",
-											children: "O aluno desenvolve um artigo curto e prático (entre 500 a 1.200 palavras) aplicando os conceitos aprendidos no seu contexto profissional. O texto é publicado no Blog Oficial da ESDHUBEM com a autoria completa do estudante."
-										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2 text-slate-800",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "📌 Requisitos & Benefícios:" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-												className: "list-disc pl-4 space-y-1",
+									className: "bg-white rounded-3xl border-2 border-slate-300 p-6 sm:p-8 shadow-sm space-y-5 relative overflow-hidden flex flex-col justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "absolute top-0 right-0 bg-slate-700 text-slate-100 text-xs font-bold px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider",
+										children: "Selo 🥈 Prata"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "space-y-4",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center gap-3",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "w-12 h-12 rounded-2xl bg-slate-100 border border-slate-300 flex items-center justify-center text-2xl shrink-0",
+													children: "🥈"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+													className: "text-xl font-bold text-slate-900",
+													children: "Nível Prata: Produção de Conteúdo"
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "text-xs text-slate-600 font-semibold",
+													children: "Artigo de Blog & Autoridade Profissional"
+												})] })]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+												className: "text-xs sm:text-sm text-slate-600 leading-relaxed",
 												children: [
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Elaboração de um artigo prático ou estudo de caso de autoria própria." }),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Aprovação pela equipe editorial da escola." }),
-													/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Benefício:" }), " O aluno ganha uma página pública no blog com seu nome para utilizar no LinkedIn e currículo, movimentando seu portfólio profissional."] })
+													"O aluno desenvolve um artigo de blog aprofundado e estratégico de ",
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "1.200 a 2.500 palavras" }),
+													" — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições de busca orgânica do ",
+													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Google (SEO)" }),
+													". O artigo é publicado no Blog Oficial da ESDHUBEM com autoria e perfil do estudante."
 												]
-											})]
-										})
-									]
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2 text-slate-800",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "📌 Requisitos & Benefícios de Autoridade:" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+													className: "list-disc pl-4 space-y-1.5",
+													children: [
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", { children: [
+															"Elaboração de um artigo de ",
+															/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "1.200 a 2.500 palavras" }),
+															" com estrutura escaneável (subtítulos H2/H3, estudo de caso ou aplicação prática) e boas práticas de SEO."
+														] }),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: "Revisão, orientação e validação da equipe editorial e pedagógica da escola." }),
+														/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Benefício de Portfólio:" }), " Página pública indexável no Google com link de autor, biografia e selo digital para impulsionar o currículo Lattes, LinkedIn e autoridade profissional no mercado."] })
+													]
+												})]
+											})
+										]
+									})]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "bg-white rounded-3xl border-2 border-amber-400 p-6 sm:p-8 shadow-sm space-y-4 relative overflow-hidden",
@@ -28233,7 +28278,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-						className: "bg-[#182333] text-white rounded-3xl p-6 sm:p-10 shadow-xl space-y-8",
+						className: "bg-gradient-to-b from-[#011049] via-[#061e47] to-[#011049] text-white rounded-3xl p-6 sm:p-10 shadow-xl space-y-8 border border-blue-900/60 relative overflow-hidden",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "text-center max-w-2xl mx-auto space-y-2",
 							children: [
@@ -28246,7 +28291,7 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 									children: "Como Submeter seu Trabalho e Elevar seu Selo"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-xs sm:text-sm text-slate-300",
+									className: "text-xs sm:text-sm text-blue-100/90",
 									children: "Siga o fluxo simplificado da nossa comissão acadêmica para validar seu artigo ou TCC:"
 								})
 							]
@@ -28254,10 +28299,10 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 							className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "p-5 rounded-2xl bg-slate-900/80 border border-slate-700 space-y-3",
+									className: "p-5 rounded-2xl bg-[#011049]/90 border border-blue-800/80 hover:border-cyan-400/50 hover:bg-[#061e47] transition-all shadow-md backdrop-blur-xs space-y-3 group",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center",
+											className: "w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center group-hover:scale-105 transition-transform",
 											children: "1"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
@@ -28265,16 +28310,16 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 											children: "Escreva seu Trabalho"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-300 leading-relaxed",
-											children: "Desenvolva seu artigo prático, TCC ou artigo de pesquisa com base nas orientações do seu curso na ESDHUBEM."
+											className: "text-xs text-blue-100/80 leading-relaxed",
+											children: "Desenvolva seu mapa mental e síntese (Bronze), artigo de blog de 1.200 a 2.500 palavras (Prata), TCC/artigo científico (Ouro) ou livro autoral (Diamante)."
 										})
 									]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "p-5 rounded-2xl bg-slate-900/80 border border-slate-700 space-y-3",
+									className: "p-5 rounded-2xl bg-[#011049]/90 border border-blue-800/80 hover:border-cyan-400/50 hover:bg-[#061e47] transition-all shadow-md backdrop-blur-xs space-y-3 group",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center",
+											className: "w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center group-hover:scale-105 transition-transform",
 											children: "2"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
@@ -28282,16 +28327,16 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 											children: "Envie para Avaliação"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-300 leading-relaxed",
-											children: "Submeta o documento (PDF ou DOCX) através do e-mail da coordenação ou suporte acadêmico via WhatsApp."
+											className: "text-xs text-blue-100/80 leading-relaxed",
+											children: "Submeta os arquivos (PDF, DOCX, imagem do mapa mental ou áudio) através do e-mail da coordenação ou suporte acadêmico via WhatsApp."
 										})
 									]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "p-5 rounded-2xl bg-slate-900/80 border border-slate-700 space-y-3",
+									className: "p-5 rounded-2xl bg-[#011049]/90 border border-blue-800/80 hover:border-cyan-400/50 hover:bg-[#061e47] transition-all shadow-md backdrop-blur-xs space-y-3 group",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center",
+											className: "w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center group-hover:scale-105 transition-transform",
 											children: "3"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
@@ -28299,16 +28344,16 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 											children: "Revisão Editorial"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-300 leading-relaxed",
-											children: "Nossa equipe de docentes e pareceristas revisa o trabalho e orienta as adequações ou indexação DOI."
+											className: "text-xs text-blue-100/80 leading-relaxed",
+											children: "Nossa equipe de docentes e pareceristas revisa a produção acadêmica e orienta as adequações ou indexação DOI."
 										})
 									]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "p-5 rounded-2xl bg-slate-900/80 border border-slate-700 space-y-3",
+									className: "p-5 rounded-2xl bg-[#011049]/90 border border-blue-800/80 hover:border-cyan-400/50 hover:bg-[#061e47] transition-all shadow-md backdrop-blur-xs space-y-3 group",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center",
+											className: "w-8 h-8 rounded-full bg-[#FFC72C] text-slate-950 font-black text-sm flex items-center justify-center group-hover:scale-105 transition-transform",
 											children: "4"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
@@ -28316,8 +28361,8 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 											children: "Emissão do Selo"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-xs text-slate-300 leading-relaxed",
-											children: "O seu certificado é atualizado no sistema com o Selo de Mérito (Prata, Ouro ou Diamante) e link de validação pública."
+											className: "text-xs text-blue-100/80 leading-relaxed",
+											children: "O seu certificado é atualizado no sistema com o Selo de Mérito correspondente (Bronze, Prata, Ouro ou Diamante) e link de validação pública."
 										})
 									]
 								})
@@ -28611,14 +28656,14 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-						className: "p-6 sm:p-8 rounded-3xl bg-[#182333] border border-slate-700/80 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-white relative overflow-hidden",
+						className: "p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] border border-blue-900/60 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-white relative overflow-hidden",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "space-y-1 text-center md:text-left relative z-10",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
 								className: "text-lg sm:text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-5 h-5 text-[#FFC72C]" }), "Pronto para transformar seu estudo em uma publicação real?"]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-xs sm:text-sm text-slate-300",
+								className: "text-xs sm:text-sm text-blue-100/90",
 								children: "Explore nossos artigos científicos já publicados ou submeta seu trabalho para a coordenação acadêmica."
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

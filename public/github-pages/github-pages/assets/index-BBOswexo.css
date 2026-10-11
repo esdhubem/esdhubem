@@ -2132,6 +2132,16 @@
     border-color: var(--color-blue-600);
   }
 
+  .border-blue-800\/80 {
+    border-color: #193cb8cc;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-blue-800\/80 {
+      border-color: color-mix(in oklab, var(--color-blue-800) 80%, transparent);
+    }
+  }
+
   .border-blue-900\/40 {
     border-color: #1c398e66;
   }
@@ -5415,6 +5425,26 @@
 
   .text-blue-100 {
     color: var(--color-blue-100);
+  }
+
+  .text-blue-100\/80 {
+    color: #dbeafecc;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-blue-100\/80 {
+      color: color-mix(in oklab, var(--color-blue-100) 80%, transparent);
+    }
+  }
+
+  .text-blue-100\/90 {
+    color: #dbeafee6;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-blue-100\/90 {
+      color: color-mix(in oklab, var(--color-blue-100) 90%, transparent);
+    }
   }
 
   .text-blue-200 {
