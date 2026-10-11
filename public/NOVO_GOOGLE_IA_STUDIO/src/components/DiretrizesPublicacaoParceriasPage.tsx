@@ -133,27 +133,31 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </span>
                 <span className="text-[#FFC72C] font-bold text-base">→</span>
                 <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
-                  Comunicação da modalidade
+                  Comunicação da modalidade de manuscrito
                 </span>
                 <span className="text-[#FFC72C] font-bold text-base">→</span>
                 <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
-                  Produção do trabalho
+                  Pagamento da taxa do nível específico
                 </span>
                 <span className="text-[#FFC72C] font-bold text-base">→</span>
                 <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
-                  Registro de autoria (OSF / Zenodo / BN)
+                  Produção do manuscrito
                 </span>
                 <span className="text-[#FFC72C] font-bold text-base">→</span>
                 <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
-                  Análise & Curadoria pedagógica
+                  Envio para análise
                 </span>
                 <span className="text-[#FFC72C] font-bold text-base">→</span>
                 <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
-                  Publicação (Wiki / Blog / Repositório / Mural)
+                  Devolutiva da escola
                 </span>
                 <span className="text-[#FFC72C] font-bold text-base">→</span>
-                <span className="bg-[#FFC72C] text-slate-950 font-black px-3 py-1.5 rounded-xl shadow-md border border-amber-300">
-                  Emissão do certificado de autoria
+                <span className="bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl text-white font-semibold border border-white/10 shadow-xs">
+                  Aprovação de ambas as partes
+                </span>
+                <span className="text-[#FFC72C] font-bold text-base">→</span>
+                <span className="bg-[#FFC72C] text-slate-950 font-black px-3.5 py-1.5 rounded-xl shadow-md border border-amber-300">
+                  Emissão do certificado e publicação do trabalho
                 </span>
               </div>
             </div>
