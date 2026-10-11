@@ -164,7 +164,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
               Como Funciona Cada Selo de Certificação
             </h2>
             <p className="text-xs sm:text-sm text-slate-600">
-              Conheça os requisitos de cada nível, a complexidade acadêmica, o destino da publicação e os benefícios para seu portfólio e currículo.
+              Conheça os requisitos de cada nível, a complexidade dos manuscritos, o destino da publicação, o nível da certificação de acordo com o tipo de produção e os benefícios para seu portfólio e currículo.
             </p>
           </div>
 
