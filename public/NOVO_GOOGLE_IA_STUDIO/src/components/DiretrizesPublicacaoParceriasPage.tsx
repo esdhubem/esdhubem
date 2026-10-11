@@ -17,6 +17,7 @@ import {
   Sparkles,
   Layers,
   FileText,
+  FileCheck,
   MessageCircle,
   Landmark,
   ChevronRight,
@@ -253,6 +254,75 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <span>Acessar OSF (osf.io)</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
+            </div>
+
+            {/* Documentos Oficiais Integrados: Declaração de Autorização e Declaração de Autoria */}
+            <div className="pt-3 space-y-4">
+              <div className="flex items-center justify-between gap-3 flex-wrap">
+                <div className="flex items-center gap-2 text-[#00227B] font-extrabold text-sm sm:text-base">
+                  <FileText className="w-4 h-4 text-blue-600" />
+                  <span>Modelos de Documentos Oficiais para Publicação</span>
+                </div>
+                <span className="text-xs text-slate-500 font-medium">
+                  Documentos oficiais para download e preenchimento
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                {/* Documento 1: Declaração de Autorização de Publicação */}
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-xs flex flex-col">
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className="font-bold text-xs uppercase tracking-wide text-slate-900 flex items-center gap-1.5">
+                      <FileCheck className="w-4 h-4 text-amber-600" />
+                      Declaração de Autorização de Publicação
+                    </span>
+                    <a
+                      href="https://docs.google.com/document/d/e/2PACX-1vTvaBZHkV5P8aFmiVQv8qk4QGvTa_QFiwgHq3raRSLQjq1-xpQtFJMHOCWVmIHh1SH4K2gWH7N7WBvZ/pub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-blue-700 hover:text-blue-900 font-semibold hover:underline"
+                    >
+                      <span>Abrir Documento</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <div className="w-full h-[450px] sm:h-[500px] rounded-xl overflow-hidden border border-slate-200 bg-white shadow-inner">
+                    <iframe
+                      src="https://docs.google.com/document/d/e/2PACX-1vTvaBZHkV5P8aFmiVQv8qk4QGvTa_QFiwgHq3raRSLQjq1-xpQtFJMHOCWVmIHh1SH4K2gWH7N7WBvZ/pub?embedded=true"
+                      className="w-full h-full border-0"
+                      title="Declaração de Autorização de Publicação ESDHUBEM"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                {/* Documento 2: Declaração de Autoria e Responsabilidade */}
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-xs flex flex-col">
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className="font-bold text-xs uppercase tracking-wide text-slate-900 flex items-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-blue-600" />
+                      Declaração de Autoria e Responsabilidade
+                    </span>
+                    <a
+                      href="https://docs.google.com/document/d/e/2PACX-1vRrM84I2aCUSWkSh40jNbufvDMKMcL2ZurNRImp9nFvKC8-uxKLz7cr-TRbhe0i0eVH9govf3lz85xB/pub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-blue-700 hover:text-blue-900 font-semibold hover:underline"
+                    >
+                      <span>Abrir Documento</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <div className="w-full h-[450px] sm:h-[500px] rounded-xl overflow-hidden border border-slate-200 bg-white shadow-inner">
+                    <iframe
+                      src="https://docs.google.com/document/d/e/2PACX-1vRrM84I2aCUSWkSh40jNbufvDMKMcL2ZurNRImp9nFvKC8-uxKLz7cr-TRbhe0i0eVH9govf3lz85xB/pub?embedded=true"
+                      className="w-full h-full border-0"
+                      title="Declaração de Autoria e Responsabilidade ESDHUBEM"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
