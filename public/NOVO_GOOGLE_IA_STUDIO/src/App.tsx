@@ -548,10 +548,10 @@ export default function App() {
                 </h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <CorporateBanner onNavigate={() => handleNavigate('categoria:treinamentos-palestras-corporativas')} />
-                <BookstoreBanner onNavigate={() => handleNavigate('livraria')} />
                 <PublicationBanner onNavigate={() => handleNavigate('diretrizes-publicacao-parcerias')} />
+                <BookstoreBanner onNavigate={() => handleNavigate('livraria')} />
                 <DigitalPresenceBanner onNavigate={() => handleNavigate('categoria:landing-pages-biolinks')} />
+                <CorporateBanner onNavigate={() => handleNavigate('categoria:treinamentos-palestras-corporativas')} />
               </div>
             </div>
           </section>
