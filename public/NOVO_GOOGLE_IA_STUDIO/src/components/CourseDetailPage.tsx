@@ -145,7 +145,7 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
   const relatedCourses = COURSES_DATA.filter(c => c.id !== course?.id).slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-[#FBFBFC] text-slate-800 pb-20 font-sans">
+    <div className="min-h-screen bg-[#E9F2FB] text-slate-800 pb-20 font-sans">
       
       {/* 1. Breadcrumb Bar - Clean, Minimal */}
       <nav aria-label="Navegação estrutural" className="bg-white border-b border-slate-200/80 py-3.5 text-xs text-slate-500">

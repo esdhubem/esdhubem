@@ -205,7 +205,7 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
 }) => {
   const [activeTab, setActiveTab] = useState<
     'quadro' | 'triade' | 'sobre' | 'conteudo' | 'certificacao' | 'comparativo' | 'legislacao' | 'faq'
-  >('quadro');
+  >('sobre');
   const [expandedModules, setExpandedModules] = useState<number[]>([0, 1]);
   const [copied, setCopied] = useState(false);
   const [enrollmentMode, setEnrollmentMode] = useState<'gratis' | 'nivel'>('nivel');
@@ -292,13 +292,13 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
   ];
 
   return (
-    <div className="bg-[#F8FAFC] min-h-screen py-8 pb-20">
+    <div className="bg-[#E9F2FB] min-h-screen py-8 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Navigation Bar */}
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={onBackToHome}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-[#182333] transition py-2 px-3 rounded-lg hover:bg-white border border-transparent hover:border-slate-200 cursor-pointer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-[#011049] transition py-2 px-3.5 rounded-xl bg-white/80 hover:bg-white border border-blue-100 shadow-2xs cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Voltar ao Início</span>
