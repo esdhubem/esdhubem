@@ -480,6 +480,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <div>• Utilização responsável de fontes e bibliografia</div>
                     <div>• Revisão e preparação para publicação</div>
                   </div>
+
+                  <div className="pt-2 border-t border-slate-200 flex flex-wrap gap-2 text-xs">
+                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">🛡️ Registro de Autoria: OSF (Open Science Framework)</span>
+                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Blog Oficial ESDHUBEM</span>
+                  </div>
                 </div>
 
                 <div className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed bg-amber-50/50 p-4 rounded-xl border border-amber-200/50">
@@ -532,6 +537,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <div>• Citações e referências</div>
                     <div>• Organização das fontes</div>
                     <div>• Apresentação final do trabalho</div>
+                  </div>
+
+                  <div className="pt-2 border-t border-amber-200 flex flex-wrap gap-2 text-xs">
+                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">🛡️ Registro de Autoria: OSF (Open Science Framework)</span>
+                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Repositório Oficial ESDHUBEM</span>
                   </div>
                 </div>
 
@@ -794,6 +804,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0" />
                       <span>Obras de ficção adulta (compatíveis com os princípios da escola)</span>
                     </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-cyan-200 flex flex-wrap gap-2 text-xs">
+                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">🛡️ Registro de Autoria: OSF (Open Science Framework)</span>
+                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Livraria Oficial da ESDHUBEM</span>
                   </div>
                 </div>
 
