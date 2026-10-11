@@ -814,28 +814,28 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
                   <tr className="hover:bg-amber-50/30">
                     <td className="py-3.5 px-4 font-bold text-amber-950 whitespace-nowrap">🥉 Bronze</td>
-                    <td className="py-3.5 px-4">Conclui o curso e entrega a Tríade de Fixação Ativa</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa</td>
                     <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Enciclopédico (500-800 palavras) + Mapa Mental + Áudio 1 min com registro no OSF</td>
                     <td className="py-3.5 px-4">Publicação na Wiki ESDHUBEM + Certificado com Selo Bronze</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Bronze</td>
                   </tr>
                   <tr className="hover:bg-slate-50">
                     <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação + Artigo de blog (1.200 a 2.500 palavras)</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa + Artigo de blog (1.200 a 2.500 palavras)</td>
                     <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Artigo de Blog & Wiki (SEO) + Registro OSF</td>
                     <td className="py-3.5 px-4">Publicação no Blog & Wiki ESDHUBEM + Certificado com Selo Prata</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
                   </tr>
                   <tr className="hover:bg-amber-50/30">
                     <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação + Manuscrito/TCC estruturado no Zenodo com DOI</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa + Manuscrito/TCC estruturado no Zenodo com DOI</td>
                     <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Manuscrito Científico + DOI Permanente</td>
                     <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com DOI</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
                   </tr>
                   <tr className="hover:bg-cyan-50/30">
                     <td className="py-3.5 px-4 font-bold text-cyan-900 whitespace-nowrap">💎 Diamante</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação + Livro autoral completo (mín. 50 págs) e registro na BN</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa + Livro autoral completo (mín. 50 págs) e registro na BN</td>
                     <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Livro Autoral + Registro EDA na Biblioteca Nacional</td>
                     <td className="py-3.5 px-4">Mural de Livros / Livraria Digital + Certificado Diamante de Honraria Máxima</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Diamante</td>
