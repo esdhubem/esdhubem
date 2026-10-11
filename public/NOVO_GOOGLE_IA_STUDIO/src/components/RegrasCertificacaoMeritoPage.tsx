@@ -256,7 +256,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    O estudante entrega a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> um artigo de blog aprofundado e estratégico de <strong>1.200 a 2.500 palavras</strong> — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições do <strong>Google (SEO)</strong>. Publicado no Blog Oficial e Wiki da ESDHUBEM com perfil de autor.
+                    O estudante entrega a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> um artigo de blog aprofundado e estratégico de <strong>1.200 a 2.500 palavras</strong> — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições do <strong>Google (SEO)</strong>. Publicado no Blog Oficial da ESDHUBEM com perfil de autor.
                   </p>
 
                   <div className="space-y-2.5 pt-2 border-t border-slate-200">
@@ -271,7 +271,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                   <div className="pt-3 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white p-3.5 rounded-xl border border-slate-200 text-slate-800 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-slate-700 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Blog Oficial e Wiki da ESDHUBEM com link público de autor e registro OSF.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Blog Oficial da ESDHUBEM com link público de autor e registro OSF.</span>
                     </div>
                     <div className="bg-white p-3.5 rounded-xl border border-slate-200 text-slate-800 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-slate-700 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>

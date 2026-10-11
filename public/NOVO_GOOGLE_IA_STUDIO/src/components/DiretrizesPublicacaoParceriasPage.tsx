@@ -390,12 +390,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <h4 className="text-lg sm:text-xl font-bold text-slate-900">
                       PRATA — EXPRESSAR E COMUNICAR
                     </h4>
-                    <span className="text-xs font-semibold text-slate-600">Artigo para o Blog & Wiki da ESDHUBEM (1.200 a 2.500 palavras)</span>
+                    <span className="text-xs font-semibold text-slate-600">Artigo para o Blog da ESDHUBEM (1.200 a 2.500 palavras)</span>
                   </div>
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> um artigo autoral aprofundado para publicação no Blog Oficial e Wiki da ESDHUBEM, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
+                  O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> um artigo autoral aprofundado para publicação no Blog Oficial da ESDHUBEM, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
                 </p>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
@@ -427,7 +427,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional e acadêmico.
                   </p>
                   <p className="font-semibold text-slate-800">
-                    Após a aprovação, o artigo será publicado no Blog Oficial e Wiki da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
+                    Após a aprovação, o artigo será publicado no Blog Oficial da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
                   </p>
                 </div>
               </div>
@@ -1021,8 +1021,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <tr className="hover:bg-slate-50">
                     <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
                     <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa + Artigo de blog (1.200 a 2.500 palavras)</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Artigo de Blog & Wiki (SEO) + Registro OSF</td>
-                    <td className="py-3.5 px-4">Publicação no Blog & Wiki ESDHUBEM + Certificado com Selo Prata</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Artigo de Blog (SEO) + Registro OSF</td>
+                    <td className="py-3.5 px-4">Publicação no Blog Oficial ESDHUBEM + Certificado com Selo Prata</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
                   </tr>
                   <tr className="hover:bg-amber-50/30">
@@ -1388,7 +1388,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                   <tr className="hover:bg-slate-50/50">
                     <td className="py-4 px-4 font-bold text-slate-800 bg-slate-100/50">
-                      ✍️ Artigo de Blog &amp; Wiki (Prata)
+                      ✍️ Artigo de Blog (Prata)
                     </td>
                     <td className="py-4 px-4 text-xs text-slate-700 leading-relaxed">
                       <ul className="space-y-1">
