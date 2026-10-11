@@ -180,51 +180,51 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Bronze: Aproveitamento Básico</h3>
-                      <span className="text-xs text-amber-800 font-semibold">Tríade de Fixação Ativa & Retenção do Conteúdo</span>
+                      <span className="text-sm text-amber-800 font-semibold">Tríade de Fixação Ativa & Retenção do Conteúdo</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="inline-block px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold border border-amber-300">
+                    <span className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold border border-amber-300">
                       Complexidade: Baixa (Fixação)
                     </span>
-                    <span className="bg-amber-800 text-amber-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    <span className="bg-amber-800 text-amber-100 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
                       Selo 🥉 Bronze
                     </span>
                   </div>
                 </div>
 
                 {/* Quadro Único Explicativo Completo */}
-                <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-xs sm:text-sm space-y-3.5 text-slate-800">
-                  <p className="leading-relaxed text-slate-700 font-normal">
+                <div className="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-sm space-y-4 text-slate-800">
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
                     Focado na consolidação prática do aprendizado através da <strong>metodologia pedagógica de Fixação Ativa</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a tríade de fixação:
                   </p>
                   
-                  <div className="space-y-2 pt-1 border-t border-amber-200/60">
-                    <strong className="block text-amber-950 font-bold text-xs uppercase tracking-wider">📌 Requisitos & Entregáveis:</strong>
-                    <ul className="space-y-2 text-xs text-slate-700 pl-1">
-                      <li className="flex items-start gap-2">
-                        <span className="text-amber-800 font-bold shrink-0">🧠</span>
+                  <div className="space-y-2.5 pt-2 border-t border-amber-200/60">
+                    <strong className="block text-sm font-bold text-amber-950 uppercase tracking-wide">📌 Requisitos & Entregáveis:</strong>
+                    <ul className="space-y-2 text-sm text-slate-700 pl-1 leading-relaxed">
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-amber-800 font-bold shrink-0 text-base">🧠</span>
                         <span><strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (à mão ou digital) estruturando os conceitos centrais e conexões pedagógicas do tema.</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-amber-800 font-bold shrink-0">✍️</span>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-amber-800 font-bold shrink-0 text-base">✍️</span>
                         <span><strong>Texto Síntese (Mínimo de 500 palavras):</strong> Redação reflexiva de síntese autoral com suas próprias palavras para fixação profunda.</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-amber-800 font-bold shrink-0">🎙️</span>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-amber-800 font-bold shrink-0 text-base">🎙️</span>
                         <span><strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando com clareza o aprendizado (Técnica Feynman de retenção).</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="pt-2 border-t border-amber-200/60 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    <div className="bg-white/90 p-3 rounded-xl border border-amber-200/80 text-amber-950 space-y-1">
-                      <strong className="block text-[11px] text-amber-800 uppercase font-bold">📍 Destino da Publicação:</strong>
-                      <span>Sistema interno da escola (Painel EAD do Aluno).</span>
+                  <div className="pt-3 border-t border-amber-200/60 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    <div className="bg-white/95 p-3.5 rounded-xl border border-amber-200 text-slate-800 space-y-1 shadow-2xs">
+                      <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Sistema interno da escola (Painel EAD do Aluno).</span>
                     </div>
-                    <div className="bg-white/90 p-3 rounded-xl border border-amber-200/80 text-amber-950 space-y-1">
-                      <strong className="block text-[11px] text-amber-800 uppercase font-bold">📜 Certificação Emitida:</strong>
-                      <span>Certificado Oficial com chancela de Conclusão e Selo Bronze.</span>
+                    <div className="bg-white/95 p-3.5 rounded-xl border border-amber-200 text-slate-800 space-y-1 shadow-2xs">
+                      <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado Oficial com chancela de Conclusão e Selo Bronze.</span>
                     </div>
                   </div>
                 </div>
@@ -241,41 +241,41 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Prata: Produção de Conteúdo</h3>
-                      <span className="text-xs text-slate-600 font-semibold">Artigo de Blog & Autoridade Profissional</span>
+                      <span className="text-sm text-slate-600 font-semibold">Artigo de Blog & Autoridade Profissional</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="inline-block px-2.5 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold border border-slate-300">
+                    <span className="inline-block px-3 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold border border-slate-300">
                       Complexidade: Média-Baixa (Divulgação)
                     </span>
-                    <span className="bg-slate-700 text-slate-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    <span className="bg-slate-700 text-slate-100 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
                       Selo 🥈 Prata
                     </span>
                   </div>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-3.5 text-slate-800">
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 text-sm space-y-4 text-slate-800">
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
                     O aluno desenvolve um artigo de blog aprofundado e estratégico de <strong>1.200 a 2.500 palavras</strong> — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições de busca orgânica do <strong>Google (SEO)</strong>. O artigo é publicado no Blog Oficial da ESDHUBEM com autoria e perfil do estudante.
                   </p>
 
-                  <div className="space-y-2 pt-1 border-t border-slate-200">
-                    <strong className="block text-slate-900 font-bold text-xs uppercase tracking-wider">📌 Requisitos & Benefícios de Autoridade:</strong>
-                    <ul className="list-disc pl-4 space-y-1.5 text-xs text-slate-700">
+                  <div className="space-y-2.5 pt-2 border-t border-slate-200">
+                    <strong className="block text-sm font-bold text-slate-900 uppercase tracking-wide">📌 Requisitos & Benefícios de Autoridade:</strong>
+                    <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
                       <li>Elaboração de um artigo de <strong>1.200 a 2.500 palavras</strong> com estrutura escaneável (subtítulos H2/H3, estudo de caso ou aplicação prática) e boas práticas de SEO.</li>
                       <li>Revisão, orientação e validação da equipe editorial e pedagógica da escola.</li>
                       <li><strong>Benefício de Portfólio:</strong> Página pública indexável no Google com link de autor, biografia e selo digital para impulsionar o currículo Lattes, LinkedIn e autoridade profissional.</li>
                     </ul>
                   </div>
 
-                  <div className="pt-2 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    <div className="bg-white p-3 rounded-xl border border-slate-200 text-slate-800 space-y-1">
-                      <strong className="block text-[11px] text-slate-600 uppercase font-bold">📍 Destino da Publicação:</strong>
-                      <span>Blog Oficial da ESDHUBEM (com link público de autor para portfólio indexável no Google).</span>
+                  <div className="pt-3 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    <div className="bg-white p-3.5 rounded-xl border border-slate-200 text-slate-800 space-y-1 shadow-2xs">
+                      <strong className="block text-xs text-slate-700 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Blog Oficial da ESDHUBEM (com link público de autor para portfólio indexável no Google).</span>
                     </div>
-                    <div className="bg-white p-3 rounded-xl border border-slate-200 text-slate-800 space-y-1">
-                      <strong className="block text-[11px] text-slate-600 uppercase font-bold">📜 Certificação Emitida:</strong>
-                      <span>Certificado Oficial com Selo de Mérito Prata e link de autor no blog.</span>
+                    <div className="bg-white p-3.5 rounded-xl border border-slate-200 text-slate-800 space-y-1 shadow-2xs">
+                      <strong className="block text-xs text-slate-700 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado Oficial com Selo de Mérito Prata e link de autor no blog.</span>
                     </div>
                   </div>
                 </div>
@@ -292,41 +292,41 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Ouro: Pesquisa & Preprint</h3>
-                      <span className="text-xs text-amber-700 font-semibold">DOI Criptográfico & Publicação Científica</span>
+                      <span className="text-sm text-amber-700 font-semibold">DOI Criptográfico & Publicação Científica</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="inline-block px-2.5 py-1 rounded-full bg-amber-200 text-amber-900 text-xs font-bold border border-amber-300">
+                    <span className="inline-block px-3 py-1 rounded-full bg-amber-200 text-amber-900 text-xs font-bold border border-amber-300">
                       Complexidade: Média-Alta (Pesquisa)
                     </span>
-                    <span className="bg-[#FFC72C] text-slate-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                    <span className="bg-[#FFC72C] text-slate-950 text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider">
                       Selo 🥇 Ouro
                     </span>
                   </div>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 text-xs sm:text-sm space-y-3.5 text-slate-800">
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <div className="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200 text-sm space-y-4 text-slate-800">
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
                     Destinado a trabalhos acadêmicos densos. Aqui entram os Trabalhos de Conclusão de Curso (TCCs) estruturados ou artigos científicos submetidos a plataformas públicas de Preprint (como Zenodo, OSF Preprints ou SciELO Preprints), garantindo um registro <strong>DOI (Digital Object Identifier)</strong> universal.
                   </p>
 
-                  <div className="space-y-2 pt-1 border-t border-amber-200">
-                    <strong className="block text-amber-950 font-bold text-xs uppercase tracking-wider">📌 Requisitos & Registro DOI:</strong>
-                    <ul className="list-disc pl-4 space-y-1.5 text-xs text-slate-700">
+                  <div className="space-y-2.5 pt-2 border-t border-amber-200">
+                    <strong className="block text-sm font-bold text-amber-950 uppercase tracking-wide">📌 Requisitos & Registro DOI:</strong>
+                    <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
                       <li>Envio de TCC estruturado com ementa acadêmica <strong>OU</strong> submissão de artigo em servidor de Preprint.</li>
                       <li>Indexação do artigo na página oficial de Anais Científicos da ESDHUBEM.</li>
                       <li><strong>Registro DOI:</strong> Atribuição de um código DOI permanente para citação direta no Currículo Lattes.</li>
                     </ul>
                   </div>
 
-                  <div className="pt-2 border-t border-amber-200 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    <div className="bg-white p-3 rounded-xl border border-amber-200 text-amber-950 space-y-1">
-                      <strong className="block text-[11px] text-amber-800 uppercase font-bold">📍 Destino da Publicação:</strong>
-                      <span>Página de Artigos da Escola / Repositórios (Zenodo, OSF, SciELO) com registro DOI.</span>
+                  <div className="pt-3 border-t border-amber-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    <div className="bg-white p-3.5 rounded-xl border border-amber-200 text-amber-950 space-y-1 shadow-2xs">
+                      <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Página de Artigos da Escola / Repositórios (Zenodo, OSF, SciELO) com registro DOI.</span>
                     </div>
-                    <div className="bg-white p-3 rounded-xl border border-amber-200 text-amber-950 space-y-1">
-                      <strong className="block text-[11px] text-amber-800 uppercase font-bold">📜 Certificação Emitida:</strong>
-                      <span>Certificado com Selo Ouro de Pesquisa e citação oficial do DOI.</span>
+                    <div className="bg-white p-3.5 rounded-xl border border-amber-200 text-amber-950 space-y-1 shadow-2xs">
+                      <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado com Selo Ouro de Pesquisa e citação oficial do DOI.</span>
                     </div>
                   </div>
                 </div>
@@ -343,27 +343,27 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Diamante: Autorar e Construir</h3>
-                      <span className="text-xs text-cyan-700 font-semibold">Livro Autoral & Registro de Direitos Autorais</span>
+                      <span className="text-sm text-cyan-700 font-semibold">Livro Autoral & Registro de Direitos Autorais</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="inline-block px-2.5 py-1 rounded-full bg-cyan-100 text-cyan-900 text-xs font-bold border border-cyan-200">
+                    <span className="inline-block px-3 py-1 rounded-full bg-cyan-100 text-cyan-900 text-xs font-bold border border-cyan-200">
                       Complexidade: Alta (Autoral)
                     </span>
-                    <span className="bg-cyan-600 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                    <span className="bg-cyan-600 text-white text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider">
                       Selo 💎 Diamante
                     </span>
                   </div>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-cyan-50/70 border border-cyan-200 text-xs sm:text-sm space-y-3.5 text-slate-800">
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <div className="p-5 sm:p-6 rounded-2xl bg-cyan-50/70 border border-cyan-200 text-sm space-y-4 text-slate-800">
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
                     O nível mais elevado da escala autoral. Destinado ao estudante que deseja transformar seu conhecimento, experiência, estudo ou investigação em uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo), com orientação estrutural e registro formal de direitos autorais.
                   </p>
 
-                  <div className="space-y-2 pt-1 border-t border-cyan-200">
-                    <strong className="block text-cyan-950 font-bold text-xs uppercase tracking-wider">📌 Requisitos & Destaque Especial:</strong>
-                    <ul className="list-disc pl-4 space-y-1.5 text-xs text-slate-700">
+                  <div className="space-y-2.5 pt-2 border-t border-cyan-200">
+                    <strong className="block text-sm font-bold text-cyan-950 uppercase tracking-wide">📌 Requisitos & Destaque Especial:</strong>
+                    <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
                       <li>Produção de livro autoral com mínimo de 50 páginas de conteúdo desenvolvido e estruturado.</li>
                       <li>Orientação e preparação editorial da obra para autopublicação ou registro.</li>
                       <li><strong>Registro de Direitos Autorais:</strong> Registro formal da obra amparado pela Lei nº 9.610/1998.</li>
@@ -371,14 +371,14 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </ul>
                   </div>
 
-                  <div className="pt-2 border-t border-cyan-200 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    <div className="bg-white p-3 rounded-xl border border-cyan-200 text-cyan-950 space-y-1">
-                      <strong className="block text-[11px] text-cyan-800 uppercase font-bold">📍 Destino da Publicação:</strong>
-                      <span>Mural de Livros / Livraria Digital da ESDHUBEM + Registro Formal de Direitos Autorais.</span>
+                  <div className="pt-3 border-t border-cyan-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    <div className="bg-white p-3.5 rounded-xl border border-cyan-200 text-cyan-950 space-y-1 shadow-2xs">
+                      <strong className="block text-xs text-cyan-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Mural de Livros / Livraria Digital da ESDHUBEM + Registro Formal de Direitos Autorais.</span>
                     </div>
-                    <div className="bg-white p-3 rounded-xl border border-cyan-200 text-cyan-950 space-y-1">
-                      <strong className="block text-[11px] text-cyan-800 uppercase font-bold">📜 Certificação Emitida:</strong>
-                      <span>Certificado de Honraria Máxima com Chancela Diamante e QR Code.</span>
+                    <div className="bg-white p-3.5 rounded-xl border border-cyan-200 text-cyan-950 space-y-1 shadow-2xs">
+                      <strong className="block text-xs text-cyan-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado de Honraria Máxima com Chancela Diamante e QR Code.</span>
                     </div>
                   </div>
                 </div>
