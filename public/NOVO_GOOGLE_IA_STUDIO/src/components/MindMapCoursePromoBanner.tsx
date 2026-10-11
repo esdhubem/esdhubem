@@ -110,55 +110,17 @@ export const MindMapCoursePromoBanner: React.FC<MindMapCoursePromoBannerProps> =
                   </div>
                 </div>
 
-                {/* Botões de Ação */}
+                {/* Botão de Ação: Comece já o curso */}
                 <div className="flex flex-wrap items-center gap-3 pt-2">
-                  {/* Botão Primário: Assistir Aulas */}
                   <a
                     href={odyseeWatchUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-black text-sm tracking-wide shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all cursor-pointer hover:-translate-y-0.5"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-black text-sm tracking-wide shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all cursor-pointer hover:-translate-y-0.5"
                   >
                     <Play className="w-4 h-4 fill-current text-slate-950" />
-                    <span>Assistir Aulas Grátis</span>
+                    <span>Comece já o curso</span>
                   </a>
-
-                  {/* Botão Secundário: Detalhes do Curso */}
-                  {onSelectCourse && (
-                    <button
-                      type="button"
-                      onClick={onSelectCourse}
-                      className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 text-white font-bold text-sm border border-white/20 hover:border-cyan-400/50 transition-all cursor-pointer"
-                    >
-                      <BookOpen className="w-4 h-4 text-cyan-300" />
-                      <span>Ver Grade do Curso</span>
-                    </button>
-                  )}
-
-                  {/* Botão Terciário: Diretrizes Pedagógicas */}
-                  {onNavigatePedagogy && (
-                    <button
-                      type="button"
-                      onClick={onNavigatePedagogy}
-                      className="inline-flex items-center justify-center gap-1.5 px-4 py-3.5 rounded-full text-slate-300 hover:text-cyan-200 text-xs sm:text-sm font-semibold hover:underline cursor-pointer"
-                    >
-                      <span>Entenda a Metodologia</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-                  )}
-
-                  {/* Botão Quaternário: Guia das Modalidades de Formação */}
-                  {onNavigateModalities && (
-                    <button
-                      type="button"
-                      onClick={onNavigateModalities}
-                      className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-[#011049] hover:bg-[#061e47] active:scale-95 text-[#FFC72C] font-black text-xs sm:text-sm border border-cyan-400/40 shadow-lg shadow-[#011049]/40 hover:shadow-cyan-400/20 hover:scale-105 transition-all cursor-pointer"
-                    >
-                      <ClipboardList className="w-4 h-4 text-[#FFC72C]" />
-                      <span>Ver Guia das Modalidades</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  )}
                 </div>
 
               </div>
