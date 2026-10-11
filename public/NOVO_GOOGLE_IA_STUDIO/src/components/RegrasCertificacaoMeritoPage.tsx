@@ -80,7 +80,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             </h1>
 
             <p className="text-white text-base sm:text-lg font-normal leading-relaxed text-slate-100">
-              Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando Selos de Autoria (Bronze, Prata, Ouro e Diamante) através da publicação de artigos de blog, manuscritos com registro DOI ou Livros na Biblioteca Nacional.
+              Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando Selos de Autoria (Bronze, Prata, Ouro e Diamante) através da publicação de verbetes na Wiki Oficial, artigos de blog, manuscritos com registro DOI ou Livros na Biblioteca Nacional.
             </p>
           </div>
 
