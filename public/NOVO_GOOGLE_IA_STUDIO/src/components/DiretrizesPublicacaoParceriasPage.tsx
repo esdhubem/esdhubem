@@ -73,7 +73,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 className="inline-flex items-center gap-1.5 text-xs text-cyan-300 hover:text-white bg-cyan-950/60 border border-cyan-500/40 px-3.5 py-1.5 rounded-full transition-all cursor-pointer"
               >
                 <BookOpen className="w-3.5 h-3.5" />
-                <span>Ver Artigos & Anais Acadêmicos</span>
+                <span>Ver Repositório de Artigos</span>
               </button>
             )}
           </div>
