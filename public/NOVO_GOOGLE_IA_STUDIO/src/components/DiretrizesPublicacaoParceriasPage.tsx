@@ -334,7 +334,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <div className="flex items-center gap-2">
                     <span className="text-lg">📝</span>
                     <h5 className="font-black text-sm sm:text-base text-slate-900 uppercase tracking-wide">
-                      Orientações para Produção do Artigo / Manuscrito
+                      Orientações para Produção do Artigo
                     </h5>
                   </div>
                   
