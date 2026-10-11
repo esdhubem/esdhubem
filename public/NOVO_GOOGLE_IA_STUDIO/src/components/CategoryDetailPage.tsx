@@ -967,10 +967,10 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                   </div>
                 </div>
 
-                {/* Course Card Content */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <div className="space-y-2">
-                    <div className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">
+                {/* Course Card Content — Padrão Elegante e Direto da Página Inicial */}
+                <div className="pt-6 px-4 pb-5 flex-1 flex flex-col justify-between items-center text-center space-y-3">
+                  <div className="w-full space-y-2">
+                    <div className="text-[10px] font-bold text-blue-700 uppercase tracking-wider">
                       {course.category}
                     </div>
                     <h4
@@ -978,74 +978,28 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
                         onSelectCourse(course);
                         onNavigateToCourseDetail();
                       }}
-                      className="text-base font-bold text-slate-900 leading-snug group-hover:text-[#243042] transition-colors line-clamp-2 cursor-pointer"
+                      className="text-base font-extrabold text-slate-900 leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2 min-h-[44px] flex items-center justify-center cursor-pointer"
                     >
                       {course.title}
                     </h4>
-                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
                       {course.subtitle}
                     </p>
                   </div>
 
-                  {/* Syllabus preview */}
-                  <div className="bg-slate-50 rounded-xl p-3 text-[11px] text-slate-600 space-y-1.5 border border-slate-100">
-                    <span className="font-bold text-slate-800 block text-[10px] uppercase tracking-wider">
-                      Tópicos Principais do Curso:
-                    </span>
-                    {course.syllabus.slice(0, 2).map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-1.5 text-slate-600">
-                        <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="truncate">{item}</span>
-                      </div>
-                    ))}
-                    {course.syllabus.length > 2 && (
-                      <span className="text-[10px] text-slate-600 italic block">
-                        + {course.syllabus.length - 2} outros tópicos no plano de aula
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Price & Action Buttons */}
-                  <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="text-[11px]">
-                        <span className="hidden sm:inline">
-                          {course.category === 'Horas Complementares'
-                            ? 'Horas Complementares*'
-                            : 'Certificado Livre'}
-                        </span>
-                      </span>
-                      <span className="font-bold text-[#243042]">
-                        {course.pillar === 'freepremium'
-                          ? 'Acesso Grátis'
-                          : course.priceValue
-                          ? `R$ ${course.priceValue.toFixed(2).replace('.', ',')}`
-                          : 'Incluso'}
-                      </span>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-2">
-                      <button
-                        onClick={() => {
-                          onSelectCourse(course);
-                          onNavigateToCourseDetail();
-                        }}
-                        className="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-2 rounded-xl transition-colors text-center cursor-pointer"
-                      >
-                        Ver Detalhes
-                      </button>
-
-                      <button
-                        onClick={() => {
-                          onSelectCourse(course);
-                          onNavigateToCourseDetail();
-                        }}
-                        className="w-full bg-[#243042] hover:bg-[#182333] text-white text-xs font-bold py-2 rounded-xl transition-all text-center flex items-center justify-center gap-1 cursor-pointer shadow-xs"
-                      >
-                        <span>Página do Curso</span>
-                        <ChevronRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
+                  {/* Botão Pílula Verde Padrão Página Inicial */}
+                  <div className="pt-2 w-full flex justify-center">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        onSelectCourse(course);
+                        onNavigateToCourseDetail();
+                      }}
+                      className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs tracking-wide shadow-[0_10px_20px_-3px_rgba(5,150,105,0.45)] hover:shadow-[0_16px_28px_-3px_rgba(5,150,105,0.6)] border border-emerald-400/60 transition-all duration-300 cursor-pointer -translate-y-0.5 hover:-translate-y-1.5 active:translate-y-0 w-full max-w-[200px]"
+                    >
+                      <BookOpen className="w-3.5 h-3.5 text-emerald-100" />
+                      <span>Página do Curso</span>
+                    </button>
                   </div>
                 </div>
               </div>
