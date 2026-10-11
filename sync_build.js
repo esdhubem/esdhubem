@@ -29,6 +29,16 @@ const targets = [
   { html: path.join(baseDir, 'public/github-pages/github-pages/index.html'), assets: path.join(baseDir, 'public/github-pages/github-pages/assets') }
 ];
 
+const cursosDir = path.join(baseDir, '../CURSOS-ESDHUBEM');
+if (fs.existsSync(cursosDir)) {
+  targets.push(
+    { html: path.join(cursosDir, 'index.html'), assets: path.join(cursosDir, 'assets') },
+    { html: path.join(cursosDir, 'public/index.html'), assets: path.join(cursosDir, 'public/assets') },
+    { html: path.join(cursosDir, 'public/github-pages/index.html'), assets: path.join(cursosDir, 'public/github-pages/assets') },
+    { html: path.join(cursosDir, 'public/github-pages/github-pages/index.html'), assets: path.join(cursosDir, 'public/github-pages/github-pages/assets') }
+  );
+}
+
 targets.forEach(({ html, assets }) => {
   if (fs.existsSync(distIndex)) {
     fs.mkdirSync(path.dirname(html), { recursive: true });

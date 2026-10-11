@@ -27830,33 +27830,43 @@ var RegrasCertificacaoMeritoPage = ({ onBackToHome, onOpenValidator, onOpenCerti
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-						className: "text-slate-800 space-y-6 max-w-4xl mx-auto py-2",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-3",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-5 h-5" })
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-								className: "font-extrabold text-[#182333] text-2xl sm:text-3xl tracking-tight",
-								children: "Por que criamos as Diretrizes de Publicação e a Escala de Autoria?"
-							})]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed font-normal",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+						className: "max-w-4xl mx-auto",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "bg-gradient-to-br from-white via-slate-50/80 to-blue-50/40 rounded-3xl border border-slate-200/90 shadow-xl p-6 sm:p-10 space-y-6 relative overflow-hidden backdrop-blur-xs",
 							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
-									"A ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
-										className: "text-slate-900 font-bold",
-										children: "ESDHUBEM"
-									}),
-									" instituiu estas diretrizes e a Escala de Autoria para oferecer um caminho claro, seguro e valorizado para quem deseja ir além da simples conclusão de um curso."
-								] }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Nosso espaço de publicação é destinado aos alunos que, ao finalizarem sua formação, escolhem entregar um manuscrito como trabalho de conclusão com o propósito de desenvolver a prática da escrita e receber um reconhecimento que reflete verdadeiramente o esforço e a dedicação aplicados." }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Sabemos que muitos chegam até nós buscando preparo para desafios reais: elaborar Trabalhos de Conclusão de Curso, redações do ENEM, provas de concursos públicos, artigos para revistas científicas, livros, conteúdos para a internet e, sobretudo, para se expressar com clareza no ambiente profissional e nas relações pessoais. A Escala de Autoria foi estruturada justamente para acompanhar cada etapa desse crescimento: do primeiro texto prático ao trabalho de maior extensão e profundidade." }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Acreditamos que saber ler e escrever com clareza não é apenas uma habilidade técnica, é uma forma de compreender o mundo, de compartilhar ideias e de exercer a cidadania plena. Por isso, organizamos níveis, critérios e proteções para que cada aluno possa praticar, publicar e crescer com segurança, reconhecimento e total respeito à sua autoria." })
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#011049] via-[#0047AB] to-[#FFC72C]" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-3.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-600 flex items-center justify-center shrink-0 shadow-xs",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BookOpen, { className: "w-6 h-6" })
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[11px] font-bold uppercase tracking-wider text-amber-700 block",
+										children: "Propósito Pedagógico & Institucional"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+										className: "font-extrabold text-[#011049] text-2xl sm:text-3xl tracking-tight",
+										children: "Por que criamos as Diretrizes de Publicação e a Escala de Autoria?"
+									})] })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed font-normal",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+											"A ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
+												className: "text-[#011049] font-bold",
+												children: "ESDHUBEM"
+											}),
+											" instituiu estas diretrizes e a Escala de Autoria para oferecer um caminho claro, seguro e valorizado para quem deseja ir além da simples conclusão de um curso."
+										] }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Nosso espaço de publicação é destinado aos alunos que, ao finalizarem sua formação, escolhem entregar um manuscrito como trabalho de conclusão com o propósito de desenvolver a prática da escrita e receber um reconhecimento que reflete verdadeiramente o esforço e a dedicação aplicados." }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Sabemos que muitos chegam até nós buscando preparo para desafios reais: elaborar Trabalhos de Conclusão de Curso, redações do ENEM, provas de concursos públicos, artigos para revistas científicas, livros, conteúdos para a internet e, sobretudo, para se expressar com clareza no ambiente profissional e nas relações pessoais. A Escala de Autoria foi estruturada justamente para acompanhar cada etapa desse crescimento: do primeiro texto prático ao trabalho de maior extensão e profundidade." }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Acreditamos que saber ler e escrever com clareza não é apenas uma habilidade técnica, é uma forma de compreender o mundo, de compartilhar ideias e de exercer a cidadania plena. Por isso, organizamos níveis, critérios e proteções para que cada aluno possa praticar, publicar e crescer com segurança, reconhecimento e total respeito à sua autoria." })
+									]
+								})
 							]
-						})]
+						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 						className: "space-y-6",
