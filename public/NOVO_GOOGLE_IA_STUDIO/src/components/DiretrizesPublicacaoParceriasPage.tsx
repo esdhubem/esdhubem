@@ -535,12 +535,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
                 </div>
 
-                <div className="space-y-2 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/70 p-4 rounded-xl border border-amber-200">
+                <div className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/70 p-4 rounded-xl border border-amber-200">
                   <p>
-                    Após a conclusão e aprovação do manuscrito, será realizado o depósito no Zenodo, conforme as orientações fornecidas.
+                    Após a conclusão o aluno deverá realizar o depósito no site do <strong>Zenodo</strong>, conforme as orientações fornecidas.
                   </p>
                   <p>
-                    Quando o depósito for concluído e o Zenodo atribuir o identificador correspondente, o trabalho terá um <strong>DOI — Digital Object Identifier</strong>, que permite sua identificação e localização persistente na internet.
+                    Quando o depósito for concluído e o Zenodo atribuir o identificador correspondente, o trabalho terá um <strong>DOI — Digital Object Identifier</strong>, que permite sua identificação e localização persistente na internet e deve ser enviado para o e-mail da escola (<a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">esdhubem@proton.me</a>) para aprovação do manuscrito, juntamente com o <strong>mapa mental</strong>, <strong>áudio de 5 minutos</strong> explicando o que aprendeu, juntamente com a <strong>Declaração de Autoria</strong> e <strong>Declaração de Autorização de Publicação</strong>.
                   </p>
                   <p className="text-slate-600 italic">
                     O DOI identifica a publicação. Ele não significa, por si só, revisão por pares, certificação científica ou validação acadêmica do conteúdo.
