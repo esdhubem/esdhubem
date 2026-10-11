@@ -815,7 +815,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <tr className="hover:bg-amber-50/30">
                     <td className="py-3.5 px-4 font-bold text-amber-950 whitespace-nowrap">🥉 Bronze</td>
                     <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Enciclopédico (500-800 palavras) + Mapa Mental + Áudio 1 min com registro no OSF</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Enciclopédico (500-800 palavras) + Mapa Mental + Áudio 1 min + registro no OSF</td>
                     <td className="py-3.5 px-4">Publicação na Wiki ESDHUBEM + Certificado com Selo Bronze</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Bronze</td>
                   </tr>
