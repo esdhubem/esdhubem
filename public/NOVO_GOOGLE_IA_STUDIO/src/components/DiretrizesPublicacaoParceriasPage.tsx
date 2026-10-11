@@ -241,7 +241,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Prata é destinado ao estudante que deseja transformar o conhecimento desenvolvido no curso em um artigo autoral aprofundado para publicação no Blog Oficial e Wiki da ESDHUBEM, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
+                  O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> um artigo autoral aprofundado para publicação no Blog Oficial e Wiki da ESDHUBEM, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
                 </p>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
@@ -291,7 +291,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Ouro é destinado ao estudante que deseja aprofundar o conhecimento desenvolvido no curso por meio de um Manuscrito de Conclusão de Curso.
+                  O Ouro é destinado ao estudante que entrega a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> um Manuscrito de Conclusão de Curso estruturado ou artigo de investigação científica com registro DOI.
                 </p>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
@@ -342,12 +342,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <h4 className="text-lg sm:text-xl font-black text-cyan-950">
                       DIAMANTE — AUTORAR E CONSTRUIR
                     </h4>
-                    <span className="text-xs font-bold text-cyan-800">Livro Autoral + Registro de Direitos Autorais na Biblioteca Nacional</span>
+                    <span className="text-xs font-bold text-cyan-800">Tríade de Fixação + Livro Autoral (Mín. 50 páginas)</span>
                   </div>
                 </div>
 
                 <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                  O nível <strong>Diamante</strong> é destinado ao participante que deseja transformar conhecimento, experiência, estudo ou investigação em uma obra autoral de maior extensão.
+                  O nível <strong>Diamante</strong> é destinado ao participante que entrega a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo desenvolvido).
                 </p>
 
                 {/* Formatos de Obra Aceitos */}
@@ -661,22 +661,22 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </tr>
                   <tr className="hover:bg-slate-50">
                     <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
-                    <td className="py-3.5 px-4">Elabora artigo de blog e submete com registro no OSF</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Artigo aprofundado (1.200 a 2.500 palavras, SEO e autoridade) + Registro OSF</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação + Artigo de blog (1.200 a 2.500 palavras) no OSF</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Artigo de Blog & Wiki (SEO) + Registro OSF</td>
                     <td className="py-3.5 px-4">Publicação no Blog & Wiki ESDHUBEM + Certificado com Selo Prata</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
                   </tr>
                   <tr className="hover:bg-amber-50/30">
                     <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
-                    <td className="py-3.5 px-4">Produz manuscrito/TCC estruturado e realiza depósito no Zenodo</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Manuscrito de Conclusão / Artigo Científico + Depósito Zenodo + DOI Permanente</td>
-                    <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com citação do DOI</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação + Manuscrito/TCC estruturado no Zenodo com DOI</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Manuscrito Científico + DOI Permanente</td>
+                    <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com DOI</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
                   </tr>
                   <tr className="hover:bg-cyan-50/30">
                     <td className="py-3.5 px-4 font-bold text-cyan-900 whitespace-nowrap">💎 Diamante</td>
-                    <td className="py-3.5 px-4">Produz livro autoral completo e realiza registro de direitos autorais</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Livro com mínimo de 50 páginas + Registro EDA na Biblioteca Nacional e OSF</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação + Livro autoral completo (mín. 50 págs) e registro na BN</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Livro Autoral + Registro EDA na Biblioteca Nacional</td>
                     <td className="py-3.5 px-4">Mural de Livros / Livraria Digital + Certificado Diamante de Honraria Máxima</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Diamante</td>
                   </tr>
