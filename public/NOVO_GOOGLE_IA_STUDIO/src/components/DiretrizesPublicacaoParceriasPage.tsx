@@ -1583,7 +1583,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 9: 9 - Orientações para publicação de Artigo */}
+          {/* SEÇÃO 9: 9 - Orientações para Produção do Artigo de investigação */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-9"
@@ -1604,7 +1604,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Vídeo 5 • Metodologia, Eixos Temáticos & Fontes Bibliográficas
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-purple-950 truncate sm:whitespace-normal">
-                    9 - Orientações para publicação de Artigo
+                    9 - Orientações para Produção do Artigo de investigação
                   </h3>
                 </div>
               </div>
@@ -1624,33 +1624,33 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
             {openSections['9'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
-{/* Tutorial Vídeo - Parte 5: Orientações para Produção do Artigo */}
+                {/* Tutorial Vídeo - Parte 5: Orientações para Produção do Artigo de investigação */}
                 <div className="space-y-4 py-4 border-y border-amber-200/80">
                   <LazyVideoPlayer
                     id="odysee-iframe-parte-5"
                     src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-5:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                    title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 5: Orientações para Produção do Artigo)"
+                    title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 5: Orientações para Produção do Artigo de investigação)"
                     thumbnail="./images/thumb_video_diretrizes_5.webp"
                     fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/b278d110bda87d4316ff0fb0fc59e6d2.webp"
-                    badge="Parte 5 • Produção do Artigo"
+                    badge="Parte 5 • Produção do Artigo de investigação"
                   />
                   <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
                     <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-                    <span>Vídeo 5: Diretrizes práticas e passo a passo para a estruturação do artigo científico e manuscrito</span>
+                    <span>Vídeo 5: Diretrizes práticas e passo a passo para a estruturação do artigo de investigação e manuscrito</span>
                   </p>
                 </div>
 
-                {/* Orientações para Produção de Artigo Científico / Manuscrito */}
+                {/* Orientações para Produção de Artigo de Investigação / Manuscrito */}
                 <div className="space-y-4 pt-1">
                   <div className="flex items-center gap-2">
                     <span className="text-lg">📝</span>
                     <h5 className="font-black text-sm sm:text-base text-slate-900 uppercase tracking-wide">
-                      Orientações para Produção do Artigo
+                      Orientações para Produção do Artigo de investigação
                     </h5>
                   </div>
                   
                   <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    Após a confirmação da participação e o pagamento da taxa correspondente, o autor receberá material de orientação detalhado e vídeo explicativo com diretrizes para estruturação e preparação do artigo científico / manuscrito de conclusão.
+                    Após a confirmação da participação e o pagamento da taxa correspondente, o autor receberá material de orientação detalhado e vídeo explicativo com diretrizes para estruturação e preparação do artigo de investigação / manuscrito de conclusão.
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs">
