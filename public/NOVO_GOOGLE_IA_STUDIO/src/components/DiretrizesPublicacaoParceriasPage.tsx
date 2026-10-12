@@ -163,7 +163,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '11': false,
     '12': false,
     '13': false,
-    '14': false
+    '14': false,
+    '15': false
   });
 
   const toggleSection = (id: string) => {
@@ -189,7 +190,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '11': true,
       '12': true,
       '13': true,
-      '14': true
+      '14': true,
+      '15': true
     });
   };
 
@@ -209,7 +211,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '11': false,
       '12': false,
       '13': false,
-      '14': false
+      '14': false,
+      '15': false
     });
   };
 
@@ -478,6 +481,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 }`}
               >
                 ⏱️ 14. Prazos de Análise
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('15')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['15']
+                    ? 'bg-cyan-300 text-slate-950 font-black shadow-md'
+                    : 'bg-cyan-950/60 text-cyan-200 border border-cyan-500/40 hover:bg-cyan-900/80'
+                }`}
+              >
+                ⚖️ 15. Critérios & Retirada
               </button>
             </div>
           </div>
@@ -2750,6 +2764,154 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <p>
                       <strong>Nota institucional:</strong> Estes são prazos de referência, não constituem obrigação contratual, podendo ser ajustados conforme volume de demandas. Sempre que houver previsão de atraso, o estudante será comunicado.
                     </p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 15: 15 - Critérios de Avaliação, Publicação e Direito de Retirada */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-15"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('15')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['15']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  ⚖️ 15
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Critérios de Avaliação, Publicação e Direito de Retirada
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    15 - Critérios de Avaliação, Publicação e Direito de Retirada
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['15'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['15'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['15'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-6 shadow-sm">
+                  {/* Título interno com o número 2 */}
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
+                      2
+                    </span>
+                    <h4 className="font-black text-base sm:text-lg text-slate-900">
+                      Critérios de Avaliação, Publicação e Direito de Retirada
+                    </h4>
+                  </div>
+
+                  {/* Grid Principal Superior */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                    {/* Card: O que define aprovação */}
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 sm:p-6 space-y-3">
+                      <div className="flex items-center gap-2 text-slate-900 font-bold text-sm sm:text-base">
+                        <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                        <span>O que define aprovação</span>
+                      </div>
+                      <p className="text-xs text-slate-600 leading-relaxed">
+                        A aprovação se dá pelo cumprimento integral dos requisitos específicos de cada nível, com entrega do trabalho desenvolvido de acordo com as orientações recebidas e em comum acordo entre autor e escola. A avaliação verifica:
+                      </p>
+                      <ul className="text-xs text-slate-700 space-y-2 pl-1">
+                        <li className="flex items-start gap-2">
+                          <span className="text-rose-600 font-bold">•</span>
+                          <span><strong>Registro prévio obrigatório:</strong> Não recebemos trabalhos que não foram registrados no OSF (Bronze/Prata) ou Zenodo (Ouro)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 font-bold">•</span>
+                          <span>Aderência ao tema e aos eixos temáticos</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 font-bold">•</span>
+                          <span>Cumprimento da extensão mínima e estrutura definida</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 font-bold">•</span>
+                          <span>Clareza, coerência e organização das ideias</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 font-bold">•</span>
+                          <span>Uso responsável de fontes e direitos autorais</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 font-bold">•</span>
+                          <span>Adequação às normas de escrita e citação quando aplicável</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Coluna Direita: Publicação é opcional + Direito de retirada */}
+                    <div className="space-y-4">
+                      {/* Publicação é opcional */}
+                      <div className="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-5 space-y-2">
+                        <div className="flex items-center gap-2 font-bold text-emerald-950 text-sm">
+                          <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0" />
+                          <span>Publicação é opcional</span>
+                        </div>
+                        <p className="text-xs text-emerald-900 leading-relaxed">
+                          Caso o estudante não deseje a publicação do seu trabalho no site da ESDHUBEM, sua escolha será integralmente respeitada. O certificado será emitido normalmente, e o trabalho será mantido em registro privado, sem divulgação pública. A publicação é um benefício adicional — não uma exigência.
+                        </p>
+                      </div>
+
+                      {/* Direito de retirada a qualquer momento */}
+                      <div className="bg-amber-50/60 border border-amber-200 rounded-2xl p-5 space-y-2">
+                        <div className="flex items-center gap-2 font-bold text-amber-950 text-sm">
+                          <Clock className="w-4 h-4 text-amber-700 shrink-0" />
+                          <span>Direito de retirada a qualquer momento</span>
+                        </div>
+                        <p className="text-xs text-slate-700 leading-relaxed">
+                          Mesmo após a publicação, o autor pode solicitar a retirada do conteúdo a qualquer instante, pelo e-mail: <strong className="text-amber-950 underline decoration-amber-400">esdhubem@proton.me</strong>. O prazo para remoção das páginas e dos índices públicos é de até <strong>15 dias úteis</strong>. Em repositórios externos (Zenodo, OSF), a exclusão segue as regras próprias de cada plataforma.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Grid Inferior: Quem avalia + Sobre revisão por pares */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    {/* Quem avalia */}
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2">
+                      <div className="flex items-center gap-2 font-bold text-slate-900 text-sm">
+                        <GraduationCap className="w-4 h-4 text-blue-700 shrink-0" />
+                        <span>Quem avalia</span>
+                      </div>
+                      <p className="text-xs text-slate-600 leading-relaxed">
+                        A avaliação é realizada pelo corpo docente da ESDHUBEM e docentes auxiliares contratados, conforme os critérios próprios de cada nível de certificação.
+                      </p>
+                    </div>
+
+                    {/* Sobre revisão por pares e banca */}
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2">
+                      <div className="flex items-center gap-2 font-bold text-slate-900 text-sm">
+                        <Info className="w-4 h-4 text-indigo-600 shrink-0" />
+                        <span>Sobre revisão por pares e banca</span>
+                      </div>
+                      <p className="text-xs text-slate-600 leading-relaxed">
+                        A ESDHUBEM não realiza revisão por pares nem dispõe de serviços de revistas científicas. Não há composição de banca examinadora. A avaliação tem caráter formativo e orientador, focada no desenvolvimento do autor e no cumprimento das diretrizes estabelecidas.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
