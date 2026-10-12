@@ -1358,7 +1358,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Vídeo 4 • Manuscrito Científico, Zenodo & DOI
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
-                    7 - Certificação Ouro
+                    7- Certificação Ouro - Publicação de artigo de investigação
                   </h3>
                 </div>
               </div>
@@ -1434,7 +1434,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O nível Ouro é destinado ao estudante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso, mas o texto será um <strong>Manuscrito de Conclusão de Curso</strong> estruturado ou artigo de investigação científica com registro <strong>DOI</strong>.
+                  O nível Ouro é destinado ao estudante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso e o <strong>artigo de investigação</strong> com registro <strong>DOI</strong>.
                 </p>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
