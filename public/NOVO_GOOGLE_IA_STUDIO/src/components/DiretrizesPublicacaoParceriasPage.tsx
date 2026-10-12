@@ -159,7 +159,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '7': false,
     '8': false,
     '9': false,
-    '10': false
+    '10': false,
+    '11': false
   });
 
   const toggleSection = (id: string) => {
@@ -181,7 +182,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '7': true,
       '8': true,
       '9': true,
-      '10': true
+      '10': true,
+      '11': true
     });
   };
 
@@ -197,7 +199,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '7': false,
       '8': false,
       '9': false,
-      '10': false
+      '10': false,
+      '11': false
     });
   };
 
@@ -271,7 +274,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFC72C]/15 text-[#FFC72C] text-xs font-bold uppercase tracking-wider mb-2 border border-[#FFC72C]/30 shadow-xs">
                   <Sparkles className="w-3.5 h-3.5 text-[#FFC72C]" />
-                  <span>Navegação Interativa dos 10 Módulos</span>
+                  <span>Navegação Interativa dos 11 Módulos</span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
                   Diretrizes de Publicação em Formato Sanfona
@@ -395,33 +398,44 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 onClick={() => openAndScrollTo('8')}
                 className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
                   openSections['8']
-                    ? 'bg-purple-500 text-white font-bold shadow-md'
-                    : 'bg-purple-950/60 text-purple-200 border border-purple-500/40 hover:bg-purple-900/80'
+                    ? 'bg-amber-400 text-slate-950 font-black shadow-md'
+                    : 'bg-amber-950/70 text-amber-200 border border-amber-500/50 hover:bg-amber-900/90'
                 }`}
               >
-                📚 8. Orientações de Artigo
+                📖 8. Guia do Artigo (Ouro)
               </button>
               <button
                 type="button"
                 onClick={() => openAndScrollTo('9')}
                 className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
                   openSections['9']
-                    ? 'bg-cyan-400 text-slate-950 font-black shadow-md'
-                    : 'bg-cyan-950/60 text-cyan-200 border border-cyan-500/40 hover:bg-cyan-900/80'
+                    ? 'bg-purple-500 text-white font-bold shadow-md'
+                    : 'bg-purple-950/60 text-purple-200 border border-purple-500/40 hover:bg-purple-900/80'
                 }`}
               >
-                💎 9. Diamante
+                📚 9. Orientações de Artigo
               </button>
               <button
                 type="button"
                 onClick={() => openAndScrollTo('10')}
                 className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
                   openSections['10']
+                    ? 'bg-cyan-400 text-slate-950 font-black shadow-md'
+                    : 'bg-cyan-950/60 text-cyan-200 border border-cyan-500/40 hover:bg-cyan-900/80'
+                }`}
+              >
+                💎 10. Diamante
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('11')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['11']
                     ? 'bg-blue-500 text-white font-bold shadow-md'
                     : 'bg-blue-950/60 text-blue-200 border border-blue-500/40 hover:bg-blue-900/80'
                 }`}
               >
-                ℹ️ 10. Informação Extra
+                ℹ️ 11. Informação Extra
               </button>
             </div>
           </div>
@@ -1392,33 +1406,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                   <span>Vídeo 4: Orientações práticas para elaboração do manuscrito científico, depósito no Zenodo e atribuição de DOI</span>
                 </p>
-
-                {/* Documento Integrado: Modelo de Manuscrito & Artigo de Investigação */}
-                <div className="bg-amber-50/40 border border-amber-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-xs flex flex-col pt-2">
-                  <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <span className="font-bold text-xs uppercase tracking-wide text-amber-950 flex items-center gap-1.5">
-                      <FileText className="w-4 h-4 text-amber-600" />
-                      Modelo de Manuscrito &amp; Artigo de Investigação (Nível Ouro)
-                    </span>
-                    <a
-                      href="https://docs.google.com/document/d/e/2PACX-1vRqu0ZL5-NLsPebaChDs4SM5CcbvCWzzZa6cKexbeBGZqWvlpXS560IF5kuIS7jvf1y5HF2fXZtto98/pub"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-amber-800 hover:text-amber-950 font-semibold hover:underline"
-                    >
-                      <span>Abrir Documento</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  </div>
-                  <div className="w-full h-[500px] sm:h-[600px] rounded-xl overflow-hidden border border-amber-200 bg-white shadow-inner">
-                    <iframe
-                      src="https://docs.google.com/document/d/e/2PACX-1vRqu0ZL5-NLsPebaChDs4SM5CcbvCWzzZa6cKexbeBGZqWvlpXS560IF5kuIS7jvf1y5HF2fXZtto98/pub?embedded=true"
-                      className="w-full h-full border-0"
-                      title="Modelo de Manuscrito e Artigo de Investigação ESDHUBEM"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
               </div>
 
               {/* 🥇 OURO */}
@@ -1486,7 +1473,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 8: 8 - Orientações para publicação de Artigo */}
+          {/* SEÇÃO 8: 8 - Guia Completo do Artigo de Investigação - Nível Ouro */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-8"
@@ -1499,25 +1486,26 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               aria-expanded={openSections['8']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-purple-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-purple-900">
-                  📝 8
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-600">
+                  📖 8
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-purple-700 block">
-                    Vídeo 5 • Metodologia, Eixos Temáticos & Fontes Bibliográficas
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                    Documento Integrado • Artigo de Investigação (Zenodo &amp; DOI)
                   </span>
-                  <h3 className="text-base sm:text-xl font-black text-purple-950 truncate sm:whitespace-normal">
-                    8 - Orientações para publicação de Artigo
+                  <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
+                    8 - Guia Completo do Artigo de Investigação - Nível Ouro
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
-                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
                   {openSections['8'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
-                  className={`w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-800 transition-transform duration-300 ${
-                    openSections['8'] ? 'rotate-180 bg-purple-800 text-white' : ''
+                  className={`w-8 h-8 rounded-full bg-amber-200/80 flex items-center justify-center text-amber-950 transition-transform duration-300 ${
+                    openSections['8'] ? 'rotate-180 bg-amber-500 text-slate-950' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -1526,6 +1514,88 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </button>
 
             {openSections['8'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
+                <div className="space-y-3">
+                  <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                    Guia Completo do Artigo de Investigação - Nível Ouro
+                  </h2>
+
+                  <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+                    Consulte o documento oficial abaixo com o modelo completo e formatado, estrutura metodológica de seções, normas da ABNT e orientações passo a passo para depósito no repositório Zenodo e obtenção de registro DOI permanente da ESDHUBEM.
+                  </p>
+                </div>
+
+                {/* Documento Integrado: Modelo de Manuscrito & Artigo de Investigação */}
+                <div className="bg-white border-2 border-amber-200/90 rounded-2xl p-4 sm:p-5 space-y-3 shadow-md flex flex-col">
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className="font-bold text-xs uppercase tracking-wide text-slate-900 flex items-center gap-1.5">
+                      <FileCheck className="w-4 h-4 text-amber-600" />
+                      Guia Completo do Artigo de Investigação - Nível Ouro
+                    </span>
+                    <a
+                      href="https://docs.google.com/document/d/e/2PACX-1vRqu0ZL5-NLsPebaChDs4SM5CcbvCWzzZa6cKexbeBGZqWvlpXS560IF5kuIS7jvf1y5HF2fXZtto98/pub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-blue-700 hover:text-blue-900 font-semibold hover:underline"
+                    >
+                      <span>Abrir Documento</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <div className="w-full h-[500px] sm:h-[600px] rounded-xl overflow-hidden border border-slate-200 bg-white shadow-inner">
+                    <iframe
+                      src="https://docs.google.com/document/d/e/2PACX-1vRqu0ZL5-NLsPebaChDs4SM5CcbvCWzzZa6cKexbeBGZqWvlpXS560IF5kuIS7jvf1y5HF2fXZtto98/pub?embedded=true"
+                      className="w-full h-full border-0"
+                      title="Guia Completo do Artigo de Investigação - Nível Ouro ESDHUBEM"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 9: 9 - Orientações para publicação de Artigo */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-9"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('9')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['9']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-purple-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-purple-900">
+                  📝 9
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-purple-700 block">
+                    Vídeo 5 • Metodologia, Eixos Temáticos & Fontes Bibliográficas
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-purple-950 truncate sm:whitespace-normal">
+                    9 - Orientações para publicação de Artigo
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['9'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-800 transition-transform duration-300 ${
+                    openSections['9'] ? 'rotate-180 bg-purple-800 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['9'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* Tutorial Vídeo - Parte 5: Orientações para Produção do Artigo */}
                 <div className="space-y-4 py-4 border-y border-amber-200/80">
@@ -1810,38 +1880,38 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 9: 9 - Certificação Diamante: Orientação para publicação de livro */}
+          {/* SEÇÃO 10: 10 - Certificação Diamante: Orientação para publicação de livro */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-9"
+            id="secao-sanfona-10"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('9')}
+              onClick={() => toggleSection('10')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['9']}
+              aria-expanded={openSections['10']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  💎 9
+                  💎 10
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block">
                     Vídeos 6 e 7 • Livro Autoral (Mín. 50 Páginas) & Registro EDA/FBN
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    9 - Certificação Diamante: Orientação para publicação de livro
+                    10 - Certificação Diamante: Orientação para publicação de livro
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
-                  {openSections['9'] ? 'Recolher' : 'Expandir'}
+                  {openSections['10'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['9'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['10'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -1849,7 +1919,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['9'] && (
+            {openSections['10'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* 💎 DIAMANTE */}
               <div className="bg-gradient-to-r from-cyan-50/50 via-white to-white border-2 border-cyan-400 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
@@ -2225,38 +2295,38 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 10: 10 - Informação Extra */}
+          {/* SEÇÃO 11: 11 - Informação Extra */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-10"
+            id="secao-sanfona-11"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('10')}
+              onClick={() => toggleSection('11')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['10']}
+              aria-expanded={openSections['11']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
-                  ℹ️ 10
+                  ℹ️ 11
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
                     Autoria, Responsabilidade, Inteligência Artificial, Valores & Percursos
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    10 - Informação Extra
+                    11 - Informação Extra
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
-                  {openSections['10'] ? 'Recolher' : 'Expandir'}
+                  {openSections['11'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
-                    openSections['10'] ? 'rotate-180 bg-[#011049] text-white' : ''
+                    openSections['11'] ? 'rotate-180 bg-[#011049] text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -2264,7 +2334,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['10'] && (
+            {openSections['11'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* Autoria e Responsabilidade & Inteligência Artificial */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-200">
