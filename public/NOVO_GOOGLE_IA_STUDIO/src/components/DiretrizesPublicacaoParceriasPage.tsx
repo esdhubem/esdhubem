@@ -1422,7 +1422,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
 
                   <p className="text-slate-700 text-sm leading-relaxed">
-                    O nível Ouro é destinado ao estudante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso e o <strong>artigo de investigação</strong> com registro <strong>DOI</strong>.
+                    O nível Ouro é destinado ao estudante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso e o <strong>artigo de investigação</strong> com registro <strong>DOI</strong>, que será publicado na página de <strong>Repositório de Artigos da ESDHUBEM</strong>.
                   </p>
 
                   <p className="text-slate-700 text-sm leading-relaxed">
