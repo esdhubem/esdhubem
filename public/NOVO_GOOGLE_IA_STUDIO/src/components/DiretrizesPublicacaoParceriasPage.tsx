@@ -846,9 +846,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Guia Completo para publicar o Verbete
                   </h2>
 
-                  <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    Consulte o documento oficial abaixo com o modelo passo a passo, critérios de formatação (500 a 800 palavras), estrutura da Tríade da Assimilação Ativa (verbete, mapa mental e áudio de 1 minuto) e orientações para publicação na Wiki Oficial da ESDHUBEM.
-                  </p>
+                  <div className="bg-white border-2 border-blue-200/80 rounded-2xl p-5 sm:p-6 shadow-sm text-slate-800 text-sm sm:text-base leading-relaxed">
+                    <p>
+                      Consulte o documento oficial abaixo com o modelo passo a passo, critérios de formatação (500 a 800 palavras), estrutura da Tríade da Assimilação Ativa (verbete, mapa mental e áudio de 1 minuto) e orientações para publicação na Wiki Oficial da ESDHUBEM.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Documento Integrado: Guia Completo do Verbete */}
