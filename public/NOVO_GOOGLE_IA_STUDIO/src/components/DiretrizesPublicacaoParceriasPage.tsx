@@ -161,7 +161,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '9': false,
     '10': false,
     '11': false,
-    '12': false
+    '12': false,
+    '13': false
   });
 
   const toggleSection = (id: string) => {
@@ -185,7 +186,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '9': true,
       '10': true,
       '11': true,
-      '12': true
+      '12': true,
+      '13': true
     });
   };
 
@@ -203,7 +205,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '9': false,
       '10': false,
       '11': false,
-      '12': false
+      '12': false,
+      '13': false
     });
   };
 
@@ -445,11 +448,22 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 onClick={() => openAndScrollTo('12')}
                 className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
                   openSections['12']
+                    ? 'bg-amber-400 text-slate-950 font-black shadow-md'
+                    : 'bg-amber-950/60 text-amber-200 border border-amber-500/40 hover:bg-amber-900/80'
+                }`}
+              >
+                📜 12. Produção & Direitos Autorais
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('13')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['13']
                     ? 'bg-blue-500 text-white font-bold shadow-md'
                     : 'bg-blue-950/60 text-blue-200 border border-blue-500/40 hover:bg-blue-900/80'
                 }`}
               >
-                ℹ️ 12. Informação Extra
+                ℹ️ 13. Informação Extra
               </button>
             </div>
           </div>
@@ -2170,9 +2184,56 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+          )}
+        </div>
 
+          {/* ======================================================== */}
+          {/* SEÇÃO 11: 11 - Guia Completo para publicar o livro - Nível Diamante */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-11"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('11')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['11']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  📖 11
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Documento Integrado • Livro Autoral (Mín. 50 Páginas)
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    11 - Guia Completo para publicar o livro - Nível Diamante
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['11'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['11'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['11'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 {/* Tutorial Vídeo - Parte 7: Orientações para Produção do Livro Autoral */}
-                <div className="space-y-4 py-4 border-y border-cyan-200/80">
+                <div className="space-y-4 py-2">
                   <LazyVideoPlayer
                     id="odysee-iframe-parte-7"
                     src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-7:8?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
@@ -2187,32 +2248,81 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </p>
                 </div>
 
-                {/* Chamada: Guia Completo para publicar o livro - Nível Diamante */}
-                <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-cyan-50 via-sky-50 to-blue-50 border-2 border-cyan-300 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs">
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="font-extrabold text-sm text-cyan-950 flex items-center gap-1.5">
-                        <FileText className="w-4 h-4 text-cyan-700" />
-                        Guia Completo para publicar o livro - Nível Diamante
-                      </span>
-                    </div>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      Consulte o modelo estruturado da obra autoral (mínimo de 50 páginas), formatação, sumário e orientações da Fundação Biblioteca Nacional (EDA/FBN) na sanfona a seguir.
-                    </p>
+                {/* Documento Integrado: Modelo de Livro Autoral */}
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-md flex flex-col">
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className="font-bold text-xs uppercase tracking-wide text-cyan-950 flex items-center gap-1.5">
+                      <FileText className="w-4 h-4 text-cyan-700" />
+                      Guia Completo para publicar o livro - Nível Diamante
+                    </span>
+                    <a
+                      href="https://docs.google.com/document/d/e/2PACX-1vRpvgiYjDDTq_7wQRfkhN07kb4CtiHDR262klfU88tg0rnEWMyiVYipHlo-In7tjL3HNzeDjdCX4g-w/pub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-cyan-800 hover:text-cyan-950 font-semibold hover:underline"
+                    >
+                      <span>Abrir Documento</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => openAndScrollTo('11')}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white text-xs font-bold transition-all shadow-sm shrink-0 cursor-pointer"
-                  >
-                    <span>Acessar Guia do Livro (Seção 11)</span>
-                    <ChevronDown className="w-3.5 h-3.5" />
-                  </button>
+                  <div className="w-full h-[500px] sm:h-[600px] rounded-xl overflow-hidden border border-cyan-200 bg-white shadow-inner">
+                    <iframe
+                      src="https://docs.google.com/document/d/e/2PACX-1vRpvgiYjDDTq_7wQRfkhN07kb4CtiHDR262klfU88tg0rnEWMyiVYipHlo-In7tjL3HNzeDjdCX4g-w/pub?embedded=true"
+                      className="w-full h-full border-0"
+                      title="Guia Completo para publicar o livro - Nível Diamante ESDHUBEM"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
+              </div>
+            )}
+          </div>
 
+          {/* ======================================================== */}
+          {/* SEÇÃO 12: 12 - Orientações para Produção do Livro & Registro de Direitos Autorais */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-12"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('12')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['12']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  📜 12
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Etapas de Produção &amp; Registro Oficial EDA/FBN
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    12 - Orientações para Produção do Livro &amp; Registro de Direitos Autorais
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['12'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['12'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
 
+            {openSections['12'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 {/* Orientações para Produção */}
-                <div className="space-y-4 pt-1">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-4 shadow-sm">
                   <div className="flex items-center gap-2">
                     <span className="text-lg">📝</span>
                     <h5 className="font-black text-sm sm:text-base text-slate-900 uppercase tracking-wide">
@@ -2328,126 +2438,42 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
                 </div>
               </div>
-              </div>
             )}
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 11: 11 - Guia Completo para publicar o livro - Nível Diamante */}
+          {/* SEÇÃO 13: 13 - Informação Extra */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-11"
+            id="secao-sanfona-13"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('11')}
+              onClick={() => toggleSection('13')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['11']}
-            >
-              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📖 11
-                </div>
-                <div className="min-w-0">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
-                    Documento Integrado • Livro Autoral &amp; EDA/FBN (Mín. 50 Páginas)
-                  </span>
-                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    11 - Guia Completo para publicar o livro - Nível Diamante
-                  </h3>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 shrink-0">
-                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['11'] ? 'Recolher' : 'Expandir'}
-                </span>
-                <div
-                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['11'] ? 'rotate-180 bg-cyan-700 text-white' : ''
-                  }`}
-                >
-                  <ChevronDown className="w-4 h-4" />
-                </div>
-              </div>
-            </button>
-
-            {openSections['11'] && (
-              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
-                <div className="space-y-3">
-                  <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                    Guia Completo para publicar o livro - Nível Diamante
-                  </h2>
-
-                  <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    Consulte o documento oficial abaixo com o modelo completo e formatado para a obra autoral (mínimo de 50 páginas), organização editorial, orientação para depósito de direitos autorais no EDA da Fundação Biblioteca Nacional e diretrizes da ESDHUBEM.
-                  </p>
-                </div>
-
-                {/* Documento Integrado: Modelo de Livro Autoral */}
-                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-md flex flex-col">
-                  <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <span className="font-bold text-xs uppercase tracking-wide text-cyan-950 flex items-center gap-1.5">
-                      <FileText className="w-4 h-4 text-cyan-700" />
-                      Guia Completo para publicar o livro - Nível Diamante
-                    </span>
-                    <a
-                      href="https://docs.google.com/document/d/e/2PACX-1vRpvgiYjDDTq_7wQRfkhN07kb4CtiHDR262klfU88tg0rnEWMyiVYipHlo-In7tjL3HNzeDjdCX4g-w/pub"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-cyan-800 hover:text-cyan-950 font-semibold hover:underline"
-                    >
-                      <span>Abrir Documento</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                  <div className="w-full h-[500px] sm:h-[600px] rounded-xl overflow-hidden border border-cyan-200 bg-white shadow-inner">
-                    <iframe
-                      src="https://docs.google.com/document/d/e/2PACX-1vRpvgiYjDDTq_7wQRfkhN07kb4CtiHDR262klfU88tg0rnEWMyiVYipHlo-In7tjL3HNzeDjdCX4g-w/pub?embedded=true"
-                      className="w-full h-full border-0"
-                      title="Guia Completo para publicar o livro - Nível Diamante ESDHUBEM"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* ======================================================== */}
-          {/* SEÇÃO 12: 12 - Informação Extra */}
-          {/* ======================================================== */}
-          <div
-            id="secao-sanfona-12"
-            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
-          >
-            <button
-              type="button"
-              onClick={() => toggleSection('12')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['12']}
+              aria-expanded={openSections['13']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
-                  ℹ️ 12
+                  ℹ️ 13
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
                     Autoria, Responsabilidade, Inteligência Artificial, Valores & Percursos
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    12 - Informação Extra
+                    13 - Informação Extra
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
-                  {openSections['12'] ? 'Recolher' : 'Expandir'}
+                  {openSections['13'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
-                    openSections['12'] ? 'rotate-180 bg-[#011049] text-white' : ''
+                    openSections['13'] ? 'rotate-180 bg-[#011049] text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -2455,7 +2481,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['12'] && (
+            {openSections['13'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* Autoria e Responsabilidade & Inteligência Artificial */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-200">
