@@ -1122,6 +1122,67 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
                 </div>
 
+                {/* Tutorial Vídeo - Parte 7: Orientações para Produção do Livro Autoral */}
+                <div className="space-y-4 py-4 border-y border-cyan-200/80">
+                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
+                      <span className="text-sm">🎬</span>
+                      <span>Tutorial ESDHUBEM • Parte 7: Orientações para Produção do Livro Autoral</span>
+                    </div>
+                    <a
+                      href="https://odysee.com/@esdhubem:a/diretrizes-publicacao-7:8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
+                    >
+                      <span>Assistir no Odysee</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
+                    <iframe
+                      id="odysee-iframe-parte-7"
+                      className="w-full h-full border-0 absolute inset-0"
+                      src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-7:8?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                      allowFullScreen
+                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 7: Orientações para Produção do Livro Autoral)"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    <span>Vídeo 7: Diretrizes detalhadas para a estruturação, escrita e preparação do livro autoral</span>
+                  </p>
+                </div>
+
+                {/* Documento Integrado: Modelo de Livro Autoral */}
+                <div className="bg-cyan-50/40 border border-cyan-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-xs flex flex-col pt-2">
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className="font-bold text-xs uppercase tracking-wide text-cyan-950 flex items-center gap-1.5">
+                      <FileText className="w-4 h-4 text-cyan-700" />
+                      Modelo de Livro Autoral (Nível Diamante)
+                    </span>
+                    <a
+                      href="https://docs.google.com/document/d/e/2PACX-1vRpvgiYjDDTq_7wQRfkhN07kb4CtiHDR262klfU88tg0rnEWMyiVYipHlo-In7tjL3HNzeDjdCX4g-w/pub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-cyan-800 hover:text-cyan-950 font-semibold hover:underline"
+                    >
+                      <span>Abrir Documento</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <div className="w-full h-[500px] sm:h-[600px] rounded-xl overflow-hidden border border-cyan-200 bg-white shadow-inner">
+                    <iframe
+                      src="https://docs.google.com/document/d/e/2PACX-1vRpvgiYjDDTq_7wQRfkhN07kb4CtiHDR262klfU88tg0rnEWMyiVYipHlo-In7tjL3HNzeDjdCX4g-w/pub?embedded=true"
+                      className="w-full h-full border-0"
+                      title="Modelo de Livro Autoral — Nível Diamante ESDHUBEM"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
                 {/* Orientações para Produção */}
                 <div className="space-y-4 pt-1">
                   <div className="flex items-center gap-2">
