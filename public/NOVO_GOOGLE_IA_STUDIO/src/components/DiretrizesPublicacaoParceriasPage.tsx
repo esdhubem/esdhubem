@@ -1018,6 +1018,76 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </p>
                 </div>
 
+                {/* Publicação e Mural de Livros da ESDHUBEM */}
+                <div className="space-y-4 pt-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">📖</span>
+                    <h5 className="font-black text-sm sm:text-base text-slate-900 uppercase tracking-wide">
+                      Publicação e Mural de Livros da ESDHUBEM
+                    </h5>
+                  </div>
+                  
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                    Após cumprir todos os requisitos, a obra poderá ser incluída no <strong>Mural de Livros da ESDHUBEM</strong>.
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Disponibilização Gratuita */}
+                    <div className="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-5 space-y-2.5 text-xs sm:text-sm">
+                      <div className="flex items-center gap-2 font-bold text-emerald-950">
+                        <span>🆓</span>
+                        <strong className="text-base">Disponibilização Gratuita</strong>
+                      </div>
+                      <ul className="space-y-1.5 text-slate-700">
+                        <li>• Página própria no site da ESDHUBEM;</li>
+                        <li>• Disponível a capa da imagem do livro e a descrição e informação do certificado diamante emitido pela escola.</li>
+                      </ul>
+                    </div>
+
+                    {/* Sobre Disponibilização para Venda */}
+                    <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-5 space-y-2.5 text-xs sm:text-sm">
+                      <div className="flex items-center gap-2 font-bold text-amber-950">
+                        <span>💰</span>
+                        <strong className="text-base">Sobre Disponibilização para Venda</strong>
+                      </div>
+                      <p className="text-slate-700 leading-relaxed">
+                        Caso você queira disponibilizar seu livro ou obra para venda ao público, a ESDHUBEM estabelece uma <strong>parceria como afiliado por meio da plataforma Hotmart</strong>. Por que fazemos assim?
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Detalhamento Venda Hotmart */}
+                  <div className="bg-white border border-amber-200/80 rounded-2xl p-5 space-y-3 text-xs sm:text-sm shadow-xs">
+                    <p className="font-bold text-amber-950">Por que fazemos assim?</p>
+                    <ul className="space-y-2 text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>Você continua sendo o autor e o titular dos direitos</strong> — a parceria não altera a propriedade da obra;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>A Hotmart cuida de toda a estrutura:</strong> processamento de pagamentos, entrega, segurança digital e relatórios;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>A parceria permite que a escola divulgue a venda do seu trabalho</strong> para nossa rede de contatos, ampliando sua visibilidade;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>Cada parte recebe a participação combinada sobre as vendas</strong>, você como autor, a escola como parceira de divulgação;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>Tudo com transparência:</strong> valores, porcentagens e condições são combinados previamente, de forma clara e acordada;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span><strong>Você pode optar por não vender:</strong> a publicação gratuita no site ou repositório não exige parceria de venda, isso é uma escolha sua, feita quando quiser avançar para comercialização.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
                 {/* Orientações para Produção */}
                 <div className="space-y-4 pt-1">
                   <div className="flex items-center gap-2">
@@ -1132,76 +1202,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <p className="text-slate-500 italic pt-1 border-t border-slate-200">
                       * Para informações atualizadas sobre documentos, valores, procedimentos e prazos, consulte sempre diretamente as orientações oficiais da Fundação Biblioteca Nacional.
                     </p>
-                  </div>
-                </div>
-
-                {/* Publicação e Mural de Livros da ESDHUBEM */}
-                <div className="space-y-4 pt-1">
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">📖</span>
-                    <h5 className="font-black text-sm sm:text-base text-slate-900 uppercase tracking-wide">
-                      Publicação e Mural de Livros da ESDHUBEM
-                    </h5>
-                  </div>
-                  
-                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    Após cumprir todos os requisitos, a obra poderá ser incluída no <strong>Mural de Livros da ESDHUBEM</strong>.
-                  </p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {/* Disponibilização Gratuita */}
-                    <div className="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-5 space-y-2.5 text-xs sm:text-sm">
-                      <div className="flex items-center gap-2 font-bold text-emerald-950">
-                        <span>🆓</span>
-                        <strong className="text-base">Disponibilização Gratuita</strong>
-                      </div>
-                      <ul className="space-y-1.5 text-slate-700">
-                        <li>• Página própria no site da ESDHUBEM;</li>
-                        <li>• Disponível a capa da imagem do livro e a descrição e informação do certificado diamante emitido pela escola.</li>
-                      </ul>
-                    </div>
-
-                    {/* Sobre Disponibilização para Venda */}
-                    <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-5 space-y-2.5 text-xs sm:text-sm">
-                      <div className="flex items-center gap-2 font-bold text-amber-950">
-                        <span>💰</span>
-                        <strong className="text-base">Sobre Disponibilização para Venda</strong>
-                      </div>
-                      <p className="text-slate-700 leading-relaxed">
-                        Caso você queira disponibilizar seu livro ou obra para venda ao público, a ESDHUBEM estabelece uma <strong>parceria como afiliado por meio da plataforma Hotmart</strong>. Por que fazemos assim?
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Detalhamento Venda Hotmart */}
-                  <div className="bg-white border border-amber-200/80 rounded-2xl p-5 space-y-3 text-xs sm:text-sm shadow-xs">
-                    <p className="font-bold text-amber-950">Por que fazemos assim?</p>
-                    <ul className="space-y-2 text-slate-700">
-                      <li className="flex items-start gap-2">
-                        <span className="text-emerald-600 font-bold">✅</span>
-                        <span><strong>Você continua sendo o autor e o titular dos direitos</strong> — a parceria não altera a propriedade da obra;</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-emerald-600 font-bold">✅</span>
-                        <span><strong>A Hotmart cuida de toda a estrutura:</strong> processamento de pagamentos, entrega, segurança digital e relatórios;</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-emerald-600 font-bold">✅</span>
-                        <span><strong>A parceria permite que a escola divulgue a venda do seu trabalho</strong> para nossa rede de contatos, ampliando sua visibilidade;</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-emerald-600 font-bold">✅</span>
-                        <span><strong>Cada parte recebe a participação combinada sobre as vendas</strong>, você como autor, a escola como parceira de divulgação;</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-emerald-600 font-bold">✅</span>
-                        <span><strong>Tudo com transparência:</strong> valores, porcentagens e condições são combinados previamente, de forma clara e acordada;</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-emerald-600 font-bold">✅</span>
-                        <span><strong>Você pode optar por não vender:</strong> a publicação gratuita no site ou repositório não exige parceria de venda, isso é uma escolha sua, feita quando quiser avançar para comercialização.</span>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
