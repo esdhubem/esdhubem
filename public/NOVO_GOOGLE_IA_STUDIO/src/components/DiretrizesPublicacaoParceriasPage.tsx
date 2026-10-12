@@ -162,7 +162,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '10': false,
     '11': false,
     '12': false,
-    '13': false
+    '13': false,
+    '14': false
   });
 
   const toggleSection = (id: string) => {
@@ -187,7 +188,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '10': true,
       '11': true,
       '12': true,
-      '13': true
+      '13': true,
+      '14': true
     });
   };
 
@@ -206,7 +208,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '10': false,
       '11': false,
       '12': false,
-      '13': false
+      '13': false,
+      '14': false
     });
   };
 
@@ -464,6 +467,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 }`}
               >
                 ℹ️ 13. Informação Extra
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('14')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['14']
+                    ? 'bg-emerald-400 text-slate-950 font-black shadow-md'
+                    : 'bg-emerald-950/60 text-emerald-200 border border-emerald-500/40 hover:bg-emerald-900/80'
+                }`}
+              >
+                ⏱️ 14. Prazos de Análise
               </button>
             </div>
           </div>
@@ -2620,6 +2634,124 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               O curso pode ser o começo. A produção é uma possibilidade. A autoria é uma construção.
             </p>
           </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 14: 14 - Prazos de Análise e Devolutiva */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-14"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('14')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['14']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  ⏱️ 14
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Prazos Institucionais &amp; Devolutivas de Avaliação
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    14 - Prazos de Análise e Devolutiva
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['14'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['14'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['14'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-5 shadow-sm">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
+                        1
+                      </span>
+                      <h4 className="font-black text-base sm:text-lg text-slate-900">
+                        Prazos de Análise e Devolutiva
+                      </h4>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      Com base em práticas adotadas por instituições de ensino e periódicos acadêmicos, estabelecemos os seguintes prazos de referência:
+                    </p>
+                  </div>
+
+                  <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs">
+                    <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-slate-900 text-white">
+                          <th className="py-3 px-4 font-bold uppercase tracking-wider">Etapa</th>
+                          <th className="py-3 px-4 font-bold uppercase tracking-wider w-44 sm:w-52">Prazo Estimado</th>
+                          <th className="py-3 px-4 font-bold uppercase tracking-wider">Observação</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 bg-white text-slate-700">
+                        <tr className="hover:bg-slate-50/70">
+                          <td className="py-3 px-4 font-semibold text-slate-900">Análise inicial do trabalho enviado</td>
+                          <td className="py-3 px-4 font-medium text-blue-700">até 10 dias úteis</td>
+                          <td className="py-3 px-4 text-xs text-slate-600">Contados a partir do recebimento completo do material</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50/70">
+                          <td className="py-3 px-4 font-semibold text-slate-900">Devolutiva com ajustes ou aprovação</td>
+                          <td className="py-3 px-4 font-medium text-blue-700">até 15 dias úteis</td>
+                          <td className="py-3 px-4 text-xs text-slate-600">Prazo pode ser reduzido conforme disponibilidade; ajustes solicitados reiniciam a contagem</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50/70">
+                          <td className="py-3 px-4 font-semibold text-slate-900">Reenvio após ajustes e nova análise</td>
+                          <td className="py-3 px-4 font-medium text-blue-700">até 7 dias úteis</td>
+                          <td className="py-3 px-4 text-xs text-slate-600">Aplica-se à segunda avaliação</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50/70">
+                          <td className="py-3 px-4 font-semibold text-slate-900">Emissão de certificado após aprovação</td>
+                          <td className="py-3 px-4 font-medium text-emerald-700 font-semibold">até 5 dias úteis</td>
+                          <td className="py-3 px-4 text-xs text-slate-600">Após confirmação do cumprimento de todos os requisitos</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50/70">
+                          <td className="py-3 px-4 font-semibold text-slate-900">Registro OSF / Zenodo / DOI</td>
+                          <td className="py-3 px-4 font-medium text-blue-700">até 10 dias úteis</td>
+                          <td className="py-3 px-4 text-xs text-slate-600">Após orientação e envio do arquivo final</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50/70">
+                          <td className="py-3 px-4 font-semibold text-slate-900">Registro de obra no EDA/FBN (Diamante)</td>
+                          <td className="py-3 px-4 font-medium text-purple-700">Conforme prazos da Fundação Biblioteca Nacional</td>
+                          <td className="py-3 px-4 text-xs text-slate-600">Procedimento de responsabilidade pessoal do autor</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50/70">
+                          <td className="py-3 px-4 font-semibold text-slate-900">Remoção de conteúdo publicado</td>
+                          <td className="py-3 px-4 font-medium text-rose-700">até 15 dias úteis</td>
+                          <td className="py-3 px-4 text-xs text-slate-600">Após solicitação formal</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs text-slate-600 flex items-start gap-3">
+                    <Info className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
+                    <p>
+                      <strong>Nota institucional:</strong> Estes são prazos de referência, não constituem obrigação contratual, podendo ser ajustados conforme volume de demandas. Sempre que houver previsão de atraso, o estudante será comunicado.
+                    </p>
+                  </div>
+                </div>
               </div>
             )}
           </div>
