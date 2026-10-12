@@ -481,9 +481,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </h2>
             </div>
 
-            <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+            {/* Quadro Branco para Leitura Otimizada do Texto */}
+            <div className="bg-white border-2 border-blue-200/80 rounded-2xl p-5 sm:p-6 shadow-sm space-y-3.5 text-slate-800 text-sm sm:text-base leading-relaxed">
               <p>
-                A <strong className="text-slate-900 font-semibold">ESDHUBEM</strong> oferece diferentes possibilidades para que o estudante transforme sua experiência de aprendizagem em uma produção escrita e autoral.
+                A <strong className="text-[#00227B] font-bold">ESDHUBEM</strong> oferece diferentes possibilidades para que o estudante transforme sua experiência de aprendizagem em uma produção escrita e autoral.
               </p>
               <p>
                 Após concluir o percurso formativo previsto no curso, o estudante deverá comunicar à ESDHUBEM qual modalidade de produção pretende desenvolver.
