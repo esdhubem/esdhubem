@@ -333,7 +333,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     : 'bg-amber-950/60 text-amber-200 border border-amber-500/40 hover:bg-amber-900/80'
                 }`}
               >
-                🔺 Tríade da Assimilação
+                🔺 3. O que é a Tríade da Assimilação Ativa
               </button>
               <button
                 type="button"
@@ -701,7 +701,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-amber-600 to-amber-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-900">
-                  🔺
+                  🔺 3
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block flex items-center gap-1.5">
@@ -709,7 +709,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Metodologia Pedagógica ESDHUBEM • Válida para Todos os Níveis
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    Tríade da Assimilação Ativa — Estrutura em Triângulo Pedagógico
+                    3 - O que é a Tríade da Assimilação Ativa
                   </h3>
                 </div>
               </div>
@@ -735,7 +735,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <span>Destaque Metodológico Oficial da ESDHUBEM</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                    Metodologia da Tríade da Assimilação Ativa
+                    3 - O que é a Tríade da Assimilação Ativa
                   </h2>
                   <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
                     A metodologia de <strong className="text-[#00227B]">Assimilação Ativa</strong> é a base pedagógica e epistemológica estruturante de autoria e validação do conhecimento na ESDHUBEM. Válida e transversal a <strong className="text-amber-900 font-bold">todos os níveis de certificação acadêmica</strong> (Bronze, Prata, Ouro e Diamante), ela consolida a aprendizagem por meio de três vértices dinâmicos e complementares: síntese visual desenhada à mão, elaboração textual conceitual e fixação oral através da técnica Feynman.
