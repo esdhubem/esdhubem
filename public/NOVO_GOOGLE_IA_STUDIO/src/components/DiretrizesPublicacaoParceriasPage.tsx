@@ -157,7 +157,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <span>Navegação Interativa dos 7 Módulos</span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-black text-[#011049] tracking-tight">
-                  Percurso Completo em Formato Sanfona
+                  Diretrizes de Publicação em Formato Sanfona
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
                   Clique nas seções para abrir ou recolher os vídeos, modelos de documentos e orientações detalhadas de cada nível.
