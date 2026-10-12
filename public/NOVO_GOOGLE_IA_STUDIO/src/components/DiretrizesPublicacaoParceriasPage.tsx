@@ -593,9 +593,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Declarações de autorização e de autoria
                   </h2>
 
-                  <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    Estas declarações são modelos oficiais de preenchimento obrigatório que atendem a <strong>todas as categorias e níveis de publicação</strong> (Bronze, Prata, Ouro e Diamante). Elas asseguram a titularidade intelectual do estudante, o consentimento para divulgação nos canais da ESDHUBEM e a conformidade ética com a legislação de direitos autorais.
-                  </p>
+                  <div className="bg-white border-2 border-blue-200/80 rounded-2xl p-5 sm:p-6 shadow-sm text-slate-800 text-sm sm:text-base leading-relaxed">
+                    <p>
+                      Estas declarações são modelos oficiais de preenchimento obrigatório que atendem a <strong className="text-[#00227B] font-bold">todas as categorias e níveis de publicação</strong> (Bronze, Prata, Ouro e Diamante). Elas asseguram a titularidade intelectual do estudante, o consentimento para divulgação nos canais da ESDHUBEM e a conformidade ética com a legislação de direitos autorais.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Grid dos dois modelos oficiais */}
