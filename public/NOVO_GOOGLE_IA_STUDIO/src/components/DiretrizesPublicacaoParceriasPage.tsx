@@ -468,47 +468,24 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
             {openSections['1'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
-{/* Tutorial Vídeo - Parte 1: Boas-Vindas */}
-          <div className="space-y-3 pb-8 border-b border-slate-200">
-            <LazyVideoPlayer
-              id="odysee-iframe-parte-1"
-              src="https://odysee.com/$/embed/@esdhubem:a/Diretrizes-de-Publica%C3%A7%C3%A3o-Parte-1-:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-              title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 1: Boas-vindas)"
-              thumbnail="./images/thumb_video_diretrizes_1.webp"
-              fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/fb4830417af8c53f1df8747696760ee2.webp"
-              badge="Parte 1 • Boas-Vindas"
-            />
-            <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
-              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              <span>Vídeo 1: Introdução e boas-vindas ao percurso de autoria e publicação da ESDHUBEM</span>
-            </p>
-          </div>
-
-          {/* Introdução e Sequência do Percurso */}
-          <div className="space-y-6 pb-8 border-b border-slate-200">
-            <div className="space-y-2">
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block">
-                Da aprendizagem à autoria
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                Apresentação das Diretrizes de Publicação
-              </h2>
-            </div>
-
-            {/* Quadro Branco para Leitura Otimizada do Texto */}
-            <div className="bg-white border-2 border-blue-200/80 rounded-2xl p-5 sm:p-6 shadow-sm space-y-3.5 text-slate-800 text-sm sm:text-base leading-relaxed">
-              <p>
-                A <strong className="text-[#00227B] font-bold">ESDHUBEM</strong> oferece diferentes possibilidades para que o estudante transforme sua experiência de aprendizagem em uma produção escrita e autoral.
-              </p>
-              <p>
-                Após concluir o percurso formativo previsto no curso, o estudante deverá comunicar à ESDHUBEM qual modalidade de produção pretende desenvolver.
-              </p>
-              <p>
-                A partir dessa escolha, receberá as orientações específicas para elaboração do trabalho.
+{/* Tutorial Vídeo - Parte 1: Boas-Vindas & Sequência do Percurso */}
+          <div className="space-y-6 pb-8 border-b border-[#badbf7]">
+            <div className="space-y-3">
+              <LazyVideoPlayer
+                id="odysee-iframe-parte-1"
+                src="https://odysee.com/$/embed/@esdhubem:a/Diretrizes-de-Publica%C3%A7%C3%A3o-Parte-1-:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 1: Boas-vindas)"
+                thumbnail="./images/thumb_video_diretrizes_1.webp"
+                fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/fb4830417af8c53f1df8747696760ee2.webp"
+                badge="Parte 1 • Boas-Vindas"
+              />
+              <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                <span>Vídeo 1: Introdução e boas-vindas ao percurso de autoria e publicação da ESDHUBEM</span>
               </p>
             </div>
 
-            {/* Fluxo do Percurso */}
+            {/* Fluxo do Percurso (Junto do Vídeo) */}
             <div className="p-6 rounded-2xl bg-gradient-to-r from-[#0d4494] via-[#0a3576] to-[#072458] text-white space-y-4 shadow-xl border border-cyan-400/40 relative overflow-hidden">
               <div className="flex items-center justify-between gap-2 flex-wrap relative z-10">
                 <span className="text-xs sm:text-sm uppercase tracking-wider text-cyan-200 font-black flex items-center gap-2">
@@ -553,6 +530,31 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   Emissão do certificado e publicação do trabalho
                 </span>
               </div>
+            </div>
+          </div>
+
+          {/* Introdução e Apresentação das Diretrizes */}
+          <div className="space-y-6 pb-8 border-b border-[#badbf7]">
+            <div className="space-y-2">
+              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block">
+                Da aprendizagem à autoria
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                Apresentação das Diretrizes de Publicação
+              </h2>
+            </div>
+
+            {/* Quadro Branco para Leitura Otimizada do Texto */}
+            <div className="bg-white border-2 border-blue-200/80 rounded-2xl p-5 sm:p-6 shadow-sm space-y-3.5 text-slate-800 text-sm sm:text-base leading-relaxed">
+              <p>
+                A <strong className="text-[#00227B] font-bold">ESDHUBEM</strong> oferece diferentes possibilidades para que o estudante transforme sua experiência de aprendizagem em uma produção escrita e autoral.
+              </p>
+              <p>
+                Após concluir o percurso formativo previsto no curso, o estudante deverá comunicar à ESDHUBEM qual modalidade de produção pretende desenvolver.
+              </p>
+              <p>
+                A partir dessa escolha, receberá as orientações específicas para elaboração do trabalho.
+              </p>
             </div>
           </div>
               </div>
