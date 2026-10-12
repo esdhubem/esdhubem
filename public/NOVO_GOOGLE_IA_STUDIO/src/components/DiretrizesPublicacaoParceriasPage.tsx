@@ -169,7 +169,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '16': false,
     '17': false,
     '18': false,
-    '19': false
+    '19': false,
+    '20': false
   });
 
   const toggleSection = (id: string) => {
@@ -200,7 +201,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '16': true,
       '17': true,
       '18': true,
-      '19': true
+      '19': true,
+      '20': true
     });
   };
 
@@ -225,7 +227,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '16': false,
       '17': false,
       '18': false,
-      '19': false
+      '19': false,
+      '20': false
     });
   };
 
@@ -549,6 +552,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 }`}
               >
                 🏛️ 19. Horas Complementares
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('20')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['20']
+                    ? 'bg-cyan-300 text-slate-950 font-black shadow-md'
+                    : 'bg-cyan-950/60 text-cyan-200 border border-cyan-500/40 hover:bg-cyan-900/80'
+                }`}
+              >
+                📖 20. Livro: Formato & Páginas
               </button>
             </div>
           </div>
@@ -3920,6 +3934,163 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         <span>Cada instituição possui suas próprias regras — a ESDHUBEM fornece os documentos comprobatórios, mas a decisão de validação cabe exclusivamente à instituição de origem do estudante</span>
                       </li>
                     </ul>
+                  </div>
+
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 20: 20 - Livro Autoral — Formato e Contagem de Páginas */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-20"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('20')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['20']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  📖 20
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Extensão Mínima de 50 Páginas, Parâmetros Gráficos e EDA/FBN
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    20 - Livro Autoral — Formato e Contagem de Páginas
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['20'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['20'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['20'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-6 shadow-sm">
+                  
+                  {/* Título interno com o badge 7 */}
+                  <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
+                    <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
+                      7
+                    </span>
+                    <h4 className="font-black text-base sm:text-lg text-slate-900">
+                      Livro Autoral — Formato e Contagem de Páginas
+                    </h4>
+                  </div>
+
+                  {/* Card Extensão Mínima */}
+                  <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs">
+                    <div className="flex items-center gap-2 text-sky-950 font-bold text-sm sm:text-base">
+                      <BookOpen className="w-5 h-5 text-sky-700 shrink-0" />
+                      <h5>Extensão mínima</h5>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      O trabalho deve conter <strong>no mínimo 50 páginas de conteúdo efetivo</strong>. Não são contabilizadas neste mínimo:
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 pt-1">
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Capa e contracapa
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Folha de rosto
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Sumário
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Dedicatória, agradecimentos, epígrafe
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Lista de tabelas, figuras ou abreviações
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Referências bibliográficas
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs sm:col-span-2 md:col-span-1">
+                        • Apêndices e anexos
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tabela de Orientações de formatação sugeridas */}
+                  <div className="space-y-3.5 pt-2">
+                    <h5 className="font-bold text-sm sm:text-base text-slate-900">
+                      Orientações de formatação sugeridas
+                    </h5>
+
+                    <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+                      <table className="w-full text-left text-xs sm:text-sm">
+                        <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
+                          <tr>
+                            <th className="py-3 px-4 w-1/3">Aspecto</th>
+                            <th className="py-3 px-4">Recomendação</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Formato de página</td>
+                            <td className="py-3 px-4">A4 (210 × 297 mm)</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Margens</td>
+                            <td className="py-3 px-4">3 cm (superior e esquerda) / 2 cm (inferior e direita)</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Fonte</td>
+                            <td className="py-3 px-4">Times New Roman ou Arial, tamanho 12</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Espaçamento entre linhas</td>
+                            <td className="py-3 px-4">1,5</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Parágrafo</td>
+                            <td className="py-3 px-4">Recuo de 1,25 cm na primeira linha</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Numeração de páginas</td>
+                            <td className="py-3 px-4">Canto superior direito, a partir da primeira página de conteúdo</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Títulos de capítulo</td>
+                            <td className="py-3 px-4">Iniciando em página nova, em destaque</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Arquivo final</td>
+                            <td className="py-3 px-4 font-semibold text-cyan-900">PDF, pronto para publicação e eventual impressão</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  {/* Card inferior */}
+                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-2.5 text-xs sm:text-sm text-slate-700 shadow-xs">
+                    <p className="leading-relaxed">
+                      <strong>A qualidade do conteúdo prevalece sobre a quantidade de páginas.</strong> O texto deve apresentar coerência, desenvolvimento completo das ideias e proposta autoral definida.
+                    </p>
+                    <p className="leading-relaxed pt-2 border-t border-slate-200">
+                      Após aprovação, o autor orienta-se sobre o registro oficial junto à <strong>Fundação Biblioteca Nacional (EDA/FBN)</strong>, procedimento pessoal e intransferível.
+                    </p>
                   </div>
 
                 </div>
