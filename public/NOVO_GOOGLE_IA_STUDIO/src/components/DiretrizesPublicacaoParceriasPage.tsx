@@ -100,20 +100,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           
           {/* Tutorial Vídeo - Parte 1: Boas-Vindas */}
           <div className="space-y-3 pb-8 border-b border-slate-200">
-            <div className="flex items-center justify-between gap-3 flex-wrap">
+            <div className="flex items-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
                 <span className="text-sm">🎬</span>
                 <span>Tutorial ESDHUBEM • Parte 1: Boas-Vindas</span>
               </div>
-              <a
-                href="https://odysee.com/@esdhubem:a/Diretrizes-de-Publica%C3%A7%C3%A3o-Parte-1-:f"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
-              >
-                <span>Assistir no Odysee</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
@@ -205,20 +196,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
           {/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
           <div className="space-y-3 pb-8 border-b border-slate-200">
-            <div className="flex items-center justify-between gap-3 flex-wrap">
+            <div className="flex items-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
                 <span className="text-sm">🎬</span>
                 <span>Tutorial ESDHUBEM • Parte 2: Níveis e Plataforma OSF</span>
               </div>
-              <a
-                href="https://odysee.com/@esdhubem:a/diretriz-de-publicacao-2:f"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
-              >
-                <span>Assistir no Odysee</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
@@ -384,20 +366,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
               {/* Tutorial Vídeo - Parte 3: Artigo de Blog & SEO */}
               <div className="space-y-4 py-6 border-y border-slate-200">
-                <div className="flex items-center justify-between gap-3 flex-wrap">
+                <div className="flex items-center">
                   <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
                     <span className="text-sm">🎬</span>
                     <span>Tutorial ESDHUBEM • Parte 3: Artigo de Blog &amp; SEO</span>
                   </div>
-                  <a
-                    href="https://odysee.com/@esdhubem:a/diretrizes-publicacao-3:4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
-                  >
-                    <span>Assistir no Odysee</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
                 </div>
 
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
@@ -502,20 +475,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
               {/* Tutorial Vídeo - Parte 4: Manuscrito Científico, Zenodo & DOI */}
               <div className="space-y-4 py-6 border-y border-slate-200">
-                <div className="flex items-center justify-between gap-3 flex-wrap">
+                <div className="flex items-center">
                   <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
                     <span className="text-sm">🎬</span>
                     <span>Tutorial ESDHUBEM • Parte 4: Manuscrito Científico, Zenodo &amp; DOI</span>
                   </div>
-                  <a
-                    href="https://odysee.com/@esdhubem:a/diretriz-publicacao-4:1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
-                  >
-                    <span>Assistir no Odysee</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
                 </div>
 
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
@@ -623,20 +587,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                 {/* Tutorial Vídeo - Parte 5: Orientações para Produção do Artigo */}
                 <div className="space-y-4 py-4 border-y border-amber-200/80">
-                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                  <div className="flex items-center">
                     <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
                       <span className="text-sm">🎬</span>
                       <span>Tutorial ESDHUBEM • Parte 5: Orientações para Produção do Artigo</span>
                     </div>
-                    <a
-                      href="https://odysee.com/@esdhubem:a/diretrizes-publicacao-5:b"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
-                    >
-                      <span>Assistir no Odysee</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
                   </div>
 
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
@@ -937,20 +892,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                 {/* Tutorial Vídeo - Parte 6: Livro Autoral & Nível Diamante */}
                 <div className="space-y-4 py-4 border-y border-cyan-200/80">
-                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                  <div className="flex items-center">
                     <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
                       <span className="text-sm">🎬</span>
                       <span>Tutorial ESDHUBEM • Parte 6: Livro Autoral &amp; Nível Diamante</span>
                     </div>
-                    <a
-                      href="https://odysee.com/@esdhubem:a/diretriz-publicacao-6:b"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
-                    >
-                      <span>Assistir no Odysee</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
                   </div>
 
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
@@ -1124,20 +1070,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                 {/* Tutorial Vídeo - Parte 7: Orientações para Produção do Livro Autoral */}
                 <div className="space-y-4 py-4 border-y border-cyan-200/80">
-                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                  <div className="flex items-center">
                     <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
                       <span className="text-sm">🎬</span>
                       <span>Tutorial ESDHUBEM • Parte 7: Orientações para Produção do Livro Autoral</span>
                     </div>
-                    <a
-                      href="https://odysee.com/@esdhubem:a/diretrizes-publicacao-7:8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
-                    >
-                      <span>Assistir no Odysee</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
                   </div>
 
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
