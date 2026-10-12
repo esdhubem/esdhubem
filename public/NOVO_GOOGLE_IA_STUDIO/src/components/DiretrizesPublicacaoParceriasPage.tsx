@@ -821,100 +821,100 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Resumo das Plataformas para Pesquisa de Artigos para Referência Bibliográfica */}
-                    <div className="space-y-3 pt-5 border-t border-slate-200">
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg">📚</span>
-                        <h5 className="font-bold text-xs sm:text-sm uppercase tracking-wider text-slate-900">
-                          Resumo das plataformas para pesquisa de artigos para referência bibliográfica
-                        </h5>
-                      </div>
-
-                      <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs bg-white">
-                        <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                          <thead>
-                            <tr className="bg-slate-900 text-white">
-                              <th className="py-2.5 px-4 font-bold uppercase tracking-wider w-1/3 sm:w-2/5">Plataforma</th>
-                              <th className="py-2.5 px-4 font-bold uppercase tracking-wider">Por que usar</th>
-                            </tr>
-                          </thead>
-                          <tbody className="divide-y divide-slate-100 text-slate-700">
-                            <tr className="hover:bg-amber-50/40 transition-colors">
-                              <td className="py-3 px-4 font-bold text-slate-900">
-                                <span className="flex items-center gap-1.5">
-                                  <span>🌐</span>
-                                  <span>Scielo + Google Acadêmico</span>
-                                </span>
-                              </td>
-                              <td className="py-3 px-4 text-slate-600">
-                                Já conhecidos, mantidos como você pediu
-                              </td>
-                            </tr>
-                            <tr className="hover:bg-amber-50/40 transition-colors">
-                              <td className="py-3 px-4 font-bold text-slate-900">
-                                <span className="flex items-center gap-1.5">
-                                  <span>🏛️</span>
-                                  <span>Portal Periódicos CAPES</span>
-                                </span>
-                              </td>
-                              <td className="py-3 px-4 text-slate-600">
-                                Acesso a várias bases de uma vez
-                              </td>
-                            </tr>
-                            <tr className="hover:bg-amber-50/40 transition-colors">
-                              <td className="py-3 px-4 font-bold text-slate-900">
-                                <span className="flex items-center gap-1.5">
-                                  <span>🎓</span>
-                                  <span>BDTD</span>
-                                </span>
-                              </td>
-                              <td className="py-3 px-4 text-slate-600">
-                                Teses e dissertações brasileiras
-                              </td>
-                            </tr>
-                            <tr className="hover:bg-amber-50/40 transition-colors">
-                              <td className="py-3 px-4 font-bold text-slate-900">
-                                <span className="flex items-center gap-1.5">
-                                  <span>🔬</span>
-                                  <span>OasisBr</span>
-                                </span>
-                              </td>
-                              <td className="py-3 px-4 text-slate-600">
-                                Produção científica nacional em acesso aberto
-                              </td>
-                            </tr>
-                            <tr className="hover:bg-amber-50/40 transition-colors">
-                              <td className="py-3 px-4 font-bold text-slate-900">
-                                <span className="flex items-center gap-1.5">
-                                  <span>🌎</span>
-                                  <span>Redalyc</span>
-                                </span>
-                              </td>
-                              <td className="py-3 px-4 text-slate-600">
-                                Artigos em português/espanhol — América Latina
-                              </td>
-                            </tr>
-                            <tr className="hover:bg-amber-50/40 transition-colors">
-                              <td className="py-3 px-4 font-bold text-slate-900">
-                                <span className="flex items-center gap-1.5">
-                                  <span>📖</span>
-                                  <span>DOAJ</span>
-                                </span>
-                              </td>
-                              <td className="py-3 px-4 text-slate-600">
-                                Revistas internacionais de acesso livre
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <p className="text-xs text-amber-900 font-semibold bg-amber-50 p-2.5 rounded-lg border border-amber-200 flex items-center gap-1.5">
-                        <span>✅</span>
-                        <span>Todas são gratuitas e confiáveis.</span>
-                      </p>
+                  {/* Resumo das Plataformas para Pesquisa de Artigos para Referência Bibliográfica */}
+                  <div className="space-y-3 pt-4 border-t border-slate-200">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">📚</span>
+                      <h5 className="font-bold text-xs sm:text-sm uppercase tracking-wider text-slate-900">
+                        Resumo das plataformas para pesquisa de artigos para referência bibliográfica
+                      </h5>
                     </div>
+
+                    <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs bg-white">
+                      <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                        <thead>
+                          <tr className="bg-slate-900 text-white">
+                            <th className="py-3 px-4 font-bold uppercase tracking-wider w-1/3 sm:w-2/5">Plataforma</th>
+                            <th className="py-3 px-4 font-bold uppercase tracking-wider">Por que usar</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100 text-slate-700">
+                          <tr className="hover:bg-amber-50/40 transition-colors">
+                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
+                              <span className="flex items-center gap-2">
+                                <span className="text-base">🌐</span>
+                                <span>Scielo + Google Acadêmico</span>
+                              </span>
+                            </td>
+                            <td className="py-3 px-4 text-slate-600">
+                              Já conhecidos, mantidos como você pediu
+                            </td>
+                          </tr>
+                          <tr className="hover:bg-amber-50/40 transition-colors">
+                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
+                              <span className="flex items-center gap-2">
+                                <span className="text-base">🏛️</span>
+                                <span>Portal Periódicos CAPES</span>
+                              </span>
+                            </td>
+                            <td className="py-3 px-4 text-slate-600">
+                              Acesso a várias bases de uma vez
+                            </td>
+                          </tr>
+                          <tr className="hover:bg-amber-50/40 transition-colors">
+                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
+                              <span className="flex items-center gap-2">
+                                <span className="text-base">🎓</span>
+                                <span>BDTD</span>
+                              </span>
+                            </td>
+                            <td className="py-3 px-4 text-slate-600">
+                              Teses e dissertações brasileiras
+                            </td>
+                          </tr>
+                          <tr className="hover:bg-amber-50/40 transition-colors">
+                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
+                              <span className="flex items-center gap-2">
+                                <span className="text-base">🔬</span>
+                                <span>OasisBr</span>
+                              </span>
+                            </td>
+                            <td className="py-3 px-4 text-slate-600">
+                              Produção científica nacional em acesso aberto
+                            </td>
+                          </tr>
+                          <tr className="hover:bg-amber-50/40 transition-colors">
+                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
+                              <span className="flex items-center gap-2">
+                                <span className="text-base">🌎</span>
+                                <span>Redalyc</span>
+                              </span>
+                            </td>
+                            <td className="py-3 px-4 text-slate-600">
+                              Artigos em português/espanhol — América Latina
+                            </td>
+                          </tr>
+                          <tr className="hover:bg-amber-50/40 transition-colors">
+                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
+                              <span className="flex items-center gap-2">
+                                <span className="text-base">📖</span>
+                                <span>DOAJ</span>
+                              </span>
+                            </td>
+                            <td className="py-3 px-4 text-slate-600">
+                              Revistas internacionais de acesso livre
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p className="text-xs text-amber-900 font-semibold bg-amber-50 p-2.5 rounded-lg border border-amber-200 flex items-center gap-1.5">
+                      <span>✅</span>
+                      <span>Todas são gratuitas e confiáveis.</span>
+                    </p>
                   </div>
                 </div>
               </div>
