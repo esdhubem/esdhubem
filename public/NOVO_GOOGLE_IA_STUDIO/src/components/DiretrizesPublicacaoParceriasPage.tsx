@@ -589,11 +589,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             {openSections['2'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
                 <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00227B]/10 text-[#00227B] text-xs font-bold uppercase tracking-wider border border-[#00227B]/20">
-                    <ShieldCheck className="w-4 h-4 text-blue-700" />
-                    <span>Documentação Jurídica & Direitos Autorais</span>
-                  </div>
-
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                     Declarações de autorização e de autoria
                   </h2>
