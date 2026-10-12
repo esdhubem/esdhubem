@@ -767,26 +767,131 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Assimilação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete</strong> com conceito claro, informativo, objetivo, histórico e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola.
                 </p>
 
-                <div className="bg-white border border-amber-200/80 rounded-xl p-4 space-y-2.5">
-                  <span className="font-bold text-xs uppercase tracking-wider text-amber-900 block">Requisitos da Tríade da Assimilação Ativa:</span>
-                  <ul className="text-xs sm:text-sm text-slate-700 space-y-2 list-none">
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-800 font-bold shrink-0">🧠</span>
-                      <span><strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (à mão ou digital) estruturando os conceitos centrais e conexões pedagógicas da aula.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-800 font-bold shrink-0">✍️</span>
-                      <span><strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão explicando o significado, o contexto histórico e a aplicação do tema.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-800 font-bold shrink-0">🎙️</span>
-                      <span><strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando o conceito oralmente com clareza (Técnica Feynman de retenção).</span>
-                    </li>
-                  </ul>
+                {/* Diagrama em Triângulo - Requisitos da Tríade da Assimilação Ativa */}
+                <div className="bg-gradient-to-b from-amber-50/70 via-white to-amber-50/40 border-2 border-amber-300 rounded-2xl p-4 sm:p-6 shadow-sm space-y-6">
+                  {/* Cabeçalho */}
+                  <div className="flex items-center justify-between flex-wrap gap-2 border-b border-amber-200/80 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-amber-700 text-white flex items-center justify-center font-black text-xs shadow-xs">
+                        ▲
+                      </div>
+                      <span className="font-extrabold text-xs sm:text-sm uppercase tracking-wider text-amber-950">
+                        Requisitos da Tríade da Assimilação Ativa
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-bold text-amber-900 bg-amber-100/90 px-3 py-1 rounded-full border border-amber-300">
+                      Estrutura em Triângulo Pedagógico
+                    </span>
+                  </div>
 
-                  <div className="pt-2 border-t border-amber-100 flex flex-wrap gap-2 text-xs">
-                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">🛡️ Registro de Autoria: OSF (Open Science Framework)</span>
-                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Wiki Oficial ESDHUBEM (Enciclopédia Temática)</span>
+                  {/* Desenho Gráfico do Triângulo Pedagógico */}
+                  <div className="flex justify-center">
+                    <div className="w-full max-w-md bg-white border border-amber-200 rounded-2xl p-3 sm:p-4 shadow-xs">
+                      <svg viewBox="0 0 360 210" className="w-full h-auto" fill="none">
+                        <defs>
+                          <linearGradient id="triGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#fef3c7" stopOpacity="0.8" />
+                            <stop offset="100%" stopColor="#fed7aa" stopOpacity="0.4" />
+                          </linearGradient>
+                        </defs>
+                        {/* Triângulo Preenchido e Borda Tracejada */}
+                        <polygon points="180,24 45,178 315,178" fill="url(#triGradient)" stroke="#d97706" strokeWidth="2.5" strokeDasharray="5 5" />
+                        
+                        {/* Linhas Internas até o Centro */}
+                        <line x1="180" y1="24" x2="180" y2="128" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="3 3" />
+                        <line x1="45" y1="178" x2="180" y2="128" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="3 3" />
+                        <line x1="315" y1="178" x2="180" y2="128" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="3 3" />
+
+                        {/* Centro do Triângulo */}
+                        <circle cx="180" cy="128" r="26" fill="#ffffff" stroke="#b45309" strokeWidth="2" />
+                        <text x="180" y="125" textAnchor="middle" fontSize="8" fontWeight="900" fill="#78350f">ASSIMILAÇÃO</text>
+                        <text x="180" y="137" textAnchor="middle" fontSize="8" fontWeight="900" fill="#78350f">ATIVA</text>
+
+                        {/* Vértice 1: Topo (Mapa Mental) */}
+                        <circle cx="180" cy="24" r="18" fill="#b45309" stroke="#ffffff" strokeWidth="3" />
+                        <text x="180" y="30" textAnchor="middle" fontSize="13">🧠</text>
+                        <text x="180" y="55" textAnchor="middle" fontSize="9.5" fontWeight="bold" fill="#92400e">1. MAPA MENTAL</text>
+
+                        {/* Vértice 2: Base Esquerda (Verbete) */}
+                        <circle cx="45" cy="178" r="18" fill="#b45309" stroke="#ffffff" strokeWidth="3" />
+                        <text x="45" y="184" textAnchor="middle" fontSize="13">✍️</text>
+                        <text x="50" y="202" textAnchor="start" fontSize="9.5" fontWeight="bold" fill="#92400e">2. VERBETE</text>
+
+                        {/* Vértice 3: Base Direita (Áudio) */}
+                        <circle cx="315" cy="178" r="18" fill="#b45309" stroke="#ffffff" strokeWidth="3" />
+                        <text x="315" y="184" textAnchor="middle" fontSize="13">🎙️</text>
+                        <text x="310" y="202" textAnchor="end" fontSize="9.5" fontWeight="bold" fill="#92400e">3. ÁUDIO 1 MIN</text>
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Organização Triangular dos 3 Vértices com Texto Integral */}
+                  <div className="space-y-4">
+                    {/* Vértice 1 (Topo do Triângulo) */}
+                    <div className="max-w-xl mx-auto">
+                      <div className="bg-white border-2 border-amber-400 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all text-left sm:text-center relative overflow-hidden">
+                        <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-amber-400 via-amber-600 to-amber-400" />
+                        <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[10px] font-black uppercase tracking-wider mb-2 border border-amber-200">
+                          ▲ Vértice Superior 1 • Síntese Visual
+                        </span>
+                        <div className="flex items-center sm:justify-center gap-2 text-amber-950 font-bold text-sm sm:text-base mb-1.5">
+                          <span className="text-xl">🧠</span>
+                          <span>Mapa Mental do Conteúdo</span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          <strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (à mão ou digital) estruturando os conceitos centrais e conexões pedagógicas da aula.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Base do Triângulo: Vértice 2 (Esquerda) e Vértice 3 (Direita) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* Vértice 2 (Base Esquerda) */}
+                      <div className="bg-white border-2 border-amber-300 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+                        <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-amber-500 to-amber-300" />
+                        <div>
+                          <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[10px] font-black uppercase tracking-wider mb-2 border border-amber-200">
+                            ◀ Vértice Inferior 2 • Estrutura Conceitual
+                          </span>
+                          <div className="flex items-center gap-2 text-amber-950 font-bold text-sm sm:text-base mb-1.5">
+                            <span className="text-xl">✍️</span>
+                            <span>Verbete Enciclopédico (500 a 800 palavras)</span>
+                          </div>
+                          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão explicando o significado, o contexto histórico e a aplicação do tema.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Vértice 3 (Base Direita) */}
+                      <div className="bg-white border-2 border-amber-300 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+                        <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-amber-300 to-amber-500" />
+                        <div>
+                          <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[10px] font-black uppercase tracking-wider mb-2 border border-amber-200">
+                            ▶ Vértice Inferior 3 • Retenção Oral
+                          </span>
+                          <div className="flex items-center gap-2 text-amber-950 font-bold text-sm sm:text-base mb-1.5">
+                            <span className="text-xl">🎙️</span>
+                            <span>Áudio Explicativo de 1 Minuto</span>
+                          </div>
+                          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando o conceito oralmente com clareza (Técnica Feynman de retenção).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Informações de Registro e Publicação */}
+                  <div className="pt-2 border-t border-amber-200/80 flex flex-wrap gap-2 text-xs">
+                    <span className="px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
+                      <span>🛡️</span>
+                      <span>Registro de Autoria: OSF (Open Science Framework)</span>
+                    </span>
+                    <span className="px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
+                      <span>📍</span>
+                      <span>Publicação: Wiki Oficial ESDHUBEM (Enciclopédia Temática)</span>
+                    </span>
                   </div>
                 </div>
 
