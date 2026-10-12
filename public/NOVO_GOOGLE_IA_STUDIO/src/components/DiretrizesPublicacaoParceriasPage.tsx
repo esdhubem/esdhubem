@@ -840,11 +840,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             {openSections['4'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-700/10 text-amber-900 text-xs font-bold uppercase tracking-wider border border-amber-700/20">
-                    <FileText className="w-4 h-4 text-amber-700" />
-                    <span>Diretrizes e Normas Editoriais para o Verbete</span>
-                  </div>
-
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                     GUIA COMPLETO DO VERBETE — NÍVEL BRONZE
                   </h2>
