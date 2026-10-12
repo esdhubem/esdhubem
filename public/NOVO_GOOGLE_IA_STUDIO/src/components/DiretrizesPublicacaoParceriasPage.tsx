@@ -1067,11 +1067,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             {openSections['6'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-700/10 text-blue-900 text-xs font-bold uppercase tracking-wider border border-blue-700/20">
-                    <FileText className="w-4 h-4 text-blue-700" />
-                    <span>Diretrizes e Normas Editoriais para Artigo de Blog &amp; SEO</span>
-                  </div>
-
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                     Guia Completo do Artigo de Blog - Nível Prata
                   </h2>
