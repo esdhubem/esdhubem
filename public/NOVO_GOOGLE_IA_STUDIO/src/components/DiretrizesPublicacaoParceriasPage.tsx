@@ -428,13 +428,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* Tutorial Vídeo - Parte 1: Boas-Vindas */}
           <div className="space-y-3 pb-8 border-b border-slate-200">
-            <div className="flex items-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
-                <span className="text-sm">🎬</span>
-                <span>Tutorial ESDHUBEM • Parte 1: Boas-Vindas</span>
-              </div>
-            </div>
-
             <LazyVideoPlayer
               id="odysee-iframe-parte-1"
               src="https://odysee.com/$/embed/@esdhubem:a/Diretrizes-de-Publica%C3%A7%C3%A3o-Parte-1-:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
@@ -697,13 +690,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
           <div className="space-y-3 pb-8 border-b border-slate-200">
-            <div className="flex items-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
-                <span className="text-sm">🎬</span>
-                <span>Tutorial ESDHUBEM • Parte 2: Níveis e Plataforma OSF</span>
-              </div>
-            </div>
-
             <LazyVideoPlayer
               id="odysee-iframe-parte-2"
               src="https://odysee.com/$/embed/@esdhubem:a/diretriz-de-publicacao-2:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
@@ -830,13 +816,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* Tutorial Vídeo - Parte 3: Artigo de Blog & SEO */}
               <div className="space-y-4 py-6 border-y border-slate-200">
-                <div className="flex items-center">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
-                    <span className="text-sm">🎬</span>
-                    <span>Tutorial ESDHUBEM • Parte 3: Artigo de Blog &amp; SEO</span>
-                  </div>
-                </div>
-
                 <LazyVideoPlayer
                   id="odysee-iframe-parte-3"
                   src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-3:4?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
@@ -982,13 +961,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* Tutorial Vídeo - Parte 4: Manuscrito Científico, Zenodo & DOI */}
               <div className="space-y-4 py-6 border-y border-slate-200">
-                <div className="flex items-center">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
-                    <span className="text-sm">🎬</span>
-                    <span>Tutorial ESDHUBEM • Parte 4: Manuscrito Científico, Zenodo &amp; DOI</span>
-                  </div>
-                </div>
-
                 <LazyVideoPlayer
                   id="odysee-iframe-parte-4"
                   src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-4:1?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
@@ -1138,13 +1110,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* Tutorial Vídeo - Parte 5: Orientações para Produção do Artigo */}
                 <div className="space-y-4 py-4 border-y border-amber-200/80">
-                  <div className="flex items-center">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
-                      <span className="text-sm">🎬</span>
-                      <span>Tutorial ESDHUBEM • Parte 5: Orientações para Produção do Artigo</span>
-                    </div>
-                  </div>
-
                   <LazyVideoPlayer
                     id="odysee-iframe-parte-5"
                     src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-5:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
@@ -1485,13 +1450,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                 {/* Tutorial Vídeo - Parte 6: Livro Autoral & Nível Diamante */}
                 <div className="space-y-4 py-4 border-y border-cyan-200/80">
-                  <div className="flex items-center">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
-                      <span className="text-sm">🎬</span>
-                      <span>Tutorial ESDHUBEM • Parte 6: Livro Autoral &amp; Nível Diamante</span>
-                    </div>
-                  </div>
-
                   <LazyVideoPlayer
                     id="odysee-iframe-parte-6"
                     src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-6:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
@@ -1661,13 +1619,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                 {/* Tutorial Vídeo - Parte 7: Orientações para Produção do Livro Autoral */}
                 <div className="space-y-4 py-4 border-y border-cyan-200/80">
-                  <div className="flex items-center">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
-                      <span className="text-sm">🎬</span>
-                      <span>Tutorial ESDHUBEM • Parte 7: Orientações para Produção do Livro Autoral</span>
-                    </div>
-                  </div>
-
                   <LazyVideoPlayer
                     id="odysee-iframe-parte-7"
                     src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-7:8?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
