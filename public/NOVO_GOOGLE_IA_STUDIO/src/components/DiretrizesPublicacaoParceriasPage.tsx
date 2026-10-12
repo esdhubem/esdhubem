@@ -1285,7 +1285,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 6: 6 - Guia Completo do Artigo de Blog - Nível Prata */}
+          {/* SEÇÃO 6: 6 - Guia Completo para publicar o artigo de Blog - Nível Prata */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-6"
@@ -1307,7 +1307,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Documento Integrado • Artigo de Blog &amp; SEO (1.200 a 2.500 palavras)
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    6 - Guia Completo do Artigo de Blog - Nível Prata
+                    6 - Guia Completo para publicar o artigo de Blog - Nível Prata
                   </h3>
                 </div>
               </div>
@@ -1329,7 +1329,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="space-y-3">
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                    Guia Completo do Artigo de Blog - Nível Prata
+                    Guia Completo para publicar o artigo de Blog - Nível Prata
                   </h2>
 
                   <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
@@ -1342,7 +1342,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <div className="flex items-center justify-between gap-2 flex-wrap">
                     <span className="font-bold text-xs uppercase tracking-wide text-slate-900 flex items-center gap-1.5">
                       <FileCheck className="w-4 h-4 text-blue-600" />
-                      Guia Completo — Artigo de Blog &amp; SEO (Nível Prata)
+                      Guia Completo para publicar o artigo de Blog - Nível Prata
                     </span>
                     <a
                       href="https://docs.google.com/document/d/e/2PACX-1vRU1IGDHMqKJGO9dXcA7q4BgeWy_UMpY7WG8ocLglse36452RquRkvmo54mgeVukjhpqDWYzPlac8af/pub"
@@ -1351,14 +1351,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       className="inline-flex items-center gap-1 text-xs text-blue-700 hover:text-blue-900 font-semibold hover:underline"
                     >
                       <span>Abrir Documento</span>
-                      <ExternalLink className="w-3 h-3" />
+                      <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
                   <div className="w-full h-[500px] sm:h-[600px] rounded-xl overflow-hidden border border-slate-200 bg-white shadow-inner">
                     <iframe
                       src="https://docs.google.com/document/d/e/2PACX-1vRU1IGDHMqKJGO9dXcA7q4BgeWy_UMpY7WG8ocLglse36452RquRkvmo54mgeVukjhpqDWYzPlac8af/pub?embedded=true"
                       className="w-full h-full border-0"
-                      title="Guia Completo do Artigo de Blog - Nível Prata ESDHUBEM"
+                      title="Guia Completo para publicar o artigo de Blog - Nível Prata ESDHUBEM"
                       loading="lazy"
                     />
                   </div>
