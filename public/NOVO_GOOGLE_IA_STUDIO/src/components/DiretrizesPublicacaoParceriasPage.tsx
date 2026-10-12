@@ -27,8 +27,104 @@ import {
   AlertTriangle,
   Check,
   Cpu,
-  RefreshCw
+  RefreshCw,
+  Play
 } from 'lucide-react';
+
+interface LazyVideoPlayerProps {
+  id: string;
+  src: string;
+  title: string;
+  thumbnail: string;
+  fallbackThumbnail?: string;
+  badge?: string;
+}
+
+const LazyVideoPlayer: React.FC<LazyVideoPlayerProps> = ({
+  id,
+  src,
+  title,
+  thumbnail,
+  fallbackThumbnail,
+  badge
+}) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [imgSrc, setImgSrc] = useState(thumbnail);
+
+  if (isPlaying) {
+    const embedUrl = src.includes('autoplay') ? src : `${src}&autoplay=1`;
+    return (
+      <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
+        <iframe
+          id={id}
+          className="w-full h-full border-0 absolute inset-0"
+          src={embedUrl}
+          allowFullScreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          title={title}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={() => setIsPlaying(true)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setIsPlaying(true);
+        }
+      }}
+      className="group relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#FFC72C] select-none transition-all duration-300 hover:border-amber-400/80"
+      aria-label={`Assistir ao vídeo: ${title}`}
+    >
+      {/* Imagem de Capa do Vídeo */}
+      <img
+        src={imgSrc}
+        alt={title}
+        onError={() => {
+          if (fallbackThumbnail && imgSrc !== fallbackThumbnail) {
+            setImgSrc(fallbackThumbnail);
+          }
+        }}
+        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        loading="lazy"
+      />
+
+      {/* Gradiente Escuro Suave para Contraste e Efeito Cinema */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-slate-950/30 group-hover:via-slate-950/35 transition-colors duration-300" />
+
+      {/* Selo Superior */}
+      {badge && (
+        <div className="absolute top-3 sm:top-4 left-3 sm:left-4 z-10">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/85 backdrop-blur-md text-[#FFC72C] text-[11px] sm:text-xs font-black uppercase tracking-wider border border-[#FFC72C]/40 shadow-lg">
+            <span>🎬</span>
+            <span>{badge}</span>
+          </span>
+        </div>
+      )}
+
+      {/* Botão de Play Central e Chamada para Ação */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3.5 z-10 p-4 text-center">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#FFC72C] to-amber-300 text-slate-950 flex items-center justify-center shadow-[0_0_35px_rgba(255,199,44,0.65)] group-hover:shadow-[0_0_55px_rgba(255,199,44,0.95)] group-hover:scale-110 transition-all duration-300 border-2 border-white/40">
+          <Play className="w-8 h-8 sm:w-10 sm:h-10 fill-current translate-x-0.5 text-slate-950" />
+        </div>
+        <div className="space-y-1 drop-shadow-md">
+          <span className="text-white font-black text-sm sm:text-base block tracking-tight group-hover:text-[#FFC72C] transition-colors">
+            Clique para assistir ao vídeo
+          </span>
+          <span className="inline-flex items-center gap-1.5 text-slate-300 text-[11px] sm:text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-900/60 backdrop-blur-xs border border-white/10">
+            <Sparkles className="w-3 h-3 text-[#FFC72C]" />
+            Carregamento leve e instantâneo
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 interface DiretrizesPublicacaoParceriasPageProps {
   onBackToHome: () => void;
@@ -316,16 +412,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
-              <iframe
-                id="odysee-iframe-parte-1"
-                className="w-full h-full border-0 absolute inset-0"
-                src="https://odysee.com/$/embed/@esdhubem:a/Diretrizes-de-Publica%C3%A7%C3%A3o-Parte-1-:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                allowFullScreen
-                title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 1: Boas-vindas)"
-                loading="lazy"
-              />
-            </div>
+            <LazyVideoPlayer
+              id="odysee-iframe-parte-1"
+              src="https://odysee.com/$/embed/@esdhubem:a/Diretrizes-de-Publica%C3%A7%C3%A3o-Parte-1-:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+              title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 1: Boas-vindas)"
+              thumbnail="./images/thumb_video_diretrizes_1.webp"
+              fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/fb4830417af8c53f1df8747696760ee2.webp"
+              badge="Parte 1 • Boas-Vindas"
+            />
             <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
               <span>Vídeo 1: Introdução e boas-vindas ao percurso de autoria e publicação da ESDHUBEM</span>
@@ -457,16 +551,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
-              <iframe
-                id="odysee-iframe-parte-2"
-                className="w-full h-full border-0 absolute inset-0"
-                src="https://odysee.com/$/embed/@esdhubem:a/diretriz-de-publicacao-2:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                allowFullScreen
-                title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 2: Os Quatro Percursos e OSF)"
-                loading="lazy"
-              />
-            </div>
+            <LazyVideoPlayer
+              id="odysee-iframe-parte-2"
+              src="https://odysee.com/$/embed/@esdhubem:a/diretriz-de-publicacao-2:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+              title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 2: Os Quatro Percursos e OSF)"
+              thumbnail="./images/thumb_video_diretrizes_2.webp"
+              fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/05ebc84738c2eb46184d9cbad0fec902.webp"
+              badge="Parte 2 • Níveis e OSF"
+            />
 
             {/* Box informativo OSF com link */}
             <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
@@ -661,16 +753,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
                 </div>
 
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
-                  <iframe
-                    id="odysee-iframe-parte-3"
-                    className="w-full h-full border-0 absolute inset-0"
-                    src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-3:4?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                    allowFullScreen
-                    title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 3: Artigo de Blog & SEO)"
-                    loading="lazy"
-                  />
-                </div>
+                <LazyVideoPlayer
+                  id="odysee-iframe-parte-3"
+                  src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-3:4?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                  title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 3: Artigo de Blog & SEO)"
+                  thumbnail="./images/thumb_video_diretrizes_3.webp"
+                  fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/c9d9e1cc9fd5cffa400edb14d2f1ed0b.webp"
+                  badge="Parte 3 • Artigo de Blog & SEO"
+                />
                 <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
                   <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                   <span>Vídeo 3: Orientações práticas para elaboração do artigo de blog, técnicas de SEO e estruturação</span>
@@ -815,16 +905,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
                 </div>
 
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
-                  <iframe
-                    id="odysee-iframe-parte-4"
-                    className="w-full h-full border-0 absolute inset-0"
-                    src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-4:1?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                    allowFullScreen
-                    title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 4: Manuscrito Científico, Zenodo & DOI)"
-                    loading="lazy"
-                  />
-                </div>
+                <LazyVideoPlayer
+                  id="odysee-iframe-parte-4"
+                  src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-4:1?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                  title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 4: Manuscrito Científico, Zenodo & DOI)"
+                  thumbnail="./images/thumb_video_diretrizes_4.webp"
+                  fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/533c4cb48d38f26d2b7e62a08cf35318.webp"
+                  badge="Parte 4 • Manuscrito & Zenodo/DOI"
+                />
                 <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
                   <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                   <span>Vídeo 4: Orientações práticas para elaboração do manuscrito científico, depósito no Zenodo e atribuição de DOI</span>
@@ -973,16 +1061,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     </div>
                   </div>
 
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
-                    <iframe
-                      id="odysee-iframe-parte-5"
-                      className="w-full h-full border-0 absolute inset-0"
-                      src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-5:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                      allowFullScreen
-                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 5: Orientações para Produção do Artigo)"
-                      loading="lazy"
-                    />
-                  </div>
+                  <LazyVideoPlayer
+                    id="odysee-iframe-parte-5"
+                    src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-5:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                    title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 5: Orientações para Produção do Artigo)"
+                    thumbnail="./images/thumb_video_diretrizes_5.webp"
+                    fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/b278d110bda87d4316ff0fb0fc59e6d2.webp"
+                    badge="Parte 5 • Produção do Artigo"
+                  />
                   <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
                     <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                     <span>Vídeo 5: Diretrizes práticas e passo a passo para a estruturação do artigo científico e manuscrito</span>
@@ -1322,16 +1408,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     </div>
                   </div>
 
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
-                    <iframe
-                      id="odysee-iframe-parte-6"
-                      className="w-full h-full border-0 absolute inset-0"
-                      src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-6:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                      allowFullScreen
-                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 6: Livro Autoral & Nível Diamante)"
-                      loading="lazy"
-                    />
-                  </div>
+                  <LazyVideoPlayer
+                    id="odysee-iframe-parte-6"
+                    src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-6:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                    title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 6: Livro Autoral & Nível Diamante)"
+                    thumbnail="./images/thumb_video_diretrizes_6.webp"
+                    fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/7a9351c5cdd6fae99bc88d2cd611d9cd.webp"
+                    badge="Parte 6 • Livro Autoral & Diamante"
+                  />
                   <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
                     <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
                     <span>Vídeo 6: Orientações completas para produção da obra autoral e requisitos do nível Diamante</span>
@@ -1500,16 +1584,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     </div>
                   </div>
 
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
-                    <iframe
-                      id="odysee-iframe-parte-7"
-                      className="w-full h-full border-0 absolute inset-0"
-                      src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-7:8?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                      allowFullScreen
-                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 7: Orientações para Produção do Livro Autoral)"
-                      loading="lazy"
-                    />
-                  </div>
+                  <LazyVideoPlayer
+                    id="odysee-iframe-parte-7"
+                    src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-7:8?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                    title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 7: Orientações para Produção do Livro Autoral)"
+                    thumbnail="./images/thumb_video_diretrizes_7.webp"
+                    fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/22b85158397a9448375c556425d8aada.webp"
+                    badge="Parte 7 • Produção do Livro"
+                  />
                   <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
                     <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
                     <span>Vídeo 7: Diretrizes detalhadas para a estruturação, escrita e preparação do livro autoral</span>

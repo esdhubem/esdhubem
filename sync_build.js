@@ -68,4 +68,30 @@ targets.forEach(({ html, assets }) => {
   }
 });
 
+// Sincronizar pasta de imagens
+const distImages = path.join(distDir, 'images');
+const srcImages = path.join(baseDir, 'images');
+const imagesSource = fs.existsSync(distImages) ? distImages : (fs.existsSync(srcImages) ? srcImages : null);
+
+if (imagesSource) {
+  const imageTargets = [
+    path.join(baseDir, 'images'),
+    path.join(baseDir, 'public/images'),
+    path.join(baseDir, 'public/github-pages/images'),
+    path.join(baseDir, 'public/github-pages/github-pages/images')
+  ];
+  if (fs.existsSync(cursosDir)) {
+    imageTargets.push(
+      path.join(cursosDir, 'images'),
+      path.join(cursosDir, 'public/images'),
+      path.join(cursosDir, 'public/github-pages/images'),
+      path.join(cursosDir, 'public/github-pages/github-pages/images')
+    );
+  }
+  imageTargets.forEach(dest => {
+    copyFolderSync(imagesSource, dest);
+    console.log(`Copied images to ${dest}`);
+  });
+}
+
 console.log('All locations successfully synchronized!');
