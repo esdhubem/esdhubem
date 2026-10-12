@@ -44,7 +44,7 @@ export const DiretrizesAvaliacaoManuscritosPage: React.FC<DiretrizesAvaliacaoMan
               <span>Início</span>
             </button>
             <span>/</span>
-            <span className="text-[#FFC72C] font-semibold truncate">Diretrizes de Avaliação de Manuscritos</span>
+            <span className="text-[#FFC72C] font-semibold truncate">Diretrizes de Avaliação de Manuscritos dos Alunos</span>
           </div>
 
           <div className="hidden sm:flex items-center gap-2 text-xs text-slate-300">
@@ -63,7 +63,7 @@ export const DiretrizesAvaliacaoManuscritosPage: React.FC<DiretrizesAvaliacaoMan
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight uppercase">
-            Diretrizes de Análise e Avaliação de Manuscritos
+            Diretrizes de Avaliação de Manuscritos dos Alunos
           </h1>
 
           <div className="text-cyan-300 font-bold text-base sm:text-lg tracking-wide">
