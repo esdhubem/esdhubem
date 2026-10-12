@@ -29,7 +29,8 @@ import {
   Cpu,
   RefreshCw,
   Play,
-  Headphones
+  Headphones,
+  Lightbulb
 } from 'lucide-react';
 
 interface LazyVideoPlayerProps {
@@ -165,7 +166,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '13': false,
     '14': false,
     '15': false,
-    '16': false
+    '16': false,
+    '17': false
   });
 
   const toggleSection = (id: string) => {
@@ -193,7 +195,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '13': true,
       '14': true,
       '15': true,
-      '16': true
+      '16': true,
+      '17': true
     });
   };
 
@@ -215,7 +218,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '13': false,
       '14': false,
       '15': false,
-      '16': false
+      '16': false,
+      '17': false
     });
   };
 
@@ -506,6 +510,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 }`}
               >
                 📐 16. Estrutura por Nível
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('17')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['17']
+                    ? 'bg-cyan-400 text-slate-950 font-black shadow-md'
+                    : 'bg-cyan-950/60 text-cyan-200 border border-cyan-500/40 hover:bg-cyan-900/80'
+                }`}
+              >
+                🌐 17. Registro nas Plataformas
               </button>
             </div>
           </div>
@@ -3141,6 +3156,477 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       </tbody>
                     </table>
                   </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 17: 17 - Registro Obrigatório nas Plataformas e Atualização de Versões */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-17"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('17')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['17']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  🌐 17
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    OSF, Zenodo com DOI, Autoria Perpétua e Gestão de Versões
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    17 - Registro Obrigatório nas Plataformas e Atualização de Versões
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['17'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['17'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['17'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-7 shadow-sm">
+                  
+                  {/* Título interno com o badge 4 */}
+                  <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
+                    <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
+                      4
+                    </span>
+                    <h4 className="font-black text-base sm:text-lg text-slate-900">
+                      Registro Obrigatório nas Plataformas e Atualização de Versões
+                    </h4>
+                  </div>
+
+                  {/* 1. Alerta Institucional Obrigatório */}
+                  <div className="bg-rose-50/80 border-2 border-rose-200 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 text-rose-950 shadow-xs">
+                    <div className="w-8 h-8 rounded-xl bg-rose-100 border border-rose-300 flex items-center justify-center shrink-0 text-rose-600 mt-0.5">
+                      <AlertTriangle className="w-4 h-4" />
+                    </div>
+                    <div className="space-y-1">
+                      <h5 className="font-bold text-sm text-rose-900 flex items-center gap-1.5 uppercase tracking-wide">
+                        ⚠️ ATENÇÃO INSTITUCIONAL OBRIGATÓRIA
+                      </h5>
+                      <p className="text-xs sm:text-sm text-rose-950 leading-relaxed">
+                        <strong>Não recebemos trabalhos que não foram registrados.</strong> O estudante deve obrigatoriamente realizar o registro na plataforma correspondente (<strong>OSF para Níveis Bronze e Prata</strong>; <strong>Zenodo com DOI para Ouro</strong>) e anexar o link público oficial no ato da entrega final. Trabalhos sem comprovação de registro não avançam para homologação nem certificação.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 2. Como funciona a garantia de autoria e datação perpétua */}
+                  <div className="bg-teal-50/60 border border-teal-200 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 text-slate-800 shadow-xs">
+                    <div className="w-8 h-8 rounded-xl bg-teal-100 border border-teal-300 flex items-center justify-center shrink-0 text-teal-700 mt-0.5">
+                      <Lightbulb className="w-4 h-4" />
+                    </div>
+                    <div className="space-y-1">
+                      <h5 className="font-bold text-sm text-teal-900 flex items-center gap-1.5">
+                        Como funciona a garantia de autoria e datação perpétua
+                      </h5>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        A pessoa pode registrar, enviar para avaliação, corrigir e atualizar... <strong>Mas a forma de fazer depende da plataforma.</strong> O que nunca muda: <strong>a versão original fica guardada para sempre</strong> (é a garantia jurídica internacional de autoria e carimbo de data). Ninguém "apaga" o que já foi registrado — o que se faz tecnicamente é acrescentar uma nova versão corrigida.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 3. Fluxo Recomendado para o Estudante na ESDHUBEM (6 passos) */}
+                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 sm:p-6 space-y-4">
+                    <div className="space-y-1">
+                      <h5 className="font-bold text-sm sm:text-base text-slate-900 flex items-center gap-2">
+                        <span>📌</span> Fluxo Recomendado para o Estudante na ESDHUBEM
+                      </h5>
+                      <p className="text-xs text-slate-600">
+                        Para evitar retrabalho ou registros de rascunhos desnecessários, o estudante segue este fluxo ordenado:
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 pt-1">
+                      {/* Passo 1 */}
+                      <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-1.5 shadow-xs">
+                        <span className="inline-block text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+                          PASSO 1
+                        </span>
+                        <h6 className="font-bold text-xs sm:text-sm text-slate-900">
+                          Elaboração Interna
+                        </h6>
+                        <p className="text-xs text-slate-600 leading-relaxed">
+                          Escreva, pesquise, corrija e ajuste diretamente nos modelos.
+                        </p>
+                      </div>
+
+                      {/* Passo 2 */}
+                      <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-1.5 shadow-xs">
+                        <span className="inline-block text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+                          PASSO 2
+                        </span>
+                        <h6 className="font-bold text-xs sm:text-sm text-slate-900">
+                          Envio para Avaliação
+                        </h6>
+                        <p className="text-xs text-slate-600 leading-relaxed">
+                          Envie para a coordenação escolar. <strong>Não registrar ainda.</strong>
+                        </p>
+                      </div>
+
+                      {/* Passo 3 */}
+                      <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-1.5 shadow-xs">
+                        <span className="inline-block text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+                          PASSO 3
+                        </span>
+                        <h6 className="font-bold text-xs sm:text-sm text-slate-900">
+                          Devolutiva Docente
+                        </h6>
+                        <p className="text-xs text-slate-600 leading-relaxed">
+                          Receba o feedback pedagógico e realize os eventuais ajustes solicitados.
+                        </p>
+                      </div>
+
+                      {/* Passo 4 */}
+                      <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-1.5 shadow-xs">
+                        <span className="inline-block text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+                          PASSO 4
+                        </span>
+                        <h6 className="font-bold text-xs sm:text-sm text-slate-900">
+                          Aprovação Final
+                        </h6>
+                        <p className="text-xs text-slate-600 leading-relaxed">
+                          Atingiu o parecer favorável e obteve a validação final da autoria.
+                        </p>
+                      </div>
+
+                      {/* Passo 5 */}
+                      <div className="bg-emerald-50/70 border-2 border-emerald-400 rounded-xl p-4 space-y-1.5 shadow-sm">
+                        <span className="inline-block text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md bg-emerald-600 text-white">
+                          PASSO 5 ✅
+                        </span>
+                        <h6 className="font-bold text-xs sm:text-sm text-emerald-950">
+                          Registro Oficial
+                        </h6>
+                        <p className="text-xs text-emerald-900 leading-relaxed">
+                          Acesse a plataforma e efetue o registro com seu manuscrito e anexe o link público.
+                        </p>
+                      </div>
+
+                      {/* Passo 6 */}
+                      <div className="bg-purple-50/70 border-2 border-purple-300 rounded-xl p-4 space-y-1.5 shadow-xs">
+                        <span className="inline-block text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 border border-purple-300">
+                          PASSO 6 (SE NECESSÁRIO)
+                        </span>
+                        <h6 className="font-bold text-xs sm:text-sm text-purple-950">
+                          Correção Pós-Registro
+                        </h6>
+                        <p className="text-xs text-purple-900 leading-relaxed">
+                          Crie uma nova versão na plataforma e nos envie o link novo. A versão originária fica guardada com carimbo perpétuo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 4. Como funciona em cada plataforma */}
+                  <div className="space-y-6 pt-2">
+                    <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+                      <span className="text-lg">📄</span>
+                      <h5 className="font-bold text-base text-slate-900">
+                        Como funciona em cada plataforma
+                      </h5>
+                    </div>
+
+                    {/* Plataforma 1: OSF */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2 text-cyan-950 font-bold text-sm sm:text-base">
+                        <span>🌐</span>
+                        <h6>OSF — Open Science Framework (Níveis Bronze e Prata)</h6>
+                      </div>
+
+                      <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+                        <table className="w-full text-left text-xs sm:text-sm">
+                          <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
+                            <tr>
+                              <th className="py-3 px-4 w-1/3">Situação</th>
+                              <th className="py-3 px-4">O que acontece</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-slate-200 bg-white">
+                            <tr>
+                              <td className="py-3 px-4 font-semibold text-slate-900">
+                                Projeto antes de registrar
+                              </td>
+                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                <span className="text-emerald-700 font-semibold">✅ Pode criar, corrigir, renomear quantas vezes quiser</span> — o OSF guarda histórico de versões automaticamente.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="py-3 px-4 font-semibold text-slate-900">
+                                Após fazer o REGISTRO
+                              </td>
+                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                <span className="text-rose-700 font-semibold">🛑 O arquivo fica arquivado</span> — não dá para alterar nem substituir silenciosamente. O registro é um "congelamento" daquele momento, garantindo data e autoria.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="py-3 px-4 font-semibold text-slate-900">
+                                Para corrigir depois de registrado
+                              </td>
+                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                Cria-se uma atualização formal com justificativa, mas os arquivos originais permanecem. A nova versão é registrada separadamente.
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      {/* Aviso de Transição OSF */}
+                      <div className="bg-amber-50/80 border border-amber-300 rounded-xl p-3.5 sm:p-4 text-xs sm:text-sm text-amber-950 flex items-start gap-2.5">
+                        <span className="text-base shrink-0">⚠️</span>
+                        <p className="leading-relaxed">
+                          <strong>Atenção importante:</strong> O OSF possui fase de transição — projetos deixarão de ser editáveis a partir de fevereiro/2026. Recomendamos ao estudante orientar o registro após a aprovação final.
+                        </p>
+                      </div>
+
+                      {/* Passo a Passo Prático no OSF */}
+                      <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-4 sm:p-5 space-y-3.5">
+                        <h6 className="font-bold text-xs sm:text-sm text-sky-950 uppercase tracking-wider">
+                          PASSO A PASSO PRÁTICO NO OSF (OSF.IO)
+                        </h6>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+                          {/* Etapa 1 */}
+                          <div className="bg-white border border-sky-200 rounded-xl p-3.5 space-y-2 shadow-xs">
+                            <span className="inline-block text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded">
+                              ETAPA 1: CONTA E CRIAÇÃO
+                            </span>
+                            <ol className="text-xs text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
+                              <li>Acessar <a href="https://osf.io" target="_blank" rel="noopener noreferrer" className="text-cyan-700 underline font-semibold">osf.io</a></li>
+                              <li>Clique em <strong>Sign Up</strong> e crie sua conta com o e-mail preferencial.</li>
+                              <li>Confirme seu endereço de e-mail clicando no link recebido.</li>
+                            </ol>
+                          </div>
+
+                          {/* Etapa 2 */}
+                          <div className="bg-white border border-sky-200 rounded-xl p-3.5 space-y-2 shadow-xs">
+                            <span className="inline-block text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded">
+                              ETAPA 2: PROJETO E UPLOAD
+                            </span>
+                            <ol start={4} className="text-xs text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
+                              <li>Na página inicial, clique em <strong>Create New Project</strong>.</li>
+                              <li>Dê um título ao projeto (mesmo título do seu trabalho) e descrição breve.</li>
+                              <li>Salve o projeto — clique em <strong>Files → Upload Files</strong> (formato PDF).</li>
+                            </ol>
+                          </div>
+
+                          {/* Etapa 3 */}
+                          <div className="bg-white border border-sky-200 rounded-xl p-3.5 space-y-2 shadow-xs">
+                            <span className="inline-block text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded">
+                              ETAPA 3: PUBLICAÇÃO E ENVIO
+                            </span>
+                            <ol start={7} className="text-xs text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
+                              <li>Selecione o arquivo final de seu trabalho.</li>
+                              <li>Após upload, clique em <strong>Make Public</strong> — isso torna o registro acessível e datado.</li>
+                              <li>Copie o link público da página do projeto e envie para a ESDHUBEM.</li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Plataforma 2: Zenodo + DOI */}
+                    <div className="space-y-4 pt-4 border-t border-slate-200">
+                      <div className="flex items-center gap-2 text-cyan-950 font-bold text-sm sm:text-base">
+                        <span>🔬</span>
+                        <h6>Zenodo + DOI (Nível Ouro)</h6>
+                      </div>
+
+                      <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+                        <table className="w-full text-left text-xs sm:text-sm">
+                          <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
+                            <tr>
+                              <th className="py-3 px-4 w-1/3">Situação</th>
+                              <th className="py-3 px-4">O que acontece</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-slate-200 bg-white">
+                            <tr>
+                              <td className="py-3 px-4 font-semibold text-slate-900">
+                                Antes de publicar
+                              </td>
+                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                <span className="text-emerald-700 font-semibold">✅ Salva como rascunho</span>, edita e revisa livremente.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="py-3 px-4 font-semibold text-slate-900">
+                                Após publicado com DOI
+                              </td>
+                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                <span className="text-rose-700 font-semibold">🛑 Não se substitui o arquivo antigo</span>. Cria-se uma nova versão (ex: v1.1 corrigida a partir de v1.0).
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="py-3 px-4 font-semibold text-slate-900">
+                                O que muda
+                              </td>
+                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                O DOI principal (conceitual) continua o mesmo e aponta sempre para a versão mais recente; cada versão recebe seu próprio identificador.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="py-3 px-4 font-semibold text-slate-900">
+                                O que permanece
+                              </td>
+                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                A versão original continua acessível, com data e conteúdo preservados.
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 5. Seção: Registro e Atualização de Versões */}
+                  <div className="space-y-4 pt-4 border-t border-slate-200">
+                    <div className="space-y-1">
+                      <h5 className="font-bold text-base text-slate-900">
+                        Registro e Atualização de Versões
+                      </h5>
+                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        O trabalho deverá ser entregue devidamente registrado na plataforma correspondente ao nível escolhido. Entretanto, sabemos que ajustes podem ser necessários. Funciona assim:
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* Antes do registro público */}
+                      <div className="bg-sky-50/60 border border-sky-200 rounded-2xl p-4 sm:p-5 space-y-2">
+                        <div className="flex items-center gap-2 font-bold text-xs sm:text-sm text-sky-950">
+                          <CheckCircle2 className="w-4 h-4 text-sky-600" />
+                          <h6>Antes do registro público</h6>
+                        </div>
+                        <p className="text-xs text-slate-700 leading-relaxed">
+                          O estudante pode elaborar, corrigir e aprimorar o texto quantas vezes desejar. Envia para avaliação, recebe orientações, faz ajustes — somente após a aprovação final é realizado o registro público, garantindo que o material publicado represente a versão definitiva.
+                        </p>
+                      </div>
+
+                      {/* Após o registro — posso atualizar? */}
+                      <div className="bg-indigo-50/60 border border-indigo-200 rounded-2xl p-4 sm:p-5 space-y-2">
+                        <div className="flex items-center gap-2 font-bold text-xs sm:text-sm text-indigo-950">
+                          <Clock className="w-4 h-4 text-indigo-600" />
+                          <h6>Após o registro — posso atualizar?</h6>
+                        </div>
+                        <p className="text-xs text-slate-700 leading-relaxed">
+                          <strong>Sim! Nenhuma correção posterior é perdida</strong>, mas também não se apaga o que já foi registrado. O sistema funciona por versões:
+                        </p>
+                        <p className="text-xs text-slate-700 leading-relaxed pt-1">
+                          <strong>No OSF:</strong> O projeto pode receber versões atualizadas antes do registro público. Após registrado, qualquer alteração gera um histórico transparente — a versão original permanece visível e datada, preservando a autoria.
+                        </p>
+                        <p className="text-xs text-slate-700 leading-relaxed">
+                          <strong>No Zenodo:</strong> Publicou e precisa corrigir? Cria-se uma nova versão (ex: v1.1 corrigida). O identificador principal continua o mesmo, apontando sempre para a versão mais recente, e cada versão fica preservada com seu próprio registro.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Como proceder se precisar corrigir */}
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-2.5">
+                      <h6 className="font-bold text-xs sm:text-sm text-slate-900">
+                        Como proceder se precisar corrigir após já ter registrado:
+                      </h6>
+                      <ol className="text-xs text-slate-700 space-y-1 list-decimal list-inside leading-relaxed">
+                        <li>Acesse seu projeto/registro na plataforma</li>
+                        <li>Faça upload do arquivo corrigido como nova versão</li>
+                        <li>Atualize a justificativa descrevendo o que foi ajustado</li>
+                        <li>Envie o novo link para a ESDHUBEM</li>
+                      </ol>
+                      <p className="text-[11px] sm:text-xs text-slate-500 italic pt-1 border-t border-slate-200">
+                        Ambas as versões ficarão acessíveis — isso fortalece a transparência e a autoria, não a enfraquece.
+                      </p>
+                    </div>
+
+                    {/* Resumo prático em destaque verde */}
+                    <div className="bg-emerald-50/80 border-2 border-emerald-300 rounded-xl p-3.5 sm:p-4 text-xs sm:text-sm text-emerald-950 flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                      <p className="leading-relaxed">
+                        <strong>Resumo prático:</strong> Registre a versão aprovada. Se corrigir depois, crie uma nova versão na plataforma e nos envie o link atualizado. Nada é apagado — tudo é documentado.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 6. Resumo Prático de Perguntas & Respostas */}
+                  <div className="space-y-3.5 pt-4 border-t border-slate-200">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">🎯</span>
+                      <h5 className="font-bold text-base text-slate-900">
+                        Resumo Prático de Perguntas &amp; Respostas
+                      </h5>
+                    </div>
+
+                    <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+                      <table className="w-full text-left text-xs sm:text-sm">
+                        <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
+                          <tr>
+                            <th className="py-3 px-4 w-1/3">Pergunta</th>
+                            <th className="py-3 px-4">Resposta</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-200 bg-white">
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">
+                              Aceito sem registro?
+                            </td>
+                            <td className="py-3 px-4 font-bold text-rose-700">
+                              ❌ Não — só recebemos com registro concluído
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">
+                              Pode registrar e depois corrigir?
+                            </td>
+                            <td className="py-3 px-4 text-slate-800">
+                              <span className="text-emerald-700 font-bold">✅ Sim, criando nova versão</span> — original fica guardada
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">
+                              A versão antiga some?
+                            </td>
+                            <td className="py-3 px-4 text-slate-800">
+                              <span className="text-rose-700 font-bold">❌ Não</span> — permanece como histórico, isso é garantia de autoria
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">
+                              O DOI muda?
+                            </td>
+                            <td className="py-3 px-4 text-slate-700">
+                              O principal não muda; cada versão ganha um identificador específico
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">
+                              Melhor prática
+                            </td>
+                            <td className="py-3 px-4 font-semibold text-slate-900">
+                              Só registrar após aprovação final para evitar versões desnecessárias
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             )}
