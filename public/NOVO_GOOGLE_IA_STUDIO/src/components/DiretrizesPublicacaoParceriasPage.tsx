@@ -1242,7 +1242,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM e deve ser enviado para nós pelo e-mail: <a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">esdhubem@proton.me</a> juntamente com o mapa mental, o áudio de 3 minutos explicando o que você aprendeu com o curso e juntamente com a <strong>Declaração de Autorização de Publicação</strong> e a <strong>Declaração de Autoria e Responsabilidade</strong>.
                   </p>
                   <p>
-                    A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional e acadêmico.
+                    A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional.
                   </p>
                   <p className="font-semibold text-slate-900">
                     Após a aprovação, o artigo será publicado no Blog Oficial da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
