@@ -745,6 +745,22 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
             {openSections['2'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+                {/* Tutorial Vídeo - Declarações de Autorização e de Autoria */}
+                <div className="space-y-4 pb-6 border-b border-[#badbf7]">
+                  <LazyVideoPlayer
+                    id="odysee-iframe-declaracoes-autoria"
+                    src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-8:a?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                    title="Tutorial ESDHUBEM - Diretrizes de Publicação (Declarações de Autorização e de Autoria)"
+                    thumbnail="./images/thumb_video_diretrizes_8.webp"
+                    fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/fb4830417af8c53f1df8747696760ee2.webp"
+                    badge="Modelos Oficiais • Declarações"
+                  />
+                  <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                    <span>Vídeo: Orientações completas sobre o preenchimento das declarações de autorização e autoria</span>
+                  </p>
+                </div>
+
                 <div className="space-y-4">
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                     Declarações de autorização e de autoria
