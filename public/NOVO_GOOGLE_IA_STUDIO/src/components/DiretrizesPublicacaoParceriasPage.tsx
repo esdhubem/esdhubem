@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ArrowLeft,
   BookOpen,
@@ -21,6 +21,7 @@ import {
   MessageCircle,
   Landmark,
   ChevronRight,
+  ChevronDown,
   Info,
   Clock,
   AlertTriangle,
@@ -42,6 +43,56 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
   onNavigateToPortal,
   onNavigate
 }) => {
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({
+    '1': true,
+    '2': false,
+    '3': false,
+    '4': false,
+    '5': false,
+    '6': false,
+    '7': false
+  });
+
+  const toggleSection = (id: string) => {
+    setOpenSections(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const expandAll = () => {
+    setOpenSections({
+      '1': true,
+      '2': true,
+      '3': true,
+      '4': true,
+      '5': true,
+      '6': true,
+      '7': true
+    });
+  };
+
+  const collapseAll = () => {
+    setOpenSections({
+      '1': false,
+      '2': false,
+      '3': false,
+      '4': false,
+      '5': false,
+      '6': false,
+      '7': false
+    });
+  };
+
+  const openAndScrollTo = (id: string) => {
+    setOpenSections(prev => ({ ...prev, [id]: true }));
+    setTimeout(() => {
+      const el = document.getElementById(`secao-sanfona-${id}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 60);
+  };
   return (
     <div className="bg-[#F8FAFC] min-h-screen text-slate-800 flex flex-col">
       {/* Hero Header com Azul Profundo Navy #011049 */}
@@ -94,11 +145,169 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
       {/* Main Content */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10 flex-1 w-full -mt-6 relative z-20">
-        
-        {/* Bloco Principal: Diretrizes de Publicação - Da aprendizagem à autoria */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-10">
-          
-          {/* Tutorial Vídeo - Parte 1: Boas-Vindas */}
+
+        {/* Bloco Sanfona (Accordion) das Diretrizes e Certificações */}
+        <div className="space-y-5">
+          {/* Barra Superior da Sanfona: Título, Filtros Rápidos e Botões de Controle */}
+          <div className="bg-white rounded-3xl p-5 sm:p-7 border border-slate-200/90 shadow-md space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-700 text-xs font-bold uppercase tracking-wider mb-2 border border-amber-500/20">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                  <span>Navegação Interativa dos 7 Módulos</span>
+                </div>
+                <h2 className="text-xl sm:text-2xl font-black text-[#011049] tracking-tight">
+                  Percurso Completo em Formato Sanfona
+                </h2>
+                <p className="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
+                  Clique nas seções para abrir ou recolher os vídeos, modelos de documentos e orientações detalhadas de cada nível.
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2 self-start sm:self-center shrink-0">
+                <button
+                  type="button"
+                  onClick={expandAll}
+                  className="px-3.5 py-2 rounded-xl text-xs font-bold bg-[#011049] text-white hover:bg-[#061e47] transition-all cursor-pointer shadow-xs"
+                >
+                  Expandir Todas
+                </button>
+                <button
+                  type="button"
+                  onClick={collapseAll}
+                  className="px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all cursor-pointer border border-slate-200"
+                >
+                  Recolher Todas
+                </button>
+              </div>
+            </div>
+
+            {/* Quick Navigation Pills */}
+            <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-slate-100 text-xs font-semibold">
+              <span className="text-slate-400 text-[11px] uppercase tracking-wider mr-1">Ir para:</span>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('1')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['1']
+                    ? 'bg-[#011049] text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
+              >
+                1. Diretrizes
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('2')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['2']
+                    ? 'bg-amber-600 text-white shadow-xs'
+                    : 'bg-amber-50 text-amber-900 border border-amber-200/60 hover:bg-amber-100'
+                }`}
+              >
+                🥉 2. Bronze
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('3')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['3']
+                    ? 'bg-slate-700 text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
+              >
+                🥈 3. Prata
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('4')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['4']
+                    ? 'bg-amber-500 text-slate-950 font-black shadow-xs'
+                    : 'bg-amber-100/70 text-amber-950 border border-amber-300 hover:bg-amber-200'
+                }`}
+              >
+                🥇 4. Ouro
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('5')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['5']
+                    ? 'bg-purple-700 text-white shadow-xs'
+                    : 'bg-purple-50 text-purple-900 border border-purple-200 hover:bg-purple-100'
+                }`}
+              >
+                📝 5. Orientações de Artigo
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('6')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['6']
+                    ? 'bg-cyan-700 text-white shadow-xs'
+                    : 'bg-cyan-50 text-cyan-900 border border-cyan-200 hover:bg-cyan-100'
+                }`}
+              >
+                💎 6. Diamante
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('7')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['7']
+                    ? 'bg-[#011049] text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
+              >
+                ℹ️ 7. Informação Extra
+              </button>
+            </div>
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 1: 1 - Diretrizes de Publicação */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-1"
+            className="bg-white rounded-3xl border border-slate-200/90 shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('1')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-slate-50 via-white to-slate-50 hover:bg-slate-100/70 transition-colors cursor-pointer border-b border-slate-100"
+              aria-expanded={openSections['1']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
+                  1
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-600 block">
+                    Vídeo 1 • Da Aprendizagem à Autoria
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
+                    1 - Diretrizes de Publicação
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['1'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
+                    openSections['1'] ? 'rotate-180 bg-[#011049] text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['1'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+{/* Tutorial Vídeo - Parte 1: Boas-Vindas */}
           <div className="space-y-3 pb-8 border-b border-slate-200">
             <div className="flex items-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
@@ -193,8 +402,53 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </div>
           </div>
+              </div>
+            )}
+          </div>
 
-          {/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
+          {/* ======================================================== */}
+          {/* SEÇÃO 2: 2 - Certificação Bronze */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-2"
+            className="bg-white rounded-3xl border border-amber-200/90 shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('2')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-amber-50/60 via-white to-amber-50/30 hover:bg-amber-100/40 transition-colors cursor-pointer border-b border-amber-100"
+              aria-expanded={openSections['2']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-800">
+                  🥉 2
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 block">
+                    Vídeo 2 • Níveis, Plataforma OSF & Fixação Ativa
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
+                    2 - Certificação Bronze
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['2'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-900 transition-transform duration-300 ${
+                    openSections['2'] ? 'rotate-180 bg-amber-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['2'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+{/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
           <div className="space-y-3 pb-8 border-b border-slate-200">
             <div className="flex items-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
@@ -308,18 +562,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
           </div>
 
-          {/* OS QUATRO PERCURSOS */}
-          <div className="space-y-8">
-            <div className="text-center space-y-1">
-              <h3 className="text-xl sm:text-2xl font-black text-slate-900 uppercase tracking-tight">
-                Os Quatro Percursos
-              </h3>
-              <p className="text-slate-500 text-xs sm:text-sm">
-                Escolha o nível que melhor atende aos seus objetivos formativos e autorais
-              </p>
-            </div>
-
-            <div className="space-y-6">
+          
               {/* 🥉 BRONZE */}
               <div className="bg-gradient-to-r from-amber-50/50 via-white to-white border-2 border-amber-300/80 rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
                 <div className="flex items-center gap-3">
@@ -363,8 +606,53 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   * O trabalho chega às mãos da coordenação com comprovante de registro no OSF, resguardando integralmente a anterioridade e a autoria do aluno.
                 </p>
               </div>
+              </div>
+            )}
+          </div>
 
-              {/* Tutorial Vídeo - Parte 3: Artigo de Blog & SEO */}
+          {/* ======================================================== */}
+          {/* SEÇÃO 3: 3 - Certificação Prata */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-3"
+            className="bg-white rounded-3xl border border-slate-300/90 shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('3')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-slate-100/70 via-white to-slate-100/40 hover:bg-slate-200/50 transition-colors cursor-pointer border-b border-slate-200"
+              aria-expanded={openSections['3']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-slate-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-slate-800">
+                  🥈 3
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-600 block">
+                    Vídeo 3 • Artigo de Blog & SEO (1.200 a 2.500 palavras)
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
+                    3 - Certificação Prata
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['3'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
+                    openSections['3'] ? 'rotate-180 bg-slate-800 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['3'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+{/* Tutorial Vídeo - Parte 3: Artigo de Blog & SEO */}
               <div className="space-y-4 py-6 border-y border-slate-200">
                 <div className="flex items-center">
                   <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-cyan-400/30">
@@ -472,8 +760,53 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </p>
                 </div>
               </div>
+              </div>
+            )}
+          </div>
 
-              {/* Tutorial Vídeo - Parte 4: Manuscrito Científico, Zenodo & DOI */}
+          {/* ======================================================== */}
+          {/* SEÇÃO 4: 4 - Certificação Ouro */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-4"
+            className="bg-white rounded-3xl border border-amber-300 shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('4')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-amber-100/60 via-white to-amber-100/30 hover:bg-amber-100/80 transition-colors cursor-pointer border-b border-amber-200"
+              aria-expanded={openSections['4']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-600">
+                  🥇 4
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block">
+                    Vídeo 4 • Manuscrito Científico, Zenodo & DOI
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
+                    4 - Certificação Ouro
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['4'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-amber-200/80 flex items-center justify-center text-amber-950 transition-transform duration-300 ${
+                    openSections['4'] ? 'rotate-180 bg-amber-500 text-slate-950' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['4'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+{/* Tutorial Vídeo - Parte 4: Manuscrito Científico, Zenodo & DOI */}
               <div className="space-y-4 py-6 border-y border-slate-200">
                 <div className="flex items-center">
                   <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
@@ -584,8 +917,54 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     O Certificado Ouro será emitido após o cumprimento dos requisitos da modalidade e o pagamento da taxa correspondente.
                   </p>
                 </div>
+              </div>
+              </div>
+            )}
+          </div>
 
-                {/* Tutorial Vídeo - Parte 5: Orientações para Produção do Artigo */}
+          {/* ======================================================== */}
+          {/* SEÇÃO 5: 5 - Orientações para publicação de Artigo */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-5"
+            className="bg-white rounded-3xl border border-purple-200/90 shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('5')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-purple-50/60 via-white to-purple-50/30 hover:bg-purple-100/50 transition-colors cursor-pointer border-b border-purple-100"
+              aria-expanded={openSections['5']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-purple-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-purple-900">
+                  📝 5
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-purple-700 block">
+                    Vídeo 5 • Metodologia, Eixos Temáticos & Fontes Bibliográficas
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-purple-950 truncate sm:whitespace-normal">
+                    5 - Orientações para publicação de Artigo
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['5'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-800 transition-transform duration-300 ${
+                    openSections['5'] ? 'rotate-180 bg-purple-800 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['5'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+{/* Tutorial Vídeo - Parte 5: Orientações para Produção do Artigo */}
                 <div className="space-y-4 py-4 border-y border-amber-200/80">
                   <div className="flex items-center">
                     <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
@@ -873,8 +1252,52 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
                 </div>
               </div>
+            )}
+          </div>
 
-              {/* 💎 DIAMANTE */}
+          {/* ======================================================== */}
+          {/* SEÇÃO 6: 6 - Certificação Diamante: Orientação para publicação de livro */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-6"
+            className="bg-white rounded-3xl border border-cyan-300 shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('6')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-cyan-100/60 via-white to-cyan-100/30 hover:bg-cyan-100/80 transition-colors cursor-pointer border-b border-cyan-200"
+              aria-expanded={openSections['6']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  💎 6
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block">
+                    Vídeos 6 e 7 • Livro Autoral (Mín. 50 Páginas) & Registro EDA/FBN
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    6 - Certificação Diamante: Orientação para publicação de livro
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['6'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['6'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['6'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+{/* 💎 DIAMANTE */}
               <div className="bg-gradient-to-r from-cyan-50/50 via-white to-white border-2 border-cyan-400 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl">💎</span>
@@ -1237,10 +1660,53 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+            )}
           </div>
 
-          {/* Autoria e Responsabilidade & Inteligência Artificial */}
+          {/* ======================================================== */}
+          {/* SEÇÃO 7: 7 - Informação Extra */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-7"
+            className="bg-white rounded-3xl border border-blue-900/40 shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('7')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-slate-50 via-white to-blue-50/30 hover:bg-slate-100/70 transition-colors cursor-pointer border-b border-slate-200"
+              aria-expanded={openSections['7']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
+                  ℹ️ 7
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
+                    Autoria, Responsabilidade, Inteligência Artificial, Valores & Percursos
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
+                    7 - Informação Extra
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['7'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
+                    openSections['7'] ? 'rotate-180 bg-[#011049] text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['7'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+{/* Autoria e Responsabilidade & Inteligência Artificial */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-200">
             {/* Autoria e Responsabilidade */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
@@ -1377,7 +1843,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               O curso pode ser o começo. A produção é uma possibilidade. A autoria é uma construção.
             </p>
           </div>
+              </div>
+            )}
+          </div>
         </div>
+
 
         {/* Avisos Importantes e Termos de Publicação */}
         <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-8">
