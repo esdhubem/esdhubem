@@ -691,7 +691,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 block">
-                    Vídeo 2 • Níveis, Plataforma OSF & Fixação Ativa
+                    Vídeo 2 • Níveis, Plataforma OSF & Assimilação Ativa
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
                     3 - Certificação Bronze - Publicação de Verbete
@@ -757,14 +757,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <span className="text-3xl">🥉</span>
                   <div>
                     <h4 className="text-lg sm:text-xl font-bold text-amber-950">
-                      BRONZE — APRENDER E CONCEITUAR (FIXAÇÃO ATIVA)
+                      BRONZE — APRENDER E CONCEITUAR (ASSIMILAÇÃO ATIVA)
                     </h4>
                     <span className="text-xs font-semibold text-amber-800">Tríade da Assimilação Ativa & Verbete Enciclopédico na Wiki</span>
                   </div>
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Fixação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete</strong> com conceito claro, informativo, objetivo, histórico e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola.
+                  O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Assimilação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete</strong> com conceito claro, informativo, objetivo, histórico e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola.
                 </p>
 
                 <div className="bg-white border border-amber-200/80 rounded-xl p-4 space-y-2.5">

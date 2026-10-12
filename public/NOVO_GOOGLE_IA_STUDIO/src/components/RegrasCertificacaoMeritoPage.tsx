@@ -196,7 +196,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                 {/* Quadro Único Explicativo Completo */}
                 <div className="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    Focado na consolidação prática do aprendizado através da <strong>metodologia pedagógica de Fixação Ativa</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a tríade da assimilação ativa para publicação na <strong>Wiki da Escola</strong>:
+                    Focado na consolidação prática do aprendizado através da <strong>metodologia pedagógica de Assimilação Ativa</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a tríade da assimilação ativa para publicação na <strong>Wiki da Escola</strong>:
                   </p>
                   
                   <div className="space-y-2.5 pt-2 border-t border-amber-200/60">
