@@ -761,7 +761,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <h4 className="text-lg sm:text-xl font-bold text-amber-950">
                       BRONZE — APRENDER E CONCEITUAR (FIXAÇÃO ATIVA)
                     </h4>
-                    <span className="text-xs font-semibold text-amber-800">Tríade de Fixação & Verbete Enciclopédico na Wiki</span>
+                    <span className="text-xs font-semibold text-amber-800">Tríade da Assimilação Ativa & Verbete Enciclopédico na Wiki</span>
                   </div>
                 </div>
 
@@ -770,7 +770,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </p>
 
                 <div className="bg-white border border-amber-200/80 rounded-xl p-4 space-y-2.5">
-                  <span className="font-bold text-xs uppercase tracking-wider text-amber-900 block">Requisitos da Tríade de Fixação:</span>
+                  <span className="font-bold text-xs uppercase tracking-wider text-amber-900 block">Requisitos da Tríade da Assimilação Ativa:</span>
                   <ul className="text-xs sm:text-sm text-slate-700 space-y-2 list-none">
                     <li className="flex items-start gap-2">
                       <span className="text-amber-800 font-bold shrink-0">🧠</span>
@@ -820,7 +820,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                    Documento Integrado • Tríade de Fixação Ativa
+                    Documento Integrado • Tríade da Assimilação Ativa
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
                     4 - GUIA COMPLETO DO VERBETE — NÍVEL BRONZE
@@ -854,7 +854,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </h2>
 
                   <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    Consulte o documento oficial abaixo com o modelo passo a passo, critérios de formatação (500 a 800 palavras), estrutura da Tríade de Fixação Ativa (verbete, mapa mental e áudio de 1 minuto) e orientações para publicação na Wiki Oficial da ESDHUBEM.
+                    Consulte o documento oficial abaixo com o modelo passo a passo, critérios de formatação (500 a 800 palavras), estrutura da Tríade da Assimilação Ativa (verbete, mapa mental e áudio de 1 minuto) e orientações para publicação na Wiki Oficial da ESDHUBEM.
                   </p>
                 </div>
 
@@ -983,7 +983,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade de Fixação Ativa</strong> do curso, mas aqui o texto é maior e se trata de um artigo autoral aprofundado para publicação no <strong>Blog Oficial da ESDHUBEM</strong>, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
+                  O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade da Assimilação Ativa</strong> do curso, mas aqui o texto é maior e se trata de um artigo autoral aprofundado para publicação no <strong>Blog Oficial da ESDHUBEM</strong>, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
                 </p>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
@@ -1216,7 +1216,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
-                  O nível Ouro é destinado ao estudante que entrega a <strong>Tríade de Fixação Ativa</strong> do curso, mas o texto será um <strong>Manuscrito de Conclusão de Curso</strong> estruturado ou artigo de investigação científica com registro <strong>DOI</strong>.
+                  O nível Ouro é destinado ao estudante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso, mas o texto será um <strong>Manuscrito de Conclusão de Curso</strong> estruturado ou artigo de investigação científica com registro <strong>DOI</strong>.
                 </p>
 
                 <p className="text-slate-700 text-sm leading-relaxed">
@@ -1641,12 +1641,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <h4 className="text-lg sm:text-xl font-black text-cyan-950">
                       DIAMANTE — AUTORAR E CONSTRUIR
                     </h4>
-                    <span className="text-xs font-bold text-cyan-800">Tríade de Fixação + Livro Autoral (Mín. 50 páginas)</span>
+                    <span className="text-xs font-bold text-cyan-800">Tríade da Assimilação Ativa + Livro Autoral (Mín. 50 páginas)</span>
                   </div>
                 </div>
 
                 <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                  O nível <strong>Diamante</strong> é destinado ao participante que entrega a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo desenvolvido).
+                  O nível <strong>Diamante</strong> é destinado ao participante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso <strong>MAIS</strong> uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo desenvolvido).
                 </p>
 
                 {/* Tutorial Vídeo - Parte 6: Livro Autoral & Nível Diamante */}
@@ -2120,29 +2120,29 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
                   <tr className="hover:bg-amber-50/30">
                     <td className="py-3.5 px-4 font-bold text-amber-950 whitespace-nowrap">🥉 Bronze</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa</td>
                     <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Enciclopédico (500-800 palavras) + Mapa Mental + Áudio 1 min + registro no OSF</td>
                     <td className="py-3.5 px-4">Publicação na Wiki ESDHUBEM + Certificado com Selo Bronze</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Bronze</td>
                   </tr>
                   <tr className="hover:bg-slate-50">
                     <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa + Artigo de blog (1.200 a 2.500 palavras)</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Artigo de Blog (SEO) + Registro OSF</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Artigo de blog (1.200 a 2.500 palavras)</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Artigo de Blog (SEO) + Registro OSF</td>
                     <td className="py-3.5 px-4">Publicação no Blog Oficial ESDHUBEM + Certificado com Selo Prata</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
                   </tr>
                   <tr className="hover:bg-amber-50/30">
                     <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa + Manuscrito/TCC estruturado no Zenodo com DOI</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Manuscrito Científico + DOI Permanente</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Manuscrito/TCC estruturado no Zenodo com DOI</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Manuscrito Científico + DOI Permanente</td>
                     <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com DOI</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
                   </tr>
                   <tr className="hover:bg-cyan-50/30">
                     <td className="py-3.5 px-4 font-bold text-cyan-900 whitespace-nowrap">💎 Diamante</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade de Fixação Ativa + Livro autoral completo (mín. 50 págs) e registro na BN</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade de Fixação Ativa + Livro Autoral + Registro EDA na Biblioteca Nacional</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Livro autoral completo (mín. 50 págs) e registro na BN</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Livro Autoral + Registro EDA na Biblioteca Nacional</td>
                     <td className="py-3.5 px-4">Mural de Livros / Livraria Digital + Certificado Diamante de Honraria Máxima</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Diamante</td>
                   </tr>
