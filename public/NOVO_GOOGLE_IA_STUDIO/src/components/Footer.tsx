@@ -402,6 +402,15 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('diretrizes-avaliacao-manuscritos')}
+                  className="hover:text-amber-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2 font-medium"
+                >
+                  <span className="text-amber-400">•</span>
+                  <span>Avaliação de Manuscritos</span>
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('gerador-abnt')}
                   className="hover:text-sky-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2"
                 >

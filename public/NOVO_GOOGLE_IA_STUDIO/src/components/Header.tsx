@@ -19,7 +19,8 @@ import {
   BookOpen,
   ShieldCheck,
   HelpCircle,
-  ClipboardList
+  ClipboardList,
+  Feather
 } from 'lucide-react';
 import esdhubemLogo from '../assets/esdhubem-logo.png';
 
@@ -271,7 +272,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="relative group py-2">
                 <button
                   className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
-                    ['regras-certificacao-merito', 'informacoes-legais', 'diretrizes-protecao-autoria', 'diretrizes-pedagogicas', 'diretrizes-publicacao-parcerias', 'diretrizes-publicacao', 'modalidades-formacao'].includes(currentPage)
+                    ['regras-certificacao-merito', 'informacoes-legais', 'diretrizes-protecao-autoria', 'diretrizes-pedagogicas', 'diretrizes-avaliacao-manuscritos', 'diretrizes-publicacao-parcerias', 'diretrizes-publicacao', 'modalidades-formacao'].includes(currentPage)
                       ? 'text-white font-bold bg-blue-600/30 border-b-2 border-blue-400'
                       : 'text-white/80 hover:text-white hover:bg-white/5'
                   }`}
@@ -296,6 +297,21 @@ export const Header: React.FC<HeaderProps> = ({
                       <div>
                         <div className="font-semibold text-xs">Diretrizes de Certificação</div>
                         <div className="text-[10px] text-slate-400">Escala de Autoria e Selos de Mérito</div>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => onNavigate('diretrizes-avaliacao-manuscritos')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
+                        currentPage === 'diretrizes-avaliacao-manuscritos'
+                          ? 'bg-blue-600/20 text-blue-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-blue-900/30'
+                      }`}
+                    >
+                      <Feather className="w-4 h-4 text-amber-400 shrink-0" />
+                      <div>
+                        <div className="font-semibold text-xs">Avaliação de Manuscritos</div>
+                        <div className="text-[10px] text-slate-400">Critérios Formativos (Sem Notas)</div>
                       </div>
                     </button>
 
@@ -597,6 +613,10 @@ export const Header: React.FC<HeaderProps> = ({
             <button onClick={() => { onNavigate('regras-certificacao-merito'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-300 flex items-center gap-2">
               <Award className="w-4 h-4 text-blue-400" />
               <span>Diretrizes de Certificação</span>
+            </button>
+            <button onClick={() => { onNavigate('diretrizes-avaliacao-manuscritos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-amber-300 flex items-center gap-2">
+              <Feather className="w-4 h-4 text-amber-400" />
+              <span>Avaliação de Manuscritos</span>
             </button>
             <button onClick={() => { onNavigate('diretrizes-protecao-autoria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-sky-300 flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-sky-400" />

@@ -40,6 +40,7 @@ import { GeradorAbntPage } from './components/GeradorAbntPage';
 import { PerguntasFrequentesPage } from './components/PerguntasFrequentesPage';
 import { CartaAbertaPage } from './components/CartaAbertaPage';
 import { ModalidadesFormacaoPage } from './components/ModalidadesFormacaoPage';
+import { DiretrizesAvaliacaoManuscritosPage } from './components/DiretrizesAvaliacaoManuscritosPage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -60,7 +61,7 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'modalidades-formacao' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'diretrizes-protecao-autoria' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos' | 'gerador-abnt' | 'perguntas-frequentes' | 'carta-aberta'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'modalidades-formacao' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'diretrizes-protecao-autoria' | 'diretrizes-avaliacao-manuscritos' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos' | 'gerador-abnt' | 'perguntas-frequentes' | 'carta-aberta'
   >('home');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
@@ -144,6 +145,12 @@ export default function App() {
 
     if (pagina === 'diretrizes-pedagogicas') {
       setCurrentPage('diretrizes-pedagogicas');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'diretrizes-avaliacao-manuscritos' || pagina === 'avaliacao-manuscritos' || pagina === 'analise-manuscritos' || pagina === 'diretrizes-manuscritos') {
+      setCurrentPage('diretrizes-avaliacao-manuscritos');
       window.scrollTo({ top: 0, behavior: 'instant' });
       return;
     }
@@ -288,6 +295,12 @@ export default function App() {
 
     if (sectionId === 'diretrizes-pedagogicas' || sectionId === 'esclarecimento-pedagogico' || sectionId === 'manifesto') {
       setCurrentPage('diretrizes-pedagogicas');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'diretrizes-avaliacao-manuscritos' || sectionId === 'avaliacao-manuscritos' || sectionId === 'analise-manuscritos') {
+      setCurrentPage('diretrizes-avaliacao-manuscritos');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -1010,6 +1023,18 @@ export default function App() {
       {currentPage === 'carta-aberta' && (
         <main className="flex-1">
           <CartaAbertaPage
+            onBackToHome={() => {
+              setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigate={handleNavigate}
+          />
+        </main>
+      )}
+
+      {currentPage === 'diretrizes-avaliacao-manuscritos' && (
+        <main className="flex-1">
+          <DiretrizesAvaliacaoManuscritosPage
             onBackToHome={() => {
               setCurrentPage('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
