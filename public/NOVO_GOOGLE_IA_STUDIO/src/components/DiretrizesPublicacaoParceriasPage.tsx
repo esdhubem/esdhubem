@@ -151,6 +151,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     '1': true,
     '2': false,
+    'triade': false,
     '3': false,
     '4': false,
     '5': false,
@@ -172,6 +173,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     setOpenSections({
       '1': true,
       '2': true,
+      'triade': true,
       '3': true,
       '4': true,
       '5': true,
@@ -187,6 +189,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     setOpenSections({
       '1': false,
       '2': false,
+      'triade': false,
       '3': false,
       '4': false,
       '5': false,
@@ -320,6 +323,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 }`}
               >
                 📄 2. Declarações de Autoria
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('triade')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['triade']
+                    ? 'bg-amber-400 text-slate-950 font-black shadow-md'
+                    : 'bg-amber-950/60 text-amber-200 border border-amber-500/40 hover:bg-amber-900/80'
+                }`}
+              >
+                🔺 Tríade da Assimilação
               </button>
               <button
                 type="button"
@@ -673,38 +687,39 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 3: 3 - Certificação Bronze */}
+          {/* SEÇÃO DA TRÍADE: Tríade da Assimilação Ativa (Válida para Todos os Níveis) */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-3"
+            id="secao-sanfona-triade"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('3')}
+              onClick={() => toggleSection('triade')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['3']}
+              aria-expanded={openSections['triade']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-800">
-                  🥉 3
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-amber-600 to-amber-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-900">
+                  🔺
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 block">
-                    Vídeo 2 • Níveis, Plataforma OSF & Assimilação Ativa
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                    Metodologia Pedagógica ESDHUBEM • Válida para Todos os Níveis
                   </span>
-                  <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
-                    3 - Certificação Bronze - Publicação de Verbete
+                  <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
+                    Tríade da Assimilação Ativa — Estrutura em Triângulo Pedagógico
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
-                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
-                  {openSections['3'] ? 'Recolher' : 'Expandir'}
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['triade'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-900 transition-transform duration-300 ${
-                    openSections['3'] ? 'rotate-180 bg-amber-700 text-white' : ''
+                    openSections['triade'] ? 'rotate-180 bg-amber-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -712,60 +727,20 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['3'] && (
+            {openSections['triade'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
-{/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
-          <div className="space-y-3 pb-8 border-b border-slate-200">
-            <LazyVideoPlayer
-              id="odysee-iframe-parte-2"
-              src="https://odysee.com/$/embed/@esdhubem:a/diretriz-de-publicacao-2:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-              title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 2: Os Quatro Percursos e OSF)"
-              thumbnail="./images/thumb_video_diretrizes_2.webp"
-              fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/05ebc84738c2eb46184d9cbad0fec902.webp"
-              badge="Parte 2 • Níveis e OSF"
-            />
-
-            {/* Box informativo OSF com link */}
-            <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
-                    <Globe className="w-4 h-4 text-blue-600" />
-                    Publicação na Plataforma Oficial OSF (Open Science Framework)
-                  </span>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                  OSF é uma plataforma gratuita e aberta para apoiar sua pesquisa e possibilitar a colaboração e fazer gerenciamento de pesquisas.
-                </p>
-              </div>
-              <a
-                href="https://osf.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
-              >
-                <span>Acessar OSF (osf.io)</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            </div>
-          </div>
-
-          
-              {/* 🥉 BRONZE */}
-              <div className="bg-gradient-to-r from-amber-50/50 via-white to-white border-2 border-amber-300/80 rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl">🥉</span>
-                  <div>
-                    <h4 className="text-lg sm:text-xl font-bold text-amber-950">
-                      BRONZE — APRENDER E CONCEITUAR (ASSIMILAÇÃO ATIVA)
-                    </h4>
-                    <span className="text-xs font-semibold text-amber-800">Tríade da Assimilação Ativa & Verbete Enciclopédico na Wiki</span>
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold tracking-wide uppercase shadow-2xs">
+                    <Sparkles className="w-4 h-4 text-amber-600" />
+                    <span>Destaque Metodológico Oficial da ESDHUBEM</span>
                   </div>
+                  <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                    Metodologia da Tríade da Assimilação Ativa
+                  </h2>
+                  <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+                    A metodologia de <strong className="text-[#00227B]">Assimilação Ativa</strong> é a base pedagógica e epistemológica estruturante de autoria e validação do conhecimento na ESDHUBEM. Válida e transversal a <strong className="text-amber-900 font-bold">todos os níveis de certificação acadêmica</strong> (Bronze, Prata, Ouro e Diamante), ela consolida a aprendizagem por meio de três vértices dinâmicos e complementares: síntese visual desenhada à mão, elaboração textual conceitual e fixação oral através da técnica Feynman.
+                  </p>
                 </div>
-
-                <p className="text-slate-700 text-sm leading-relaxed">
-                  O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Assimilação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete</strong> com conceito claro, informativo, objetivo, histórico e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola.
-                </p>
 
                 {/* Diagrama em Triângulo - Requisitos da Tríade da Assimilação Ativa */}
                 <div className="bg-gradient-to-b from-amber-50/70 via-white to-amber-50/40 border-2 border-amber-300 rounded-2xl p-4 sm:p-6 shadow-sm space-y-6">
@@ -789,13 +764,13 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <div className="w-full max-w-md bg-white border border-amber-200 rounded-2xl p-3 sm:p-4 shadow-xs">
                       <svg viewBox="0 0 360 210" className="w-full h-auto" fill="none">
                         <defs>
-                          <linearGradient id="triGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <linearGradient id="triGradientSanfona" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stopColor="#fef3c7" stopOpacity="0.8" />
                             <stop offset="100%" stopColor="#fed7aa" stopOpacity="0.4" />
                           </linearGradient>
                         </defs>
                         {/* Triângulo Preenchido e Borda Tracejada */}
-                        <polygon points="180,24 45,178 315,178" fill="url(#triGradient)" stroke="#d97706" strokeWidth="2.5" strokeDasharray="5 5" />
+                        <polygon points="180,24 45,178 315,178" fill="url(#triGradientSanfona)" stroke="#d97706" strokeWidth="2.5" strokeDasharray="5 5" />
                         
                         {/* Linhas Internas até o Centro */}
                         <line x1="180" y1="24" x2="180" y2="128" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="3 3" />
@@ -889,6 +864,145 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       <span>Registro de Autoria: OSF (Open Science Framework)</span>
                     </span>
                     <span className="px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
+                      <span>📍</span>
+                      <span>Publicação: Wiki Oficial ESDHUBEM (Enciclopédia Temática)</span>
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-600 font-medium italic">
+                  * O trabalho chega às mãos da coordenação com comprovante de registro no OSF, resguardando integralmente a anterioridade e a autoria do aluno.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 3: 3 - Certificação Bronze */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-3"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('3')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['3']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-800">
+                  🥉 3
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 block">
+                    Vídeo 2 • Níveis, Plataforma OSF & Assimilação Ativa
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
+                    3 - Certificação Bronze - Publicação de Verbete
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['3'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-900 transition-transform duration-300 ${
+                    openSections['3'] ? 'rotate-180 bg-amber-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['3'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+{/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
+          <div className="space-y-3 pb-8 border-b border-slate-200">
+            <LazyVideoPlayer
+              id="odysee-iframe-parte-2"
+              src="https://odysee.com/$/embed/@esdhubem:a/diretriz-de-publicacao-2:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+              title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 2: Os Quatro Percursos e OSF)"
+              thumbnail="./images/thumb_video_diretrizes_2.webp"
+              fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/05ebc84738c2eb46184d9cbad0fec902.webp"
+              badge="Parte 2 • Níveis e OSF"
+            />
+
+            {/* Box informativo OSF com link */}
+            <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
+                    <Globe className="w-4 h-4 text-blue-600" />
+                    Publicação na Plataforma Oficial OSF (Open Science Framework)
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                  OSF é uma plataforma gratuita e aberta para apoiar sua pesquisa e possibilitar a colaboração e fazer gerenciamento de pesquisas.
+                </p>
+              </div>
+              <a
+                href="https://osf.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
+              >
+                <span>Acessar OSF (osf.io)</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          
+              {/* 🥉 BRONZE */}
+              <div className="bg-gradient-to-r from-amber-50/50 via-white to-white border-2 border-amber-300/80 rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">🥉</span>
+                  <div>
+                    <h4 className="text-lg sm:text-xl font-bold text-amber-950">
+                      BRONZE — APRENDER E CONCEITUAR (ASSIMILAÇÃO ATIVA)
+                    </h4>
+                    <span className="text-xs font-semibold text-amber-800">Tríade de Assimilação &amp; Verbete Enciclopédico na Wiki</span>
+                  </div>
+                </div>
+
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Assimilação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete</strong> com conceito claro, informativo, objetivo, histórico e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola.
+                </p>
+
+                <div className="bg-amber-50/60 border border-amber-200 rounded-xl p-4 sm:p-5 space-y-3">
+                  <span className="font-extrabold text-xs uppercase tracking-wider text-amber-950 block">
+                    Requisitos da Tríade de Assimilação:
+                  </span>
+                  <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-base leading-none">🧠</span>
+                      <div>
+                        <strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (Feito à Mão) estruturando os conceitos centrais e conexões pedagógicas da aula.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-base leading-none">✍️</span>
+                      <div>
+                        <strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão (Escrito à Mão), explicando o significado, o contexto histórico e a aplicação do tema.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-base leading-none">🎙️</span>
+                      <div>
+                        <strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando o conceito oralmente com clareza (Técnica Feynman de retenção).
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div className="pt-2 border-t border-amber-200/60 flex flex-wrap gap-2 text-xs">
+                    <span className="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
+                      <span>🛡️</span>
+                      <span>Registro de Autoria: OSF (Open Science Framework)</span>
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
                       <span>📍</span>
                       <span>Publicação: Wiki Oficial ESDHUBEM (Enciclopédia Temática)</span>
                     </span>
