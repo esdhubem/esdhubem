@@ -935,100 +935,103 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
             {openSections['3'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
-{/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
-          <div className="space-y-3 pb-8 border-b border-slate-200">
-            <LazyVideoPlayer
-              id="odysee-iframe-parte-2"
-              src="https://odysee.com/$/embed/@esdhubem:a/diretriz-de-publicacao-2:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-              title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 2: Os Quatro Percursos e OSF)"
-              thumbnail="./images/thumb_video_diretrizes_2.webp"
-              fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/05ebc84738c2eb46184d9cbad0fec902.webp"
-              badge="Parte 2 • Níveis e OSF"
-            />
-
-            {/* Box informativo OSF com link */}
-            <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
-                    <Globe className="w-4 h-4 text-blue-600" />
-                    Publicação na Plataforma Oficial OSF (Open Science Framework)
-                  </span>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                  OSF é uma plataforma gratuita e aberta para apoiar sua pesquisa e possibilitar a colaboração e fazer gerenciamento de pesquisas.
-                </p>
-              </div>
-              <a
-                href="https://osf.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
-              >
-                <span>Acessar OSF (osf.io)</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            </div>
-          </div>
-
-          
-              {/* 🥉 BRONZE */}
-              <div className="bg-gradient-to-r from-amber-50/50 via-white to-white border-2 border-amber-300/80 rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl">🥉</span>
-                  <div>
-                    <h4 className="text-lg sm:text-xl font-bold text-amber-950">
-                      BRONZE — APRENDER E CONCEITUAR (ASSIMILAÇÃO ATIVA)
-                    </h4>
-                    <span className="text-xs font-semibold text-amber-800">Tríade de Assimilação &amp; Verbete Enciclopédico na Wiki</span>
+                {/* 🥉 BRONZE */}
+                <div className="bg-gradient-to-r from-amber-50/50 via-white to-white border-2 border-amber-300/80 rounded-2xl p-6 sm:p-7 space-y-6 shadow-sm">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl">🥉</span>
+                    <div>
+                      <h4 className="text-lg sm:text-xl font-bold text-amber-950">
+                        BRONZE — APRENDER E CONCEITUAR (ASSIMILAÇÃO ATIVA)
+                      </h4>
+                      <span className="text-xs font-semibold text-amber-800">Tríade de Assimilação &amp; Verbete Enciclopédico na Wiki</span>
+                    </div>
                   </div>
-                </div>
 
-                <p className="text-slate-700 text-sm leading-relaxed">
-                  O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Assimilação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete</strong> com conceito claro, informativo, objetivo, histórico e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola.
-                </p>
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Assimilação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete</strong> com conceito claro, informativo, objetivo, histórico e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola.
+                  </p>
 
-                <div className="bg-amber-50/60 border border-amber-200 rounded-xl p-4 sm:p-5 space-y-3">
-                  <span className="font-extrabold text-xs uppercase tracking-wider text-amber-950 block">
-                    Requisitos da Tríade de Assimilação:
-                  </span>
-                  <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
-                    <li className="flex items-start gap-2">
-                      <span className="text-base leading-none">🧠</span>
-                      <div>
-                        <strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (Feito à Mão) estruturando os conceitos centrais e conexões pedagógicas da aula.
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-base leading-none">✍️</span>
-                      <div>
-                        <strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão (Escrito à Mão), explicando o significado, o contexto histórico e a aplicação do tema.
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-base leading-none">🎙️</span>
-                      <div>
-                        <strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando o conceito oralmente com clareza (Técnica Feynman de retenção).
-                      </div>
-                    </li>
-                  </ul>
+                  {/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
+                  <div className="space-y-4 py-4 border-y border-amber-200/80">
+                    <LazyVideoPlayer
+                      id="odysee-iframe-parte-2"
+                      src="https://odysee.com/$/embed/@esdhubem:a/diretriz-de-publicacao-2:f?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 2: Os Quatro Percursos e OSF)"
+                      thumbnail="./images/thumb_video_diretrizes_2.webp"
+                      fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/05ebc84738c2eb46184d9cbad0fec902.webp"
+                      badge="Parte 2 • Níveis e OSF"
+                    />
+                    <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                      <span>Vídeo 2: Apresentação dos 4 percursos formativos, níveis de mérito e registro de autoria no OSF</span>
+                    </p>
 
-                  <div className="pt-2 border-t border-amber-200/60 flex flex-wrap gap-2 text-xs">
-                    <span className="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
-                      <span>🛡️</span>
-                      <span>Registro de Autoria: OSF (Open Science Framework)</span>
-                    </span>
-                    <span className="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
-                      <span>📍</span>
-                      <span>Publicação: Wiki Oficial ESDHUBEM (Enciclopédia Temática)</span>
-                    </span>
+                    {/* Box informativo OSF com link */}
+                    <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-2">
+                          <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
+                            <Globe className="w-4 h-4 text-blue-600" />
+                            Publicação na Plataforma Oficial OSF (Open Science Framework)
+                          </span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          OSF é uma plataforma gratuita e aberta para apoiar sua pesquisa e possibilitar a colaboração e fazer gerenciamento de pesquisas.
+                        </p>
+                      </div>
+                      <a
+                        href="https://osf.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
+                      >
+                        <span>Acessar OSF (osf.io)</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                <p className="text-xs sm:text-sm text-slate-600 font-medium italic">
-                  * O trabalho chega às mãos da coordenação com comprovante de registro no OSF, resguardando integralmente a anterioridade e a autoria do aluno.
-                </p>
-              </div>
+                  <div className="bg-amber-50/60 border border-amber-200 rounded-xl p-4 sm:p-5 space-y-3">
+                    <span className="font-extrabold text-xs uppercase tracking-wider text-amber-950 block">
+                      Requisitos da Tríade de Assimilação:
+                    </span>
+                    <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-base leading-none">🧠</span>
+                        <div>
+                          <strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (Feito à Mão) estruturando os conceitos centrais e conexões pedagógicas da aula.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-base leading-none">✍️</span>
+                        <div>
+                          <strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão (Escrito à Mão), explicando o significado, o contexto histórico e a aplicação do tema.
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-base leading-none">🎙️</span>
+                        <div>
+                          <strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando o conceito oralmente com clareza (Técnica Feynman de retenção).
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div className="pt-2 border-t border-amber-200/60 flex flex-wrap gap-2 text-xs">
+                      <span className="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
+                        <span>🛡️</span>
+                        <span>Registro de Autoria: OSF (Open Science Framework)</span>
+                      </span>
+                      <span className="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
+                        <span>📍</span>
+                        <span>Publicação: Wiki Oficial ESDHUBEM (Enciclopédia Temática)</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium italic">
+                    * O trabalho chega às mãos da coordenação com comprovante de registro no OSF, resguardando integralmente a anterioridade e a autoria do aluno.
+                  </p>
+                </div>
               </div>
             )}
           </div>
@@ -1160,109 +1163,109 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
             {openSections['5'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
-{/* Tutorial Vídeo - Parte 3: Artigo de Blog & SEO */}
-              <div className="space-y-4 py-6 border-y border-slate-200">
-                <LazyVideoPlayer
-                  id="odysee-iframe-parte-3"
-                  src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-3:4?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                  title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 3: Artigo de Blog & SEO)"
-                  thumbnail="./images/thumb_video_diretrizes_3.webp"
-                  fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/c9d9e1cc9fd5cffa400edb14d2f1ed0b.webp"
-                  badge="Parte 3 • Artigo de Blog & SEO"
-                />
-                <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-                  <span>Vídeo 3: Orientações práticas para elaboração do artigo de blog, técnicas de SEO e estruturação</span>
-                </p>
+                {/* 🥈 PRATA */}
+                <div className="bg-gradient-to-r from-slate-50 via-white to-white border-2 border-slate-300/80 rounded-2xl p-6 sm:p-7 space-y-6 shadow-sm">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl">🥈</span>
+                    <div>
+                      <h4 className="text-lg sm:text-xl font-bold text-slate-900">
+                        PRATA — EXPRESSAR E COMUNICAR
+                      </h4>
+                      <span className="text-xs font-semibold text-slate-600">Verbete + Artigo para o Blog da ESDHUBEM (1.200 a 2.500 palavras)</span>
+                    </div>
+                  </div>
 
-                {/* Box informativo OSF com link */}
-                <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
-                        <Globe className="w-4 h-4 text-blue-600" />
-                        Publicação na Plataforma Oficial OSF (Open Science Framework)
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade da Assimilação Ativa</strong> do curso e ainda publicar um texto maior, um artigo autoral aprofundado para publicação no <strong>Blog Oficial da ESDHUBEM</strong>, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
+                  </p>
+
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    Após a escolha dessa modalidade, o estudante receberá orientações detalhadas para a elaboração do artigo e seu registro de autoria no <strong>OSF (Open Science Framework)</strong>.
+                  </p>
+
+                  {/* Tutorial Vídeo - Parte 3: Artigo de Blog & SEO */}
+                  <div className="space-y-4 py-4 border-y border-slate-200">
+                    <LazyVideoPlayer
+                      id="odysee-iframe-parte-3"
+                      src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-3:4?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 3: Artigo de Blog & SEO)"
+                      thumbnail="./images/thumb_video_diretrizes_3.webp"
+                      fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/c9d9e1cc9fd5cffa400edb14d2f1ed0b.webp"
+                      badge="Parte 3 • Artigo de Blog & SEO"
+                    />
+                    <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                      <span>Vídeo 3: Orientações práticas para elaboração do artigo de blog, técnicas de SEO e estruturação</span>
+                    </p>
+
+                    {/* Box informativo OSF com link */}
+                    <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-2">
+                          <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
+                            <Globe className="w-4 h-4 text-blue-600" />
+                            Publicação na Plataforma Oficial OSF (Open Science Framework)
+                          </span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          OSF é uma plataforma gratuita e aberta para apoiar sua pesquisa e possibilitar a colaboração e fazer gerenciamento de pesquisas.
+                        </p>
+                      </div>
+                      <a
+                        href="https://osf.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
+                      >
+                        <span>Acessar OSF (osf.io)</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-5 space-y-3 shadow-xs">
+                    <span className="font-black text-xs uppercase tracking-wider text-[#00227B] block flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+                      <span>As orientações poderão incluir:</span>
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-800">
+                      <div>• Estrutura do artigo (1.200 a 2.500 palavras)</div>
+                      <div>• Definição do tema e do público</div>
+                      <div>• Título, subtítulos H2/H3 e escaneabilidade</div>
+                      <div>• Organização das informações e casos práticos</div>
+                      <div>• Linguagem clara e acessível</div>
+                      <div>• Técnicas de redação para a internet</div>
+                      <div>• Princípios de SEO para busca orgânica</div>
+                      <div>• Registro de autoria prévio no OSF</div>
+                      <div>• Direitos autorais e Lei 9.610/98</div>
+                      <div>• Utilização responsável de fontes e bibliografia</div>
+                      <div>• Revisão e preparação para publicação</div>
+                    </div>
+
+                    <div className="pt-2.5 border-t border-blue-200 flex flex-wrap gap-2 text-xs">
+                      <span className="px-3 py-1.5 rounded-lg bg-white text-[#00227B] font-bold border border-blue-200 shadow-2xs flex items-center gap-1.5">
+                        <span>🛡️</span>
+                        <span>Registro de Autoria: OSF (Open Science Framework)</span>
+                      </span>
+                      <span className="px-3 py-1.5 rounded-lg bg-white text-[#00227B] font-bold border border-blue-200 shadow-2xs flex items-center gap-1.5">
+                        <span>📍</span>
+                        <span>Publicação: Blog Oficial ESDHUBEM</span>
                       </span>
                     </div>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      OSF é uma plataforma gratuita e aberta para apoiar sua pesquisa e possibilitar a colaboração e fazer gerenciamento de pesquisas.
+                  </div>
+
+                  <div className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/80 p-5 rounded-2xl border-2 border-amber-300/80 shadow-xs">
+                    <p>
+                      O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM e deve ser enviado para nós pelo e-mail: <a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">esdhubem@proton.me</a> juntamente com o mapa mental, o áudio de 3 minutos explicando o que você aprendeu com o curso e juntamente com a <strong>Declaração de Autorização de Publicação</strong> e a <strong>Declaração de Autoria e Responsabilidade</strong>.
+                    </p>
+                    <p>
+                      A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional.
+                    </p>
+                    <p className="font-semibold text-slate-900">
+                      Após a aprovação, o artigo será publicado no Blog Oficial da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
                     </p>
                   </div>
-                  <a
-                    href="https://osf.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
-                  >
-                    <span>Acessar OSF (osf.io)</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
                 </div>
-              </div>
-
-              {/* 🥈 PRATA */}
-              <div className="bg-gradient-to-r from-slate-50 via-white to-white border-2 border-slate-300/80 rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl">🥈</span>
-                  <div>
-                    <h4 className="text-lg sm:text-xl font-bold text-slate-900">
-                      PRATA — EXPRESSAR E COMUNICAR
-                    </h4>
-                    <span className="text-xs font-semibold text-slate-600">Verbete + Artigo para o Blog da ESDHUBEM (1.200 a 2.500 palavras)</span>
-                  </div>
-                </div>
-
-                <p className="text-slate-700 text-sm leading-relaxed">
-                  O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade da Assimilação Ativa</strong> do curso e ainda publicar um texto maior, um artigo autoral aprofundado para publicação no <strong>Blog Oficial da ESDHUBEM</strong>, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
-                </p>
-
-                <p className="text-slate-700 text-sm leading-relaxed">
-                  Após a escolha dessa modalidade, o estudante receberá orientações detalhadas para a elaboração do artigo e seu registro de autoria no <strong>OSF (Open Science Framework)</strong>.
-                </p>
-
-                <div className="bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-5 space-y-3 shadow-xs">
-                  <span className="font-black text-xs uppercase tracking-wider text-[#00227B] block flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-                    <span>As orientações poderão incluir:</span>
-                  </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-800">
-                    <div>• Estrutura do artigo (1.200 a 2.500 palavras)</div>
-                    <div>• Definição do tema e do público</div>
-                    <div>• Título, subtítulos H2/H3 e escaneabilidade</div>
-                    <div>• Organização das informações e casos práticos</div>
-                    <div>• Linguagem clara e acessível</div>
-                    <div>• Técnicas de redação para a internet</div>
-                    <div>• Princípios de SEO para busca orgânica</div>
-                    <div>• Registro de autoria prévio no OSF</div>
-                    <div>• Direitos autorais e Lei 9.610/98</div>
-                    <div>• Utilização responsável de fontes e bibliografia</div>
-                    <div>• Revisão e preparação para publicação</div>
-                  </div>
-
-                  <div className="pt-2.5 border-t border-blue-200 flex flex-wrap gap-2 text-xs">
-                    <span className="px-3 py-1.5 rounded-lg bg-white text-[#00227B] font-bold border border-blue-200 shadow-2xs flex items-center gap-1.5">
-                      <span>🛡️</span>
-                      <span>Registro de Autoria: OSF (Open Science Framework)</span>
-                    </span>
-                    <span className="px-3 py-1.5 rounded-lg bg-white text-[#00227B] font-bold border border-blue-200 shadow-2xs flex items-center gap-1.5">
-                      <span>📍</span>
-                      <span>Publicação: Blog Oficial ESDHUBEM</span>
-                    </span>
-                  </div>
-                </div>
-
-                <div className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/80 p-5 rounded-2xl border-2 border-amber-300/80 shadow-xs">
-                  <p>
-                    O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM e deve ser enviado para nós pelo e-mail: <a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">esdhubem@proton.me</a> juntamente com o mapa mental, o áudio de 3 minutos explicando o que você aprendeu com o curso e juntamente com a <strong>Declaração de Autorização de Publicação</strong> e a <strong>Declaração de Autoria e Responsabilidade</strong>.
-                  </p>
-                  <p>
-                    A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional.
-                  </p>
-                  <p className="font-semibold text-slate-900">
-                    Após a aprovação, o artigo será publicado no Blog Oficial da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
-                  </p>
-                </div>
-              </div>
               </div>
             )}
           </div>
@@ -1392,106 +1395,106 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
             {openSections['7'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
-{/* Tutorial Vídeo - Parte 4: Manuscrito Científico, Zenodo & DOI */}
-              <div className="space-y-4 py-6 border-y border-slate-200">
-                <LazyVideoPlayer
-                  id="odysee-iframe-parte-4"
-                  src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-4:1?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                  title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 4: Manuscrito Científico, Zenodo & DOI)"
-                  thumbnail="./images/thumb_video_diretrizes_4.webp"
-                  fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/533c4cb48d38f26d2b7e62a08cf35318.webp"
-                  badge="Parte 4 • Manuscrito & Zenodo/DOI"
-                />
-                <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-                  <span>Vídeo 4: Orientações práticas para elaboração do manuscrito científico, depósito no Zenodo e atribuição de DOI</span>
-                </p>
-
-                {/* Box informativo Zenodo com link */}
-                <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
-                        <Globe className="w-4 h-4 text-blue-600" />
-                        Publicação na Plataforma Oficial Zenodo (Depósito &amp; DOI)
-                      </span>
+                {/* 🥇 OURO */}
+                <div className="bg-gradient-to-r from-amber-50/60 via-white to-white border-2 border-[#FFC72C] rounded-2xl p-6 sm:p-7 space-y-6 shadow-sm">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl">🥇</span>
+                    <div>
+                      <h4 className="text-lg sm:text-xl font-bold text-amber-950">
+                        OURO — INVESTIGAR E APROFUNDAR
+                      </h4>
+                      <span className="text-xs font-semibold text-amber-800">Manuscrito de Conclusão de Curso + Zenodo + DOI</span>
                     </div>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      O Zenodo é uma plataforma aberta e gratuita desenvolvida pelo CERN para apoiar pesquisas científicas, possibilitar o depósito de manuscritos e atribuição de registro DOI internacional.
+                  </div>
+
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    O nível Ouro é destinado ao estudante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso e o <strong>artigo de investigação</strong> com registro <strong>DOI</strong>.
+                  </p>
+
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    O trabalho deverá apresentar uma estrutura compatível com uma produção de investigação e receberá orientações específicas para sua elaboração.
+                  </p>
+
+                  {/* Tutorial Vídeo - Parte 4: Manuscrito Científico, Zenodo & DOI */}
+                  <div className="space-y-4 py-4 border-y border-amber-200/80">
+                    <LazyVideoPlayer
+                      id="odysee-iframe-parte-4"
+                      src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-4:1?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 4: Manuscrito Científico, Zenodo & DOI)"
+                      thumbnail="./images/thumb_video_diretrizes_4.webp"
+                      fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/533c4cb48d38f26d2b7e62a08cf35318.webp"
+                      badge="Parte 4 • Manuscrito & Zenodo/DOI"
+                    />
+                    <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                      <span>Vídeo 4: Orientações práticas para elaboração do manuscrito científico, depósito no Zenodo e atribuição de DOI</span>
+                    </p>
+
+                    {/* Box informativo Zenodo com link */}
+                    <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-2">
+                          <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
+                            <Globe className="w-4 h-4 text-blue-600" />
+                            Publicação na Plataforma Oficial Zenodo (Depósito &amp; DOI)
+                          </span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          O Zenodo é uma plataforma aberta e gratuita desenvolvida pelo CERN para apoiar pesquisas científicas, possibilitar o depósito de manuscritos e atribuição de registro DOI internacional.
+                        </p>
+                      </div>
+                      <a
+                        href="https://zenodo.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
+                      >
+                        <span>Acessar Zenodo (zenodo.org)</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-amber-200 rounded-xl p-4 space-y-2">
+                    <span className="font-bold text-xs uppercase tracking-wider text-amber-950 block">
+                      Após a escolha da modalidade e o pagamento da taxa correspondente, o estudante receberá um vídeo com orientações sobre a construção do manuscrito, incluindo, conforme a natureza do trabalho:
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-700">
+                      <div>• Definição do tema</div>
+                      <div>• Questão ou problema de estudo</div>
+                      <div>• Objetivos</div>
+                      <div>• Introdução</div>
+                      <div>• Fundamentação</div>
+                      <div>• Metodologia, quando aplicável</div>
+                      <div>• Desenvolvimento</div>
+                      <div>• Análise e discussão</div>
+                      <div>• Conclusão</div>
+                      <div>• Citações e referências</div>
+                      <div>• Organização das fontes</div>
+                      <div>• Apresentação final do trabalho</div>
+                    </div>
+
+                    <div className="pt-2 border-t border-amber-200 flex flex-wrap gap-2 text-xs">
+                      <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">🛡️ Registro de Autoria: OSF (Open Science Framework)</span>
+                      <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Repositório Oficial ESDHUBEM</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/70 p-4 rounded-xl border border-amber-200">
+                    <p>
+                      Antes do aluno enviar seu portfolio para a escola fazer avaliação, ele deverá realizar o depósito no site do <strong>Zenodo</strong>, conforme as orientações fornecidas.
+                    </p>
+                    <p>
+                      Quando o depósito for concluído e o Zenodo atribuir o identificador correspondente, o trabalho terá um <strong>DOI — Digital Object Identifier</strong>, que permite sua identificação e localização persistente na internet e deve ser enviado para o e-mail da escola (<a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">esdhubem@proton.me</a>) para aprovação do manuscrito, juntamente com o <strong>mapa mental</strong>, <strong>áudio de 5 minutos</strong> explicando o que aprendeu, juntamente com a <strong>Declaração de Autoria</strong> e <strong>Declaração de Autorização de Publicação</strong>.
+                    </p>
+                    <p className="text-slate-600 italic">
+                      O DOI identifica a publicação. Ele não significa, por si só, revisão por pares, certificação científica ou validação acadêmica do conteúdo.
+                    </p>
+                    <p className="font-bold text-amber-950 pt-1">
+                      O Certificado Ouro será emitido após o cumprimento dos requisitos da modalidade e o pagamento da taxa correspondente.
                     </p>
                   </div>
-                  <a
-                    href="https://zenodo.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
-                  >
-                    <span>Acessar Zenodo (zenodo.org)</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
                 </div>
-              </div>
-
-              {/* 🥇 OURO */}
-              <div className="bg-gradient-to-r from-amber-50/60 via-white to-white border-2 border-[#FFC72C] rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl">🥇</span>
-                  <div>
-                    <h4 className="text-lg sm:text-xl font-bold text-amber-950">
-                      OURO — INVESTIGAR E APROFUNDAR
-                    </h4>
-                    <span className="text-xs font-semibold text-amber-800">Manuscrito de Conclusão de Curso + Zenodo + DOI</span>
-                  </div>
-                </div>
-
-                <p className="text-slate-700 text-sm leading-relaxed">
-                  O nível Ouro é destinado ao estudante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso e o <strong>artigo de investigação</strong> com registro <strong>DOI</strong>.
-                </p>
-
-                <p className="text-slate-700 text-sm leading-relaxed">
-                  O trabalho deverá apresentar uma estrutura compatível com uma produção de investigação e receberá orientações específicas para sua elaboração.
-                </p>
-
-                <div className="bg-white border border-amber-200 rounded-xl p-4 space-y-2">
-                  <span className="font-bold text-xs uppercase tracking-wider text-amber-950 block">
-                    Após a escolha da modalidade e o pagamento da taxa correspondente, o estudante receberá um vídeo com orientações sobre a construção do manuscrito, incluindo, conforme a natureza do trabalho:
-                  </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-700">
-                    <div>• Definição do tema</div>
-                    <div>• Questão ou problema de estudo</div>
-                    <div>• Objetivos</div>
-                    <div>• Introdução</div>
-                    <div>• Fundamentação</div>
-                    <div>• Metodologia, quando aplicável</div>
-                    <div>• Desenvolvimento</div>
-                    <div>• Análise e discussão</div>
-                    <div>• Conclusão</div>
-                    <div>• Citações e referências</div>
-                    <div>• Organização das fontes</div>
-                    <div>• Apresentação final do trabalho</div>
-                  </div>
-
-                  <div className="pt-2 border-t border-amber-200 flex flex-wrap gap-2 text-xs">
-                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">🛡️ Registro de Autoria: OSF (Open Science Framework)</span>
-                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Repositório Oficial ESDHUBEM</span>
-                  </div>
-                </div>
-
-                <div className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/70 p-4 rounded-xl border border-amber-200">
-                  <p>
-                    Antes do aluno enviar seu portfolio para a escola fazer avaliação, ele deverá realizar o depósito no site do <strong>Zenodo</strong>, conforme as orientações fornecidas.
-                  </p>
-                  <p>
-                    Quando o depósito for concluído e o Zenodo atribuir o identificador correspondente, o trabalho terá um <strong>DOI — Digital Object Identifier</strong>, que permite sua identificação e localização persistente na internet e deve ser enviado para o e-mail da escola (<a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">esdhubem@proton.me</a>) para aprovação do manuscrito, juntamente com o <strong>mapa mental</strong>, <strong>áudio de 5 minutos</strong> explicando o que aprendeu, juntamente com a <strong>Declaração de Autoria</strong> e <strong>Declaração de Autorização de Publicação</strong>.
-                  </p>
-                  <p className="text-slate-600 italic">
-                    O DOI identifica a publicação. Ele não significa, por si só, revisão por pares, certificação científica ou validação acadêmica do conteúdo.
-                  </p>
-                  <p className="font-bold text-amber-950 pt-1">
-                    O Certificado Ouro será emitido após o cumprimento dos requisitos da modalidade e o pagamento da taxa correspondente.
-                  </p>
-                </div>
-              </div>
               </div>
             )}
           </div>
