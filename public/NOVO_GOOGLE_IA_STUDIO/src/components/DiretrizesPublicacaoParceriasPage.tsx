@@ -495,13 +495,13 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
 
             {/* Fluxo do Percurso */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#bfe0fa] via-[#dcedfc] to-[#bfe0fa] space-y-4 shadow-md border-2 border-[#7cbbf2] border-l-4 border-l-[#00227B]">
+            <div className="p-6 rounded-2xl bg-[#55abfa] space-y-4 shadow-md border-2 border-[#3393ea] border-l-4 border-l-[#00227B]">
               <div className="flex items-center justify-between gap-2 flex-wrap">
                 <span className="text-xs sm:text-sm uppercase tracking-wider text-[#00227B] font-black flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-amber-600" />
+                  <Sparkles className="w-4 h-4 text-amber-500" />
                   <span>O percurso segue esta sequência:</span>
                 </span>
-                <span className="text-[11px] text-[#00227B] bg-white border border-blue-300 px-3 py-1 rounded-full font-bold shadow-2xs">
+                <span className="text-[11px] text-[#00227B] bg-white border border-blue-200 px-3 py-1 rounded-full font-bold shadow-2xs">
                   Fluxo Integrado de Autoria &amp; Proteção
                 </span>
               </div>
