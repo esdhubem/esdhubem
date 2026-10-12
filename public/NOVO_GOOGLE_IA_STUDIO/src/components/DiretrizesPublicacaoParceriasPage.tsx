@@ -164,7 +164,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '12': false,
     '13': false,
     '14': false,
-    '15': false
+    '15': false,
+    '16': false
   });
 
   const toggleSection = (id: string) => {
@@ -191,7 +192,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '12': true,
       '13': true,
       '14': true,
-      '15': true
+      '15': true,
+      '16': true
     });
   };
 
@@ -212,7 +214,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '12': false,
       '13': false,
       '14': false,
-      '15': false
+      '15': false,
+      '16': false
     });
   };
 
@@ -492,6 +495,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 }`}
               >
                 ⚖️ 15. Critérios & Retirada
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('16')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['16']
+                    ? 'bg-amber-400 text-slate-950 font-black shadow-md'
+                    : 'bg-amber-950/60 text-amber-200 border border-amber-500/40 hover:bg-amber-900/80'
+                }`}
+              >
+                📐 16. Estrutura por Nível
               </button>
             </div>
           </div>
@@ -2912,6 +2926,220 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         A ESDHUBEM não realiza revisão por pares nem dispõe de serviços de revistas científicas. Não há composição de banca examinadora. A avaliação tem caráter formativo e orientador, focada no desenvolvimento do autor e no cumprimento das diretrizes estabelecidas.
                       </p>
                     </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 16: 16 - Estrutura e Formato por Nível de Produção */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-16"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('16')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['16']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  📐 16
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Parâmetros Textuais, Normas de Estilo &amp; Extensão
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    16 - Estrutura e Formato por Nível de Produção
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['16'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['16'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['16'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-5 shadow-sm">
+                  {/* Título interno com o número 3 */}
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
+                      3
+                    </span>
+                    <h4 className="font-black text-base sm:text-lg text-slate-900">
+                      Estrutura e Formato por Nível de Produção
+                    </h4>
+                  </div>
+
+                  <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs">
+                    <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
+                      <thead>
+                        <tr className="bg-slate-900 text-white">
+                          <th className="py-3 px-4 font-bold uppercase tracking-wider w-1/5">Elemento</th>
+                          <th className="py-3 px-4 font-bold uppercase tracking-wider w-2/5">Estrutura Mínima</th>
+                          <th className="py-3 px-4 font-bold uppercase tracking-wider w-1/4">Normas de Estilo</th>
+                          <th className="py-3 px-4 font-bold uppercase tracking-wider">Extensão</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                        {/* Linha 1: Bronze */}
+                        <tr className="hover:bg-amber-50/20 align-top">
+                          <td className="py-4 px-4 font-bold text-amber-950">
+                            <div className="flex items-start gap-1.5">
+                              <FileText className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                              <div>
+                                <span>Verbete Enciclopédico</span>
+                                <span className="block text-xs font-semibold text-amber-700">(Bronze)</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="py-4 px-4">
+                            <ul className="space-y-1 text-slate-700 text-xs">
+                              <li>• Título claro e preciso</li>
+                              <li>• Definição direta do tema</li>
+                              <li>• Contexto histórico e conceitual</li>
+                              <li>• Aplicação prática ou relevância atual</li>
+                              <li>• Ligação com os eixos temáticos</li>
+                              <li>• Sem referências extensas — informações integradas ao texto</li>
+                            </ul>
+                          </td>
+                          <td className="py-4 px-4">
+                            <ul className="space-y-1 text-slate-600 text-xs">
+                              <li>• Linguagem objetiva e informativa</li>
+                              <li>• Tom neutro e educativo</li>
+                              <li>• Parágrafos curtos</li>
+                              <li>• Sem jargões desnecessários</li>
+                              <li>• Sem citações longas</li>
+                            </ul>
+                          </td>
+                          <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                            500 a 800 palavras
+                          </td>
+                        </tr>
+
+                        {/* Linha 2: Prata */}
+                        <tr className="hover:bg-slate-50/80 align-top">
+                          <td className="py-4 px-4 font-bold text-slate-900">
+                            <div className="flex items-start gap-1.5">
+                              <span className="text-base shrink-0">✍️</span>
+                              <div>
+                                <span>Artigo de Blog</span>
+                                <span className="block text-xs font-semibold text-slate-600">(Prata)</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="py-4 px-4">
+                            <ul className="space-y-1 text-slate-700 text-xs">
+                              <li>• Título + subtítulo chamativo</li>
+                              <li>• Introdução (contexto e objetivo)</li>
+                              <li>• Desenvolvimento dividido em seções (H2/H3)</li>
+                              <li>• Exemplos práticos ou relatos</li>
+                              <li>• Conclusão com fechamento</li>
+                              <li>• Referências quando aplicável</li>
+                            </ul>
+                          </td>
+                          <td className="py-4 px-4">
+                            <ul className="space-y-1 text-slate-600 text-xs">
+                              <li>• Linguagem acessível e fluida</li>
+                              <li>• Escaneabilidade: parágrafos curtos, destaques, listas</li>
+                              <li>• Princípios de clareza e encontrabilidade (SEO)</li>
+                              <li>• Transição suave entre seções</li>
+                              <li>• Normas ABNT para referências</li>
+                            </ul>
+                          </td>
+                          <td className="py-4 px-4 font-bold text-slate-900 whitespace-nowrap">
+                            1.200 a 2.500 palavras
+                          </td>
+                        </tr>
+
+                        {/* Linha 3: Ouro */}
+                        <tr className="hover:bg-amber-50/20 align-top">
+                          <td className="py-4 px-4 font-bold text-amber-900">
+                            <div className="flex items-start gap-1.5">
+                              <span className="text-base shrink-0">🔬</span>
+                              <div>
+                                <span>Manuscrito / Artigo de Investigação</span>
+                                <span className="block text-xs font-semibold text-amber-700">(Ouro)</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="py-4 px-4">
+                            <ul className="space-y-1 text-slate-700 text-xs">
+                              <li>• Título</li>
+                              <li>• Resumo + palavras-chave</li>
+                              <li>• Introdução (problema, objetivos)</li>
+                              <li>• Fundamentação teórica</li>
+                              <li>• Metodologia</li>
+                              <li>• Desenvolvimento e discussão</li>
+                              <li>• Conclusão</li>
+                              <li>• Referências bibliográficas completas</li>
+                            </ul>
+                          </td>
+                          <td className="py-4 px-4">
+                            <ul className="space-y-1 text-slate-600 text-xs">
+                              <li>• Linguagem formal e analítica</li>
+                              <li>• Normas ABNT integral</li>
+                              <li>• Citações no texto e lista de referências</li>
+                              <li>• Estrutura lógica e sequencial</li>
+                              <li>• Distinção clara entre ideias do autor e ideias de outros autores</li>
+                            </ul>
+                          </td>
+                          <td className="py-4 px-4 font-bold text-blue-700">
+                            Conforme orientação recebida
+                          </td>
+                        </tr>
+
+                        {/* Linha 4: Diamante */}
+                        <tr className="hover:bg-cyan-50/20 align-top">
+                          <td className="py-4 px-4 font-bold text-cyan-950">
+                            <div className="flex items-start gap-1.5">
+                              <span className="text-base shrink-0">📖</span>
+                              <div>
+                                <span>Livro Autoral</span>
+                                <span className="block text-xs font-semibold text-cyan-800">(Diamante)</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="py-4 px-4">
+                            <ul className="space-y-1 text-slate-700 text-xs">
+                              <li>• Folha de rosto</li>
+                              <li>• Sumário detalhado</li>
+                              <li>• Introdução geral</li>
+                              <li>• Capítulos sequenciais com unidade temática</li>
+                              <li>• Considerações finais</li>
+                              <li>• Referências / bibliografia</li>
+                              <li>• Elementos opcionais: dedicatória, agradecimentos, apêndices</li>
+                            </ul>
+                          </td>
+                          <td className="py-4 px-4">
+                            <ul className="space-y-1 text-slate-600 text-xs">
+                              <li>• Formato consistente ao longo da obra</li>
+                              <li>• Normas ABNT para referências e citações</li>
+                              <li>• Padronização de títulos, subtítulos e corpo de texto</li>
+                              <li>• Versão final em PDF formatado</li>
+                            </ul>
+                          </td>
+                          <td className="py-4 px-4 font-bold text-cyan-900">
+                            Mínimo de 50 páginas de conteúdo efetivo
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
