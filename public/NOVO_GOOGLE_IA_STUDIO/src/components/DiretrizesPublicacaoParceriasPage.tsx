@@ -168,7 +168,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '15': false,
     '16': false,
     '17': false,
-    '18': false
+    '18': false,
+    '19': false
   });
 
   const toggleSection = (id: string) => {
@@ -198,7 +199,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '15': true,
       '16': true,
       '17': true,
-      '18': true
+      '18': true,
+      '19': true
     });
   };
 
@@ -222,7 +224,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '15': false,
       '16': false,
       '17': false,
-      '18': false
+      '18': false,
+      '19': false
     });
   };
 
@@ -535,6 +538,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 }`}
               >
                 🤖 18. Inteligência Artificial
+              </button>
+              <button
+                type="button"
+                onClick={() => openAndScrollTo('19')}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  openSections['19']
+                    ? 'bg-blue-400 text-slate-950 font-black shadow-md'
+                    : 'bg-blue-950/60 text-blue-200 border border-blue-500/40 hover:bg-blue-900/80'
+                }`}
+              >
+                🏛️ 19. Horas Complementares
               </button>
             </div>
           </div>
@@ -3816,6 +3830,96 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <p className="leading-relaxed">
                       <strong>⚠️ A não declaração quando houver uso de IA pode impedir ou cancelar a publicação.</strong> Se tiver dúvida sobre como declarar, entre em contato antes do envio.
                     </p>
+                  </div>
+
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 19: 19 - Sobre Horas Complementares e Alinhamento Temático */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-19"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('19')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['19']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  🏛️ 19
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Referência Organizacional CAPES &amp; Critérios Institucionais de Validação
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    19 - Sobre Horas Complementares e Alinhamento Temático
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['19'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['19'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['19'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-6 shadow-sm">
+                  
+                  {/* Título interno com o badge 6 */}
+                  <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
+                    <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
+                      6
+                    </span>
+                    <h4 className="font-black text-base sm:text-lg text-slate-900">
+                      Sobre Horas Complementares e Alinhamento Temático
+                    </h4>
+                  </div>
+
+                  {/* Texto sobre alinhamento CAPES */}
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    Os eixos temáticos definidos pela ESDHUBEM foram estruturados com base nas <strong>áreas de conhecimento da CAPES</strong>, visando manter uniformidade, coerência e um norteamento conceitual comum aos trabalhos. Este alinhamento temático não significa certificação ou validação oficial pela CAPES nem confere status de instituição de ensino superior à ESDHUBEM — <strong>trata-se de referência organizacional</strong>.
+                  </p>
+
+                  {/* Card: Validação de horas complementares */}
+                  <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-5 sm:p-6 space-y-3.5 shadow-xs">
+                    <div className="flex items-center gap-2 text-sky-950 font-bold text-sm sm:text-base">
+                      <Landmark className="w-5 h-5 text-sky-700 shrink-0" />
+                      <h5>Validação de horas complementares</h5>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      O reconhecimento de horas complementares é <strong>competência de cada instituição de ensino</strong> onde o estudante estiver matriculado. Recomendamos:
+                    </p>
+                    <ul className="text-xs sm:text-sm text-slate-700 space-y-2 pt-1">
+                      <li className="flex items-start gap-2">
+                        <span className="text-sky-600 font-bold">•</span>
+                        <span>Consultar previamente a secretaria ou coordenação do seu curso sobre os requisitos, documentos aceitos e critérios de validação</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-sky-600 font-bold">•</span>
+                        <span>Se necessário, solicitar à ESDHUBEM carta de apresentação, declaração de participação ou detalhamento de carga horária para entrega à sua instituição</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-sky-600 font-bold">•</span>
+                        <span>Cada instituição possui suas próprias regras — a ESDHUBEM fornece os documentos comprobatórios, mas a decisão de validação cabe exclusivamente à instituição de origem do estudante</span>
+                      </li>
+                    </ul>
                   </div>
 
                 </div>
