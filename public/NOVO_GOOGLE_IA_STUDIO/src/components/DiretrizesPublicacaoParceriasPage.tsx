@@ -705,7 +705,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <div className="flex items-center gap-2">
                   <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
                     <Globe className="w-4 h-4 text-blue-600" />
-                    Plataforma Oficial OSF (Open Science Framework)
+                    Publicação na Plataforma Oficial OSF (Open Science Framework)
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
@@ -828,6 +828,30 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                   <span>Vídeo 3: Orientações práticas para elaboração do artigo de blog, técnicas de SEO e estruturação</span>
                 </p>
+
+                {/* Box informativo OSF com link */}
+                <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
+                        <Globe className="w-4 h-4 text-blue-600" />
+                        Publicação na Plataforma Oficial OSF (Open Science Framework)
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      OSF é uma plataforma gratuita e aberta para apoiar sua pesquisa e possibilitar a colaboração e fazer gerenciamento de pesquisas.
+                    </p>
+                  </div>
+                  <a
+                    href="https://osf.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
+                  >
+                    <span>Acessar OSF (osf.io)</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
 
                 {/* Documento Integrado: Guia Completo - Artigo de Blog & SEO */}
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-xs flex flex-col pt-2">
@@ -1462,6 +1486,30 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
                     <span>Vídeo 6: Orientações completas para produção da obra autoral e requisitos do nível Diamante</span>
                   </p>
+
+                  {/* Box informativo OSF com link */}
+                  <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border border-blue-200 text-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <span className="font-extrabold text-sm text-[#00227B] flex items-center gap-1.5">
+                          <Globe className="w-4 h-4 text-blue-600" />
+                          Publicação na Plataforma Oficial OSF (Open Science Framework)
+                        </span>
+                      </div>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        OSF é uma plataforma gratuita e aberta para apoiar sua pesquisa e possibilitar a colaboração e fazer gerenciamento de pesquisas.
+                      </p>
+                    </div>
+                    <a
+                      href="https://osf.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#00227B] hover:bg-[#001b63] text-white text-xs font-bold transition-all shadow-sm shrink-0"
+                    >
+                      <span>Acessar OSF (osf.io)</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
                 </div>
 
                 {/* Formatos de Obra Aceitos */}
