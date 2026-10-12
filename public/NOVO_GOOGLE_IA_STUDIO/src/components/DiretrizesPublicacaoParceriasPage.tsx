@@ -263,7 +263,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
         {/* Bloco Sanfona (Accordion) das Diretrizes e Certificações */}
         <div className="space-y-5">
           {/* Barra Superior da Sanfona: Título, Filtros Rápidos e Botões de Controle */}
-          <div className="bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] text-white rounded-3xl p-5 sm:p-7 border border-blue-900/80 shadow-xl space-y-4 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-[#0d4494] via-[#0a3576] to-[#072458] text-white rounded-3xl p-5 sm:p-7 border border-cyan-400/30 shadow-2xl space-y-4 relative overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
               <div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFC72C]/15 text-[#FFC72C] text-xs font-bold uppercase tracking-wider mb-2 border border-[#FFC72C]/30 shadow-xs">
@@ -273,7 +273,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
                   Diretrizes de Publicação em Formato Sanfona
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+                <p className="text-xs sm:text-sm text-blue-100 mt-1 leading-relaxed">
                   Clique nas seções para abrir ou recolher os vídeos, modelos de documentos e orientações detalhadas de cada nível.
                 </p>
               </div>
@@ -297,8 +297,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
 
             {/* Quick Navigation Pills */}
-            <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-blue-800/60 text-xs font-semibold relative z-10">
-              <span className="text-blue-200 text-[11px] uppercase tracking-wider mr-1 font-bold">Ir para:</span>
+            <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-cyan-400/20 text-xs font-semibold relative z-10">
+              <span className="text-cyan-200 text-[11px] uppercase tracking-wider mr-1 font-bold">Ir para:</span>
               <button
                 type="button"
                 onClick={() => openAndScrollTo('1')}
