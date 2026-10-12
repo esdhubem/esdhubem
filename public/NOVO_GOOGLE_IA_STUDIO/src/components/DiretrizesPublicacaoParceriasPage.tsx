@@ -1204,11 +1204,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   Após a escolha dessa modalidade, o estudante receberá orientações detalhadas para a elaboração do artigo e seu registro de autoria no <strong>OSF (Open Science Framework)</strong>.
                 </p>
 
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2">
-                  <span className="font-bold text-xs uppercase tracking-wider text-slate-900 block">
-                    As orientações poderão incluir:
+                <div className="bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-5 space-y-3 shadow-xs">
+                  <span className="font-black text-xs uppercase tracking-wider text-[#00227B] block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+                    <span>As orientações poderão incluir:</span>
                   </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-700">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-800">
                     <div>• Estrutura do artigo (1.200 a 2.500 palavras)</div>
                     <div>• Definição do tema e do público</div>
                     <div>• Título, subtítulos H2/H3 e escaneabilidade</div>
@@ -1222,20 +1223,26 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <div>• Revisão e preparação para publicação</div>
                   </div>
 
-                  <div className="pt-2 border-t border-slate-200 flex flex-wrap gap-2 text-xs">
-                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">🛡️ Registro de Autoria: OSF (Open Science Framework)</span>
-                    <span className="px-2.5 py-1 rounded-md bg-amber-100 text-amber-900 font-medium">📍 Publicação: Blog Oficial ESDHUBEM</span>
+                  <div className="pt-2.5 border-t border-blue-200 flex flex-wrap gap-2 text-xs">
+                    <span className="px-3 py-1.5 rounded-lg bg-white text-[#00227B] font-bold border border-blue-200 shadow-2xs flex items-center gap-1.5">
+                      <span>🛡️</span>
+                      <span>Registro de Autoria: OSF (Open Science Framework)</span>
+                    </span>
+                    <span className="px-3 py-1.5 rounded-lg bg-white text-[#00227B] font-bold border border-blue-200 shadow-2xs flex items-center gap-1.5">
+                      <span>📍</span>
+                      <span>Publicação: Blog Oficial ESDHUBEM</span>
+                    </span>
                   </div>
                 </div>
 
-                <div className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed bg-amber-50/50 p-4 rounded-xl border border-amber-200/50">
+                <div className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/80 p-5 rounded-2xl border-2 border-amber-300/80 shadow-xs">
                   <p>
                     O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM e deve ser enviado para nós pelo e-mail: <a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">esdhubem@proton.me</a> juntamente com o mapa mental, o áudio de 3 minutos explicando o que você aprendeu com o curso e juntamente com a <strong>Declaração de Autorização de Publicação</strong> e a <strong>Declaração de Autoria e Responsabilidade</strong>.
                   </p>
                   <p>
                     A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional e acadêmico.
                   </p>
-                  <p className="font-semibold text-slate-800">
+                  <p className="font-semibold text-slate-900">
                     Após a aprovação, o artigo será publicado no Blog Oficial da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
                   </p>
                 </div>
