@@ -324,7 +324,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     : 'bg-amber-950/60 text-amber-200 border border-amber-600/40 hover:bg-amber-900/80'
                 }`}
               >
-                🥉 3. Bronze
+                🥉 3. Bronze: Publicação de Verbete
               </button>
               <button
                 type="button"
@@ -668,7 +668,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Vídeo 2 • Níveis, Plataforma OSF & Fixação Ativa
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
-                    3 - Certificação Bronze
+                    3 - Certificação Bronze - Publicação de Verbete
                   </h3>
                 </div>
               </div>
