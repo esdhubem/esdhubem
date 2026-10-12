@@ -299,7 +299,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     : 'bg-white/10 text-white hover:bg-white/20 border border-white/15'
                 }`}
               >
-                1. Diretrizes
+                1. Apresentação das Diretrizes
               </button>
               <button
                 type="button"
@@ -371,16 +371,16 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 1: 1 - Diretrizes de Publicação */}
+          {/* SEÇÃO 1: 1 - Apresentação das Diretrizes de Publicação */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-1"
-            className="bg-white rounded-3xl border border-slate-200/90 shadow-md overflow-hidden transition-all duration-200"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
               onClick={() => toggleSection('1')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-slate-50 via-white to-slate-50 hover:bg-slate-100/70 transition-colors cursor-pointer border-b border-slate-100"
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
               aria-expanded={openSections['1']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
@@ -392,7 +392,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Vídeo 1 • Da Aprendizagem à Autoria
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    1 - Diretrizes de Publicação
+                    1 - Apresentação das Diretrizes de Publicação
                   </h3>
                 </div>
               </div>
@@ -442,7 +442,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 Da aprendizagem à autoria
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                Diretrizes de Publicação
+                Apresentação das Diretrizes de Publicação
               </h2>
             </div>
 
@@ -514,12 +514,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           {/* ======================================================== */}
           <div
             id="secao-sanfona-2"
-            className="bg-white rounded-3xl border border-amber-200/90 shadow-md overflow-hidden transition-all duration-200"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
               onClick={() => toggleSection('2')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-amber-50/60 via-white to-amber-50/30 hover:bg-amber-100/40 transition-colors cursor-pointer border-b border-amber-100"
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
               aria-expanded={openSections['2']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
@@ -716,12 +716,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           {/* ======================================================== */}
           <div
             id="secao-sanfona-3"
-            className="bg-white rounded-3xl border border-slate-300/90 shadow-md overflow-hidden transition-all duration-200"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
               onClick={() => toggleSection('3')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-slate-100/70 via-white to-slate-100/40 hover:bg-slate-200/50 transition-colors cursor-pointer border-b border-slate-200"
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
               aria-expanded={openSections['3']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
@@ -868,12 +868,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           {/* ======================================================== */}
           <div
             id="secao-sanfona-4"
-            className="bg-white rounded-3xl border border-amber-300 shadow-md overflow-hidden transition-all duration-200"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
               onClick={() => toggleSection('4')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-amber-100/60 via-white to-amber-100/30 hover:bg-amber-100/80 transition-colors cursor-pointer border-b border-amber-200"
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
               aria-expanded={openSections['4']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
@@ -1024,12 +1024,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           {/* ======================================================== */}
           <div
             id="secao-sanfona-5"
-            className="bg-white rounded-3xl border border-purple-200/90 shadow-md overflow-hidden transition-all duration-200"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
               onClick={() => toggleSection('5')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-purple-50/60 via-white to-purple-50/30 hover:bg-purple-100/50 transition-colors cursor-pointer border-b border-purple-100"
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
               aria-expanded={openSections['5']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
@@ -1355,12 +1355,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           {/* ======================================================== */}
           <div
             id="secao-sanfona-6"
-            className="bg-white rounded-3xl border border-cyan-300 shadow-md overflow-hidden transition-all duration-200"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
               onClick={() => toggleSection('6')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-cyan-100/60 via-white to-cyan-100/30 hover:bg-cyan-100/80 transition-colors cursor-pointer border-b border-cyan-200"
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
               aria-expanded={openSections['6']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
@@ -1760,12 +1760,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           {/* ======================================================== */}
           <div
             id="secao-sanfona-7"
-            className="bg-white rounded-3xl border border-blue-900/40 shadow-md overflow-hidden transition-all duration-200"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
               onClick={() => toggleSection('7')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-slate-50 via-white to-blue-50/30 hover:bg-slate-100/70 transition-colors cursor-pointer border-b border-slate-200"
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
               aria-expanded={openSections['7']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
