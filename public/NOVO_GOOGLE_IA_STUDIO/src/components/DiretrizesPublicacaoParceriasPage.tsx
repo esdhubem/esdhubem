@@ -1192,7 +1192,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <h4 className="text-lg sm:text-xl font-bold text-slate-900">
                       PRATA — EXPRESSAR E COMUNICAR
                     </h4>
-                    <span className="text-xs font-semibold text-slate-600">Artigo para o Blog da ESDHUBEM (1.200 a 2.500 palavras)</span>
+                    <span className="text-xs font-semibold text-slate-600">Verbete + Artigo para o Blog da ESDHUBEM (1.200 a 2.500 palavras)</span>
                   </div>
                 </div>
 
