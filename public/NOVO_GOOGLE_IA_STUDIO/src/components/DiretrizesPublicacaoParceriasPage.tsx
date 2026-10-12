@@ -935,6 +935,40 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   O nível <strong>Diamante</strong> é destinado ao participante que entrega a <strong>Tríade de Fixação Ativa</strong> do curso <strong>MAIS</strong> uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo desenvolvido).
                 </p>
 
+                {/* Tutorial Vídeo - Parte 6: Livro Autoral & Nível Diamante */}
+                <div className="space-y-4 py-4 border-y border-cyan-200/80">
+                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
+                      <span className="text-sm">🎬</span>
+                      <span>Tutorial ESDHUBEM • Parte 6: Livro Autoral &amp; Nível Diamante</span>
+                    </div>
+                    <a
+                      href="https://odysee.com/@esdhubem:a/diretriz-publicacao-6:b"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
+                    >
+                      <span>Assistir no Odysee</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
+                    <iframe
+                      id="odysee-iframe-parte-6"
+                      className="w-full h-full border-0 absolute inset-0"
+                      src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-6:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                      allowFullScreen
+                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 6: Livro Autoral & Nível Diamante)"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    <span>Vídeo 6: Orientações completas para produção da obra autoral e requisitos do nível Diamante</span>
+                  </p>
+                </div>
+
                 {/* Formatos de Obra Aceitos */}
                 <div className="bg-white border border-cyan-200 rounded-2xl p-5 space-y-3 shadow-2xs">
                   <span className="font-extrabold text-xs uppercase tracking-wider text-cyan-950 flex items-center gap-2">
