@@ -621,6 +621,40 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </p>
                 </div>
 
+                {/* Tutorial Vídeo - Parte 5: Orientações para Produção do Artigo */}
+                <div className="space-y-4 py-4 border-y border-amber-200/80">
+                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
+                      <span className="text-sm">🎬</span>
+                      <span>Tutorial ESDHUBEM • Parte 5: Orientações para Produção do Artigo</span>
+                    </div>
+                    <a
+                      href="https://odysee.com/@esdhubem:a/diretrizes-publicacao-5:b"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
+                    >
+                      <span>Assistir no Odysee</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
+                    <iframe
+                      id="odysee-iframe-parte-5"
+                      className="w-full h-full border-0 absolute inset-0"
+                      src="https://odysee.com/$/embed/@esdhubem:a/diretrizes-publicacao-5:b?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                      allowFullScreen
+                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 5: Orientações para Produção do Artigo)"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                    <span>Vídeo 5: Diretrizes práticas e passo a passo para a estruturação do artigo científico e manuscrito</span>
+                  </p>
+                </div>
+
                 {/* Orientações para Produção de Artigo Científico / Manuscrito */}
                 <div className="space-y-4 pt-1">
                   <div className="flex items-center gap-2">
