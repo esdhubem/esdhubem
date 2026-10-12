@@ -905,7 +905,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Vídeo 3 • Artigo de Blog & SEO (1.200 a 2.500 palavras)
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    5 - Certificação Prata
+                    5 - Certificação Prata - Publicação de Artigo de Blog
                   </h3>
                 </div>
               </div>
