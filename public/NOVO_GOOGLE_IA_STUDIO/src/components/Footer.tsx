@@ -406,7 +406,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-amber-300 transition-colors cursor-pointer text-left text-slate-200 flex items-center gap-2 font-medium"
                 >
                   <span className="text-amber-400">•</span>
-                  <span>Avaliação de Manuscritos</span>
+                  <span>Diretrizes de Avaliação</span>
                 </button>
               </li>
               <li>
