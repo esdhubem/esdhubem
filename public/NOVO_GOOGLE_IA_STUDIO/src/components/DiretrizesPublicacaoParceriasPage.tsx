@@ -821,7 +821,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Documento Integrado • Tríade da Assimilação Ativa
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
-                    4 - GUIA COMPLETO DO VERBETE — NÍVEL BRONZE
+                    4 - Guia Completo para publicar o Verbete
                   </h3>
                 </div>
               </div>
@@ -843,7 +843,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="space-y-3">
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                    GUIA COMPLETO DO VERBETE — NÍVEL BRONZE
+                    Guia Completo para publicar o Verbete
                   </h2>
 
                   <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
@@ -856,7 +856,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <div className="flex items-center justify-between gap-2 flex-wrap">
                     <span className="font-bold text-xs uppercase tracking-wide text-slate-900 flex items-center gap-1.5">
                       <FileCheck className="w-4 h-4 text-amber-600" />
-                      Guia Completo do Verbete — Nível Bronze
+                      Guia Completo para publicar o Verbete
                     </span>
                     <a
                       href="https://docs.google.com/document/d/e/2PACX-1vTnwqqsY7e8DzHbrMwYl5fIn8r8pdJgN30S4SPsqKgsYGS5H7OnEkitqtJBF9O1DILc2re0s279Azkn/pub"
@@ -872,7 +872,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <iframe
                       src="https://docs.google.com/document/d/e/2PACX-1vTnwqqsY7e8DzHbrMwYl5fIn8r8pdJgN30S4SPsqKgsYGS5H7OnEkitqtJBF9O1DILc2re0s279Azkn/pub?embedded=true"
                       className="w-full h-full border-0"
-                      title="Guia Completo do Verbete — Nível Bronze ESDHUBEM"
+                      title="Guia Completo para publicar o Verbete — ESDHUBEM"
                       loading="lazy"
                     />
                   </div>
