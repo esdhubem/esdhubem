@@ -204,7 +204,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     <ul className="space-y-2 text-sm text-slate-700 pl-1 leading-relaxed">
                       <li className="flex items-start gap-2.5">
                         <span className="text-amber-800 font-bold shrink-0 text-base">🧠</span>
-                        <span><strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (à mão ou digital) estruturando os conceitos centrais e conexões pedagógicas do tema.</span>
+                        <span><strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado à mão estruturando os conceitos centrais e conexões pedagógicas do tema.</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-amber-800 font-bold shrink-0 text-base">✍️</span>

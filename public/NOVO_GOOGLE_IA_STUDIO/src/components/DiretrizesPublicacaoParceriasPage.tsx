@@ -832,14 +832,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       <div className="bg-white border-2 border-amber-400 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all text-left sm:text-center relative overflow-hidden">
                         <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-amber-400 via-amber-600 to-amber-400" />
                         <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[10px] font-black uppercase tracking-wider mb-2 border border-amber-200">
-                          ▲ Vértice Superior 1 • Síntese Visual
+                          ▲ Vértice Superior 1 • Síntese Visual (Feito à Mão)
                         </span>
                         <div className="flex items-center sm:justify-center gap-2 text-amber-950 font-bold text-sm sm:text-base mb-1.5">
                           <span className="text-xl">🧠</span>
-                          <span>Mapa Mental do Conteúdo</span>
+                          <span>Mapa Mental do Conteúdo (Feito à Mão)</span>
                         </div>
                         <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                          <strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (à mão ou digital) estruturando os conceitos centrais e conexões pedagógicas da aula.
+                          <strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado à mão estruturando os conceitos centrais e conexões pedagógicas da aula.
                         </p>
                       </div>
                     </div>
