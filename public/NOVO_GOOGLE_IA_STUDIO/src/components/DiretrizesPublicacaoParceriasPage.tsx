@@ -495,47 +495,47 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
 
             {/* Fluxo do Percurso */}
-            <div className="p-6 rounded-2xl bg-[#55abfa] space-y-4 shadow-md border-2 border-[#3393ea] border-l-4 border-l-[#00227B]">
-              <div className="flex items-center justify-between gap-2 flex-wrap">
-                <span className="text-xs sm:text-sm uppercase tracking-wider text-[#00227B] font-black flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-amber-500" />
+            <div className="p-6 rounded-2xl bg-gradient-to-r from-[#0d4494] via-[#0a3576] to-[#072458] text-white space-y-4 shadow-xl border border-cyan-400/40 relative overflow-hidden">
+              <div className="flex items-center justify-between gap-2 flex-wrap relative z-10">
+                <span className="text-xs sm:text-sm uppercase tracking-wider text-cyan-200 font-black flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#FFC72C]" />
                   <span>O percurso segue esta sequência:</span>
                 </span>
-                <span className="text-[11px] text-[#00227B] bg-white border border-blue-200 px-3 py-1 rounded-full font-bold shadow-2xs">
+                <span className="text-[11px] text-cyan-100 bg-[#001c4e]/80 border border-cyan-400/30 px-3 py-1 rounded-full font-bold shadow-xs">
                   Fluxo Integrado de Autoria &amp; Proteção
                 </span>
               </div>
 
-              <div className="flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-medium leading-relaxed">
-                <span className="bg-[#00227B] hover:bg-[#001a5e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-blue-900/40 transition-all">
+              <div className="flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-medium leading-relaxed relative z-10">
+                <span className="bg-[#001c4e] hover:bg-[#00286e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-cyan-400/30 transition-all">
                   Conclusão do curso
                 </span>
-                <span className="text-[#00227B] font-black text-base sm:text-lg">→</span>
-                <span className="bg-[#00227B] hover:bg-[#001a5e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-blue-900/40 transition-all">
+                <span className="text-cyan-300 font-black text-base sm:text-lg">→</span>
+                <span className="bg-[#001c4e] hover:bg-[#00286e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-cyan-400/30 transition-all">
                   Comunicação da modalidade de manuscrito
                 </span>
-                <span className="text-[#00227B] font-black text-base sm:text-lg">→</span>
-                <span className="bg-[#00227B] hover:bg-[#001a5e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-blue-900/40 transition-all">
+                <span className="text-cyan-300 font-black text-base sm:text-lg">→</span>
+                <span className="bg-[#001c4e] hover:bg-[#00286e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-cyan-400/30 transition-all">
                   Pagamento da taxa do nível específico
                 </span>
-                <span className="text-[#00227B] font-black text-base sm:text-lg">→</span>
-                <span className="bg-[#00227B] hover:bg-[#001a5e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-blue-900/40 transition-all">
+                <span className="text-cyan-300 font-black text-base sm:text-lg">→</span>
+                <span className="bg-[#001c4e] hover:bg-[#00286e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-cyan-400/30 transition-all">
                   Produção do manuscrito
                 </span>
-                <span className="text-[#00227B] font-black text-base sm:text-lg">→</span>
-                <span className="bg-[#00227B] hover:bg-[#001a5e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-blue-900/40 transition-all">
+                <span className="text-cyan-300 font-black text-base sm:text-lg">→</span>
+                <span className="bg-[#001c4e] hover:bg-[#00286e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-cyan-400/30 transition-all">
                   Envio para análise
                 </span>
-                <span className="text-[#00227B] font-black text-base sm:text-lg">→</span>
-                <span className="bg-[#00227B] hover:bg-[#001a5e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-blue-900/40 transition-all">
+                <span className="text-cyan-300 font-black text-base sm:text-lg">→</span>
+                <span className="bg-[#001c4e] hover:bg-[#00286e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-cyan-400/30 transition-all">
                   Devolutiva da escola
                 </span>
-                <span className="text-[#00227B] font-black text-base sm:text-lg">→</span>
-                <span className="bg-[#00227B] hover:bg-[#001a5e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-blue-900/40 transition-all">
+                <span className="text-cyan-300 font-black text-base sm:text-lg">→</span>
+                <span className="bg-[#001c4e] hover:bg-[#00286e] px-3.5 py-2 rounded-xl text-white font-bold shadow-md border border-cyan-400/30 transition-all">
                   Aprovação de ambas as partes
                 </span>
-                <span className="text-[#00227B] font-black text-base sm:text-lg">→</span>
-                <span className="bg-[#FFC72C] hover:bg-amber-400 text-slate-950 font-black px-4 py-2 rounded-xl shadow-md border-2 border-amber-300 transition-all">
+                <span className="text-cyan-300 font-black text-base sm:text-lg">→</span>
+                <span className="bg-[#FFC72C] hover:bg-amber-400 text-slate-950 font-black px-4 py-2 rounded-xl shadow-lg border-2 border-amber-300 transition-all">
                   Emissão do certificado e publicação do trabalho
                 </span>
               </div>
