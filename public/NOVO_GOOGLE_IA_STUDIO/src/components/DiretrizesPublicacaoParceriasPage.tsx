@@ -851,14 +851,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-amber-500 to-amber-300" />
                         <div>
                           <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[10px] font-black uppercase tracking-wider mb-2 border border-amber-200">
-                            ◀ Vértice Inferior 2 • Estrutura Conceitual
+                            ◀ Vértice Inferior 2 • Estrutura Conceitual (Escrito à Mão)
                           </span>
                           <div className="flex items-center gap-2 text-amber-950 font-bold text-sm sm:text-base mb-1.5">
                             <span className="text-xl">✍️</span>
-                            <span>Verbete Enciclopédico (500 a 800 palavras)</span>
+                            <span>Verbete Enciclopédico (500 a 800 palavras) (Escrito à Mão)</span>
                           </div>
                           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                            <strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão explicando o significado, o contexto histórico e a aplicação do tema.
+                            <strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão, escrito à mão, explicando o significado, o contexto histórico e a aplicação do tema.
                           </p>
                         </div>
                       </div>

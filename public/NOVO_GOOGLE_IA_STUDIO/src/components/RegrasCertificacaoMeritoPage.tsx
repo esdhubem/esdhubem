@@ -208,7 +208,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-amber-800 font-bold shrink-0 text-base">✍️</span>
-                        <span><strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto formal e informativo conceituando o tema central (significado, histórico e aplicação prática).</span>
+                        <span><strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto formal e informativo escrito à mão conceituando o tema central (significado, histórico e aplicação prática).</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-amber-800 font-bold shrink-0 text-base">🎙️</span>
