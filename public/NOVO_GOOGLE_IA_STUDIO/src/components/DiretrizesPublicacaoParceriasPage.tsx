@@ -500,6 +500,67 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
               </div>
 
+              {/* Tutorial Vídeo - Parte 4: Manuscrito Científico, Zenodo & DOI */}
+              <div className="space-y-4 py-6 border-y border-slate-200">
+                <div className="flex items-center justify-between gap-3 flex-wrap">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#011049] via-[#0a3576] to-[#072458] text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-amber-400/30">
+                    <span className="text-sm">🎬</span>
+                    <span>Tutorial ESDHUBEM • Parte 4: Manuscrito Científico, Zenodo &amp; DOI</span>
+                  </div>
+                  <a
+                    href="https://odysee.com/@esdhubem:a/diretriz-publicacao-4:1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-blue-600 hover:text-blue-800 font-semibold hover:underline flex items-center gap-1.5"
+                  >
+                    <span>Assistir no Odysee</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-950 aspect-video w-full">
+                  <iframe
+                    id="odysee-iframe-parte-4"
+                    className="w-full h-full border-0 absolute inset-0"
+                    src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-4:1?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                    allowFullScreen
+                    title="Tutorial ESDHUBEM - Diretrizes de Publicação (Parte 4: Manuscrito Científico, Zenodo & DOI)"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                  <span>Vídeo 4: Orientações práticas para elaboração do manuscrito científico, depósito no Zenodo e atribuição de DOI</span>
+                </p>
+
+                {/* Documento Integrado: Modelo de Manuscrito & Artigo de Investigação */}
+                <div className="bg-amber-50/40 border border-amber-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-xs flex flex-col pt-2">
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className="font-bold text-xs uppercase tracking-wide text-amber-950 flex items-center gap-1.5">
+                      <FileText className="w-4 h-4 text-amber-600" />
+                      Modelo de Manuscrito &amp; Artigo de Investigação (Nível Ouro)
+                    </span>
+                    <a
+                      href="https://docs.google.com/document/d/e/2PACX-1vRqu0ZL5-NLsPebaChDs4SM5CcbvCWzzZa6cKexbeBGZqWvlpXS560IF5kuIS7jvf1y5HF2fXZtto98/pub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-amber-800 hover:text-amber-950 font-semibold hover:underline"
+                    >
+                      <span>Abrir Documento</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <div className="w-full h-[500px] sm:h-[600px] rounded-xl overflow-hidden border border-amber-200 bg-white shadow-inner">
+                    <iframe
+                      src="https://docs.google.com/document/d/e/2PACX-1vRqu0ZL5-NLsPebaChDs4SM5CcbvCWzzZa6cKexbeBGZqWvlpXS560IF5kuIS7jvf1y5HF2fXZtto98/pub?embedded=true"
+                      className="w-full h-full border-0"
+                      title="Modelo de Manuscrito e Artigo de Investigação ESDHUBEM"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+
               {/* 🥇 OURO */}
               <div className="bg-gradient-to-r from-amber-50/60 via-white to-white border-2 border-[#FFC72C] rounded-2xl p-6 sm:p-7 space-y-4 shadow-sm">
                 <div className="flex items-center gap-3">
@@ -725,6 +786,100 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                           </p>
                         </div>
                       </div>
+                    </div>
+
+                    {/* Resumo das Plataformas para Pesquisa de Artigos para Referência Bibliográfica */}
+                    <div className="space-y-3 pt-5 border-t border-slate-200">
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">📚</span>
+                        <h5 className="font-bold text-xs sm:text-sm uppercase tracking-wider text-slate-900">
+                          Resumo das plataformas para pesquisa de artigos para referência bibliográfica
+                        </h5>
+                      </div>
+
+                      <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs bg-white">
+                        <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                          <thead>
+                            <tr className="bg-slate-900 text-white">
+                              <th className="py-2.5 px-4 font-bold uppercase tracking-wider w-1/3 sm:w-2/5">Plataforma</th>
+                              <th className="py-2.5 px-4 font-bold uppercase tracking-wider">Por que usar</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-slate-100 text-slate-700">
+                            <tr className="hover:bg-amber-50/40 transition-colors">
+                              <td className="py-3 px-4 font-bold text-slate-900">
+                                <span className="flex items-center gap-1.5">
+                                  <span>🌐</span>
+                                  <span>Scielo + Google Acadêmico</span>
+                                </span>
+                              </td>
+                              <td className="py-3 px-4 text-slate-600">
+                                Já conhecidos, mantidos como você pediu
+                              </td>
+                            </tr>
+                            <tr className="hover:bg-amber-50/40 transition-colors">
+                              <td className="py-3 px-4 font-bold text-slate-900">
+                                <span className="flex items-center gap-1.5">
+                                  <span>🏛️</span>
+                                  <span>Portal Periódicos CAPES</span>
+                                </span>
+                              </td>
+                              <td className="py-3 px-4 text-slate-600">
+                                Acesso a várias bases de uma vez
+                              </td>
+                            </tr>
+                            <tr className="hover:bg-amber-50/40 transition-colors">
+                              <td className="py-3 px-4 font-bold text-slate-900">
+                                <span className="flex items-center gap-1.5">
+                                  <span>🎓</span>
+                                  <span>BDTD</span>
+                                </span>
+                              </td>
+                              <td className="py-3 px-4 text-slate-600">
+                                Teses e dissertações brasileiras
+                              </td>
+                            </tr>
+                            <tr className="hover:bg-amber-50/40 transition-colors">
+                              <td className="py-3 px-4 font-bold text-slate-900">
+                                <span className="flex items-center gap-1.5">
+                                  <span>🔬</span>
+                                  <span>OasisBr</span>
+                                </span>
+                              </td>
+                              <td className="py-3 px-4 text-slate-600">
+                                Produção científica nacional em acesso aberto
+                              </td>
+                            </tr>
+                            <tr className="hover:bg-amber-50/40 transition-colors">
+                              <td className="py-3 px-4 font-bold text-slate-900">
+                                <span className="flex items-center gap-1.5">
+                                  <span>🌎</span>
+                                  <span>Redalyc</span>
+                                </span>
+                              </td>
+                              <td className="py-3 px-4 text-slate-600">
+                                Artigos em português/espanhol — América Latina
+                              </td>
+                            </tr>
+                            <tr className="hover:bg-amber-50/40 transition-colors">
+                              <td className="py-3 px-4 font-bold text-slate-900">
+                                <span className="flex items-center gap-1.5">
+                                  <span>📖</span>
+                                  <span>DOAJ</span>
+                                </span>
+                              </td>
+                              <td className="py-3 px-4 text-slate-600">
+                                Revistas internacionais de acesso livre
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <p className="text-xs text-amber-900 font-semibold bg-amber-50 p-2.5 rounded-lg border border-amber-200 flex items-center gap-1.5">
+                        <span>✅</span>
+                        <span>Todas são gratuitas e confiáveis.</span>
+                      </p>
                     </div>
                   </div>
                 </div>
