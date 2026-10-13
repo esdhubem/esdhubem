@@ -1251,7 +1251,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 font-medium italic">
-                  * O Quadrilátero garante a integridade acadêmica, a rastreabilidade autoral internacional e a consolidação prática do aprendizado do estudante.
+                  * O Quadrilátero garante a integridade investigativa, a rastreabilidade autoral internacional e a consolidação prática do aprendizado do estudante.
                 </p>
               </div>
             )}
