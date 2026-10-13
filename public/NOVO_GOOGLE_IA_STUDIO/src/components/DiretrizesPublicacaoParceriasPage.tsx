@@ -529,9 +529,25 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <p>
                 A <strong className="text-[#00227B] font-bold">ESDHUBEM</strong> oferece ao aluno um sistema de aprendizagem na área do desenvolvimento humano e bem-estar que contribui para o desenvolvimento da memorização, raciocínio, escrita e oralidade, com a finalidade de proporcionar ao aluno chance de transformar sua experiência de aprendizagem em uma produção escrita e autoral.
               </p>
-              <p>
-                Após concluir as videoaulas, o estudante deverá entrar em contato com a ESDHUBEM via WhatsApp e comunicar nesse passo a passo: 👉 qual modalidade de produção pretende desenvolver 👉 pagar a taxa do tipo de certificado escolhido (Bronze, Prata, Ouro ou Diamante) 👉 seguir com a preparação do seu portfólio.
-              </p>
+              <div className="space-y-2">
+                <p>
+                  Após concluir as videoaulas, o estudante deverá entrar em contato com a ESDHUBEM via WhatsApp e comunicar nesse passo a passo:
+                </p>
+                <ul className="space-y-1.5 pl-2 text-sm sm:text-base">
+                  <li className="flex items-start gap-2">
+                    <span>👉</span>
+                    <span>Qual modalidade de produção pretende desenvolver;</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span>👉</span>
+                    <span>Pagar a taxa do tipo de certificado escolhido (Bronze, Prata, Ouro ou Diamante);</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span>👉</span>
+                    <span>Seguir com a preparação do seu portfólio.</span>
+                  </li>
+                </ul>
+              </div>
               <p>
                 O portfólio é o trabalho fundamental desenvolvido pelo estudante para ter direito a receber qualquer tipo de certificados da ESDHUBEM.
               </p>
