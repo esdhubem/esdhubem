@@ -163,14 +163,13 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: 'analise-portfolios', titulo: 'O que é a análise dos portfólios dos estudantes?' },
   { id: 'certificacao-valores', titulo: 'Certificação e Valores (Modalidades, Requisitos & Percursos)' },
   { id: 'autoria-responsabilidade', titulo: 'Autoria e Responsabilidade' },
-  { id: 'uso-responsavel-ia', titulo: 'Uso Responsável de Inteligência Artificial' },
   { id: 'publicacao-periodicos-revistas', titulo: 'Publicação em Repositórios, Periódicos e Revistas' },
   { id: '15', titulo: '15 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
   { id: '16', titulo: '16 - Prazos de Análise e Devolutiva' },
   { id: '17', titulo: '17 - Critérios de Avaliação, Publicação e Direito de Retirada' },
   { id: '18', titulo: '18 - Estrutura e Formato por Nível de Produção' },
   { id: '19', titulo: '19 - Registro Obrigatório nas Plataformas e Atualização de Versões' },
-  { id: '20', titulo: '20 - Uso de Inteligência Artificial — Declaração e Limites' }
+  { id: '20', titulo: '20 - Uso Responsável de Inteligência Artificial — Declaração e Limites' }
 ];
 
 export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoParceriasPageProps> = ({
@@ -3501,101 +3500,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SANFONA: Uso Responsável de Inteligência Artificial */}
-          {/* ======================================================== */}
-          <div
-            id="secao-sanfona-uso-responsavel-ia"
-            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
-          >
-            <button
-              type="button"
-              onClick={() => toggleSection('uso-responsavel-ia')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['uso-responsavel-ia']}
-            >
-              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
-                  <span className="text-xl">🤖</span>
-                </div>
-                <div className="min-w-0">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
-                    Ética, Transparência &amp; Ferramentas Tecnológicas
-                  </span>
-                  <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    Uso Responsável de Inteligência Artificial
-                  </h3>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 shrink-0">
-                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
-                  {openSections['uso-responsavel-ia'] ? 'Recolher' : 'Expandir'}
-                </span>
-                <div
-                  className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
-                    openSections['uso-responsavel-ia'] ? 'rotate-180 bg-[#011049] text-white' : ''
-                  }`}
-                >
-                  <ChevronDown className="w-4 h-4" />
-                </div>
-              </div>
-            </button>
-
-            {openSections['uso-responsavel-ia'] && (
-              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Card 1: Inteligência Artificial e Autoria */}
-                  <div className="bg-white border-2 border-purple-200/80 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm flex flex-col justify-between">
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2.5">
-                        <Sparkles className="w-5 h-5 text-purple-600" />
-                        <h4 className="font-extrabold text-[#011049] text-base sm:text-lg uppercase tracking-wide">
-                          INTELIGÊNCIA ARTIFICIAL E AUTORIA
-                        </h4>
-                      </div>
-
-                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Ferramentas de inteligência artificial poderão ser utilizadas como apoio à produção, de acordo com as orientações da ESDHUBEM. Podem auxiliar na organização de ideias, elaboração de estruturas, revisão textual e aprimoramento da linguagem.
-                      </p>
-
-                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Entretanto, o autor continua responsável por compreender, verificar e revisar aquilo que publica. Informações, referências, dados ou resultados não devem ser apresentados como verdadeiros sem verificação adequada.
-                      </p>
-                    </div>
-
-                    <div className="bg-purple-50/80 border border-purple-200/80 p-4 rounded-2xl text-xs sm:text-sm text-purple-950 font-medium">
-                      A tecnologia pode auxiliar a produção. A autoria e a responsabilidade permanecem com o autor.
-                    </div>
-                  </div>
-
-                  {/* Card 2: Uso Responsável de Inteligência Artificial */}
-                  <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm flex flex-col justify-between">
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2.5">
-                        <span className="text-2xl">🤖</span>
-                        <h4 className="font-extrabold text-[#011049] text-base sm:text-lg tracking-normal">
-                          Uso Responsável de Inteligência Artificial
-                        </h4>
-                      </div>
-
-                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        A tecnologia é ferramenta de apoio, <strong>não de substituição</strong> do pensamento e criação humana.
-                      </p>
-
-                      <ul className="text-xs sm:text-sm text-slate-700 space-y-3 list-disc list-inside pl-1">
-                        <li>A responsabilidade sobre o conteúdo é sempre do autor;</li>
-                        <li>
-                          Se utilizou IA em qualquer etapa, <strong>declare com transparência</strong> como foi aplicada;
-                        </li>
-                        <li>O uso não declarado poderá impedir ou cancelar a publicação.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* ======================================================== */}
           {/* SANFONA: Publicação em Repositórios, Periódicos e Revistas */}
           {/* ======================================================== */}
           <div
@@ -4972,10 +4876,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
-                    Transparência, Ética, Limites de Uso e Modelos de Declaração
+                    Ética, Transparência, Limites de Uso e Modelos de Declaração
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    20 - Uso de Inteligência Artificial — Declaração e Limites
+                    20 - Uso Responsável de Inteligência Artificial — Declaração e Limites
                   </h3>
                 </div>
               </div>
@@ -5003,7 +4907,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       5
                     </span>
                     <h4 className="font-black text-base sm:text-lg text-slate-900">
-                      Uso de Inteligência Artificial — Declaração e Limites
+                      Uso Responsável de Inteligência Artificial — Declaração e Limites
                     </h4>
                   </div>
 
@@ -5011,6 +4915,57 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                     A ferramenta de Inteligência Artificial é vista como <strong>apoio à produção</strong>, nunca como substituta do pensamento e da criação humana. A responsabilidade sobre todo o conteúdo publicado é <strong>sempre do autor</strong>.
                   </p>
+
+                  {/* Princípios de Autoria e Responsabilidade */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Card 1: Inteligência Artificial e Autoria */}
+                    <div className="bg-white border-2 border-purple-200/80 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs flex flex-col justify-between">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2.5">
+                          <Sparkles className="w-5 h-5 text-purple-600 shrink-0" />
+                          <h5 className="font-extrabold text-[#011049] text-sm sm:text-base uppercase tracking-wide">
+                            INTELIGÊNCIA ARTIFICIAL E AUTORIA
+                          </h5>
+                        </div>
+
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          Ferramentas de inteligência artificial poderão ser utilizadas como apoio à produção, de acordo com as orientações da ESDHUBEM. Podem auxiliar na organização de ideias, elaboração de estruturas, revisão textual e aprimoramento da linguagem.
+                        </p>
+
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          Entretanto, o autor continua responsável por compreender, verificar e revisar aquilo que publica. Informações, referências, dados ou resultados não devem ser apresentados como verdadeiros sem verificação adequada.
+                        </p>
+                      </div>
+
+                      <div className="bg-purple-50/80 border border-purple-200/80 p-3.5 rounded-xl text-xs sm:text-sm text-purple-950 font-medium">
+                        A tecnologia pode auxiliar a produção. A autoria e a responsabilidade permanecem com o autor.
+                      </div>
+                    </div>
+
+                    {/* Card 2: Uso Responsável de Inteligência Artificial */}
+                    <div className="bg-white border-2 border-blue-200/80 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs flex flex-col justify-between">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2.5">
+                          <span className="text-2xl">🤖</span>
+                          <h5 className="font-extrabold text-[#011049] text-sm sm:text-base tracking-normal">
+                            Uso Responsável de Inteligência Artificial
+                          </h5>
+                        </div>
+
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          A tecnologia é ferramenta de apoio, <strong>não de substituição</strong> do pensamento e criação humana.
+                        </p>
+
+                        <ul className="text-xs sm:text-sm text-slate-700 space-y-2.5 list-disc list-inside pl-1">
+                          <li>A responsabilidade sobre o conteúdo é sempre do autor;</li>
+                          <li>
+                            Se utilizou IA em qualquer etapa, <strong>declare com transparência</strong> como foi aplicada;
+                          </li>
+                          <li>O uso não declarado poderá impedir ou cancelar a publicação.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
 
                   {/* 2 Cards lado a lado: O que pode vs O que NÃO pode */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
