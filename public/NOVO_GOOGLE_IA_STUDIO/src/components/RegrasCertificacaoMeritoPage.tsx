@@ -374,7 +374,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                   <div className="pt-3 border-t border-cyan-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white p-3.5 rounded-xl border border-cyan-200 text-cyan-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-cyan-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Mural de Livros / Livraria Digital da ESDHUBEM + Registro EDA na Biblioteca Nacional e OSF.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Mural de Livros / Livraria Digital da ESDHUBEM + Registro na OSF (Registro EDA na Biblioteca Nacional é opcional).</span>
                     </div>
                     <div className="bg-white p-3.5 rounded-xl border border-cyan-200 text-cyan-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-cyan-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
