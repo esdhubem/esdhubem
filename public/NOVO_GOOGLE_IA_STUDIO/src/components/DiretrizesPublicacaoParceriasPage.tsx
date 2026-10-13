@@ -4320,7 +4320,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                             </ul>
                           </td>
                           <td className="py-4 px-4 font-bold text-blue-700">
-                            Conforme orientação recebida
+                            2.500 a 5.000 palavras de conteúdo efetivo
                           </td>
                         </tr>
 
