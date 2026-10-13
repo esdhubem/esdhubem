@@ -160,6 +160,7 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: '12', titulo: '12 - Guia Completo para publicar o livro - Nível Diamante' },
   { id: '13', titulo: '13 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
   { id: '14', titulo: '14 - Livro Autoral — Formato e Contagem de Páginas' },
+  { id: 'analise-portfolios', titulo: 'O que é a análise dos portfólios dos estudantes?' },
   { id: 'certificacao-valores', titulo: 'Certificação e Valores (Modalidades, Requisitos & Percursos)' },
   { id: 'autoria-responsabilidade', titulo: 'Autoria e Responsabilidade' },
   { id: 'uso-responsavel-ia', titulo: 'Uso Responsável de Inteligência Artificial' },
@@ -195,6 +196,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '12': false,
     '13': false,
     '14': false,
+    'analise-portfolios': false,
     '15': false,
     '16': false,
     '17': false,
@@ -236,6 +238,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '12': true,
       '13': true,
       '14': true,
+      'analise-portfolios': true,
       '15': true,
       '16': true,
       '17': true,
@@ -271,6 +274,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '12': false,
       '13': false,
       '14': false,
+      'analise-portfolios': false,
       '15': false,
       '16': false,
       '17': false,
@@ -1612,47 +1616,13 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     </div>
                   </div>
 
-                  <div className="space-y-3.5 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/80 p-5 rounded-2xl border-2 border-amber-300/80 shadow-xs">
-                    <div className="space-y-2">
-                      <h5 className="font-bold text-sm sm:text-base text-amber-950 flex items-center gap-2">
-                        <span className="text-base sm:text-lg">🔍</span>
-                        <span>O que é a análise dos portfólios dos estudantes?</span>
-                      </h5>
-                      <p>
-                        Na ESDHUBEM a análise do portfólio é um processo pedagógico onde o manuscrito será analisado segundo o como e o porquê do trabalho desenvolvido, verificando o raciocínio lógico, concordância com o tema do curso, caminhos cognitivos que o estudante percorreu para chegar àquela resposta, compreender a linha de pensamento do estudante, identificar dificuldades específicas e entender onde o aluno tropeçou ou brilhou conceitualmente.
-                      </p>
-                      <p>
-                        Aqui na ESDHUBEM os nossos tutores atuam como um investigador da aprendizagem. Não é nosso objetivo atuar com julgamento ou atribuição de nota. O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM que estão disponíveis na{' '}
-                        {onNavigate ? (
-                          <button
-                            type="button"
-                            onClick={() => onNavigate('diretrizes-avaliacao-manuscritos')}
-                            className="font-bold text-[#00227B] hover:underline cursor-pointer inline"
-                          >
-                            página de diretrizes de avaliação
-                          </button>
-                        ) : (
-                          <span className="font-bold text-[#00227B]">página de diretrizes de avaliação</span>
-                        )}
-                        .
-                      </p>
-                    </div>
-
-                    <div className="pt-2 border-t border-amber-200/80 space-y-2">
-                      <p>
-                        O portfólio deve ser enviado para a escola pelo e-mail:{' '}
-                        <a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">
-                          esdhubem@proton.me
-                        </a>{' '}
-                        juntamente com o <strong>mapa mental</strong>, o <strong>áudio de 3 minutos</strong> explicando o que você aprendeu com o curso e juntamente com a <strong>Declaração de Autorização de Publicação</strong> e a <strong>Declaração de Autoria e Responsabilidade</strong>.
-                      </p>
-                      <p>
-                        A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional.
-                      </p>
-                      <p className="font-semibold text-slate-900">
-                        Após a aprovação, o artigo será publicado no Blog Oficial da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
-                      </p>
-                    </div>
+                  <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-xs">
+                    <p>
+                      A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional.
+                    </p>
+                    <p className="font-semibold text-slate-900">
+                      Após a aprovação, o artigo será publicado no Blog Oficial da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -3181,6 +3151,140 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
 
                 </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SANFONA: O que é a análise dos portfólios dos estudantes? */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-analise-portfolios"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('analise-portfolios')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['analise-portfolios']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-amber-600 to-amber-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-900">
+                  🔍
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-900 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                    Avaliação Pedagógica • Mediação &amp; Investigação da Aprendizagem
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
+                    O que é a análise dos portfólios dos estudantes?
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['analise-portfolios'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-900 transition-transform duration-300 ${
+                    openSections['analise-portfolios'] ? 'rotate-180 bg-amber-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['analise-portfolios'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-950 text-xs font-bold tracking-wide uppercase shadow-2xs">
+                    <Sparkles className="w-4 h-4 text-amber-600" />
+                    <span>Processo Pedagógico Investigativo Oficial da ESDHUBEM</span>
+                  </div>
+
+                  <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                    O que é a análise dos portfólios dos estudantes?
+                  </h2>
+
+                  <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+                    <p>
+                      Na ESDHUBEM a análise do portfólio é um processo pedagógico onde o manuscrito será analisado segundo o <strong>como</strong> e o <strong>porquê</strong> do trabalho desenvolvido, verificando o raciocínio lógico, concordância com o tema do curso, caminhos cognitivos que o estudante percorreu para chegar àquela resposta, compreender a linha de pensamento do estudante, identificar dificuldades específicas e entender onde o aluno tropeçou ou brilhou conceitualmente.
+                    </p>
+                    <p>
+                      Aqui na ESDHUBEM os nossos tutores atuam como um <strong>investigador da aprendizagem</strong>. Não é nosso objetivo atuar com julgamento ou atribuição de nota. O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM que estão disponíveis na{' '}
+                      {onNavigate ? (
+                        <button
+                          type="button"
+                          onClick={() => onNavigate('diretrizes-avaliacao-manuscritos')}
+                          className="font-bold text-[#00227B] hover:underline cursor-pointer inline"
+                        >
+                          página de diretrizes de avaliação
+                        </button>
+                      ) : (
+                        <span className="font-bold text-[#00227B]">página de diretrizes de avaliação</span>
+                      )}
+                      .
+                    </p>
+                  </div>
+                </div>
+
+                {/* Cards com os Pilares da Análise Pedagógica */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-white border-2 border-amber-300 rounded-2xl p-5 space-y-2 shadow-xs">
+                    <div className="flex items-center gap-2 text-amber-950 font-bold text-base">
+                      <span className="text-xl">🧭</span>
+                      <span>Investigação Cognitiva</span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      Compreender as conexões mentais, a evolução lógica e a apreensão conceitual do estudante ao longo do percurso formativo.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border-2 border-amber-300 rounded-2xl p-5 space-y-2 shadow-xs">
+                    <div className="flex items-center gap-2 text-amber-950 font-bold text-base">
+                      <span className="text-xl">🤝</span>
+                      <span>Mediação sem Julgamento</span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      Tutores dedicados a acolher e orientar o aprendizado, sem notas punitivas ou classificação excludente.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border-2 border-amber-300 rounded-2xl p-5 space-y-2 shadow-xs">
+                    <div className="flex items-center gap-2 text-amber-950 font-bold text-base">
+                      <span className="text-xl">📨</span>
+                      <span>Canal Oficial de Envio</span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      Envio de todo o material para o e-mail oficial{' '}
+                      <a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">
+                        esdhubem@proton.me
+                      </a>{' '}
+                      com as declarações devidamente preenchidas.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Box de Instruções de Envio do Portfólio */}
+                <div className="bg-gradient-to-br from-amber-50 via-white to-amber-50/60 border-2 border-amber-300 rounded-2xl p-5 sm:p-6 space-y-3 shadow-xs">
+                  <span className="font-extrabold text-xs uppercase tracking-wider text-amber-950 flex items-center gap-2">
+                    <span>📋</span>
+                    <span>Documentos que Acompanham o Portfólio</span>
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    O portfólio deve ser enviado para a escola pelo e-mail:{' '}
+                    <a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">
+                      esdhubem@proton.me
+                    </a>{' '}
+                    juntamente com o <strong>mapa mental</strong>, o <strong>áudio de 3 minutos</strong> explicando o que você aprendeu com o curso e juntamente com a <strong>Declaração de Autorização de Publicação</strong> e a <strong>Declaração de Autoria e Responsabilidade</strong>.
+                  </p>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-600 font-medium italic">
+                  * A análise do portfólio é um ato pedagógico colaborativo, visando aprimorar a escrita, a oratória e a autonomia intelectual de cada aluno da ESDHUBEM.
+                </p>
               </div>
             )}
           </div>
