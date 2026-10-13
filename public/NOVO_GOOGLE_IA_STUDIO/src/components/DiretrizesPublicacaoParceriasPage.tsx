@@ -4112,14 +4112,27 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                   {/* Grid Inferior: Quem avalia + Sobre revisão por pares */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                    {/* Quem avalia */}
+                    {/* Quem analisa os portfólios dos alunos? */}
                     <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2">
                       <div className="flex items-center gap-2 font-bold text-slate-900 text-sm">
                         <GraduationCap className="w-4 h-4 text-blue-700 shrink-0" />
-                        <span>Quem avalia</span>
+                        <span>Quem analisa os portfólios dos alunos?</span>
                       </div>
                       <p className="text-xs text-slate-600 leading-relaxed">
-                        A avaliação é realizada pelo corpo docente da ESDHUBEM e docentes auxiliares contratados, conforme os critérios próprios de cada nível de certificação.
+                        A análise é realizada pelo corpo docente da ESDHUBEM e docentes auxiliares contratados, conforme os critérios próprios de cada nível de certificação.{' '}
+                        {onNavigate ? (
+                          <button
+                            type="button"
+                            onClick={() => onNavigate('diretrizes-avaliacao-manuscritos')}
+                            className="font-bold text-[#00227B] hover:underline cursor-pointer inline text-left"
+                          >
+                            Consulte a página das Diretrizes de Análise dos Portfólios dos estudantes.
+                          </button>
+                        ) : (
+                          <span className="font-bold text-[#00227B]">
+                            Consulte a página das Diretrizes de Análise dos Portfólios dos estudantes.
+                          </span>
+                        )}
                       </p>
                     </div>
 
