@@ -1799,7 +1799,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   />
                   <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
                     <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-                    <span>Vídeo 5: Diretrizes práticas e passo a passo para a estruturação do artigo de investigação e manuscrito</span>
+                    <span>Vídeo 5: Diretrizes práticas e passo a passo para a estruturação do artigo de investigação</span>
                   </p>
                 </div>
 
@@ -1813,7 +1813,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
                   
                   <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    Após a confirmação da participação e o pagamento da taxa correspondente, o autor receberá material de orientação detalhado e vídeo explicativo com diretrizes para estruturação e preparação do artigo de investigação / manuscrito de conclusão.
+                    Após a confirmação da participação e o pagamento da taxa correspondente, o autor receberá material de orientação detalhado e vídeo explicativo com diretrizes para estruturação e preparação do artigo de investigação.
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs">
@@ -2866,7 +2866,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <p>O estudante não é obrigado a realizar todos os níveis.</p>
               <p>Pode concluir o curso e permanecer no <strong>Bronze</strong>.</p>
               <p>Pode escolher escrever um artigo e avançar para o <strong>Prata</strong>.</p>
-              <p>Pode desenvolver um manuscrito e seguir para o <strong>Ouro</strong>.</p>
+              <p>Pode desenvolver um artigo de investigação e seguir para o <strong>Ouro</strong>.</p>
               <p>Pode transformar seu conhecimento em um livro e alcançar o <strong>Diamante</strong>.</p>
               <p className="pt-2 font-medium text-white">
                 Cada percurso corresponde a uma forma diferente de transformar aprendizagem em produção.
@@ -3298,7 +3298,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                             <div className="flex items-start gap-1.5">
                               <span className="text-base shrink-0">🔬</span>
                               <div>
-                                <span>Manuscrito / Artigo de Investigação</span>
+                                <span>Artigo de Investigação</span>
                                 <span className="block text-xs font-semibold text-amber-700">(Ouro)</span>
                               </div>
                             </div>
