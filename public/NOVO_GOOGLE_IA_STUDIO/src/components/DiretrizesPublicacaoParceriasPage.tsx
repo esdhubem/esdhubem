@@ -3973,7 +3973,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         <span>O que define aprovação</span>
                       </div>
                       <p className="text-xs text-slate-600 leading-relaxed">
-                        A aprovação se dá pelo cumprimento integral dos requisitos específicos de cada nível, com entrega do trabalho desenvolvido de acordo com as orientações recebidas e em comum acordo entre autor e escola. A avaliação verifica:
+                        A aprovação se dá pelo cumprimento integral dos requisitos específicos de cada nível, com entrega do trabalho desenvolvido de acordo com as orientações recebidas e em comum acordo entre autor e escola. A análise verifica:
                       </p>
                       <ul className="text-xs text-slate-700 space-y-2 pl-1">
                         <li className="flex items-start gap-2">
@@ -3995,6 +3995,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         <li className="flex items-start gap-2">
                           <span className="text-emerald-600 font-bold">•</span>
                           <span>Uso responsável de fontes e direitos autorais</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 font-bold">•</span>
+                          <span>Verificação se houve plágio ou cópia literal de inteligência artificial</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-emerald-600 font-bold">•</span>
