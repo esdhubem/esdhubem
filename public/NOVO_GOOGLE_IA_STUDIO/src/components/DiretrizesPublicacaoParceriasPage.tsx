@@ -159,6 +159,7 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: '12', titulo: '12 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
   { id: 'certificacao-valores', titulo: 'Certificação e Valores (Modalidades, Requisitos & Percursos)' },
   { id: 'autoria-responsabilidade', titulo: 'Autoria e Responsabilidade' },
+  { id: 'uso-responsavel-ia', titulo: 'Uso Responsável de Inteligência Artificial' },
   { id: '13', titulo: '13 - Avisos Importantes sobre Publicação' },
   { id: '14', titulo: '14 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
   { id: '15', titulo: '15 - Prazos de Análise e Devolutiva' },
@@ -204,7 +205,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     'como-publicar-zenodo': false,
     'registro-atualizacao-versoes': false,
     'certificacao-valores': false,
-    'autoria-responsabilidade': false
+    'autoria-responsabilidade': false,
+    'uso-responsavel-ia': false
   });
 
   const toggleSection = (id: string) => {
@@ -243,7 +245,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       'como-publicar-zenodo': true,
       'registro-atualizacao-versoes': true,
       'certificacao-valores': true,
-      'autoria-responsabilidade': true
+      'autoria-responsabilidade': true,
+      'uso-responsavel-ia': true
     });
   };
 
@@ -276,7 +279,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       'como-publicar-zenodo': false,
       'registro-atualizacao-versoes': false,
       'certificacao-valores': false,
-      'autoria-responsabilidade': false
+      'autoria-responsabilidade': false,
+      'uso-responsavel-ia': false
     });
   };
 
@@ -2725,58 +2729,128 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
             {openSections['autoria-responsabilidade'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
+                <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm max-w-4xl mx-auto">
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-2xl">📄</span>
+                    <h4 className="font-extrabold text-[#011049] text-base sm:text-lg uppercase tracking-wide">
+                      AUTORIA E RESPONSABILIDADE
+                    </h4>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    A produção intelectual pertence ao seu autor. A ESDHUBEM oferece orientação, modelos e critérios para desenvolvimento e publicação, mas não substitui o autor na criação da obra.
+                  </p>
+
+                  <div className="space-y-2">
+                    <p className="text-xs sm:text-sm text-slate-900 font-bold">
+                      O autor é responsável pelo conteúdo que apresenta e assina, incluindo:
+                    </p>
+                    <ul className="text-xs sm:text-sm text-slate-700 space-y-1.5 list-disc list-inside pl-1">
+                      <li>Informações, argumentos e interpretações;</li>
+                      <li>Referências e citações;</li>
+                      <li>Imagens e materiais utilizados;</li>
+                      <li>Respeito aos direitos de terceiros;</li>
+                      <li>Revisão final da produção.</li>
+                    </ul>
+                  </div>
+
+                  <p className="text-[12px] sm:text-xs text-slate-500 italic pt-2 border-t border-slate-100 leading-relaxed">
+                    A publicação de uma obra pela ESDHUBEM não significa que a instituição endosse automaticamente todas as opiniões, interpretações ou conclusões apresentadas pelo autor.
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SANFONA: Uso Responsável de Inteligência Artificial */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-uso-responsavel-ia"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('uso-responsavel-ia')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['uso-responsavel-ia']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
+                  <span className="text-xl">🤖</span>
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
+                    Ética, Transparência &amp; Ferramentas Tecnológicas
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
+                    Uso Responsável de Inteligência Artificial
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['uso-responsavel-ia'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
+                    openSections['uso-responsavel-ia'] ? 'rotate-180 bg-[#011049] text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['uso-responsavel-ia'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Card 1: Autoria e Responsabilidade */}
-                  <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-2xl">📄</span>
-                      <h4 className="font-extrabold text-[#011049] text-base sm:text-lg uppercase tracking-wide">
-                        AUTORIA E RESPONSABILIDADE
-                      </h4>
-                    </div>
+                  {/* Card 1: Inteligência Artificial e Autoria */}
+                  <div className="bg-white border-2 border-purple-200/80 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2.5">
+                        <Sparkles className="w-5 h-5 text-purple-600" />
+                        <h4 className="font-extrabold text-[#011049] text-base sm:text-lg uppercase tracking-wide">
+                          INTELIGÊNCIA ARTIFICIAL E AUTORIA
+                        </h4>
+                      </div>
 
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      A produção intelectual pertence ao seu autor. A ESDHUBEM oferece orientação, modelos e critérios para desenvolvimento e publicação, mas não substitui o autor na criação da obra.
-                    </p>
-
-                    <div className="space-y-2">
-                      <p className="text-xs sm:text-sm text-slate-900 font-bold">
-                        O autor é responsável pelo conteúdo que apresenta e assina, incluindo:
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        Ferramentas de inteligência artificial poderão ser utilizadas como apoio à produção, de acordo com as orientações da ESDHUBEM. Podem auxiliar na organização de ideias, elaboração de estruturas, revisão textual e aprimoramento da linguagem.
                       </p>
-                      <ul className="text-xs sm:text-sm text-slate-700 space-y-1.5 list-disc list-inside pl-1">
-                        <li>Informações, argumentos e interpretações;</li>
-                        <li>Referências e citações;</li>
-                        <li>Imagens e materiais utilizados;</li>
-                        <li>Respeito aos direitos de terceiros;</li>
-                        <li>Revisão final da produção.</li>
-                      </ul>
+
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        Entretanto, o autor continua responsável por compreender, verificar e revisar aquilo que publica. Informações, referências, dados ou resultados não devem ser apresentados como verdadeiros sem verificação adequada.
+                      </p>
                     </div>
 
-                    <p className="text-[12px] sm:text-xs text-slate-500 italic pt-2 border-t border-slate-100 leading-relaxed">
-                      A publicação de uma obra pela ESDHUBEM não significa que a instituição endosse automaticamente todas as opiniões, interpretações ou conclusões apresentadas pelo autor.
-                    </p>
+                    <div className="bg-purple-50/80 border border-purple-200/80 p-4 rounded-2xl text-xs sm:text-sm text-purple-950 font-medium">
+                      A tecnologia pode auxiliar a produção. A autoria e a responsabilidade permanecem com o autor.
+                    </div>
                   </div>
 
                   {/* Card 2: Uso Responsável de Inteligência Artificial */}
-                  <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-2xl">🤖</span>
-                      <h4 className="font-extrabold text-[#011049] text-base sm:text-lg tracking-normal">
-                        Uso Responsável de Inteligência Artificial
-                      </h4>
+                  <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-2xl">🤖</span>
+                        <h4 className="font-extrabold text-[#011049] text-base sm:text-lg tracking-normal">
+                          Uso Responsável de Inteligência Artificial
+                        </h4>
+                      </div>
+
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        A tecnologia é ferramenta de apoio, <strong>não de substituição</strong> do pensamento e criação humana.
+                      </p>
+
+                      <ul className="text-xs sm:text-sm text-slate-700 space-y-3 list-disc list-inside pl-1">
+                        <li>A responsabilidade sobre o conteúdo é sempre do autor;</li>
+                        <li>
+                          Se utilizou IA em qualquer etapa, <strong>declare com transparência</strong> como foi aplicada;
+                        </li>
+                        <li>O uso não declarado poderá impedir ou cancelar a publicação.</li>
+                      </ul>
                     </div>
-
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      A tecnologia é ferramenta de apoio, <strong>não de substituição</strong> do pensamento e criação humana.
-                    </p>
-
-                    <ul className="text-xs sm:text-sm text-slate-700 space-y-2.5 list-disc list-inside pl-1">
-                      <li>A responsabilidade sobre o conteúdo é sempre do autor;</li>
-                      <li>
-                        Se utilizou IA em qualquer etapa, <strong>declare com transparência</strong> como foi aplicada;
-                      </li>
-                      <li>O uso não declarado poderá impedir ou cancelar a publicação.</li>
-                    </ul>
                   </div>
                 </div>
               </div>
