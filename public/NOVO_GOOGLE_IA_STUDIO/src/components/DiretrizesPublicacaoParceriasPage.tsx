@@ -530,10 +530,35 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 A <strong className="text-[#00227B] font-bold">ESDHUBEM</strong> oferece ao aluno um sistema de aprendizagem na área do desenvolvimento humano e bem-estar que contribui para o desenvolvimento da memorização, raciocínio, escrita e oralidade, com a finalidade de proporcionar ao aluno chance de transformar sua experiência de aprendizagem em uma produção escrita e autoral.
               </p>
               <p>
-                Após concluir as videoaulas, o estudante deverá entrar em contato com a ESDHUBEM via WhatsApp e comunicar nesse passo a passo: 👉 qual modalidade de produção pretende desenvolver 👉 pagar a taxa do tipo de certificado escolhido (Bronze, Prata, Ouro ou Diamante) 👉 seguir com a preparação do seu portfólio — um portfólio que é comum a todos os tipos de certificados: <strong>A Tríade da Assimilação e Comunicação</strong>, composta por 3 tipos de trabalhos. O primeiro é a criação de um mapa mental de acordo com os conceitos do curso percorrido; o segundo é um texto verbete de 500 a 800 palavras; e o terceiro é um áudio explicando o que aprendeu. Em seguida, faz o envio do portfólio via e-mail <a href="mailto:esdhubem@gmail.com" className="text-blue-700 font-bold underline hover:text-blue-900">esdhubem@gmail.com</a>, que seguirá para aprovação, publicação no wiki enciclopédia da ESDHUBEM e lançamento do Certificado Bronze para quem escolheu este tipo de certificado.
+                Após concluir as videoaulas, o estudante deverá entrar em contato com a ESDHUBEM via WhatsApp e comunicar nesse passo a passo: 👉 qual modalidade de produção pretende desenvolver 👉 pagar a taxa do tipo de certificado escolhido (Bronze, Prata, Ouro ou Diamante) 👉 seguir com a preparação do seu portfólio.
               </p>
               <p>
-                Se o certificado escolhido foi Prata, Ouro ou Diamante, então o aluno deverá ainda avançar para outro trabalho: a criação de um artigo de blog, um artigo de investigação ou um livro. A partir dessa escolha, receberá as orientações específicas para elaboração do tipo de trabalho que quer realizar. Quando o aluno concluir o seu manuscrito, deve fazer um registro nas plataformas internacionais OSF (para verbete, artigo de blog e livro) ou Zenodo (para artigo investigativo). As plataformas de repositórios gratuitas e internacionais registram seus trabalhos, proporcionando mais tranquilidade autoral. Por fim, envia para a escola o link de publicação para que a ESDHUBEM possa avaliar, publicar no site da escola e emitir o certificado associado ao trabalho.
+                O portfólio é o trabalho fundamental desenvolvido pelo estudante para ter direito a receber qualquer tipo de certificados da ESDHUBEM.
+              </p>
+              <div className="space-y-2">
+                <p>
+                  Esse portfólio chama-se <strong>"A Tríade da Organização, Assimilação e Comunicação"</strong>, que é composto por 3 tipos de atividades:
+                </p>
+                <ul className="space-y-1.5 pl-2 text-sm sm:text-base">
+                  <li className="flex items-start gap-2">
+                    <span>✔️</span>
+                    <span><strong>A primeira atividade</strong> é a criação de um mapa mental do que foi assimilado do conteúdo do curso percorrido;</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span>✔️</span>
+                    <span><strong>A segunda atividade</strong> é um texto verbete de 500 a 800 palavras;</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span>✔️</span>
+                    <span><strong>A terceira atividade</strong> é um áudio explicando o que aprendeu.</span>
+                  </li>
+                </ul>
+              </div>
+              <p>
+                Após o estudante concluir as atividades, faz o envio do portfólio via e-mail <a href="mailto:esdhubem@gmail.com" className="text-blue-700 font-bold underline hover:text-blue-900">esdhubem@gmail.com</a>, que seguirá para a análise por parte dos nossos tutores de acordo com as diretrizes de análise da ESDHUBEM, publicação no wiki enciclopédia da ESDHUBEM e lançamento do Certificado Bronze para quem escolheu este tipo de certificado. Os estudantes que escolheram outros tipos de certificado não recebem o certificado bronze, pois ainda seguirão com mais uma etapa que chamamos de <strong>Quadrilátero da Organização, Assimilação, Comunicação e Produção</strong>, onde o estudante vai produzir mais um trabalho de acordo com o tipo de certificado que quer receber: 🏆 <strong>Certificado Prata:</strong> entrega um artigo de blog; 🏆 <strong>Certificado Ouro:</strong> um artigo investigativo; 🏆 <strong>Certificado Diamante:</strong> um livro.
+              </p>
+              <p>
+                A partir dessa escolha, receberá as orientações específicas para elaboração do tipo de trabalho que quer realizar. Quando o aluno concluir o seu manuscrito, deve fazer um registro nas plataformas internacionais OSF (para verbete, artigo de blog e livro) ou Zenodo (para artigo investigativo). As plataformas de repositórios gratuitas e internacionais registram seus trabalhos, proporcionando mais tranquilidade autoral. Por fim, envia para a escola o link de publicação para que a ESDHUBEM possa avaliar, publicar no site da escola e emitir o certificado associado ao trabalho.
               </p>
             </div>
           </div>
