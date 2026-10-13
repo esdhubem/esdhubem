@@ -147,6 +147,7 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: '1', titulo: '1 - Apresentação das Diretrizes de Publicação' },
   { id: '2', titulo: '2 - Declarações de autorização e de autoria' },
   { id: 'triade', titulo: 'Metodologia: O que é a Tríade da Organização, Assimilação e Comunicação' },
+  { id: 'quadrilatero', titulo: 'Metodologia: O que é o Quadrilátero da Organização, Assimilação, Comunicação e Produção' },
   { id: '3', titulo: '3 - Certificação Bronze - Publicação de Verbete' },
   { id: '4', titulo: '4 - Guia Completo para publicar o Verbete - Nível Bronze' },
   { id: '5', titulo: '5 - Certificação Prata - Publicação de Artigo de Blog' },
@@ -181,6 +182,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '1': true,
     '2': false,
     'triade': false,
+    'quadrilatero': false,
     '3': false,
     '4': false,
     '5': false,
@@ -221,6 +223,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '1': true,
       '2': true,
       'triade': true,
+      'quadrilatero': true,
       '3': true,
       '4': true,
       '5': true,
@@ -255,6 +258,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '1': false,
       '2': false,
       'triade': false,
+      'quadrilatero': false,
       '3': false,
       '4': false,
       '5': false,
@@ -964,6 +968,284 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                 <p className="text-xs sm:text-sm text-slate-600 font-medium italic">
                   * O trabalho chega às mãos da coordenação com comprovante de registro no OSF, resguardando integralmente a anterioridade e a autoria do aluno.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO DO QUADRILÁTERO: Quadrilátero da Organização, Assimilação, Comunicação e Produção */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-quadrilatero"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('quadrilatero')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['quadrilatero']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-indigo-700 via-blue-800 to-indigo-950 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-indigo-950">
+                  💠 4
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-900 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                    Metodologia Pedagógica Avançada ESDHUBEM • Válida para Níveis Prata, Ouro e Diamante
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
+                    O que é o Quadrilátero da Organização, Assimilação, Comunicação e Produção
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['quadrilatero'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-900 transition-transform duration-300 ${
+                    openSections['quadrilatero'] ? 'rotate-180 bg-indigo-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['quadrilatero'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100 border border-indigo-300 text-indigo-950 text-xs font-bold tracking-wide uppercase shadow-2xs">
+                    <Sparkles className="w-4 h-4 text-indigo-600" />
+                    <span>Destaque Metodológico Oficial da ESDHUBEM • Autoria Ampliada</span>
+                  </div>
+
+                  <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                    O que é o Quadrilátero da Organização, Assimilação, Comunicação e Produção
+                  </h2>
+                  <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+                    <p>
+                      O <strong className="text-[#00227B]">Quadrilátero da Organização, Assimilação, Comunicação e Produção</strong> é o desdobramento metodológico avançado da ESDHUBEM para os estudantes que pretendem alcançar as certificações superiores de mérito (<strong className="text-indigo-950 font-bold">Prata, Ouro e Diamante</strong>).
+                    </p>
+                    <p>
+                      Enquanto a Tríade estabelece a base fundamental (composta por Mapa Mental, Verbete Enciclopédico e Áudio explicativo), o <strong>Quadrilátero</strong> introduz o quarto vértice decisivo: a <strong>Produção Autoral Ampliada</strong>, que certifica a autonomia, a pesquisa e a capacidade do estudante de produzir obras científicas e editoriais de impacto.
+                    </p>
+                    <p>
+                      A quarta etapa (Produção) desdobra-se em conformidade com o tipo de certificado escolhido:
+                    </p>
+                    <ul className="space-y-1.5 pl-2 text-sm sm:text-base">
+                      <li className="flex items-start gap-2">
+                        <span>🏆</span>
+                        <span><strong>Certificado Prata:</strong> entrega um <strong>artigo de blog</strong> (1.200 a 2.500 palavras) voltado à divulgação do conhecimento e indexação orgânica (SEO);</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span>🏆</span>
+                        <span><strong>Certificado Ouro:</strong> desenvolve um <strong>artigo investigativo</strong> estruturado no repositório internacional Zenodo com <strong>DOI permanente</strong>;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span>🏆</span>
+                        <span><strong>Certificado Diamante:</strong> escreve uma obra integral de grande porte, um <strong>livro autoral</strong> (mínimo de 50 páginas) registrado no repositório OSF e veiculado na Livraria ESDHUBEM.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Diagrama em Quadrilátero - Requisitos do Quadrilátero */}
+                <div className="bg-gradient-to-b from-blue-50/70 via-white to-indigo-50/40 border-2 border-indigo-300 rounded-2xl p-4 sm:p-6 shadow-sm space-y-6">
+                  {/* Cabeçalho */}
+                  <div className="flex items-center justify-between flex-wrap gap-2 border-b border-indigo-200/80 pb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-indigo-700 text-white flex items-center justify-center font-black text-xs shadow-xs">
+                        ◆
+                      </div>
+                      <span className="font-extrabold text-xs sm:text-sm uppercase tracking-wider text-indigo-950">
+                        Requisitos do Quadrilátero da Organização, Assimilação, Comunicação e Produção
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-bold text-indigo-900 bg-indigo-100/90 px-3 py-1 rounded-full border border-indigo-300">
+                      Estrutura em Quadrilátero Pedagógico
+                    </span>
+                  </div>
+
+                  {/* Desenho Gráfico do Quadrilátero Pedagógico */}
+                  <div className="flex justify-center">
+                    <div className="w-full max-w-lg bg-white border border-indigo-200 rounded-2xl p-3 sm:p-5 shadow-xs">
+                      <svg viewBox="0 0 380 280" className="w-full h-auto" fill="none">
+                        <defs>
+                          <linearGradient id="quadGradientSanfona" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.8" />
+                            <stop offset="50%" stopColor="#ede9fe" stopOpacity="0.6" />
+                            <stop offset="100%" stopColor="#e0e7ff" stopOpacity="0.4" />
+                          </linearGradient>
+                        </defs>
+                        {/* Polígono do Quadrilátero (Losango / Diamante Geométrico) */}
+                        <polygon points="190,32 335,140 190,248 45,140" fill="url(#quadGradientSanfona)" stroke="#4338ca" strokeWidth="2.5" strokeDasharray="5 5" />
+                        
+                        {/* Linhas Internas até o Centro */}
+                        <line x1="190" y1="32" x2="190" y2="140" stroke="#6366f1" strokeWidth="1.5" strokeDasharray="3 3" />
+                        <line x1="190" y1="248" x2="190" y2="140" stroke="#6366f1" strokeWidth="1.5" strokeDasharray="3 3" />
+                        <line x1="45" y1="140" x2="190" y2="140" stroke="#6366f1" strokeWidth="1.5" strokeDasharray="3 3" />
+                        <line x1="335" y1="140" x2="190" y2="140" stroke="#6366f1" strokeWidth="1.5" strokeDasharray="3 3" />
+
+                        {/* Centro do Quadrilátero */}
+                        <circle cx="190" cy="140" r="30" fill="#ffffff" stroke="#3730a3" strokeWidth="2" />
+                        <text x="190" y="132" textAnchor="middle" fontSize="7.5" fontWeight="900" fill="#312e81">PRODUÇÃO</text>
+                        <text x="190" y="143" textAnchor="middle" fontSize="7.5" fontWeight="900" fill="#312e81">AUTORAL</text>
+                        <text x="190" y="153" textAnchor="middle" fontSize="6.5" fontWeight="bold" fill="#4f46e5">EXPANDIDA</text>
+
+                        {/* Vértice 1: Topo (Mapa Mental) */}
+                        <circle cx="190" cy="32" r="18" fill="#3730a3" stroke="#ffffff" strokeWidth="3" />
+                        <text x="190" y="38" textAnchor="middle" fontSize="13">🧠</text>
+                        <text x="190" y="62" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#312e81">1. MAPA MENTAL</text>
+
+                        {/* Vértice 2: Esquerda (Verbete) */}
+                        <circle cx="45" cy="140" r="18" fill="#3730a3" stroke="#ffffff" strokeWidth="3" />
+                        <text x="45" y="146" textAnchor="middle" fontSize="13">✍️</text>
+                        <text x="50" y="172" textAnchor="start" fontSize="9" fontWeight="bold" fill="#312e81">2. VERBETE</text>
+
+                        {/* Vértice 3: Direita (Áudio) */}
+                        <circle cx="335" cy="140" r="18" fill="#3730a3" stroke="#ffffff" strokeWidth="3" />
+                        <text x="335" y="146" textAnchor="middle" fontSize="13">🎙️</text>
+                        <text x="330" y="172" textAnchor="end" fontSize="9" fontWeight="bold" fill="#312e81">3. ÁUDIO 1 MIN</text>
+
+                        {/* Vértice 4: Base (Produção Autoral Específica) */}
+                        <circle cx="190" cy="248" r="18" fill="#d97706" stroke="#ffffff" strokeWidth="3" />
+                        <text x="190" y="254" textAnchor="middle" fontSize="13">🏆</text>
+                        <text x="190" y="228" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#b45309">4. PRODUÇÃO AUTORAL</text>
+                        <text x="190" y="275" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#475569">(Artigo de Blog • Investigativo • Livro)</text>
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Organização dos 4 Vértices com Cards Explicativos */}
+                  <div className="space-y-4">
+                    {/* Linha Superior: Vértice 1 */}
+                    <div className="max-w-xl mx-auto">
+                      <div className="bg-white border-2 border-indigo-400 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all text-left sm:text-center relative overflow-hidden">
+                        <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-600 to-indigo-800" />
+                        <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-indigo-100 text-indigo-900 text-[10px] font-black uppercase tracking-wider mb-2 border border-indigo-200">
+                          ▲ Vértice 1 • Organização &amp; Síntese Visual (Feito à Mão)
+                        </span>
+                        <div className="flex items-center sm:justify-center gap-2 text-indigo-950 font-bold text-sm sm:text-base mb-1.5">
+                          <span className="text-xl">🧠</span>
+                          <span>Mapa Mental do Conteúdo (Feito à Mão)</span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          <strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado à mão estruturando os conceitos centrais, esquemas cognitivos e conexões pedagógicas da aula.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Linha Central: Vértice 2 (Esquerda) e Vértice 3 (Direita) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* Vértice 2 */}
+                      <div className="bg-white border-2 border-indigo-300 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+                        <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-indigo-500 to-blue-400" />
+                        <div>
+                          <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-indigo-100 text-indigo-900 text-[10px] font-black uppercase tracking-wider mb-2 border border-indigo-200">
+                            ◀ Vértice 2 • Assimilação &amp; Estrutura Conceitual (Escrito à Mão)
+                          </span>
+                          <div className="flex items-center gap-2 text-indigo-950 font-bold text-sm sm:text-base mb-1.5">
+                            <span className="text-xl">✍️</span>
+                            <span>Verbete Enciclopédico (500 a 800 palavras)</span>
+                          </div>
+                          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <strong>Verbete Enciclopédico:</strong> Texto conceitual e informativo em norma-padrão, escrito à mão, explicando o significado, o contexto histórico e a aplicação do tema.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Vértice 3 */}
+                      <div className="bg-white border-2 border-indigo-300 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+                        <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-400 to-indigo-500" />
+                        <div>
+                          <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-indigo-100 text-indigo-900 text-[10px] font-black uppercase tracking-wider mb-2 border border-indigo-200">
+                            ▶ Vértice 3 • Comunicação &amp; Retenção Oral
+                          </span>
+                          <div className="flex items-center gap-2 text-indigo-950 font-bold text-sm sm:text-base mb-1.5">
+                            <span className="text-xl">🎙️</span>
+                            <span>Áudio Explicativo de 1 Minuto</span>
+                          </div>
+                          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <strong>Áudio Explicativo:</strong> Gravação de voz de 60 segundos sintetizando o conceito oralmente com clareza (Técnica Feynman de retenção).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Linha Inferior: Vértice 4 (Produção Autoral Ampliada) */}
+                    <div className="max-w-3xl mx-auto w-full">
+                      <div className="bg-gradient-to-br from-amber-50/90 via-white to-amber-50/60 border-2 border-amber-400 rounded-2xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-all relative overflow-hidden">
+                        <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-400 via-amber-600 to-amber-400" />
+                        <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[10px] font-black uppercase tracking-wider border border-amber-300">
+                            ▼ Vértice 4 • Produção Autoral Específica (Prata, Ouro ou Diamante)
+                          </span>
+                          <span className="text-xs font-bold text-amber-800 bg-amber-200/60 px-2.5 py-0.5 rounded-full">
+                            Autoria Avançada
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 text-amber-950 font-black text-base sm:text-lg mb-2">
+                          <span className="text-2xl">🏆</span>
+                          <span>4º Vértice: Produção Autoral Expandida por Nível de Certificado</span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4">
+                          O aluno produz a obra autoral correspondente à certificação escolhida, que passará por registro internacional e publicação:
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                          <div className="p-3 bg-white border border-slate-200 rounded-xl shadow-2xs space-y-1">
+                            <div className="flex items-center gap-1.5 font-bold text-slate-800 text-sm">
+                              <span>🥈</span>
+                              <span>Prata</span>
+                            </div>
+                            <p className="text-slate-600">
+                              <strong>Artigo de Blog</strong> (1.200 a 2.500 palavras) com foco em autoridade digital e SEO no Blog ESDHUBEM.
+                            </p>
+                          </div>
+                          <div className="p-3 bg-white border border-amber-200 rounded-xl shadow-2xs space-y-1">
+                            <div className="flex items-center gap-1.5 font-bold text-amber-900 text-sm">
+                              <span>🥇</span>
+                              <span>Ouro</span>
+                            </div>
+                            <p className="text-slate-600">
+                              <strong>Artigo Investigativo</strong> com rigor crítico, depositado no Zenodo com registro DOI internacional permanente.
+                            </p>
+                          </div>
+                          <div className="p-3 bg-white border border-cyan-200 rounded-xl shadow-2xs space-y-1">
+                            <div className="flex items-center gap-1.5 font-bold text-cyan-900 text-sm">
+                              <span>💎</span>
+                              <span>Diamante</span>
+                            </div>
+                            <p className="text-slate-600">
+                              <strong>Livro Autoral Completo</strong> (mínimo de 50 páginas) registrado no repositório OSF e divulgado na Livraria ESDHUBEM.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Informações de Registro e Publicação */}
+                  <div className="pt-2 border-t border-indigo-200/80 flex flex-wrap gap-2 text-xs">
+                    <span className="px-3 py-1.5 rounded-lg bg-indigo-100 text-indigo-950 font-semibold border border-indigo-200 flex items-center gap-1.5">
+                      <span>🛡️</span>
+                      <span>Registro de Autoria: OSF ou Zenodo (conforme o formato)</span>
+                    </span>
+                    <span className="px-3 py-1.5 rounded-lg bg-indigo-100 text-indigo-950 font-semibold border border-indigo-200 flex items-center gap-1.5">
+                      <span>📍</span>
+                      <span>Publicação Oficial: Blog, Repositório DOI e Livraria ESDHUBEM</span>
+                    </span>
+                    <span className="px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
+                      <span>🏅</span>
+                      <span>Validação: Certificados Prata, Ouro e Diamante</span>
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-600 font-medium italic">
+                  * O Quadrilátero garante a integridade acadêmica, a rastreabilidade autoral internacional e a consolidação prática do aprendizado do estudante.
                 </p>
               </div>
             )}
