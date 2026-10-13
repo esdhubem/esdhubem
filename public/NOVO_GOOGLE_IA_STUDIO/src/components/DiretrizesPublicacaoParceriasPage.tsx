@@ -1253,16 +1253,47 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     </div>
                   </div>
 
-                  <div className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/80 p-5 rounded-2xl border-2 border-amber-300/80 shadow-xs">
-                    <p>
-                      O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM e deve ser enviado para nós pelo e-mail: <a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">esdhubem@proton.me</a> juntamente com o mapa mental, o áudio de 3 minutos explicando o que você aprendeu com o curso e juntamente com a <strong>Declaração de Autorização de Publicação</strong> e a <strong>Declaração de Autoria e Responsabilidade</strong>.
-                    </p>
-                    <p>
-                      A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional.
-                    </p>
-                    <p className="font-semibold text-slate-900">
-                      Após a aprovação, o artigo será publicado no Blog Oficial da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
-                    </p>
+                  <div className="space-y-3.5 text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/80 p-5 rounded-2xl border-2 border-amber-300/80 shadow-xs">
+                    <div className="space-y-2">
+                      <h5 className="font-bold text-sm sm:text-base text-amber-950 flex items-center gap-2">
+                        <span className="text-base sm:text-lg">🔍</span>
+                        <span>O que é a análise dos portfólios dos estudantes?</span>
+                      </h5>
+                      <p>
+                        Na ESDHUBEM a análise do portfólio é um processo pedagógico onde o manuscrito será analisado segundo o como e o porquê do trabalho desenvolvido, verificando o raciocínio lógico, concordância com o tema do curso, caminhos cognitivos que o estudante percorreu para chegar àquela resposta, compreender a linha de pensamento do estudante, identificar dificuldades específicas e entender onde o aluno tropeçou ou brilhou conceitualmente.
+                      </p>
+                      <p>
+                        Aqui na ESDHUBEM os nossos tutores atuam como um investigador da aprendizagem. Não é nosso objetivo atuar com julgamento ou atribuição de nota. O artigo será analisado conforme as diretrizes editoriais da ESDHUBEM que estão disponíveis na{' '}
+                        {onNavigate ? (
+                          <button
+                            type="button"
+                            onClick={() => onNavigate('diretrizes-avaliacao-manuscritos')}
+                            className="font-bold text-[#00227B] hover:underline cursor-pointer inline"
+                          >
+                            página de diretrizes de avaliação
+                          </button>
+                        ) : (
+                          <span className="font-bold text-[#00227B]">página de diretrizes de avaliação</span>
+                        )}
+                        .
+                      </p>
+                    </div>
+
+                    <div className="pt-2 border-t border-amber-200/80 space-y-2">
+                      <p>
+                        O portfólio deve ser enviado para a escola pelo e-mail:{' '}
+                        <a href="mailto:esdhubem@proton.me" className="font-bold text-[#00227B] hover:underline">
+                          esdhubem@proton.me
+                        </a>{' '}
+                        juntamente com o <strong>mapa mental</strong>, o <strong>áudio de 3 minutos</strong> explicando o que você aprendeu com o curso e juntamente com a <strong>Declaração de Autorização de Publicação</strong> e a <strong>Declaração de Autoria e Responsabilidade</strong>.
+                      </p>
+                      <p>
+                        A aplicação de técnicas de SEO tem como objetivo favorecer a organização e a encontrabilidade do conteúdo nos mecanismos de busca, potencializando seu portfólio profissional.
+                      </p>
+                      <p className="font-semibold text-slate-900">
+                        Após a aprovação, o artigo será publicado no Blog Oficial da ESDHUBEM, com biografia do autor, link público de portfólio e chancela do Selo Prata.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
