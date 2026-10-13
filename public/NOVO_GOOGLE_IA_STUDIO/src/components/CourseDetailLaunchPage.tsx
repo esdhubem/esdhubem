@@ -274,7 +274,7 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
       a: 'Para celebrar o lançamento do nosso novo ecossistema, estamos oferecendo vagas na Turma Fundadora com valores promocionais ancorados em até 70% de desconto em relação ao mercado. Você escolhe o nível desejado (Bronze, Prata, Ouro ou Diamante) de acordo com a sua meta de certificação ou publicação.'
     },
     {
-      q: 'O que é a Metodologia da Tríade da Assimilação Ativa?',
+      q: 'O que é a Metodologia da Tríade da Assimilação e Comunicação?',
       a: 'Em vez de testes automatizados de múltipla escolha onde ninguém avalia nada, o aluno elabora 1 Mapa Mental do curso, escreve 1 síntese à mão (neurociência de retenção profunda) e grava 1 áudio de 1 minuto explicando a ideia central. Isso comprova 100% o aprendizado genuíno e elimina qualquer fraude.'
     },
     {
@@ -515,7 +515,7 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
               </div>
             )}
 
-            {/* Tab: Método da Tríade da Assimilação Ativa */}
+            {/* Tab: Método da Tríade da Assimilação e Comunicação */}
             {activeTab === 'triade' && (
               <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
                 <div className="border-b border-slate-100 pb-5">
@@ -524,7 +524,7 @@ export const CourseDetailLaunchPage: React.FC<CourseDetailLaunchPageProps> = ({
                     <span>Diferencial Exclusivo ESDHUBEM</span>
                   </div>
                   <h3 className="text-xl font-bold text-[#182333]">
-                    O Método da Tríade da Assimilação Ativa
+                    O Método da Tríade da Assimilação e Comunicação
                   </h3>
                   <p className="text-sm text-slate-600 mt-2 leading-relaxed">
                     Aqui você não é um mero espectador passivo clicando em alternativas de múltipla escolha. 

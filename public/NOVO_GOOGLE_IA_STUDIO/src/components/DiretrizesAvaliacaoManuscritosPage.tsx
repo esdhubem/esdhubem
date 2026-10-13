@@ -825,7 +825,7 @@ export const DiretrizesAvaliacaoManuscritosPage: React.FC<DiretrizesAvaliacaoMan
             >
               <BookOpen className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
               <div className="font-bold text-slate-900 text-sm">Diretrizes Pedagógicas</div>
-              <div className="text-xs text-slate-500">Metodologia e Tríade de Assimilação Ativa</div>
+              <div className="text-xs text-slate-500">Metodologia e Tríade da Assimilação e Comunicação</div>
             </button>
 
             <button

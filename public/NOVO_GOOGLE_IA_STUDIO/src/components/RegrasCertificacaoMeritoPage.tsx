@@ -182,7 +182,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Bronze: Aproveitamento Básico</h3>
-                      <span className="text-sm text-amber-800 font-semibold">Tríade da Assimilação Ativa & Verbete Enciclopédico na Wiki</span>
+                      <span className="text-sm text-amber-800 font-semibold">Tríade da Assimilação e Comunicação & Verbete Enciclopédico na Wiki</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
@@ -198,7 +198,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                 {/* Quadro Único Explicativo Completo */}
                 <div className="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    Focado na consolidação prática do aprendizado através da <strong>metodologia pedagógica de Assimilação Ativa</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a tríade da assimilação ativa para publicação na <strong>Wiki da Escola</strong>:
+                    Focado na consolidação prática do aprendizado através da <strong>metodologia pedagógica da Tríade da Assimilação e Comunicação</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a Tríade da Assimilação e Comunicação para publicação na <strong>Wiki da Escola</strong>:
                   </p>
                   
                   <div className="space-y-2.5 pt-2 border-t border-amber-200/60">
@@ -243,7 +243,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Prata: Produção de Conteúdo</h3>
-                      <span className="text-sm text-slate-600 font-semibold">Tríade da Assimilação Ativa + Artigo de Blog (1.200 a 2.500 palavras)</span>
+                      <span className="text-sm text-slate-600 font-semibold">Tríade da Assimilação e Comunicação + Artigo de Blog (1.200 a 2.500 palavras)</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
@@ -258,13 +258,13 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    O estudante entrega a <strong>Tríade da Assimilação Ativa</strong> do curso <strong>MAIS</strong> um artigo de blog aprofundado e estratégico de <strong>1.200 a 2.500 palavras</strong> — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições do <strong>Google (SEO)</strong>. Publicado no Blog Oficial da ESDHUBEM com perfil de autor.
+                    O estudante entrega a <strong>Tríade da Assimilação e Comunicação</strong> do curso <strong>MAIS</strong> um artigo de blog aprofundado e estratégico de <strong>1.200 a 2.500 palavras</strong> — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições do <strong>Google (SEO)</strong>. Publicado no Blog Oficial da ESDHUBEM com perfil de autor.
                   </p>
 
                   <div className="space-y-2.5 pt-2 border-t border-slate-200">
                     <strong className="block text-sm font-bold text-slate-900 uppercase tracking-wide">📌 Requisitos & Entregáveis Obrigatórios:</strong>
                     <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
-                      <li><strong>Entrega da Tríade da Assimilação Ativa:</strong> Mapa mental, verbete enciclopédico para a Wiki e áudio de 1 minuto do curso.</li>
+                      <li><strong>Entrega da Tríade da Assimilação e Comunicação:</strong> Mapa mental, verbete enciclopédico para a Wiki e áudio de 1 minuto do curso.</li>
                       <li><strong>Artigo Autoral de Blog:</strong> Redação aprofundada de <strong>1.200 a 2.500 palavras</strong> estruturada para SEO (títulos H2/H3, estudo prático e referências).</li>
                       <li><strong>Comprovante de Registro no OSF:</strong> Registro de autoria no Open Science Framework garantindo anterioridade e titularidade.</li>
                     </ul>
@@ -294,7 +294,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Ouro: Pesquisa & Preprint</h3>
-                      <span className="text-sm text-amber-700 font-semibold">Tríade da Assimilação Ativa + Manuscrito Científico / DOI</span>
+                      <span className="text-sm text-amber-700 font-semibold">Tríade da Assimilação e Comunicação + Manuscrito Científico / DOI</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
@@ -309,13 +309,13 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    O estudante entrega a <strong>Tríade da Assimilação Ativa</strong> do curso <strong>MAIS</strong> um Trabalho de Conclusão de Curso (TCC) estruturado ou artigo científico de investigação densa, com depósito em plataforma de repositório aberto como Zenodo (CERN) ou OSF, garantindo um código <strong>DOI (Digital Object Identifier)</strong> universal.
+                    O estudante entrega a <strong>Tríade da Assimilação e Comunicação</strong> do curso <strong>MAIS</strong> um Trabalho de Conclusão de Curso (TCC) estruturado ou artigo científico de investigação densa, com depósito em plataforma de repositório aberto como Zenodo (CERN) ou OSF, garantindo um código <strong>DOI (Digital Object Identifier)</strong> universal.
                   </p>
 
                   <div className="space-y-2.5 pt-2 border-t border-amber-200">
                     <strong className="block text-sm font-bold text-amber-950 uppercase tracking-wide">📌 Requisitos & Entregáveis Obrigatórios:</strong>
                     <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
-                      <li><strong>Entrega da Tríade da Assimilação Ativa:</strong> Mapa mental, verbete enciclopédico para a Wiki e áudio de 1 minuto do curso.</li>
+                      <li><strong>Entrega da Tríade da Assimilação e Comunicação:</strong> Mapa mental, verbete enciclopédico para a Wiki e áudio de 1 minuto do curso.</li>
                       <li><strong>Manuscrito de Pesquisa / TCC:</strong> Produção estruturada com ementa acadêmica, introdução, fundamentação teórica e metodologia.</li>
                       <li><strong>Depósito e Atribuição de DOI:</strong> Depósito no repositório Zenodo / OSF gerando DOI permanente para citação no Currículo Lattes.</li>
                     </ul>
@@ -345,7 +345,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Diamante: Autorar e Construir</h3>
-                      <span className="text-sm text-cyan-700 font-semibold">Tríade da Assimilação Ativa + Livro Autoral (Mín. 50 páginas)</span>
+                      <span className="text-sm text-cyan-700 font-semibold">Tríade da Assimilação e Comunicação + Livro Autoral (Mín. 50 páginas)</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
@@ -360,13 +360,13 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-cyan-50/70 border border-cyan-200 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    O nível mais elevado da escala autoral. O estudante entrega a <strong>Tríade da Assimilação Ativa</strong> do curso <strong>MAIS</strong> uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo desenvolvido), com orientação estrutural e registro formal de direitos autorais.
+                    O nível mais elevado da escala autoral. O estudante entrega a <strong>Tríade da Assimilação e Comunicação</strong> do curso <strong>MAIS</strong> uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo desenvolvido), com orientação estrutural e registro formal de direitos autorais.
                   </p>
 
                   <div className="space-y-2.5 pt-2 border-t border-cyan-200">
                     <strong className="block text-sm font-bold text-cyan-950 uppercase tracking-wide">📌 Requisitos & Entregáveis Obrigatórios:</strong>
                     <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
-                      <li><strong>Entrega da Tríade da Assimilação Ativa:</strong> Mapa mental, verbete enciclopédico para a Wiki e áudio de 1 minuto do curso.</li>
+                      <li><strong>Entrega da Tríade da Assimilação e Comunicação:</strong> Mapa mental, verbete enciclopédico para a Wiki e áudio de 1 minuto do curso.</li>
                       <li><strong>Livro Autoral Completo:</strong> Mínimo de 50 páginas de conteúdo textual desenvolvido (sem contar elementos pré e pós-textuais).</li>
                       <li><strong>Registro de Direitos Autorais:</strong> Registro formal da obra na Fundação Biblioteca Nacional (EDA/FBN) e no OSF (Lei nº 9.610/1998).</li>
                       <li><strong>Chancela Diamante:</strong> Destaque no Mural de Livros da ESDHUBEM e QR Code de validação no certificado.</li>

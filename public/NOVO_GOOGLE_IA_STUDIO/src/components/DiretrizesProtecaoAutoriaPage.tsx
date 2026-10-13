@@ -687,7 +687,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </p>
 
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-            A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
+            A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa Tríade da Assimilação e Comunicação juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
           </p>
         </section>
 

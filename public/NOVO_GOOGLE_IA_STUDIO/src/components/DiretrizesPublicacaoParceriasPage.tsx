@@ -146,7 +146,7 @@ interface DiretrizesPublicacaoParceriasPageProps {
 const LISTA_SANFONAS_DIRETRIZES = [
   { id: '1', titulo: '1 - Apresentação das Diretrizes de Publicação' },
   { id: '2', titulo: '2 - Declarações de autorização e de autoria' },
-  { id: 'triade', titulo: 'Metodologia: O que é a Tríade da Assimilação Ativa' },
+  { id: 'triade', titulo: 'Metodologia: O que é a Tríade da Assimilação e Comunicação' },
   { id: '3', titulo: '3 - Certificação Bronze - Publicação de Verbete' },
   { id: '4', titulo: '4 - Guia Completo para publicar o Verbete - Nível Bronze' },
   { id: '5', titulo: '5 - Certificação Prata - Publicação de Artigo de Blog' },
@@ -530,7 +530,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 A <strong className="text-[#00227B] font-bold">ESDHUBEM</strong> oferece ao aluno um sistema de aprendizagem na área do desenvolvimento humano e bem-estar que contribui para o desenvolvimento da memorização, raciocínio, escrita e oralidade, com a finalidade de proporcionar ao aluno uma chance de transformar sua experiência de aprendizagem em uma produção escrita e autoral.
               </p>
               <p>
-                Após concluir as videoaulas, o estudante deverá entrar em contato com a ESDHUBEM via WhatsApp e comunicar qual modalidade de produção pretende desenvolver, pagar a taxa do tipo de certificado escolhido (Bronze, Prata, Ouro ou Diamante) e seguir com a preparação do trabalho — um portfólio que é comum a todos os tipos de certificados: <strong>A Tríade da Assimilação Ativa</strong>, composta por 3 tipos de trabalhos. O primeiro é a criação de um mapa mental de acordo com os conceitos do curso percorrido; o segundo é um texto verbete de 500 a 800 palavras; e o terceiro é um áudio explicando o que aprendeu. Em seguida, faz o envio do portfólio via e-mail <a href="mailto:esdhubem@gmail.com" className="text-blue-700 font-bold underline hover:text-blue-900">esdhubem@gmail.com</a>, que seguirá para aprovação, publicação no wiki enciclopédia da ESDHUBEM e lançamento do Certificado Bronze para quem escolheu este tipo de certificado.
+                Após concluir as videoaulas, o estudante deverá entrar em contato com a ESDHUBEM via WhatsApp e comunicar qual modalidade de produção pretende desenvolver, pagar a taxa do tipo de certificado escolhido (Bronze, Prata, Ouro ou Diamante) e seguir com a preparação do trabalho — um portfólio que é comum a todos os tipos de certificados: <strong>A Tríade da Assimilação e Comunicação</strong>, composta por 3 tipos de trabalhos. O primeiro é a criação de um mapa mental de acordo com os conceitos do curso percorrido; o segundo é um texto verbete de 500 a 800 palavras; e o terceiro é um áudio explicando o que aprendeu. Em seguida, faz o envio do portfólio via e-mail <a href="mailto:esdhubem@gmail.com" className="text-blue-700 font-bold underline hover:text-blue-900">esdhubem@gmail.com</a>, que seguirá para aprovação, publicação no wiki enciclopédia da ESDHUBEM e lançamento do Certificado Bronze para quem escolheu este tipo de certificado.
               </p>
               <p>
                 Se o certificado escolhido foi Prata, Ouro ou Diamante, então o aluno deverá ainda avançar para outro trabalho: a criação de um artigo de blog, um artigo de investigação ou um livro. A partir dessa escolha, receberá as orientações específicas para elaboração do tipo de trabalho que quer realizar. Quando o aluno concluir o seu manuscrito, deve fazer um registro nas plataformas internacionais OSF (para verbete, artigo de blog e livro) ou Zenodo (para artigo investigativo). As plataformas de repositórios gratuitas e internacionais registram seus trabalhos, proporcionando mais tranquilidade autoral. Por fim, envia para a escola o link de publicação para que a ESDHUBEM possa avaliar, publicar no site da escola e emitir o certificado associado ao trabalho.
@@ -685,7 +685,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO DA TRÍADE: Tríade da Assimilação Ativa (Válida para Todos os Níveis) */}
+          {/* SEÇÃO DA TRÍADE: Tríade da Assimilação e Comunicação (Válida para Todos os Níveis) */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-triade"
@@ -707,7 +707,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Metodologia Pedagógica ESDHUBEM • Válida para Todos os Níveis
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    3 - O que é a Tríade da Assimilação Ativa
+                    3 - O que é a Tríade da Assimilação e Comunicação
                   </h3>
                 </div>
               </div>
@@ -733,31 +733,31 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <span>Destaque Metodológico Oficial da ESDHUBEM</span>
                   </div>
 
-                  {/* Tutorial Vídeo - Tríade da Assimilação Ativa */}
+                  {/* Tutorial Vídeo - Tríade da Assimilação e Comunicação */}
                   <div className="space-y-3 py-3 border-y border-amber-200/80">
                     <LazyVideoPlayer
                       id="odysee-iframe-triade-assimilacao"
                       src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-9:4?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
-                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (A Tríade da Assimilação Ativa)"
+                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (A Tríade da Assimilação e Comunicação)"
                       thumbnail="./images/thumb_video_diretrizes_9.webp"
                       fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/fb4830417af8c53f1df8747696760ee2.webp"
-                      badge="Metodologia • Assimilação Ativa"
+                      badge="Metodologia • Assimilação e Comunicação"
                     />
                     <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
                       <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                      <span>Vídeo: Orientações completas sobre a Tríade da Assimilação Ativa e seus três vértices de validação</span>
+                      <span>Vídeo: Orientações completas sobre a Tríade da Assimilação e Comunicação e seus três vértices de validação</span>
                     </p>
                   </div>
 
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                    3 - O que é a Tríade da Assimilação Ativa
+                    3 - O que é a Tríade da Assimilação e Comunicação
                   </h2>
                   <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    A metodologia de <strong className="text-[#00227B]">Assimilação Ativa</strong> é a base pedagógica e epistemológica que estrutura a autoria do estudante e a validação do conhecimento na ESDHUBEM através de certificado por meio da produção de um portfólio. Esse portfólio primordial chamado <strong>Tríade da Assimilação Ativa</strong> é exigido em <strong className="text-amber-900 font-bold">todos os níveis de certificação da ESDHUBEM</strong> (Bronze, Prata, Ouro e Diamante). A criação desse portfólio contribui para o estudante consolidar a aprendizagem por meio de três bases fundamentais, dinâmicas e complementares: síntese visual desenhada à mão, elaboração textual conceitual e a prática da comunicação na apresentação dos conceitos aprendidos via áudio.
+                    A metodologia da <strong className="text-[#00227B]">Tríade da Assimilação e Comunicação</strong> é a base pedagógica e epistemológica que estrutura a autoria do estudante e a validação do conhecimento na ESDHUBEM através de certificado por meio da produção de um portfólio. Esse portfólio primordial chamado <strong>Tríade da Assimilação e Comunicação</strong> é exigido em <strong className="text-amber-900 font-bold">todos os níveis de certificação da ESDHUBEM</strong> (Bronze, Prata, Ouro e Diamante). A criação desse portfólio contribui para o estudante consolidar a aprendizagem por meio de três bases fundamentais, dinâmicas e complementares: síntese visual desenhada à mão, elaboração textual conceitual e a prática da comunicação na apresentação dos conceitos aprendidos via áudio.
                   </p>
                 </div>
 
-                {/* Diagrama em Triângulo - Requisitos da Tríade da Assimilação Ativa */}
+                {/* Diagrama em Triângulo - Requisitos da Tríade da Assimilação e Comunicação */}
                 <div className="bg-gradient-to-b from-amber-50/70 via-white to-amber-50/40 border-2 border-amber-300 rounded-2xl p-4 sm:p-6 shadow-sm space-y-6">
                   {/* Cabeçalho */}
                   <div className="flex items-center justify-between flex-wrap gap-2 border-b border-amber-200/80 pb-3">
@@ -766,7 +766,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         ▲
                       </div>
                       <span className="font-extrabold text-xs sm:text-sm uppercase tracking-wider text-amber-950">
-                        Requisitos da Tríade da Assimilação Ativa
+                        Requisitos da Tríade da Assimilação e Comunicação
                       </span>
                     </div>
                     <span className="text-[11px] font-bold text-amber-900 bg-amber-100/90 px-3 py-1 rounded-full border border-amber-300">
@@ -942,12 +942,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       <h4 className="text-lg sm:text-xl font-bold text-amber-950">
                         BRONZE — APRENDER E CONCEITUAR (ASSIMILAÇÃO ATIVA)
                       </h4>
-                      <span className="text-xs font-semibold text-amber-800">Tríade de Assimilação &amp; Verbete Enciclopédico na Wiki</span>
+                      <span className="text-xs font-semibold text-amber-800">Tríade da Assimilação e Comunicação &amp; Verbete Enciclopédico na Wiki</span>
                     </div>
                   </div>
 
                   <p className="text-slate-700 text-sm leading-relaxed">
-                    O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da criação da <strong>Tríade da Assimilação Ativa</strong> da ESDHUBEM, onde o estudante elabora um <strong>mapa mental</strong>, para demonstrar como absorveu os conceitos do curso, um <strong>Verbete escrito à mão</strong> de forma clara, informativa, objetiva, histórica, baseado nos assuntos do curso assistido, com cerca de 500 a 800 palavras e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola e um <strong>áudio</strong> explicando o que aprendeu a respeito do assunto estudado. O verbete será publicado na wiki enciclopédia e lançado o <strong>certificado Bronze</strong>.
+                    O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da criação da <strong>Tríade da Assimilação e Comunicação</strong> da ESDHUBEM, onde o estudante elabora um <strong>mapa mental</strong>, para demonstrar como absorveu os conceitos do curso, um <strong>Verbete escrito à mão</strong> de forma clara, informativa, objetiva, histórica, baseado nos assuntos do curso assistido, com cerca de 500 a 800 palavras e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola e um <strong>áudio</strong> explicando o que aprendeu a respeito do assunto estudado. O verbete será publicado na wiki enciclopédia e lançado o <strong>certificado Bronze</strong>.
                   </p>
 
                   {/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
@@ -992,7 +992,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                   <div className="bg-amber-50/60 border border-amber-200 rounded-xl p-4 sm:p-5 space-y-3">
                     <span className="font-extrabold text-xs uppercase tracking-wider text-amber-950 block">
-                      Requisitos da Tríade de Assimilação:
+                      Requisitos da Tríade da Assimilação e Comunicação:
                     </span>
                     <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
                       <li className="flex items-start gap-2">
@@ -1055,7 +1055,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                    Documento Integrado • Tríade da Assimilação Ativa
+                    Documento Integrado • Tríade da Assimilação e Comunicação
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
                     4 - Guia Completo para publicar o Verbete - Nível Bronze
@@ -1085,7 +1085,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
 
                   <div className="bg-white border-2 border-blue-200/80 rounded-2xl p-5 sm:p-6 shadow-sm text-slate-800 text-sm sm:text-base leading-relaxed">
                     <p>
-                      Consulte o documento oficial abaixo com o modelo passo a passo, critérios de formatação (500 a 800 palavras), estrutura da Tríade da Assimilação Ativa (verbete, mapa mental e áudio de 1 minuto) e orientações para publicação na Wiki Oficial da ESDHUBEM.
+                      Consulte o documento oficial abaixo com o modelo passo a passo, critérios de formatação (500 a 800 palavras), estrutura da Tríade da Assimilação e Comunicação (verbete, mapa mental e áudio de 1 minuto) e orientações para publicação na Wiki Oficial da ESDHUBEM.
                     </p>
                   </div>
                 </div>
@@ -1175,7 +1175,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
 
                   <p className="text-slate-700 text-sm leading-relaxed">
-                    O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade da Assimilação Ativa</strong> do curso e ainda publicar um texto maior, um artigo autoral aprofundado para publicação no <strong>Blog Oficial da ESDHUBEM</strong>, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
+                    O Prata é destinado ao estudante que deseja demonstrar sua aprendizagem entregando a <strong>Tríade da Assimilação e Comunicação</strong> do curso e ainda publicar um texto maior, um artigo autoral aprofundado para publicação no <strong>Blog Oficial da ESDHUBEM</strong>, com <strong>1.200 a 2.500 palavras</strong> para gerar autoridade e indexação no Google (SEO).
                   </p>
 
                   <p className="text-slate-700 text-sm leading-relaxed">
@@ -1438,7 +1438,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
 
                   <p className="text-slate-700 text-sm leading-relaxed">
-                    O nível Ouro é destinado ao estudante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso e o <strong>artigo de investigação</strong> com registro <strong>DOI</strong>, que será publicado na página de <strong>Repositório de Artigos da ESDHUBEM</strong>.
+                    O nível Ouro é destinado ao estudante que entrega a <strong>Tríade da Assimilação e Comunicação</strong> do curso e o <strong>artigo de investigação</strong> com registro <strong>DOI</strong>, que será publicado na página de <strong>Repositório de Artigos da ESDHUBEM</strong>.
                   </p>
 
                   <p className="text-slate-700 text-sm leading-relaxed">
@@ -2212,12 +2212,12 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <h4 className="text-lg sm:text-xl font-black text-cyan-950">
                       DIAMANTE — AUTORAR E CONSTRUIR
                     </h4>
-                    <span className="text-xs font-bold text-cyan-800">Tríade da Assimilação Ativa + Livro Autoral (Mín. 50 páginas)</span>
+                    <span className="text-xs font-bold text-cyan-800">Tríade da Assimilação e Comunicação + Livro Autoral (Mín. 50 páginas)</span>
                   </div>
                 </div>
 
                 <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                  O nível <strong>Diamante</strong> é destinado ao participante que entrega a <strong>Tríade da Assimilação Ativa</strong> do curso <strong>MAIS</strong> uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo desenvolvido).
+                  O nível <strong>Diamante</strong> é destinado ao participante que entrega a <strong>Tríade da Assimilação e Comunicação</strong> do curso <strong>MAIS</strong> uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo desenvolvido).
                 </p>
 
                 {/* Tutorial Vídeo - Parte 6: Livro Autoral & Nível Diamante */}
@@ -2893,29 +2893,29 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
                         <tr className="hover:bg-amber-50/30">
                           <td className="py-3.5 px-4 font-bold text-amber-950 whitespace-nowrap">🥉 Bronze</td>
-                          <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa</td>
+                          <td className="py-3.5 px-4">Entrega a Tríade da Assimilação e Comunicação</td>
                           <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Enciclopédico (500-800 palavras) + Mapa Mental + Áudio 1 min + registro no OSF</td>
                           <td className="py-3.5 px-4">Publicação na Wiki ESDHUBEM + Certificado com Selo Bronze</td>
                           <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Bronze</td>
                         </tr>
                         <tr className="hover:bg-slate-50">
                           <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
-                          <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Artigo de blog (1.200 a 2.500 palavras)</td>
-                          <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Artigo de Blog (SEO) + Registro OSF</td>
+                          <td className="py-3.5 px-4">Entrega a Tríade da Assimilação e Comunicação + Artigo de blog (1.200 a 2.500 palavras)</td>
+                          <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação e Comunicação + Artigo de Blog (SEO) + Registro OSF</td>
                           <td className="py-3.5 px-4">Publicação no Blog Oficial ESDHUBEM + Certificado com Selo Prata</td>
                           <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
                         </tr>
                         <tr className="hover:bg-amber-50/30">
                           <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
-                          <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + artigo investigativo estruturado no Zenodo com DOI</td>
-                          <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Artigo Investigativo + DOI Permanente</td>
+                          <td className="py-3.5 px-4">Entrega a Tríade da Assimilação e Comunicação + artigo investigativo estruturado no Zenodo com DOI</td>
+                          <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação e Comunicação + Artigo Investigativo + DOI Permanente</td>
                           <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com DOI</td>
                           <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
                         </tr>
                         <tr className="hover:bg-cyan-50/30">
                           <td className="py-3.5 px-4 font-bold text-cyan-900 whitespace-nowrap">💎 Diamante</td>
-                          <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Livro autoral completo (mín. 50 págs) e registro na OSF</td>
-                          <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Livro Autoral + Registro na OSF (O Registro EDA na Biblioteca Nacional, é opcional)</td>
+                          <td className="py-3.5 px-4">Entrega a Tríade da Assimilação e Comunicação + Livro autoral completo (mín. 50 págs) e registro na OSF</td>
+                          <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação e Comunicação + Livro Autoral + Registro na OSF (O Registro EDA na Biblioteca Nacional, é opcional)</td>
                           <td className="py-3.5 px-4">Mural de Livros / Livraria Digital + Certificado Diamante de Honraria Máxima</td>
                           <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Diamante</td>
                         </tr>
@@ -3190,7 +3190,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
                     </p>
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
+                      A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa Tríade da Assimilação e Comunicação juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
                     </p>
                   </div>
 
