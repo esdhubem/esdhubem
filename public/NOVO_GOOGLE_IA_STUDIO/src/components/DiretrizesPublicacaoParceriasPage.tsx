@@ -171,7 +171,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '18': false,
     '19': false,
     '20': false,
-    'plataformas-pesquisa': false
+    'plataformas-pesquisa': false,
+    'como-publicar-osf': false
   });
 
   const toggleSection = (id: string) => {
@@ -204,7 +205,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '18': true,
       '19': true,
       '20': true,
-      'plataformas-pesquisa': true
+      'plataformas-pesquisa': true,
+      'como-publicar-osf': true
     });
   };
 
@@ -231,7 +233,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '18': false,
       '19': false,
       '20': false,
-      'plataformas-pesquisa': false
+      'plataformas-pesquisa': false,
+      'como-publicar-osf': false
     });
   };
 
@@ -3557,101 +3560,136 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       </h5>
                     </div>
 
-                    {/* Plataforma 1: OSF */}
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2 text-cyan-950 font-bold text-sm sm:text-base">
-                        <span>🌐</span>
-                        <h6>OSF — Open Science Framework (Níveis Bronze e Prata)</h6>
-                      </div>
-
-                      <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
-                        <table className="w-full text-left text-xs sm:text-sm">
-                          <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
-                            <tr>
-                              <th className="py-3 px-4 w-1/3">Situação</th>
-                              <th className="py-3 px-4">O que acontece</th>
-                            </tr>
-                          </thead>
-                          <tbody className="divide-y divide-slate-200 bg-white">
-                            <tr>
-                              <td className="py-3 px-4 font-semibold text-slate-900">
-                                Projeto antes de registrar
-                              </td>
-                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
-                                <span className="text-emerald-700 font-semibold">✅ Pode criar, corrigir, renomear quantas vezes quiser</span> — o OSF guarda histórico de versões automaticamente.
-                              </td>
-                            </tr>
-                            <tr>
-                              <td className="py-3 px-4 font-semibold text-slate-900">
-                                Após fazer o REGISTRO
-                              </td>
-                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
-                                <span className="text-rose-700 font-semibold">🛑 O arquivo fica arquivado</span> — não dá para alterar nem substituir silenciosamente. O registro é um "congelamento" daquele momento, garantindo data e autoria.
-                              </td>
-                            </tr>
-                            <tr>
-                              <td className="py-3 px-4 font-semibold text-slate-900">
-                                Para corrigir depois de registrado
-                              </td>
-                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
-                                Cria-se uma atualização formal com justificativa, mas os arquivos originais permanecem. A nova versão é registrada separadamente.
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      {/* Aviso de Transição OSF */}
-                      <div className="bg-amber-50/80 border border-amber-300 rounded-xl p-3.5 sm:p-4 text-xs sm:text-sm text-amber-950 flex items-start gap-2.5">
-                        <span className="text-base shrink-0">⚠️</span>
-                        <p className="leading-relaxed">
-                          <strong>Atenção importante:</strong> O OSF possui fase de transição — projetos deixarão de ser editáveis a partir de fevereiro/2026. Recomendamos ao estudante orientar o registro após a aprovação final.
-                        </p>
-                      </div>
-
-                      {/* Passo a Passo Prático no OSF */}
-                      <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-4 sm:p-5 space-y-3.5">
-                        <h6 className="font-bold text-xs sm:text-sm text-sky-950 uppercase tracking-wider">
-                          PASSO A PASSO PRÁTICO NO OSF (OSF.IO)
-                        </h6>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
-                          {/* Etapa 1 */}
-                          <div className="bg-white border border-sky-200 rounded-xl p-3.5 space-y-2 shadow-xs">
-                            <span className="inline-block text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded">
-                              ETAPA 1: CONTA E CRIAÇÃO
-                            </span>
-                            <ol className="text-xs text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
-                              <li>Acessar <a href="https://osf.io" target="_blank" rel="noopener noreferrer" className="text-cyan-700 underline font-semibold">osf.io</a></li>
-                              <li>Clique em <strong>Sign Up</strong> e crie sua conta com o e-mail preferencial.</li>
-                              <li>Confirme seu endereço de e-mail clicando no link recebido.</li>
-                            </ol>
+                    {/* Plataforma 1: OSF - Sanfona */}
+                    <div
+                      id="sanfona-como-publicar-osf"
+                      className="rounded-2xl border-2 border-slate-200 bg-white shadow-sm overflow-hidden transition-all duration-200"
+                    >
+                      <button
+                        type="button"
+                        onClick={() => toggleSection('como-publicar-osf')}
+                        className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 bg-gradient-to-r from-sky-50/70 via-white to-sky-50/50 hover:bg-sky-100/60 transition-colors cursor-pointer border-b border-slate-200"
+                        aria-expanded={openSections['como-publicar-osf']}
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center font-black text-lg sm:text-xl shadow-xs shrink-0 border border-sky-200">
+                            🌐
                           </div>
-
-                          {/* Etapa 2 */}
-                          <div className="bg-white border border-sky-200 rounded-xl p-3.5 space-y-2 shadow-xs">
-                            <span className="inline-block text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded">
-                              ETAPA 2: PROJETO E UPLOAD
+                          <div className="min-w-0">
+                            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-sky-700 block">
+                              Open Science Framework • Níveis Bronze e Prata
                             </span>
-                            <ol start={4} className="text-xs text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
-                              <li>Na página inicial, clique em <strong>Create New Project</strong>.</li>
-                              <li>Dê um título ao projeto (mesmo título do seu trabalho) e descrição breve.</li>
-                              <li>Salve o projeto — clique em <strong>Files → Upload Files</strong> (formato PDF).</li>
-                            </ol>
-                          </div>
-
-                          {/* Etapa 3 */}
-                          <div className="bg-white border border-sky-200 rounded-xl p-3.5 space-y-2 shadow-xs">
-                            <span className="inline-block text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded">
-                              ETAPA 3: PUBLICAÇÃO E ENVIO
-                            </span>
-                            <ol start={7} className="text-xs text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
-                              <li>Selecione o arquivo final de seu trabalho.</li>
-                              <li>Após upload, clique em <strong>Make Public</strong> — isso torna o registro acessível e datado.</li>
-                              <li>Copie o link público da página do projeto e envie para a ESDHUBEM.</li>
-                            </ol>
+                            <h6 className="font-extrabold text-sm sm:text-base text-slate-900 leading-snug">
+                              Como publicar na plataforma OSF?
+                            </h6>
                           </div>
                         </div>
-                      </div>
+                        <div className="flex items-center gap-2 shrink-0">
+                          <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                            {openSections['como-publicar-osf'] ? 'Recolher' : 'Expandir'}
+                          </span>
+                          <div
+                            className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
+                              openSections['como-publicar-osf'] ? 'rotate-180 bg-[#00227B] text-white' : ''
+                            }`}
+                          >
+                            <ChevronDown className="w-4 h-4" />
+                          </div>
+                        </div>
+                      </button>
+
+                      {openSections['como-publicar-osf'] && (
+                        <div className="p-4 sm:p-6 space-y-4 animate-fadeIn">
+                          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+                            <table className="w-full text-left text-xs sm:text-sm">
+                              <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
+                                <tr>
+                                  <th className="py-3 px-4 w-1/3">Situação</th>
+                                  <th className="py-3 px-4">O que acontece</th>
+                                </tr>
+                              </thead>
+                              <tbody className="divide-y divide-slate-200 bg-white">
+                                <tr>
+                                  <td className="py-3 px-4 font-semibold text-slate-900">
+                                    Projeto antes de registrar
+                                  </td>
+                                  <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                    <span className="text-emerald-700 font-semibold">✅ Pode criar, corrigir, renomear quantas vezes quiser</span> — o OSF guarda histórico de versões automaticamente.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td className="py-3 px-4 font-semibold text-slate-900">
+                                    Após fazer o REGISTRO
+                                  </td>
+                                  <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                    <span className="text-rose-700 font-semibold">🛑 O arquivo fica arquivado</span> — não dá para alterar nem substituir silenciosamente. O registro é um "congelamento" daquele momento, garantindo data e autoria.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td className="py-3 px-4 font-semibold text-slate-900">
+                                    Para corrigir depois de registrado
+                                  </td>
+                                  <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                    Cria-se uma atualização formal com justificativa, mas os arquivos originais permanecem. A nova versão é registrada separadamente.
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          {/* Aviso de Transição OSF */}
+                          <div className="bg-amber-50/80 border border-amber-300 rounded-xl p-3.5 sm:p-4 text-xs sm:text-sm text-amber-950 flex items-start gap-2.5">
+                            <span className="text-base shrink-0">⚠️</span>
+                            <p className="leading-relaxed">
+                              <strong>Atenção importante:</strong> O OSF possui fase de transição — projetos deixarão de ser editáveis a partir de fevereiro/2026. Recomendamos ao estudante orientar o registro após a aprovação final.
+                            </p>
+                          </div>
+
+                          {/* Passo a Passo Prático no OSF */}
+                          <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-4 sm:p-5 space-y-3.5">
+                            <h6 className="font-bold text-xs sm:text-sm text-sky-950 uppercase tracking-wider">
+                              PASSO A PASSO PRÁTICO NO OSF (OSF.IO)
+                            </h6>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+                              {/* Etapa 1 */}
+                              <div className="bg-white border border-sky-200 rounded-xl p-3.5 space-y-2 shadow-xs">
+                                <span className="inline-block text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded">
+                                  ETAPA 1: CONTA E CRIAÇÃO
+                                </span>
+                                <ol className="text-xs text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
+                                  <li>Acessar <a href="https://osf.io" target="_blank" rel="noopener noreferrer" className="text-cyan-700 underline font-semibold">osf.io</a></li>
+                                  <li>Clique em <strong>Sign Up</strong> e crie sua conta com o e-mail preferencial.</li>
+                                  <li>Confirme seu endereço de e-mail clicando no link recebido.</li>
+                                </ol>
+                              </div>
+
+                              {/* Etapa 2 */}
+                              <div className="bg-white border border-sky-200 rounded-xl p-3.5 space-y-2 shadow-xs">
+                                <span className="inline-block text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded">
+                                  ETAPA 2: PROJETO E UPLOAD
+                                </span>
+                                <ol start={4} className="text-xs text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
+                                  <li>Na página inicial, clique em <strong>Create New Project</strong>.</li>
+                                  <li>Dê um título ao projeto (mesmo título do seu trabalho) e descrição breve.</li>
+                                  <li>Salve o projeto — clique em <strong>Files → Upload Files</strong> (formato PDF).</li>
+                                </ol>
+                              </div>
+
+                              {/* Etapa 3 */}
+                              <div className="bg-white border border-sky-200 rounded-xl p-3.5 space-y-2 shadow-xs">
+                                <span className="inline-block text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded">
+                                  ETAPA 3: PUBLICAÇÃO E ENVIO
+                                </span>
+                                <ol start={7} className="text-xs text-slate-700 space-y-1.5 list-decimal list-inside leading-relaxed">
+                                  <li>Selecione o arquivo final de seu trabalho.</li>
+                                  <li>Após upload, clique em <strong>Make Public</strong> — isso torna o registro acessível e datado.</li>
+                                  <li>Copie o link público da página do projeto e envie para a ESDHUBEM.</li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                     {/* Plataforma 2: Zenodo + DOI */}
