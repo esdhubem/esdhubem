@@ -28,13 +28,15 @@ interface RegrasCertificacaoMeritoPageProps {
   onOpenValidator?: () => void;
   onOpenCertificatePreview?: () => void;
   onNavigateToArticles?: () => void;
+  onNavigate?: (page: string) => void;
 }
 
 export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPageProps> = ({
   onBackToHome,
   onOpenValidator,
   onOpenCertificatePreview,
-  onNavigateToArticles
+  onNavigateToArticles,
+  onNavigate
 }) => {
   const [selectedTier, setSelectedTier] = useState<'all' | 'bronze' | 'prata' | 'ouro' | 'diamante'>('all');
 
@@ -621,33 +623,46 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
           <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
             <p>
-              Caso o aluno não concorde com as sugestões e orientações da revisão, tem todo o direito de solicitar o reembolso do valor pago. Nessa situação:
+              Caso não haja acordo com as sugestões e orientações da revisão pedagógica e o estudante opte por não seguir as correções e instruções da equipe docente, a obra não poderá ser publicada nas modalidades superiores (Prata, Ouro ou Diamante). Nessa situação:
             </p>
 
             <ul className="space-y-3 pl-1 text-sm sm:text-base">
               <li className="flex items-start gap-3">
                 <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
                 <span>
-                  <strong className="text-slate-900 font-bold">Será emitido e entregue o Certificado Bronze</strong> de Conclusão de Curso, referente à participação e aproveitamento do conteúdo;
+                  <strong className="text-slate-900 font-bold">Certificado Bronze e Publicação do Verbete:</strong> O estudante recebe o Certificado Bronze de Conclusão de Curso (referente à participação e aproveitamento do conteúdo) e ainda assim pode ter seu Verbete publicado na Wiki ESDHUBEM;
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
                 <span>
-                  <strong className="text-slate-900 font-bold">Do valor total, será descontada</strong> a taxa correspondente à emissão do certificado e ao suporte pedagógico prestado;
+                  <strong className="text-slate-900 font-bold">Restituição do Valor Excedente:</strong> Caso tenha sido pago o valor correspondente ao Nível Prata, Ouro ou Diamante, o valor que excede a certificação do Nível Bronze será integralmente restituído ao aluno em até 7 dias úteis;
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
                 <span>
-                  <strong className="text-slate-900 font-bold">O valor restante</strong> será devolvido em até 7 dias úteis.
+                  <strong className="text-slate-900 font-bold">Cobrança da Taxa Bronze mesmo sem Publicação do Verbete:</strong> Caso o estudante decida não publicar nem mesmo o Verbete, ainda assim será cobrado e retido o valor do Certificado Bronze, pois a escola teve todo o trabalho pedagógico e técnico de avaliar, ler e orientar o manuscrito.
                 </span>
               </li>
             </ul>
 
-            <p className="text-xs sm:text-sm text-slate-500 leading-relaxed pt-2">
-              <strong className="text-slate-700 font-semibold">Justificativa:</strong> O trabalho de análise, leitura e orientação já foi realizado pela equipe — por isso, a emissão do certificado Bronze e o desconto correspondente reconhecem o atendimento e a participação no percurso, devolvendo o que excede esse valor.
-            </p>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-600 space-y-2.5 mt-2">
+              <p>
+                <strong className="text-slate-800 font-semibold">Justificativa:</strong> O trabalho de análise, leitura e orientação já foi realizado pela equipe docente — por isso, a emissão do certificado Bronze e a retenção do valor correspondente reconhecem o atendimento, avaliação e participação no percurso, restituindo com total clareza aquilo que excede esse valor.
+              </p>
+              <p className="pt-2 border-t border-slate-200 text-slate-700">
+                Caso o aluno queira mais esclarecimentos sobre nossos critérios de análise e devolução pedagógica, deve consultar a página:{' '}
+                <button
+                  type="button"
+                  onClick={() => onNavigate ? onNavigate('diretrizes-avaliacao-manuscritos') : undefined}
+                  className="inline-flex items-center gap-1 font-bold text-blue-900 hover:text-blue-700 hover:underline cursor-pointer ml-1"
+                >
+                  <span>Diretrizes de Avaliação de Manuscritos dos Alunos</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </button>
+              </p>
+            </div>
           </div>
         </section>
 
