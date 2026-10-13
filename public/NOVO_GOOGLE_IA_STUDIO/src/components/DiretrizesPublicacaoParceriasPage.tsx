@@ -369,22 +369,23 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </div>
 
-            {/* Lista Simples com Links para o Título de Cada Sanfona */}
+            {/* Lista Simples com Links para o Título de Cada Sanfona - Fundo Branco */}
             <div className="pt-4 border-t border-cyan-400/20 relative z-10 space-y-3">
-              <div className="flex items-center gap-2 text-cyan-200 text-xs font-bold uppercase tracking-wider">
-                <span>Sumário das Sanfonas (Clique para ir ao título correspondente):</span>
-              </div>
-              <div className="bg-[#02184d]/60 rounded-2xl p-4 sm:p-5 border border-cyan-400/20">
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm">
+              <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-lg text-slate-800">
+                <div className="flex items-center gap-2 pb-3 mb-3 border-b border-slate-100 text-slate-900 font-bold text-xs sm:text-sm uppercase tracking-wider">
+                  <span className="text-amber-500 font-black">📋</span>
+                  <span>Sumário das Sanfonas (Clique para ir ao título correspondente):</span>
+                </div>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2.5 text-xs sm:text-sm">
                   {LISTA_SANFONAS_DIRETRIZES.map((item) => (
                     <li key={item.id} className="flex items-start gap-2">
-                      <span className="text-[#FFC72C] text-xs font-bold shrink-0 pt-0.5 select-none">
+                      <span className="text-amber-500 font-bold text-xs shrink-0 pt-0.5 select-none">
                         →
                       </span>
                       <button
                         type="button"
                         onClick={() => openAndScrollTo(item.id)}
-                        className="text-left text-blue-100 hover:text-white hover:underline transition-colors leading-snug cursor-pointer font-medium"
+                        className="text-left text-slate-700 hover:text-[#011049] hover:underline transition-colors leading-snug cursor-pointer font-medium"
                       >
                         {item.titulo}
                       </button>
