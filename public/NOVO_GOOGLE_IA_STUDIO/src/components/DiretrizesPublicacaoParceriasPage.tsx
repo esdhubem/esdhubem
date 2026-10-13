@@ -2836,8 +2836,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </tr>
                   <tr className="hover:bg-amber-50/30">
                     <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Manuscrito/TCC estruturado no Zenodo com DOI</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Manuscrito Científico + DOI Permanente</td>
+                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + artigo investigativo estruturado no Zenodo com DOI</td>
+                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Artigo Investigativo + DOI Permanente</td>
                     <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com DOI</td>
                     <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
                   </tr>
@@ -4284,24 +4284,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Aviso 4: Não Garantia de Aceitação */}
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                <span>📤</span>
-                <h4>Sobre Publicação em Periódicos e Revistas</h4>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                A ESDHUBEM oferece orientação, estruturação, revisão e encaminhamento para plataformas científicas. <strong>Não garantimos, porém, a aceitação do trabalho em revista, periódico ou repositório específico.</strong>
-              </p>
-              <ul className="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                <li>A decisão de aceite é exclusiva da instituição ou comitê responsável;</li>
-                <li>O trabalho poderá ser devolvido para ajustes ou recusado sem prejuízo;</li>
-                <li>A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira.</li>
-              </ul>
-            </div>
-
-            {/* Aviso 5: Pré-print não é revista */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Aviso: Pré-print não é revista */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
               <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
                 <span>🔬</span>

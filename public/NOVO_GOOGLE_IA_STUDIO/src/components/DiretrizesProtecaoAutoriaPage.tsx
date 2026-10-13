@@ -662,43 +662,7 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
           </p>
         </section>
 
-        {/* 9. Aviso — Não Garantia de Aceitação em Revista ou Periódico */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-xl border border-amber-200">
-              📤
-            </div>
-            <div>
-              <span className="text-xs font-bold text-amber-700 uppercase tracking-wider block">Periódicos Externos</span>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
-                Sobre Publicação em Periódicos Científicos
-              </h3>
-            </div>
-          </div>
 
-          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-            A ESDHUBEM oferece orientação, estruturação, revisão e encaminhamento para plataformas científicas. <strong>Não garantimos, porém, a aceitação do trabalho em revista, periódico ou repositório específico.</strong>
-          </p>
-
-          <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-            <li className="flex items-start gap-2">
-              <span className="text-slate-400 font-bold">•</span>
-              <span>A decisão de aceite é exclusiva da instituição ou comitê responsável pelo periódico;</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-slate-400 font-bold">•</span>
-              <span>O trabalho poderá ser devolvido para ajustes ou recusado sem prejuízo;</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-slate-400 font-bold">•</span>
-              <span>A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira;</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-slate-400 font-bold">•</span>
-              <span>O suporte prestado visa preparar o texto — o mérito e a decisão final são totalmente independentes.</span>
-            </li>
-          </ul>
-        </section>
 
         {/* 10. Princípio Fundamental */}
         <section className="bg-[#FFC72C] rounded-3xl p-8 sm:p-12 text-slate-950 text-center border border-amber-400 shadow-xl space-y-4">
