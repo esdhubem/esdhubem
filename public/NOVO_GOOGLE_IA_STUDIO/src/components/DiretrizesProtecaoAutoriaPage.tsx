@@ -664,6 +664,33 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
 
 
 
+        {/* 9. Aviso — Sobre Publicação em Periódicos e Revistas */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-xl border border-amber-200">
+              📤
+            </div>
+            <div>
+              <span className="text-xs font-bold text-amber-700 uppercase tracking-wider block">Periódicos e Revistas Externas</span>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                Sobre Publicação em Periódicos e Revistas
+              </h3>
+            </div>
+          </div>
+
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+            A ESDHUBEM oferece orientação, estruturação, revisão dos manuscritos dos alunos de acordo com nossos modelos de publicação. Não exigimos rigor científico. Nosso trabalho é voltado para o investigativo e não realizamos encaminhamento, nem garantimos que o aluno faça publicação em plataformas de revistas científicas. Não garantimos, a aceitação do trabalho em revista, periódico ou repositório específico.
+          </p>
+
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+            Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
+          </p>
+
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+            A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
+          </p>
+        </section>
+
         {/* 10. Princípio Fundamental */}
         <section className="bg-[#FFC72C] rounded-3xl p-8 sm:p-12 text-slate-950 text-center border border-amber-400 shadow-xl space-y-4">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-black/10 text-slate-950">

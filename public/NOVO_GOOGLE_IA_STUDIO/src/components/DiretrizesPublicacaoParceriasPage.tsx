@@ -4398,8 +4398,25 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Aviso: Pré-print não é revista */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Aviso 1: Sobre Publicação em Periódicos e Revistas */}
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                <span>📤</span>
+                <h4>Sobre Publicação em Periódicos e Revistas</h4>
+              </div>
+              <p className="text-xs text-slate-700 leading-relaxed">
+                A ESDHUBEM oferece orientação, estruturação, revisão dos manuscritos dos alunos de acordo com nossos modelos de publicação. Não exigimos rigor científico. Nosso trabalho é voltado para o investigativo e não realizamos encaminhamento, nem garantimos que o aluno faça publicação em plataformas de revistas científicas. Não garantimos, a aceitação do trabalho em revista, periódico ou repositório específico.
+              </p>
+              <p className="text-xs text-slate-700 leading-relaxed">
+                Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
+              </p>
+              <p className="text-xs text-slate-700 leading-relaxed">
+                A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
+              </p>
+            </div>
+
+            {/* Aviso 2: Pré-print não é revista */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
               <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
                 <span>🔬</span>
@@ -4416,7 +4433,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </ul>
             </div>
 
-            {/* Aviso 6: Uso de IA */}
+            {/* Aviso 3: Uso de IA */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
               <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
                 <span>🤖</span>
@@ -4432,7 +4449,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </ul>
             </div>
 
-            {/* Aviso 8: Retirada de Publicação */}
+            {/* Aviso 4: Retirada de Publicação */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
               <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
                 <span>📂</span>

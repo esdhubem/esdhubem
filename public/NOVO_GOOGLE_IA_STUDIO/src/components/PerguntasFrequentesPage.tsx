@@ -283,7 +283,7 @@ export const PerguntasFrequentesPage: React.FC<PerguntasFrequentesPageProps> = (
                 A ESDHUBEM garante que meu texto será aceito por uma revista?
               </h3>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-                Não. A escola oferece orientação de estruturação, revisão e encaminhamento, mas a decisão de aceitação, recusa ou ajuste é exclusiva do periódico. O mérito e a avaliação são independentes da instituição.
+                Não. A ESDHUBEM oferece orientação, estruturação e revisão dos manuscritos de acordo com nossos modelos de publicação investigativa. Não exigimos rigor científico nem realizamos encaminhamento para revistas externas. A aceitação em revistas ou periódicos é decisão exclusiva de cada comitê independente.
               </p>
             </div>
 
