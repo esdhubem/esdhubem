@@ -3978,7 +3978,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       <ul className="text-xs text-slate-700 space-y-2 pl-1">
                         <li className="flex items-start gap-2">
                           <span className="text-rose-600 font-bold">•</span>
-                          <span><strong>Registro prévio obrigatório:</strong> Não recebemos trabalhos que não foram registrados no OSF (Bronze/Prata) ou Zenodo (Ouro)</span>
+                          <span><strong>Registro prévio obrigatório:</strong> Não recebemos trabalhos que não foram registrados no OSF (Bronze, Prata e Diamante) ou Zenodo (Ouro)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-emerald-600 font-bold">•</span>
@@ -4354,7 +4354,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         ⚠️ ATENÇÃO INSTITUCIONAL OBRIGATÓRIA
                       </h5>
                       <p className="text-xs sm:text-sm text-rose-950 leading-relaxed">
-                        <strong>Não recebemos trabalhos que não foram registrados.</strong> O estudante deve obrigatoriamente realizar o registro na plataforma correspondente (<strong>OSF para Níveis Bronze e Prata</strong>; <strong>Zenodo com DOI para Ouro</strong>) e anexar o link público oficial no ato da entrega final. Trabalhos sem comprovação de registro não avançam para homologação nem certificação.
+                        <strong>Não recebemos trabalhos que não foram registrados.</strong> O estudante deve obrigatoriamente realizar o registro na plataforma correspondente (<strong>OSF para Níveis Bronze, Prata e Diamante</strong>; <strong>Zenodo com DOI para Ouro</strong>) e anexar o link público oficial no ato da entrega final. Trabalhos sem comprovação de registro não avançam para homologação nem certificação.
                       </p>
                     </div>
                   </div>
