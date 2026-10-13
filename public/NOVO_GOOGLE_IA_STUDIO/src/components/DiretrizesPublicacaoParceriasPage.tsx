@@ -146,31 +146,34 @@ interface DiretrizesPublicacaoParceriasPageProps {
 const LISTA_SANFONAS_DIRETRIZES = [
   { id: '1', titulo: '1 - Apresentação das Diretrizes de Publicação' },
   { id: '2', titulo: '2 - Declarações de autorização e de autoria' },
-  { id: 'triade', titulo: 'Metodologia: O que é a Tríade da Organização, Assimilação e Comunicação' },
-  { id: 'quadrilatero', titulo: 'Metodologia: O que é o Quadrilátero da Organização, Assimilação, Comunicação e Produção' },
-  { id: '3', titulo: '3 - Certificação Bronze - Publicação de Verbete' },
-  { id: '4', titulo: '4 - Guia Completo para publicar o Verbete - Nível Bronze' },
-  { id: '5', titulo: '5 - Certificação Prata - Publicação de Artigo de Blog' },
-  { id: '6', titulo: '6 - Guia Completo para publicar o artigo de Blog - Nível Prata' },
-  { id: '7', titulo: '7 - Certificação Ouro - Publicação de artigo de investigação' },
-  { id: '8', titulo: '8 - Guia Completo do Artigo de Investigação - Nível Ouro' },
-  { id: '9', titulo: '9 - Orientações para Produção do Artigo de investigação' },
-  { id: 'plataformas-pesquisa', titulo: 'Sugestão de plataformas onde o aluno pode fazer pesquisa de artigos' },
-  { id: '10', titulo: '10 - Sobre o uso do nosso certificado como Horas Complementares na faculdade' },
-  { id: '11', titulo: '11 - Certificação Diamante: Orientação para publicação de livro' },
-  { id: '12', titulo: '12 - Guia Completo para publicar o livro - Nível Diamante' },
-  { id: '13', titulo: '13 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
-  { id: '14', titulo: '14 - Livro Autoral — Formato e Contagem de Páginas' },
-  { id: 'analise-portfolios', titulo: 'O que é a análise dos portfólios dos estudantes?' },
-  { id: 'certificacao-valores', titulo: 'Certificação e Valores (Modalidades, Requisitos & Percursos)' },
-  { id: 'autoria-responsabilidade', titulo: 'Autoria e Responsabilidade' },
-  { id: 'publicacao-periodicos-revistas', titulo: 'Publicação em Repositórios, Periódicos e Revistas' },
-  { id: '15', titulo: '15 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
-  { id: '16', titulo: '16 - Prazos de Análise e Devolutiva' },
-  { id: '17', titulo: '17 - Critérios de Análise, Publicação e Direito de Retirada' },
-  { id: '18', titulo: '18 - Estrutura e Formato por Nível de Produção' },
-  { id: '19', titulo: '19 - Registro Obrigatório nas Plataformas e Atualização de Versões' },
-  { id: '20', titulo: '20 - Uso Responsável de Inteligência Artificial — Declaração e Limites' }
+  { id: 'triade', titulo: '3 - O que é a Tríade da Organização, Assimilação e Comunicação' },
+  { id: 'quadrilatero', titulo: '4 - O que é o Quadrilátero da Organização, Assimilação, Comunicação e Produção' },
+  { id: '3', titulo: '5 - Certificação Bronze - Publicação de Verbete' },
+  { id: '4', titulo: '6 - Guia Completo para publicar o Verbete - Nível Bronze' },
+  { id: '5', titulo: '7 - Certificação Prata - Publicação de Artigo de Blog' },
+  { id: '6', titulo: '8 - Guia Completo para publicar o artigo de Blog - Nível Prata' },
+  { id: '7', titulo: '9 - Certificação Ouro - Publicação de artigo de investigação' },
+  { id: '8', titulo: '10 - Guia Completo do Artigo de Investigação - Nível Ouro' },
+  { id: '9', titulo: '11 - Orientações para Produção do Artigo de investigação' },
+  { id: 'plataformas-pesquisa', titulo: '12 - Sugestão de plataformas onde o aluno pode fazer pesquisa de artigos para compor suas referências bibliográficas' },
+  { id: '10', titulo: '13 - Sobre o uso do nosso certificado como Horas Complementares na faculdade' },
+  { id: '11', titulo: '14 - Certificação Diamante: Orientação para publicação de livro' },
+  { id: '12', titulo: '15 - Guia Completo para publicar o livro - Nível Diamante' },
+  { id: '13', titulo: '16 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
+  { id: '14', titulo: '17 - Livro Autoral — Formato e Contagem de Páginas' },
+  { id: 'analise-portfolios', titulo: '18 - O que é a análise dos portfólios dos estudantes?' },
+  { id: 'certificacao-valores', titulo: '19 - Certificação e Valores (Modalidades, Requisitos & Percursos)' },
+  { id: 'autoria-responsabilidade', titulo: '20 - Autoria e Responsabilidade' },
+  { id: 'publicacao-periodicos-revistas', titulo: '21 - Publicação em Repositórios, Periódicos e Revistas' },
+  { id: '15', titulo: '22 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
+  { id: '16', titulo: '23 - Prazos de Análise e Devolutiva' },
+  { id: '17', titulo: '24 - Critérios de Análise, Publicação e Direito de Retirada' },
+  { id: '18', titulo: '25 - Estrutura e Formato por Nível de Produção' },
+  { id: '19', titulo: '26 - Registro Obrigatório nas Plataformas e Atualização de Versões' },
+  { id: 'como-publicar-osf', titulo: '27 - Como publicar na plataforma OSF?' },
+  { id: 'como-publicar-zenodo', titulo: '28 - Como publicar no Zenodo?' },
+  { id: 'registro-atualizacao-versoes', titulo: '29 - Registro Nas Plataformas, Atualização de Versões e Publicação na ESDHUBEM' },
+  { id: '20', titulo: '30 - Uso Responsável de Inteligência Artificial — Declaração e Limites' }
 ];
 
 export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoParceriasPageProps> = ({
@@ -362,7 +365,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFC72C]/15 text-[#FFC72C] text-xs font-bold uppercase tracking-wider mb-2 border border-[#FFC72C]/30 shadow-xs">
                   <Sparkles className="w-3.5 h-3.5 text-[#FFC72C]" />
-                  <span>Navegação Interativa dos 11 Módulos</span>
+                  <span>Navegação Interativa das 30 Seções</span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
                   Diretrizes de Publicação
@@ -1003,7 +1006,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Metodologia Pedagógica Avançada ESDHUBEM • Válida para Níveis Prata, Ouro e Diamante
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    O que é o Quadrilátero da Organização, Assimilação, Comunicação e Produção
+                    4 - O que é o Quadrilátero da Organização, Assimilação, Comunicação e Produção
                   </h3>
                 </div>
               </div>
@@ -1273,14 +1276,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-800">
-                  🥉 3
+                  🥉 5
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 block">
                     Vídeo 2 • Níveis, Plataforma OSF & Assimilação Ativa
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
-                    3 - Certificação Bronze - Publicação de Verbete
+                    5 - Certificação Bronze - Publicação de Verbete
                   </h3>
                 </div>
               </div>
@@ -1416,7 +1419,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-800">
-                  📖 4
+                  📖 6
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block flex items-center gap-1.5">
@@ -1424,7 +1427,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Documento Integrado • Tríade da Organização, Assimilação e Comunicação
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
-                    4 - Guia Completo para publicar o Verbete - Nível Bronze
+                    6 - Guia Completo para publicar o Verbete - Nível Bronze
                   </h3>
                 </div>
               </div>
@@ -1501,14 +1504,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-slate-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-slate-800">
-                  🥈 5
+                  🥈 7
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-600 block">
                     Vídeo 3 • Artigo de Blog & SEO (1.200 a 2.500 palavras)
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    5 - Certificação Prata - Publicação de Artigo de Blog
+                    7 - Certificação Prata - Publicação de Artigo de Blog
                   </h3>
                 </div>
               </div>
@@ -1647,7 +1650,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-slate-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-slate-800">
-                  📖 6
+                  📖 8
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block flex items-center gap-1.5">
@@ -1655,7 +1658,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Documento Integrado • Artigo de Blog &amp; SEO (1.200 a 2.500 palavras)
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    6 - Guia Completo para publicar o artigo de Blog - Nível Prata
+                    8 - Guia Completo para publicar o artigo de Blog - Nível Prata
                   </h3>
                 </div>
               </div>
@@ -1730,14 +1733,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-600">
-                  🥇 7
+                  🥇 9
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block">
                     Vídeo 4 • Manuscrito Científico, Zenodo & DOI
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
-                    7- Certificação Ouro - Publicação de artigo de investigação
+                    9 - Certificação Ouro - Publicação de artigo de investigação
                   </h3>
                 </div>
               </div>
@@ -1880,7 +1883,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-600">
-                  📖 8
+                  🔬 10
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 block flex items-center gap-1.5">
@@ -1888,7 +1891,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Documento Integrado • Artigo de Investigação (Zenodo &amp; DOI)
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-amber-950 truncate sm:whitespace-normal">
-                    8 - Guia Completo do Artigo de Investigação - Nível Ouro
+                    10 - Guia Completo do Artigo de Investigação - Nível Ouro
                   </h3>
                 </div>
               </div>
@@ -1963,14 +1966,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-purple-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-purple-900">
-                  📝 9
+                  📝 11
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-purple-700 block">
                     Vídeo 5 • Metodologia, Eixos Temáticos & Fontes Bibliográficas
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-purple-950 truncate sm:whitespace-normal">
-                    9 - Orientações para Produção do Artigo de investigação
+                    11 - Orientações para Produção do Artigo de investigação
                   </h3>
                 </div>
               </div>
@@ -2206,7 +2209,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-blue-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-800">
-                  📚
+                  📚 12
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-blue-800 block flex items-center gap-1.5">
@@ -2214,7 +2217,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Fontes &amp; Bases Acadêmicas Recomendadas
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-blue-950 truncate sm:whitespace-normal">
-                    Sugestão de plataformas onde o aluno pode fazer pesquisa de artigos para compor suas referências bibliográficas
+                    12 - Sugestão de plataformas onde o aluno pode fazer pesquisa de artigos para compor suas referências bibliográficas
                   </h3>
                 </div>
               </div>
@@ -2435,7 +2438,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  🏛️ 10
+                  🏛️ 13
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -2443,7 +2446,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Referência Institucional &amp; Critérios de Validação
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    10 - Sobre o uso do nosso certificado como Horas Complementares na faculdade
+                    13 - Sobre o uso do nosso certificado como Horas Complementares na faculdade
                   </h3>
                 </div>
               </div>
@@ -2468,7 +2471,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   {/* Título interno com o badge 6 */}
                   <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
                     <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
-                      6
+                      13
                     </span>
                     <h4 className="font-black text-base sm:text-lg text-slate-900">
                       Sobre o uso do nosso certificado como Horas Complementares na faculdade.
@@ -2520,14 +2523,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  💎 11
+                  💎 14
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block">
                     Vídeos 6 e 7 • Livro Autoral (Mín. 50 Páginas) & Registro EDA/FBN
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    11 - Certificação Diamante: Orientação para publicação de livro
+                    14 - Certificação Diamante: Orientação para publicação de livro
                   </h3>
                 </div>
               </div>
@@ -2775,7 +2778,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📖 12
+                  📘 15
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -2783,7 +2786,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Documento Integrado • Livro Autoral (Mín. 50 Páginas)
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    12 - Guia Completo para publicar o livro - Nível Diamante
+                    15 - Guia Completo para publicar o livro - Nível Diamante
                   </h3>
                 </div>
               </div>
@@ -2864,7 +2867,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📜 13
+                  ✍️ 16
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -2872,7 +2875,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Etapas de Produção &amp; Registro Oficial EDA/FBN
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    13 - Orientações para Produção do Livro &amp; Registro de Direitos Autorais
+                    16 - Orientações para Produção do Livro &amp; Registro de Direitos Autorais
                   </h3>
                 </div>
               </div>
@@ -3027,7 +3030,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📖 14
+                  📄 17
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3035,7 +3038,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Extensão Mínima de 50 Páginas, Parâmetros Gráficos e EDA/FBN
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    14 - Livro Autoral — Formato e Contagem de Páginas
+                    17 - Livro Autoral — Formato e Contagem de Páginas
                   </h3>
                 </div>
               </div>
@@ -3060,7 +3063,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   {/* Título interno com o badge 14 */}
                   <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
                     <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
-                      14
+                      17
                     </span>
                     <h4 className="font-black text-base sm:text-lg text-slate-900">
                       Livro Autoral — Formato e Contagem de Páginas
@@ -3184,7 +3187,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-amber-600 to-amber-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-amber-900">
-                  🔍
+                  🔍 18
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-900 block flex items-center gap-1.5">
@@ -3192,7 +3195,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Avaliação Pedagógica • Mediação &amp; Investigação da Aprendizagem
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    O que é a análise dos portfólios dos estudantes?
+                    18 - O que é a análise dos portfólios dos estudantes?
                   </h3>
                 </div>
               </div>
@@ -3318,7 +3321,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
-                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFC72C]" />
+                  🎗️ 19
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block flex items-center gap-1.5">
@@ -3326,7 +3329,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Modalidades, Requisitos &amp; Percursos
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    Certificação e Valores
+                    19 - Certificação e Valores (Modalidades, Requisitos &amp; Percursos)
                   </h3>
                 </div>
               </div>
@@ -3454,14 +3457,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
-                  <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFC72C]" />
+                  📑 20
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
                     Produção Intelectual, Ética &amp; Uso de Inteligência Artificial
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    Autoria e Responsabilidade
+                    20 - Autoria e Responsabilidade
                   </h3>
                 </div>
               </div>
@@ -3529,14 +3532,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
-                  <span className="text-xl">📚</span>
+                  📚 21
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
                     Orientações, Pré-prints com DOI &amp; Direito de Remoção
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    Publicação em Repositórios, Periódicos e Revistas
+                    21 - Publicação em Repositórios, Periódicos e Revistas
                   </h3>
                 </div>
               </div>
@@ -3642,7 +3645,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📏 15
+                  📏 22
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3650,7 +3653,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Parâmetros de Contagem de Palavras e Páginas Sugeridas
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    15 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível
+                    22 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível
                   </h3>
                 </div>
               </div>
@@ -3807,7 +3810,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  ⏱️ 16
+                  ⏱️ 23
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3815,7 +3818,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Prazos Institucionais &amp; Devolutivas de Avaliação
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    16 - Prazos de Análise e Devolutiva
+                    23 - Prazos de Análise e Devolutiva
                   </h3>
                 </div>
               </div>
@@ -3925,7 +3928,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  ⚖️ 17
+                  ⚖️ 24
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3933,7 +3936,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Critérios de Análise, Publicação e Direito de Retirada
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    17 - Critérios de Análise, Publicação e Direito de Retirada
+                    24 - Critérios de Análise, Publicação e Direito de Retirada
                   </h3>
                 </div>
               </div>
@@ -4090,7 +4093,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📐 18
+                  📐 25
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -4098,7 +4101,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Parâmetros Textuais, Normas de Estilo &amp; Extensão
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    18 - Estrutura e Formato por Nível de Produção
+                    25 - Estrutura e Formato por Nível de Produção
                   </h3>
                 </div>
               </div>
@@ -4304,7 +4307,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  🌐 19
+                  🌐 26
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -4312,7 +4315,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     OSF, Zenodo com DOI, Autoria Perpétua e Gestão de Versões
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    19 - Registro Obrigatório nas Plataformas e Atualização de Versões
+                    26 - Registro Obrigatório nas Plataformas e Atualização de Versões
                   </h3>
                 </div>
               </div>
@@ -4491,15 +4494,15 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-sky-600 to-sky-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-sky-900">
-                  🌐
+                  🌐 27
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-sky-800 block flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-sky-600" />
-                    Open Science Framework • Níveis Bronze e Prata
+                    Open Science Framework • Níveis Bronze, Prata e Diamante
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    Como publicar na plataforma OSF?
+                    27 - Como publicar na plataforma OSF?
                   </h3>
                 </div>
               </div>
@@ -4628,7 +4631,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-teal-600 to-teal-800 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-teal-900">
-                  🔬
+                  🔬 28
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-teal-800 block flex items-center gap-1.5">
@@ -4636,7 +4639,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Zenodo + DOI • Nível Ouro
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    Como publicar no Zenodo?
+                    28 - Como publicar no Zenodo?
                   </h3>
                 </div>
               </div>
@@ -4721,7 +4724,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-blue-700 to-indigo-900 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-indigo-950">
-                  🔄
+                  🔄 29
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-900 block flex items-center gap-1.5">
@@ -4729,7 +4732,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Gestão de Versões &amp; Homologação
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    Registro Nas Plataformas, Atualização de Versões e Publicação na ESDHUBEM
+                    29 - Registro Nas Plataformas, Atualização de Versões e Publicação na ESDHUBEM
                   </h3>
                 </div>
               </div>
@@ -4890,7 +4893,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  🤖 20
+                  🤖 30
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -4898,7 +4901,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Ética, Transparência, Limites de Uso e Modelos de Declaração
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    20 - Uso Responsável de Inteligência Artificial — Declaração e Limites
+                    30 - Uso Responsável de Inteligência Artificial — Declaração e Limites
                   </h3>
                 </div>
               </div>
