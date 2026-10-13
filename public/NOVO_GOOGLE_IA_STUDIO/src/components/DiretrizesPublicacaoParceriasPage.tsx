@@ -157,18 +157,18 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: '10', titulo: '10 - Certificação Diamante: Orientação para publicação de livro' },
   { id: '11', titulo: '11 - Guia Completo para publicar o livro - Nível Diamante' },
   { id: '12', titulo: '12 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
+  { id: '13', titulo: '13 - Livro Autoral — Formato e Contagem de Páginas' },
   { id: 'certificacao-valores', titulo: 'Certificação e Valores (Modalidades, Requisitos & Percursos)' },
   { id: 'autoria-responsabilidade', titulo: 'Autoria e Responsabilidade' },
   { id: 'uso-responsavel-ia', titulo: 'Uso Responsável de Inteligência Artificial' },
-  { id: '13', titulo: '13 - Avisos Importantes sobre Publicação' },
+  { id: 'publicacao-periodicos-revistas', titulo: 'Publicação em Repositórios, Periódicos e Revistas' },
   { id: '14', titulo: '14 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
   { id: '15', titulo: '15 - Prazos de Análise e Devolutiva' },
   { id: '16', titulo: '16 - Critérios de Avaliação, Publicação e Direito de Retirada' },
   { id: '17', titulo: '17 - Estrutura e Formato por Nível de Produção' },
   { id: '18', titulo: '18 - Registro Obrigatório nas Plataformas e Atualização de Versões' },
   { id: '19', titulo: '19 - Uso de Inteligência Artificial — Declaração e Limites' },
-  { id: '20', titulo: '20 - Sobre Horas Complementares e Alinhamento Temático' },
-  { id: '21', titulo: '21 - Livro Autoral — Formato e Contagem de Páginas' }
+  { id: '20', titulo: '20 - Sobre Horas Complementares e Alinhamento Temático' }
 ];
 
 export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoParceriasPageProps> = ({
@@ -199,14 +199,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '18': false,
     '19': false,
     '20': false,
-    '21': false,
     'plataformas-pesquisa': false,
     'como-publicar-osf': false,
     'como-publicar-zenodo': false,
     'registro-atualizacao-versoes': false,
     'certificacao-valores': false,
     'autoria-responsabilidade': false,
-    'uso-responsavel-ia': false
+    'uso-responsavel-ia': false,
+    'publicacao-periodicos-revistas': false
   });
 
   const toggleSection = (id: string) => {
@@ -239,14 +239,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '18': true,
       '19': true,
       '20': true,
-      '21': true,
       'plataformas-pesquisa': true,
       'como-publicar-osf': true,
       'como-publicar-zenodo': true,
       'registro-atualizacao-versoes': true,
       'certificacao-valores': true,
       'autoria-responsabilidade': true,
-      'uso-responsavel-ia': true
+      'uso-responsavel-ia': true,
+      'publicacao-periodicos-revistas': true
     });
   };
 
@@ -273,14 +273,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '18': false,
       '19': false,
       '20': false,
-      '21': false,
       'plataformas-pesquisa': false,
       'como-publicar-osf': false,
       'como-publicar-zenodo': false,
       'registro-atualizacao-versoes': false,
       'certificacao-valores': false,
       'autoria-responsabilidade': false,
-      'uso-responsavel-ia': false
+      'uso-responsavel-ia': false,
+      'publicacao-periodicos-revistas': false
     });
   };
 
@@ -2552,6 +2552,163 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
+          {/* SEÇÃO 13: 13 - Livro Autoral — Formato e Contagem de Páginas */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-13"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('13')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['13']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  📖 13
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Extensão Mínima de 50 Páginas, Parâmetros Gráficos e EDA/FBN
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    13 - Livro Autoral — Formato e Contagem de Páginas
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['13'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['13'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['13'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-6 shadow-sm">
+                  
+                  {/* Título interno com o badge 13 */}
+                  <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
+                    <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
+                      13
+                    </span>
+                    <h4 className="font-black text-base sm:text-lg text-slate-900">
+                      Livro Autoral — Formato e Contagem de Páginas
+                    </h4>
+                  </div>
+
+                  {/* Card Extensão Mínima */}
+                  <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs">
+                    <div className="flex items-center gap-2 text-sky-950 font-bold text-sm sm:text-base">
+                      <BookOpen className="w-5 h-5 text-sky-700 shrink-0" />
+                      <h5>Extensão mínima</h5>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      O trabalho deve conter <strong>no mínimo 50 páginas de conteúdo efetivo</strong>. Não são contabilizadas neste mínimo:
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 pt-1">
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Capa e contracapa
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Folha de rosto
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Sumário
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Dedicatória, agradecimentos, epígrafe
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Lista de tabelas, figuras ou abreviações
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
+                        • Referências bibliográficas
+                      </div>
+                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs sm:col-span-2 md:col-span-1">
+                        • Apêndices e anexos
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tabela de Orientações de formatação sugeridas */}
+                  <div className="space-y-3.5 pt-2">
+                    <h5 className="font-bold text-sm sm:text-base text-slate-900">
+                      Orientações de formatação sugeridas
+                    </h5>
+
+                    <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+                      <table className="w-full text-left text-xs sm:text-sm">
+                        <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
+                          <tr>
+                            <th className="py-3 px-4 w-1/3">Aspecto</th>
+                            <th className="py-3 px-4">Recomendação</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Formato de página</td>
+                            <td className="py-3 px-4">A4 (210 × 297 mm)</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Margens</td>
+                            <td className="py-3 px-4">3 cm (superior e esquerda) / 2 cm (inferior e direita)</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Fonte</td>
+                            <td className="py-3 px-4">Times New Roman ou Arial, tamanho 12</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Espaçamento entre linhas</td>
+                            <td className="py-3 px-4">1,5</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Parágrafo</td>
+                            <td className="py-3 px-4">Recuo de 1,25 cm na primeira linha</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Numeração de páginas</td>
+                            <td className="py-3 px-4">Canto superior direito, a partir da primeira página de conteúdo</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Títulos de capítulo</td>
+                            <td className="py-3 px-4">Iniciando em página nova, em destaque</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 px-4 font-semibold text-slate-900">Arquivo final</td>
+                            <td className="py-3 px-4 font-semibold text-cyan-900">PDF, pronto para publicação e eventual impressão</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  {/* Card inferior */}
+                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-2.5 text-xs sm:text-sm text-slate-700 shadow-xs">
+                    <p className="leading-relaxed">
+                      <strong>A qualidade do conteúdo prevalece sobre a quantidade de páginas.</strong> O texto deve apresentar coerência, desenvolvimento completo das ideias e proposta autoral definida.
+                    </p>
+                    <p className="leading-relaxed pt-2 border-t border-slate-200">
+                      Após aprovação, o autor orienta-se sobre o registro oficial junto à <strong>Fundação Biblioteca Nacional (EDA/FBN)</strong>, procedimento pessoal e intransferível.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
           {/* SANFONA: Certificação e Valores */}
           {/* ======================================================== */}
           <div
@@ -2858,38 +3015,38 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 13: 13 - Avisos Importantes sobre Publicação */}
+          {/* SANFONA: Publicação em Repositórios, Periódicos e Revistas */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-13"
+            id="secao-sanfona-publicacao-periodicos-revistas"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('13')}
+              onClick={() => toggleSection('publicacao-periodicos-revistas')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['13']}
+              aria-expanded={openSections['publicacao-periodicos-revistas']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
-                  ℹ️ 13
+                  <span className="text-xl">📚</span>
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
-                    Periódicos, Repositórios com DOI &amp; Direito de Remoção
+                    Orientações, Pré-prints com DOI &amp; Direito de Remoção
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    13 - Avisos Importantes sobre Publicação
+                    Publicação em Repositórios, Periódicos e Revistas
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
-                  {openSections['13'] ? 'Recolher' : 'Expandir'}
+                  {openSections['publicacao-periodicos-revistas'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
-                    openSections['13'] ? 'rotate-180 bg-[#011049] text-white' : ''
+                    openSections['publicacao-periodicos-revistas'] ? 'rotate-180 bg-[#011049] text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -2897,71 +3054,73 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['13'] && (
+            {openSections['publicacao-periodicos-revistas'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
-                <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
-                  <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
-                    <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
-                      <ShieldCheck className="w-6 h-6" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Card 1: Sobre Publicação em Periódicos e Revistas */}
+                  <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-7 space-y-3.5 shadow-sm md:col-span-2">
+                    <div className="flex items-center gap-2.5 text-slate-900 font-extrabold text-base">
+                      <span className="text-xl">📤</span>
+                      <h4 className="font-extrabold text-[#011049] text-base sm:text-lg">
+                        Sobre Publicação em Periódicos e Revistas
+                      </h4>
                     </div>
-                    <div>
-                      <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
-                        Transparência &amp; Diretrizes Institucionais
-                      </span>
-                      <h3 className="text-lg sm:text-xl font-bold text-slate-900">
-                        Avisos Importantes sobre Publicação
-                      </h3>
-                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      A ESDHUBEM oferece orientação, estruturação, revisão dos manuscritos dos alunos de acordo com nossos modelos de publicação. Não exigimos rigor científico. Nosso trabalho é voltado para o investigativo e não realizamos encaminhamento, nem garantimos que o aluno faça publicação em plataformas de revistas científicas. Não garantimos, a aceitação do trabalho em revista, periódico ou repositório específico.
+                    </p>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
+                    </p>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
+                    </p>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Aviso 1: Sobre Publicação em Periódicos e Revistas */}
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-                      <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                        <span>📤</span>
-                        <h4 className="font-bold text-slate-900">Sobre Publicação em Periódicos e Revistas</h4>
-                      </div>
-                      <p className="text-xs text-slate-700 leading-relaxed">
-                        A ESDHUBEM oferece orientação, estruturação, revisão dos manuscritos dos alunos de acordo com nossos modelos de publicação. Não exigimos rigor científico. Nosso trabalho é voltado para o investigativo e não realizamos encaminhamento, nem garantimos que o aluno faça publicação em plataformas de revistas científicas. Não garantimos, a aceitação do trabalho em revista, periódico ou repositório específico.
-                      </p>
-                      <p className="text-xs text-slate-700 leading-relaxed">
-                        Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
-                      </p>
-                      <p className="text-xs text-slate-700 leading-relaxed">
-                        A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
-                      </p>
+                  {/* Card 2: Pré-print e Depósito com DOI */}
+                  <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-7 space-y-3.5 shadow-sm">
+                    <div className="flex items-center gap-2.5 text-slate-900 font-extrabold text-base">
+                      <span className="text-xl">🔬</span>
+                      <h4 className="font-extrabold text-[#011049] text-base sm:text-lg">
+                        Pré-print e Depósito com DOI
+                      </h4>
                     </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      O depósito em repositório com atribuição de <strong>DOI</strong> constitui <strong>registro e divulgação prévia</strong> da obra (pré-print):
+                    </p>
+                    <ul className="text-xs sm:text-sm text-slate-700 space-y-2">
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span>Fica registrada oficialmente a autoria e data de criação;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✅</span>
+                        <span>O trabalho passa a ser acessível publicamente;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-rose-600 font-bold">❌</span>
+                        <span><strong>Não equivale a publicação em revista com revisão por pares</strong>;</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-rose-600 font-bold">❌</span>
+                        <span>Verifique a política do periódico caso queira submeter a mesma obra.</span>
+                      </li>
+                    </ul>
+                  </div>
 
-                    {/* Aviso 2: Pré-print não é revista */}
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-                      <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                        <span>🔬</span>
-                        <h4 className="font-bold text-slate-900">Pré-print e Depósito com DOI</h4>
-                      </div>
-                      <p className="text-xs text-slate-600 leading-relaxed">
-                        O depósito em repositório com atribuição de <strong>DOI</strong> constitui <strong>registro e divulgação prévia</strong> da obra (pré-print):
-                      </p>
-                      <ul className="text-xs text-slate-600 space-y-1">
-                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Fica registrada oficialmente a autoria e data de criação;</li>
-                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> O trabalho passa a ser acessível publicamente;</li>
-                        <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> <strong>Não equivale a publicação em revista com revisão por pares</strong>;</li>
-                        <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> Verifique a política do periódico caso queira submeter a mesma obra.</li>
-                      </ul>
+                  {/* Card 3: Direito de Remoção / Retirada */}
+                  <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-7 space-y-3.5 shadow-sm">
+                    <div className="flex items-center gap-2.5 text-slate-900 font-extrabold text-base">
+                      <span className="text-xl">📁</span>
+                      <h4 className="font-extrabold text-[#011049] text-base sm:text-lg">
+                        Direito de Remoção / Retirada
+                      </h4>
                     </div>
-
-                    {/* Aviso 3: Direito de Remoção / Retirada */}
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3 md:col-span-2">
-                      <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                        <span>📂</span>
-                        <h4 className="font-bold text-slate-900">Direito de Remoção / Retirada</h4>
-                      </div>
-                      <p className="text-xs text-slate-600 leading-relaxed">
-                        O autor pode solicitar a exclusão de seu texto a qualquer momento. O prazo para retirada da página e dos índices públicos é de até <strong>15 dias úteis</strong>.
-                      </p>
-                      <p className="text-[11px] text-slate-500 italic">
-                        * Em repositórios externos (Zenodo/CERN), a exclusão segue as normas da plataforma terceira.
-                      </p>
-                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      O autor pode solicitar a exclusão de seu texto a qualquer momento. O prazo para retirada da página e dos índices públicos é de até <strong>15 dias úteis</strong>.
+                    </p>
+                    <p className="text-xs text-slate-500 italic pt-2 border-t border-slate-100">
+                      * Em repositórios externos (Zenodo/CERN), a exclusão segue as normas da plataforma terceira.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -4449,163 +4608,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         <span>Cada instituição possui suas próprias regras — a ESDHUBEM fornece os documentos comprobatórios, mas a decisão de validação cabe exclusivamente à instituição de origem do estudante</span>
                       </li>
                     </ul>
-                  </div>
-
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* ======================================================== */}
-          {/* SEÇÃO 21: 21 - Livro Autoral — Formato e Contagem de Páginas */}
-          {/* ======================================================== */}
-          <div
-            id="secao-sanfona-21"
-            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
-          >
-            <button
-              type="button"
-              onClick={() => toggleSection('21')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['21']}
-            >
-              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📖 21
-                </div>
-                <div className="min-w-0">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
-                    Extensão Mínima de 50 Páginas, Parâmetros Gráficos e EDA/FBN
-                  </span>
-                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    21 - Livro Autoral — Formato e Contagem de Páginas
-                  </h3>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 shrink-0">
-                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['21'] ? 'Recolher' : 'Expandir'}
-                </span>
-                <div
-                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['21'] ? 'rotate-180 bg-cyan-700 text-white' : ''
-                  }`}
-                >
-                  <ChevronDown className="w-4 h-4" />
-                </div>
-              </div>
-            </button>
-
-            {openSections['21'] && (
-              <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
-                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-6 shadow-sm">
-                  
-                  {/* Título interno com o badge 7 */}
-                  <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
-                    <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
-                      7
-                    </span>
-                    <h4 className="font-black text-base sm:text-lg text-slate-900">
-                      Livro Autoral — Formato e Contagem de Páginas
-                    </h4>
-                  </div>
-
-                  {/* Card Extensão Mínima */}
-                  <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs">
-                    <div className="flex items-center gap-2 text-sky-950 font-bold text-sm sm:text-base">
-                      <BookOpen className="w-5 h-5 text-sky-700 shrink-0" />
-                      <h5>Extensão mínima</h5>
-                    </div>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      O trabalho deve conter <strong>no mínimo 50 páginas de conteúdo efetivo</strong>. Não são contabilizadas neste mínimo:
-                    </p>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 pt-1">
-                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
-                        • Capa e contracapa
-                      </div>
-                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
-                        • Folha de rosto
-                      </div>
-                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
-                        • Sumário
-                      </div>
-                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
-                        • Dedicatória, agradecimentos, epígrafe
-                      </div>
-                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
-                        • Lista de tabelas, figuras ou abreviações
-                      </div>
-                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs">
-                        • Referências bibliográficas
-                      </div>
-                      <div className="bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 font-medium shadow-2xs sm:col-span-2 md:col-span-1">
-                        • Apêndices e anexos
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Tabela de Orientações de formatação sugeridas */}
-                  <div className="space-y-3.5 pt-2">
-                    <h5 className="font-bold text-sm sm:text-base text-slate-900">
-                      Orientações de formatação sugeridas
-                    </h5>
-
-                    <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
-                      <table className="w-full text-left text-xs sm:text-sm">
-                        <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
-                          <tr>
-                            <th className="py-3 px-4 w-1/3">Aspecto</th>
-                            <th className="py-3 px-4">Recomendação</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
-                          <tr>
-                            <td className="py-3 px-4 font-semibold text-slate-900">Formato de página</td>
-                            <td className="py-3 px-4">A4 (210 × 297 mm)</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 px-4 font-semibold text-slate-900">Margens</td>
-                            <td className="py-3 px-4">3 cm (superior e esquerda) / 2 cm (inferior e direita)</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 px-4 font-semibold text-slate-900">Fonte</td>
-                            <td className="py-3 px-4">Times New Roman ou Arial, tamanho 12</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 px-4 font-semibold text-slate-900">Espaçamento entre linhas</td>
-                            <td className="py-3 px-4">1,5</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 px-4 font-semibold text-slate-900">Parágrafo</td>
-                            <td className="py-3 px-4">Recuo de 1,25 cm na primeira linha</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 px-4 font-semibold text-slate-900">Numeração de páginas</td>
-                            <td className="py-3 px-4">Canto superior direito, a partir da primeira página de conteúdo</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 px-4 font-semibold text-slate-900">Títulos de capítulo</td>
-                            <td className="py-3 px-4">Iniciando em página nova, em destaque</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 px-4 font-semibold text-slate-900">Arquivo final</td>
-                            <td className="py-3 px-4 font-semibold text-cyan-900">PDF, pronto para publicação e eventual impressão</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  {/* Card inferior */}
-                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-2.5 text-xs sm:text-sm text-slate-700 shadow-xs">
-                    <p className="leading-relaxed">
-                      <strong>A qualidade do conteúdo prevalece sobre a quantidade de páginas.</strong> O texto deve apresentar coerência, desenvolvimento completo das ideias e proposta autoral definida.
-                    </p>
-                    <p className="leading-relaxed pt-2 border-t border-slate-200">
-                      Após aprovação, o autor orienta-se sobre o registro oficial junto à <strong>Fundação Biblioteca Nacional (EDA/FBN)</strong>, procedimento pessoal e intransferível.
-                    </p>
                   </div>
 
                 </div>
