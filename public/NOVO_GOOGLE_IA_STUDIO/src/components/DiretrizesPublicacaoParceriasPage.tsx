@@ -158,7 +158,8 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: '11', titulo: '11 - Guia Completo para publicar o livro - Nível Diamante' },
   { id: '12', titulo: '12 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
   { id: 'certificacao-valores', titulo: 'Certificação e Valores (Modalidades, Requisitos & Percursos)' },
-  { id: '13', titulo: '13 - Informação Extra' },
+  { id: 'autoria-responsabilidade', titulo: 'Autoria e Responsabilidade' },
+  { id: '13', titulo: '13 - Avisos Importantes sobre Publicação' },
   { id: '14', titulo: '14 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
   { id: '15', titulo: '15 - Prazos de Análise e Devolutiva' },
   { id: '16', titulo: '16 - Critérios de Avaliação, Publicação e Direito de Retirada' },
@@ -202,7 +203,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     'como-publicar-osf': false,
     'como-publicar-zenodo': false,
     'registro-atualizacao-versoes': false,
-    'certificacao-valores': false
+    'certificacao-valores': false,
+    'autoria-responsabilidade': false
   });
 
   const toggleSection = (id: string) => {
@@ -240,7 +242,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       'como-publicar-osf': true,
       'como-publicar-zenodo': true,
       'registro-atualizacao-versoes': true,
-      'certificacao-valores': true
+      'certificacao-valores': true,
+      'autoria-responsabilidade': true
     });
   };
 
@@ -272,7 +275,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       'como-publicar-osf': false,
       'como-publicar-zenodo': false,
       'registro-atualizacao-versoes': false,
-      'certificacao-valores': false
+      'certificacao-valores': false,
+      'autoria-responsabilidade': false
     });
   };
 
@@ -2680,7 +2684,107 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 13: 13 - Informação Extra */}
+          {/* SANFONA: Autoria e Responsabilidade */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-autoria-responsabilidade"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('autoria-responsabilidade')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['autoria-responsabilidade']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-blue-900">
+                  <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFC72C]" />
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
+                    Produção Intelectual, Ética &amp; Uso de Inteligência Artificial
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
+                    Autoria e Responsabilidade
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['autoria-responsabilidade'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
+                    openSections['autoria-responsabilidade'] ? 'rotate-180 bg-[#011049] text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['autoria-responsabilidade'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Card 1: Autoria e Responsabilidade */}
+                  <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-2xl">📄</span>
+                      <h4 className="font-extrabold text-[#011049] text-base sm:text-lg uppercase tracking-wide">
+                        AUTORIA E RESPONSABILIDADE
+                      </h4>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      A produção intelectual pertence ao seu autor. A ESDHUBEM oferece orientação, modelos e critérios para desenvolvimento e publicação, mas não substitui o autor na criação da obra.
+                    </p>
+
+                    <div className="space-y-2">
+                      <p className="text-xs sm:text-sm text-slate-900 font-bold">
+                        O autor é responsável pelo conteúdo que apresenta e assina, incluindo:
+                      </p>
+                      <ul className="text-xs sm:text-sm text-slate-700 space-y-1.5 list-disc list-inside pl-1">
+                        <li>Informações, argumentos e interpretações;</li>
+                        <li>Referências e citações;</li>
+                        <li>Imagens e materiais utilizados;</li>
+                        <li>Respeito aos direitos de terceiros;</li>
+                        <li>Revisão final da produção.</li>
+                      </ul>
+                    </div>
+
+                    <p className="text-[12px] sm:text-xs text-slate-500 italic pt-2 border-t border-slate-100 leading-relaxed">
+                      A publicação de uma obra pela ESDHUBEM não significa que a instituição endosse automaticamente todas as opiniões, interpretações ou conclusões apresentadas pelo autor.
+                    </p>
+                  </div>
+
+                  {/* Card 2: Uso Responsável de Inteligência Artificial */}
+                  <div className="bg-white border-2 border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-2xl">🤖</span>
+                      <h4 className="font-extrabold text-[#011049] text-base sm:text-lg tracking-normal">
+                        Uso Responsável de Inteligência Artificial
+                      </h4>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      A tecnologia é ferramenta de apoio, <strong>não de substituição</strong> do pensamento e criação humana.
+                    </p>
+
+                    <ul className="text-xs sm:text-sm text-slate-700 space-y-2.5 list-disc list-inside pl-1">
+                      <li>A responsabilidade sobre o conteúdo é sempre do autor;</li>
+                      <li>
+                        Se utilizou IA em qualquer etapa, <strong>declare com transparência</strong> como foi aplicada;
+                      </li>
+                      <li>O uso não declarado poderá impedir ou cancelar a publicação.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 13: 13 - Avisos Importantes sobre Publicação */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-13"
@@ -2698,10 +2802,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
-                    Autoria, Responsabilidade, Inteligência Artificial &amp; Avisos de Publicação
+                    Periódicos, Repositórios com DOI &amp; Direito de Remoção
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-slate-900 truncate sm:whitespace-normal">
-                    13 - Informação Extra
+                    13 - Avisos Importantes sobre Publicação
                   </h3>
                 </div>
               </div>
@@ -2720,133 +2824,72 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </button>
 
             {openSections['13'] && (
-              <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
-                {/* Autoria e Responsabilidade & Inteligência Artificial */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-200">
-                  {/* Autoria e Responsabilidade */}
-                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-                    <h4 className="font-bold text-slate-900 text-sm sm:text-base uppercase tracking-wider flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-amber-600" />
-                      <span>Autoria e Responsabilidade</span>
-                    </h4>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      A produção intelectual pertence ao seu autor. A ESDHUBEM oferece orientação, modelos e critérios para desenvolvimento e publicação, mas não substitui o autor na criação da obra.
-                    </p>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
-                      O autor é responsável pelo conteúdo que apresenta e assina, incluindo:
-                    </p>
-                    <ul className="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                      <li>Informações, argumentos e interpretações;</li>
-                      <li>Referências e citações;</li>
-                      <li>Imagens e materiais utilizados;</li>
-                      <li>Respeito aos direitos de terceiros;</li>
-                      <li>Revisão final da produção.</li>
-                    </ul>
-                    <p className="text-[11px] text-slate-500 italic pt-1">
-                      A publicação de uma obra pela ESDHUBEM não significa que a instituição endosse automaticamente todas as opiniões, interpretações ou conclusões apresentadas pelo autor.
-                    </p>
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
+                <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+                  <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
+                    <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
+                      <ShieldCheck className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
+                        Transparência &amp; Diretrizes Institucionais
+                      </span>
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                        Avisos Importantes sobre Publicação
+                      </h3>
+                    </div>
                   </div>
 
-                  {/* Inteligência Artificial e Autoria */}
-                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-                    <h4 className="font-bold text-slate-900 text-sm sm:text-base uppercase tracking-wider flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-purple-600" />
-                      <span>Inteligência Artificial e Autoria</span>
-                    </h4>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      Ferramentas de inteligência artificial poderão ser utilizadas como apoio à produção, de acordo com as orientações da ESDHUBEM. Podem auxiliar na organização de ideias, elaboração de estruturas, revisão textual e aprimoramento da linguagem.
-                    </p>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      Entretanto, o autor continua responsável por compreender, verificar e revisar aquilo que publica. Informações, referências, dados ou resultados não devem ser apresentados como verdadeiros sem verificação adequada.
-                    </p>
-                    <div className="bg-purple-100/60 p-3 rounded-xl border border-purple-200 text-xs text-purple-950 font-medium">
-                      A tecnologia pode auxiliar a produção. A autoria e a responsabilidade permanecem com o autor.
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Aviso 1: Sobre Publicação em Periódicos e Revistas */}
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+                      <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                        <span>📤</span>
+                        <h4 className="font-bold text-slate-900">Sobre Publicação em Periódicos e Revistas</h4>
+                      </div>
+                      <p className="text-xs text-slate-700 leading-relaxed">
+                        A ESDHUBEM oferece orientação, estruturação, revisão dos manuscritos dos alunos de acordo com nossos modelos de publicação. Não exigimos rigor científico. Nosso trabalho é voltado para o investigativo e não realizamos encaminhamento, nem garantimos que o aluno faça publicação em plataformas de revistas científicas. Não garantimos, a aceitação do trabalho em revista, periódico ou repositório específico.
+                      </p>
+                      <p className="text-xs text-slate-700 leading-relaxed">
+                        Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
+                      </p>
+                      <p className="text-xs text-slate-700 leading-relaxed">
+                        A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
+                      </p>
+                    </div>
+
+                    {/* Aviso 2: Pré-print não é revista */}
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+                      <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                        <span>🔬</span>
+                        <h4 className="font-bold text-slate-900">Pré-print e Depósito com DOI</h4>
+                      </div>
+                      <p className="text-xs text-slate-600 leading-relaxed">
+                        O depósito em repositório com atribuição de <strong>DOI</strong> constitui <strong>registro e divulgação prévia</strong> da obra (pré-print):
+                      </p>
+                      <ul className="text-xs text-slate-600 space-y-1">
+                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Fica registrada oficialmente a autoria e data de criação;</li>
+                        <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> O trabalho passa a ser acessível publicamente;</li>
+                        <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> <strong>Não equivale a publicação em revista com revisão por pares</strong>;</li>
+                        <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> Verifique a política do periódico caso queira submeter a mesma obra.</li>
+                      </ul>
+                    </div>
+
+                    {/* Aviso 3: Direito de Remoção / Retirada */}
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3 md:col-span-2">
+                      <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                        <span>📂</span>
+                        <h4 className="font-bold text-slate-900">Direito de Remoção / Retirada</h4>
+                      </div>
+                      <p className="text-xs text-slate-600 leading-relaxed">
+                        O autor pode solicitar a exclusão de seu texto a qualquer momento. O prazo para retirada da página e dos índices públicos é de até <strong>15 dias úteis</strong>.
+                      </p>
+                      <p className="text-[11px] text-slate-500 italic">
+                        * Em repositórios externos (Zenodo/CERN), a exclusão segue as normas da plataforma terceira.
+                      </p>
                     </div>
                   </div>
                 </div>
-
-          {/* Avisos Importantes sobre Publicação e Autoria */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
-            <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
-                <ShieldCheck className="w-6 h-6" />
-              </div>
-              <div>
-                <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
-                  Transparência &amp; Integridade
-                </span>
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
-                  Avisos Importantes sobre Publicação e Autoria
-                </h3>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Aviso 1: Sobre Publicação em Periódicos e Revistas */}
-              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-                <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                  <span>📤</span>
-                  <h4 className="font-bold text-slate-900">Sobre Publicação em Periódicos e Revistas</h4>
-                </div>
-                <p className="text-xs text-slate-700 leading-relaxed">
-                  A ESDHUBEM oferece orientação, estruturação, revisão dos manuscritos dos alunos de acordo com nossos modelos de publicação. Não exigimos rigor científico. Nosso trabalho é voltado para o investigativo e não realizamos encaminhamento, nem garantimos que o aluno faça publicação em plataformas de revistas científicas. Não garantimos, a aceitação do trabalho em revista, periódico ou repositório específico.
-                </p>
-                <p className="text-xs text-slate-700 leading-relaxed">
-                  Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
-                </p>
-                <p className="text-xs text-slate-700 leading-relaxed">
-                  A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
-                </p>
-              </div>
-
-              {/* Aviso 2: Pré-print não é revista */}
-              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-                <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                  <span>🔬</span>
-                  <h4 className="font-bold text-slate-900">Pré-print e Depósito com DOI</h4>
-                </div>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  O depósito em repositório com atribuição de <strong>DOI</strong> constitui <strong>registro e divulgação prévia</strong> da obra (pré-print):
-                </p>
-                <ul className="text-xs text-slate-600 space-y-1">
-                  <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Fica registrada oficialmente a autoria e data de criação;</li>
-                  <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> O trabalho passa a ser acessível publicamente;</li>
-                  <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> <strong>Não equivale a publicação em revista com revisão por pares</strong>;</li>
-                  <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> Verifique a política do periódico caso queira submeter a mesma obra.</li>
-                </ul>
-              </div>
-
-              {/* Aviso 3: Uso de IA */}
-              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-                <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                  <span>🤖</span>
-                  <h4 className="font-bold text-slate-900">Uso Responsável de Inteligência Artificial</h4>
-                </div>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  A tecnologia é ferramenta de apoio, <strong>não de substituição</strong> do pensamento e criação humana.
-                </p>
-                <ul className="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                  <li>A responsabilidade sobre o conteúdo é sempre do autor;</li>
-                  <li>Se utilizou IA em qualquer etapa, <strong>declare com transparência</strong> como foi aplicada;</li>
-                  <li>O uso não declarado poderá impedir ou cancelar a publicação.</li>
-                </ul>
-              </div>
-
-              {/* Aviso 4: Retirada de Publicação */}
-              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-                <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                  <span>📂</span>
-                  <h4 className="font-bold text-slate-900">Direito de Remoção / Retirada</h4>
-                </div>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  O autor pode solicitar a exclusão de seu texto a qualquer momento. O prazo para retirada da página e dos índices públicos é de até <strong>15 dias úteis</strong>.
-                </p>
-                <p className="text-[11px] text-slate-500 italic">
-                  * Em repositórios externos (Zenodo/CERN), a exclusão segue as normas da plataforma terceira.
-                </p>
-              </div>
-            </div>
-          </div>
               </div>
             )}
           </div>
