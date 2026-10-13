@@ -3828,7 +3828,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     {openSections['registro-atualizacao-versoes'] && (
                       <div className="p-4 sm:p-6 space-y-5 animate-fadeIn">
                         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                          O trabalho deverá ser entregue devidamente registrado na plataforma correspondente ao nível escolhido. Entretanto, sabemos que ajustes podem ser necessários. Funciona assim:
+                          O trabalho do aluno deverá ser enviado por e-mail para a nossa escola apenas quando estiver devidamente registrado na plataforma correspondente ao nível escolhido, OSF ou Zenodo. Entretanto, sabemos que ajustes podem ser necessários. Funciona assim:
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -3839,7 +3839,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                               <h6>Antes do registro público</h6>
                             </div>
                             <p className="text-xs text-slate-700 leading-relaxed">
-                              O estudante pode elaborar, corrigir e aprimorar o texto quantas vezes desejar. Envia para avaliação, recebe orientações, faz ajustes — somente após a aprovação final é realizado o registro público, garantindo que o material publicado represente a versão definitiva.
+                              O estudante pode elaborar, corrigir e aprimorar o texto. Registra seu trabalho no Zenodo ou OSF e envia para a ESDHUBEM para que seja feita a avaliação. O aluno recebe a devolutiva com orientações para modificações. O aluno faz ajustes. Ocorrendo a aprovação final da escola, o aluno atualiza a nova versão no Zenodo ou OSF e, com o DOI gerado na plataforma, realizamos a publicação e lançamento do certificado, garantindo que o material publicado represente a versão definitiva.
                             </p>
                           </div>
 
