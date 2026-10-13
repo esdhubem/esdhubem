@@ -170,7 +170,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '17': false,
     '18': false,
     '19': false,
-    '20': false
+    '20': false,
+    'plataformas-pesquisa': false
   });
 
   const toggleSection = (id: string) => {
@@ -202,7 +203,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '17': true,
       '18': true,
       '19': true,
-      '20': true
+      '20': true,
+      'plataformas-pesquisa': true
     });
   };
 
@@ -228,7 +230,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '17': false,
       '18': false,
       '19': false,
-      '20': false
+      '20': false,
+      'plataformas-pesquisa': false
     });
   };
 
@@ -1968,98 +1971,230 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     </div>
                   </div>
 
-                  {/* Resumo das Plataformas para Pesquisa de Artigos para Referência Bibliográfica */}
-                  <div className="space-y-3 pt-4 border-t border-slate-200">
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg">📚</span>
-                      <h5 className="font-bold text-xs sm:text-sm uppercase tracking-wider text-slate-900">
-                        Resumo das plataformas para pesquisa de artigos para referência bibliográfica
-                      </h5>
-                    </div>
+                  {/* Sanfona: Sugestão de Plataformas para Pesquisa de Artigos */}
+                  <div
+                    id="sanfona-plataformas-pesquisa"
+                    className="rounded-2xl border-2 border-slate-200 bg-white shadow-sm overflow-hidden transition-all duration-200"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => toggleSection('plataformas-pesquisa')}
+                      className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 bg-gradient-to-r from-slate-50 via-white to-slate-50 hover:bg-slate-100 transition-colors cursor-pointer border-b border-slate-200"
+                      aria-expanded={openSections['plataformas-pesquisa']}
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center font-black text-lg sm:text-xl shadow-xs shrink-0 border border-blue-200">
+                          📚
+                        </div>
+                        <div className="min-w-0">
+                          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-blue-700 block">
+                            Fontes &amp; Bases Acadêmicas Recomendadas
+                          </span>
+                          <h5 className="font-extrabold text-xs sm:text-sm md:text-base text-slate-900 leading-snug">
+                            Sugestão de plataformas onde o aluno pode fazer pesquisa de artigos para compor suas referências bibliográficas.
+                          </h5>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                          {openSections['plataformas-pesquisa'] ? 'Recolher' : 'Expandir'}
+                        </span>
+                        <div
+                          className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
+                            openSections['plataformas-pesquisa'] ? 'rotate-180 bg-[#00227B] text-white' : ''
+                          }`}
+                        >
+                          <ChevronDown className="w-4 h-4" />
+                        </div>
+                      </div>
+                    </button>
 
-                    <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs bg-white">
-                      <table className="w-full text-left text-xs sm:text-sm border-collapse">
-                        <thead>
-                          <tr className="bg-slate-900 text-white">
-                            <th className="py-3 px-4 font-bold uppercase tracking-wider w-1/3 sm:w-2/5">Plataforma</th>
-                            <th className="py-3 px-4 font-bold uppercase tracking-wider">Por que usar</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-100 text-slate-700">
-                          <tr className="hover:bg-amber-50/40 transition-colors">
-                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
-                              <span className="flex items-center gap-2">
-                                <span className="text-base">🌐</span>
-                                <span>Scielo + Google Acadêmico</span>
-                              </span>
-                            </td>
-                            <td className="py-3 px-4 text-slate-600">
-                              Já conhecidos, mantidos como você pediu
-                            </td>
-                          </tr>
-                          <tr className="hover:bg-amber-50/40 transition-colors">
-                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
-                              <span className="flex items-center gap-2">
-                                <span className="text-base">🏛️</span>
-                                <span>Portal Periódicos CAPES</span>
-                              </span>
-                            </td>
-                            <td className="py-3 px-4 text-slate-600">
-                              Acesso a várias bases de uma vez
-                            </td>
-                          </tr>
-                          <tr className="hover:bg-amber-50/40 transition-colors">
-                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
-                              <span className="flex items-center gap-2">
-                                <span className="text-base">🎓</span>
-                                <span>BDTD</span>
-                              </span>
-                            </td>
-                            <td className="py-3 px-4 text-slate-600">
-                              Teses e dissertações brasileiras
-                            </td>
-                          </tr>
-                          <tr className="hover:bg-amber-50/40 transition-colors">
-                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
-                              <span className="flex items-center gap-2">
-                                <span className="text-base">🔬</span>
-                                <span>OasisBr</span>
-                              </span>
-                            </td>
-                            <td className="py-3 px-4 text-slate-600">
-                              Produção científica nacional em acesso aberto
-                            </td>
-                          </tr>
-                          <tr className="hover:bg-amber-50/40 transition-colors">
-                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
-                              <span className="flex items-center gap-2">
-                                <span className="text-base">🌎</span>
-                                <span>Redalyc</span>
-                              </span>
-                            </td>
-                            <td className="py-3 px-4 text-slate-600">
-                              Artigos em português/espanhol — América Latina
-                            </td>
-                          </tr>
-                          <tr className="hover:bg-amber-50/40 transition-colors">
-                            <td className="py-3 px-4 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
-                              <span className="flex items-center gap-2">
-                                <span className="text-base">📖</span>
-                                <span>DOAJ</span>
-                              </span>
-                            </td>
-                            <td className="py-3 px-4 text-slate-600">
-                              Revistas internacionais de acesso livre
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                    {openSections['plataformas-pesquisa'] && (
+                      <div className="p-4 sm:p-6 space-y-4 animate-fadeIn">
+                        <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs bg-white">
+                          <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                            <thead>
+                              <tr className="bg-slate-900 text-white">
+                                <th className="py-3 px-4 font-bold uppercase tracking-wider w-1/2 sm:w-2/5">Plataforma</th>
+                                <th className="py-3 px-4 font-bold uppercase tracking-wider">Por que usar</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100 text-slate-700">
+                              <tr className="hover:bg-amber-50/40 transition-colors">
+                                <td className="py-3.5 px-4 font-bold text-slate-900">
+                                  <div className="space-y-1.5">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-base">🌐</span>
+                                      <span className="text-slate-900 font-extrabold">Scielo + Google Acadêmico</span>
+                                    </div>
+                                    <div className="flex items-center flex-wrap gap-2 pt-0.5">
+                                      <a
+                                        href="https://scielo.org/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-[#00227B] text-xs font-bold border border-blue-200 transition-colors shadow-2xs"
+                                        title="Acessar SciELO (Scientific Electronic Library Online)"
+                                      >
+                                        <span>Acessar Scielo</span>
+                                        <ExternalLink className="w-3 h-3 text-blue-600" />
+                                      </a>
+                                      <a
+                                        href="https://scholar.google.com.br/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-sky-50 hover:bg-sky-100 text-sky-900 text-xs font-bold border border-sky-200 transition-colors shadow-2xs"
+                                        title="Acessar Google Acadêmico (Google Scholar)"
+                                      >
+                                        <span>Google Acadêmico</span>
+                                        <ExternalLink className="w-3 h-3 text-sky-600" />
+                                      </a>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td className="py-3.5 px-4 text-slate-600 align-middle">
+                                  Já conhecidos, mantidos como você pediu
+                                </td>
+                              </tr>
 
-                    <p className="text-xs text-amber-900 font-semibold bg-amber-50 p-2.5 rounded-lg border border-amber-200 flex items-center gap-1.5">
-                      <span>✅</span>
-                      <span>Todas são gratuitas e confiáveis.</span>
-                    </p>
+                              <tr className="hover:bg-amber-50/40 transition-colors">
+                                <td className="py-3.5 px-4 font-bold text-slate-900">
+                                  <div className="space-y-1.5">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-base">🏛️</span>
+                                      <span className="text-slate-900 font-extrabold">Portal Periódicos CAPES</span>
+                                    </div>
+                                    <div className="pt-0.5">
+                                      <a
+                                        href="https://www.periodicos.capes.gov.br/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-[#00227B] text-xs font-bold border border-blue-200 transition-colors shadow-2xs"
+                                        title="Acessar Portal de Periódicos CAPES"
+                                      >
+                                        <span>Acessar Portal CAPES</span>
+                                        <ExternalLink className="w-3 h-3 text-blue-600" />
+                                      </a>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td className="py-3.5 px-4 text-slate-600 align-middle">
+                                  Acesso a várias bases de uma vez
+                                </td>
+                              </tr>
+
+                              <tr className="hover:bg-amber-50/40 transition-colors">
+                                <td className="py-3.5 px-4 font-bold text-slate-900">
+                                  <div className="space-y-1.5">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-base">🎓</span>
+                                      <span className="text-slate-900 font-extrabold">BDTD</span>
+                                    </div>
+                                    <div className="pt-0.5">
+                                      <a
+                                        href="https://bdtd.ibict.br/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-[#00227B] text-xs font-bold border border-blue-200 transition-colors shadow-2xs"
+                                        title="Acessar Biblioteca Digital Brasileira de Teses e Dissertações (BDTD)"
+                                      >
+                                        <span>Acessar BDTD</span>
+                                        <ExternalLink className="w-3 h-3 text-blue-600" />
+                                      </a>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td className="py-3.5 px-4 text-slate-600 align-middle">
+                                  Teses e dissertações brasileiras
+                                </td>
+                              </tr>
+
+                              <tr className="hover:bg-amber-50/40 transition-colors">
+                                <td className="py-3.5 px-4 font-bold text-slate-900">
+                                  <div className="space-y-1.5">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-base">⛵</span>
+                                      <span className="text-slate-900 font-extrabold">OasisBr</span>
+                                    </div>
+                                    <div className="pt-0.5">
+                                      <a
+                                        href="https://oasisbr.ibict.br/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-[#00227B] text-xs font-bold border border-blue-200 transition-colors shadow-2xs"
+                                        title="Acessar OasisBr (Portal de Publicações Científicas em Acesso Aberto)"
+                                      >
+                                        <span>Acessar OasisBr</span>
+                                        <ExternalLink className="w-3 h-3 text-blue-600" />
+                                      </a>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td className="py-3.5 px-4 text-slate-600 align-middle">
+                                  Produção científica nacional em acesso aberto
+                                </td>
+                              </tr>
+
+                              <tr className="hover:bg-amber-50/40 transition-colors">
+                                <td className="py-3.5 px-4 font-bold text-slate-900">
+                                  <div className="space-y-1.5">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-base">🌎</span>
+                                      <span className="text-slate-900 font-extrabold">Redalyc</span>
+                                    </div>
+                                    <div className="pt-0.5">
+                                      <a
+                                        href="https://www.redalyc.org/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-[#00227B] text-xs font-bold border border-blue-200 transition-colors shadow-2xs"
+                                        title="Acessar Redalyc (Red de Revistas Científicas de América Latina y el Caribe)"
+                                      >
+                                        <span>Acessar Redalyc</span>
+                                        <ExternalLink className="w-3 h-3 text-blue-600" />
+                                      </a>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td className="py-3.5 px-4 text-slate-600 align-middle">
+                                  Artigos em português/espanhol — América Latina
+                                </td>
+                              </tr>
+
+                              <tr className="hover:bg-amber-50/40 transition-colors">
+                                <td className="py-3.5 px-4 font-bold text-slate-900">
+                                  <div className="space-y-1.5">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-base">📖</span>
+                                      <span className="text-slate-900 font-extrabold">DOAJ</span>
+                                    </div>
+                                    <div className="pt-0.5">
+                                      <a
+                                        href="https://doaj.org/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-[#00227B] text-xs font-bold border border-blue-200 transition-colors shadow-2xs"
+                                        title="Acessar DOAJ (Directory of Open Access Journals)"
+                                      >
+                                        <span>Acessar DOAJ</span>
+                                        <ExternalLink className="w-3 h-3 text-blue-600" />
+                                      </a>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td className="py-3.5 px-4 text-slate-600 align-middle">
+                                  Revistas internacionais de acesso livre
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <p className="text-xs text-amber-900 font-semibold bg-amber-50 p-2.5 rounded-lg border border-amber-200 flex items-center gap-1.5">
+                          <span>✅</span>
+                          <span>Todas são gratuitas e confiáveis.</span>
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
