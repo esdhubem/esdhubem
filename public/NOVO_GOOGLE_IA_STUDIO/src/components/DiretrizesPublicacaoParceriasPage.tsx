@@ -156,7 +156,7 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: '8', titulo: '8 - Guia Completo do Artigo de Investigação - Nível Ouro' },
   { id: '9', titulo: '9 - Orientações para Produção do Artigo de investigação' },
   { id: 'plataformas-pesquisa', titulo: 'Sugestão de plataformas onde o aluno pode fazer pesquisa de artigos' },
-  { id: '10', titulo: '10 - Sobre Horas Complementares e Alinhamento Temático' },
+  { id: '10', titulo: '10 - Sobre o uso do nosso certificado como Horas Complementares na faculdade' },
   { id: '11', titulo: '11 - Certificação Diamante: Orientação para publicação de livro' },
   { id: '12', titulo: '12 - Guia Completo para publicar o livro - Nível Diamante' },
   { id: '13', titulo: '13 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
@@ -2421,7 +2421,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 10: 10 - Sobre Horas Complementares e Alinhamento Temático */}
+          {/* SEÇÃO 10: 10 - Sobre o uso do nosso certificado como Horas Complementares na faculdade */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-10"
@@ -2440,10 +2440,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
-                    Referência Organizacional CAPES &amp; Critérios Institucionais de Validação
+                    Referência Institucional &amp; Critérios de Validação
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    10 - Sobre Horas Complementares e Alinhamento Temático
+                    10 - Sobre o uso do nosso certificado como Horas Complementares na faculdade
                   </h3>
                 </div>
               </div>
@@ -2471,14 +2471,9 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       6
                     </span>
                     <h4 className="font-black text-base sm:text-lg text-slate-900">
-                      Sobre Horas Complementares e Alinhamento Temático
+                      Sobre o uso do nosso certificado como Horas Complementares na faculdade.
                     </h4>
                   </div>
-
-                  {/* Texto sobre alinhamento CAPES */}
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                    Os eixos temáticos definidos pela ESDHUBEM foram estruturados com base nas <strong>áreas de conhecimento da CAPES</strong>, visando manter uniformidade, coerência e um norteamento conceitual comum aos trabalhos. Este alinhamento temático não significa certificação ou validação oficial pela CAPES nem confere status de instituição de ensino superior à ESDHUBEM — <strong>trata-se de referência organizacional</strong>.
-                  </p>
 
                   {/* Card: Validação de horas complementares */}
                   <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-5 sm:p-6 space-y-3.5 shadow-xs">
