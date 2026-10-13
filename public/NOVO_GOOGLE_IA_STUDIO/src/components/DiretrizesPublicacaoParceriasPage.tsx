@@ -158,13 +158,14 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: '11', titulo: '11 - Guia Completo para publicar o livro - Nível Diamante' },
   { id: '12', titulo: '12 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
   { id: '13', titulo: '13 - Informação Extra (Autoria, IA, Certificação e Valores)' },
-  { id: '14', titulo: '14 - Prazos de Análise e Devolutiva' },
-  { id: '15', titulo: '15 - Critérios de Avaliação, Publicação e Direito de Retirada' },
-  { id: '16', titulo: '16 - Estrutura e Formato por Nível de Produção' },
-  { id: '17', titulo: '17 - Registro Obrigatório nas Plataformas e Atualização de Versões' },
-  { id: '18', titulo: '18 - Uso de Inteligência Artificial — Declaração e Limites' },
-  { id: '19', titulo: '19 - Sobre Horas Complementares e Alinhamento Temático' },
-  { id: '20', titulo: '20 - Livro Autoral — Formato e Contagem de Páginas' }
+  { id: '14', titulo: '14 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
+  { id: '15', titulo: '15 - Prazos de Análise e Devolutiva' },
+  { id: '16', titulo: '16 - Critérios de Avaliação, Publicação e Direito de Retirada' },
+  { id: '17', titulo: '17 - Estrutura e Formato por Nível de Produção' },
+  { id: '18', titulo: '18 - Registro Obrigatório nas Plataformas e Atualização de Versões' },
+  { id: '19', titulo: '19 - Uso de Inteligência Artificial — Declaração e Limites' },
+  { id: '20', titulo: '20 - Sobre Horas Complementares e Alinhamento Temático' },
+  { id: '21', titulo: '21 - Livro Autoral — Formato e Contagem de Páginas' }
 ];
 
 export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoParceriasPageProps> = ({
@@ -195,6 +196,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '18': false,
     '19': false,
     '20': false,
+    '21': false,
     'plataformas-pesquisa': false,
     'como-publicar-osf': false,
     'como-publicar-zenodo': false,
@@ -232,6 +234,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '18': true,
       '19': true,
       '20': true,
+      '21': true,
       'plataformas-pesquisa': true,
       'como-publicar-osf': true,
       'como-publicar-zenodo': true,
@@ -263,6 +266,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '18': false,
       '19': false,
       '20': false,
+      '21': false,
       'plataformas-pesquisa': false,
       'como-publicar-osf': false,
       'como-publicar-zenodo': false,
@@ -2842,7 +2846,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 14: 14 - Prazos de Análise e Devolutiva */}
+          {/* SEÇÃO 14: 14 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-14"
@@ -2856,15 +2860,15 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  ⏱️ 14
+                  📏 14
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
-                    Prazos Institucionais &amp; Devolutivas de Avaliação
+                    Parâmetros de Contagem de Palavras e Páginas Sugeridas
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    14 - Prazos de Análise e Devolutiva
+                    14 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível
                   </h3>
                 </div>
               </div>
@@ -2883,6 +2887,171 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </button>
 
             {openSections['14'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-6 shadow-sm">
+                  
+                  {/* Introdução */}
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
+                        📏
+                      </span>
+                      <h4 className="font-black text-base sm:text-lg text-slate-900">
+                        Padrão de Extensão por Nível
+                      </h4>
+                    </div>
+                    <p className="text-sm sm:text-base font-medium text-slate-700 leading-relaxed">
+                      O nosso padrão é acessível e coerente com a nossa proposta:
+                    </p>
+                  </div>
+
+                  {/* Tabela 1: Extensão por Nível */}
+                  <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-xs">
+                    <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-slate-900 text-white">
+                          <th className="py-3 px-4 font-bold">Nível</th>
+                          <th className="py-3 px-4 font-bold">Tipo de trabalho</th>
+                          <th className="py-3 px-4 font-bold">Palavras sugeridas</th>
+                          <th className="py-3 px-4 font-bold">Páginas aproximadas</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                        <tr className="hover:bg-slate-50/80 transition-colors">
+                          <td className="py-3.5 px-4 font-bold">
+                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-black bg-slate-100 text-slate-700 border border-slate-300">
+                              🥈 Prata
+                            </span>
+                          </td>
+                          <td className="py-3.5 px-4 font-semibold text-slate-900">Artigo de Blog</td>
+                          <td className="py-3.5 px-4 font-bold text-slate-800">1.200 a 2.500 palavras</td>
+                          <td className="py-3.5 px-4 text-slate-700">4 a 8 páginas</td>
+                        </tr>
+                        <tr className="hover:bg-amber-50/50 transition-colors">
+                          <td className="py-3.5 px-4 font-bold">
+                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-black bg-amber-100 text-amber-800 border border-amber-300">
+                              🥇 Ouro
+                            </span>
+                          </td>
+                          <td className="py-3.5 px-4 font-semibold text-slate-900">Manuscrito de Investigação</td>
+                          <td className="py-3.5 px-4 font-bold text-amber-900">2.500 a 5.000 palavras</td>
+                          <td className="py-3.5 px-4 text-slate-700">8 a 15 páginas</td>
+                        </tr>
+                        <tr className="hover:bg-cyan-50/50 transition-colors">
+                          <td className="py-3.5 px-4 font-bold">
+                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-black bg-cyan-100 text-cyan-800 border border-cyan-300">
+                              💎 Diamante
+                            </span>
+                          </td>
+                          <td className="py-3.5 px-4 font-semibold text-slate-900">Livro Autoral</td>
+                          <td className="py-3.5 px-4 font-bold text-cyan-900">Mín. 50 pág. conteúdo</td>
+                          <td className="py-3.5 px-4 text-slate-700">50+ páginas</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {/* Tabela 2: O que conta e o que NÃO conta */}
+                  <div className="space-y-3 pt-2">
+                    <h5 className="font-bold text-slate-900 text-sm sm:text-base flex items-center gap-2">
+                      <span>📝</span> O que conta e o que NÃO conta
+                    </h5>
+                    <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-xs">
+                      <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                        <thead>
+                          <tr className="border-b border-slate-200">
+                            <th className="py-3 px-4 font-bold bg-emerald-50 text-emerald-900 border-r border-slate-200">
+                              ✅ Conta no total
+                            </th>
+                            <th className="py-3 px-4 font-bold bg-rose-50 text-rose-900">
+                              ❌ Não entra na contagem
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                          <tr>
+                            <td className="py-2.5 px-4 font-medium text-slate-800 border-r border-slate-200">Introdução</td>
+                            <td className="py-2.5 px-4 text-slate-600">Resumo (às vezes separado)</td>
+                          </tr>
+                          <tr>
+                            <td className="py-2.5 px-4 font-medium text-slate-800 border-r border-slate-200">Desenvolvimento</td>
+                            <td className="py-2.5 px-4 text-slate-600">Folha de rosto, capa</td>
+                          </tr>
+                          <tr>
+                            <td className="py-2.5 px-4 font-medium text-slate-800 border-r border-slate-200">Discussão</td>
+                            <td className="py-2.5 px-4 text-slate-600">Sumário, dedicatória</td>
+                          </tr>
+                          <tr>
+                            <td className="py-2.5 px-4 font-medium text-slate-800 border-r border-slate-200">Conclusão</td>
+                            <td className="py-2.5 px-4 text-slate-600">Referências bibliográficas</td>
+                          </tr>
+                          <tr>
+                            <td className="py-2.5 px-4 font-medium text-slate-800 border-r border-slate-200">Citações no texto</td>
+                            <td className="py-2.5 px-4 text-slate-600">Anexos e apêndices</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  {/* Card: Recomendação Prática */}
+                  <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-5 sm:p-6 space-y-2.5 shadow-xs">
+                    <div className="flex items-center gap-2 text-amber-900 font-bold text-sm sm:text-base">
+                      <span className="text-lg">💡</span>
+                      <h5>Recomendação prática para a ESDHUBEM</h5>
+                    </div>
+                    <p className="text-xs sm:text-sm text-amber-950/90 leading-relaxed italic bg-white/70 p-4 rounded-xl border border-amber-200/80">
+                      &quot;Para o Artigo de Investigação do Nível Ouro, sugerimos entre 2.500 e 5.000 palavras de conteúdo efetivo — o suficiente para desenvolver o tema com profundidade sem exigir volume excessivo. O que prevalece é a coerência, a clareza e o desenvolvimento das ideias, não a quantidade de páginas.&quot;
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 15: 15 - Prazos de Análise e Devolutiva */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-15"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('15')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['15']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  ⏱️ 15
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Prazos Institucionais &amp; Devolutivas de Avaliação
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    15 - Prazos de Análise e Devolutiva
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
+                  {openSections['15'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['15'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['15'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-5 shadow-sm">
                   <div className="space-y-2">
@@ -2960,21 +3129,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 15: 15 - Critérios de Avaliação, Publicação e Direito de Retirada */}
+          {/* SEÇÃO 16: 16 - Critérios de Avaliação, Publicação e Direito de Retirada */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-15"
+            id="secao-sanfona-16"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('15')}
+              onClick={() => toggleSection('16')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['15']}
+              aria-expanded={openSections['16']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  ⚖️ 15
+                  ⚖️ 16
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -2982,17 +3151,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Critérios de Avaliação, Publicação e Direito de Retirada
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    15 - Critérios de Avaliação, Publicação e Direito de Retirada
+                    16 - Critérios de Avaliação, Publicação e Direito de Retirada
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['15'] ? 'Recolher' : 'Expandir'}
+                  {openSections['16'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['15'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['16'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -3000,7 +3169,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['15'] && (
+            {openSections['16'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-6 shadow-sm">
                   {/* Título interno com o número 2 */}
@@ -3108,21 +3277,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 16: 16 - Estrutura e Formato por Nível de Produção */}
+          {/* SEÇÃO 17: 17 - Estrutura e Formato por Nível de Produção */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-16"
+            id="secao-sanfona-17"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('16')}
+              onClick={() => toggleSection('17')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['16']}
+              aria-expanded={openSections['17']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📐 16
+                  📐 17
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3130,17 +3299,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Parâmetros Textuais, Normas de Estilo &amp; Extensão
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    16 - Estrutura e Formato por Nível de Produção
+                    17 - Estrutura e Formato por Nível de Produção
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['16'] ? 'Recolher' : 'Expandir'}
+                  {openSections['17'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['16'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['17'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -3148,7 +3317,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['16'] && (
+            {openSections['17'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-5 shadow-sm">
                   {/* Título interno com o número 3 */}
@@ -3322,21 +3491,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 17: 17 - Registro Obrigatório nas Plataformas e Atualização de Versões */}
+          {/* SEÇÃO 18: 18 - Registro Obrigatório nas Plataformas e Atualização de Versões */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-17"
+            id="secao-sanfona-18"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('17')}
+              onClick={() => toggleSection('18')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['17']}
+              aria-expanded={openSections['18']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  🌐 17
+                  🌐 18
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3344,17 +3513,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     OSF, Zenodo com DOI, Autoria Perpétua e Gestão de Versões
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    17 - Registro Obrigatório nas Plataformas e Atualização de Versões
+                    18 - Registro Obrigatório nas Plataformas e Atualização de Versões
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['17'] ? 'Recolher' : 'Expandir'}
+                  {openSections['18'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['17'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['18'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -3362,7 +3531,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['17'] && (
+            {openSections['18'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-7 shadow-sm">
                   
@@ -3898,21 +4067,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 18: 18 - Uso de Inteligência Artificial — Declaração e Limites */}
+          {/* SEÇÃO 19: 19 - Uso de Inteligência Artificial — Declaração e Limites */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-18"
+            id="secao-sanfona-19"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('18')}
+              onClick={() => toggleSection('19')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['18']}
+              aria-expanded={openSections['19']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  🤖 18
+                  🤖 19
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3920,17 +4089,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Transparência, Ética, Limites de Uso e Modelos de Declaração
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    18 - Uso de Inteligência Artificial — Declaração e Limites
+                    19 - Uso de Inteligência Artificial — Declaração e Limites
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['18'] ? 'Recolher' : 'Expandir'}
+                  {openSections['19'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['18'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['19'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -3938,7 +4107,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['18'] && (
+            {openSections['19'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-7 shadow-sm">
                   
@@ -4075,21 +4244,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 19: 19 - Sobre Horas Complementares e Alinhamento Temático */}
+          {/* SEÇÃO 20: 20 - Sobre Horas Complementares e Alinhamento Temático */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-19"
+            id="secao-sanfona-20"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('19')}
+              onClick={() => toggleSection('20')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['19']}
+              aria-expanded={openSections['20']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  🏛️ 19
+                  🏛️ 20
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -4097,17 +4266,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Referência Organizacional CAPES &amp; Critérios Institucionais de Validação
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    19 - Sobre Horas Complementares e Alinhamento Temático
+                    20 - Sobre Horas Complementares e Alinhamento Temático
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['19'] ? 'Recolher' : 'Expandir'}
+                  {openSections['20'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['19'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['20'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -4115,7 +4284,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['19'] && (
+            {openSections['20'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-6 shadow-sm">
                   
@@ -4165,21 +4334,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 20: 20 - Livro Autoral — Formato e Contagem de Páginas */}
+          {/* SEÇÃO 21: 21 - Livro Autoral — Formato e Contagem de Páginas */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-20"
+            id="secao-sanfona-21"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('20')}
+              onClick={() => toggleSection('21')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['20']}
+              aria-expanded={openSections['21']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📖 20
+                  📖 21
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -4187,17 +4356,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Extensão Mínima de 50 Páginas, Parâmetros Gráficos e EDA/FBN
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    20 - Livro Autoral — Formato e Contagem de Páginas
+                    21 - Livro Autoral — Formato e Contagem de Páginas
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['20'] ? 'Recolher' : 'Expandir'}
+                  {openSections['21'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['20'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['21'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -4205,7 +4374,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['20'] && (
+            {openSections['21'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-6 shadow-sm">
                   
