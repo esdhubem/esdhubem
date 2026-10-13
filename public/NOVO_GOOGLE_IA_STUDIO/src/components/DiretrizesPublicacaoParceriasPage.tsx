@@ -3653,7 +3653,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
                     </p>
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa Tríade da Organização, Assimilação e Comunicação juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
+                      A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa <strong>Tríade da Organização, Assimilação e Comunicação</strong> e o <strong>Quadrilátero da Organização, Assimilação, Comunicação e Produção</strong> é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
                     </p>
                   </div>
 
