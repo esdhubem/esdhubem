@@ -591,7 +591,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </li>
                   <li className="flex items-start gap-2">
                     <span>🏆</span>
-                    <span><strong>Certificado Ouro:</strong> desenvolve um artigo investigativo estruturado no repositório internacional Zenodo com DOI permanente e publicação no Repositório de Artigos da ESDHUBEM;</span>
+                    <span><strong>Certificado Ouro:</strong> desenvolve um artigo investigativo (2.500 a 5.000 palavras) estruturado no repositório internacional Zenodo com DOI permanente e publicação no Repositório de Artigos da ESDHUBEM;</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span>🏆</span>
@@ -1048,7 +1048,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       </li>
                       <li className="flex items-start gap-2">
                         <span>🏆</span>
-                        <span><strong>Certificado Ouro:</strong> desenvolve um <strong>artigo investigativo</strong> estruturado no repositório internacional Zenodo com <strong>DOI permanente</strong> e publicação no Repositório de Artigos da ESDHUBEM;</span>
+                        <span><strong>Certificado Ouro:</strong> desenvolve um <strong>artigo investigativo</strong> (2.500 a 5.000 palavras) estruturado no repositório internacional Zenodo com <strong>DOI permanente</strong> e publicação no Repositório de Artigos da ESDHUBEM;</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span>🏆</span>
@@ -1216,7 +1216,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                               <span>Ouro</span>
                             </div>
                             <p className="text-slate-600">
-                              <strong>Artigo Investigativo</strong> estruturado no repositório internacional Zenodo com DOI permanente e publicação no Repositório de Artigos da ESDHUBEM.
+                              <strong>Artigo Investigativo</strong> (2.500 a 5.000 palavras) estruturado no repositório internacional Zenodo com DOI permanente e publicação no Repositório de Artigos da ESDHUBEM.
                             </p>
                           </div>
                           <div className="p-3 bg-white border border-cyan-200 rounded-xl shadow-2xs space-y-1">
@@ -1764,7 +1764,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       <h4 className="text-lg sm:text-xl font-bold text-amber-950">
                         OURO — INVESTIGAR E APROFUNDAR
                       </h4>
-                      <span className="text-xs font-semibold text-amber-800">Manuscrito de Conclusão de Curso + Zenodo + DOI</span>
+                      <span className="text-xs font-semibold text-amber-800">Manuscrito de Conclusão de Curso + Zenodo + DOI (2.500 a 5.000 palavras)</span>
                     </div>
                   </div>
 
