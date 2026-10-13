@@ -1036,7 +1036,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       O <strong className="text-[#00227B]">Quadrilátero da Organização, Assimilação, Comunicação e Produção</strong> é o desdobramento metodológico avançado da ESDHUBEM para os estudantes que pretendem alcançar as certificações superiores de mérito (<strong className="text-indigo-950 font-bold">Prata, Ouro e Diamante</strong>).
                     </p>
                     <p>
-                      Enquanto a Tríade estabelece a base fundamental (composta por Mapa Mental, Verbete Enciclopédico e Áudio explicativo), o <strong>Quadrilátero</strong> introduz o quarto vértice decisivo: a <strong>Produção Autoral Ampliada</strong>, que certifica a autonomia, a pesquisa e a capacidade do estudante de produzir obras científicas e editoriais de impacto.
+                      Enquanto a Tríade estabelece a base fundamental (composta por Mapa Mental, Verbete Enciclopédico e Áudio explicativo), o <strong>Quadrilátero</strong> introduz o quarto vértice decisivo: a <strong>Produção Autoral Ampliada</strong>, que certifica a autonomia, a pesquisa e a capacidade do estudante de produzir obras investigativas e editoriais de impacto.
                     </p>
                     <p>
                       A quarta etapa (Produção) desdobra-se em conformidade com o tipo de certificado escolhido:
