@@ -1404,6 +1404,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     O trabalho deverá apresentar uma estrutura compatível com uma produção de investigação e receberá orientações específicas para sua elaboração.
                   </p>
 
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    Para o Manuscrito de Investigação do Nível Ouro, sugerimos entre <strong>2.500 e 5.000 palavras</strong> de conteúdo efetivo — o suficiente para desenvolver o tema com profundidade sem exigir volume excessivo. O que prevalece é a coerência, a clareza e o desenvolvimento das ideias, não a quantidade de páginas.
+                  </p>
+
                   {/* Tutorial Vídeo - Parte 4: Manuscrito Científico, Zenodo & DOI */}
                   <div className="space-y-4 py-4 border-y border-amber-200/80">
                     <LazyVideoPlayer
