@@ -947,7 +947,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
 
                   <p className="text-slate-700 text-sm leading-relaxed">
-                    O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da <strong>metodologia pedagógica de Assimilação Ativa</strong> da ESDHUBEM, elaborando um <strong>Verbete</strong> com conceito claro, informativo, objetivo, histórico e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola.
+                    O Bronze é destinado ao estudante que deseja consolidar sua aprendizagem através da criação da <strong>Tríade da Assimilação Ativa</strong> da ESDHUBEM, onde o estudante elabora um <strong>mapa mental</strong>, para demonstrar como absorveu os conceitos do curso, um <strong>Verbete escrito à mão</strong> de forma clara, informativa, objetiva, histórica, baseado nos assuntos do curso assistido, com cerca de 500 a 800 palavras e com aplicação prática que será publicado no setor <strong>Enciclopédico Wiki oficial</strong> da escola e um <strong>áudio</strong> explicando o que aprendeu a respeito do assunto estudado. O verbete será publicado na wiki enciclopédia e lançado o <strong>certificado Bronze</strong>.
                   </p>
 
                   {/* Tutorial Vídeo - Parte 2: Os Quatro Percursos & Registro OSF */}
