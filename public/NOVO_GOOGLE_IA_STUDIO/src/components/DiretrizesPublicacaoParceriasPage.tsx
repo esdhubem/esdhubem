@@ -753,7 +753,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     3 - O que é a Tríade da Assimilação Ativa
                   </h2>
                   <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    A metodologia de <strong className="text-[#00227B]">Assimilação Ativa</strong> é a base pedagógica e epistemológica estruturante de autoria e validação do conhecimento na ESDHUBEM. Válida e transversal a <strong className="text-amber-900 font-bold">todos os níveis de certificação acadêmica</strong> (Bronze, Prata, Ouro e Diamante), ela consolida a aprendizagem por meio de três vértices dinâmicos e complementares: síntese visual desenhada à mão, elaboração textual conceitual e fixação oral através da técnica Feynman.
+                    A metodologia de <strong className="text-[#00227B]">Assimilação Ativa</strong> é a base pedagógica e epistemológica que estrutura a autoria do estudante e a validação do conhecimento na ESDHUBEM através de certificado por meio da produção de um portfólio. Esse portfólio primordial chamado <strong>Tríade da Assimilação Ativa</strong> é exigido em <strong className="text-amber-900 font-bold">todos os níveis de certificação da ESDHUBEM</strong> (Bronze, Prata, Ouro e Diamante). A criação desse portfólio contribui para o estudante consolidar a aprendizagem por meio de três bases fundamentais, dinâmicas e complementares: síntese visual desenhada à mão, elaboração textual conceitual e a prática da comunicação na apresentação dos conceitos aprendidos via áudio.
                   </p>
                 </div>
 
