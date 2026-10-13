@@ -475,9 +475,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <Sparkles className="w-4 h-4 text-[#FFC72C]" />
                   <span>O percurso segue esta sequência:</span>
                 </span>
-                <span className="text-[11px] text-cyan-100 bg-[#001c4e]/80 border border-cyan-400/30 px-3 py-1 rounded-full font-bold shadow-xs">
-                  Fluxo Integrado de Autoria &amp; Proteção
-                </span>
               </div>
 
               <div className="flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-medium leading-relaxed relative z-10">
