@@ -167,7 +167,7 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: 'publicacao-periodicos-revistas', titulo: 'Publicação em Repositórios, Periódicos e Revistas' },
   { id: '15', titulo: '15 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
   { id: '16', titulo: '16 - Prazos de Análise e Devolutiva' },
-  { id: '17', titulo: '17 - Critérios de Avaliação, Publicação e Direito de Retirada' },
+  { id: '17', titulo: '17 - Critérios de Análise, Publicação e Direito de Retirada' },
   { id: '18', titulo: '18 - Estrutura e Formato por Nível de Produção' },
   { id: '19', titulo: '19 - Registro Obrigatório nas Plataformas e Atualização de Versões' },
   { id: '20', titulo: '20 - Uso Responsável de Inteligência Artificial — Declaração e Limites' }
@@ -3911,7 +3911,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 17: 17 - Critérios de Avaliação, Publicação e Direito de Retirada */}
+          {/* SEÇÃO 17: 17 - Critérios de Análise, Publicação e Direito de Retirada */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-17"
@@ -3930,10 +3930,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
-                    Critérios de Avaliação, Publicação e Direito de Retirada
+                    Critérios de Análise, Publicação e Direito de Retirada
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    17 - Critérios de Avaliação, Publicação e Direito de Retirada
+                    17 - Critérios de Análise, Publicação e Direito de Retirada
                   </h3>
                 </div>
               </div>
@@ -3960,7 +3960,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       2
                     </span>
                     <h4 className="font-black text-base sm:text-lg text-slate-900">
-                      Critérios de Avaliação, Publicação e Direito de Retirada
+                      Critérios de Análise, Publicação e Direito de Retirada
                     </h4>
                   </div>
 
