@@ -1223,9 +1223,9 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   </div>
 
                   <div className="bg-gradient-to-r from-blue-50 via-sky-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-5 space-y-3 shadow-xs">
-                    <span className="font-black text-xs uppercase tracking-wider text-[#00227B] block flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-                      <span>As orientações poderão incluir:</span>
+                    <span className="font-extrabold text-sm sm:text-base text-[#00227B] flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-blue-600" />
+                      <span>Como estruturar o Artigo de Blog?</span>
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-800">
                       <div>• Estrutura do artigo (1.200 a 2.500 palavras)</div>
