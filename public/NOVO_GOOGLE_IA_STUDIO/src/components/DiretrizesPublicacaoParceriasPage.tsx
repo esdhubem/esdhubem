@@ -174,7 +174,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     'plataformas-pesquisa': false,
     'como-publicar-osf': false,
     'como-publicar-zenodo': false,
-    'registro-atualizacao-versoes': false
+    'registro-atualizacao-versoes': false,
+    'certificacao-valores': false
   });
 
   const toggleSection = (id: string) => {
@@ -210,7 +211,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       'plataformas-pesquisa': true,
       'como-publicar-osf': true,
       'como-publicar-zenodo': true,
-      'registro-atualizacao-versoes': true
+      'registro-atualizacao-versoes': true,
+      'certificacao-valores': true
     });
   };
 
@@ -240,7 +242,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       'plataformas-pesquisa': false,
       'como-publicar-osf': false,
       'como-publicar-zenodo': false,
-      'registro-atualizacao-versoes': false
+      'registro-atualizacao-versoes': false,
+      'certificacao-valores': false
     });
   };
 
@@ -2803,98 +2806,218 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </div>
           </div>
 
-          {/* Certificação e Valores */}
-          <div className="space-y-4 pt-4 border-t border-slate-200">
-            <h4 className="font-bold text-slate-900 text-base sm:text-lg uppercase tracking-wider">
-              Certificação e Valores
-            </h4>
-            <div className="space-y-2 text-xs sm:text-sm text-slate-700 leading-relaxed">
-              <p>Cada modalidade possui um valor específico para a emissão do certificado correspondente.</p>
-              <p>O valor da certificação será informado ao estudante antes da escolha da modalidade.</p>
-              <p className="font-semibold text-slate-900">
-                O pagamento da certificação não substitui a necessidade de cumprir os requisitos da modalidade escolhida.
-              </p>
-            </div>
+          {/* Sanfona: Certificação e Valores */}
+          <div
+            id="secao-sanfona-certificacao-valores"
+            className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('certificacao-valores')}
+              className="w-full text-left p-4 sm:p-6 flex items-center justify-between gap-4 bg-gradient-to-r from-blue-50/80 via-slate-50 to-blue-50/80 hover:bg-blue-100/50 transition-colors cursor-pointer border-b border-slate-200"
+              aria-expanded={openSections['certificacao-valores']}
+            >
+              <div className="flex items-center gap-3.5 min-w-0">
+                <div className="w-10 h-10 rounded-xl bg-[#011049] text-[#FFC72C] flex items-center justify-center font-black text-base shadow-xs shrink-0 border border-blue-900">
+                  <Award className="w-5 h-5 text-[#FFC72C]" />
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-blue-900 block">
+                    Modalidades, Requisitos &amp; Percursos
+                  </span>
+                  <h4 className="text-base sm:text-lg font-black text-slate-900 uppercase tracking-wider">
+                    Certificação e Valores
+                  </h4>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['certificacao-valores'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
+                    openSections['certificacao-valores'] ? 'rotate-180 bg-[#011049] text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
 
-            {/* Tabela Resumo dos Percursos */}
-            <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs pt-1">
-              <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
-                <thead>
-                  <tr className="bg-[#011049] text-white">
-                    <th className="py-3 px-4 font-bold uppercase tracking-wider">Nível</th>
-                    <th className="py-3 px-4 font-bold uppercase tracking-wider">O estudante faz</th>
-                    <th className="py-3 px-4 font-bold uppercase tracking-wider">Produção / requisito</th>
-                    <th className="py-3 px-4 font-bold uppercase tracking-wider">Resultado</th>
-                    <th className="py-3 px-4 font-bold uppercase tracking-wider">O que paga</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
-                  <tr className="hover:bg-amber-50/30">
-                    <td className="py-3.5 px-4 font-bold text-amber-950 whitespace-nowrap">🥉 Bronze</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Enciclopédico (500-800 palavras) + Mapa Mental + Áudio 1 min + registro no OSF</td>
-                    <td className="py-3.5 px-4">Publicação na Wiki ESDHUBEM + Certificado com Selo Bronze</td>
-                    <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Bronze</td>
-                  </tr>
-                  <tr className="hover:bg-slate-50">
-                    <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Artigo de blog (1.200 a 2.500 palavras)</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Artigo de Blog (SEO) + Registro OSF</td>
-                    <td className="py-3.5 px-4">Publicação no Blog Oficial ESDHUBEM + Certificado com Selo Prata</td>
-                    <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
-                  </tr>
-                  <tr className="hover:bg-amber-50/30">
-                    <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + artigo investigativo estruturado no Zenodo com DOI</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Artigo Investigativo + DOI Permanente</td>
-                    <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com DOI</td>
-                    <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
-                  </tr>
-                  <tr className="hover:bg-cyan-50/30">
-                    <td className="py-3.5 px-4 font-bold text-cyan-900 whitespace-nowrap">💎 Diamante</td>
-                    <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Livro autoral completo (mín. 50 págs) e registro na OSF</td>
-                    <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Livro Autoral + Registro na OSF (O Registro EDA na Biblioteca Nacional, é opcional)</td>
-                    <td className="py-3.5 px-4">Mural de Livros / Livraria Digital + Certificado Diamante de Honraria Máxima</td>
-                    <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Diamante</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            {openSections['certificacao-valores'] && (
+              <div className="p-5 sm:p-7 space-y-6 animate-fadeIn">
+                <div className="space-y-2 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                  <p>Cada modalidade possui um valor específico para a emissão do certificado correspondente.</p>
+                  <p>O valor da certificação será informado ao estudante antes da escolha da modalidade.</p>
+                  <p className="font-semibold text-slate-900">
+                    O pagamento da certificação não substitui a necessidade de cumprir os requisitos da modalidade escolhida.
+                  </p>
+                </div>
 
-            <p className="text-xs text-slate-500 italic">
-              * Os certificados Prata, Ouro e Diamante dependem da entrega e aprovação da produção correspondente.
-            </p>
+                {/* Tabela Resumo dos Percursos */}
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs pt-1">
+                  <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
+                    <thead>
+                      <tr className="bg-[#011049] text-white">
+                        <th className="py-3 px-4 font-bold uppercase tracking-wider">Nível</th>
+                        <th className="py-3 px-4 font-bold uppercase tracking-wider">O estudante faz</th>
+                        <th className="py-3 px-4 font-bold uppercase tracking-wider">Produção / requisito</th>
+                        <th className="py-3 px-4 font-bold uppercase tracking-wider">Resultado</th>
+                        <th className="py-3 px-4 font-bold uppercase tracking-wider">O que paga</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
+                      <tr className="hover:bg-amber-50/30">
+                        <td className="py-3.5 px-4 font-bold text-amber-950 whitespace-nowrap">🥉 Bronze</td>
+                        <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa</td>
+                        <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Enciclopédico (500-800 palavras) + Mapa Mental + Áudio 1 min + registro no OSF</td>
+                        <td className="py-3.5 px-4">Publicação na Wiki ESDHUBEM + Certificado com Selo Bronze</td>
+                        <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Bronze</td>
+                      </tr>
+                      <tr className="hover:bg-slate-50">
+                        <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
+                        <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Artigo de blog (1.200 a 2.500 palavras)</td>
+                        <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Artigo de Blog (SEO) + Registro OSF</td>
+                        <td className="py-3.5 px-4">Publicação no Blog Oficial ESDHUBEM + Certificado com Selo Prata</td>
+                        <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
+                      </tr>
+                      <tr className="hover:bg-amber-50/30">
+                        <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
+                        <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + artigo investigativo estruturado no Zenodo com DOI</td>
+                        <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Artigo Investigativo + DOI Permanente</td>
+                        <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com DOI</td>
+                        <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
+                      </tr>
+                      <tr className="hover:bg-cyan-50/30">
+                        <td className="py-3.5 px-4 font-bold text-cyan-900 whitespace-nowrap">💎 Diamante</td>
+                        <td className="py-3.5 px-4">Entrega a Tríade da Assimilação Ativa + Livro autoral completo (mín. 50 págs) e registro na OSF</td>
+                        <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Assimilação Ativa + Livro Autoral + Registro na OSF (O Registro EDA na Biblioteca Nacional, é opcional)</td>
+                        <td className="py-3.5 px-4">Mural de Livros / Livraria Digital + Certificado Diamante de Honraria Máxima</td>
+                        <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Diamante</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p className="text-xs text-slate-500 italic">
+                  * Os certificados Prata, Ouro e Diamante dependem da entrega e aprovação da produção correspondente.
+                </p>
+
+                {/* UM PERCURSO DE AUTORIA */}
+                <div className="bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] text-white p-6 sm:p-8 rounded-2xl space-y-4 shadow-xl border border-blue-900/60 text-center">
+                  <h4 className="text-lg sm:text-xl font-black uppercase tracking-wider text-[#FFC72C]">
+                    Um Percurso de Autoria
+                  </h4>
+                  <div className="max-w-2xl mx-auto space-y-1.5 text-xs sm:text-sm text-slate-200 leading-relaxed">
+                    <p>O estudante não é obrigado a realizar todos os níveis.</p>
+                    <p>Pode concluir o curso e permanecer no <strong>Bronze</strong>.</p>
+                    <p>Pode escolher escrever um artigo e avançar para o <strong>Prata</strong>.</p>
+                    <p>Pode desenvolver um artigo de investigação e seguir para o <strong>Ouro</strong>.</p>
+                    <p>Pode transformar seu conhecimento em um livro e alcançar o <strong>Diamante</strong>.</p>
+                    <p className="pt-2 font-medium text-white">
+                      Cada percurso corresponde a uma forma diferente de transformar aprendizagem em produção.
+                    </p>
+                  </div>
+
+                  <div className="pt-2 flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-black text-[#FFC72C]">
+                    <span>APRENDER</span>
+                    <span>→</span>
+                    <span>EXPRESSAR</span>
+                    <span>→</span>
+                    <span>INVESTIGAR</span>
+                    <span>→</span>
+                    <span>AUTORAR</span>
+                  </div>
+
+                  <p className="text-xs text-slate-400 italic pt-1">
+                    O curso pode ser o começo. A produção é uma possibilidade. A autoria é uma construção.
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
 
-          {/* UM PERCURSO DE AUTORIA */}
-          <div className="bg-gradient-to-r from-[#011049] via-[#061e47] to-[#011049] text-white p-6 sm:p-8 rounded-2xl space-y-4 shadow-xl border border-blue-900/60 text-center">
-            <h4 className="text-lg sm:text-xl font-black uppercase tracking-wider text-[#FFC72C]">
-              Um Percurso de Autoria
-            </h4>
-            <div className="max-w-2xl mx-auto space-y-1.5 text-xs sm:text-sm text-slate-200 leading-relaxed">
-              <p>O estudante não é obrigado a realizar todos os níveis.</p>
-              <p>Pode concluir o curso e permanecer no <strong>Bronze</strong>.</p>
-              <p>Pode escolher escrever um artigo e avançar para o <strong>Prata</strong>.</p>
-              <p>Pode desenvolver um artigo de investigação e seguir para o <strong>Ouro</strong>.</p>
-              <p>Pode transformar seu conhecimento em um livro e alcançar o <strong>Diamante</strong>.</p>
-              <p className="pt-2 font-medium text-white">
-                Cada percurso corresponde a uma forma diferente de transformar aprendizagem em produção.
-              </p>
+          {/* Avisos Importantes sobre Publicação e Autoria */}
+          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+            <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <div>
+                <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
+                  Transparência &amp; Integridade
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                  Avisos Importantes sobre Publicação e Autoria
+                </h3>
+              </div>
             </div>
 
-            <div className="pt-2 flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-black text-[#FFC72C]">
-              <span>APRENDER</span>
-              <span>→</span>
-              <span>EXPRESSAR</span>
-              <span>→</span>
-              <span>INVESTIGAR</span>
-              <span>→</span>
-              <span>AUTORAR</span>
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Aviso 1: Sobre Publicação em Periódicos e Revistas */}
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+                <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                  <span>📤</span>
+                  <h4 className="font-bold text-slate-900">Sobre Publicação em Periódicos e Revistas</h4>
+                </div>
+                <p className="text-xs text-slate-700 leading-relaxed">
+                  A ESDHUBEM oferece orientação, estruturação, revisão dos manuscritos dos alunos de acordo com nossos modelos de publicação. Não exigimos rigor científico. Nosso trabalho é voltado para o investigativo e não realizamos encaminhamento, nem garantimos que o aluno faça publicação em plataformas de revistas científicas. Não garantimos, a aceitação do trabalho em revista, periódico ou repositório específico.
+                </p>
+                <p className="text-xs text-slate-700 leading-relaxed">
+                  Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
+                </p>
+                <p className="text-xs text-slate-700 leading-relaxed">
+                  A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
+                </p>
+              </div>
 
-            <p className="text-xs text-slate-400 italic pt-1">
-              O curso pode ser o começo. A produção é uma possibilidade. A autoria é uma construção.
-            </p>
+              {/* Aviso 2: Pré-print não é revista */}
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+                <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                  <span>🔬</span>
+                  <h4 className="font-bold text-slate-900">Pré-print e Depósito com DOI</h4>
+                </div>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  O depósito em repositório com atribuição de <strong>DOI</strong> constitui <strong>registro e divulgação prévia</strong> da obra (pré-print):
+                </p>
+                <ul className="text-xs text-slate-600 space-y-1">
+                  <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Fica registrada oficialmente a autoria e data de criação;</li>
+                  <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> O trabalho passa a ser acessível publicamente;</li>
+                  <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> <strong>Não equivale a publicação em revista com revisão por pares</strong>;</li>
+                  <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> Verifique a política do periódico caso queira submeter a mesma obra.</li>
+                </ul>
+              </div>
+
+              {/* Aviso 3: Uso de IA */}
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+                <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                  <span>🤖</span>
+                  <h4 className="font-bold text-slate-900">Uso Responsável de Inteligência Artificial</h4>
+                </div>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  A tecnologia é ferramenta de apoio, <strong>não de substituição</strong> do pensamento e criação humana.
+                </p>
+                <ul className="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                  <li>A responsabilidade sobre o conteúdo é sempre do autor;</li>
+                  <li>Se utilizou IA em qualquer etapa, <strong>declare com transparência</strong> como foi aplicada;</li>
+                  <li>O uso não declarado poderá impedir ou cancelar a publicação.</li>
+                </ul>
+              </div>
+
+              {/* Aviso 4: Retirada de Publicação */}
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+                <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+                  <span>📂</span>
+                  <h4 className="font-bold text-slate-900">Direito de Remoção / Retirada</h4>
+                </div>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  O autor pode solicitar a exclusão de seu texto a qualquer momento. O prazo para retirada da página e dos índices públicos é de até <strong>15 dias úteis</strong>.
+                </p>
+                <p className="text-[11px] text-slate-500 italic">
+                  * Em repositórios externos (Zenodo/CERN), a exclusão segue as normas da plataforma terceira.
+                </p>
+              </div>
+            </div>
           </div>
               </div>
             )}
@@ -4382,88 +4505,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
         </div>
 
 
-        {/* Avisos Importantes e Termos de Publicação */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-xl space-y-8">
-          <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
-            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
-                Transparência & Integridade
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                Avisos Importantes sobre Publicação e Autoria
-              </h2>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Aviso 1: Sobre Publicação em Periódicos e Revistas */}
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                <span>📤</span>
-                <h4>Sobre Publicação em Periódicos e Revistas</h4>
-              </div>
-              <p className="text-xs text-slate-700 leading-relaxed">
-                A ESDHUBEM oferece orientação, estruturação, revisão dos manuscritos dos alunos de acordo com nossos modelos de publicação. Não exigimos rigor científico. Nosso trabalho é voltado para o investigativo e não realizamos encaminhamento, nem garantimos que o aluno faça publicação em plataformas de revistas científicas. Não garantimos, a aceitação do trabalho em revista, periódico ou repositório específico.
-              </p>
-              <p className="text-xs text-slate-700 leading-relaxed">
-                Mesmo que seu trabalho seja publicado no site da nossa escola, a decisão de aceitar o seu trabalho em outros sites é exclusiva da instituição ou comitê responsável que segue regras próprias. Muitas revistas científicas têm suas próprias regras de publicação e os pesquisadores devem seguir o que as revistas exigem.
-              </p>
-              <p className="text-xs text-slate-700 leading-relaxed">
-                A ESDHUBEM não responde por recusa, avaliação ou prazo de revista terceira. Nosso trabalho é focado no treinamento e desenvolvimento de habilidades, capacitações onde a nossa tríade de assimilação ativa juntamente com as publicações de artigos ou livros é um treinamento da escrita e da oralidade voltada para o desenvolvimento pessoal e humano.
-              </p>
-            </div>
-
-            {/* Aviso 2: Pré-print não é revista */}
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                <span>🔬</span>
-                <h4>Pré-print e Depósito com DOI</h4>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                O depósito em repositório com atribuição de <strong>DOI</strong> constitui <strong>registro e divulgação prévia</strong> da obra (pré-print):
-              </p>
-              <ul className="text-xs text-slate-600 space-y-1">
-                <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> Fica registrada oficialmente a autoria e data de criação;</li>
-                <li className="flex items-start gap-1.5"><span className="text-emerald-600 font-bold">✅</span> O trabalho passa a ser acessível publicamente;</li>
-                <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> <strong>Não equivale a publicação em revista com revisão por pares</strong>;</li>
-                <li className="flex items-start gap-1.5"><span className="text-rose-600 font-bold">❌</span> Verifique a política do periódico caso queira submeter a mesma obra.</li>
-              </ul>
-            </div>
-
-            {/* Aviso 3: Uso de IA */}
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                <span>🤖</span>
-                <h4>Uso Responsável de Inteligência Artificial</h4>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                A tecnologia é ferramenta de apoio, <strong>não de substituição</strong> do pensamento e criação humana.
-              </p>
-              <ul className="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                <li>A responsabilidade sobre o conteúdo é sempre do autor;</li>
-                <li>Se utilizou IA em qualquer etapa, <strong>declare com transparência</strong> como foi aplicada;</li>
-                <li>O uso não declarado poderá impedir ou cancelar a publicação.</li>
-              </ul>
-            </div>
-
-            {/* Aviso 4: Retirada de Publicação */}
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
-              <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                <span>📂</span>
-                <h4>Direito de Remoção / Retirada</h4>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                O autor pode solicitar a exclusão de seu texto a qualquer momento. O prazo para retirada da página e dos índices públicos é de até <strong>15 dias úteis</strong>.
-              </p>
-              <p className="text-[11px] text-slate-500 italic">
-                * Em repositórios externos (Zenodo/CERN), a exclusão segue as normas da plataforma terceira.
-              </p>
-            </div>
-          </div>
-        </div>
 
 
       </div>
