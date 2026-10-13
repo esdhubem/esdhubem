@@ -154,21 +154,21 @@ const LISTA_SANFONAS_DIRETRIZES = [
   { id: '7', titulo: '7 - Certificação Ouro - Publicação de artigo de investigação' },
   { id: '8', titulo: '8 - Guia Completo do Artigo de Investigação - Nível Ouro' },
   { id: '9', titulo: '9 - Orientações para Produção do Artigo de investigação' },
-  { id: '10', titulo: '10 - Certificação Diamante: Orientação para publicação de livro' },
-  { id: '11', titulo: '11 - Guia Completo para publicar o livro - Nível Diamante' },
-  { id: '12', titulo: '12 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
-  { id: '13', titulo: '13 - Livro Autoral — Formato e Contagem de Páginas' },
+  { id: '10', titulo: '10 - Sobre Horas Complementares e Alinhamento Temático' },
+  { id: '11', titulo: '11 - Certificação Diamante: Orientação para publicação de livro' },
+  { id: '12', titulo: '12 - Guia Completo para publicar o livro - Nível Diamante' },
+  { id: '13', titulo: '13 - Orientações para Produção do Livro & Registro de Direitos Autorais' },
+  { id: '14', titulo: '14 - Livro Autoral — Formato e Contagem de Páginas' },
   { id: 'certificacao-valores', titulo: 'Certificação e Valores (Modalidades, Requisitos & Percursos)' },
   { id: 'autoria-responsabilidade', titulo: 'Autoria e Responsabilidade' },
   { id: 'uso-responsavel-ia', titulo: 'Uso Responsável de Inteligência Artificial' },
   { id: 'publicacao-periodicos-revistas', titulo: 'Publicação em Repositórios, Periódicos e Revistas' },
-  { id: '14', titulo: '14 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
-  { id: '15', titulo: '15 - Prazos de Análise e Devolutiva' },
-  { id: '16', titulo: '16 - Critérios de Avaliação, Publicação e Direito de Retirada' },
-  { id: '17', titulo: '17 - Estrutura e Formato por Nível de Produção' },
-  { id: '18', titulo: '18 - Registro Obrigatório nas Plataformas e Atualização de Versões' },
-  { id: '19', titulo: '19 - Uso de Inteligência Artificial — Declaração e Limites' },
-  { id: '20', titulo: '20 - Sobre Horas Complementares e Alinhamento Temático' }
+  { id: '15', titulo: '15 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível' },
+  { id: '16', titulo: '16 - Prazos de Análise e Devolutiva' },
+  { id: '17', titulo: '17 - Critérios de Avaliação, Publicação e Direito de Retirada' },
+  { id: '18', titulo: '18 - Estrutura e Formato por Nível de Produção' },
+  { id: '19', titulo: '19 - Registro Obrigatório nas Plataformas e Atualização de Versões' },
+  { id: '20', titulo: '20 - Uso de Inteligência Artificial — Declaração e Limites' }
 ];
 
 export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoParceriasPageProps> = ({
@@ -2045,7 +2045,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 10: 10 - Certificação Diamante: Orientação para publicação de livro */}
+          {/* SEÇÃO 10: 10 - Sobre Horas Complementares e Alinhamento Temático */}
           {/* ======================================================== */}
           <div
             id="secao-sanfona-10"
@@ -2059,19 +2059,20 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  💎 10
+                  🏛️ 10
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block">
-                    Vídeos 6 e 7 • Livro Autoral (Mín. 50 Páginas) & Registro EDA/FBN
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
+                    Referência Organizacional CAPES &amp; Critérios Institucionais de Validação
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    10 - Certificação Diamante: Orientação para publicação de livro
+                    10 - Sobre Horas Complementares e Alinhamento Temático
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
-                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
                   {openSections['10'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
@@ -2085,6 +2086,95 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
             </button>
 
             {openSections['10'] && (
+              <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
+                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-6 shadow-sm">
+                  
+                  {/* Título interno com o badge 6 */}
+                  <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
+                    <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
+                      6
+                    </span>
+                    <h4 className="font-black text-base sm:text-lg text-slate-900">
+                      Sobre Horas Complementares e Alinhamento Temático
+                    </h4>
+                  </div>
+
+                  {/* Texto sobre alinhamento CAPES */}
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    Os eixos temáticos definidos pela ESDHUBEM foram estruturados com base nas <strong>áreas de conhecimento da CAPES</strong>, visando manter uniformidade, coerência e um norteamento conceitual comum aos trabalhos. Este alinhamento temático não significa certificação ou validação oficial pela CAPES nem confere status de instituição de ensino superior à ESDHUBEM — <strong>trata-se de referência organizacional</strong>.
+                  </p>
+
+                  {/* Card: Validação de horas complementares */}
+                  <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-5 sm:p-6 space-y-3.5 shadow-xs">
+                    <div className="flex items-center gap-2 text-sky-950 font-bold text-sm sm:text-base">
+                      <Landmark className="w-5 h-5 text-sky-700 shrink-0" />
+                      <h5>Validação de horas complementares</h5>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      O reconhecimento de horas complementares é <strong>competência de cada instituição de ensino</strong> onde o estudante estiver matriculado. Recomendamos:
+                    </p>
+                    <ul className="text-xs sm:text-sm text-slate-700 space-y-2 pt-1">
+                      <li className="flex items-start gap-2">
+                        <span className="text-sky-600 font-bold">•</span>
+                        <span>Consultar previamente a secretaria ou coordenação do seu curso sobre os requisitos, documentos aceitos e critérios de validação</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-sky-600 font-bold">•</span>
+                        <span>Se necessário, solicitar à ESDHUBEM carta de apresentação, declaração de participação ou detalhamento de carga horária para entrega à sua instituição</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-sky-600 font-bold">•</span>
+                        <span>Cada instituição possui suas próprias regras — a ESDHUBEM fornece os documentos comprobatórios, mas a decisão de validação cabe exclusivamente à instituição de origem do estudante</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ======================================================== */}
+          {/* SEÇÃO 11: 11 - Certificação Diamante: Orientação para publicação de livro */}
+          {/* ======================================================== */}
+          <div
+            id="secao-sanfona-11"
+            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
+          >
+            <button
+              type="button"
+              onClick={() => toggleSection('11')}
+              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
+              aria-expanded={openSections['11']}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
+                  💎 11
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block">
+                    Vídeos 6 e 7 • Livro Autoral (Mín. 50 Páginas) & Registro EDA/FBN
+                  </span>
+                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
+                    11 - Certificação Diamante: Orientação para publicação de livro
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                  {openSections['11'] ? 'Recolher' : 'Expandir'}
+                </span>
+                <div
+                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
+                    openSections['11'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                  }`}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </div>
+            </button>
+
+            {openSections['11'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-8 animate-fadeIn">
 {/* 💎 DIAMANTE */}
               <div className="bg-gradient-to-r from-cyan-50/50 via-white to-white border-2 border-cyan-400 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
@@ -2300,21 +2390,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
         </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 11: 11 - Guia Completo para publicar o livro - Nível Diamante */}
+          {/* SEÇÃO 12: 12 - Guia Completo para publicar o livro - Nível Diamante */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-11"
+            id="secao-sanfona-12"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('11')}
+              onClick={() => toggleSection('12')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['11']}
+              aria-expanded={openSections['12']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📖 11
+                  📖 12
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -2322,17 +2412,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Documento Integrado • Livro Autoral (Mín. 50 Páginas)
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    11 - Guia Completo para publicar o livro - Nível Diamante
+                    12 - Guia Completo para publicar o livro - Nível Diamante
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['11'] ? 'Recolher' : 'Expandir'}
+                  {openSections['12'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['11'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['12'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -2340,7 +2430,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['11'] && (
+            {openSections['12'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 {/* Tutorial Vídeo - Parte 7: Orientações para Produção do Livro Autoral */}
                 <div className="space-y-4 py-2">
@@ -2389,21 +2479,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 12: 12 - Orientações para Produção do Livro & Registro de Direitos Autorais */}
+          {/* SEÇÃO 13: 13 - Orientações para Produção do Livro & Registro de Direitos Autorais */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-12"
+            id="secao-sanfona-13"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('12')}
+              onClick={() => toggleSection('13')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['12']}
+              aria-expanded={openSections['13']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📜 12
+                  📜 13
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -2411,17 +2501,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Etapas de Produção &amp; Registro Oficial EDA/FBN
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    12 - Orientações para Produção do Livro &amp; Registro de Direitos Autorais
+                    13 - Orientações para Produção do Livro &amp; Registro de Direitos Autorais
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['12'] ? 'Recolher' : 'Expandir'}
+                  {openSections['13'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['12'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['13'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -2429,7 +2519,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['12'] && (
+            {openSections['13'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 {/* Orientações para Produção */}
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-4 shadow-sm">
@@ -2552,21 +2642,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 13: 13 - Livro Autoral — Formato e Contagem de Páginas */}
+          {/* SEÇÃO 14: 14 - Livro Autoral — Formato e Contagem de Páginas */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-13"
+            id="secao-sanfona-14"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('13')}
+              onClick={() => toggleSection('14')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['13']}
+              aria-expanded={openSections['14']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📖 13
+                  📖 14
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -2574,17 +2664,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Extensão Mínima de 50 Páginas, Parâmetros Gráficos e EDA/FBN
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    13 - Livro Autoral — Formato e Contagem de Páginas
+                    14 - Livro Autoral — Formato e Contagem de Páginas
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['13'] ? 'Recolher' : 'Expandir'}
+                  {openSections['14'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['13'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['14'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -2592,14 +2682,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['13'] && (
+            {openSections['14'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-6 shadow-sm">
                   
-                  {/* Título interno com o badge 13 */}
+                  {/* Título interno com o badge 14 */}
                   <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
                     <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
-                      13
+                      14
                     </span>
                     <h4 className="font-black text-base sm:text-lg text-slate-900">
                       Livro Autoral — Formato e Contagem de Páginas
@@ -3128,21 +3218,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 14: 14 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível */}
+          {/* SEÇÃO 15: 15 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-14"
+            id="secao-sanfona-15"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('14')}
+              onClick={() => toggleSection('15')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['14']}
+              aria-expanded={openSections['15']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📏 14
+                  📏 15
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3150,17 +3240,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Parâmetros de Contagem de Palavras e Páginas Sugeridas
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    14 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível
+                    15 - Padrão de Extensão: Palavras Sugeridas e Páginas por Nível
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['14'] ? 'Recolher' : 'Expandir'}
+                  {openSections['15'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['14'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['15'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -3168,7 +3258,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['14'] && (
+            {openSections['15'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-6 shadow-sm">
                   
@@ -3293,21 +3383,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 15: 15 - Prazos de Análise e Devolutiva */}
+          {/* SEÇÃO 16: 16 - Prazos de Análise e Devolutiva */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-15"
+            id="secao-sanfona-16"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('15')}
+              onClick={() => toggleSection('16')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['15']}
+              aria-expanded={openSections['16']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  ⏱️ 15
+                  ⏱️ 16
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3315,17 +3405,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Prazos Institucionais &amp; Devolutivas de Avaliação
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    15 - Prazos de Análise e Devolutiva
+                    16 - Prazos de Análise e Devolutiva
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['15'] ? 'Recolher' : 'Expandir'}
+                  {openSections['16'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['15'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['16'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -3333,7 +3423,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['15'] && (
+            {openSections['16'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-5 shadow-sm">
                   <div className="space-y-2">
@@ -3411,21 +3501,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 16: 16 - Critérios de Avaliação, Publicação e Direito de Retirada */}
+          {/* SEÇÃO 17: 17 - Critérios de Avaliação, Publicação e Direito de Retirada */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-16"
+            id="secao-sanfona-17"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('16')}
+              onClick={() => toggleSection('17')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['16']}
+              aria-expanded={openSections['17']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  ⚖️ 16
+                  ⚖️ 17
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3433,17 +3523,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Critérios de Avaliação, Publicação e Direito de Retirada
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    16 - Critérios de Avaliação, Publicação e Direito de Retirada
+                    17 - Critérios de Avaliação, Publicação e Direito de Retirada
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['16'] ? 'Recolher' : 'Expandir'}
+                  {openSections['17'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['16'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['17'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -3451,7 +3541,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['16'] && (
+            {openSections['17'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-6 shadow-sm">
                   {/* Título interno com o número 2 */}
@@ -3559,21 +3649,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 17: 17 - Estrutura e Formato por Nível de Produção */}
+          {/* SEÇÃO 18: 18 - Estrutura e Formato por Nível de Produção */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-17"
+            id="secao-sanfona-18"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('17')}
+              onClick={() => toggleSection('18')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['17']}
+              aria-expanded={openSections['18']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  📐 17
+                  📐 18
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3581,17 +3671,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Parâmetros Textuais, Normas de Estilo &amp; Extensão
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    17 - Estrutura e Formato por Nível de Produção
+                    18 - Estrutura e Formato por Nível de Produção
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['17'] ? 'Recolher' : 'Expandir'}
+                  {openSections['18'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['17'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['18'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -3599,7 +3689,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['17'] && (
+            {openSections['18'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-6 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-6 space-y-5 shadow-sm">
                   {/* Título interno com o número 3 */}
@@ -3773,21 +3863,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 18: 18 - Registro Obrigatório nas Plataformas e Atualização de Versões */}
+          {/* SEÇÃO 19: 19 - Registro Obrigatório nas Plataformas e Atualização de Versões */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-18"
+            id="secao-sanfona-19"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('18')}
+              onClick={() => toggleSection('19')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['18']}
+              aria-expanded={openSections['19']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  🌐 18
+                  🌐 19
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -3795,17 +3885,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     OSF, Zenodo com DOI, Autoria Perpétua e Gestão de Versões
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    18 - Registro Obrigatório nas Plataformas e Atualização de Versões
+                    19 - Registro Obrigatório nas Plataformas e Atualização de Versões
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['18'] ? 'Recolher' : 'Expandir'}
+                  {openSections['19'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['18'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['19'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -3813,7 +3903,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['18'] && (
+            {openSections['19'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-7 shadow-sm">
                   
@@ -4349,21 +4439,21 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
           </div>
 
           {/* ======================================================== */}
-          {/* SEÇÃO 19: 19 - Uso de Inteligência Artificial — Declaração e Limites */}
+          {/* SEÇÃO 20: 20 - Uso de Inteligência Artificial — Declaração e Limites */}
           {/* ======================================================== */}
           <div
-            id="secao-sanfona-19"
+            id="secao-sanfona-20"
             className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
-              onClick={() => toggleSection('19')}
+              onClick={() => toggleSection('20')}
               className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['19']}
+              aria-expanded={openSections['20']}
             >
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  🤖 19
+                  🤖 20
                 </div>
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
@@ -4371,17 +4461,17 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     Transparência, Ética, Limites de Uso e Modelos de Declaração
                   </span>
                   <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    19 - Uso de Inteligência Artificial — Declaração e Limites
+                    20 - Uso de Inteligência Artificial — Declaração e Limites
                   </h3>
                 </div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['19'] ? 'Recolher' : 'Expandir'}
+                  {openSections['20'] ? 'Recolher' : 'Expandir'}
                 </span>
                 <div
                   className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['19'] ? 'rotate-180 bg-cyan-700 text-white' : ''
+                    openSections['20'] ? 'rotate-180 bg-cyan-700 text-white' : ''
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -4389,7 +4479,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               </div>
             </button>
 
-            {openSections['19'] && (
+            {openSections['20'] && (
               <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
                 <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-7 shadow-sm">
                   
@@ -4518,96 +4608,6 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <p className="leading-relaxed">
                       <strong>⚠️ A não declaração quando houver uso de IA pode impedir ou cancelar a publicação.</strong> Se tiver dúvida sobre como declarar, entre em contato antes do envio.
                     </p>
-                  </div>
-
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* ======================================================== */}
-          {/* SEÇÃO 20: 20 - Sobre Horas Complementares e Alinhamento Temático */}
-          {/* ======================================================== */}
-          <div
-            id="secao-sanfona-20"
-            className="bg-[#d8ecfc] rounded-3xl border-2 border-[#b0d6f8] shadow-md overflow-hidden transition-all duration-200"
-          >
-            <button
-              type="button"
-              onClick={() => toggleSection('20')}
-              className="w-full text-left p-5 sm:p-7 flex items-center justify-between gap-4 bg-gradient-to-r from-[#cbe4fb] via-[#dcedfc] to-[#cbe4fb] hover:bg-[#bfe0fa] transition-colors cursor-pointer border-b border-[#badbf7]"
-              aria-expanded={openSections['20']}
-            >
-              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-700 text-white flex items-center justify-center font-black text-base sm:text-lg shadow-sm shrink-0 border border-cyan-800">
-                  🏛️ 20
-                </div>
-                <div className="min-w-0">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-800 block flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
-                    Referência Organizacional CAPES &amp; Critérios Institucionais de Validação
-                  </span>
-                  <h3 className="text-base sm:text-xl font-black text-cyan-950 truncate sm:whitespace-normal">
-                    20 - Sobre Horas Complementares e Alinhamento Temático
-                  </h3>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 shrink-0">
-                <span className="text-xs font-semibold text-slate-600 hidden sm:inline-block">
-                  {openSections['20'] ? 'Recolher' : 'Expandir'}
-                </span>
-                <div
-                  className={`w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-900 transition-transform duration-300 ${
-                    openSections['20'] ? 'rotate-180 bg-cyan-700 text-white' : ''
-                  }`}
-                >
-                  <ChevronDown className="w-4 h-4" />
-                </div>
-              </div>
-            </button>
-
-            {openSections['20'] && (
-              <div className="p-6 sm:p-8 lg:p-10 space-y-7 animate-fadeIn">
-                <div className="bg-white border-2 border-cyan-200 rounded-2xl p-5 sm:p-7 space-y-6 shadow-sm">
-                  
-                  {/* Título interno com o badge 6 */}
-                  <div className="flex items-center gap-2.5 pb-2 border-b border-slate-100">
-                    <span className="w-7 h-7 rounded-full bg-blue-100 text-blue-900 font-black flex items-center justify-center text-xs shadow-xs">
-                      6
-                    </span>
-                    <h4 className="font-black text-base sm:text-lg text-slate-900">
-                      Sobre Horas Complementares e Alinhamento Temático
-                    </h4>
-                  </div>
-
-                  {/* Texto sobre alinhamento CAPES */}
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                    Os eixos temáticos definidos pela ESDHUBEM foram estruturados com base nas <strong>áreas de conhecimento da CAPES</strong>, visando manter uniformidade, coerência e um norteamento conceitual comum aos trabalhos. Este alinhamento temático não significa certificação ou validação oficial pela CAPES nem confere status de instituição de ensino superior à ESDHUBEM — <strong>trata-se de referência organizacional</strong>.
-                  </p>
-
-                  {/* Card: Validação de horas complementares */}
-                  <div className="bg-sky-50/50 border border-sky-200 rounded-2xl p-5 sm:p-6 space-y-3.5 shadow-xs">
-                    <div className="flex items-center gap-2 text-sky-950 font-bold text-sm sm:text-base">
-                      <Landmark className="w-5 h-5 text-sky-700 shrink-0" />
-                      <h5>Validação de horas complementares</h5>
-                    </div>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      O reconhecimento de horas complementares é <strong>competência de cada instituição de ensino</strong> onde o estudante estiver matriculado. Recomendamos:
-                    </p>
-                    <ul className="text-xs sm:text-sm text-slate-700 space-y-2 pt-1">
-                      <li className="flex items-start gap-2">
-                        <span className="text-sky-600 font-bold">•</span>
-                        <span>Consultar previamente a secretaria ou coordenação do seu curso sobre os requisitos, documentos aceitos e critérios de validação</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-sky-600 font-bold">•</span>
-                        <span>Se necessário, solicitar à ESDHUBEM carta de apresentação, declaração de participação ou detalhamento de carga horária para entrega à sua instituição</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-sky-600 font-bold">•</span>
-                        <span>Cada instituição possui suas próprias regras — a ESDHUBEM fornece os documentos comprobatórios, mas a decisão de validação cabe exclusivamente à instituição de origem do estudante</span>
-                      </li>
-                    </ul>
                   </div>
 
                 </div>
