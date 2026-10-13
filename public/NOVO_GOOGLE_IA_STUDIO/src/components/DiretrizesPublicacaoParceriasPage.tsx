@@ -573,9 +573,25 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <p>
                 Após o estudante concluir as atividades, faz o envio do portfólio via e-mail <a href="mailto:esdhubem@proton.me" className="text-blue-700 font-bold underline hover:text-blue-900">esdhubem@proton.me</a>, que seguirá para a análise por parte dos nossos tutores de acordo com as diretrizes de análise da ESDHUBEM, publicação no wiki enciclopédia da ESDHUBEM e lançamento do Certificado Bronze para quem escolheu este tipo de certificado.
               </p>
-              <p>
-                Os estudantes que escolheram outros tipos de certificado não recebem o certificado bronze, pois ainda seguirão com mais uma etapa que chamamos de <strong>Quadrilátero da Organização, Assimilação, Comunicação e Produção</strong>, onde o estudante vai produzir mais um trabalho de acordo com o tipo de certificado que quer receber: 🏆 <strong>Certificado Prata:</strong> entrega um artigo de blog; 🏆 <strong>Certificado Ouro:</strong> um artigo investigativo; 🏆 <strong>Certificado Diamante:</strong> um livro.
-              </p>
+              <div className="space-y-2">
+                <p>
+                  Os estudantes que escolheram outros tipos de certificado não recebem o certificado bronze, pois ainda seguirão com mais uma etapa que chamamos de <strong>Quadrilátero da Organização, Assimilação, Comunicação e Produção</strong>, onde o estudante vai produzir mais um trabalho de acordo com o tipo de certificado que quer receber:
+                </p>
+                <ul className="space-y-1.5 pl-2 text-sm sm:text-base">
+                  <li className="flex items-start gap-2">
+                    <span>🏆</span>
+                    <span><strong>Certificado Prata:</strong> entrega um artigo de blog;</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span>🏆</span>
+                    <span><strong>Certificado Ouro:</strong> um artigo investigativo;</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span>🏆</span>
+                    <span><strong>Certificado Diamante:</strong> um livro.</span>
+                  </li>
+                </ul>
+              </div>
               <p>
                 A partir dessa escolha, receberá as orientações específicas para elaboração do tipo de trabalho que quer realizar. Quando o aluno concluir o seu manuscrito, deve fazer um registro nas plataformas internacionais OSF (para verbete, artigo de blog e livro) ou Zenodo (para artigo investigativo). As plataformas de repositórios gratuitas e internacionais registram seus trabalhos, proporcionando mais tranquilidade autoral. Por fim, envia para a escola o link de publicação para que a ESDHUBEM possa avaliar, publicar no site da escola e emitir o certificado associado ao trabalho.
               </p>
