@@ -3487,10 +3487,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                           PASSO 2
                         </span>
                         <h6 className="font-bold text-xs sm:text-sm text-slate-900">
-                          Envio para Avaliação
+                          Registro Oficial nas plataformas Zenodo ou OSF
                         </h6>
                         <p className="text-xs text-slate-600 leading-relaxed">
-                          Envie para a coordenação escolar. <strong>Não registrar ainda.</strong>
+                          Acesse a plataforma e efetue o registro com seu manuscrito e obtenha o link público.
                         </p>
                       </div>
 
@@ -3529,7 +3529,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                           Registro Oficial
                         </h6>
                         <p className="text-xs text-emerald-900 leading-relaxed">
-                          Acesse a plataforma e efetue o registro com seu manuscrito e anexe o link público.
+                          Publicação do trabalho na plataforma e lançamento do certificado de conclusão de curso.
                         </p>
                       </div>
 
@@ -3542,7 +3542,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                           Correção Pós-Registro
                         </h6>
                         <p className="text-xs text-purple-900 leading-relaxed">
-                          Crie uma nova versão na plataforma e nos envie o link novo. A versão originária fica guardada com carimbo perpétuo.
+                          Crie uma nova versão na plataforma, insira o link da publicação na nossa escola nas informações e nos envie o link novo da sua publicação. A versão originária fica guardada com carimbo perpétuo.
                         </p>
                       </div>
                     </div>
