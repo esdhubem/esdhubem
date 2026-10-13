@@ -172,7 +172,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
     '19': false,
     '20': false,
     'plataformas-pesquisa': false,
-    'como-publicar-osf': false
+    'como-publicar-osf': false,
+    'como-publicar-zenodo': false
   });
 
   const toggleSection = (id: string) => {
@@ -206,7 +207,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '19': true,
       '20': true,
       'plataformas-pesquisa': true,
-      'como-publicar-osf': true
+      'como-publicar-osf': true,
+      'como-publicar-zenodo': true
     });
   };
 
@@ -234,7 +236,8 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
       '19': false,
       '20': false,
       'plataformas-pesquisa': false,
-      'como-publicar-osf': false
+      'como-publicar-osf': false,
+      'como-publicar-zenodo': false
     });
   };
 
@@ -3692,57 +3695,92 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       )}
                     </div>
 
-                    {/* Plataforma 2: Zenodo + DOI */}
-                    <div className="space-y-4 pt-4 border-t border-slate-200">
-                      <div className="flex items-center gap-2 text-cyan-950 font-bold text-sm sm:text-base">
-                        <span>🔬</span>
-                        <h6>Zenodo + DOI (Nível Ouro)</h6>
-                      </div>
+                    {/* Plataforma 2: Zenodo + DOI - Sanfona */}
+                    <div
+                      id="sanfona-como-publicar-zenodo"
+                      className="rounded-2xl border-2 border-slate-200 bg-white shadow-sm overflow-hidden transition-all duration-200"
+                    >
+                      <button
+                        type="button"
+                        onClick={() => toggleSection('como-publicar-zenodo')}
+                        className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 bg-gradient-to-r from-teal-50/70 via-white to-cyan-50/50 hover:bg-teal-100/60 transition-colors cursor-pointer border-b border-slate-200"
+                        aria-expanded={openSections['como-publicar-zenodo']}
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-black text-lg sm:text-xl shadow-xs shrink-0 border border-teal-200">
+                            🔬
+                          </div>
+                          <div className="min-w-0">
+                            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-teal-700 block">
+                              Zenodo + DOI • Nível Ouro
+                            </span>
+                            <h6 className="font-extrabold text-sm sm:text-base text-slate-900 leading-snug">
+                              Como publicar no Zenodo?
+                            </h6>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2 shrink-0">
+                          <span className="text-xs font-semibold text-slate-500 hidden sm:inline-block">
+                            {openSections['como-publicar-zenodo'] ? 'Recolher' : 'Expandir'}
+                          </span>
+                          <div
+                            className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 ${
+                              openSections['como-publicar-zenodo'] ? 'rotate-180 bg-[#00227B] text-white' : ''
+                            }`}
+                          >
+                            <ChevronDown className="w-4 h-4" />
+                          </div>
+                        </div>
+                      </button>
 
-                      <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
-                        <table className="w-full text-left text-xs sm:text-sm">
-                          <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
-                            <tr>
-                              <th className="py-3 px-4 w-1/3">Situação</th>
-                              <th className="py-3 px-4">O que acontece</th>
-                            </tr>
-                          </thead>
-                          <tbody className="divide-y divide-slate-200 bg-white">
-                            <tr>
-                              <td className="py-3 px-4 font-semibold text-slate-900">
-                                Antes de publicar
-                              </td>
-                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
-                                <span className="text-emerald-700 font-semibold">✅ Salva como rascunho</span>, edita e revisa livremente.
-                              </td>
-                            </tr>
-                            <tr>
-                              <td className="py-3 px-4 font-semibold text-slate-900">
-                                Após publicado com DOI
-                              </td>
-                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
-                                <span className="text-rose-700 font-semibold">🛑 Não se substitui o arquivo antigo</span>. Cria-se uma nova versão (ex: v1.1 corrigida a partir de v1.0).
-                              </td>
-                            </tr>
-                            <tr>
-                              <td className="py-3 px-4 font-semibold text-slate-900">
-                                O que muda
-                              </td>
-                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
-                                O DOI principal (conceitual) continua o mesmo e aponta sempre para a versão mais recente; cada versão recebe seu próprio identificador.
-                              </td>
-                            </tr>
-                            <tr>
-                              <td className="py-3 px-4 font-semibold text-slate-900">
-                                O que permanece
-                              </td>
-                              <td className="py-3 px-4 text-slate-700 leading-relaxed">
-                                A versão original continua acessível, com data e conteúdo preservados.
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                      {openSections['como-publicar-zenodo'] && (
+                        <div className="p-4 sm:p-6 space-y-4 animate-fadeIn">
+                          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+                            <table className="w-full text-left text-xs sm:text-sm">
+                              <thead className="bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider">
+                                <tr>
+                                  <th className="py-3 px-4 w-1/3">Situação</th>
+                                  <th className="py-3 px-4">O que acontece</th>
+                                </tr>
+                              </thead>
+                              <tbody className="divide-y divide-slate-200 bg-white">
+                                <tr>
+                                  <td className="py-3 px-4 font-semibold text-slate-900">
+                                    Antes de publicar
+                                  </td>
+                                  <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                    <span className="text-emerald-700 font-semibold">✅ Salva como rascunho</span>, edita e revisa livremente.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td className="py-3 px-4 font-semibold text-slate-900">
+                                    Após publicado com DOI
+                                  </td>
+                                  <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                    <span className="text-rose-700 font-semibold">🛑 Não se substitui o arquivo antigo</span>. Cria-se uma nova versão (ex: v1.1 corrigida a partir de v1.0).
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td className="py-3 px-4 font-semibold text-slate-900">
+                                    O que muda
+                                  </td>
+                                  <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                    O DOI principal (conceitual) continua o mesmo e aponta sempre para a versão mais recente; cada versão recebe seu próprio identificador.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td className="py-3 px-4 font-semibold text-slate-900">
+                                    O que permanece
+                                  </td>
+                                  <td className="py-3 px-4 text-slate-700 leading-relaxed">
+                                    A versão original continua acessível, com data e conteúdo preservados.
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
 
