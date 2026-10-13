@@ -587,11 +587,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                 <ul className="space-y-1.5 pl-2 text-sm sm:text-base">
                   <li className="flex items-start gap-2">
                     <span>🏆</span>
-                    <span><strong>Certificado Prata:</strong> entrega um artigo de blog;</span>
+                    <span><strong>Certificado Prata:</strong> entrega um artigo de blog (1.200 a 2.500 palavras) voltado à divulgação do conhecimento e indexação orgânica (SEO) e publicação no Blog Oficial da ESDHUBEM;</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span>🏆</span>
-                    <span><strong>Certificado Ouro:</strong> um artigo investigativo;</span>
+                    <span><strong>Certificado Ouro:</strong> desenvolve um artigo investigativo estruturado no repositório internacional Zenodo com DOI permanente e publicação no Repositório de Artigos da ESDHUBEM;</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span>🏆</span>
@@ -1044,11 +1044,11 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <ul className="space-y-1.5 pl-2 text-sm sm:text-base">
                       <li className="flex items-start gap-2">
                         <span>🏆</span>
-                        <span><strong>Certificado Prata:</strong> entrega um <strong>artigo de blog</strong> (1.200 a 2.500 palavras) voltado à divulgação do conhecimento e indexação orgânica (SEO);</span>
+                        <span><strong>Certificado Prata:</strong> entrega um <strong>artigo de blog</strong> (1.200 a 2.500 palavras) voltado à divulgação do conhecimento e indexação orgânica (SEO) e publicação no Blog Oficial da ESDHUBEM;</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span>🏆</span>
-                        <span><strong>Certificado Ouro:</strong> desenvolve um <strong>artigo investigativo</strong> estruturado no repositório internacional Zenodo com <strong>DOI permanente</strong>;</span>
+                        <span><strong>Certificado Ouro:</strong> desenvolve um <strong>artigo investigativo</strong> estruturado no repositório internacional Zenodo com <strong>DOI permanente</strong> e publicação no Repositório de Artigos da ESDHUBEM;</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span>🏆</span>
@@ -1114,7 +1114,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         {/* Vértice 3: Direita (Áudio) */}
                         <circle cx="335" cy="140" r="18" fill="#3730a3" stroke="#ffffff" strokeWidth="3" />
                         <text x="335" y="146" textAnchor="middle" fontSize="13">🎙️</text>
-                        <text x="330" y="172" textAnchor="end" fontSize="9" fontWeight="bold" fill="#312e81">3. ÁUDIO 1 MIN</text>
+                        <text x="330" y="172" textAnchor="end" fontSize="9" fontWeight="bold" fill="#312e81">3. ÁUDIO 3 MIN</text>
 
                         {/* Vértice 4: Base (Produção Autoral Específica) */}
                         <circle cx="190" cy="248" r="18" fill="#d97706" stroke="#ffffff" strokeWidth="3" />
@@ -1172,10 +1172,10 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                           </span>
                           <div className="flex items-center gap-2 text-indigo-950 font-bold text-sm sm:text-base mb-1.5">
                             <span className="text-xl">🎙️</span>
-                            <span>Áudio Explicativo de 1 Minuto</span>
+                            <span>Áudio Explicativo de 3 Minutos</span>
                           </div>
                           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                            <strong>Áudio Explicativo:</strong> Gravação de voz de 60 segundos sintetizando o conceito oralmente com clareza (Técnica Feynman de retenção).
+                            <strong>Áudio Explicativo:</strong> Gravação de voz de 3 minutos sintetizando o conceito oralmente com clareza (Técnica Feynman de retenção).
                           </p>
                         </div>
                       </div>
@@ -1207,7 +1207,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                               <span>Prata</span>
                             </div>
                             <p className="text-slate-600">
-                              <strong>Artigo de Blog</strong> (1.200 a 2.500 palavras) com foco em autoridade digital e SEO no Blog ESDHUBEM.
+                              <strong>Artigo de Blog</strong> (1.200 a 2.500 palavras) voltado à divulgação do conhecimento e indexação orgânica (SEO) e publicação no Blog Oficial da ESDHUBEM.
                             </p>
                           </div>
                           <div className="p-3 bg-white border border-amber-200 rounded-xl shadow-2xs space-y-1">
@@ -1216,7 +1216,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                               <span>Ouro</span>
                             </div>
                             <p className="text-slate-600">
-                              <strong>Artigo Investigativo</strong> com rigor crítico, depositado no Zenodo com registro DOI internacional permanente.
+                              <strong>Artigo Investigativo</strong> estruturado no repositório internacional Zenodo com DOI permanente e publicação no Repositório de Artigos da ESDHUBEM.
                             </p>
                           </div>
                           <div className="p-3 bg-white border border-cyan-200 rounded-xl shadow-2xs space-y-1">
