@@ -893,6 +893,23 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <Sparkles className="w-4 h-4 text-amber-600" />
                     <span>Destaque Metodológico Oficial da ESDHUBEM</span>
                   </div>
+
+                  {/* Tutorial Vídeo - Tríade da Assimilação Ativa */}
+                  <div className="space-y-3 py-3 border-y border-amber-200/80">
+                    <LazyVideoPlayer
+                      id="odysee-iframe-triade-assimilacao"
+                      src="https://odysee.com/$/embed/@esdhubem:a/diretriz-publicacao-9:4?r=Bow3KBdVnTzHQq8X9Q4nFDppobfbLNBJ"
+                      title="Tutorial ESDHUBEM - Diretrizes de Publicação (A Tríade da Assimilação Ativa)"
+                      thumbnail="./images/thumb_video_diretrizes_9.webp"
+                      fallbackThumbnail="https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/fb4830417af8c53f1df8747696760ee2.webp"
+                      badge="Metodologia • Assimilação Ativa"
+                    />
+                    <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                      <span>Vídeo: Orientações completas sobre a Tríade da Assimilação Ativa e seus três vértices de validação</span>
+                    </p>
+                  </div>
+
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                     3 - O que é a Tríade da Assimilação Ativa
                   </h2>
