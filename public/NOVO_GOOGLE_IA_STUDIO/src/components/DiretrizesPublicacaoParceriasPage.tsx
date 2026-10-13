@@ -4441,13 +4441,18 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <div className="w-8 h-8 rounded-xl bg-teal-100 border border-teal-300 flex items-center justify-center shrink-0 text-teal-700 mt-0.5">
                       <Lightbulb className="w-4 h-4" />
                     </div>
-                    <div className="space-y-1">
+                    <div className="space-y-2">
                       <h5 className="font-bold text-sm text-teal-900 flex items-center gap-1.5">
                         Como funciona a garantia de autoria e datação perpétua
                       </h5>
-                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        A pessoa pode registrar, enviar para avaliação, corrigir e atualizar... <strong>Mas a forma de fazer depende da plataforma.</strong> O que nunca muda: <strong>a versão original fica guardada para sempre</strong> (é a garantia jurídica internacional de autoria e carimbo de data). Ninguém "apaga" o que já foi registrado — o que se faz tecnicamente é acrescentar uma nova versão corrigida.
-                      </p>
+                      <div className="text-xs sm:text-sm text-slate-700 leading-relaxed space-y-2">
+                        <p>
+                          O estudante deve registrar seu manuscrito na plataforma OSF ou Zenodo, depois enviar para análise na nossa escola. A ESDHUBEM vai analisar e caso seja necessário fazer sugestões de ajustes equilibrados. O estudante pode corrigir seu manuscrito e enviar novamente na plataforma de publicação e assim gerar uma versão atualizada...
+                        </p>
+                        <p>
+                          O Zenodo e OSF foram criados com esse objetivo de proporcionar liberdade, segurança e desenvolvimento de projetos de escrita. Quando você atualiza o seu trabalho com uma nova versão nunca muda a versão original. <strong>Ela fica guardada para sempre</strong> (é a garantia jurídica internacional de autoria e carimbo de data). Ninguém &quot;apaga&quot; o que já foi registrado. O que se faz tecnicamente é acrescentar uma nova versão aprimorada.
+                        </p>
+                      </div>
                     </div>
                   </div>
 
