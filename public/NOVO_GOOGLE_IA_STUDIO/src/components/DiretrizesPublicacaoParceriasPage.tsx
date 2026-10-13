@@ -357,7 +357,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                   <span>Navegação Interativa dos 11 Módulos</span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
-                  Diretrizes de Publicação em Formato Sanfona
+                  Diretrizes de Publicação
                 </h2>
                 <p className="text-xs sm:text-sm text-blue-100 mt-1 leading-relaxed">
                   Clique nas seções para abrir ou recolher os vídeos, modelos de documentos e orientações detalhadas de cada nível.
@@ -387,7 +387,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
               <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-lg text-slate-800">
                 <div className="flex items-center gap-2 pb-3 mb-3 border-b border-slate-100 text-slate-900 font-bold text-xs sm:text-sm uppercase tracking-wider">
                   <span className="text-amber-500 font-black">📋</span>
-                  <span>Sumário das Sanfonas (Clique para ir ao título correspondente):</span>
+                  <span>Sumário das Diretrizes de Publicação :</span>
                 </div>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2.5 text-xs sm:text-sm">
                   {LISTA_SANFONAS_DIRETRIZES.map((item) => (
