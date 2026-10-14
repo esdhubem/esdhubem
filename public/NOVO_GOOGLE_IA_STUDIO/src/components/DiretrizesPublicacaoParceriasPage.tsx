@@ -920,7 +920,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                           <span>Mapa Mental do Conteúdo (Feito à Mão)</span>
                         </div>
                         <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                          <strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado à mão estruturando os conceitos centrais e conexões pedagógicas da aula.
+                          <strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado (Feito à Mão) estruturando os conceitos centrais e conexões pedagógicas da aula.
                         </p>
                       </div>
                     </div>
@@ -939,7 +939,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                             <span>Verbete Enciclopédico (500 a 800 palavras) (Escrito à Mão)</span>
                           </div>
                           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                            <strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão, escrito à mão, explicando o significado, o contexto histórico e a aplicação do tema.
+                            <strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto conceitual e informativo em norma-padrão (Escrito à Mão), explicando o significado, o contexto histórico e a aplicação do tema.
                           </p>
                         </div>
                       </div>
@@ -961,6 +961,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         </div>
                       </div>
                     </div>
+                  </div>
+
+                  {/* Nota de evolução */}
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-amber-100/70 border border-amber-300/80 flex items-start gap-2.5 text-xs sm:text-sm text-amber-950">
+                    <span className="text-base leading-none shrink-0 mt-0.5">💡</span>
+                    <p className="leading-relaxed">
+                      <strong>Nota de evolução:</strong> O Áudio Explicativo possui duração de 1 minuto para a Tríade (nível Bronze) e expande-se para 3 minutos no Quadrilátero (níveis Prata, Ouro e Diamante), acompanhando o aprofundamento do trabalho autoral.
+                    </p>
                   </div>
 
                   {/* Informações de Registro e Publicação */}
@@ -1383,6 +1391,14 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                         </div>
                       </li>
                     </ul>
+
+                    {/* Nota de evolução */}
+                    <div className="p-3 rounded-lg bg-amber-100/70 border border-amber-200 flex items-start gap-2 text-xs sm:text-sm text-amber-950">
+                      <span className="text-base leading-none shrink-0 mt-0.5">💡</span>
+                      <p className="leading-relaxed">
+                        <strong>Nota de evolução:</strong> O Áudio Explicativo possui duração de 1 minuto para a Tríade (nível Bronze) e expande-se para 3 minutos no Quadrilátero (níveis Prata, Ouro e Diamante), acompanhando o aprofundamento do trabalho autoral.
+                      </p>
+                    </div>
 
                     <div className="pt-2 border-t border-amber-200/60 flex flex-wrap gap-2 text-xs">
                       <span className="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
