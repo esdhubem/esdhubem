@@ -37,7 +37,7 @@ O portal da **ESDHUBEM** conta com uma infraestrutura digital moderna:
 ### 📬 Contato Institucional
 
 - **Organização:** ESDHUBEM — Práticas de Bem-Estar Social
-- **E-mail:** [promotordesaudecontato@gmail.com](mailto:promotordesaudecontato@gmail.com)
+- **E-mail:** [esdhubem@proton.me](mailto:esdhubem@proton.me)
 - **GitHub:** [@esdhubem](https://github.com/esdhubem)
 
 ---
