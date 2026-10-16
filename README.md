@@ -1,50 +1,47 @@
-# DevsHunt
-An online learning platform website design using Tailwind CSS v3 with little bit of JavaScript.
+# 🌿 ESDHUBEM — Escola Superior de Desenvolvimento Humano e Bem-Estar
+
+> **"Educar para a plenitude humana, integrando ciência, autoria consciente, propósito existencial e práticas de bem-estar social."**
 
 ---
 
-## Live Demo -
-https://maniruzzamanakash.github.io/tailwindcss-website/public/
+### 👤 Sobre a Autora & Fundadora
 
-## Requirements
-1. HTML 5
-1. CSS 3
-1. Tailwind CSS v3
-1. JavaScript
-1. jQuery
+**Silviane Silvério**  
+*Biomédica Integrativa, Pesquisadora e Escritora Independente no desenvolvimento humano, existencial, bem-estar social e propósito.*
 
-### Screenshots
-#### Home Page
+Com uma trajetória multidisciplinar voltada à saúde integrativa, à reflexão existencial e ao aprimoramento pedagógico, Silviane lidera a concepção pedagógica e curricular da **ESDHUBEM**, criando metodologias que unem rigor conceitual, integridade investigativa e impacto social positivo.
 
-![HomePage Demo](https://i.ibb.co/FXGGZyH/Devs-Hunt-tailwind-project.png "HomePage Demo")
+---
 
-#### Mobile Responsive Design
+### 🏛️ Sobre a ESDHUBEM
 
-##### Homepage in mobile view
-![Mobile Responsive page](https://i.ibb.co/T8Th5Tn/Online-Learning-platform-mobile-responsive.png "Mobile Responsive page")
+A **ESDHUBEM** é uma plataforma educacional e institucional estruturada para proporcionar formação integral e continuada nas seguintes áreas-chave:
 
-##### Course section in mobile view
-![Course section in mobile view](https://i.ibb.co/5Y29nc8/Course-in-Mobile-view.png "Course section in mobile view")
+- 🌸 **Saúde & Práticas Integrativas:** Conexão entre mente, corpo e dimensões relacionais para a promoção do equilíbrio biopsicossocial.
+- 📖 **Desenvolvimento Humano & Existencial:** Autoconhecimento, mapeamento existencial, reflexão crítica e construção de propósito.
+- ✍️ **Tecnologia do Escrever e Autoria Consciente:** Estímulo à produção intelectual autêntica, escrita reflexiva e metodologias investigativas.
+- 🎓 **Certificação de Mérito e Integridade:** Avaliação formativa com critérios rigorosos de autoria, combate ao plágio e validação por meritocracia acadêmica.
 
-##### Navbar in mobile view
-![Navbar view in mobile view](https://i.ibb.co/j5bzvgC/Mobile-View-navbar.png "Navbar view in mobile view")
+---
 
-## How to start
-```sh
+### 💻 Plataforma Digital & Ecossistema
 
-# Clone from Github
-git clone https://github.com/ManiruzzamanAkash/devshunt-tailwindv3.git
+O portal da **ESDHUBEM** conta com uma infraestrutura digital moderna:
 
-# Install Node modules
-npm install
+- 🌐 **Portal Interativo Moderno:** Desenvolvido com **React 19, TypeScript e Vite**, oferecendo navegação fluida, alta performance e responsividade em qualquer dispositivo.
+- 📚 **Área do Aluno & Gestão de Conteúdo:** Sanfonas interativas, módulos de estudo estruturados, mapas mentais e materiais complementares.
+- 🛡️ **Diretrizes e Segurança:** Protocolos transparentes de proteção de autoria, políticas de privacidade, termos de uso e regulamentos institucionais claros.
 
-# Start detecting CSS change
-npm start
+---
 
-# Build
-npm run build
+### 📬 Contato Institucional
 
-```
+- **Organização:** ESDHUBEM — Práticas de Bem-Estar Social
+- **E-mail:** [promotordesaudecontato@gmail.com](mailto:promotordesaudecontato@gmail.com)
+- **GitHub:** [@esdhubem](https://github.com/esdhubem)
 
-## Contact with me
-manirujjamanakash@gmail.com
+---
+
+<p align="center">
+  <sub>© ESDHUBEM — Todos os direitos reservados. Desenvolvimento Humano, Bem-Estar Social e Propósito.</sub>
+</p>
