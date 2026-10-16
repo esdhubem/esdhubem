@@ -1,4 +1,4 @@
-# 🌿 ESDHUBEM — Escola Superior de Desenvolvimento Humano e Bem-Estar
+# 🌿 ESDHUBEM — Escola de Desenvolvimento Humano e Bem-Estar
 
 > **"Educar para a plenitude humana, integrando ciência, autoria consciente, propósito existencial e práticas de bem-estar social."**
 
